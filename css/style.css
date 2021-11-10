@@ -381,3 +381,20 @@ opacity: 1;
   color:#A25DDE ;
 }
 
+.table tr th{
+
+    font: normal normal 600 14px/24px Lato;
+letter-spacing: 0.28px;
+color: #000000;
+opacity: 1;
+}
+
+.table tr{
+  
+  font: normal normal normal 12px/24px Lato;
+letter-spacing: 0.24px;
+color: #000000;
+opacity: 1;
+}
+
+
