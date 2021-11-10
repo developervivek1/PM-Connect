@@ -356,6 +356,17 @@ opacity: 1;
   border-bottom-color: transparent !important;
 }
 
+.bg-table3 tr td{
+  background: white;
+  border-bottom-width: 3px;
+  border-bottom-color: #F0CF5E1F !important;
+}
+.bg-table3 tr:last-child td:last-child{
+  background: white;
+  border-bottom-width: 3px;
+  border-bottom-color: transparent !important;
+}
+
 
 .bg-table2{
   background: #A25DDD0D 0% 0% no-repeat padding-box;
@@ -369,6 +380,19 @@ opacity: 1;
     
 }
 
+.bg-table3{
+  margin-bottom: 3rem;
+  background: #F0CF5E1F 0% 0% no-repeat padding-box;
+  /* border: 1px solid #5ED9F01F; */
+  border-radius: 7px;
+  opacity: 1;
+  border: 1px solid #F0CF5E1F;
+    
+    border-left-color: #F0CF5E;
+    border-left-width: 6px;
+    
+}
+
 .toolbar-boll1{
   color:#5ED9F0 ;
 }
@@ -378,7 +402,7 @@ opacity: 1;
 }
 
 .toolbar-boll3{
-  color:#A25DDE ;
+  color:#F0CF5E;
 }
 
 .table tr th{
