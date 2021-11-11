@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- goole icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- fontawesom -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- bs-5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.min.css"
+        integrity="sha512-6KY5s6UI5J7SVYuZB4S/CZMyPylqyyNZco376NM2Z8Sb8OxEdp02e1jkKk/wZxIEmjQ6DRCEBhni+gpr9c4tvA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- UIkit CSS -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/css/uikit.min.css" />
+     -->
+        <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+    <title>Management View Change Request Info</title>
+</head>
+
+<body>
+    <section class="manage_view">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="div1">
+                    <h3>Emaar</h3>
+                    <ul>
+                        <li><i class="material-icons">grid_view</i>
+                            <span class="tooltiptext">Dashboard</span>
+                        </li>
+                        <li>
+                            <i class="material-icons">notifications_none</i>
+                            <span class="tooltiptext">Notifications</span>
+                        </li>
+                        <li class="active">
+                            <i class="material-icons">sticky_note_2</i>
+                            <span class="tooltiptext">Request</span>
+                        </li>
+                        <li>
+                            <i class="material-icons">feed</i>
+                            <span class="tooltiptext">Projects</span>
+                        </li>
+                        <li>
+                            <i class="material-icons">event_available</i>
+                            <span class="tooltiptext">Tasks</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-signal"></i>
+                            <span class="tooltiptext">View Progress</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <i class="fas fa-chart-pie"></i>
+                            <span class="tooltiptext">Reports</span>
+                        </li>
+                        <li>
+                            <i class="material-icons">search</i>
+                            <span class="tooltiptext">Search</span>
+                        </li>
+                        <li>
+                            <i class="material-icons">help_outline</i>
+                            <span class="tooltiptext">Help & Support</span>
+                        </li>
+                        <li><span>S</span>
+                            <span class="tooltiptext">My Profile</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="div2">
+                    <div class="center_div">
+                        <ul>
+                            <li class="active">
+                                <div></div>
+                                <div>Information</div>
+                            </li>
+                            <li>
+                                <div></div>
+                                <div>Attachments</div>
+                            </li>
+                            <li>
+                                <div></div>
+                                <div>Approvers</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="div3">
+                    <div class="step_wise">
+                        <div class="border_step"></div>
+                        <button class="btn" id="goback">Back</button>
+                        <div class="center_step">
+                            <h5 class="active">Step</h5><span class="active">1</span><span class="pie">/</span>
+                            <h5>Step 3</h5>
+                        </div>
+                        <button class="btn active">Next</button>
+                    </div>
+                    <div class="form_div">
+                        <form action="">
+                            <div class="con1 step_forward active">
+                                <h2>Information</h2>
+                                <p>Provide the Information</p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p>Date of Request</p>
+                                        <input type="text" placeholder="Date">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Priority</p>
+                                        <select name="" id="">
+                                            <option value="" selected disabled>Select the priority</option>
+                                            <option value="---">---</option>
+                                            <option value="---">---</option>
+                                            <option value="---">---</option>
+                                            <option value="---">---</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p>Project Name</p>
+                                        <select name="" id="">
+                                            <option value="Select" selected disabled>Select</option>
+                                            <option value="Option 1">Option 1</option>
+                                            <option value="Option 2">Option 2</option>
+                                            <option value="Option 3">Option 3</option>
+                                            <option value="Option 4">Option 4</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 check_div">
+                                        <p>Change Type</p>
+                                        <input type="Checkbox" name="changetype" placeholder="Date" id="typechange1">
+                                        <label for="typechange1">Scope</label>
+                                        <input type="Checkbox" name="changetype" placeholder="Date" id="typechange2">
+                                        <label for="typechange2">Time</label>
+                                        <input type="Checkbox" name="changetype" placeholder="Date" id="typechange3">
+                                        <label for="typechange3">Cost</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p>Baseline End Date</p>
+                                        <input type="text" placeholder="Date">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Revised End Date</p>
+                                        <input type="text" placeholder="Date">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p>Baselined Budget</p>
+                                        <input type="text" placeholder="Date">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Revised Budget</p>
+                                        <input type="text" placeholder="Date">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <p>Change Summary</p>
+                                    <input type="textarea" placeholder="Summary">
+                                </div>
+                                <div class="col-md-12">
+                                    <p>Change Impact</p>
+                                    <input type="textarea" placeholder="Summary">
+                                </div>
+                                <div class="col-md-12">
+                                    <p>Plan of Action</p>
+                                    <input type="textarea" placeholder="Summary">
+                                </div>
+                            </div>
+                            <!--con1 closed-->
+                            <div class="con2 step_forward">
+                                <h2>Attachments</h2>
+                                <p>Provide the information</p>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h5 class="up_head">Upload</h5>
+                                    </div>
+                                    <div class="col-md-8 support_div">
+                                        <p>(Supports pdf, doc, docx, xlsx, xls, jpg, png, tiff, bmp, txt, ppt, pptx, msg
+                                            files size should not exceed 30 MB.)</p>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="box">
+                                            <i class="material-icons">cloud_upload</i>
+                                            <p>Drag a file here or <span>Browse </span> for a file to upload.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--con2 closed-->
+
+                            <div class="con3 step_forward">
+                                <h2>Approvers</h2>
+                                <p>Provide the Approvers information</p>
+                                <div class="col-md-6">
+                                    <input type="text" placeholder="Add Assignees" id="getdata">
+                                    <div class="highlight_div">
+
+                                    </div>
+                                    <div class="sep_div">
+                                        <div>
+                                            <p>Members</p>
+                                        </div>
+                                        <div>
+                                            <p><span></span> Members</p>
+                                        </div>
+                                    </div>
+                                    <div class="user-list">
+                                        <div class="hover_div">
+                                            <div class="row">
+                                                <div class="img-div">
+                                                    <img src="img/client1.jpg" alt="">
+                                                </div>
+                                                <div class="info-div">
+                                                    <div>
+                                                        <h6>Claire Bure</h6>
+                                                        <p>Clair@emaar.com</p>
+                                                    </div>
+                                                    <button class="btn">Remove</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hover_div">
+                                            <div class="row">
+                                                <div class="img-div">
+                                                    <img src="img/client2.jpg" alt="">
+                                                </div>
+                                                <div class="info-div">
+                                                    <div>
+                                                        <h6>Ajmal Khan</h6>
+                                                        <p>Ajmal@emaar.com</p>
+                                                    </div>
+                                                    <button class="btn">Remove</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hover_div">
+                                            <div class="row">
+                                                <div class="img-div">
+                                                    <img src="img/client3.jpg" alt="">
+                                                </div>
+                                                <div class="info-div">
+                                                    <div>
+                                                        <h6>Muhammad Ali</h6>
+                                                        <p>Ali@emaar.com</p>
+                                                    </div>
+                                                    <button class="btn">Remove</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hover_div">
+                                            <div class="row">
+                                                <div class="img-div">
+                                                    <img src="img/client4.jpg" alt="">
+                                                </div>
+                                                <div class="info-div">
+                                                    <div>
+                                                        <h6>Asif Khan</h6>
+                                                        <p>Asif@emaar.com</p>
+                                                    </div>
+                                                    <button class="btn">Remove</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hover_div">
+                                            <div class="row">
+                                                <div class="img-div">
+                                                    <img src="img/client5.jpg" alt="">
+                                                </div>
+                                                <div class="info-div">
+                                                    <div>
+                                                        <h6>John Smith</h6>
+                                                        <p>John@emaar.com</p>
+                                                    </div>
+                                                    <button class="btn">Remove</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--con3 closed-->
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--row closed-->
+        </div>
+        <!--container closed-->
+    </section>
+    <!--section closed-->
+
+
+    <script src="js/scriptzee.js"></script>
+
+
+    <!-- UIkit JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/js/uikit-icons.min.js"></script> -->
+    <!-- bs-5 js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

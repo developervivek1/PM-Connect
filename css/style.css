@@ -537,7 +537,7 @@ p {
 }
 .manage_view .div1 ul:nth-child(2)
 {
-    margin-top: 3.2rem;
+    margin-top: 1.2rem;
 }
 .manage_view .div1 ul:nth-child(3)
 {
@@ -547,7 +547,7 @@ p {
     transform: translateX(-50%);
 }
 .manage_view .div1 ul li{
-    margin-bottom: 2.1rem;
+    margin-bottom: 1.2rem;
     cursor: pointer;
     width: 35px;
     height: 35px;
@@ -1113,6 +1113,7 @@ p {
 }
 .proj_filter .divfilter2 .top_up h1
 {
+    font-weight: 600;
     color: #171E48;
     font-size: 2.8rem;
     margin-top: -5px;
@@ -1906,6 +1907,24 @@ p {
 {
     font-size: 13px;
 }
+
+
+/*@here  */
+
+*+.uk-h1, *+.uk-h2, *+.uk-h3, *+.uk-h4, *+.uk-h5, *+.uk-h6, *+.uk-heading-2xlarge, *+.uk-heading-large, *+.uk-heading-medium, *+.uk-heading-small, *+.uk-heading-xlarge, *+h1, *+h2, *+h3, *+h4, *+h5, *+h6 {
+    margin-top: 0px;
+    
+}
+
+.uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, .uk-heading-2xlarge, .uk-heading-large, .uk-heading-medium, .uk-heading-small, .uk-heading-xlarge, h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 0px 0;
+
+}
+
+
+/* @here end */
+
+
 
 
 
