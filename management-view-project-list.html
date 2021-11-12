@@ -6,15 +6,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="css/mview.css"> -->
+    
+        <!--google icons  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--font-awesome  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!--bs-5  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.min.css"
         integrity="sha512-6KY5s6UI5J7SVYuZB4S/CZMyPylqyyNZco376NM2Z8Sb8OxEdp02e1jkKk/wZxIEmjQ6DRCEBhni+gpr9c4tvA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+
+
     <title>Management View Project Filter</title>
 </head>
 
@@ -213,7 +219,7 @@
                             <div class="projectcon1">
                                 <div class="row">
                                     <div class="head1">
-                                        <span><i class="material-icons">expand_more</i></span>
+                                        <a href="#" onclick="myTable()"> <span><i class="material-icons">expand_more</i></span></a>
                                         <span></span>
                                         <h5>Research</h5>
                                     </div>
@@ -239,9 +245,89 @@
                                         <h5>Domain Lead</h5>
                                     </div>
                                     <div class="head9">
-                                        <span><i class="material-icons">add</i></span>
+                                        <!-- <a href="#" class="active" onclick="myView()"></a> -->
+                                          
+
+     
+                                            <a class="" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <span><i class="material-icons">add</i></span>
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                <div class="dropdown show1" >
+                                                    <div class="dropmain">
+                                                    <div class="droplist">
+                                                        <div class="column">
+                                                            <a href="#"><img src="./icons/calender-1.svg" class="icons">Planned</a>
+                                                            <a href="#"><img src="./icons/calender-1.svg" class="icons">Start Date</a>
+                                                            <a href="#"><img src="./icons/user.svg" class="icons">Project Lead</a>
+                                                            <a href="#"><img src="./icons/subitem.svg" class="icons">Subitem</a>
+                                                            <a href="#"><img src="./icons/actual budget.svg" class="icons">Actual Budget</a>
+                                                            <a href="#"><img src="./icons/file (2).svg" class="icons">File</a>
+                                                            <a href="#"><img src="./icons/mirror.svg" class="icons">Mirror</a>
+                                                            <a href="#"><img src="./icons/text.svg" class="icons">text</a>
+                                                            <a href="#"><img src="./icons/user.svg" class="icons">Domain Lead</a>
+                                                            <a href="#"><img src="./icons/priority.svg" class="icons">Priority</a>
+                                                        </div>
+                                                        <div class="column2">
+                                                            <a href="#"><img src="./icons//timeline.svg" class="icons">Timeline</a>
+                                                            <a href="#"><img src="./icons/Number.svg" class="icons">Numbers</a>
+                                                            <a href="#"><img src="./icons/Assigness.svg" class="icons">Assignees</a>
+                                                            <a href="#"><img src="./icons/Progress track.svg" class="icons">Progress Track</a>
+                                                            <a href="#"><img src="./icons/dropdown (2).svg" class="icons">Dropdown</a>
+                                                            <a href="#"><img src="./icons/arrow.svg" class="icons">Connect boards</a>
+                                                            <a href="#"><img src="./icons/formula.svg" class="icons">Formula</a>
+                                                            <a href="#"><img src="./icons/link.svg" class="icons">Link</a>
+                                                            <a href="#"><img src="./icons/status.svg" class="icons">Status</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="addcolumn">
+                                                        <a href="#"><i class="fa fa-plus"></i>Add Column</a>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </ul>
+                                          
+
+<!--                                          
+                                        <div class="dropdown show1" >
+                                            <div class="dropmain">
+                                            <div class="droplist">
+                                                <div class="column">
+                                                    <a href="#"><img src="./icons/calender-1.svg" class="icons">Planned</a>
+                                                    <a href="#"><img src="./icons/calender-1.svg" class="icons">Start Date</a>
+                                                    <a href="#"><img src="./icons/user.svg" class="icons">Project Lead</a>
+                                                    <a href="#"><img src="./icons/subitem.svg" class="icons">Subitem</a>
+                                                    <a href="#"><img src="./icons/actual budget.svg" class="icons">Actual Budget</a>
+                                                    <a href="#"><img src="./icons/file (2).svg" class="icons">File</a>
+                                                    <a href="#"><img src="./icons/mirror.svg" class="icons">Mirror</a>
+                                                    <a href="#"><img src="./icons/text.svg" class="icons">text</a>
+                                                    <a href="#"><img src="./icons/user.svg" class="icons">Domain Lead</a>
+                                                    <a href="#"><img src="./icons/priority.svg" class="icons">Priority</a>
+                                                </div>
+                                                <div class="column2">
+                                                    <a href="#"><img src="./icons//timeline.svg" class="icons">Timeline</a>
+                                                    <a href="#"><img src="./icons/Number.svg" class="icons">Numbers</a>
+                                                    <a href="#"><img src="./icons/Assigness.svg" class="icons">Assignees</a>
+                                                    <a href="#"><img src="./icons/Progress track.svg" class="icons">Progress Track</a>
+                                                    <a href="#"><img src="./icons/dropdown (2).svg" class="icons">Dropdown</a>
+                                                    <a href="#"><img src="./icons/arrow.svg" class="icons">Connect boards</a>
+                                                    <a href="#"><img src="./icons/formula.svg" class="icons">Formula</a>
+                                                    <a href="#"><img src="./icons/link.svg" class="icons">Link</a>
+                                                    <a href="#"><img src="./icons/status.svg" class="icons">Status</a>
+                                                </div>
+                                            </div>
+                                            <div class="addcolumn">
+                                                <a href="#"><i class="fa fa-plus"></i>Add Column</a>
+                                            </div>
+                                            </div>
+                                        </div>
+                                     -->
+                                    
                                     </div>
                                 </div>
+                                <div id="mytablediv">
+
+                                
                                 <div class="border-bottom mt-3">
                                     <div class="projmaincon">
                                         <div class="row">
@@ -422,6 +508,7 @@
                                     </div>
                                 </div>
                             </div>
+                            </div>
                             <!-- projectcon1 closed -->
                         </div>
 
@@ -429,13 +516,18 @@
                             <div class="projectcon1">
                                 <div class="row">
                                     <div class="head1">
-                                        <span><i class="material-icons">expand_more</i></span>
+                                      <a href="" >  <span><i class="material-icons">expand_more</i></span></a>
                                         <span></span>
                                         <h5>Wireframe</h5>
                                     </div>
                                 </div>
+
+                                <!-- table div -->
+                                <div class="purple-table">
+
+                                
                                 <div class="border-bottom mt-3">
-                                    <div class="projmaincon">
+                                    <div class="projmaincon ">
                                         <div class="row">
                                             <div class="divcon1">
                                                 <p>Project 01</p><span><i class="material-icons">maps_ugc</i></span>
@@ -578,9 +670,11 @@
                                     </div>
                                 </div>
                             </div>
+                            </div>
                             <!-- projectcon1 closed -->
                         </div>
 
+                        <!-- thired yellow table -->
                         <div class="project1">
                             <div class="projectcon1">
                                 <div class="row">
@@ -590,6 +684,9 @@
                                         <h5>Visual Design</h5>
                                     </div>
                                 </div>
+                                <div class="yellow-table">
+
+                                
                                 <div class="border-bottom mt-3">
                                     <div class="projmaincon">
                                         <div class="row">
@@ -733,9 +830,12 @@
                                         </div>
                                     </div>
                                 </div>
+
+                            </div>
                             </div>
                             <!-- projectcon1 closed -->
                         </div>
+                        <!-- thired table closed -->
                     </div>
                     <!-- list closed -->
                     <div class="gantt tab_content">
@@ -777,8 +877,11 @@
     </section>
     <!--section closed-->
 
-
+    <script src="js/script.js"></script>
     <script src="js/scriptfilter.js"></script>
+
+    <!-- bs-5 script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>

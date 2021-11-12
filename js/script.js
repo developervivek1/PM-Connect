@@ -22,3 +22,22 @@ function myTable() {
   }
 
 
+// add view
+function myView() {
+  var x = document.getElementById("addView");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+
+
+// add view
+
+// function myView() {
+//   var element = document.getElementById("addView");
+//   element.classList.toggle("mystyle");
+// }
+

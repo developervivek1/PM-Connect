@@ -1462,10 +1462,10 @@ justify-content: center;
 .proj_filter .divfilter2 .project1 .projectcon1
 {
 width: 95.2%;
-background-color: #5ED9F01F;
+background-color: #5ED9EF0D;
 padding: 15px;
 margin: 20px 0;
-border-left: 4px solid #5ED9F0;
+border-left: 6px solid #5ED9F0;
 border-radius: 5px;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .head1
@@ -1608,7 +1608,7 @@ cursor: pointer;
 }
 .proj_filter .divfilter2 .project1 .border-bottom
 {
-border-bottom: 1px solid #F2F5F8 !important;
+border-bottom: 3px solid #5ED9EF0D !important;
 width: 100%;
 display: flex;
 flex-wrap: wrap;
@@ -1774,7 +1774,7 @@ background: #A25DDE;
 .proj_filter .divfilter2 .project1:nth-child(4) .projectcon1
 {
 margin-top: 0px;
-background-color: #f8f6ed;
+background-color: #f7eac18a;
 border-left: 4px solid #F0CF5E;
 }
 .proj_filter .divfilter2 .project1:nth-child(4) .projectcon1 .head1 span:nth-child(2) {
@@ -2099,3 +2099,134 @@ font-size: 12.6px;
 font-size: 12.6px;
 }
 }
+
+/* here */
+
+.manage_view .div3 .form_div .support_div > p {
+    color: #1663CC;
+    font-size: 12px;
+    letter-spacing: 0px;
+}
+
+.manage_view .div3 .form_div form  .box {
+    width: 100%;
+    height: 125px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 0.7rem;
+    /* overflow: hidden; */
+    position: relative;
+    border-radius: 6px;
+    margin-bottom: 5rem;
+   
+}
+
+.manage_view .div3 .form_div form .box::before {
+    content: "";
+    position: absolute;
+    border: 2px dashed #AAAAAA;
+    top: -3px;
+    bottom: -3px;
+    left: -3px;
+    right: -3px;
+}
+
+.manage_view .div3 .form_div form .box i {
+    color: #5E70EF;
+    font-size: 2.9rem;
+}
+
+.manage_view .div3 .form_div form .box p {
+    color: #080808;
+    font-size: 14px;
+    margin-top: 0.3rem;
+}
+
+.manage_view .div3 .form_div form .box p span {
+    color: #5E70EF;
+}
+
+
+.proj_filter .divfilter2 .project1 .purple-table .border-bottom{
+    border-bottom: 3px solid #A25DDD0D !important;
+
+}
+
+.proj_filter .divfilter2 .project1 .yellow-table .border-bottom{
+    border-bottom: 3px solid #f7eac18a !important;
+
+}
+
+.head1 a{
+    text-decoration: none;
+}
+
+
+
+/* here end */
+
+
+
+/* jyoti */
+
+.dropdown{
+   
+    position: absolute;
+    /* position: relative; */
+    
+    right: 36px;
+    z-index: 99;
+    display: inline-block;
+}
+.dropmain {
+    box-sizing: content-box;
+    width: 340px;
+    height: 430px;
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 14px #00000012;
+    border: 1px solid #7070700D;
+    border-radius: 5px;
+    opacity: 1;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.droplist{
+    margin-top: 10px;
+    display: flex;
+
+}
+.droplist a{
+    text-decoration: none;
+    display: block;
+    color: #808080;
+    padding: 9px 30px;
+    font-size: 12px;
+}
+.column .column2 {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.icons {
+    width: 13px;
+    margin-right: 15px;
+}
+.addcolumn {
+    text-align: center;
+    margin: 10px 0 0 10px;
+    padding-top: 5px;
+    font-size: 12px;
+}
+.addcolumn a {
+    color: #000;
+    font-weight: bold;
+}
+
+/* jyoti/ */
