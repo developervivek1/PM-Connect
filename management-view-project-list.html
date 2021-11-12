@@ -6,15 +6,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="css/mview.css"> -->
+   
+        <!--google icons  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- fontawesome-5 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!--bs-5  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.min.css"
         integrity="sha512-6KY5s6UI5J7SVYuZB4S/CZMyPylqyyNZco376NM2Z8Sb8OxEdp02e1jkKk/wZxIEmjQ6DRCEBhni+gpr9c4tvA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
     <title>Management View Project Filter</title>
 </head>
 
@@ -85,7 +91,7 @@
                     </div>
 
                     <div class="list active tab_content">
-                        <div class="top_up2">
+                        <div class="top_up2 mb-1">
                             <ul>
                                 <li><i class="fas fa-search"></i> Search..</li>
                                 <li><i class="material-icons">filter_list</i> Filters</li>
@@ -213,7 +219,7 @@
                             <div class="projectcon1">
                                 <div class="row">
                                     <div class="head1">
-                                        <span><i class="material-icons">expand_more</i></span>
+                                      <a href="#" onclick="myTable()">  <span><i class="material-icons">expand_more</i></span></a>
                                         <span></span>
                                         <h5>Research</h5>
                                     </div>
@@ -242,6 +248,9 @@
                                         <span><i class="material-icons">add</i></span>
                                     </div>
                                 </div>
+                                <div id="mytablediv">
+
+                                
                                 <div class="border-bottom mt-3">
                                     <div class="projmaincon">
                                         <div class="row">
@@ -422,6 +431,7 @@
                                     </div>
                                 </div>
                             </div>
+                            </div>
                             <!-- projectcon1 closed -->
                         </div>
 
@@ -434,6 +444,9 @@
                                         <h5>Wireframe</h5>
                                     </div>
                                 </div>
+                                <div class="purple-table">
+
+                             
                                 <div class="border-bottom mt-3">
                                     <div class="projmaincon">
                                         <div class="row">
@@ -578,6 +591,7 @@
                                     </div>
                                 </div>
                             </div>
+                            </div>
                             <!-- projectcon1 closed -->
                         </div>
 
@@ -590,6 +604,9 @@
                                         <h5>Visual Design</h5>
                                     </div>
                                 </div>
+                                <div class="yellow-table">
+
+                                
                                 <div class="border-bottom mt-3">
                                     <div class="projmaincon">
                                         <div class="row">
@@ -733,6 +750,7 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                             </div>
                             <!-- projectcon1 closed -->
                         </div>
@@ -777,7 +795,7 @@
     </section>
     <!--section closed-->
 
-
+    <script src="js/script.js"></script>
     <script src="js/scriptfilter.js"></script>
 </body>
 
