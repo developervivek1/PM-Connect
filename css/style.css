@@ -2162,9 +2162,9 @@ font-size: 12.6px;
 
 }
 
-.head1 a{
+/* .head1 a{
     text-decoration: none;
-}
+} */
 
 
 
@@ -2174,12 +2174,29 @@ font-size: 12.6px;
 
 /* jyoti */
 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  
+  
+  
+  
+  .show {display: block;}
+
+
 .dropdown{
    
     position: absolute;
-    /* position: relative; */
     
-    right: 0px;
+    
+    right: 38px;
     z-index: 99;
     display: inline-block;
 }
