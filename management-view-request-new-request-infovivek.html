@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,27 +6,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- goole icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- fontawesom -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- bs-5 -->
+    <!-- bs-5 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.min.css"
         integrity="sha512-6KY5s6UI5J7SVYuZB4S/CZMyPylqyyNZco376NM2Z8Sb8OxEdp02e1jkKk/wZxIEmjQ6DRCEBhni+gpr9c4tvA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <!-- UIkit CSS -->
+    <!-- UIkit CSS -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/css/uikit.min.css" />
      -->
-        <!-- custom css -->
+    <!-- custom css -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/mview.css"> -->
 
 
 
-    <title>Management View Change Request Info</title>
+    <title>Management View New Request Info</title>
 </head>
 
 <body>
@@ -82,11 +84,19 @@
                         <ul>
                             <li class="active">
                                 <div></div>
-                                <div>Information</div>
+                                <div>Project Information</div>
                             </li>
                             <li>
                                 <div></div>
-                                <div>Attachments</div>
+                                <div>Project Scope</div>
+                            </li>
+                            <li>
+                                <div></div>
+                                <div>Financial Information</div>
+                            </li>
+                            <li>
+                                <div></div>
+                                <div>Cost Details</div>
                             </li>
                             <li>
                                 <div></div>
@@ -101,35 +111,113 @@
                         <button class="btn" id="goback">Back</button>
                         <div class="center_step">
                             <h5 class="active">Step</h5><span class="active">1</span><span class="pie">/</span>
-                            <h5>Step 3</h5>
+                            <h5>Step 5</h5>
                         </div>
                         <button class="btn active">Next</button>
                     </div>
                     <div class="form_div">
                         <form action="">
                             <div class="con1 step_forward active">
-                                <h2>Information</h2>
-                                <p>Provide the Information</p>
+                                <h2>Project Info</h2>
+                                <p>Provide the Project Info details</p>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <p>Date of Request</p>
-                                        <input type="text" placeholder="Date">
+                                        <p>Request ID <span>*</span></p>
+                                        <input type="text" placeholder="Request Id *" required>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>Priority</p>
-                                        <select name="" id="">
-                                            <option value="" selected disabled>Select the priority</option>
-                                            <option value="---">---</option>
-                                            <option value="---">---</option>
-                                            <option value="---">---</option>
-                                            <option value="---">---</option>
+                                        <p>Project Name <span>*</span></p>
+                                        <input type="text" placeholder="Project Name *" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p>Program <span>*</span></p>
+                                        <select name="" id="" required>
+                                            <option value="Select" selected disabled>Program *</option>
+                                            <option value="Option 1">Option 1</option>
+                                            <option value="Option 2">Option 2</option>
+                                            <option value="Option 3">Option 3</option>
+                                            <option value="Option 4">Option 4</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 check_div">
+                                        <p>Category</p>
+                                        <select name="" id="" required>
+                                            <option value="Select" selected disabled>Select</option>
+                                            <option value="Option 1">Option 1</option>
+                                            <option value="Option 2">Option 2</option>
+                                            <option value="Option 3">Option 3</option>
+                                            <option value="Option 4">Option 4</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <p>Project Name</p>
-                                        <select name="" id="">
+                                        <p>Priority</p>
+                                        <select name="" id="" required>
+                                            <option value="Select" selected disabled>Select</option>
+                                            <option value="Option 1">Option 1</option>
+                                            <option value="Option 2">Option 2</option>
+                                            <option value="Option 3">Option 3</option>
+                                            <option value="Option 4">Option 4</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Client Name <span>*</span></p>
+
+                                        <input type="password" placeholder="Client Name" id="myInput">
+                                        <a class="eyes1" type="button"><i class="fas fa-eye"
+                                                onclick="myFunction()"></i></a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p>Project Owner <span>*</span></p>
+                                        <input type="text" placeholder="Search">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Assigned To <span>*</span></p>
+                                        <input type="text" placeholder="Search">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <p>Project Description</p>
+                                    <input type="textarea" placeholder="Description">
+                                </div>
+
+                            </div>
+                            <!--con1 closed-->
+                            <div class="con2 step_forward">
+                                <h2>Project Scope</h2>
+                                <p>Provide the project scope details</p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p>High Level Scope <span>*</span></p>
+                                        <input type="textarea" placeholder="Description">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Business Justification <span>*</span></p>
+                                        <input type="textarea" placeholder="Description">
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p>Expected execution Timeline and Phases <span>*</span></p>
+                                        <input type="textarea" placeholder="Description">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Comments </p>
+                                        <input type="textarea" placeholder="Comments">
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p>Business Benifits <span>*</span></p>
+                                        <select name="" id="" required>
                                             <option value="Select" selected disabled>Select</option>
                                             <option value="Option 1">Option 1</option>
                                             <option value="Option 2">Option 2</option>
@@ -138,52 +226,126 @@
                                         </select>
                                     </div>
                                     <div class="col-md-6 check_div">
-                                        <p>Change Type</p>
-                                        <input type="Checkbox" name="changetype" placeholder="Date" id="typechange1">
-                                        <label for="typechange1">Scope</label>
-                                        <input type="Checkbox" name="changetype" placeholder="Date" id="typechange2">
-                                        <label for="typechange2">Time</label>
-                                        <input type="Checkbox" name="changetype" placeholder="Date" id="typechange3">
-                                        <label for="typechange3">Cost</label>
+                                        <p>Business Priority <span>*</span></p>
+                                        <select name="" id="" required>
+                                            <option value="Select" selected disabled>Select</option>
+                                            <option value="Option 1">Option 1</option>
+                                            <option value="Option 2">Option 2</option>
+                                            <option value="Option 3">Option 3</option>
+                                            <option value="Option 4">Option 4</option>
+                                        </select>
                                     </div>
                                 </div>
+
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <p>Baseline End Date</p>
-                                        <input type="text" placeholder="Date">
+                                        <p>Business Impact <span>*</span></p>
+                                        <select name="" id="" required>
+                                            <option value="Select" selected disabled>Select</option>
+                                            <option value="Option 1">Option 1</option>
+                                            <option value="Option 2">Option 2</option>
+                                            <option value="Option 3">Option 3</option>
+                                            <option value="Option 4">Option 4</option>
+                                        </select>
                                     </div>
-                                    <div class="col-md-6">
-                                        <p>Revised End Date</p>
-                                        <input type="text" placeholder="Date">
+                                    <div class="col-md-6 check_div">
+                                        <p>Planned Project Start Date <span>*</span></p>
+                                        <input type="text" placeholder="Select Date" onfocus="(this.type='date')"
+                                            onblur="(this.type='text')">
+                                        <!-- <a class="eyes1" type="button"><i class="fas fa-eye" ></i></a> -->
                                     </div>
                                 </div>
+
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <p>Baselined Budget</p>
-                                        <input type="text" placeholder="Date">
+                                    <div class="col-md-6 check_div">
+                                        <p>Expected Project Completion Date <span>*</span></p>
+                                        <input type="date" placeholder="Select Date">
+
                                     </div>
-                                    <div class="col-md-6">
-                                        <p>Revised Budget</p>
-                                        <input type="text" placeholder="Date">
+                                    <div class="col-md-6 check_div">
+                                        <p>Expected Man Days</p>
+                                        <input type="date" placeholder="Select Date">
+
                                     </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <p>Change Summary</p>
-                                    <input type="textarea" placeholder="Summary">
-                                </div>
-                                <div class="col-md-12">
-                                    <p>Change Impact</p>
-                                    <input type="textarea" placeholder="Summary">
-                                </div>
-                                <div class="col-md-12">
-                                    <p>Plan of Action</p>
-                                    <input type="textarea" placeholder="Summary">
                                 </div>
                             </div>
-                            <!--con1 closed-->
-                            <div class="con2 step_forward">
-                                <h2>Attachments</h2>
-                                <p>Provide the information</p>
+
+
+                            <div class="con3 step_forward">
+                                <h2>Financial Information</h2>
+                                <p>Provide the financial information</p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p>Estimated Cost <span>*</span></p>
+                                        <select name="" id="" required>
+                                            <option value="Select" selected disabled>Enter Amount</option>
+                                            <option value="Option 1">Option 1</option>
+                                            <option value="Option 2">Option 2</option>
+                                            <option value="Option 3">Option 3</option>
+                                            <option value="Option 4">Option 4</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Changed Approved Budget<span>*</span></p>
+                                        <input type="text" placeholder="Enter Amount">
+                                    </div>
+
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <p>Actual Cost <span>*</span></p>
+                                        <input type="text" placeholder="Enter Amount">
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="con4 step_forward">
+                                <h2>Cost Details</h2>
+                                <p>Provide the cost details information</p>
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <p>Items Description <span>*</span></p>
+                                        <input type="text" placeholder="Enter Amount">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <p>Cost Type <span>*</span></p>
+                                        <select name="" id="" required>
+                                            <option value="Select" selected disabled>Enter Amount</option>
+                                            <option value="Option 1">Option 1</option>
+                                            <option value="Option 2">Option 2</option>
+                                            <option value="Option 3">Option 3</option>
+                                            <option value="Option 4">Option 4</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <p>Year 1 (Cost AED) <span>*</span></p>
+                                        <input type="text" placeholder="Enter Amount">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Year 2 (Cost AED) <span>*</span></p>
+                                        <input type="text" placeholder="Enter Amount">
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <p>Year 3 (Cost AED) <span>*</span></p>
+                                        <input type="text" placeholder="Enter Amount">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Year 4 (Cost AED) <span>*</span></p>
+                                        <input type="text" placeholder="Enter Amount">
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="col-md-4">
                                         <h5 class="up_head">Upload</h5>
@@ -200,9 +362,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--con2 closed-->
-
-                            <div class="con3 step_forward">
+                            <!-- con2 closed -->
+                            <div class="con5 step_forward">
                                 <h2>Approvers</h2>
                                 <p>Provide the Approvers information</p>
                                 <div class="col-md-6">
@@ -304,14 +465,16 @@
     <!--section closed-->
 
 
-    <script src="js/scriptzee.js"></script>
+    <script src="js/scriptnewinfo.js"></script>
 
-
+    <script src="js/script.js"></script>
     <!-- UIkit JS -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/js/uikit-icons.min.js"></script> -->
     <!-- bs-5 js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
 </body>
 

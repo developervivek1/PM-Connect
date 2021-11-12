@@ -944,8 +944,7 @@ max-width: 86%;
 display: flex;
 justify-content: space-between;
 }
-.manage_view .div3 .form_div .con3 .highlight_div .info-div,
-.manage_view .div3 .form_div .con5 .highlight_div .info-div
+.manage_view .div3 .form_div .con3 .highlight_div .info-div
 {
 align-items: center;
 height: 38px;
