@@ -1,7 +1,7 @@
 const showFilter = document.querySelector('.divfilter2 .top_up2 ul li:nth-child(2)');
 const filterdiv = document.querySelector('.divfilter2 .top_up2 .filter_div');
 const overlay = document.querySelector('.proj_filter .myoverlay');
-const milediv = document.querySelector('.proj_filter .divfilter2 .project1:nth-child(2) .border-bottom:nth-child(2) .divcon3 span');
+const milediv = document.querySelector('.proj_filter .divfilter2 .project1 .expand .border-bottom .divcon3 #tree_open');
 const showMile = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone');
 const milediv2 = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone p');
 const showMile2 = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milehide');
@@ -9,11 +9,14 @@ const showFinalmile = document.querySelector('.proj_filter .divfilter2 .project1
 const finalmile1 = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone  .milestone2');
 const finalmile2 = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milestone2 div');
 const finalmile3 = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milestone2 button');
+const showTable = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .head1 span:first-child');
+const addColumn = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .head9 button');
 let root = document.querySelector(':root');
 let divfilter = document.querySelector('.divfilter2');
 let tabnum = document.querySelectorAll('.divfilter2 .tab_content');
 let mainul = document.querySelectorAll('.divfilter2 .top_up ul li');
 let liIcon = document.querySelectorAll('.divfilter2 .top_up ul li i');
+console.log(addColumn);
 
 showFilter.addEventListener('click', (e) => {
     if (!filterdiv.classList.contains('showfilter')) {
@@ -127,3 +130,26 @@ function showaddView(target, li) {
     divfilter.querySelector(target).classList.add('active');
     overlay.classList.add('active');
 }
+
+showTable.forEach((expand) => {
+    expand.addEventListener('click', (e) => {
+        let expand_div = e.target.closest('.projectcon1').querySelector('.expand');
+        if (!expand_div.classList.contains('active')) {
+            expand_div.classList.add('active');
+        }
+        else {
+            expand_div.classList.remove('active');
+        }
+    })
+})
+
+addColumn.addEventListener('click', (e) => {
+    let target = e.target;
+    let dropmenu = e.target.closest('.head9').querySelector('.dropdown-menu');
+    if (dropmenu.classList.contains('show')) {
+        target.innerText = 'clear';
+    }
+    else {
+        target.innerText = "add";
+    }
+}, true);
