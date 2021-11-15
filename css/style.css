@@ -2446,18 +2446,13 @@ font-size: 12.6px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
-  
-  
-  
-  
-  
-.head9 .btn:focus{
-    
-    border: none !important;
-    outline: none !important;
  
-}  
 
+.head9  .btn:focus {
+        outline: 0;
+        box-shadow: none;
+    }
+ 
 
 .dropdown{
    
@@ -2518,5 +2513,11 @@ font-size: 12.6px;
     color: #000;
     font-weight: bold;
 }
+
+
+
+/* submit form */
+
+
 
 /* jyoti/ */
