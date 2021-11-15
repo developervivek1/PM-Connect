@@ -10,13 +10,13 @@ const finalmile1 = document.querySelector('.proj_filter .divfilter2 .project1 .p
 const finalmile2 = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milestone2 div');
 const finalmile3 = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milestone2 button');
 const showTable = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .head1 span:first-child');
-const addColumn = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .head9 button span i');
-const dropmenu = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .head9 .dropdown-menu');
+const addColumn = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .head9 button');
 let root = document.querySelector(':root');
 let divfilter = document.querySelector('.divfilter2');
 let tabnum = document.querySelectorAll('.divfilter2 .tab_content');
 let mainul = document.querySelectorAll('.divfilter2 .top_up ul li');
 let liIcon = document.querySelectorAll('.divfilter2 .top_up ul li i');
+console.log(addColumn);
 
 showFilter.addEventListener('click', (e) => {
     if (!filterdiv.classList.contains('showfilter')) {
@@ -32,7 +32,6 @@ window.addEventListener('click', (e) => {
     if (e.target == overlay) {
         hideFilterdiv();
         hideAddview();
-        hideAddColumn();
     }
 })
 
@@ -46,12 +45,6 @@ function hideAddview() {
     divfilter.querySelector('.addview').classList.remove('active');
     tabnum[0].classList.add('active');
     mainul[0].classList.add('active');
-    overlay.classList.remove('active');
-}
-function hideAddColumn() {
-    dropmenu.classList.remove('show');
-    addColumn.innerText = "add";
-    overlay.classList.remove('active');
 }
 
 milediv.addEventListener('click', () => {
@@ -151,12 +144,10 @@ showTable.forEach((expand) => {
 })
 
 addColumn.addEventListener('click', (e) => {
-    e.stopPropagation();
     let target = e.target;
     let dropmenu = e.target.closest('.head9').querySelector('.dropdown-menu');
     if (dropmenu.classList.contains('show')) {
         target.innerText = 'clear';
-        overlay.classList.add('active');
     }
     else {
         target.innerText = "add";
