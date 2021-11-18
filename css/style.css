@@ -867,6 +867,7 @@ height: 22px;
 border-radius: 30px;
 background-color: #ffff;
 opacity: 0.98;
+
 color: #000;
 margin-left: 7px;
 transition: all 0.2s ease-in-out;
@@ -874,6 +875,8 @@ transition: all 0.2s ease-in-out;
 .manage_view .div1 ul:nth-child(3) li:last-child:hover
 {
 transform: scale(1.15);
+box-shadow: 0rem 0.5rem 1rem rgb(0 0 0 / 48%);
+
 }
 .manage_view .div1 ul:nth-child(3) li:last-child span:first-child
 {
