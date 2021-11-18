@@ -1892,7 +1892,7 @@ margin: 0;
 .proj_filter .divfilter2 .project1 .border-bottom .projmaincon
 {
 width: 99.6%;
-padding: 12px 15px;
+padding: 1vw 1.1vw;
 }
 .proj_filter .divfilter2 .project1 .projmaincon .divcon1
 {
@@ -2487,6 +2487,36 @@ font-size: 12.6px;
   }  
 
   /* change end */
+
+/* topbar icon changed */
+
+   .top_up .active img:first-child{
+    display: inline-block;
+    padding-right: 5px;
+
+   } 
+
+   .top_up .active .img2{
+    display: none !important;
+    /* padding-right: 5px; */
+
+   } 
+
+   .top_up .active1 img:last-child{
+    display: inline-block;
+    padding-right: 5px !important;
+
+   } 
+
+   .top_up .active1 .img1{
+    display: none;
+    /* padding-right: 5px; */
+
+   } 
+/* end topbar */
+
+
+
 
 /* here end */
 
