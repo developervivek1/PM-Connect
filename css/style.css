@@ -1409,11 +1409,13 @@ display: inline-block;
 line-height: 26px;
 }
 /* management project filter */
+/* management project filter */
 .proj_filter .divfilter2
 {
 flex: 0 0 94.5%;
 max-width: 94.5%;
 margin-left: 5.5%;
+margin-bottom: 14rem;
 }
 .proj_filter .divfilter2 .top_up,
 .proj_filter .divfilter2 .top_up2
@@ -1519,7 +1521,7 @@ margin-top: 7.7rem;
 }
 .proj_filter .divfilter2 .addview
 {
-position: fixed;
+position: absolute;
 left: 47.2%;
 top: 78px;
 width: 210px;
@@ -1613,7 +1615,6 @@ display: none;
 .dropdown-menu.show
 {
 display: block;
-z-index: 99;
 animation: fadeUp 0.2s ease-in;
 }
 @keyframes fadeUp
@@ -1769,11 +1770,6 @@ border-radius: 5px;
 {
   display: block;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .head1
-{
-flex: 0 0 15%;
-max-width: 15%;
-}
 .proj_filter .divfilter2 .top_up2 .filter_div .filterdiv4 ul li span,
 .proj_filter .divfilter2 .top_up2 .filter_div .filterdiv5 ul li span
 {
@@ -1835,18 +1831,25 @@ line-height: 25px;
 color: #171E48;
 margin-bottom: 0rem;
 }
+.proj_filter .divfilter2 .project1 .projectcon1 .head1
+{
+flex: 0 0 13%;
+max-width: 13%;
+}
 .proj_filter .divfilter2 .project1 .projectcon1 .head2,
 .proj_filter .divfilter2 .project1 .projectcon1 .head3,
 .proj_filter .divfilter2 .project1 .projectcon1 .head4,
 .proj_filter .divfilter2 .project1 .projectcon1 .head5,
 .proj_filter .divfilter2 .project1 .projectcon1 .head6,
 .proj_filter .divfilter2 .project1 .projectcon1 .head7,
-.proj_filter .divfilter2 .project1 .projectcon1 .head8
+.proj_filter .divfilter2 .project1 .projectcon1 .head8,
+.proj_filter .divfilter2 .project1 .projectcon1 .head9,
+.proj_filter .divfilter2 .project1 .projectcon1 .head10
 {
-flex: 0 0 calc(83%/7);
-max-width: calc(83%/7);
+flex: 0 0 calc(85%/9);
+max-width: calc(85%/9);
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .head9
+.proj_filter .divfilter2 .project1 .projectcon1 .head11
 {
 flex: 0 0 2%;
 max-width: 2%;
@@ -1859,9 +1862,10 @@ display: flex;
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile>.row p
 {
 color: #000;
-font-size: 1vw;
+font-size: 1.4rem;
 letter-spacing: 0px;
 font-weight: 700;
+cursor: pointer;
 font-family: var(--lato);
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .head1 span:first-child
@@ -1895,7 +1899,7 @@ font-size: 1.4rem;
 color: #BCC0C7;
 margin-top: 1px;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .head9 span
+.proj_filter .divfilter2 .project1 .projectcon1 .head11 span
 {
 width: 17px;
 height: 17px;
@@ -1906,7 +1910,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .head9 span i
+.proj_filter .divfilter2 .project1 .projectcon1 .head11 span i
 {
 color: #fff;
 font-size: 1.2rem;
@@ -1920,18 +1924,18 @@ display: flex;
 flex-wrap: wrap;
 background-color: #fff;
 position: relative;
-z-index: 55;
 margin: 0;
 }
 .proj_filter .divfilter2 .project1 .border-bottom .projmaincon
 {
 width: 99.6%;
-padding: 1vw 1.1vw;
+padding: 12px 15px;
+position: relative;
 }
 .proj_filter .divfilter2 .project1 .projmaincon .divcon1
 {
-flex: 0 0 14%;
-max-width: 14%;
+flex: 0 0 13%;
+max-width: 13%;
 font-size: 12px;
 color: #000000;
 font-family: var(--heebo);
@@ -1944,10 +1948,12 @@ display: flex;
 .proj_filter .divfilter2 .project1 .projmaincon .divcon5,
 .proj_filter .divfilter2 .project1 .projmaincon .divcon6,
 .proj_filter .divfilter2 .project1 .projmaincon .divcon7,
-.proj_filter .divfilter2 .project1 .projmaincon .divcon8
+.proj_filter .divfilter2 .project1 .projmaincon .divcon8,
+.proj_filter .divfilter2 .project1 .projmaincon .divcon9,
+.proj_filter .divfilter2 .project1 .projmaincon .divcon10
 {
-flex: 0 0 calc(86%/7);
-max-width: calc(86%/7);
+flex: 0 0 calc(86%/9);
+max-width: calc(86%/9);
 font-size: 12px;
 color: #000000;
 font-family: var(--heebo);
@@ -1961,7 +1967,7 @@ margin-bottom: 0rem;
 }
 .proj_filter .divfilter2 .project1 .projmaincon .divcon1 p
 {
-margin-right: 25px;
+margin-right: 15px;
 margin-top: 2px;
 }
 .proj_filter .divfilter2 .project1 .projmaincon .divcon1 span i
@@ -1973,7 +1979,8 @@ vertical-align: middle;
 }
 .proj_filter .divfilter2 .project1 .projmaincon .divcon2 div,
 .proj_filter .divfilter2 .project1 .projmaincon .divcon7 div,
-.proj_filter .divfilter2 .project1 .projmaincon .divcon8 div
+.proj_filter .divfilter2 .project1 .projmaincon .divcon8 div,
+.proj_filter .divfilter2 .project1 .projmaincon .divcon9 div
 {
 width: 22px;
 height: 22px;
@@ -1982,7 +1989,8 @@ margin-right: 0.32rem;
 }
 .proj_filter .divfilter2 .project1 .projmaincon .divcon2 div img,
 .proj_filter .divfilter2 .project1 .projmaincon .divcon7 div img,
-.proj_filter .divfilter2 .project1 .projmaincon .divcon8 div img
+.proj_filter .divfilter2 .project1 .projmaincon .divcon8 div img,
+.proj_filter .divfilter2 .project1 .projmaincon .divcon9 div img
 {
 width: 100%;
 height: 100%;
@@ -2327,6 +2335,258 @@ color: #fff;
 font-size: 13px;
 }
 /*@here  */
+
+/*  */
+
+
+.daterangepicker td.active, .daterangepicker td.active:hover {
+    background-color: #2D62ED;
+    border-color: transparent;
+    color: #fff;
+}
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default, .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current, .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box>div>div.xdsoft_current {
+    background: #2D62ED;
+    box-shadow: #178fe5 0 1px 3px 0 inset;
+    color: #fff;
+    font-weight: 700;
+}
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current:hover
+{
+    background: #2D62ED;
+    color: #fff;
+}
+.proj_filter .divfilter2 .project1 .border-bottom .projmaincon input[type="text"]{
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+}
+.proj_filter .divfilter2 .project1 .border-bottom .projmaincon input[type="text"]:focus
+{
+    box-shadow: none;
+    outline: none;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .divcon9 div,
+.proj_filter .divfilter2 .project1 .projmaincon .divcon10 div
+{
+    margin-left: 0.5rem;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .divcon10 div
+{
+    cursor: pointer;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .divcon10 .track,
+.proj_filter .divfilter2 .project1 .projmaincon .divcon10 .risk,
+.proj_filter .divfilter2 .project1 .projmaincon .divcon10 .approved
+{
+    background-color: #eeab53;
+    width: 100%;
+    height: 35px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .divcon10 .risk
+{
+    background-color: #E2445B;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .divcon10 .approved
+{
+    background-color: #1FC875;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0px 2px 14px #00000012;
+    width: 300px;
+    height: auto;
+    padding: 15px;
+    z-index: 100;
+    display: none;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit.active
+{
+    display: block;
+    animation: fadeUp 0.2s ease-in;
+}
+
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .row
+{
+    align-items: flex-start;
+}
+
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div,
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .right_div
+{
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div input[type="color"],
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .right_div input[type="color"]
+{
+  width: 93%;
+  height: 40px;
+  background-color: #F6BE75;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 0px;
+  outline: none;
+  cursor: pointer;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div input[type="color"]:nth-child(2)
+{
+    background-color: #E2445B;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div input[type="color"]:nth-child(3)
+{
+    background-color: #1FC875;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div input[type="color"]:nth-child(4)
+{
+    background-color: #1CA9ED;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div input[type="color"]:nth-child(5)
+{
+    background-color: #2D62ED;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div input[type="color"]:nth-child(6)
+{
+    background-color: #F2870C;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div input[type="color"]:nth-child(7)
+{
+    background-color: #034E03;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .right_div input[type="color"]:nth-child(1)
+{
+    background-color: #F5E33F;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .right_div input[type="color"]:nth-child(2)
+{
+    background-color: #951DC7;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .right_div input[type="color"]:nth-child(3)
+{
+    background-color: #BCB6BE;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div p,
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .right_div p
+{
+    position: absolute;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    width: max-content;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div p:nth-child(8)
+{
+    top: 12px;
+    left: 31%;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div p:nth-child(9)
+{
+    top: 67px;
+    left: 34%;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div p:nth-child(10)
+{
+    top: 121px;
+    left: 28.7%;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div p:nth-child(11)
+{
+    top: 176px;
+    left: 31%;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div p:nth-child(12)
+{
+    top: 231px;
+    left: 24.1%;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div p:nth-child(13)
+{
+    top: 287px;
+    left: 31%;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div p:nth-child(14)
+{
+    top: 341px;
+    left: 15.5%;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .right_div p:nth-child(4)
+{
+    top: 12px;
+    left: 31.1%;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .right_div p:nth-child(5)
+{
+    top: 67px;
+    left: 18.9%;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .right_div p:nth-child(6)
+{
+    top: 121px;
+    left: 27%;
+}
+
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .btndiv,
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .btndiv2
+{
+    width: 100%;
+    margin-top: 2rem;
+    display: none;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .btndiv.active,
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .btndiv2.active
+{
+    display: block;
+    text-align: center;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .btndiv i
+{
+    font-size: 16px;
+    color: #2D62ED;
+    transform: rotate(-10deg);
+    margin-inline-end: 0.5rem;
+    cursor: pointer;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .btndiv span
+{
+    font-size: 12px;
+    color: #2D62ED;
+    cursor: pointer;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .btndiv2
+{
+    margin-top: 1.5rem;
+    padding: 0 17px 0;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .btndiv2 .row
+{
+    justify-content: space-between;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .btndiv2 button
+{
+    width: 38%;
+    height: 30px;
+    color: #fff; 
+    font-size: 12px;
+}
+
+
+/* new table closed*/
+
+
+
 *+.uk-h1, *+.uk-h2, *+.uk-h3, *+.uk-h4, *+.uk-h5, *+.uk-h6, *+.uk-heading-2xlarge, *+.uk-heading-large, *+.uk-heading-medium, *+.uk-heading-small, *+.uk-heading-xlarge, *+h1, *+h2, *+h3, *+h4, *+h5, *+h6 {
 margin-top: 0px;
 }
