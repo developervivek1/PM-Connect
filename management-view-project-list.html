@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--google icons  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- fontawesome-5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--bs-5  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.min.css"
+        integrity="sha512-6KY5s6UI5J7SVYuZB4S/CZMyPylqyyNZco376NM2Z8Sb8OxEdp02e1jkKk/wZxIEmjQ6DRCEBhni+gpr9c4tvA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- datepicker -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Management View Project Filter</title>
+</head>
+
+<body>
+    <section class="manage_view proj_filter">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="myoverlay"></div>
+                <div class="div1">
+                    <h3><img src="icons/logo.svg" alt="logo"></h3>
+                    <ul>
+                        <li>
+
+                            <span class="tooltiptext">ashboard</span>
+                            <a href="#" class="button1">
+                                <img src="icons/dashboard.svg" alt="Image one" width="38" class="button__img1">
+                                <img src="icons/dashboardwhite.svg" alt="Image two" class="button__img1">
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <span class="tooltiptext">Notifications</span>
+                            <a href="#" class="button1">
+                                <img src="icons/Notification-Blue.svg" alt="Image one" width="38" class="button__img1">
+                                <img src="icons/notfiwhite.svg" alt="Image two" class="button__img1">
+                            </a>
+                        </li>
+                        <li class="active">
+
+                            <span class="tooltiptext">Request</span>
+                            <a href="#" class="button1">
+                                <img src="icons/Request-Blue.svg" alt="Image one" width="38" class="button__img1">
+                                <img src="icons/request-white.svg" alt="Image two" class="button__img1">
+                            </a>
+                        </li>
+                        <li>
+
+                            <span class="tooltiptext">Project</span>
+                            <a href="#" class="button1">
+                                <img src="icons/project.svg" alt="Image one" width="38" class="button__img1">
+                                <img src="icons/project-white.svg" alt="Image two" class="button__img1">
+                            </a>
+                        </li>
+                        <li>
+
+                            <span class="tooltiptext">View Progress</span>
+                            <a href="#" class="button1">
+                                <img src="icons/Viewprogress-Blue.svg" alt="Image one" width="38" class="button__img1">
+                                <img src="icons/Progresslist-white.svg" alt="Image two" class="button__img1"
+                                    style="width: 1.3vw;">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+
+                            <span class="tooltiptext">Reports</span>
+                            <a href="#" class="button1">
+                                <img src="icons/Reports.svg" alt="Image one" width="38" class="button__img1">
+                                <img src="icons/reportwhite.svg" alt="Image two" class="button__img1">
+                            </a>
+                        </li>
+                        <li>
+
+                            <span class="tooltiptext">Search</span>
+                            <a href="#" class="button1">
+                                <img src="icons/search.svg" alt="Image one" width="38" class="button__img1">
+                                <img src="icons/searchwhite.svg" alt="Image two" class="button__img1">
+                            </a>
+                        </li>
+                        <li>
+
+                            <span class="tooltiptext">Help & Support</span>
+                            <a href="#" class="button1">
+                                <img src="icons/help.svg" alt="Image one" width="38" class="button__img1">
+                                <img src="icons/helpwhite.svg" alt="Image two" class="button__img1">
+                            </a>
+                        </li>
+                        <li class="tooltip1">
+                            <p class="tooltiptext1">
+                                <span class="">S</span>
+                            <p class="tooltiptext tooltiptext1">
+                                <span class=""> My Profile</span>
+                                <br>
+                                <br>
+                                <a href="signIn.html"> <span> Log Out </span> </a>
+
+                            </p>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <style>
+
+                </style>
+                <div class="divfilter2 ps-0 pe-0">
+                    <div class="row">
+                        <div class="top_up">
+                            <h1>Projects</h1>
+                            <ul>
+                                <li class="active active1" data-target=".list">
+
+                                    <!-- <i class="material-icons">format_align_left</i> -->
+                                    <img src="icons/list-blue.svg" class="img1" alt="">
+                                    <img src="icons/list.svg" class="img2" alt="">
+                                    List
+                                </li>
+
+
+                                <li class="active1" data-target=".gantt">
+                                    <!-- <i class="material-icons">subject</i>  -->
+                                    <img src="icons/gantt-blue.svg" class="img1" alt="">
+                                    <img src="icons/gntt.svg" class="img2" alt="">
+                                    Gantt
+                                </li>
+
+                                <li class="active1" data-target=".calendar">
+                                    <!-- <i class="material-icons">calendar_today</i> -->
+                                    <img src="icons/calender-1.svg" class="img1" alt="">
+                                    <img src="icons/calender.svg" class="img2" alt="">
+                                    Calendar
+                                </li>
+                                <li class="active1" data-target=".workload">
+                                    <!-- <i class="material-icons">subject</i>  -->
+                                    <img src="icons/workload-blue.svg" class="img1" alt="">
+                                    <img src="icons/wrokload.svg" class="img2" alt="">
+                                    Workload
+                                </li>
+                                <li class="active1" data-target=".kanban">
+                                    <!-- <i class="material-icons">subject</i>  -->
+                                    <img src="icons/kanban-blue.svg" class="img1" alt="">
+                                    <img src="icons/Kanban.svg" class="img2" alt="">
+                                    Kanban
+                                </li>
+                                <li class="active1" data-target=".addview">
+                                    <!-- <i class="material-icons">add</i> -->
+                                    <img src="icons/plus-blue.svg" class="img1" alt="">
+                                    <img src="icons/plus.svg" class="img2" alt="">
+                                    Add View
+                                </li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+
+                    <div class="list active tab_content">
+                        <div class="top_up2 mb-1">
+                            <ul>
+                                <!--  -->
+                                <!-- <li>
+                                    <div id="wrap">
+                                        <form action="" autocomplete="on">
+                                           
+                                        <input id="search" name="search" type="text" placeholder="Search">
+                                          
+                                          <input id="search_submit" value="Rechercher" type="submit">
+                                          <label for="">Search</label>
+                                        </form>
+                                      </div>
+                                     
+                                </li> -->
+
+
+
+                                <!--  -->
+                                <li> <img src="icons/search-1.svg" width="23" class="pe-2" alt="">
+                                    Search..</li>
+                                <li>
+                                    <img src="icons/filter.svg" width="23" class="pe-2" alt="">
+                                    Filters
+                                </li>
+                                <li>
+                                    <img src="icons/sort.svg" width="14" class="pe-2" alt="">
+                                    Sort
+                                </li>
+
+                                <div class="filter_div">
+                                    <div class="row head_div">
+                                        <div class="col-md-6 d-flex">
+                                            <h1>Quick Filters</h1>
+                                            <span>Showing all 21 items</span>
+                                        </div>
+                                        <div class="col-md-6 d-flex justify-content-end">
+                                            <span>Clear all</span>
+                                            <button class="btn">Save as New view</button>
+                                        </div>
+                                    </div>
+                                    <div class="border-bottom">
+                                        <div class="filterdiv1">
+                                            <p>Group</p>
+                                            <ul>
+                                                <li>Research</li>
+                                                <li>Wireframe</li>
+                                                <li>Visual Design</li>
+                                            </ul>
+                                        </div>
+                                        <div class="filterdiv2">
+                                            <p>Name</p>
+                                            <ul>
+                                                <li>Project 01</li>
+                                                <li>Project 01</li>
+                                                <li>Project 01</li>
+                                                <li>Project 01</li>
+                                                <li>Project 01</li>
+                                            </ul>
+                                        </div>
+                                        <div class="filterdiv3">
+                                            <p>Assignee</p>
+                                            <ul>
+                                                <li>Project 01</li>
+                                            </ul>
+                                        </div>
+                                        <div class="filterdiv4">
+                                            <p>Status</p>
+                                            <ul>
+                                                <li class="active"><span></span> On Track</li>
+                                                <li><span></span> Stuck</li>
+                                                <li><span></span> Done</li>
+                                                <li><span></span> Planned</li>
+                                                <li><span></span> Upnext</li>
+                                                <li><span></span> Upnext</li>
+                                                <li><span></span> Upnext</li>
+                                                <li><span></span> Upnext</li>
+                                                <li><span></span> Upnext</li>
+                                                <li><span></span> Upnext</li>
+                                            </ul>
+                                        </div>
+                                        <div class="filterdiv5">
+                                            <p>Prior</p>
+                                            <ul>
+                                                <li><span></span> Medium</li>
+                                                <li><span></span> High</li>
+                                                <li><span></span> Low</li>
+                                                <li><span></span> Blank</li>
+                                                <li><span></span> All</li>
+                                            </ul>
+                                        </div>
+                                        <div class="filterdiv5">
+                                            <p>Prior</p>
+                                            <ul>
+                                                <li><span></span> Medium</li>
+                                                <li><span></span> High</li>
+                                                <li><span></span> Low</li>
+                                                <li><span></span> Blank</li>
+                                                <li><span></span> All</li>
+                                            </ul>
+                                        </div>
+                                        <div class="filterdiv5">
+                                            <p>Prior</p>
+                                            <ul>
+                                                <li><span></span> Medium</li>
+                                                <li><span></span> High</li>
+                                                <li><span></span> Low</li>
+                                                <li><span></span> Blank</li>
+                                                <li><span></span> All</li>
+                                            </ul>
+                                        </div>
+                                        <div class="filterdiv5">
+                                            <p>Prior</p>
+                                            <ul>
+                                                <li><span></span> Medium</li>
+                                                <li><span></span> High</li>
+                                                <li><span></span> Low</li>
+                                                <li><span></span> Blank</li>
+                                                <li><span></span> All</li>
+                                            </ul>
+                                        </div>
+                                        <div class="filterdiv5">
+                                            <p>Prior</p>
+                                            <ul>
+                                                <li><span></span> Medium</li>
+                                                <li><span></span> High</li>
+                                                <li><span></span> Low</li>
+                                                <li><span></span> Blank</li>
+                                                <li><span></span> All</li>
+                                            </ul>
+                                        </div>
+                                        <div class="filterdiv5">
+                                            <p>Prior</p>
+                                            <ul>
+                                                <li><span></span> Medium</li>
+                                                <li><span></span> High</li>
+                                                <li><span></span> Low</li>
+                                                <li><span></span> Blank</li>
+                                                <li><span></span> All</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- border-bottom closed -->
+                                    <div class="filter_bottom">
+                                        <p>Switch to advanced filters</p>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="project1">
+                            <div class="projectcon1">
+                                <div class="row">
+                                    <div class="head1">
+                                        <span><i class="material-icons">expand_more</i></span>
+                                        <span></span>
+                                        <h5>Research</h5>
+                                    </div>
+                                    <div class="head2">
+                                        <h5>Assignees</h5>
+                                    </div>
+                                    <div class="head3">
+                                        <h5>Subitems</h5>
+                                    </div>
+                                    <div class="head4">
+                                        <h5>Planned Date</h5>
+                                    </div>
+                                    <div class="head5">
+                                        <h5>Actual Date</h5>
+                                    </div>
+                                    <div class="head6">
+                                        <h5>Actual Budget</h5>
+                                    </div>
+                                    <div class="head7">
+                                        <h5>Planned Budget</h5>
+                                    </div>
+                                    <div class="head8">
+                                        <h5>Project Lead</h5>
+                                    </div>
+                                    <div class="head9">
+                                        <h5>Domain Lead</h5>
+                                    </div>
+                                    <div class="head10">
+                                        <h5>Status</h5>
+                                    </div>
+                                    <div class="head11 ps-0">
+                                        <button class="btn p-0" type="button" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <span><i class="material-icons">add</i></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <div class="dropdown">
+                                                <div class="dropmain">
+                                                    <div class="droplist">
+                                                        <div class="column">
+                                                            <a href="#"><img src="./icons/calender-1.svg"
+                                                                    class="icons">Planned</a>
+                                                            <a href="#"><img src="./icons/calender-1.svg"
+                                                                    class="icons">Start Date</a>
+                                                            <a href="#"><img src="./icons/user.svg"
+                                                                    class="icons">Project Lead</a>
+                                                            <a href="#"><img src="./icons/subitem.svg"
+                                                                    class="icons">Subitem</a>
+                                                            <a href="#"><img src="./icons/actual budget.svg"
+                                                                    class="icons">Actual Budget</a>
+                                                            <a href="#"><img src="./icons/file (2).svg"
+                                                                    class="icons">File</a>
+                                                            <a href="#"><img src="./icons/mirror.svg"
+                                                                    class="icons">Mirror</a>
+                                                            <a href="#"><img src="./icons/text.svg"
+                                                                    class="icons">text</a>
+                                                            <a href="#"><img src="./icons/user.svg" class="icons">Domain
+                                                                Lead</a>
+                                                            <a href="#"><img src="./icons/priority.svg"
+                                                                    class="icons">Priority</a>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </ul>
+                                        <!-- 
+                                        -->
+                                    </div>
+                                </div>
+                                <div class="expand active">
+                                    <div class="border-bottom mt-3">
+                                        <div class="projmaincon">
+                                            <div class="row">
+                                                <div class="divcon1">
+                                                    <p>Project 01</p><span><i class="material-icons">maps_ugc</i></span>
+                                                </div>
+                                                <div class="divcon2">
+                                                    <div><img src="img/client1.jpg" alt=""></div>
+                                                    <div><img src="img/client2.jpg" alt=""></div>
+                                                    <!-- <span><i class="material-icons">add</i></span> -->
+                                                </div>
+                                                <div class="divcon3">
+                                                    <span id="tree_open"><i
+                                                            class="material-icons">account_tree</i></span>
+                                                </div>
+                                                <div class="divcon4">
+                                                    <input type="text" name="datefilter" id="rangePicker"
+                                                        value="Oct 20-25" />
+                                                </div>
+                                                <div class="divcon5">
+                                                    <input type="text" id="picker" value="Oct 20,2021">
+                                                </div>
+                                                <div class="divcon6">
+                                                    <p>&#36; 200</p>
+                                                </div>
+                                                <div class="divcon7">
+                                                    <p>$ 100</p>
+                                                </div>
+                                                <div class="divcon8">
+                                                    <div><img src="img/client1.jpg" alt=""></div>
+                                                    <p>John</p>
+                                                </div>
+                                                <div class="divcon9">
+                                                    <div><img src="img/client2.jpg" alt=""></div>
+                                                    <p>Smith</p>
+                                                </div>
+                                                <div class="divcon10">
+                                                    <div class="track" colorval="#eeab53" textval="On Track">On Track
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="addedit">
+                                                <div class="row">
+                                                    <div class="left_div">
+                                                        <input type="color" value="#F6BE75" text-target=".track"
+                                                            disabled>
+                                                        <input type="color" value="#E2445B" text-target=".atrisk"
+                                                            disabled>
+                                                        <input type="color" value="#1FC875" text-target=".approved"
+                                                            disabled>
+                                                        <input type="color" value="#1CA9ED" text-target=".planned"
+                                                            disabled>
+                                                        <input type="color" value="#2D62ED" text-target=".future"
+                                                            disabled>
+                                                        <input type="color" value="#F2870C" text-target=".upnext"
+                                                            disabled>
+                                                        <input type="color" value="#034E03" text-target=".ready"
+                                                            disabled>
+                                                        <p class="track" value="#F6BE75" text-target=".track">
+                                                            On Track
+                                                        </p>
+                                                        <p class="atrisk" value="#E2445B" text-target=".atrisk">At Risk
+                                                        </p>
+                                                        <p class="approved" value="#1FC875" text-target=".approved">
+                                                            Approved</p>
+                                                        <p class="planned" value="#1CA9ED" text-target=".planned">
+                                                            Planned</p>
+                                                        <p class="future" value="#2D62ED" text-target=".future">Future
+                                                            Steps</p>
+                                                        <P class="upnext" value="#F2870C" text-target=".upnext">Up Next
+                                                        </P>
+                                                        <P class="ready" value="#034E03" text-target=".ready">Ready for
+                                                            review</P>
+                                                    </div>
+                                                    <div class="right_div">
+                                                        <input type="color" value="#F5E33F" text-target=".hold"
+                                                            disabled>
+                                                        <input type="color" value="#951DC7" text-target=".begin"
+                                                            disabled>
+                                                        <input type="color" value="#BCB6BE" text-target=".update"
+                                                            disabled>
+                                                        <p class="hold" value="#F5E33F" text-target=".hold">On Hold</p>
+                                                        <p class="begin" value="#951DC7" text-target=".begin">Ready to
+                                                            begin</p>
+                                                        <p class="update" value="#BCB6BE" text-target=".update">No
+                                                            Update</p>
+                                                    </div>
+                                                    <div class="btndiv active">
+                                                        <i class="material-icons">edit</i>
+                                                        <span>Add/Edit labels</span>
+                                                    </div>
+                                                    <div class="btndiv2">
+                                                        <div class="row">
+                                                            <button
+                                                                class="btn bg-secondary justify-content-center align-items-center d-flex">
+                                                                Discard</button>
+                                                            <button
+                                                                class="btn bg-success justify-content-center align-items-center d-flex">
+                                                                Done</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- addedit closed -->
+                                        </div>
+                                    </div>
+                                    <div class="main_mile">
+                                        <div class="row">
+                                            <div class="divmile1">
+                                            </div>
+                                            <div class="divmile2">
+                                                <p>Subitems</p>
+                                            </div>
+                                            <div class="divmile3">
+                                                <p>Owner</p>
+                                            </div>
+                                            <div class="divmile4">
+                                                <p>Status</p>
+                                            </div>
+                                            <div class="divmile5">
+                                                <p>Date</p>
+                                            </div>
+                                            <div class="divmile6">
+                                                <p>Timeline</p>
+                                            </div>
+                                            <div class="divmile7">
+                                                <div><i class="material-icons">add</i></div>
+                                            </div>
+                                        </div>
+                                        <div class="milestone3">
+                                            <div class="row">
+                                                <div class="divmile1">
+                                                    <span></span>
+                                                    <p>Milestone Name</p>
+                                                </div>
+                                                <div class="divmile2">
+                                                    <i class="material-icons">account_tree</i>
+                                                </div>
+                                                <div class="divmile3">
+                                                    <div><img src="img/client1.jpg" alt=""></div>
+                                                    <span><i class="material-icons">add</i> </span>
+                                                </div>
+                                                <div class="divmile4">
+                                                    <div>
+                                                        <p>On Track</p>
+                                                    </div>
+                                                </div>
+                                                <div class="divmile5">
+                                                    <p>Nov 3</p>
+                                                </div>
+                                                <div class="divmile6">
+                                                    <div>
+                                                        <p>Nov 20</p>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="divmile7">
+                                                dfsdf
+                                            </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- main mile closed -->
+                                    <div class="milestone">
+                                        <span></span>
+                                        <p>Add new milestone</p>
+                                        <div class="milehide">
+                                            <div class="milestone2">
+                                                <div>
+                                                    <span></span>
+                                                    <p>milestone name</p>
+                                                </div>
+                                                <button class="btn">Add</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-bottom">
+                                        <div class="projmaincon">
+                                            <div class="row">
+                                                <div class="divcon1">
+                                                    <p>Project 01</p><span><i class="material-icons">maps_ugc</i></span>
+                                                </div>
+                                                <div class="divcon2">
+                                                    <div><img src="img/client1.jpg" alt=""></div>
+                                                </div>
+                                                <div class="divcon3">
+                                                    <span><i class="material-icons">account_tree</i></span>
+                                                </div>
+                                                <div class="divcon4">
+                                                    <input type="text" name="datefilter" id="rangePicker"
+                                                        value="Oct 20-25" />
+                                                </div>
+                                                <div class="divcon5">
+                                                    <input type="text" id="picker2" value="Oct 20,2021">
+                                                </div>
+                                                <div class="divcon6">
+                                                    <p>&#36; 200</p>
+                                                </div>
+                                                <div class="divcon7">
+                                                    <p>$ 100</p>
+                                                </div>
+                                                <div class="divcon8">
+                                                    <div><img src="img/client1.jpg" alt=""></div>
+                                                    <p>John</p>
+                                                </div>
+                                                <div class="divcon9">
+                                                    <div><img src="img/client2.jpg" alt=""></div>
+                                                    <p>Smith</p>
+                                                </div>
+                                                <div class="divcon10">
+                                                    <div class="risk" colorval="#e2445b" textval="At Risk">At risk
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-bottom">
+                                        <div class="projmaincon">
+                                            <div class="row">
+                                                <div class="divcon1">
+                                                    <p>Project 01</p><span><i class="material-icons">maps_ugc</i></span>
+                                                </div>
+                                                <div class="divcon2">
+                                                    <div><img src="img/client1.jpg" alt=""></div>
+                                                </div>
+                                                <div class="divcon3">
+                                                    <span><i class="material-icons">account_tree</i></span>
+                                                </div>
+                                                <div class="divcon4">
+                                                    <input type="text" name="datefilter" id="rangePicker"
+                                                        value="Oct 20-25" />
+                                                </div>
+                                                <div class="divcon5">
+                                                    <input type="text" id="picker3" value="Oct 20,2021">
+                                                </div>
+                                                <div class="divcon6">
+                                                    <p>&#36; 200</p>
+                                                </div>
+                                                <div class="divcon7">
+                                                    <p>$ 100</p>
+                                                </div>
+                                                <div class="divcon8">
+                                                    <div><img src="img/client1.jpg" alt=""></div>
+                                                    <p>John</p>
+                                                </div>
+                                                <div class="divcon9">
+                                                    <div><img src="img/client2.jpg" alt=""></div>
+                                                    <p>Smith</p>
+                                                </div>
+                                                <div class="divcon10">
+                                                    <div class="approved" colorval="#1FC875" textval="Approved">Approved
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-bottom">
+                                        <div class="projmaincon">
+                                            <div class="row">
+                                                <div class="last_div">
+                                                    <span><i class="material-icons">add</i></span>
+                                                    <p>Add</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- projectcon1 closed -->
+                        </div>
+
+                        <div class="project1">
+                            <div class="projectcon1">
+                                <div class="row">
+                                    <div class="head1">
+                                        <span><i class="material-icons">expand_more</i></span>
+                                        <span></span>
+                                        <h5>Wireframe</h5>
+                                    </div>
+                                    <div class="head2">
+                                        <h5>Assignees</h5>
+                                    </div>
+                                    <div class="head3">
+                                        <h5>Subitems</h5>
+                                    </div>
+                                    <div class="head4">
+                                        <h5>Planned Date</h5>
+                                    </div>
+                                    <div class="head5">
+                                        <h5>Actual Date</h5>
+                                    </div>
+                                    <div class="head6">
+                                        <h5>Actual Budget</h5>
+                                    </div>
+                                    <div class="head7">
+                                        <h5>Planned Budget</h5>
+                                    </div>
+                                    <div class="head8">
+                                        <h5>Project Lead</h5>
+                                    </div>
+                                    <div class="head9">
+                                        <h5>Domain Lead</h5>
+                                    </div>
+                                    <div class="head10">
+                                        <h5>Status</h5>
+                                    </div>
+                                    <div class="head11 ps-0">
+                                        <button class="btn p-0" type="button" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <span><i class="material-icons">add</i></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <div class="dropdown">
+                                                <div class="dropmain">
+                                                    <div class="droplist">
+                                                        <div class="column">
+                                                            <a href="#"><img src="./icons/calender-1.svg"
+                                                                    class="icons">Planned</a>
+                                                            <a href="#"><img src="./icons/calender-1.svg"
+                                                                    class="icons">Start Date</a>
+                                                            <a href="#"><img src="./icons/user.svg"
+                                                                    class="icons">Project Lead</a>
+                                                            <a href="#"><img src="./icons/subitem.svg"
+                                                                    class="icons">Subitem</a>
+                                                            <a href="#"><img src="./icons/actual budget.svg"
+                                                                    class="icons">Actual Budget</a>
+                                                            <a href="#"><img src="./icons/file (2).svg"
+                                                                    class="icons">File</a>
+                                                            <a href="#"><img src="./icons/mirror.svg"
+                                                                    class="icons">Mirror</a>
+                                                            <a href="#"><img src="./icons/text.svg"
+                                                                    class="icons">text</a>
+                                                            <a href="#"><img src="./icons/user.svg" class="icons">Domain
+                                                                Lead</a>
+                                                            <a href="#"><img src="./icons/priority.svg"
+                                                                    class="icons">Priority</a>
+                                                        </div>
+                                                        <!-- <div class="column2">
+                                                            <a href="#"><img src="./icons//timeline.svg"
+                                                                    class="icons">Timeline</a>
+                                                            <a href="#"><img src="./icons/Number.svg"
+                                                                    class="icons">Numbers</a>
+                                                            <a href="#"><img src="./icons/Assigness.svg"
+                                                                    class="icons">Assignees</a>
+                                                            <a href="#"><img src="./icons/Progress track.svg"
+                                                                    class="icons">Progress Track</a>
+                                                            <a href="#"><img src="./icons/dropdown (2).svg"
+                                                                    class="icons">Dropdown</a>
+                                                            <a href="#"><img src="./icons/arrow.svg"
+                                                                    class="icons">Connect boards</a>
+                                                            <a href="#"><img src="./icons/formula.svg"
+                                                                    class="icons">Formula</a>
+                                                            <a href="#"><img src="./icons/link.svg"
+                                                                    class="icons">Link</a>
+                                                            <a href="#"><img src="./icons/status.svg"
+                                                                    class="icons">Status</a>
+                                                        </div> -->
+                                                    </div>
+                                                    <!-- <div class="addcolumn">
+                                                        <a href="#"><i class="fa fa-plus"></i>Add Column</a>
+                                                    </div> -->
+                                                </div>
+                                            </div>
+                                        </ul>
+                                        <!-- 
+                                        -->
+                                    </div>
+                                </div>
+                                <div class="expand active">
+                                    <div class="border-bottom mt-3">
+                                        <div class="projmaincon">
+                                            <div class="row">
+                                                <div class="divcon1">
+                                                    <p>Project 01</p><span><i class="material-icons">maps_ugc</i></span>
+                                                </div>
+                                                <div class="divcon2">
+                                                    <div><img src="img/client1.jpg" alt=""></div>
+                                                    <div><img src="img/client1.jpg" alt=""></div>
+                                                </div>
+                                                <div class="divcon3">
+                                                    <span><i class="material-icons">account_tree</i></span>
+                                                </div>
+                                                <div class="divcon4">
+                                                    <input type="text" name="datefilter" id="rangePicker"
+                                                        value="Oct 20-25" />
+                                                </div>
+                                                <div class="divcon5">
+                                                    <input type="text" id="picker4" value="Oct 20,2021">
+                                                </div>
+                                                <div class="divcon6">
+                                                    <p>&#36; 200</p>
+                                                </div>
+                                                <div class="divcon7">
+                                                    <p>$ 100</p>
+                                                </div>
+                                                <div class="divcon8">
+                                                    <div><img src="img/client1.jpg" alt=""></div>
+                                                    <p>John</p>
+                                                </div>
+                                                <div class="divcon9">
+                                                    <div><img src="img/client2.jpg" alt=""></div>
+                                                    <p>Smith</p>
+                                                </div>
+                                                <div class="divcon10">
+                                                    <div class="track" colorval="#eeab53" textval="On Track">On Track
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="addedit">
+                                                <div class="row">
+                                                    <div class="left_div">
+                                                        <input type="color" value="#F6BE75" text-target=".track"
+                                                            disabled>
+                                                        <input type="color" value="#E2445B" text-target=".atrisk"
+                                                            disabled>
+                                                        <input type="color" value="#1FC875" text-target=".approved"
+                                                            disabled>
+                                                        <input type="color" value="#1CA9ED" text-target=".planned"
+                                                            disabled>
+                                                        <input type="color" value="#2D62ED" text-target=".future"
+                                                            disabled>
+                                                        <input type="color" value="#F2870C" text-target=".upnext"
+                                                            disabled>
+                                                        <input type="color" value="#034E03" text-target=".ready"
+                                                            disabled>
+                                                        <p class="track" value="#F6BE75" text-target=".track">
+                                                            On Track
+                                                        </p>
+                                                        <p class="atrisk" value="#E2445B" text-target=".atrisk">At Risk
+                                                        </p>
+                                                        <p class="approved" value="#1FC875" text-target=".approved">
+                                                            Approved</p>
+                                                        <p class="planned" value="#1CA9ED" text-target=".planned">
+                                                            Planned</p>
+                                                        <p class="future" value="#2D62ED" text-target=".future">Future
+                                                            Steps</p>
+                                                        <P class="upnext" value="#F2870C" text-target=".upnext">Up Next
+                                                        </P>
+                                                        <P class="ready" value="#034E03" text-target=".ready">Ready for
+                                                            review</P>
+                                                    </div>
+                                                    <div class="right_div">
+                                                        <input type="color" value="#F5E33F" text-target=".hold"
+                                                            disabled>
+                                                        <input type="color" value="#951DC7" text-target=".begin"
+                                                            disabled>
+                                                        <input type="color" value="#BCB6BE" text-target=".update"
+                                                            disabled>
+                                                        <p class="hold" value="#F5E33F" text-target=".hold">On Hold</p>
+                                                        <p class="begin" value="#951DC7" text-target=".begin">Ready to
+                                                            begin</p>
+                                                        <p class="update" value="#BCB6BE" text-target=".update">No
+                                                            Update</p>
+                                                    </div>
+                                                    <div class="btndiv active">
+                                                        <i class="material-icons">edit</i>
+                                                        <span>Add/Edit labels</span>
+                                                    </div>
+                                                    <div class="btndiv2">
+                                                        <div class="row">
+                                                            <button
+                                                                class="btn bg-secondary justify-content-center align-items-center d-flex">
+                                                                Discard</button>
+                                                            <button
+                                                                class="btn bg-success justify-content-center align-items-center d-flex">
+                                                                Done</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- addedit closed -->
+                                        </div>
+                                    </div>
+                                    <div class="border-bottom">
+                                        <div class="projmaincon">
+                                            <div class="row">
+                                                <div class="divcon1">
+                                                    <p>Project 01</p><span><i class="material-icons">maps_ugc</i></span>
+                                                </div>
+                                                <div class="divcon2">
+                                                    <div><img src="img/client1.jpg" alt=""></div>
+                                                </div>
+                                                <div class="divcon3">
+                                                    <span><i class="material-icons">account_tree</i></span>
+                                                </div>
+                                                <div class="divcon4">
+                                                    <input type="text" name="datefilter" id="rangePicker"
+                                                        value="Oct 20-25" />
+                                                </div>
+                                                <div class="divcon5">
+                                                    <input type="text" id="picker5" value="Oct 20,2021">
+                                                </div>
+                                                <div class="divcon6">
+                                                    <p>&#36; 200</p>
+                                                </div>
+                                                <div class="divcon7">
+                                                    <p>$ 100</p>
+                                                </div>
+                                                <div class="divcon8">
+                                                    <div><img src="img/client1.jpg" alt=""></div>
+                                                    <p>John</p>
+                                                </div>
+                                                <div class="divcon9">
+                                                    <div><img src="img/client2.jpg" alt=""></div>
+                                                    <p>Smith</p>
+                                                </div>
+                                                <div class="divcon10">
+                                                    <div class="risk" colorval="#E2445B" textval="At Risk">At Risk
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-bottom">
+                                        <div class="projmaincon">
+                                            <div class="row">
+                                                <div class="divcon1">
+                                                    <p>Project 01</p><span><i class="material-icons">maps_ugc</i></span>
+                                                </div>
+                                                <div class="divcon2">
+                                                    <div><img src="img/client1.jpg" alt=""></div>
+                                                </div>
+                                                <div class="divcon3">
+                                                    <span><i class="material-icons">account_tree</i></span>
+                                                </div>
+                                                <div class="divcon4">
+                                                    <input type="text" name="datefilter" id="rangePicker"
+                                                        value="Oct 20-25" />
+                                                </div>
+                                                <div class="divcon5">
+                                                    <input type="text" id="picker6" value="Oct 20,2021">
+                                                </div>
+                                                <div class="divcon6">
+                                                    <p>&#36; 200</p>
+                                                </div>
+                                                <div class="divcon7">
+                                                    <p>$ 100</p>
+                                                </div>
+                                                <div class="divcon8">
+                                                    <div><img src="img/client1.jpg" alt=""></div>
+                                                    <p>John</p>
+                                                </div>
+                                                <div class="divcon9">
+                                                    <div><img src="img/client2.jpg" alt=""></div>
+                                                    <p>Smith</p>
+                                                </div>
+                                                <div class="divcon10">
+                                                    <div class="risk" colorval="#E2445B" textval="At Risk">At Risk</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-bottom">
+                                        <div class="projmaincon">
+                                            <div class="row">
+                                                <div class="divcon1">
+                                                    <p>Project 01</p><span><i class="material-icons">maps_ugc</i></span>
+                                                </div>
+                                                <div class="divcon2">
+                                                    <div><img src="img/client1.jpg" alt=""></div>
+                                                </div>
+                                                <div class="divcon3">
+                                                    <span><i class="material-icons">account_tree</i></span>
+                                                </div>
+                                                <div class="divcon4">
+                                                    <input type="text" name="datefilter" id="rangePicker"
+                                                        value="Oct 20-25" />
+                                                </div>
+                                                <div class="divcon5">
+                                                    <input type="text" id="picker7" value="Oct 20,2021">
+                                                </div>
+                                                <div class="divcon6">
+                                                    <p>&#36; 200</p>
+                                                </div>
+                                                <div class="divcon7">
+                                                    <p>$ 100</p>
+                                                </div>
+                                                <div class="divcon8">
+                                                    <div><img src="img/client1.jpg" alt=""></div>
+                                                    <p>John</p>
+                                                </div>
+                                                <div class="divcon9">
+                                                    <div><img src="img/client2.jpg" alt=""></div>
+                                                    <p>Smith</p>
+                                                </div>
+                                                <div class="divcon10">
+                                                    <div class="approved" colorval="#1FC875" textval="Approved">Approved
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-bottom">
+                                        <div class="projmaincon">
+                                            <div class="row">
+                                                <div class="last_div">
+                                                    <span><i class="material-icons">add</i></span>
+                                                    <p>Add</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- projectcon1 closed -->
+                        </div>
+
+                        <div class="project1">
+                            <div class="projectcon1">
+                                <div class="row">
+                                    <div class="head1">
+                                        <span><i class="material-icons">expand_more</i></span>
+                                        <span></span>
+                                        <h5>Visual Studio</h5>
+                                    </div>
+                                    <div class="head2">
+                                        <h5>Assignees</h5>
+                                    </div>
+                                    <div class="head3">
+                                        <h5>Subitems</h5>
+                                    </div>
+                                    <div class="head4">
+                                        <h5>Planned Date</h5>
+                                    </div>
+                                    <div class="head5">
+                                        <h5>Actual Date</h5>
+                                    </div>
+                                    <div class="head6">
+                                        <h5>Actual Budget</h5>
+                                    </div>
+                                    <div class="head7">
+                                        <h5>Planned Budget</h5>
+                                    </div>
+                                    <div class="head8">
+                                        <h5>Project Lead</h5>
+                                    </div>
+                                    <div class="head9">
+                                        <h5>Domain Lead</h5>
+                                    </div>
+                                    <div class="head10">
+                                        <h5>Status</h5>
+                                    </div>
+                                    <div class="head11 ps-0">
+                                        <button class="btn p-0" type="button" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <span><i class="material-icons">add</i></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <div class="dropdown">
+                                                <div class="dropmain">
+                                                    <div class="droplist">
+                                                        <div class="column">
+                                                            <a href="#"><img src="./icons/calender-1.svg"
+                                                                    class="icons">Planned</a>
+                                                            <a href="#"><img src="./icons/calender-1.svg"
+                                                                    class="icons">Start Date</a>
+                                                            <a href="#"><img src="./icons/user.svg"
+                                                                    class="icons">Project Lead</a>
+                                                            <a href="#"><img src="./icons/subitem.svg"
+                                                                    class="icons">Subitem</a>
+                                                            <a href="#"><img src="./icons/actual budget.svg"
+                                                                    class="icons">Actual Budget</a>
+                                                            <a href="#"><img src="./icons/file (2).svg"
+                                                                    class="icons">File</a>
+                                                            <a href="#"><img src="./icons/mirror.svg"
+                                                                    class="icons">Mirror</a>
+                                                            <a href="#"><img src="./icons/text.svg"
+                                                                    class="icons">text</a>
+                                                            <a href="#"><img src="./icons/user.svg" class="icons">Domain
+                                                                Lead</a>
+                                                            <a href="#"><img src="./icons/priority.svg"
+                                                                    class="icons">Priority</a>
+                                                        </div>
+                                                        <!-- <div class="column2">
+                                                            <a href="#"><img src="./icons//timeline.svg"
+                                                                    class="icons">Timeline</a>
+                                                            <a href="#"><img src="./icons/Number.svg"
+                                                                    class="icons">Numbers</a>
+                                                            <a href="#"><img src="./icons/Assigness.svg"
+                                                                    class="icons">Assignees</a>
+                                                            <a href="#"><img src="./icons/Progress track.svg"
+                                                                    class="icons">Progress Track</a>
+                                                            <a href="#"><img src="./icons/dropdown (2).svg"
+                                                                    class="icons">Dropdown</a>
+                                                            <a href="#"><img src="./icons/arrow.svg"
+                                                                    class="icons">Connect boards</a>
+                                                            <a href="#"><img src="./icons/formula.svg"
+                                                                    class="icons">Formula</a>
+                                                            <a href="#"><img src="./icons/link.svg"
+                                                                    class="icons">Link</a>
+                                                            <a href="#"><img src="./icons/status.svg"
+                                                                    class="icons">Status</a>
+                                                        </div> -->
+                                                    </div>
+                                                    <!-- <div class="addcolumn">
+                                                        <a href="#"><i class="fa fa-plus"></i>Add Column</a>
+                                                    </div> -->
+                                                </div>
+                                            </div>
+                                        </ul>
+                                        <!-- 
+                                        -->
+                                    </div>
+                                </div>
+                                <div class="expand active">
+                                    <div class="border-bottom mt-3">
+                                        <div class="projmaincon">
+                                            <div class="row">
+                                                <div class="divcon1">
+                                                    <p>Project 01</p><span><i class="material-icons">maps_ugc</i></span>
+                                                </div>
+                                                <div class="divcon2">
+                                                    <div><img src="img/client1.jpg" alt=""></div>
+                                                    <div><img src="img/client1.jpg" alt=""></div>
+                                                    <span><i class="material-icons">add</i></span>
+                                                </div>
+                                                <div class="divcon3">
+                                                    <span><i class="material-icons">account_tree</i></span>
+                                                </div>
+                                                <div class="divcon4">
+                                                    <input type="text" name="datefilter" id="rangePicker"
+                                                        value="Oct 20-25" />
+                                                </div>
+                                                <div class="divcon5">
+                                                    <input type="text" id="picker8" value="Oct 20,2021">
+                                                </div>
+                                                <div class="divcon6">
+                                                    <p>&#36; 200</p>
+                                                </div>
+                                                <div class="divcon7">
+                                                    <p>$ 100</p>
+                                                </div>
+                                                <div class="divcon8">
+                                                    <div><img src="img/client1.jpg" alt=""></div>
+                                                    <p>John</p>
+                                                </div>
+                                                <div class="divcon9">
+                                                    <div><img src="img/client2.jpg" alt=""></div>
+                                                    <p>Smith</p>
+                                                </div>
+                                                <div class="divcon10">
+                                                    <div class="approved" colorval="#1FC875" textval="Approved">Approved
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="addedit">
+                                                <div class="row">
+                                                    <div class="left_div">
+                                                        <input type="color" value="#F6BE75" text-target=".track"
+                                                            disabled>
+                                                        <input type="color" value="#E2445B" text-target=".atrisk"
+                                                            disabled>
+                                                        <input type="color" value="#1FC875" text-target=".approved"
+                                                            disabled>
+                                                        <input type="color" value="#1CA9ED" text-target=".planned"
+                                                            disabled>
+                                                        <input type="color" value="#2D62ED" text-target=".future"
+                                                            disabled>
+                                                        <input type="color" value="#F2870C" text-target=".upnext"
+                                                            disabled>
+                                                        <input type="color" value="#034E03" text-target=".ready"
+                                                            disabled>
+                                                        <p class="track" value="#F6BE75" text-target=".track">
+                                                            On Track
+                                                        </p>
+                                                        <p class="atrisk" value="#E2445B" text-target=".atrisk">At Risk
+                                                        </p>
+                                                        <p class="approved" value="#1FC875" text-target=".approved">
+                                                            Approved</p>
+                                                        <p class="planned" value="#1CA9ED" text-target=".planned">
+                                                            Planned</p>
+                                                        <p class="future" value="#2D62ED" text-target=".future">Future
+                                                            Steps</p>
+                                                        <P class="upnext" value="#F2870C" text-target=".upnext">Up Next
+                                                        </P>
+                                                        <P class="ready" value="#034E03" text-target=".ready">Ready for
+                                                            review</P>
+                                                    </div>
+                                                    <div class="right_div">
+                                                        <input type="color" value="#F5E33F" text-target=".hold"
+                                                            disabled>
+                                                        <input type="color" value="#951DC7" text-target=".begin"
+                                                            disabled>
+                                                        <input type="color" value="#BCB6BE" text-target=".update"
+                                                            disabled>
+                                                        <p class="hold" value="#F5E33F" text-target=".hold">On Hold</p>
+                                                        <p class="begin" value="#951DC7" text-target=".begin">Ready to
+                                                            begin</p>
+                                                        <p class="update" value="#BCB6BE" text-target=".update">No
+                                                            Update</p>
+                                                    </div>
+                                                    <div class="btndiv active">
+                                                        <i class="material-icons">edit</i>
+                                                        <span>Add/Edit labels</span>
+                                                    </div>
+                                                    <div class="btndiv2">
+                                                        <div class="row">
+                                                            <button
+                                                                class="btn bg-secondary justify-content-center align-items-center d-flex">
+                                                                Discard</button>
+                                                            <button
+                                                                class="btn bg-success justify-content-center align-items-center d-flex">
+                                                                Done</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- addedit closed -->
+                                        </div>
+                                    </div>
+                                    <div class="border-bottom">
+                                        <div class="projmaincon">
+                                            <div class="row">
+                                                <div class="divcon1">
+                                                    <p>Project 01</p><span><i class="material-icons">maps_ugc</i></span>
+                                                </div>
+                                                <div class="divcon2">
+                                                    <div><img src="img/client2.jpg" alt=""></div>
+                                                </div>
+                                                <div class="divcon3">
+                                                    <span><i class="material-icons">account_tree</i></span>
+                                                </div>
+                                                <div class="divcon4">
+                                                    <input type="text" name="datefilter" id="rangePicker"
+                                                        value="Oct 20-25" />
+                                                </div>
+                                                <div class="divcon5">
+                                                    <input type="text" id="picker9" value="Oct 20,2021">
+                                                </div>
+                                                <div class="divcon6">
+                                                    <p>&#36; 200</p>
+                                                </div>
+                                                <div class="divcon7">
+                                                    <p>$ 100</p>
+                                                </div>
+                                                <div class="divcon8">
+                                                    <div><img src="img/client1.jpg" alt=""></div>
+                                                    <p>John</p>
+                                                </div>
+                                                <div class="divcon9">
+                                                    <div><img src="img/client2.jpg" alt=""></div>
+                                                    <p>Smith</p>
+                                                </div>
+                                                <div class="divcon10">
+                                                    <div class="approved" colorval="#1FC875" textval="Approved">Approved
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-bottom">
+                                        <div class="projmaincon">
+                                            <div class="row">
+                                                <div class="divcon1">
+                                                    <p>Project 01</p><span><i class="material-icons">maps_ugc</i></span>
+                                                </div>
+                                                <div class="divcon2">
+                                                    <div><img src="img/client3.jpg" alt=""></div>
+                                                </div>
+                                                <div class="divcon3">
+                                                    <span><i class="material-icons">account_tree</i></span>
+                                                </div>
+                                                <div class="divcon4">
+                                                    <input type="text" name="datefilter" id="rangePicker"
+                                                        value="Oct 20-25" />
+                                                </div>
+                                                <div class="divcon5">
+                                                    <input type="text" id="picker10" value="Oct 20,2021">
+                                                </div>
+                                                <div class="divcon6">
+                                                    <p>&#36; 200</p>
+                                                </div>
+                                                <div class="divcon7">
+                                                    <p>$ 100</p>
+                                                </div>
+                                                <div class="divcon8">
+                                                    <div><img src="img/client1.jpg" alt=""></div>
+                                                    <p>John</p>
+                                                </div>
+                                                <div class="divcon9">
+                                                    <div><img src="img/client2.jpg" alt=""></div>
+                                                    <p>Smith</p>
+                                                </div>
+                                                <div class="divcon10">
+                                                    <div class="approved" colorval="#1FC875" textval="Approved">Approved
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-bottom">
+                                        <div class="projmaincon">
+                                            <div class="row">
+                                                <div class="divcon1">
+                                                    <p>Project 01</p><span><i class="material-icons">maps_ugc</i></span>
+                                                </div>
+                                                <div class="divcon2">
+                                                    <div><img src="img/client4.jpg" alt=""></div>
+                                                </div>
+                                                <div class="divcon3">
+                                                    <span><i class="material-icons">account_tree</i></span>
+                                                </div>
+                                                <div class="divcon4">
+                                                    <input type="text" name="datefilter" id="rangePicker"
+                                                        value="Oct 20-25" />
+                                                </div>
+                                                <div class="divcon5">
+                                                    <input type="text" id="picker11" value="Oct 20,2021">
+                                                </div>
+                                                <div class="divcon6">
+                                                    <p>&#36; 200</p>
+                                                </div>
+                                                <div class="divcon7">
+                                                    <p>$ 100</p>
+                                                </div>
+                                                <div class="divcon8">
+                                                    <div><img src="img/client1.jpg" alt=""></div>
+                                                    <p>John</p>
+                                                </div>
+                                                <div class="divcon9">
+                                                    <div><img src="img/client2.jpg" alt=""></div>
+                                                    <p>Smith</p>
+                                                </div>
+                                                <div class="divcon10">
+                                                    <div class="risk" colorval="#E2445B" textval="At Risk">At risk</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-bottom">
+                                        <div class="projmaincon">
+                                            <div class="row">
+                                                <div class="last_div">
+                                                    <span><i class="material-icons">add</i></span>
+                                                    <p>Add</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- projectcon1 closed -->
+                        </div>
+                    </div>
+                    <!-- list closed -->
+                    <div class="gantt tab_content">
+                        Gantt Content
+                    </div>
+                    <!-- gantt closed -->
+                    <div class="calendar tab_content">
+                        Calendar Content
+                    </div>
+                    <!-- calendar closed -->
+                    <div class="workload tab_content">
+                        Workload Content
+                    </div>
+                    <!-- workload closed -->
+                    <div class="kanban tab_content">
+                        Kanban Content
+                    </div>
+                    <!-- kanban closed -->
+                    <div class="addview tab_content">
+                        <h3>Dashboard Views</h3>
+                        <ul>
+                            <li><i class="material-icons">segment</i>Gantt</li>
+                            <li><i class="material-icons">calendar_today</i>Calendar</li>
+                            <li><i class="material-icons">subject</i>Workload</li>
+                            <li><i class="material-icons">bar_chart</i>Kanban</li>
+                            <div class="w-100 text-center mt-4 pt-1">
+                                <button class="btn pt-1">More Views</button>
+                            </div>
+                        </ul>
+                    </div>
+                    <!-- Add view closed -->
+                </div>
+                <!-- divfilter2 closed -->
+            </div>
+        </div>
+        <!--row closed-->
+        </div>
+        <!--container closed-->
+    </section>
+    <!--section closed-->
+
+
+
+    <!-- custom js -->
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="js/jquery.datetimepicker.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+
+    <script src="js/scriptfilter.js"></script>
+</body>
+
+</html>
