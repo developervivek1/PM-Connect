@@ -853,6 +853,7 @@ text-transform: capitalize;
 .tooltiptext1 span{
     color: black;
     z-index: 999;
+    text-transform: capitalize !important;
 }
 .tooltip1:hover .tooltiptext1 {
   visibility: visible;
