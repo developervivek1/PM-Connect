@@ -2906,7 +2906,14 @@ div.sticky {
     font-weight: bold;
 }
 
+.btn-check:focus+.btn, .btn:focus {
 
+    box-shadow: none;
+}
+
+.divcon10 br{
+    display: none;
+}
 
 /* submit form */
 
