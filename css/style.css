@@ -2551,6 +2551,17 @@ font-size: 12.6px;
 
 
 
+.pop_grid .pop_grid2 p{
+    margin-bottom: 1rem;
+}
+
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+   z-index: 99;
+    }
 
 /* here end */
 
