@@ -10,7 +10,7 @@ const finalmile1 = document.querySelector('.proj_filter .divfilter2 .project1 .p
 const finalmile2 = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milestone2 div');
 const finalmile3 = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milestone2 button');
 const showTable = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .head1 span:first-child');
-const addColumn = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .head11 button span i');
+const addColumn = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .head11 button span i');
 const dropmenu = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .head9 .dropdown-menu');
 let root = document.querySelector(':root');
 let divfilter = document.querySelector('.divfilter2');
@@ -28,7 +28,7 @@ const addEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .p
 const addEdit2 = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2');
 const doneEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .bg-success');
 const discardEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .bg-secondary');
-let statusColor, statusText, textVal, value;
+let statusColor, statusText, textVal, value,addColumnIndex;
 
 showFilter.addEventListener('click', () => {
     if (!filterdiv.classList.contains('showfilter')) {
@@ -58,7 +58,7 @@ function hideFilterdiv(e) {
         // if (dropmenu.classList.contains('show')) {
         //     dropmenu.classList.remove('show');
         // }
-        addColumn.innerText = "add";
+        addColumn[addColumnIndex].innerText = "add";
     }
 }
 
@@ -163,18 +163,23 @@ showTable.forEach((expand) => {
     })
 })
 
-// addColumn.addEventListener('click', (e) => {
-//     e.stopPropagation();
-//     let target = e.target;
-//     let dropmenu = e.target.closest('.head9').querySelector('.dropdown-menu');
-//     if (dropmenu.classList.contains('show')) {
-//         target.innerText = 'clear';
-//         overlay.classList.add('active');
-//     }
-//     else {
-//         target.innerText = "add";
-//     }
-// }, true);
+addColumn.forEach((addColumn,ind)=>
+{
+    addColumn.addEventListener('click',(e)=>
+    {
+        e.stopPropagation();
+        let target = e.target;
+        let dropmenu = e.target.closest('.head11').querySelector('.dropdown-menu');
+        if (dropmenu.classList.contains('show')) {
+            target.innerText = 'clear';
+            overlay.classList.add('active');
+            addColumnIndex=ind;
+        }
+        else {
+            target.innerText = "add";
+        }
+    },true)
+})
 
 clickEdit.forEach((edit) => {
     edit.addEventListener('click', (e) => {
@@ -193,6 +198,7 @@ clickEdit.forEach((edit) => {
         }
     })
 })
+
 function choosedefault(e, statusColor, statusText, closestAddedit) {
     let colorval = e.target.getAttribute('value');
     let target = e.target.getAttribute('text-target');

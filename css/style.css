@@ -28,14 +28,7 @@ font-weight: 400 ;
 min-height: 100vh;
 }
 
-
-
-
-
-
 /* signin  css*/
-
-
 .container-fluid
 {
     width: 100%;
@@ -1741,6 +1734,13 @@ font-size: 11px;
 margin-right: 1.8rem;
 padding-bottom: 0px;
 }
+.proj_filter .divfilter2 .top_up2 ul li img
+{
+    width: 14px;
+    height: 14px;
+    margin-right: 0.01rem;
+}
+
 .proj_filter .divfilter2 .top_up2 ul li:last-child
 {
 margin-right: 0rem;
@@ -1853,6 +1853,10 @@ max-width: calc(85%/9);
 {
 flex: 0 0 2%;
 max-width: 2%;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .head11 > button
+{
+    box-shadow: none;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .head1
 {
