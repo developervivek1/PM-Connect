@@ -5,44 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!-- google icons -->
+    <!-- google icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!--fontawesm  -->
+    <!--fontawesm  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- bs-5 -->
+    <!-- bs-5 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.min.css"
         integrity="sha512-6KY5s6UI5J7SVYuZB4S/CZMyPylqyyNZco376NM2Z8Sb8OxEdp02e1jkKk/wZxIEmjQ6DRCEBhni+gpr9c4tvA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-        <!-- custom css -->
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/projapp_preview.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projapp_preview.css">
     <title>Project Approval Change</title>
 </head>
 
 <body>
     <section class="manage_view mview_req">
         <div class="container-fluid">
+            <div class="myoverlay"></div>
             <div class="row">
                 <div class="div1">
                     <h3><img src="icons/logo.svg" alt="logo"></h3>
                     <ul>
                         <li>
-                            
                             <span class="tooltiptext">Dashboard</span>
                             <a href="#" class="button1">
                                 <img src="icons/dashboard.svg" alt="Image one" width="38" class="button__img1">
                                 <img src="icons/dashboardwhite.svg" alt="Image two" class="button__img1">
                             </a>
-                            
                         </li>
-                        
-                      
                         <li>
-                            
                             <span class="tooltiptext">Notifications</span>
                             <a href="#" class="button1">
                                 <img src="icons/Notification-Blue.svg" alt="Image one" width="38" class="button__img1">
@@ -50,15 +44,13 @@
                             </a>
                         </li>
                         <li class="active">
-                            
                             <span class="tooltiptext">Request</span>
                             <a href="#" class="button1">
                                 <img src="icons/Request-Blue.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/request-white.svg" alt="Image two" class="button__img1" >
+                                <img src="icons/request-white.svg" alt="Image two" class="button__img1">
                             </a>
                         </li>
                         <li>
-                            
                             <span class="tooltiptext">Project</span>
                             <a href="#" class="button1">
                                 <img src="icons/project.svg" alt="Image one" width="38" class="button__img1">
@@ -66,17 +58,16 @@
                             </a>
                         </li>
                         <li>
-                            
                             <span class="tooltiptext">View Progress</span>
                             <a href="#" class="button1">
                                 <img src="icons/Viewprogress-Blue.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/Progresslist-white.svg" alt="Image two" class="button__img1" style="width: 1.3vw;">
+                                <img src="icons/Progresslist-white.svg" alt="Image two" class="button__img1"
+                                    style="width: 1.3vw;">
                             </a>
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            
                             <span class="tooltiptext">Reports</span>
                             <a href="#" class="button1">
                                 <img src="icons/Reports.svg" alt="Image one" width="38" class="button__img1">
@@ -84,7 +75,6 @@
                             </a>
                         </li>
                         <li>
-                          
                             <span class="tooltiptext">Search</span>
                             <a href="#" class="button1">
                                 <img src="icons/search.svg" alt="Image one" width="38" class="button__img1">
@@ -92,7 +82,6 @@
                             </a>
                         </li>
                         <li>
-                           
                             <span class="tooltiptext">Help & Support</span>
                             <a href="#" class="button1">
                                 <img src="icons/help.svg" alt="Image one" width="38" class="button__img1">
@@ -103,7 +92,6 @@
                             <span class="tooltiptext">My Profile
                                 <br> Log Out
                             </span>
-                           
                         </li>
                     </ul>
                 </div>
@@ -315,8 +303,9 @@
                                                 <p>Upload :</p>
                                             </div>
                                             <div class="col-md-7">
-                                                <span><img src="icons/pdf.svg" alt=""> <a href="#" class="text-decoration-none text-dark ps-1" target="_blank">File_Name.PDF</a> 
-                                                
+                                                <span><img src="icons/pdf.svg" alt=""> <a href="#"
+                                                        class="text-decoration-none text-dark ps-1"
+                                                        target="_blank">File_Name.PDF</a>
                                                 </span>
                                             </div>
                                         </div>
@@ -485,93 +474,107 @@
                                             <button class="btn deli">Deligates</button>
                                             <button class="btn rej">Reject</button>
                                             <button class="btn appr">Approve</button>
-
-                                          
                                             <div class="reqinfo_popup">
                                                 <div class="sticky bg-white border-bottom">
                                                     <h5 class="pt-4 pb-3 mb-0">Contact Lists</h5>
-
-                                                   
                                                 </div>
-                                                
-                                                <div class="pop_grid">
-                                                    <div class="pop_grid1">
-                                                        <div>
-                                                            J
+                                                <div class="search_div">
+                                                    <input type="text" placeholder="Search Name">
+                                                </div>
+                                                <div class="pop">
+                                                    <div class="pop_grid">
+                                                        <div class="pop_grid1">
+                                                            <div>
+                                                                J
+                                                            </div>
+                                                        </div>
+                                                        <div class="pop_grid2">
+                                                            <p>John Smith</p>
                                                         </div>
                                                     </div>
-                                                    <div class="pop_grid2">
-                                                        <p>John Smith</p>
-                                                    </div>
                                                 </div>
-                                                <div class="pop_grid">
-                                                    <div class="pop_grid1">
-                                                        <div>
-                                                            <img src="img/client1.jpg" alt="">
+                                                <div class="pop">
+                                                    <div class="pop_grid">
+                                                        <div class="pop_grid1">
+                                                            <div>
+                                                                <img src="img/client1.jpg" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="pop_grid2">
+                                                            <p>Ashish</p>
                                                         </div>
                                                     </div>
-                                                    <div class="pop_grid2">
-                                                        <p>Ashish</p>
-                                                    </div>
                                                 </div>
-                                                <div class="pop_grid">
-                                                    <div class="pop_grid1">
-                                                        <div>
-                                                            <img src="img/client1.jpg" alt="">
+                                                <div class="pop">
+                                                    <div class="pop_grid">
+                                                        <div class="pop_grid1">
+                                                            <div>
+                                                                <img src="img/client1.jpg" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="pop_grid2">
+                                                            <p>Ashish</p>
                                                         </div>
                                                     </div>
-                                                    <div class="pop_grid2">
-                                                        <p>Ashish</p>
-                                                    </div>
                                                 </div>
-                                                <div class="pop_grid">
-                                                    <div class="pop_grid1">
-                                                        <div>
-                                                            <img src="img/client1.jpg" alt="">
+                                                <div class="pop">
+                                                    <div class="pop_grid">
+                                                        <div class="pop_grid1">
+                                                            <div>
+                                                                <img src="img/client1.jpg" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="pop_grid2">
+                                                            <p>Ashish</p>
                                                         </div>
                                                     </div>
-                                                    <div class="pop_grid2">
-                                                        <p>Ashish</p>
-                                                    </div>
                                                 </div>
-                                                <div class="pop_grid">
-                                                    <div class="pop_grid1">
-                                                        <div>
-                                                            <img src="img/client1.jpg" alt="">
+                                                <div class="pop">
+                                                    <div class="pop_grid">
+                                                        <div class="pop_grid1">
+                                                            <div>
+                                                                <img src="img/client1.jpg" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="pop_grid2">
+                                                            <p>Ashish</p>
                                                         </div>
                                                     </div>
-                                                    <div class="pop_grid2">
-                                                        <p>Ashish</p>
-                                                    </div>
                                                 </div>
-                                                <div class="pop_grid">
-                                                    <div class="pop_grid1 green">
-                                                        <div>
-                                                            J
+                                                <div class="pop">
+                                                    <div class="pop_grid">
+                                                        <div class="pop_grid1 green">
+                                                            <div>
+                                                                J
+                                                            </div>
+                                                        </div>
+                                                        <div class="pop_grid2">
+                                                            <p>James</p>
                                                         </div>
                                                     </div>
-                                                    <div class="pop_grid2">
-                                                        <p>James</p>
-                                                    </div>
                                                 </div>
-                                                <div class="pop_grid">
-                                                    <div class="pop_grid1">
-                                                        <div>
-                                                            <img src="img/client2.jpg" alt="">
+                                                <div class="pop">
+                                                    <div class="pop_grid">
+                                                        <div class="pop_grid1">
+                                                            <div>
+                                                                <img src="img/client2.jpg" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="pop_grid2">
+                                                            <p>David</p>
                                                         </div>
                                                     </div>
-                                                    <div class="pop_grid2">
-                                                        <p>David</p>
-                                                    </div>
                                                 </div>
-                                                <div class="pop_grid">
-                                                    <div class="pop_grid1">
-                                                        <div>
-                                                            <img src="img/client3.jpg" alt="">
+                                                <div class="pop">
+                                                    <div class="pop_grid">
+                                                        <div class="pop_grid1">
+                                                            <div>
+                                                                <img src="img/client3.jpg" alt="">
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="pop_grid2">
-                                                        <p>Sander</p>
+                                                        <div class="pop_grid2">
+                                                            <p>Sander</p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -580,64 +583,79 @@
                                                 <div class="sticky bg-white border-bottom">
                                                     <h5 class="pt-4 pb-3 mb-0">Contact Lists</h5>
                                                 </div>
-                                                <div class="pop_grid">
-                                                    <div class="pop_grid1">
-                                                        <div>
-                                                            J
+                                                <div class="search_div">
+                                                    <input type="text" placeholder="Search Name">
+                                                </div>
+                                                <div class="pop">
+                                                    <div class="pop_grid">
+                                                        <div class="pop_grid1">
+                                                            <div>
+                                                                J
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="pop_grid2">
-                                                        <p>John Smith</p>
+                                                        <div class="pop_grid2">
+                                                            <p>John Smith</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="pop_grid">
-                                                    <div class="pop_grid1">
-                                                        <div>
-                                                            <img src="img/client1.jpg" alt="">
+                                                <div class="pop">
+                                                    <div class="pop_grid">
+                                                        <div class="pop_grid1">
+                                                            <div>
+                                                                <img src="img/client1.jpg" alt="">
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="pop_grid2">
-                                                        <p>Ashish</p>
+                                                        <div class="pop_grid2">
+                                                            <p>Ashish</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="pop_grid">
-                                                    <div class="pop_grid1">
-                                                        <div>
-                                                            <img src="img/client1.jpg" alt="">
+                                                <div class="pop">
+                                                    <div class="pop_grid">
+                                                        <div class="pop_grid1">
+                                                            <div>
+                                                                <img src="img/client1.jpg" alt="">
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="pop_grid2">
-                                                        <p>Ashish</p>
+                                                        <div class="pop_grid2">
+                                                            <p>Ashish</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="pop_grid">
-                                                    <div class="pop_grid1">
-                                                        <div>
-                                                            <img src="img/client1.jpg" alt="">
+                                                <div class="pop">
+                                                    <div class="pop_grid">
+                                                        <div class="pop_grid1">
+                                                            <div>
+                                                                <img src="img/client1.jpg" alt="">
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="pop_grid2">
-                                                        <p>Ashish</p>
+                                                        <div class="pop_grid2">
+                                                            <p>Ashish</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="pop_grid">
-                                                    <div class="pop_grid1 green">
-                                                        <div>
-                                                            J
+                                                <div class="pop">
+                                                    <div class="pop_grid">
+                                                        <div class="pop_grid1 green">
+                                                            <div>
+                                                                J
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="pop_grid2">
-                                                        <p>James</p>
+                                                        <div class="pop_grid2">
+                                                            <p>James</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="pop_grid">
-                                                    <div class="pop_grid1">
-                                                        <div>
-                                                            <img src="img/client2.jpg" alt="">
+                                                <div class="pop">
+                                                    <div class="pop_grid">
+                                                        <div class="pop_grid1">
+                                                            <div>
+                                                                <img src="img/client2.jpg" alt="">
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="pop_grid2">
-                                                        <p>David</p>
+                                                        <div class="pop_grid2">
+                                                            <p>David</p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
