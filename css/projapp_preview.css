@@ -1,3 +1,16 @@
+.mview_req .myoverlay
+{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 70;
+    display: none;
+}
+.mview_req .myoverlay.active
+{
+    display: block;
+}
+
 .proj_approval
 {
     flex: 0 0 94.5%;
@@ -258,10 +271,11 @@ letter-spacing: 0.15px;
     transform: translateX(-50%);
     bottom: 138%;
     background-color: #fff;
-    z-index: 50;
+    z-index: 75;
     width: 338px;
     max-height: 340px;
     overflow-y: auto;
+    overflow-x: clip;
     padding-bottom: 30px;
     border-radius: 5px;
     box-shadow: 0 0 5px rgb(0 0 0 / 15%);
@@ -297,6 +311,29 @@ letter-spacing: 0.15px;
     margin-block-end: 3rem;
     font-size: 1.8rem;
     padding: 30px 35px 0px;
+}
+.proj_approval .proj_form .main_form .con_pad .btn_div .reqinfo_popup .search_div,
+.proj_approval .proj_form .main_form .con_pad .btn_div .deleg_popup .search_div
+{
+    margin: 15px 35px 12px;
+}
+.proj_approval .proj_form .main_form .con_pad .btn_div .reqinfo_popup .search_div input[type="text"],
+.proj_approval .proj_form .main_form .con_pad .btn_div .deleg_popup .search_div input[type="text"]
+{
+    width: 100%;
+    padding: 10px 25px;
+    font-size: 14px;
+    background: #ffffff;
+    outline: 0;
+    height: 39px;
+    border-radius: 3px;
+    border: 1px solid #dbdbdb;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 6%);
+    padding-left: 15px;
+    display: inline !important;
+    line-height: 1.5;
+    color: #495057;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 .proj_approval .proj_form .main_form .con_pad .btn_div .reqinfo_popup .pop_grid,
 .proj_approval .proj_form .main_form .con_pad .btn_div .deleg_popup .pop_grid
