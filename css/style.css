@@ -618,7 +618,6 @@ font-family: var(--lato);
 {
 min-height: 100vh;
 width: 100%;
-
 position: relative;
 }
 .manage_view .proj_edit
@@ -1638,8 +1637,23 @@ margin-block-end: 2rem;
 margin-top: 22.4rem;
 right: 0;
 position: fixed;
-z-index: 70;
+z-index: 5;
 background: #fff;
+}
+.proj_filter .divfilter2 .top_up2 .topup2_overlay
+{
+position: fixed;
+left: 0;
+width: 100%;
+height: 100vh;
+display: none;
+z-index: 5;
+overflow: hidden;
+}
+.proj_filter .divfilter2 .top_up2 .topup2_overlay.active
+{
+display: block;
+background-color: transparent;
 }
 .proj_filter .divfilter2 .top_up2 ul
 {
@@ -1655,7 +1669,7 @@ position: fixed;
 width: 200%;
 height: 100vh;
 display: none;
-z-index: 70;
+z-index: 10;
 overflow: hidden;
 }
 .proj_filter .myoverlay.active
@@ -3010,8 +3024,8 @@ z-index: 111;
 height: 34vh;
 }
 .manage_view .div3 {
-flex: 0 0 100%;
-max-width:100%;
+flex: 0 0 95%;
+max-width:95%;
 background: cadetblue;
 /* flex: 0 0 71.5%; */
 margin-top: 10rem;

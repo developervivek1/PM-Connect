@@ -9,7 +9,7 @@
         max-width: 23%; 
         padding: 2.5vw 1vw;
         width: 93px;
-        height: 100vh;
+        height: 80vh;
     }
     .manage_view .div1 h3 img {
         width: 58px;
@@ -288,5 +288,9 @@
     }
     .proj_filter .divfilter2 .top_up2 .filter_div ul {
         overflow: hidden;
+    }
+    .proj_filter .divfilter2 .top_up2 .topup2_overlay.active
+    {
+        background-color: rgba(0,0,0,0.2);
     }
 }

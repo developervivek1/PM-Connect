@@ -2,6 +2,7 @@ const showFilter = document.querySelector('.divfilter2 .top_up2 ul li:nth-child(
 const filterdiv = document.querySelector('.divfilter2 .top_up2 .filter_div');
 const filterImg = document.querySelector('.divfilter2 .top_up2 ul li:nth-child(2) img');
 const overlay = document.querySelector('.proj_filter .myoverlay');
+const topup2_overlay = document.querySelector('.proj_filter .divfilter2 .top_up2 .topup2_overlay');
 const milediv = document.querySelector('.proj_filter .divfilter2 .project1 .expand .border-bottom .divcon3 #tree_open');
 const showMile = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone');
 const milediv2 = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone p');
@@ -46,27 +47,26 @@ showFilter.addEventListener('click', () => {
     if (!filterdiv.classList.contains('showfilter')) {
         filterdiv.classList.add('showfilter');
         showFilter.classList.add('active');
-        overlay.classList.add('active');
+        topup2_overlay.classList.add('active');
         filterImg.src=`icons/filter2.png`;
         filterImg.style.cssText='width:14px; height:10px';
     }
     else {
         filterdiv.classList.remove('showfilter');
         showFilter.classList.remove('active');
-        overlay.classList.remove('active');
+        topup2_overlay.classList.remove('active');
         filterImg.src=`icons/filter.svg`;
         filterImg.style.cssText='width:14px; height:14px';
     }
 })
 window.addEventListener('click', hideFilterdiv);
 function hideFilterdiv(e) {
-    if (e.type === "ESC" || e.type === "Escape" || e.type === "click" && e.target == overlay) {
+    if (e.type === "click" && e.target == overlay) {
         filterdiv.classList.remove('showfilter');
         showFilter.classList.remove('active');
         mobileMenu.classList.remove('active');
         filterImg.src=`icons/filter.svg`;
         filterImg.style.cssText='width:14px; height:14px';
-        overlay.classList.remove('active');
         mainul[mainul.length - 1].classList.remove('active');
         divfilter.querySelector('.addview').classList.remove('active');
         tabnum[0].classList.add('active');
@@ -74,10 +74,16 @@ function hideFilterdiv(e) {
         showEdit.forEach((showEdit) => {
             showEdit.classList.remove('active');
         })
-        // if (dropmenu.classList.contains('show')) {
-        //     dropmenu.classList.remove('show');
-        // }
         addColumn[addColumnIndex].innerText = "add";
+        overlay.classList.remove('active');
+    }
+    else if(e.target==topup2_overlay)
+    {
+        filterdiv.classList.remove('showfilter');
+        showFilter.classList.remove('active');
+        topup2_overlay.classList.remove('active');
+        filterImg.src=`icons/filter.svg`;
+        filterImg.style.cssText='width:14px; height:14px';
     }
 }
 
