@@ -74,7 +74,10 @@ function hideFilterdiv(e) {
         showEdit.forEach((showEdit) => {
             showEdit.classList.remove('active');
         })
-        addColumn[addColumnIndex].innerText = "add";
+        addColumn.forEach((addIcon)=>
+        {
+            addIcon.innerText = "add";
+        });
         overlay.classList.remove('active');
     }
     else if(e.target==topup2_overlay)
