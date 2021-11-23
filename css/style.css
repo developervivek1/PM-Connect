@@ -2867,3 +2867,60 @@ background-color: #F8F9FB;
 width: 100%;
 }
 /* dashboard end */
+
+
+
+
+
+/* responsive screen */
+
+@media (max-width:768px){
+
+.main .div-left{
+   
+    background: #F2F5F8;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 0vh;
+    padding: 0rem 0;
+}
+
+.main .div-left center{
+    padding-top: 5rem;
+
+}
+
+
+
+.main .div-left h2{
+    display: none;
+
+}
+.main .div-left img{
+
+}
+
+.div-left h2{
+    text-align: center;
+}
+.main .div-left .con_div {
+    display: none;
+}
+
+.main .div-right {
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    padding: 5rem 0;
+}
+
+}
+
+
+@media (min-width:769px){
+    .main .div-left center{
+       display: none;
+    
+    }
+}
+/* responsive close */
