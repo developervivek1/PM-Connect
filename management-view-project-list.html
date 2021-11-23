@@ -25,6 +25,7 @@
 
     <!-- custom css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <title>Management View Project Filter</title>
 </head>
 
@@ -33,95 +34,116 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="myoverlay"></div>
-                <div class="div1">
-                    <h3><img src="icons/logo.svg" alt="logo"></h3>
-                    <ul>
-                        <li>
-
-                            <span class="tooltiptext">Dashboard</span>
-                            <a href="#" class="button1">
-                                <img src="icons/dashboard.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/dashboardwhite.svg" alt="Image two" class="button__img1">
-                            </a>
-
-                        </li>
-
-
-                        <li>
-
-                            <span class="tooltiptext">Notifications</span>
-                            <a href="#" class="button1">
-                                <img src="icons/Notification-Blue.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/notfiwhite.svg" alt="Image two" class="button__img1">
-                            </a>
-                        </li>
-                        <li class="active">
-
-                            <span class="tooltiptext">Request</span>
-                            <a href="#" class="button1">
-                                <img src="icons/Request-Blue.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/request-white.svg" alt="Image two" class="button__img1">
-                            </a>
-                        </li>
-                        <li>
-
-                            <span class="tooltiptext">Project</span>
-                            <a href="#" class="button1">
-                                <img src="icons/project.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/project-white.svg" alt="Image two" class="button__img1">
-                            </a>
-                        </li>
-                        <li>
-
-                            <span class="tooltiptext">View Progress</span>
-                            <a href="#" class="button1">
-                                <img src="icons/Viewprogress-Blue.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/Progresslist-white.svg" alt="Image two" class="button__img1"
-                                    style="width: 1.3vw;">
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-
-                            <span class="tooltiptext">Reports</span>
-                            <a href="#" class="button1">
-                                <img src="icons/Reports.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/reportwhite.svg" alt="Image two" class="button__img1">
-                            </a>
-                        </li>
-                        <li>
-
-                            <span class="tooltiptext">Search</span>
-                            <a href="#" class="button1">
-                                <img src="icons/search.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/searchwhite.svg" alt="Image two" class="button__img1">
-                            </a>
-                        </li>
-                        <li>
-
-                            <span class="tooltiptext">Help & Support</span>
-                            <a href="#" class="button1">
-                                <img src="icons/help.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/helpwhite.svg" alt="Image two" class="button__img1">
-                            </a>
-                        </li>
-                        <li class="tooltip1">
-                            <p class="tooltiptext1">
-                                <span class="">S</span>
-                            <p class="tooltiptext tooltiptext1">
-                                <span class=""> My Profile</span>
-                                <br>
-                                <br>
-                                <a href="signIn.html"> <span> Log Out </span> </a>
-                            </p>
-                            </p>
-                        </li>
-                    </ul>
+                <div class="proj_edit">
+                    <div class="row justify-content-between" style="height: 50px;">
+                        <div class="col-md-3">
+                           <span><i class="material-icons">clear</i></span>
+                        </div>
+                        <div class="align-self-end justify-content-end d-flex col-md-9 align-items-center">
+                             <div><img src="img/client1.jpg" alt=""></div>
+                             <div><img src="img/client1.jpg" alt=""></div>
+                             <span><i class="material-icons">add</i></span>
+                             <span></span>
+                        </div>
+                    </div>
                 </div>
-                <style>
-
-                </style>
+                <nav>
+                    <div class="div1">
+                        <h3><img src="icons/logo.svg" alt="logo"></h3>
+                        <ul>
+                            <li>
+    
+                                <span class="tooltiptext">Dashboard</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/dashboard.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/dashboardwhite.svg" alt="Image two" class="button__img1">
+                                </a>
+    
+                            </li>
+    
+    
+                            <li>
+    
+                                <span class="tooltiptext">Notifications</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/Notification-Blue.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/notfiwhite.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li class="active">
+    
+                                <span class="tooltiptext">Request</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/Request-Blue.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/request-white.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li>
+    
+                                <span class="tooltiptext">Project</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/project.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/project-white.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li>
+    
+                                <span class="tooltiptext">View Progress</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/Viewprogress-Blue.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/Progresslist-white.svg" alt="Image two" class="button__img1"
+                                        style="width: 1.3vw;">
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+    
+                                <span class="tooltiptext">Reports</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/Reports.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/reportwhite.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li>
+    
+                                <span class="tooltiptext">Search</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/search.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/searchwhite.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li>
+    
+                                <span class="tooltiptext">Help & Support</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/help.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/helpwhite.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li class="tooltip1">
+                                <p class="tooltiptext1">
+                                    <span class="">S</span>
+                                <p class="tooltiptext tooltiptext1">
+                                    <span class=""> My Profile</span>
+                                    <br>
+                                    <br>
+                                    <a href="signIn.html"> <span> Log Out </span> </a>
+                                </p>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>    
+                <div class="mobile-menuhead">
+                    <div class="hamberger-menu">
+                        <span></span>
+                    </div>
+                    <div class="logo_div">
+                        <h1>Emaar</h1>
+                    </div>
+                    <div></div>
+                </div>
                 <div class="divfilter2 ps-0 pe-0">
                     <div class="row">
                         <div class="top_up">
@@ -134,15 +156,12 @@
                                     <img src="icons/list.svg" class="img2" alt="">
                                     List
                                 </li>
-
-
                                 <li class="active1" data-target=".gantt">
                                     <!-- <i class="material-icons">subject</i>  -->
                                     <img src="icons/gantt-blue.svg" class="img1" alt="">
                                     <img src="icons/gntt.svg" class="img2" alt="">
                                     Gantt
                                 </li>
-
                                 <li class="active1" data-target=".calendar">
                                     <!-- <i class="material-icons">calendar_today</i> -->
                                     <img src="icons/calender-1.svg" class="img1" alt="">
@@ -168,12 +187,8 @@
                                     Add View
                                 </li>
                             </ul>
-
-
                         </div>
-                    </div>
 
-                    <div class="list active tab_content">
                         <div class="top_up2 mb-1">
                             <ul>
                                 <!--  -->
@@ -187,11 +202,7 @@
                                           <label for="">Search</label>
                                         </form>
                                       </div>
-                                     
                                 </li> -->
-
-
-
                                 <!--  -->
                                 <li> <img src="icons/search-1.svg" alt="">
                                     Search..</li>
@@ -209,6 +220,7 @@
                                         <div class="col-md-6 d-flex">
                                             <h1>Quick Filters</h1>
                                             <span>Showing all 21 items</span>
+                                            <span>Clear All</span>
                                         </div>
                                         <div class="col-md-6 d-flex justify-content-end">
                                             <span>Clear all</span>
@@ -319,13 +331,17 @@
                                     <!-- border-bottom closed -->
                                     <div class="filter_bottom">
                                         <p>Switch to advanced filters</p>
+                                        <button class="btn">Save as New view</button>
                                     </div>
                                 </div>
                             </ul>
                         </div>
+                    </div>
+
+                    <div class="list active tab_content">
                         <div class="project1">
                             <div class="projectcon1">
-                                <div class="row">
+                                <div class="row mobile-width">
                                     <div class="head1">
                                         <span><i class="material-icons">expand_more</i></span>
                                         <span></span>
@@ -672,7 +688,7 @@
 
                         <div class="project1">
                             <div class="projectcon1">
-                                <div class="row">
+                                <div class="row mobile-width">
                                     <div class="head1">
                                         <span><i class="material-icons">expand_more</i></span>
                                         <span></span>
@@ -1008,7 +1024,7 @@
 
                         <div class="project1">
                             <div class="projectcon1">
-                                <div class="row">
+                                <div class="row mobile-width">
                                     <div class="head1">
                                         <span><i class="material-icons">expand_more</i></span>
                                         <span></span>

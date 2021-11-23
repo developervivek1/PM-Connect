@@ -1,5 +1,6 @@
 const showFilter = document.querySelector('.divfilter2 .top_up2 ul li:nth-child(2)');
 const filterdiv = document.querySelector('.divfilter2 .top_up2 .filter_div');
+const filterImg = document.querySelector('.divfilter2 .top_up2 ul li:nth-child(2) img');
 const overlay = document.querySelector('.proj_filter .myoverlay');
 const milediv = document.querySelector('.proj_filter .divfilter2 .project1 .expand .border-bottom .divcon3 #tree_open');
 const showMile = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone');
@@ -28,26 +29,43 @@ const addEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .p
 const addEdit2 = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2');
 const doneEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .bg-success');
 const discardEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .bg-secondary');
+const mobileTrigger = document.querySelector('.mobile-menuhead .hamberger-menu span');
+const mobileMenu = document.querySelector('.proj_filter nav');
 let statusColor, statusText, textVal, value,addColumnIndex;
+
+mobileTrigger.addEventListener('click',()=>
+{
+    if(!mobileMenu.classList.contains('active'))
+    {
+       mobileMenu.classList.add('active');
+       overlay.classList.add('active');
+    }
+})
 
 showFilter.addEventListener('click', () => {
     if (!filterdiv.classList.contains('showfilter')) {
         filterdiv.classList.add('showfilter');
         showFilter.classList.add('active');
         overlay.classList.add('active');
+        filterImg.src=`icons/filter2.png`;
+        filterImg.style.cssText='width:14px; height:10px';
     }
     else {
         filterdiv.classList.remove('showfilter');
         showFilter.classList.remove('active');
         overlay.classList.remove('active');
+        filterImg.src=`icons/filter.svg`;
+        filterImg.style.cssText='width:14px; height:14px';
     }
 })
 window.addEventListener('click', hideFilterdiv);
 function hideFilterdiv(e) {
-    if (e.type === "ESC" || e.type === "Escape" || e.type === "click" && e.target == overlay) {
+    if (e.type === "click" && e.target == overlay) {
         filterdiv.classList.remove('showfilter');
         showFilter.classList.remove('active');
-        overlay.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        filterImg.src=`icons/filter.svg`;
+        filterImg.style.cssText='width:14px; height:14px';
         mainul[mainul.length - 1].classList.remove('active');
         divfilter.querySelector('.addview').classList.remove('active');
         tabnum[0].classList.add('active');
@@ -55,12 +73,19 @@ function hideFilterdiv(e) {
         showEdit.forEach((showEdit) => {
             showEdit.classList.remove('active');
         })
-        // if (dropmenu.classList.contains('show')) {
-        //     dropmenu.classList.remove('show');
-        // }
         addColumn[addColumnIndex].innerText = "add";
+        overlay.classList.remove('active');
     }
 }
+
+window.addEventListener('resize',()=>
+{
+    if(this.innerWidth < 750)
+    {
+       overlay.classList.remove('active');
+       mobileMenu.classList.remove('active');
+    }
+})
 
 
 milediv.addEventListener('click', () => {

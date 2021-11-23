@@ -433,6 +433,19 @@ display: flex;
 align-items: center;
 flex-wrap: wrap;
 }
+nav
+{
+    margin: 0;
+    padding: 0 !important;
+}
+nav .mobile-menuhead
+{
+    display: none;
+}
+.mobile-menuhead .logo_div h1
+{
+    display: none;
+}
 .main
 {
 min-height: 100vh;
@@ -618,7 +631,93 @@ font-family: var(--lato);
 {
 min-height: 100vh;
 width: 100%;
-overflow: hidden;
+position: relative;
+}
+.manage_view .proj_edit
+{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 66vw;
+    z-index: 150;
+    background: #fff;
+    padding: 25px;
+    display: none;
+}
+.manage_view .proj_edit .col-md-3 span
+{
+width: 31px;
+height: 31px;
+border-radius: 30px;
+border: 1px solid gray;
+text-align: center;
+line-height: 39px;
+display: block;
+}
+.manage_view .proj_edit .col-md-3 span i
+{
+    font-size: 20px;
+    color: gray;
+    font-weight: 200;
+}
+.manage_view .proj_edit .align-self-end div
+{
+    width: 31px;
+    height: 31px;
+    border-radius: 30px;
+    margin-right: 1.3rem;
+}
+.manage_view .proj_edit .align-self-end div img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+}
+.manage_view .proj_edit .align-self-end span:nth-child(3)
+{
+    border: 2px dotted #2D62ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    width: 31px;
+    height: 31px;
+    margin-right: 4rem;
+}
+.manage_view .proj_edit .align-self-end span:nth-child(3) i
+{
+    color: #2D62ED;
+    font-size: 16px;
+    font-weight: 500;
+}
+.manage_view .proj_edit .align-self-end span:nth-child(4)
+{
+    width: 3px;
+    height: 3px;
+    background-color: gray;
+    color: gray;
+    position: relative;
+}
+.manage_view .proj_edit .align-self-end span:nth-child(4)::after,
+.manage_view .proj_edit .align-self-end span:nth-child(4)::before
+{
+    content: '';
+    position: absolute;
+    background-color: inherit;
+    width: inherit;
+    height: inherit;    
+}
+.manage_view .proj_edit .align-self-end span:nth-child(4)::after
+{
+    left: -4px;
+    top: 0;
+}
+.manage_view .proj_edit .align-self-end span:nth-child(4)::before
+{
+    right: -4px;
+    top: 0;
 }
 .manage_view .container-fluid > .row
 {
@@ -1419,12 +1518,13 @@ align-items: center;
 width: 100%;
 border-bottom: 1px solid #ededed;
 }
-.proj_filter .divfilter2 .top_up
-{
-margin-top: 7.9rem;
-position: fixed;
-z-index: 100;
-background: #fff;
+.proj_filter .divfilter2 .top_up {
+    margin-top: 0;
+    /* left: 0; */
+    top: 0;
+    position: fixed;
+    z-index: 100;
+    background: #fff;
 }
 .proj_filter .divfilter2 .top_up ul
 {
@@ -1556,12 +1656,15 @@ color: #2D62ED;
 font-size: 14px;
 font-weight: 600;
 }
-.proj_filter .divfilter2 .top_up2
-{
-padding: 2.3rem 3.5rem;
-align-items: center;
-margin-block-end: 2rem;
-margin-top: 8rem;
+.proj_filter .divfilter2 .top_up2 {
+    padding: 2.3rem 3.5rem;
+    align-items: center;
+    margin-block-end: 2rem;
+    margin-top: 22.4rem;
+    right: 0;
+    position: fixed;
+    z-index: 70;
+    background: #fff;
 }
 .proj_filter .divfilter2 .top_up2 ul
 {
@@ -1623,6 +1726,14 @@ margin-top: 0px;
 opacity: 1;
 }
 }
+.proj_filter .divfilter2 .list,
+.proj_filter .divfilter2 .gantt,
+.proj_filter .divfilter2 .calendar,
+.proj_filter .divfilter2 .workload,
+.proj_filter .divfilter2 .kanban
+{
+  margin-top: 15.5rem;
+}
 .proj_filter .divfilter2 .top_up2 .filter_div .row
 {
 align-items: flex-start;
@@ -1663,8 +1774,13 @@ justify-content: flex-end;
 .proj_filter .divfilter2 .top_up2 .filter_div > .head_div .justify-content-end span
 {
 margin-right: 20px;
+display: block;
 }
-.proj_filter .divfilter2 .top_up2 .filter_div > .head_div .justify-content-end button
+.proj_filter .divfilter2 .top_up2 .filter_div > .head_div span:nth-child(3) {
+    display: none;
+}
+.proj_filter .divfilter2 .top_up2 .filter_div > .head_div .justify-content-end button,
+.proj_filter .divfilter2 .top_up2 .filter_div .filter_bottom button
 {
 width: 125px;
 height: 32px;
@@ -1672,6 +1788,11 @@ background: #ffffff 0% 0% no-repeat padding-box;
 border: 1px solid #707070;
 letter-spacing: 0px;
 font-size: 13px;
+display: block;
+}
+.proj_filter .divfilter2 .top_up2 .filter_div .filter_bottom button
+{
+    display: none;
 }
 .proj_filter .divfilter2 .top_up2 .filter_div .filterdiv1,
 .proj_filter .divfilter2 .top_up2 .filter_div .filterdiv2,
@@ -1980,6 +2101,7 @@ color: #BCC0C7;
 font-size: 21px;
 margin-top: -1px;
 vertical-align: middle;
+cursor: pointer;
 }
 .proj_filter .divfilter2 .project1 .projmaincon .divcon2 div,
 .proj_filter .divfilter2 .project1 .projmaincon .divcon7 div,
