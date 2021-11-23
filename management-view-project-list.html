@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,10 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!--google icons  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <!-- fontawesome-5 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
@@ -18,14 +15,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.min.css"
         integrity="sha512-6KY5s6UI5J7SVYuZB4S/CZMyPylqyyNZco376NM2Z8Sb8OxEdp02e1jkKk/wZxIEmjQ6DRCEBhni+gpr9c4tvA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-        <!-- datepicker -->
-        <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.min.css">
+    <!-- datepicker -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-    
     <!-- custom css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <title>Management View Project Filter</title>
 </head>
 
@@ -34,174 +29,179 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="myoverlay"></div>
-                <div class="div1">
-                    <h3><img src="icons/logo.svg" alt="logo"></h3>
-                    <ul>
-                        <li>
-                            
-                            <span class="tooltiptext">Dashboard</span>
-                            <a href="#" class="button1">
-                                <img src="icons/dashboard.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/dashboardwhite.svg" alt="Image two" class="button__img1">
-                            </a>
-                            
-                        </li>
-                        
-                      
-                        <li>
-                            
-                            <span class="tooltiptext">Notifications</span>
-                            <a href="#" class="button1">
-                                <img src="icons/Notification-Blue.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/notfiwhite.svg" alt="Image two" class="button__img1">
-                            </a>
-                        </li>
-                        <li class="active">
-                            
-                            <span class="tooltiptext">Request</span>
-                            <a href="#" class="button1">
-                                <img src="icons/Request-Blue.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/request-white.svg" alt="Image two" class="button__img1" >
-                            </a>
-                        </li>
-                        <li>
-                            
-                            <span class="tooltiptext">Project</span>
-                            <a href="#" class="button1">
-                                <img src="icons/project.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/project-white.svg" alt="Image two" class="button__img1">
-                            </a>
-                        </li>
-                        <li>
-                            
-                            <span class="tooltiptext">View Progress</span>
-                            <a href="#" class="button1">
-                                <img src="icons/Viewprogress-Blue.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/Progresslist-white.svg" alt="Image two" class="button__img1" style="width: 1.3vw;">
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            
-                            <span class="tooltiptext">Reports</span>
-                            <a href="#" class="button1">
-                                <img src="icons/Reports.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/reportwhite.svg" alt="Image two" class="button__img1">
-                            </a>
-                        </li>
-                        <li>
-                          
-                            <span class="tooltiptext">Search</span>
-                            <a href="#" class="button1">
-                                <img src="icons/search.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/searchwhite.svg" alt="Image two" class="button__img1">
-                            </a>
-                        </li>
-                        <li>
-                           
-                            <span class="tooltiptext">Help & Support</span>
-                            <a href="#" class="button1">
-                                <img src="icons/help.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/helpwhite.svg" alt="Image two" class="button__img1">
-                            </a>
-                        </li>
-                        <li class="tooltip1">
-                            <p class="tooltiptext1">
-                            <span class="">S</span>
-                            <p class="tooltiptext tooltiptext1">
-                              <span class="">  My Profile</span>
-                                    <br>
-                                    <br>
-                              <a href="signIn.html"> <span> Log Out   </span>   </a> 
-                             
-                            </p>
-                        </p>
-                        </li>
-                    </ul>
+                <div class="proj_edit">
+                    <div class="row justify-content-between" style="height: 50px;">
+                        <div class="col-md-3">
+                            <span><i class="material-icons">clear</i></span>
+                        </div>
+                        <div class="align-self-end justify-content-end d-flex col-md-9 align-items-center">
+                            <div><img src="img/client1.jpg" alt=""></div>
+                            <div><img src="img/client1.jpg" alt=""></div>
+                            <span><i class="material-icons">add</i></span>
+                            <span></span>
+                        </div>
+                    </div>
                 </div>
-                <style>
-               
-                    </style>
+                <nav>
+                    <div class="div1">
+                        <h3><img src="icons/logo.svg" alt="logo"></h3>
+                        <ul>
+                            <li>
+                                <span class="tooltiptext">Dashboard</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/dashboard.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/dashboardwhite.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li>
+                                <span class="tooltiptext">Notifications</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/Notification-Blue.svg" alt="Image one" width="38"
+                                        class="button__img1">
+                                    <img src="icons/notfiwhite.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li class="active">
+                                <span class="tooltiptext">Request</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/Request-Blue.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/request-white.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li>
+                                <span class="tooltiptext">Project</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/project.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/project-white.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li>
+                                <span class="tooltiptext">View Progress</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/Viewprogress-Blue.svg" alt="Image one" width="38"
+                                        class="button__img1">
+                                    <img src="icons/Progresslist-white.svg" alt="Image two" class="button__img1"
+                                        style="width: 1.3vw;">
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <span class="tooltiptext">Reports</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/Reports.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/reportwhite.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li>
+                                <span class="tooltiptext">Search</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/search.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/searchwhite.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li>
+                                <span class="tooltiptext">Help & Support</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/help.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/helpwhite.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li class="tooltip1">
+                                <p class="tooltiptext1">
+                                    <span class="">S</span>
+                                <p class="tooltiptext tooltiptext1">
+                                    <span class=""> My Profile</span>
+                                    <br>
+                                    <br>
+                                    <a href="signIn.html"> <span> Log Out </span> </a>
+                                </p>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="mobile-menuhead">
+                    <div class="hamberger-menu">
+                        <span></span>
+                    </div>
+                    <div class="logo_div">
+                        <h1>Emaar</h1>
+                    </div>
+                    <div></div>
+                </div>
                 <div class="divfilter2 ps-0 pe-0">
                     <div class="row">
                         <div class="top_up">
                             <h1>Projects</h1>
                             <ul>
                                 <li class="active active1" data-target=".list">
-                                    
                                     <!-- <i class="material-icons">format_align_left</i> -->
                                     <img src="icons/list-blue.svg" class="img1" alt="">
                                     <img src="icons/list.svg" class="img2" alt="">
-                                    List</li>
-
-                                 
+                                    List
+                                </li>
                                 <li class="active1" data-target=".gantt">
                                     <!-- <i class="material-icons">subject</i>  -->
                                     <img src="icons/gantt-blue.svg" class="img1" alt="">
                                     <img src="icons/gntt.svg" class="img2" alt="">
-                                    Gantt</li>
-                                
+                                    Gantt
+                                </li>
                                 <li class="active1" data-target=".calendar">
                                     <!-- <i class="material-icons">calendar_today</i> -->
                                     <img src="icons/calender-1.svg" class="img1" alt="">
                                     <img src="icons/calender.svg" class="img2" alt="">
-                                     Calendar</li>
+                                    Calendar
+                                </li>
                                 <li class="active1" data-target=".workload">
                                     <!-- <i class="material-icons">subject</i>  -->
                                     <img src="icons/workload-blue.svg" class="img1" alt="">
                                     <img src="icons/wrokload.svg" class="img2" alt="">
-                                    Workload</li>
+                                    Workload
+                                </li>
                                 <li class="active1" data-target=".kanban">
                                     <!-- <i class="material-icons">subject</i>  -->
                                     <img src="icons/kanban-blue.svg" class="img1" alt="">
-                                    <img src="icons/Kanban.svg"      class="img2" alt="">
-                                    Kanban</li>
+                                    <img src="icons/Kanban.svg" class="img2" alt="">
+                                    Kanban
+                                </li>
                                 <li class="active1" data-target=".addview">
                                     <!-- <i class="material-icons">add</i> -->
                                     <img src="icons/plus-blue.svg" class="img1" alt="">
-                                    <img src="icons/plus.svg"      class="img2" alt="">
-                                     Add View</li>
+                                    <img src="icons/plus.svg" class="img2" alt="">
+                                    Add View
+                                </li>
                             </ul>
-                           
-                           
                         </div>
-                    </div>
-
-                    <div class="list active tab_content">
                         <div class="top_up2 mb-1">
                             <ul>
                                 <!--  -->
                                 <!-- <li>
-                                    <div id="wrap">
-                                        <form action="" autocomplete="on">
-                                           
-                                        <input id="search" name="search" type="text" placeholder="Search">
-                                          
-                                          <input id="search_submit" value="Rechercher" type="submit">
-                                          <label for="">Search</label>
-                                        </form>
-                                      </div>
-                                     
-                                </li> -->
-
-
-                            
+<div id="wrap">
+<form action="" autocomplete="on">
+<input id="search" name="search" type="text" placeholder="Search">
+<input id="search_submit" value="Rechercher" type="submit">
+<label for="">Search</label>
+</form>
+</div>
+</li> -->
                                 <!--  -->
-                                <li> <img src="icons/search-1.svg" width="23" class="pe-2" alt="">
+                                <li> <img src="icons/search-1.svg" alt="">
                                     Search..</li>
                                 <li>
-                                    <img src="icons/filter.svg" width="23" class="pe-2" alt="">
-                                     Filters</li>
+                                    <img src="icons/filter.svg" alt="" style="margin-right: 0.1rem;">
+                                    Filters
+                                </li>
                                 <li>
-                                    <img src="icons/sort.svg" width="14" class="pe-2" alt="">
-                                    Sort</li>
-                                
+                                    <img src="icons/sort.svg" alt="" style="margin-right: -0.3rem;">
+                                    Sort
+                                </li>
                                 <div class="filter_div">
                                     <div class="row head_div">
                                         <div class="col-md-6 d-flex">
                                             <h1>Quick Filters</h1>
                                             <span>Showing all 21 items</span>
+                                            <span>Clear All</span>
                                         </div>
                                         <div class="col-md-6 d-flex justify-content-end">
                                             <span>Clear all</span>
@@ -312,13 +312,16 @@
                                     <!-- border-bottom closed -->
                                     <div class="filter_bottom">
                                         <p>Switch to advanced filters</p>
+                                        <button class="btn">Save as New view</button>
                                     </div>
                                 </div>
                             </ul>
                         </div>
+                    </div>
+                    <div class="list active tab_content">
                         <div class="project1">
                             <div class="projectcon1">
-                                <div class="row">
+                                <div class="row mobile-width">
                                     <div class="head1">
                                         <span><i class="material-icons">expand_more</i></span>
                                         <span></span>
@@ -382,14 +385,12 @@
                                                             <a href="#"><img src="./icons/priority.svg"
                                                                     class="icons">Priority</a>
                                                         </div>
-                                                        
                                                     </div>
-                                                   
                                                 </div>
                                             </div>
                                         </ul>
-                                        <!-- 
-                                        -->
+                                        <!--
+-->
                                     </div>
                                 </div>
                                 <div class="expand active">
@@ -397,7 +398,7 @@
                                         <div class="projmaincon">
                                             <div class="row">
                                                 <div class="divcon1">
-                                                    <p>Project 01</p><span><img src="icons/conversation.svg" alt=""> </span>
+                                                    <p>Project 01</p><span><i class="material-icons">maps_ugc</i></span>
                                                 </div>
                                                 <div class="divcon2">
                                                     <div><img src="img/client1.jpg" alt=""></div>
@@ -549,8 +550,8 @@
                                                     </div>
                                                 </div>
                                                 <!-- <div class="divmile7">
-                                                dfsdf
-                                            </div> -->
+dfsdf
+</div> -->
                                             </div>
                                         </div>
                                     </div>
@@ -572,7 +573,7 @@
                                         <div class="projmaincon">
                                             <div class="row">
                                                 <div class="divcon1">
-                                                    <p>Project 01</p><span><img src="icons/conversation.svg" alt="">  </span>
+                                                    <p>Project 01</p><span><i class="material-icons">maps_ugc</i></span>
                                                 </div>
                                                 <div class="divcon2">
                                                     <div><img src="img/client1.jpg" alt=""></div>
@@ -612,7 +613,7 @@
                                         <div class="projmaincon">
                                             <div class="row">
                                                 <div class="divcon1">
-                                                    <p>Project 01</p><span><img src="icons/conversation.svg" alt="">  </span>
+                                                    <p>Project 01</p><span><i class="material-icons">maps_ugc</i></span>
                                                 </div>
                                                 <div class="divcon2">
                                                     <div><img src="img/client1.jpg" alt=""></div>
@@ -662,10 +663,9 @@
                             </div>
                             <!-- projectcon1 closed -->
                         </div>
-
                         <div class="project1">
                             <div class="projectcon1">
-                                <div class="row">
+                                <div class="row mobile-width">
                                     <div class="head1">
                                         <span><i class="material-icons">expand_more</i></span>
                                         <span></span>
@@ -730,34 +730,34 @@
                                                                     class="icons">Priority</a>
                                                         </div>
                                                         <!-- <div class="column2">
-                                                            <a href="#"><img src="./icons//timeline.svg"
-                                                                    class="icons">Timeline</a>
-                                                            <a href="#"><img src="./icons/Number.svg"
-                                                                    class="icons">Numbers</a>
-                                                            <a href="#"><img src="./icons/Assigness.svg"
-                                                                    class="icons">Assignees</a>
-                                                            <a href="#"><img src="./icons/Progress track.svg"
-                                                                    class="icons">Progress Track</a>
-                                                            <a href="#"><img src="./icons/dropdown (2).svg"
-                                                                    class="icons">Dropdown</a>
-                                                            <a href="#"><img src="./icons/arrow.svg"
-                                                                    class="icons">Connect boards</a>
-                                                            <a href="#"><img src="./icons/formula.svg"
-                                                                    class="icons">Formula</a>
-                                                            <a href="#"><img src="./icons/link.svg"
-                                                                    class="icons">Link</a>
-                                                            <a href="#"><img src="./icons/status.svg"
-                                                                    class="icons">Status</a>
-                                                        </div> -->
+<a href="#"><img src="./icons//timeline.svg"
+class="icons">Timeline</a>
+<a href="#"><img src="./icons/Number.svg"
+class="icons">Numbers</a>
+<a href="#"><img src="./icons/Assigness.svg"
+class="icons">Assignees</a>
+<a href="#"><img src="./icons/Progress track.svg"
+class="icons">Progress Track</a>
+<a href="#"><img src="./icons/dropdown (2).svg"
+class="icons">Dropdown</a>
+<a href="#"><img src="./icons/arrow.svg"
+class="icons">Connect boards</a>
+<a href="#"><img src="./icons/formula.svg"
+class="icons">Formula</a>
+<a href="#"><img src="./icons/link.svg"
+class="icons">Link</a>
+<a href="#"><img src="./icons/status.svg"
+class="icons">Status</a>
+</div> -->
                                                     </div>
                                                     <!-- <div class="addcolumn">
-                                                        <a href="#"><i class="fa fa-plus"></i>Add Column</a>
-                                                    </div> -->
+<a href="#"><i class="fa fa-plus"></i>Add Column</a>
+</div> -->
                                                 </div>
                                             </div>
                                         </ul>
-                                        <!-- 
-                                        -->
+                                        <!--
+-->
                                     </div>
                                 </div>
                                 <div class="expand active">
@@ -765,7 +765,7 @@
                                         <div class="projmaincon">
                                             <div class="row">
                                                 <div class="divcon1">
-                                                    <p>Project 01</p><span><img src="icons/conversation.svg" alt=""> </span>
+                                                    <p>Project 01</p><span><i class="material-icons">maps_ugc</i></span>
                                                 </div>
                                                 <div class="divcon2">
                                                     <div><img src="img/client1.jpg" alt=""></div>
@@ -869,7 +869,7 @@
                                         <div class="projmaincon">
                                             <div class="row">
                                                 <div class="divcon1">
-                                                    <p>Project 01</p><span><img src="icons/conversation.svg" alt=""> </span>
+                                                    <p>Project 01</p><span><i class="material-icons">maps_ugc</i></span>
                                                 </div>
                                                 <div class="divcon2">
                                                     <div><img src="img/client1.jpg" alt=""></div>
@@ -909,7 +909,7 @@
                                         <div class="projmaincon">
                                             <div class="row">
                                                 <div class="divcon1">
-                                                    <p>Project 01</p><span><img src="icons/conversation.svg" alt=""> </span>
+                                                    <p>Project 01</p><span><i class="material-icons">maps_ugc</i></span>
                                                 </div>
                                                 <div class="divcon2">
                                                     <div><img src="img/client1.jpg" alt=""></div>
@@ -948,7 +948,7 @@
                                         <div class="projmaincon">
                                             <div class="row">
                                                 <div class="divcon1">
-                                                    <p>Project 01</p><span><img src="icons/conversation.svg" alt=""> </span>
+                                                    <p>Project 01</p><span><i class="material-icons">maps_ugc</i></span>
                                                 </div>
                                                 <div class="divcon2">
                                                     <div><img src="img/client1.jpg" alt=""></div>
@@ -998,10 +998,9 @@
                             </div>
                             <!-- projectcon1 closed -->
                         </div>
-
                         <div class="project1">
                             <div class="projectcon1">
-                                <div class="row">
+                                <div class="row mobile-width">
                                     <div class="head1">
                                         <span><i class="material-icons">expand_more</i></span>
                                         <span></span>
@@ -1066,34 +1065,34 @@
                                                                     class="icons">Priority</a>
                                                         </div>
                                                         <!-- <div class="column2">
-                                                            <a href="#"><img src="./icons//timeline.svg"
-                                                                    class="icons">Timeline</a>
-                                                            <a href="#"><img src="./icons/Number.svg"
-                                                                    class="icons">Numbers</a>
-                                                            <a href="#"><img src="./icons/Assigness.svg"
-                                                                    class="icons">Assignees</a>
-                                                            <a href="#"><img src="./icons/Progress track.svg"
-                                                                    class="icons">Progress Track</a>
-                                                            <a href="#"><img src="./icons/dropdown (2).svg"
-                                                                    class="icons">Dropdown</a>
-                                                            <a href="#"><img src="./icons/arrow.svg"
-                                                                    class="icons">Connect boards</a>
-                                                            <a href="#"><img src="./icons/formula.svg"
-                                                                    class="icons">Formula</a>
-                                                            <a href="#"><img src="./icons/link.svg"
-                                                                    class="icons">Link</a>
-                                                            <a href="#"><img src="./icons/status.svg"
-                                                                    class="icons">Status</a>
-                                                        </div> -->
+<a href="#"><img src="./icons//timeline.svg"
+class="icons">Timeline</a>
+<a href="#"><img src="./icons/Number.svg"
+class="icons">Numbers</a>
+<a href="#"><img src="./icons/Assigness.svg"
+class="icons">Assignees</a>
+<a href="#"><img src="./icons/Progress track.svg"
+class="icons">Progress Track</a>
+<a href="#"><img src="./icons/dropdown (2).svg"
+class="icons">Dropdown</a>
+<a href="#"><img src="./icons/arrow.svg"
+class="icons">Connect boards</a>
+<a href="#"><img src="./icons/formula.svg"
+class="icons">Formula</a>
+<a href="#"><img src="./icons/link.svg"
+class="icons">Link</a>
+<a href="#"><img src="./icons/status.svg"
+class="icons">Status</a>
+</div> -->
                                                     </div>
                                                     <!-- <div class="addcolumn">
-                                                        <a href="#"><i class="fa fa-plus"></i>Add Column</a>
-                                                    </div> -->
+<a href="#"><i class="fa fa-plus"></i>Add Column</a>
+</div> -->
                                                 </div>
                                             </div>
                                         </ul>
-                                        <!-- 
-                                        -->
+                                        <!--
+-->
                                     </div>
                                 </div>
                                 <div class="expand active">
@@ -1101,7 +1100,7 @@
                                         <div class="projmaincon">
                                             <div class="row">
                                                 <div class="divcon1">
-                                                    <p>Project 01</p><span><img src="icons/conversation.svg" alt=""> </span>
+                                                    <p>Project 01</p><span><i class="material-icons">maps_ugc</i></span>
                                                 </div>
                                                 <div class="divcon2">
                                                     <div><img src="img/client1.jpg" alt=""></div>
@@ -1206,7 +1205,7 @@
                                         <div class="projmaincon">
                                             <div class="row">
                                                 <div class="divcon1">
-                                                    <p>Project 01</p><span><img src="icons/conversation.svg" alt=""> </span>
+                                                    <p>Project 01</p><span><i class="material-icons">maps_ugc</i></span>
                                                 </div>
                                                 <div class="divcon2">
                                                     <div><img src="img/client2.jpg" alt=""></div>
@@ -1246,7 +1245,7 @@
                                         <div class="projmaincon">
                                             <div class="row">
                                                 <div class="divcon1">
-                                                    <p>Project 01</p><span><img src="icons/conversation.svg" alt=""> </span>
+                                                    <p>Project 01</p><span><i class="material-icons">maps_ugc</i></span>
                                                 </div>
                                                 <div class="divcon2">
                                                     <div><img src="img/client3.jpg" alt=""></div>
@@ -1286,7 +1285,7 @@
                                         <div class="projmaincon">
                                             <div class="row">
                                                 <div class="divcon1">
-                                                    <p>Project 01</p><span><img src="icons/conversation.svg" alt=""> </span>
+                                                    <p>Project 01</p><span><i class="material-icons">maps_ugc</i></span>
                                                 </div>
                                                 <div class="divcon2">
                                                     <div><img src="img/client4.jpg" alt=""></div>
@@ -1375,9 +1374,6 @@
         <!--container closed-->
     </section>
     <!--section closed-->
-
-    
-
     <!-- custom js -->
     <script src="js/jquery-2.2.0.min.js"></script>
     <script src="js/script.js"></script>
@@ -1386,10 +1382,7 @@
         crossorigin="anonymous"></script>
     <script src="js/jquery.datetimepicker.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
-   
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    
-    
     <script src="js/scriptfilter.js"></script>
 </body>
 
