@@ -2876,6 +2876,10 @@ width: 100%;
 
 @media (max-width:768px){
 
+    .signIn{
+        background: #F2F5F8; 
+    }
+
 .main .div-left{
    
     background: #F2F5F8;
@@ -2896,9 +2900,7 @@ width: 100%;
     display: none;
 
 }
-.main .div-left img{
 
-}
 
 .div-left h2{
     text-align: center;
@@ -2910,8 +2912,8 @@ width: 100%;
 .main .div-right {
     flex: 0 0 100%;
     max-width: 100%;
-    min-height: 100vh;
-    padding: 5rem 0;
+    /* min-height: 100vh; */
+    padding: 0rem 0;
 }
 
 }
