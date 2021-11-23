@@ -289,4 +289,8 @@
     .proj_filter .divfilter2 .top_up2 .filter_div ul {
         overflow: hidden;
     }
+    .proj_filter .divfilter2 .top_up2 .topup2_overlay.active
+    {
+        background-color: rgba(0,0,0,0.2);
+    }
 }
