@@ -2866,6 +2866,19 @@ padding-right: 0vw;
 background-color: #F8F9FB;
 width: 100%;
 }
+
+
+.eyes2{
+    position: relative;
+    cursor: pointer;
+}
+
+.eyes2 img{
+    top: 5px;
+    position: absolute;
+    left: -43px;
+}
+
 /* dashboard end */
 
 
@@ -2915,6 +2928,7 @@ width: 100%;
     /* min-height: 100vh; */
     padding: 0rem 0;
 }
+
 
 }
 
