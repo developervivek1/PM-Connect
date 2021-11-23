@@ -2827,9 +2827,9 @@ margin: 0;
 border: 0;
 background: transparent;
 }
-.button1 img{
+/* .button1 img{
 width: 3vw;
-}
+} */
 .button1:hover .button__img1:nth-child(1) {
 display: block;
 }
