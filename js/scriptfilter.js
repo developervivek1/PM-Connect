@@ -388,3 +388,9 @@ $('#picker').add('#picker2').add('#picker3').add('#picker4').add('#picker5').
             datepicker: true,
             format: 'MMM DD,YYYY'
         });
+
+
+
+        $('.h1fixed').scroll(function() {
+            $(this).find('.mysticky').css('left', $(this).scrollLeft());
+        });

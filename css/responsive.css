@@ -12,7 +12,7 @@
         height: 100vh;
     }
     .manage_view .div1 h3 img {
-        width: 20px;
+        width: 21px;
         margin-top: 12px;
     }
     .manage_view .div1 h3 {
@@ -146,7 +146,7 @@
     .proj_filter .divfilter2 .top_up ul {
         margin-left: 1%;
         overflow-x: scroll;
-        margin-top: 40px;
+        margin-top: 16px;
         width: 153%;
     }
     .proj_filter .divfilter2 .top_up, .proj_filter .divfilter2 .top_up2 {
@@ -344,7 +344,18 @@
 
 
 
-    .top_up h1{
+    /* .top_up h1{
         position: inherit;
+    } */
+
+    .proj_filter .divfilter2 .top_up >.mysticky
+    {
+        position: sticky;
+        top: 0;
+        left: 0;
+        float: left;
+        z-index: 4;
+        padding: 0;
+        margin-bottom: 1.8rem;
     }
 }
