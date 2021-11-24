@@ -394,3 +394,8 @@ $('#picker').add('#picker2').add('#picker3').add('#picker4').add('#picker5').
         $('.h1fixed').scroll(function() {
             $(this).find('.mysticky').css('left', $(this).scrollLeft());
         });
+
+
+        $('#con1fixed').scroll(function() {
+            $(this).find('.mysticky2').css('left', $(this).scrollLeft());
+        });

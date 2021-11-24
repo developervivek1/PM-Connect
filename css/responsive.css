@@ -348,7 +348,50 @@
         position: inherit;
     } */
 
-    .proj_filter .divfilter2 .top_up >.mysticky
+    /* .proj_filter .divfilter2 .top_up >.mysticky
+    {
+        position: sticky;
+        top: 0;
+        left: 0;
+        float: left;
+        z-index: 4;
+        padding: 0;
+        margin-bottom: 1.8rem;
+    } */
+
+    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile1 {
+        flex: 0 0 15%;
+        max-width: 15%;
+    }
+    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile > .row .divmile1 {
+        flex: 0 0 15%;
+        max-width: 15%;
+    }
+    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile > .row .divmile4
+    {
+        flex: 0 0 13.1%;
+        max-width: 13.1%;
+    }
+    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile2,
+    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile3 {
+        flex: 0 0 10%;
+        max-width: 10%;
+    }
+    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile2 {
+        flex: 0 0 8.5%;
+        max-width: 8.5%;
+    }
+    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile3 {
+        flex: 0 0 10.3%;
+        max-width: 10.3%;
+    }
+    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile4 {
+        flex: 0 0 13%;
+        max-width: 13%;
+    }
+
+.proj_filter .divfilter2 .top_up >.mysticky,
+    .proj_filter .divfilter2 .project1 .projectcon1 .mysticky2
     {
         position: sticky;
         top: 0;
@@ -358,4 +401,16 @@
         padding: 0;
         margin-bottom: 1.8rem;
     }
+    .proj_filter .divfilter2 .project1 .projectcon1 .mysticky2 {
+        /* background-color: #fff; */
+        height: 38px;
+        margin-bottom: 0rem;
+        display: flex;
+        align-items: center;
+        z-index: 2;
+    }
+
+
+
+    
 }
