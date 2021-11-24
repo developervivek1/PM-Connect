@@ -146,7 +146,7 @@
     .proj_filter .divfilter2 .top_up ul {
         margin-left: 1%;
         overflow-x: scroll;
-        margin-top: 16px;
+        margin-top: 40px;
         width: 153%;
     }
     .proj_filter .divfilter2 .top_up, .proj_filter .divfilter2 .top_up2 {
@@ -340,5 +340,11 @@
     .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile4 {
         flex: 0 0 13%;
         max-width: 13%;
+    }
+
+
+
+    .top_up h1{
+        position: inherit;
     }
 }
