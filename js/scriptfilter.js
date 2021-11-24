@@ -34,7 +34,6 @@ const discardEdit = document.querySelectorAll('.proj_filter .divfilter2 .project
 const mobileTrigger = document.querySelector('.mobile-menuhead .hamberger-menu span');
 const mobileMenu = document.querySelector('.proj_filter nav');
 let statusColor, statusText, textVal, value,addColumnIndex;
-console.log(top_up);
 
 mobileTrigger.addEventListener('click',()=>
 {
@@ -45,14 +44,22 @@ mobileTrigger.addEventListener('click',()=>
     }
 })
 
-showFilter.addEventListener('click', () => {
+showFilter.addEventListener('click', (e) => {
     if (!filterdiv.classList.contains('showfilter')) {
         filterdiv.classList.add('showfilter');
         showFilter.classList.add('active');
         topup2_overlay.classList.add('active');
         filterImg.src=`icons/filter2.png`;
         filterImg.style.cssText='width:14px; height:10px';
-        top_up.style.zIndex='3';
+        let xWidth = e.clientX;
+        if(xWidth<749)
+        {
+            top_up.style.zIndex='3';
+        }
+        else
+        {
+            top_up.style.zIndex="6";
+        }
     }
     else {
         filterdiv.classList.remove('showfilter');
@@ -88,13 +95,21 @@ function hideFilterdiv(e) {
         topup2_overlay.classList.remove('active');
         filterImg.src=`icons/filter.svg`;
         filterImg.style.cssText='width:14px; height:14px';
-        top_up.style.zIndex='4';
+        
+        if(e.clientX < 749)
+        {
+            top_up.style.zIndex='4';
+        }
+        else
+        {
+            top_up.style.zIndex='6';
+        }
     }
 }
 
 window.addEventListener('resize',()=>
 {
-    if(this.innerWidth < 750)
+    if(this.innerWidth < 849)
     {
        overlay.classList.remove('active');
        mobileMenu.classList.remove('active');
