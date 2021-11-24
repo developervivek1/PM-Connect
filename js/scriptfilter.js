@@ -1,5 +1,6 @@
 const showFilter = document.querySelector('.divfilter2 .top_up2 ul li:nth-child(2)');
 const filterdiv = document.querySelector('.divfilter2 .top_up2 .filter_div');
+const top_up = document.querySelector('.proj_filter .divfilter2 .top_up');
 const filterImg = document.querySelector('.divfilter2 .top_up2 ul li:nth-child(2) img');
 const overlay = document.querySelector('.proj_filter .myoverlay');
 const topup2_overlay = document.querySelector('.proj_filter .divfilter2 .top_up2 .topup2_overlay');
@@ -33,6 +34,7 @@ const discardEdit = document.querySelectorAll('.proj_filter .divfilter2 .project
 const mobileTrigger = document.querySelector('.mobile-menuhead .hamberger-menu span');
 const mobileMenu = document.querySelector('.proj_filter nav');
 let statusColor, statusText, textVal, value,addColumnIndex;
+console.log(top_up);
 
 mobileTrigger.addEventListener('click',()=>
 {
@@ -50,6 +52,7 @@ showFilter.addEventListener('click', () => {
         topup2_overlay.classList.add('active');
         filterImg.src=`icons/filter2.png`;
         filterImg.style.cssText='width:14px; height:10px';
+        top_up.style.zIndex='3';
     }
     else {
         filterdiv.classList.remove('showfilter');
@@ -65,16 +68,17 @@ function hideFilterdiv(e) {
         filterdiv.classList.remove('showfilter');
         showFilter.classList.remove('active');
         mobileMenu.classList.remove('active');
-        filterImg.src=`icons/filter.svg`;
-        filterImg.style.cssText='width:14px; height:14px';
         mainul[mainul.length - 1].classList.remove('active');
         divfilter.querySelector('.addview').classList.remove('active');
         tabnum[0].classList.add('active');
         mainul[0].classList.add('active');
         showEdit.forEach((showEdit) => {
             showEdit.classList.remove('active');
-        })
-        addColumn[addColumnIndex].innerText = "add";
+        });
+        addColumn.forEach((addIcon)=>
+        {
+            addIcon.innerText = "add";
+        });
         overlay.classList.remove('active');
     }
     else if(e.target==topup2_overlay)
@@ -84,6 +88,7 @@ function hideFilterdiv(e) {
         topup2_overlay.classList.remove('active');
         filterImg.src=`icons/filter.svg`;
         filterImg.style.cssText='width:14px; height:14px';
+        top_up.style.zIndex='4';
     }
 }
 
@@ -93,6 +98,10 @@ window.addEventListener('resize',()=>
     {
        overlay.classList.remove('active');
        mobileMenu.classList.remove('active');
+    }
+    else
+    {
+        top_up.style.zIndex='6';
     }
 })
 
