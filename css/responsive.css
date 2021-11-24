@@ -11,8 +11,12 @@
         width: 93px;
         height: 100vh;
     }
-    .manage_view .div1 h3 img {
+    /* .manage_view .div1 h3 img {
         width: 58px;
+    } */
+    .manage_view .div1 h3 {
+        border-bottom: none;
+
     }
     .manage_view .div1 ul li {
         margin-bottom: 10px;
@@ -88,7 +92,7 @@
         width: 100%;
         padding: 0 18px;
     }
-    .mobile-menuhead .hamberger-menu span
+     /* .mobile-menuhead .hamberger-menu span
     {
         width: 20px;
         height: 2px;
@@ -96,7 +100,7 @@
         display: block;
         position: relative;
         cursor: pointer;
-    }
+    }  */
     .mobile-menuhead .hamberger-menu span::before,
     .mobile-menuhead .hamberger-menu span::after
     {
@@ -115,7 +119,7 @@
     {
         top: 5px;
         left: 0;
-    }
+    } 
     .mobile-menuhead .logo_div h1
     {
       color: #fff;
