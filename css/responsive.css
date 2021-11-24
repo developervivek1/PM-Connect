@@ -11,9 +11,10 @@
         width: 93px;
         height: 100vh;
     }
-    /* .manage_view .div1 h3 img {
-        width: 58px;
-    } */
+    .manage_view .div1 h3 img {
+        width: 25px;
+        margin-top: 12px;
+    }
     .manage_view .div1 h3 {
         border-bottom: none;
 
