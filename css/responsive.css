@@ -9,19 +9,19 @@
         max-width: 23%; 
         padding: 2.5vw 1vw;
         width: 93px;
-        height: 100vh;
+        height: 80vh;
     }
     .manage_view .div1 h3 img {
         width: 58px;
     }
     .manage_view .div1 ul li {
-        margin-bottom: 25px;
+        margin-bottom: 10px;
         width: 30px;
         height: 30px;
     }
-    /* .manage_view .div1 .button1 img {
+    .manage_view .div1 .button1 img {
         width: 37px;
-    } */
+    }
     .manage_view .div1 ul:nth-child(3) li:last-child {
         width: 18px;
         height: 18px;
@@ -70,7 +70,7 @@
         margin-top: 0;
         top: 0;
         position: fixed;
-        z-index: 3;
+        z-index: 4;
         background: #fff;
     }
     .mobile-menuhead
@@ -292,5 +292,48 @@
     .proj_filter .divfilter2 .top_up2 .topup2_overlay.active
     {
         background-color: rgba(0,0,0,0.2);
+    }
+    .proj_filter .divfilter2 .addview {
+        left: 37%;
+        top: 159px;
+        width: 201px;
+        padding: 8px 22px;
+        z-index: 3;
+    }
+    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 {
+        width: 418%;
+    }
+    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile > .row {
+        width: 418%;
+    }
+    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile1 {
+        flex: 0 0 15%;
+        max-width: 15%;
+    }
+    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile > .row .divmile1 {
+        flex: 0 0 15%;
+        max-width: 15%;
+    }
+    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile > .row .divmile4
+    {
+        flex: 0 0 13.1%;
+        max-width: 13.1%;
+    }
+    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile2, 
+    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile3 {
+        flex: 0 0 10%;
+        max-width: 10%;
+    }
+    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile2 {
+        flex: 0 0 8.5%;
+        max-width: 8.5%;
+    }
+    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile3 {
+        flex: 0 0 10.3%;
+        max-width: 10.3%;
+    }
+    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile4 {
+        flex: 0 0 13%;
+        max-width: 13%;
     }
 }
