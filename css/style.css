@@ -1644,7 +1644,7 @@ margin-block-end: 2rem;
 margin-top: 17.9rem;
 right: 0;
 position: fixed;
-z-index: 5;
+z-index: 25;
 background: #fff;
 }
 .proj_filter .divfilter2 .top_up2 .topup2_overlay
@@ -2527,7 +2527,7 @@ box-shadow: 0px 2px 14px #00000012;
 width: 300px;
 height: auto;
 padding: 15px;
-z-index: 100;
+z-index: 15;
 display: none;
 }
 .proj_filter .divfilter2 .project1 .projmaincon .addedit.active

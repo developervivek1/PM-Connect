@@ -299,6 +299,7 @@
         background-color: rgba(0,0,0,0.2);
     }
     .proj_filter .divfilter2 .addview {
+        position: fixed;
         left: 37%;
         top: 159px;
         width: 201px;
@@ -402,12 +403,16 @@
         margin-bottom: 1.8rem;
     }
     .proj_filter .divfilter2 .project1 .projectcon1 .mysticky2 {
-        /* background-color: #fff; */
+        background-color: #fff;
         height: 38px;
         margin-bottom: 0rem;
         display: flex;
         align-items: center;
         z-index: 2;
+    }
+
+    .proj_filter .divfilter2 .project1 .projectcon1 .head1:first-child {
+        background-color: transparent;
     }
 
 
