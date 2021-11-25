@@ -1595,7 +1595,7 @@ margin-top: 7.7rem;
 }
 .proj_filter .divfilter2 .addview
 {
-position: absolute;
+position: fixed;
 left: 47.2%;
 top: 78px;
 width: 210px;
