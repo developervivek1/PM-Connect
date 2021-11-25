@@ -11,9 +11,9 @@ padding: 2.5vw 1vw;
 width: 93px;
 height: 100vh;
 }
-.manage_view .div1 h3 img {
+/* .manage_view .div1 h3 img {
 width: 58px;
-}
+} */
 .manage_view .div1 ul li {
 margin-bottom: 25px;
 width: 30px;
@@ -84,7 +84,7 @@ background-color: #2D62ED;
 height: 51px;
 display: flex;
 align-items: center;
-z-index: 15;
+z-index: 14;
 width: 100%;
 padding: 0 18px;
 }

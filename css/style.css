@@ -734,7 +734,8 @@ position: fixed;
 z-index: 15;
 }
 .div1 h3 img{
-width: 4vw;
+    margin-top: 6px;
+    width: 3.5vw;
 }
 .manage_view .div2
 {
@@ -864,7 +865,7 @@ color: #ffffff;
 opacity: 0.9;
 letter-spacing: 0.03px;
 padding-bottom: 3vh;
-border-bottom: 0.04rem solid #dedcdc;
+/* border-bottom: 0.04rem solid #dedcdc; */
 }
 .manage_view .div1 ul
 {
