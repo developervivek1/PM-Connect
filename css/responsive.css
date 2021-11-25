@@ -9,13 +9,13 @@
         max-width: 23%; 
         padding: 2.5vw 1vw;
         width: 93px;
-        height: 80vh;
+        height: 100vh;
     }
     .manage_view .div1 h3 img {
         width: 58px;
     }
     .manage_view .div1 ul li {
-        margin-bottom: 10px;
+        margin-bottom: 18px;
         width: 30px;
         height: 30px;
     }
@@ -33,7 +33,7 @@
     {
         position: fixed;
         transform: translateX(-100%);
-        z-index: 150;
+        z-index: 15;
         animation: slideLeft 0.5s ease-in-out;
     }
     nav.active
@@ -134,6 +134,33 @@
         overflow: auto;
         background: #F2F5F8;
     }
+    .proj_filter .divfilter2 .top_up >.mysticky,
+    .proj_filter .divfilter2 .project1 .projectcon1 .mysticky2
+    {
+        position: sticky;
+        top: 0;
+        left: 0;
+        float: left;
+        z-index: 4;
+        padding: 0;
+        margin-bottom: 1.8rem;
+    }
+    .proj_filter .divfilter2 .project1 .projectcon1 .mysticky2 {
+        background-color: #fff;
+        height: 28px;
+        margin-bottom: 0rem;
+        display: flex;
+        align-items: center;
+        z-index: 1;
+    }
+    .proj_filter .divfilter2 .project1 .projectcon1 .head1.mysticky2
+    {
+height: 0px;
+    }
+    .proj_filter .divfilter2 .fixedMile > .mysticky2
+    {
+        background-color: transparent !important;
+    }
     .proj_filter .divfilter2 .top_up h1 {
         font-size: 2rem;
         margin-top: 0px;
@@ -171,6 +198,7 @@
         overflow-x: scroll;
         border-top-right-radius: 14px;
         border-bottom-right-radius: 14px;
+        padding: 15px 0;
     }
     .proj_filter .divfilter2 .list,
     .proj_filter .divfilter2 .gantt,
@@ -187,9 +215,20 @@
     .proj_filter .divfilter2 .project1 .row.mobile-width
     {
         width: 423%;
+        position: relative;
+    }
+    .proj_filter .divfilter2 .project1 .border-bottom .projmaincon > .row {
+        position: relative;
     }
     .proj_filter .divfilter2 .project1 .border-bottom {
         width: 418%;
+        border-left: 10px solid #edf6ff;
+    }
+    .proj_filter .divfilter2 .project1:nth-child(2) .border-bottom {
+        border-left: 10px solid #fbf2ff
+    }
+    .proj_filter .divfilter2 .project1:nth-child(3) .border-bottom {
+        border-left: 10px solid #f7eac18a;;
     }
     /* width */
     .proj_filter .divfilter2 .project1 ::-webkit-scrollbar,
@@ -335,5 +374,157 @@
     .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile4 {
         flex: 0 0 13%;
         max-width: 13%;
+    }
+    .proj_filter .divfilter2 .project1 .projectcon1 .milestone {
+        width: 100%;
+        z-index: 2;
+    }
+    .proj_filter .divfilter2 .project1 .projectcon1 .milestone.fixedMile
+    {
+        width: 100%;
+        overflow-x: hidden;
+        background-color: antiquewhite;
+    }
+    .proj_filter .divfilter2 .project1 .projmaincon .addedit .row {
+        flex-wrap: wrap;
+    }
+    ul.dropdown-menu {
+        z-index: 2;
+    }
+    .dropdown{   
+        position: absolute;
+        top: 4px;
+        right: 0px;
+        z-index: 0;
+        display: inline-block;
+    }
+    .proj_filter .divfilter2 .project1 .projmaincon .addedit {
+        z-index: 6;
+    }
+    .proj_filter .divfilter2 .project1 .projectcon1 .head1 {
+        border: 10px solid #edf6ff;
+    }
+    .proj_filter .divfilter2 .project1:nth-child(2) .projectcon1 .head1
+    {
+        border: 10px solid #fbf2ff;
+    }
+    .proj_filter .divfilter2 .project1:nth-child(3) .projectcon1 .head1 {
+        border: 10px solid #f7eac18a;
+    }
+   .proj_filter .divfilter2 .project1 .border-bottom .last_div p {
+        margin: 5px 0 0 2px;
+    }
+
+
+    /*--management view req---*/
+
+    .mview_req .change-req {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-left: 0%;
+    }
+    .mview_req .change-req .center {
+        max-width: 340px;
+        text-align: center;
+        margin-top: 7rem;
+    }
+    .mview_req .change-req .center>h1 {
+        font-size: 2rem;
+    }
+    .mview_req .change-req .center p.desc {
+        font-size: 14px;
+        margin-left: 0%;
+        width: 100%;
+    }
+    .mview_req .change-req .center .itproj_div .grid .grid2 h2 {
+        font-size: 1.6rem;
+    }
+    .mview_req .change-req .center p {
+        color: #838485;
+        font-size: 13px;
+    }
+    .mview_req .change-req .center .itproj_div .grid {
+        display: grid;
+        grid-template-columns: 18% 70% 12%;
+    }
+    .manage_view .myoverlay {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        display: none;
+        z-index: 5;
+        overflow: hidden;
+    }
+    .manage_view .myoverlay.active
+    {
+        display: block;
+    }
+    .manage_view .div2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        z-index: 2;
+        background-color: #F8F9FB;
+        height: 0vh;
+        width: 100%;
+        margin-top: 5.1rem;
+        position: relative;
+        margin-left: 0%;
+    }
+    .manage_view .div2 .center_div {
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+    .manage_view .div2 ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        background-color: transparent;
+        margin-top: 0rem;
+        box-shadow: none;
+    }
+    .manage_view .div2 ul li div:first-child::before {
+        z-index: 1;
+        left: 234%;
+        transform: rotate(90deg) translateX(1326%);
+        bottom: 0px;
+        width: 2px;
+        height: 70px;
+    }
+    .manage_view .div2 ul li.active {
+        background-color: transparent;
+        border-bottom: none;
+    }
+    .manage_view .div2 ul li .mob_con
+    {
+        display: none;
+    }
+    .manage_view .div3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-bottom: 12rem;
+        margin-left: 0%;
+        margin-top: 9rem;
+    }
+    .manage_view .div3 .form_div {
+        width: 100%;
+        padding: 1.5rem;
+        margin-top: 0.3rem;
+    }
+    .manage_view .div3 .step_wise {
+        width: 100%;
+    }
+    .manage_view .div2 ul li.active div:first-child {
+        background-color: #999999;
+    }
+    .manage_view .div2 ul li,
+    .manage_view .div2 ul li:not(:last-child) {
+        margin-right: 2.7rem;
     }
 }

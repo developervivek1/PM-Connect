@@ -1666,7 +1666,8 @@ font-weight: 600;
     z-index: 5;
     background: #fff;
 }
-.proj_filter .divfilter2 .top_up2 .topup2_overlay
+.proj_filter .divfilter2 .top_up2 .topup2_overlay,
+.proj_filter .divfilter2 .drop_overlay
 {
     position: fixed;
     left: 0;
@@ -1676,7 +1677,13 @@ font-weight: 600;
     z-index: 5;
     overflow: hidden;   
 }
-.proj_filter .divfilter2 .top_up2 .topup2_overlay.active
+.proj_filter .divfilter2 .drop_overlay
+{
+    height: 223%;
+    z-index: 1;
+}
+.proj_filter .divfilter2 .top_up2 .topup2_overlay.active,
+.proj_filter .divfilter2 .drop_overlay.active
 {
     display: block;
     background-color: transparent;
@@ -1695,7 +1702,7 @@ position: fixed;
 width: 200%;
 height: 100vh;
 display: none;
-z-index: 10;
+z-index: 4;
 overflow: hidden;
 }
 .proj_filter .myoverlay.active
@@ -1899,9 +1906,16 @@ margin: 20px 0;
 border-left: 6px solid #5ED9F0;
 border-radius: 5px;
 }
+
+.proj_filter .divfilter2 .project1:nth-child(2) .projectcon1
+{
+border-left: 6px solid  #A25DDE;
+background-color: #fbf2ff;
+}
 .proj_filter .divfilter2 .project1 .projectcon1 .expand
 {
     display: none;
+    margin-top: 1.4rem;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .expand.active
 {
@@ -2033,6 +2047,14 @@ height: 17px;
 background: #5ED9F0;
 border-radius: 30px;
 margin-right: 0.7rem;
+}
+.proj_filter .divfilter2 .project1:nth-child(1) .projectcon1 .head1 span:nth-child(2)
+{
+background-color: #5ED9F0;
+}
+.proj_filter .divfilter2 .project1:nth-child(2) .projectcon1 .head1 span:nth-child(2)
+{
+background-color: #A25DDE;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .head1 span:first-child i
 {
@@ -2221,19 +2243,10 @@ font-size: 13.1px;
 .proj_filter .divfilter2 .project1:nth-child(3) .projectcon1
 {
 margin-top: 0px;
-background-color: #A25DDD0D;
-border-left: 6px solid #A25DDE;
-}
-.proj_filter .divfilter2 .project1:nth-child(3) .projectcon1 .head1 span:nth-child(2) {
-background: #A25DDE;
-}
-.proj_filter .divfilter2 .project1:nth-child(4) .projectcon1
-{
-margin-top: 0px;
 background-color: #f7eac18a;
 border-left: 6px solid #F0CF5E;
 }
-.proj_filter .divfilter2 .project1:nth-child(4) .projectcon1 .head1 span:nth-child(2) {
+.proj_filter .divfilter2 .project1:nth-child(3) .projectcon1 .head1 span:nth-child(2) {
 background: #F0CF5E;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone
@@ -2551,7 +2564,7 @@ font-size: 13px;
     width: 300px;
     height: auto;
     padding: 15px;
-    z-index: 100;
+    z-index: 4;
     display: none;
 }
 .proj_filter .divfilter2 .project1 .projmaincon .addedit.active
@@ -2629,22 +2642,22 @@ font-size: 13px;
     cursor: pointer;
     width: max-content;
 }
-.proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div p:nth-child(8)
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div p:nth-child(5)
 {
     top: 12px;
     left: 31%;
 }
-.proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div p:nth-child(9)
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div p:nth-child(6)
 {
     top: 67px;
     left: 34%;
 }
-.proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div p:nth-child(10)
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div p:nth-child(7)
 {
     top: 121px;
     left: 28.7%;
 }
-.proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div p:nth-child(11)
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div p:nth-child(8)
 {
     top: 176px;
     left: 31%;
@@ -2987,14 +3000,15 @@ div.sticky {
         box-shadow: none;
     }
  
-
-.dropdown{
-   
+ul.dropdown-menu
+{
+    z-index: 1;
+}
+.dropdown{   
     position: absolute;
-    
     top: 4px;
     right: 0px;
-    z-index: 99;
+    z-index: 0;
     display: inline-block;
 }
 
