@@ -2222,7 +2222,7 @@ font-size: 13.1px;
 .proj_filter .divfilter2 .project1:nth-child(3) .projectcon1
 {
 margin-top: 0px;
-background-color: #A25DDD0D;
+/* background-color: #A25DDD0D;
 border-left: 6px solid #A25DDE;
 }
 .proj_filter .divfilter2 .project1:nth-child(3) .projectcon1 .head1 span:nth-child(2) {
@@ -2230,7 +2230,7 @@ background: #A25DDE;
 }
 .proj_filter .divfilter2 .project1:nth-child(4) .projectcon1
 {
-margin-top: 0px;
+margin-top: 0px; */
 background-color: #f7eac18a;
 border-left: 6px solid #F0CF5E;
 }
