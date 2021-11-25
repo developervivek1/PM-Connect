@@ -1,427 +1,520 @@
-@media(max-width: 749px)
+@media(max-width: 849px)
 {
-    .manage_view
-    {
-        background: #F2F5F8;
-    }
-    .manage_view .div1 {
-        flex: 0 0 23%;
-        max-width: 23%; 
-        padding: 2.5vw 1vw;
-        width: 93px;
-        height: 100vh;
-    }
-    .manage_view .div1 h3 img {
-        width: 21px;
-        margin-top: 12px;
-    }
-    .manage_view .div1 h3 {
-        border-bottom: none;
-
-    }
-    .manage_view .div1 ul li {
-        margin-bottom: 25px;
-        width: 30px;
-        height: 30px;
-    }
-    /* .manage_view .div1 .button1 img {
-        width: 37px;
-    } */
-    .manage_view .div1 ul:nth-child(3) li:last-child {
-        width: 18px;
-        height: 18px;
-    }
-    .manage_view .div1 ul:nth-child(3) li:last-child span:first-child {
-        font-size: 1rem;
-    }
-    nav
-    {
-        position: fixed;
-        transform: translateX(-100%);
-        z-index: 150;
-        animation: slideLeft 0.5s ease-in-out;
-    }
-    nav.active
-    {
-        transform: translateX(0%);
-        animation: 0.5s slideRight ease-in-out;
-    }
-    @keyframes slideRight
-    {
-        0%
-        {
-            transform: translateX(-100%);
-        }
-        100%
-        {
-            transform: translateX(0%);
-        }
-    }
-    @keyframes slideLeft
-    {
-        0%
-        {
-            transform: translateX(0%);
-        }
-        100%
-        {
-            transform: translateX(-100%);
-        }
-    }
-    .proj_filter .myoverlay {
-        z-index: 15;
-    }
-    .proj_filter .divfilter2 .top_up {
-        margin-top: 0;
-        top: 0;
-        position: fixed;
-        z-index: 16;
-        background: #fff;
-    }
-    .mobile-menuhead
-    {
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: space-between;
-        background-color: #2D62ED;
-        height: 51px;
-        display: flex;
-        align-items: center;
-        z-index: 17;
-        width: 100%;
-        padding: 0 18px;
-    }
-     /* .mobile-menuhead .hamberger-menu span
-    {
-        width: 20px;
-        height: 2px;
-        background-color: #fff;
-        display: block;
-        position: relative;
-        cursor: pointer;
-    }  */
-    .mobile-menuhead .hamberger-menu span::before,
-    .mobile-menuhead .hamberger-menu span::after
-    {
-        position: absolute;
-        content: '';
-        width: inherit;
-        height: inherit;
-        background-color: inherit;
-    }
-    .mobile-menuhead .hamberger-menu span::before
-    {
-        top: -5px;
-        left: 0;
-    }
-    .mobile-menuhead .hamberger-menu span::after
-    {
-        top: 5px;
-        left: 0;
-    } 
-    .mobile-menuhead .logo_div h1
-    {
-      color: #fff;
-      font-size: 1.8rem;
-      text-transform: uppercase;
-      font-family: var(--marcel);
-      margin-left: -8px;
-      letter-spacing: 0.5px;
-      display: block;
-
-    }
-    .proj_filter .divfilter2 .top_up {
-        margin-top: 4.8rem;
-        left: 11px;
-        display: block;
-        overflow: auto;
-        background: #F2F5F8;
-    }
-    .proj_filter .divfilter2 .top_up h1 {
-        font-size: 2rem;
-        margin-top: 0px;
-    }
-    .proj_filter .divfilter2 .top_up ul {
-        margin-left: 1%;
-        overflow-x: scroll;
-        margin-top: 16px;
-        width: 153%;
-    }
-    .proj_filter .divfilter2 .top_up, .proj_filter .divfilter2 .top_up2 {
-        padding: 26px 0.4rem 0px;
-    }
-    .proj_filter .divfilter2 .top_up ul li {
-        padding-bottom: 17px;
-    }
-    .proj_filter .divfilter2 .top_up2 {
-        margin-top: 37rem;
-        background-color: #F2F5F8;
-        z-index: 16;
-    }
-    .proj_filter .divfilter2 .top_up2 ul li
-    {
-        padding-bottom: 14px;
-    }
-    .proj_filter .divfilter2 .project1 {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        width: 94%;
-        overflow: hidden;
-    }
-    .proj_filter .divfilter2 .project1 .projectcon1 {
-        width: max-content;
-        overflow-x: scroll;
-        border-top-right-radius: 14px;
-        border-bottom-right-radius: 14px;
-    }
-    .proj_filter .divfilter2 .list,
-    .proj_filter .divfilter2 .gantt,
-    .proj_filter .divfilter2 .calendar,
-    .proj_filter .divfilter2 .workload,
-    .proj_filter .divfilter2 .kanban
-    {
-       margin-top: 21.5rem;
-    }
-    .proj_filter .divfilter2 .project1 .row
-    {
-        flex-wrap: nowrap;
-    }
-    .proj_filter .divfilter2 .project1 .row.mobile-width
-    {
-        width: 423%;
-    }
-    .proj_filter .divfilter2 .project1 .border-bottom {
-        width: 418%;
-    }
-    /* width */
-    .proj_filter .divfilter2 .project1 ::-webkit-scrollbar,
-    .proj_filter .divfilter2 .top_up ul::-webkit-scrollbar,
-    .proj_filter .divfilter2 .top_up::-webkit-scrollbar {
-        width: 0px;
-        height: 0px;
-    }
-    
-    /* Track */
-    .proj_filter .divfilter2 .project1 ::-webkit-scrollbar-track,
-    .proj_filter .divfilter2 .top_up ul::-webkit-scrollbar-track,
-    .proj_filter .divfilter2 .top_up::-webkit-scrollbar{
-        background: transparent;
-    }
-    
-    /* Handle */
-    .proj_filter .divfilter2 .project1 ::-webkit-scrollbar-thumb,
-    .proj_filter .divfilter2 .top_up ul::-webkit-scrollbar-thumb,
-    .proj_filter .divfilter2 .top_up::-webkit-scrollbar{
-        background: transparent;
-    }
-    
-    /* Handle on hover */
-    .proj_filter .divfilter2 .project1 ::-webkit-scrollbar-thumb:hover,
-    .proj_filter .divfilter2 .top_up ul::-webkit-scrollbar-thumb:hover,
-    .proj_filter .divfilter2 .top_up::-webkit-scrollbar{
-        background: transparent;
-    }
-    .proj_filter .divfilter2 .top_up2 .filter_div {
-        width: 100%;
-        height: auto;
-        border-top-left-radius: 21PX;
-        border-top-right-radius: 21px;
-        top: initial;
-        padding: 25px 20px 0;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        z-index: 6;
-    }
-    .proj_filter .divfilter2 .top_up2 .filter_div > .head_div h1 {
-        font-size: 16px;
-        font-weight: 600;
-        color: #000;
-    }
-    .proj_filter .divfilter2 .top_up2 .filter_div > .head_div span {
-        font-size: 12px;
-        margin-top: 2px;
-    }
-    .proj_filter .divfilter2 .top_up2 .filter_div > .head_div span:nth-child(3) {
-        color: red;
-        display: block;
-    }
-    .proj_filter .divfilter2 .top_up2 .filter_div .filter_bottom {
-        height: 5.5rem;
-        justify-content: space-between;
-    }
-    .proj_filter .divfilter2 .top_up2 .filter_div .filter_bottom p {
-        font-size: 1.3rem;
-        color: #2D62ED;
-        font-weight: 400;
-    }
-    .proj_filter .divfilter2 .top_up2 .filter_div > .head_div .justify-content-end span,
-    .proj_filter .divfilter2 .top_up2 .filter_div > .head_div .justify-content-end button
-     {
-        display: none;
-    }
-    .proj_filter .divfilter2 .top_up2 .filter_div > .head_div .d-flex {
-        margin-top: 0.9rem;
-        justify-content: space-between;
-    }
-    .proj_filter .divfilter2 .top_up2 .filter_div .filter_bottom button
-    {
-        display: block;
-    }
-    .proj_filter .divfilter2 .top_up2 .filter_div .filterdiv1, 
-    .proj_filter .divfilter2 .top_up2 .filter_div .filterdiv2, 
-    .proj_filter .divfilter2 .top_up2 .filter_div .filterdiv3, 
-    .proj_filter .divfilter2 .top_up2 .filter_div .filterdiv4, 
-    .proj_filter .divfilter2 .top_up2 .filter_div .filterdiv5 {
-        flex: 0 0 calc(200%/5);
-        max-width: calc(200%/5);
-        margin-top: 1.2rem;
-    }
-    .proj_filter .divfilter2 .top_up2 .filter_div ul li {
-        padding-left: 0;
-        color: #000;
-        margin-bottom: 0.4rem;
-    }
-    .proj_filter .divfilter2 .top_up2 .filter_div p {
-        margin-bottom: 1.5rem;
-        color: #000;
-        font-size: 14px;
-        font-weight: 600;
-    }
-    .proj_filter .divfilter2 .top_up2 .filter_div ul {
-        overflow: hidden;
-    }
-    .proj_filter .divfilter2 .top_up2 .topup2_overlay.active
-    {
-        background-color: rgba(0,0,0,0.2);
-    }
-    .proj_filter .divfilter2 .addview {
-        position: fixed;
-        left: 37%;
-        top: 159px;
-        width: 201px;
-        padding: 8px 22px;
-        z-index: 3;
-    }
-    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 {
-        width: 418%;
-    }
-    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile > .row {
-        width: 418%;
-    }
-    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile1 {
-        flex: 0 0 15%;
-        max-width: 15%;
-    }
-    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile > .row .divmile1 {
-        flex: 0 0 15%;
-        max-width: 15%;
-    }
-    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile > .row .divmile4
-    {
-        flex: 0 0 13.1%;
-        max-width: 13.1%;
-    }
-    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile2, 
-    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile3 {
-        flex: 0 0 10%;
-        max-width: 10%;
-    }
-    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile2 {
-        flex: 0 0 8.5%;
-        max-width: 8.5%;
-    }
-    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile3 {
-        flex: 0 0 10.3%;
-        max-width: 10.3%;
-    }
-    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile4 {
-        flex: 0 0 13%;
-        max-width: 13%;
-    }
-
-
-
-    /* .top_up h1{
-        position: inherit;
-    } */
-
-    /* .proj_filter .divfilter2 .top_up >.mysticky
-    {
-        position: sticky;
-        top: 0;
-        left: 0;
-        float: left;
-        z-index: 4;
-        padding: 0;
-        margin-bottom: 1.8rem;
-    } */
-
-    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile1 {
-        flex: 0 0 15%;
-        max-width: 15%;
-    }
-    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile > .row .divmile1 {
-        flex: 0 0 15%;
-        max-width: 15%;
-    }
-    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile > .row .divmile4
-    {
-        flex: 0 0 13.1%;
-        max-width: 13.1%;
-    }
-    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile2,
-    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile3 {
-        flex: 0 0 10%;
-        max-width: 10%;
-    }
-    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile2 {
-        flex: 0 0 8.5%;
-        max-width: 8.5%;
-    }
-    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile3 {
-        flex: 0 0 10.3%;
-        max-width: 10.3%;
-    }
-    .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile4 {
-        flex: 0 0 13%;
-        max-width: 13%;
-    }
-
+.manage_view
+{
+background: #F2F5F8;
+}
+.manage_view .div1 {
+flex: 0 0 23%;
+max-width: 23%;
+padding: 2.5vw 1vw;
+width: 93px;
+height: 100vh;
+}
+.manage_view .div1 h3 img {
+width: 58px;
+}
+.manage_view .div1 ul li {
+margin-bottom: 25px;
+width: 30px;
+height: 30px;
+}
+/* .manage_view .div1 .button1 img {
+width: 37px;
+} */
+.manage_view .div1 ul:nth-child(3) li:last-child {
+width: 18px;
+height: 18px;
+}
+.manage_view .div1 ul:nth-child(3) li:last-child span:first-child {
+font-size: 1rem;
+}
+nav
+{
+position: fixed;
+transform: translateX(-100%);
+z-index: 15;
+animation: slideLeft 0.5s ease-in-out;
+}
+nav.active
+{
+transform: translateX(0%);
+animation: 0.5s slideRight ease-in-out;
+}
+@keyframes slideRight
+{
+0%
+{
+transform: translateX(-100%);
+}
+100%
+{
+transform: translateX(0%);
+}
+}
+@keyframes slideLeft
+{
+0%
+{
+transform: translateX(0%);
+}
+100%
+{
+transform: translateX(-100%);
+}
+}
+.proj_filter .myoverlay {
+z-index: 5;
+}
+.proj_filter .divfilter2 .top_up {
+margin-top: 0;
+top: 0;
+position: fixed;
+z-index: 4;
+background: #fff;
+}
+.mobile-menuhead
+{
+position: fixed;
+top: 0;
+left: 0;
+display: flex;
+justify-content: space-between;
+background-color: #2D62ED;
+height: 51px;
+display: flex;
+align-items: center;
+z-index: 15;
+width: 100%;
+padding: 0 18px;
+}
+/* .mobile-menuhead .hamberger-menu span
+{
+width: 20px;
+height: 2px;
+background-color: #fff;
+display: block;
+position: relative;
+cursor: pointer;
+}  */
+.mobile-menuhead .hamberger-menu span::before,
+.mobile-menuhead .hamberger-menu span::after
+{
+position: absolute;
+content: '';
+width: inherit;
+height: inherit;
+background-color: inherit;
+}
+.mobile-menuhead .hamberger-menu span::before
+{
+top: -5px;
+left: 0;
+}
+.mobile-menuhead .hamberger-menu span::after
+{
+top: 5px;
+left: 0;
+}
+.mobile-menuhead .logo_div h1
+{
+color: #fff;
+font-size: 1.8rem;
+text-transform: uppercase;
+font-family: var(--marcel);
+margin-left: -8px;
+letter-spacing: 0.5px;
+display: block;
+}
+.proj_filter .divfilter2 .top_up {
+margin-top: 4.8rem;
+left: 11px;
+display: block;
+overflow: auto;
+background: #F2F5F8;
+}
 .proj_filter .divfilter2 .top_up >.mysticky,
-    .proj_filter .divfilter2 .project1 .projectcon1 .mysticky2
-    {
-        position: sticky;
-        top: 0;
-        left: 0;
-        float: left;
-        z-index: 4;
-        padding: 0;
-        margin-bottom: 1.8rem;
-    }
-    .proj_filter .divfilter2 .project1 .projectcon1 .mysticky2 {
-        background-color: #fff;
-        height: 38px;
-        margin-bottom: 0rem;
-        display: flex;
-        align-items: center;
-        z-index: 2;
-    }
-
-    .proj_filter .divfilter2 .project1 .projectcon1 .head1:first-child {
-        background-color: transparent;
-    }
-
-    .dropdown-menu {
-       
-        z-index: 15;
-
-    }
-
-
-
-    
+.proj_filter .divfilter2 .project1 .projectcon1 .mysticky2
+{
+position: sticky;
+top: 0;
+left: 0;
+float: left;
+z-index: 4;
+padding: 0;
+margin-bottom: 1.8rem;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .mysticky2 {
+background-color: #fff;
+height: 28px;
+margin-bottom: 0rem;
+display: flex;
+align-items: center;
+z-index: 1;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .head1.mysticky2
+{
+height: 0px;
+}
+.proj_filter .divfilter2 .fixedMile > .mysticky2
+{
+background-color: transparent !important;
+}
+.proj_filter .divfilter2 .top_up h1 {
+font-size: 2rem;
+margin-top: 0px;
+}
+.proj_filter .divfilter2 .top_up ul {
+margin-left: 1%;
+overflow-x: scroll;
+margin-top: 16px;
+width: 153%;
+}
+.proj_filter .divfilter2 .top_up, .proj_filter .divfilter2 .top_up2 {
+padding: 26px 0.4rem 0px;
+}
+.proj_filter .divfilter2 .top_up ul li {
+padding-bottom: 17px;
+}
+.proj_filter .divfilter2 .top_up2 {
+margin-top: 37rem;
+background-color: #F2F5F8;
+z-index: 3;
+}
+.proj_filter .divfilter2 .top_up2 ul li
+{
+padding-bottom: 14px;
+}
+.proj_filter .divfilter2 .project1 {
+display: flex;
+flex-wrap: nowrap;
+align-items: center;
+width: 94%;
+overflow: hidden;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 {
+width: max-content;
+overflow-x: scroll;
+border-top-right-radius: 14px;
+border-bottom-right-radius: 14px;
+padding: 15px 0;
+}
+.proj_filter .divfilter2 .list,
+.proj_filter .divfilter2 .gantt,
+.proj_filter .divfilter2 .calendar,
+.proj_filter .divfilter2 .workload,
+.proj_filter .divfilter2 .kanban
+{
+margin-top: 21.5rem;
+}
+.proj_filter .divfilter2 .project1 .row
+{
+flex-wrap: nowrap;
+}
+.proj_filter .divfilter2 .project1 .row.mobile-width
+{
+width: 423%;
+position: relative;
+}
+.proj_filter .divfilter2 .project1 .border-bottom .projmaincon > .row {
+position: relative;
+}
+.proj_filter .divfilter2 .project1 .border-bottom {
+width: 418%;
+border-left: 10px solid #edf6ff;
+}
+.proj_filter .divfilter2 .project1:nth-child(2) .border-bottom {
+border-left: 10px solid #fbf2ff
+}
+.proj_filter .divfilter2 .project1:nth-child(3) .border-bottom {
+border-left: 10px solid #f7eac18a;;
+}
+/* width */
+.proj_filter .divfilter2 .project1 ::-webkit-scrollbar,
+.proj_filter .divfilter2 .top_up ul::-webkit-scrollbar,
+.proj_filter .divfilter2 .top_up::-webkit-scrollbar {
+width: 0px;
+height: 0px;
+}
+/* Track */
+.proj_filter .divfilter2 .project1 ::-webkit-scrollbar-track,
+.proj_filter .divfilter2 .top_up ul::-webkit-scrollbar-track,
+.proj_filter .divfilter2 .top_up::-webkit-scrollbar{
+background: transparent;
+}
+/* Handle */
+.proj_filter .divfilter2 .project1 ::-webkit-scrollbar-thumb,
+.proj_filter .divfilter2 .top_up ul::-webkit-scrollbar-thumb,
+.proj_filter .divfilter2 .top_up::-webkit-scrollbar{
+background: transparent;
+}
+/* Handle on hover */
+.proj_filter .divfilter2 .project1 ::-webkit-scrollbar-thumb:hover,
+.proj_filter .divfilter2 .top_up ul::-webkit-scrollbar-thumb:hover,
+.proj_filter .divfilter2 .top_up::-webkit-scrollbar{
+background: transparent;
+}
+.proj_filter .divfilter2 .top_up2 .filter_div {
+width: 100%;
+height: auto;
+border-top-left-radius: 21PX;
+border-top-right-radius: 21px;
+top: initial;
+padding: 25px 20px 0;
+position: fixed;
+bottom: 0;
+right: 0;
+z-index: 6;
+}
+.proj_filter .divfilter2 .top_up2 .filter_div > .head_div h1 {
+font-size: 16px;
+font-weight: 600;
+color: #000;
+}
+.proj_filter .divfilter2 .top_up2 .filter_div > .head_div span {
+font-size: 12px;
+margin-top: 2px;
+}
+.proj_filter .divfilter2 .top_up2 .filter_div > .head_div span:nth-child(3) {
+color: red;
+display: block;
+}
+.proj_filter .divfilter2 .top_up2 .filter_div .filter_bottom {
+height: 5.5rem;
+justify-content: space-between;
+}
+.proj_filter .divfilter2 .top_up2 .filter_div .filter_bottom p {
+font-size: 1.3rem;
+color: #2D62ED;
+font-weight: 400;
+}
+.proj_filter .divfilter2 .top_up2 .filter_div > .head_div .justify-content-end span,
+.proj_filter .divfilter2 .top_up2 .filter_div > .head_div .justify-content-end button
+{
+display: none;
+}
+.proj_filter .divfilter2 .top_up2 .filter_div > .head_div .d-flex {
+margin-top: 0.9rem;
+justify-content: space-between;
+}
+.proj_filter .divfilter2 .top_up2 .filter_div .filter_bottom button
+{
+display: block;
+}
+.proj_filter .divfilter2 .top_up2 .filter_div .filterdiv1,
+.proj_filter .divfilter2 .top_up2 .filter_div .filterdiv2,
+.proj_filter .divfilter2 .top_up2 .filter_div .filterdiv3,
+.proj_filter .divfilter2 .top_up2 .filter_div .filterdiv4,
+.proj_filter .divfilter2 .top_up2 .filter_div .filterdiv5 {
+flex: 0 0 calc(200%/5);
+max-width: calc(200%/5);
+margin-top: 1.2rem;
+}
+.proj_filter .divfilter2 .top_up2 .filter_div ul li {
+padding-left: 0;
+color: #000;
+margin-bottom: 0.4rem;
+}
+.proj_filter .divfilter2 .top_up2 .filter_div p {
+margin-bottom: 1.5rem;
+color: #000;
+font-size: 14px;
+font-weight: 600;
+}
+.proj_filter .divfilter2 .top_up2 .filter_div ul {
+overflow: hidden;
+}
+.proj_filter .divfilter2 .top_up2 .topup2_overlay.active
+{
+background-color: rgba(0,0,0,0.2);
+}
+.proj_filter .divfilter2 .addview {
+left: 37%;
+top: 159px;
+width: 201px;
+padding: 8px 22px;
+z-index: 3;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 {
+width: 418%;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile > .row {
+width: 418%;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile1 {
+flex: 0 0 15%;
+max-width: 15%;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile > .row .divmile1 {
+flex: 0 0 15%;
+max-width: 15%;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile > .row .divmile4
+{
+flex: 0 0 13.1%;
+max-width: 13.1%;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile2,
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile3 {
+flex: 0 0 10%;
+max-width: 10%;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile2 {
+flex: 0 0 8.5%;
+max-width: 8.5%;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile3 {
+flex: 0 0 10.3%;
+max-width: 10.3%;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile4 {
+flex: 0 0 13%;
+max-width: 13%;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone {
+width: 100%;
+z-index: 2;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone.fixedMile
+{
+width: 100%;
+overflow-x: hidden;
+background-color: antiquewhite;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .row {
+flex-wrap: wrap;
+}
+.dropdown{
+position: absolute;
+top: 4px;
+right: 0px;
+z-index: 0;
+display: inline-block;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit {
+z-index: 6;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .head1 {
+border: 10px solid #edf6ff;
+}
+.proj_filter .divfilter2 .project1:nth-child(2) .projectcon1 .head1
+{
+border: 10px solid #fbf2ff;
+}
+.proj_filter .divfilter2 .project1:nth-child(3) .projectcon1 .head1 {
+border: 10px solid #f7eac18a;
+}
+.proj_filter .divfilter2 .project1 .border-bottom .last_div p {
+margin: 5px 0 0 2px;
+}
+/*--management view req---*/
+.mview_req .change-req {
+flex: 0 0 100%;
+max-width: 100%;
+margin-left: 0%;
+}
+.mview_req .change-req .center {
+max-width: 340px;
+text-align: center;
+margin-top: 7rem;
+}
+.mview_req .change-req .center>h1 {
+font-size: 2rem;
+}
+.mview_req .change-req .center p.desc {
+font-size: 14px;
+margin-left: 0%;
+width: 100%;
+}
+.mview_req .change-req .center .itproj_div .grid .grid2 h2 {
+font-size: 1.6rem;
+}
+.mview_req .change-req .center p {
+color: #838485;
+font-size: 13px;
+}
+.mview_req .change-req .center .itproj_div .grid {
+display: grid;
+grid-template-columns: 18% 70% 12%;
+}
+.manage_view .myoverlay {
+position: fixed;
+width: 100%;
+top: 0;
+left: 0;
+height: 100vh;
+display: none;
+z-index: 5;
+overflow: hidden;
+}
+.manage_view .myoverlay.active
+{
+display: block;
+}
+.manage_view .div2 {
+flex: 0 0 100%;
+max-width: 100%;
+margin: 0;
+padding: 0;
+z-index: 2;
+background-color: #F8F9FB;
+height: 0vh;
+width: 100%;
+margin-top: 5.1rem;
+position: relative;
+margin-left: 0%;
+}
+.manage_view .div2 .center_div {
+justify-content: center;
+align-items: center;
+height: 100px;
+}
+.manage_view .div2 ul {
+list-style-type: none;
+display: flex;
+flex-direction: row;
+justify-content: center;
+width: 100%;
+background-color: transparent;
+margin-top: 0rem;
+box-shadow: none;
+}
+.manage_view .div2 ul li div:first-child::before {
+z-index: 1;
+left: 234%;
+transform: rotate(90deg) translateX(1326%);
+bottom: 0px;
+width: 2px;
+height: 70px;
+}
+.manage_view .div2 ul li.active {
+background-color: transparent;
+border-bottom: none;
+}
+.manage_view .div2 ul li .mob_con
+{
+display: none;
+}
+.manage_view .div3 {
+flex: 0 0 100%;
+max-width: 100%;
+padding-bottom: 12rem;
+margin-left: 0%;
+margin-top: 9rem;
+}
+.manage_view .div3 .form_div {
+width: 100%;
+padding: 1.5rem;
+margin-top: 0.3rem;
+}
+.manage_view .div3 .step_wise {
+width: 100%;
+}
+.manage_view .div2 ul li.active div:first-child {
+background-color: #999999;
+}
+.manage_view .div2 ul li,
+.manage_view .div2 ul li:not(:last-child) {
+margin-right: 2.7rem;
+}
 }

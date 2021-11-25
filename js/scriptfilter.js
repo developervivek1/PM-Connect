@@ -4,6 +4,7 @@ const top_up = document.querySelector('.proj_filter .divfilter2 .top_up');
 const filterImg = document.querySelector('.divfilter2 .top_up2 ul li:nth-child(2) img');
 const overlay = document.querySelector('.proj_filter .myoverlay');
 const topup2_overlay = document.querySelector('.proj_filter .divfilter2 .top_up2 .topup2_overlay');
+const drop_overlay = document.querySelector('.proj_filter .divfilter2 .drop_overlay');
 const milediv = document.querySelector('.proj_filter .divfilter2 .project1 .expand .border-bottom .divcon3 #tree_open');
 const showMile = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone');
 const milediv2 = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone p');
@@ -33,7 +34,7 @@ const doneEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .
 const discardEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .bg-secondary');
 const mobileTrigger = document.querySelector('.mobile-menuhead .hamberger-menu span');
 const mobileMenu = document.querySelector('.proj_filter nav');
-let statusColor, statusText, textVal, value,addColumnIndex;
+let statusColor, statusText, textVal, value,pageYedit;
 
 mobileTrigger.addEventListener('click',()=>
 {
@@ -71,7 +72,7 @@ showFilter.addEventListener('click', (e) => {
 })
 window.addEventListener('click', hideFilterdiv);
 function hideFilterdiv(e) {
-    if (e.type === "click" && e.target == overlay) {
+    if (e.target == overlay) {
         filterdiv.classList.remove('showfilter');
         showFilter.classList.remove('active');
         mobileMenu.classList.remove('active');
@@ -82,10 +83,7 @@ function hideFilterdiv(e) {
         showEdit.forEach((showEdit) => {
             showEdit.classList.remove('active');
         });
-        addColumn.forEach((addIcon)=>
-        {
-            addIcon.innerText = "add";
-        });
+        
         overlay.classList.remove('active');
     }
     else if(e.target==topup2_overlay)
@@ -95,7 +93,6 @@ function hideFilterdiv(e) {
         topup2_overlay.classList.remove('active');
         filterImg.src=`icons/filter.svg`;
         filterImg.style.cssText='width:14px; height:14px';
-        
         if(e.clientX < 749)
         {
             top_up.style.zIndex='4';
@@ -104,6 +101,14 @@ function hideFilterdiv(e) {
         {
             top_up.style.zIndex='6';
         }
+    }
+    else if(e.target==drop_overlay)
+    {
+        addColumn.forEach((addIcon)=>
+        {
+            addIcon.innerText = "add";
+        });
+        drop_overlay.classList.remove('active');
     }
 }
 
@@ -119,7 +124,23 @@ window.addEventListener('resize',()=>
         top_up.style.zIndex='6';
     }
 })
-
+window.addEventListener('scroll',(e)=>
+{
+    let winPageY = this.pageYOffset;
+    if(e.target.scrollingElement.clientWidth < 800 && winPageY > (pageYedit -290))
+    {
+        let activeEdit = e.target.querySelectorAll('.proj_filter .divfilter2 .addedit');
+        activeEdit.forEach((edit)=>
+        {
+            if(edit.classList.contains('active'))
+            {
+                edit.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        })
+        // if(Array.from(activeEdit).some(edit => edit.classList.contains('active')))
+    }
+})
 
 milediv.addEventListener('click', () => {
     if (!showMile.classList.contains('showmilestone')) {
@@ -221,7 +242,7 @@ showTable.forEach((expand) => {
     })
 })
 
-addColumn.forEach((addColumn,ind)=>
+addColumn.forEach((addColumn)=>
 {
     addColumn.addEventListener('click',(e)=>
     {
@@ -230,8 +251,7 @@ addColumn.forEach((addColumn,ind)=>
         let dropmenu = e.target.closest('.head11').querySelector('.dropdown-menu');
         if (dropmenu.classList.contains('show')) {
             target.innerText = 'clear';
-            overlay.classList.add('active');
-            addColumnIndex=ind;
+            drop_overlay.classList.add('active');
         }
         else {
             target.innerText = "add";
@@ -241,6 +261,7 @@ addColumn.forEach((addColumn,ind)=>
 
 clickEdit.forEach((edit) => {
     edit.addEventListener('click', (e) => {
+        pageYedit = e.pageY;
         let closestAddedit = e.target.closest('.expand').querySelector('.addedit');
         statusColor = e.target;
         statusText = e.target;
@@ -383,19 +404,15 @@ $.datetimepicker.setDateFormatter('moment')
 
 $('#picker').add('#picker2').add('#picker3').add('#picker4').add('#picker5').
     add('#picker6').add('#picker7').add('#picker8').add('#picker9').add('#picker10').add('#picker11').datetimepicker(
-        {
-            timepicker: false,
-            datepicker: true,
-            format: 'MMM DD,YYYY'
-        });
+{
+    timepicker: false,
+    datepicker: true,
+    format: 'MMM DD,YYYY'
+});
 
-
-
-        $('.h1fixed').scroll(function() {
-            $(this).find('.mysticky').css('left', $(this).scrollLeft());
-        });
-
-
-        $('#con1fixed').scroll(function() {
-            $(this).find('.mysticky2').css('left', $(this).scrollLeft());
-        });
+$('.h1fixed').scroll(function() {
+    $(this).find('.mysticky').css('left', $(this).scrollLeft());
+});        
+// $('#expand1').scroll(function() {
+//     $(this).find('.mysticky2').css('left', $(this).scrollLeft());
+// });   
