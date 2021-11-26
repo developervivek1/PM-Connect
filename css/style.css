@@ -927,7 +927,7 @@ width: 120px;
 color:black;
 text-align: center;
 border-radius: 6px;
-padding: 5px 0;
+padding: 8px 0;
 /* Position the tooltip */
 position: absolute;
 z-index: 1;
@@ -1019,6 +1019,9 @@ box-shadow: 0 0px -3px -5px rgba(0, 0, 0, 0.05);
 border-bottom: 1.5px solid #ededed;
 position: relative;
 z-index: 15;
+}
+.manage_view .div2 ul li {
+    border-bottom: none;
 }
 .manage_view .div2 ul li div
 {
@@ -3006,6 +3009,10 @@ box-shadow: none;
 }
 .divcon10 br{
 display: none;
+}
+.manage_view .div2 ul li div:first-child {
+    color: #999999;
+
 }
 /* submit form */
 /* jyoti/ */

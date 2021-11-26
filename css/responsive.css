@@ -530,7 +530,7 @@ height: 115px;
 padding: 1.5rem 5rem 0;
 }
 .manage_view .div2 ul li.active div:first-child {
-background-color: #999999;
+background-color: blue;
 }
 .manage_view .div2 ul li,
 .manage_view .div2 ul li:not(:last-child) {
@@ -689,4 +689,34 @@ font-size: 13px;
 .manage_view .div3 .form_div .con5 .highlight_div .invite_main span {
 font-size: 13px;
 }
+
+
+
+/* .manage_view .div2 ul li.active div:first-child {
+  
+    display: block;
+
+} */
+
+.manage_view .div2 ul li.active div:first-child {
+    display: block;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+
+ .manage_view .div2 ul li div:first-child.success span{
+display: none;
+}
+
+
+/* .manage_view .div2 ul li div:first-child span .number{
+   visibility: hidden;
+
+} */ 
+
 }
