@@ -96,7 +96,7 @@ background-color: #fff;
 display: block;
 position: relative;
 cursor: pointer;
-}  */
+}
 .mobile-menuhead .hamberger-menu span::before,
 .mobile-menuhead .hamberger-menu span::after
 {
@@ -105,7 +105,7 @@ content: '';
 width: inherit;
 height: inherit;
 background-color: inherit;
-}
+} */
 .mobile-menuhead .hamberger-menu span::before
 {
 top: -5px;
@@ -408,6 +408,10 @@ border: 10px solid #f7eac18a;
 margin: 5px 0 0 2px;
 }
 /*--management view req---*/
+.manage_view.m_bg
+{
+background-color: #fff;
+}
 .mview_req .change-req {
 flex: 0 0 100%;
 max-width: 100%;
@@ -461,13 +465,14 @@ background-color: #F8F9FB;
 height: 0vh;
 width: 100%;
 margin-top: 5.1rem;
-position: relative;
+position: fixed;
 margin-left: 0%;
 }
 .manage_view .div2 .center_div {
 justify-content: center;
 align-items: center;
-height: 100px;
+height: 102px;
+background-color: #F8F9FB;
 }
 .manage_view .div2 ul {
 list-style-type: none;
@@ -482,10 +487,21 @@ box-shadow: none;
 .manage_view .div2 ul li div:first-child::before {
 z-index: 1;
 left: 234%;
-transform: rotate(90deg) translateX(1326%);
+transform: rotate(90deg) translateX(1100%);
 bottom: 0px;
 width: 2px;
 height: 70px;
+}
+.manage_view .div2 ul.stepper5 li div:first-child::before {
+left: 185%;
+transform: rotate(90deg) translateX(549%);
+height: 46px;
+}
+.manage_view .div2 ul.stepper5 li:last-child div:first-child::before {
+content: '';
+width: 0;
+height: 0;
+background-color: #ffff;
 }
 .manage_view .div2 ul li.active {
 background-color: transparent;
@@ -500,7 +516,8 @@ flex: 0 0 100%;
 max-width: 100%;
 padding-bottom: 12rem;
 margin-left: 0%;
-margin-top: 9rem;
+margin-top: 15.8rem;
+background-color: #fff;
 }
 .manage_view .div3 .form_div {
 width: 100%;
@@ -509,6 +526,8 @@ margin-top: 0.3rem;
 }
 .manage_view .div3 .step_wise {
 width: 100%;
+height: 115px;
+padding: 1.5rem 5rem 0;
 }
 .manage_view .div2 ul li.active div:first-child {
 background-color: #999999;
@@ -516,5 +535,158 @@ background-color: #999999;
 .manage_view .div2 ul li,
 .manage_view .div2 ul li:not(:last-child) {
 margin-right: 2.7rem;
+}
+.manage_view .div2 ul.stepper5 li,
+.manage_view .div2 ul.stepper5 li:not(:last-child) {
+margin-right: 1rem;
+}
+.manage_view .div2 ul li div:first-child {
+width: 26px;
+height: 26px;
+}
+.manage_view .div3 .form_div form >.con1 > h2, .manage_view .div3 .form_div form .con2 > h2,
+.manage_view .div3 .form_div form .con3 > h2,
+.manage_view .div3 .form_div form .con4 > h2,
+.manage_view .div3 .form_div form .con5 > h2 {
+font-size: 2.1rem;
+margin-bottom: 0.6rem;
+font-weight: 600;
+}
+.manage_view .div3 .form_div form p:nth-child(2) {
+margin-bottom: 2.5rem;
+font-size: 1.4rem;
+}
+.manage_view .div3 .form_div form input[type="text"], .manage_view .div3 .form_div form input[type="textarea"],
+.manage_view .div3 .form_div form input[type="password"],
+.manage_view .div3 .form_div form input[type="date"],
+.manage_view .div3 .form_div form select {
+height: 38px;
+width: 98%;
+font-size: 1.3rem;
+margin-bottom: 3.2rem;
+padding: 10px 15px;
+}
+.manage_view .div3 .form_div form input[type="textarea"] {
+height: 70px;
+}
+.manage_view .div3 .form_div .step_forward .check_div {
+margin-block-end: 3.5rem;
+}
+.manage_view .div3 .form_div .step_forward .check_div > p
+{
+margin-block-end: 1rem;
+}
+.manage_view .div3 .form_div form .check_div label {
+margin: -1px 4rem 0 3px;
+font-size: 1.3rem;
+}
+.manage_view .div3 .form_div form .check_div input[type="checkbox"] {
+width: 17px;
+height: 17px;
+}
+.manage_view .div3 .form_div p {
+font-size: 1.4rem;
+color: #000;
+}
+.manage_view .div3 .step_wise .center_step {
+align-self: flex-start;
+margin-left: -84px;
+}
+.manage_view .div3 .step_wise h5 {
+font-size: 1.3rem;
+}
+.manage_view .div3 .step_wise button {
+margin-top: 15px;
+width: 114px;
+height: 38px;
+}
+.manage_view .div3 .step_wise button:nth-child(4)
+{
+margin-left: -91px;
+}
+.manage_view .div3 .step_wise .center_step span.pie {
+font-size: 1.8rem;
+}
+.manage_view .div2 ul li div:first-child.success::after {
+top: -2%;
+left: -50%;
+}
+.manage_view .div3 .form_div form .con2 .support_div > p,
+.manage_view .div3 .form_div form .con4 .support_div > p {
+margin-top: 1.3rem;
+}
+.manage_view .div3 .form_div form .con2 .box,
+.manage_view .div3 .form_div form .con4 .box {
+height: 133px;
+margin-top: 0.3rem;
+}
+.manage_view .div3 .form_div form .con2 .box p,
+.manage_view .div3 .form_div form .con4 .box p
+{
+color: #080808;
+font-size: 13px;
+width: 60%;
+}
+.manage_view .div3 .form_div .con3 .highlight_div, .manage_view .div3 .form_div .con5 .highlight_div {
+top: 138px;
+left: 6%;
+width: 87.5%;
+box-shadow: 0px 0px 5px RGBA(0,0,0,0.2);
+z-index: 15;
+overflow-y: hidden;
+}
+.manage_view .div3 .form_div .con3 .user-list .img-div,
+.manage_view .div3 .form_div .con3 .highlight_div .img-div,
+.manage_view .div3 .form_div .con5 .user-list .img-div,
+.manage_view .div3 .form_div .con5 .highlight_div .img-div {
+flex: 0 0 21%;
+max-width: 21%;
+}
+.manage_view .div3 .form_div .con3 .user-list .info-div,
+.manage_view .div3 .form_div .con3 .highlight_div .info-div,
+.manage_view .div3 .form_div .con5 .user-list .info-div,
+.manage_view .div3 .form_div .con5 .highlight_div .info-div {
+flex: 0 0 79%;
+max-width: 79%;
+}
+.manage_view .div3 .form_div form input[type="text"]#getdata
+{
+width: 100%;
+}
+.manage_view .div3 .form_div .con3 .sep_div, .manage_view .div3 .form_div .con5 .sep_div {
+width: 99%;
+}
+.manage_view .div3 .form_div .con3 .user-list, .manage_view .div3 .form_div .con5 .user-list {
+width: 100%;
+}
+.manage_view .div3 .form_div .con3 .highlight_div .invite_main,
+.manage_view .div3 .form_div .con5 .highlight_div .invite_main {
+width: 100%;
+}
+.manage_view .div3 .form_div .con3 .highlight_div .invite_main .col-md-1,
+.manage_view .div3 .form_div .con5 .highlight_div .invite_main .col-md-1
+{
+flex: 0 0 13%;
+max-width: 13%;
+}
+.manage_view .div3 .form_div .con3 .highlight_div .invite_main .col-md-4,
+.manage_view .div3 .form_div .con5 .highlight_div .invite_main .col-md-4
+{
+flex: 0 0 40%;
+max-width: 40%;
+}
+.manage_view .div3 .form_div .con3 .highlight_div .invite_main .col-md-5,
+.manage_view .div3 .form_div .con5 .highlight_div .invite_main .col-md-5
+{
+flex: 0 0 47%;
+max-width: 47%;
+}
+.manage_view .div3 .form_div .con3 .highlight_div .invite_main h4,
+.manage_view .div3 .form_div .con5 .highlight_div .invite_main h4 {
+font-size: 13px;
+}
+.manage_view .div3 .form_div .con3 .highlight_div .invite_main span,
+.manage_view .div3 .form_div .con5 .highlight_div .invite_main span {
+font-size: 13px;
 }
 }
