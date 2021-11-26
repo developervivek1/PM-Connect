@@ -740,7 +740,7 @@ z-index: 15;
 }
 
 .div1 h3 img:first-child{
-    margin-top: 11px;
+    margin-top: 0px;
     width: 52px;
 }
 .manage_view .div2
