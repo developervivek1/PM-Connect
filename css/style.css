@@ -2178,7 +2178,7 @@ position: relative;
 .proj_filter .divfilter2 .project1 .expand .border-bottom .divcon3 #tree_open::before
 {
 position: absolute;
-top: 5px;
+top: 0px;
 left: 0;
 transform: translateX(-270%);
 content: var(--caret);
