@@ -22,116 +22,121 @@
      -->
         <!-- custom css -->
     <link rel="stylesheet" href="css/style.css">
-
-
-
+    <link rel="stylesheet" href="css/responsive.css">
     <title>Management View Change Request Info</title>
 </head>
 
 <body>
-    <section class="manage_view">
+    <section class="manage_view m_bg">
+        <div class="myoverlay"></div>
         <div class="container-fluid">
             <div class="row">
-                <div class="div1">
-                    <h3><img src="icons/logo.svg" alt="logo"></h3>
-                    <ul>
-                        <li>
-                            
-                            <span class="tooltiptext">Dashboard</span>
-                            <a href="#" class="button1">
-                                <img src="icons/dashboard.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/dashboardwhite.svg" alt="Image two" class="button__img1">
-                            </a>
-                            
-                        </li>
-                        
-                      
-                        <li>
-                            
-                            <span class="tooltiptext">Notifications</span>
-                            <a href="#" class="button1">
-                                <img src="icons/Notification-Blue.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/notfiwhite.svg" alt="Image two" class="button__img1">
-                            </a>
-                        </li>
-                        <li class="active">
-                            
-                            <span class="tooltiptext">Request</span>
-                            <a href="#" class="button1">
-                                <img src="icons/Request-Blue.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/request-white.svg" alt="Image two" class="button__img1" >
-                            </a>
-                        </li>
-                        <li>
-                            
-                            <span class="tooltiptext">Project</span>
-                            <a href="#" class="button1">
-                                <img src="icons/project.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/project-white.svg" alt="Image two" class="button__img1">
-                            </a>
-                        </li>
-                        <li>
-                            
-                            <span class="tooltiptext">View Progress</span>
-                            <a href="#" class="button1">
-                                <img src="icons/Viewprogress-Blue.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/Progresslist-white.svg" alt="Image two" class="button__img1" style="width: 1.3vw;">
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            
-                            <span class="tooltiptext">Reports</span>
-                            <a href="#" class="button1">
-                                <img src="icons/Reports.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/reportwhite.svg" alt="Image two" class="button__img1">
-                            </a>
-                        </li>
-                        <li>
-                          
-                            <span class="tooltiptext">Search</span>
-                            <a href="#" class="button1">
-                                <img src="icons/search.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/searchwhite.svg" alt="Image two" class="button__img1">
-                            </a>
-                        </li>
-                        <li>
-                           
-                            <span class="tooltiptext">Help & Support</span>
-                            <a href="#" class="button1">
-                                <img src="icons/help.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/helpwhite.svg" alt="Image two" class="button__img1">
-                            </a>
-                        </li>
-                        <li><span>S</span>
-                            <span class="tooltiptext">My Profile
-                                <br> Log Out
-                            </span>
-                           
-                        </li>
-                    </ul>
+                <nav>
+                    <div class="div1">
+                        <h3><img class="d-none d-md-block" src="icons/logo.svg" alt="logo">
+                             <img
+                                class="d-block d-md-none" src="icons/HamburgerON.svg" width="38px" alt=""></h3>
+                        <ul>
+                            <li>
+                                <span class="tooltiptext">Dashboard</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/dashboard.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/dashboardwhite.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li>
+                                <span class="tooltiptext">Notifications</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/Notification-Blue.svg" alt="Image one" width="38"
+                                        class="button__img1">
+                                    <img src="icons/notfiwhite.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li class="active">
+                                <span class="tooltiptext">Request</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/Request-Blue.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/request-white.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li>
+                                <span class="tooltiptext">Project</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/project.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/project-white.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li>
+                                <span class="tooltiptext">View Progress</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/Viewprogress-Blue.svg" alt="Image one" width="38"
+                                        class="button__img1">
+                                    <img src="icons/Progresslist-white.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <span class="tooltiptext">Reports</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/Reports.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/reportwhite.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li>
+                                <span class="tooltiptext">Search</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/search.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/searchwhite.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li>
+                                <span class="tooltiptext">Help & Support</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/help.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/helpwhite.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li class="tooltip1">
+                                <p class="tooltiptext1">
+                                    <span class="">S</span>
+                                <p class="tooltiptext tooltiptext1">
+                                    <span class=""> My Profile</span>
+                                    <br>
+                                    <br>
+                                    <a href="signIn.html"> <span> Log Out </span> </a>
+                                </p>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>  
+                 <!--mobile header  -->
+                 <div class="mobile-menuhead">
+                    <div class="hamberger-menu">
+                        <span><img src="icons/Hamburger.svg" alt=""></span>
+                    </div>
+                    <div class="logo_div">
+                        <h1>Emaar</h1>
+                    </div>
+                    <div></div>
                 </div>
-
-                
                 <div class="div2">
                     <div class="center_div">
                         <ul>
                             <li class="active">
                                 <div></div>
-                                <div>Information</div>
+                                <div class="mob_con">Information</div>
                             </li>
                             <li>
                                 <div></div>
-                                <div>Attachments</div>
+                                <div class="mob_con">Attachments</div>
                             </li>
                             <li>
                                 <div></div>
-                                <div>Approvers</div>
+                                <div class="mob_con">Approvers</div>
                             </li>
-                        </ul>
-
-                        
+                        </ul>   
                     </div>
                 </div>
                 <div class="div3">
@@ -151,11 +156,11 @@
                                 <p>Provide the Information</p>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <p>Date of Request</p>
+                                        <p>Date of Request <span>*</span></p>
                                         <input type="text" placeholder="Date">
                                     </div>
                                     <div class="col-md-6">
-                                        <p>Priority</p>
+                                        <p>Priority <span>*</span></p>
                                         <select name="" id="">
                                             <option value="" selected disabled>Select the priority</option>
                                             <option value="---">---</option>
@@ -188,7 +193,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <p>Baseline End Date</p>
+                                        <p>Baselined End Date</p>
                                         <input type="text" placeholder="Date">
                                     </div>
                                     <div class="col-md-6">
@@ -198,12 +203,12 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <p>Baselined Budget</p>
-                                        <input type="text" placeholder="Date">
+                                        <p>Baseline Budget <span>*</span></p>
+                                        <input type="text" placeholder="Search">
                                     </div>
                                     <div class="col-md-6">
                                         <p>Revised Budget</p>
-                                        <input type="text" placeholder="Date">
+                                        <input type="text" placeholder="Search">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
@@ -350,6 +355,7 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/js/uikit-icons.min.js"></script> -->
     <!-- bs-5 js -->
+    <script src="js/menuscript.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </body>

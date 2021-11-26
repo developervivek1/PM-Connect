@@ -734,14 +734,12 @@ position: fixed;
 z-index: 15;
 }
 .div1 h3 img:last-child{
-    margin-top: 11px;
-    width: 20px;
-
+margin-top: 11px;
+width: 20px;
 }
-
 .div1 h3 img:first-child{
-    margin-top: 0px;
-    width: 52px;
+margin-top: 0px;
+width: 52px;
 }
 .manage_view .div2
 {
@@ -770,7 +768,7 @@ right: 0;
 width: 71.5%;
 height: 120px;
 background-color: #fff;
-z-index: 554;
+z-index: 10;
 display: flex;
 padding: 0 7rem 0 7rem;
 justify-content: space-between;
@@ -1197,7 +1195,8 @@ color: #1663CC;
 font-size: 12px;
 letter-spacing: 0px;
 }
-.manage_view .div3 .form_div form .con2 .up_head
+.manage_view .div3 .form_div form .con2 .up_head,
+.manage_view .div3 .form_div form .con4 .up_head
 {
 font-size: 1.6rem;
 font-weight: 500;
@@ -3057,7 +3056,7 @@ max-width: 100%;
 min-height: 75vh;
 padding: 0rem 0;
 }
-.manage_view .div2 {
+/* .manage_view .div2 {
 margin-top: 5rem;
 flex: 0 0 100%;
 max-width: 100%;
@@ -3069,7 +3068,6 @@ margin-left: 0px;
 flex: 0 0 100%;
 max-width: 100%;
 background: cadetblue;
-/* flex: 0 0 71.5%; */
 margin-top: 10rem;
 margin-left: 0px;
 }
@@ -3090,7 +3088,6 @@ z-index: 5;
 transform: rotate(
 90deg);
 left: 12vw;
-/* right: -310%; */
 bottom: -4.5vw;
 width: 2px;
 height: 15vw;
@@ -3115,9 +3112,8 @@ border-bottom: none;
 .manage_view .div2 .center_div {
 width: 100%;
 display:block;
-/* justify-content: center; */
-}
-.manage_view .div3 .step_wise {
+} */
+/* .manage_view .div3 .step_wise {
 position: fixed;
 bottom: 0;
 right: 0;
@@ -3131,20 +3127,15 @@ justify-content: space-between;
 align-items: center;
 border-top: 2px solid #d1d1d1;
 box-shadow: none;
-}
-
+} */
 .milestone .mysticky2{
-    display: flex !important;
+display: flex !important;
 }
 .manage_view .div1 h3
 {
-
 border-bottom: none;
 }
-
 }
-
-
 @media (min-width:769px){
 .main .div-left center{
 display: none;
