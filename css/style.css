@@ -3147,5 +3147,11 @@ border-bottom: none;
 .main .div-left center{
 display: none;
 }
+
+.manage_view .div2 ul li  div span{
+    display: none;
+    
+}
+
 }
 /* responsive close */
