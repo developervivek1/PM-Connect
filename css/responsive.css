@@ -138,7 +138,7 @@ background: #F2F5F8;
 {
 position: sticky;
 top: 0;
-left: 0;
+left: -1px;
 float: left;
 z-index: 4;
 padding-left: 8px;
@@ -193,12 +193,18 @@ width: 94%;
 overflow: hidden;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 {
-width: max-content;
-overflow-x: scroll;
+/* width: max-content;
+overflow-x: scroll; */
 border-top-right-radius: 14px;
 border-bottom-right-radius: 14px;
 padding: 15px 0;
 }
+.child-border{
+    overflow: scroll;
+    border-left:12px solid transparent;
+}
+
+
 .proj_filter .divfilter2 .list,
 .proj_filter .divfilter2 .gantt,
 .proj_filter .divfilter2 .calendar,
@@ -221,14 +227,14 @@ position: relative;
 }
 .proj_filter .divfilter2 .project1 .border-bottom {
 width: 418%;
-border-left: 10px solid #edf6ff;
+/* border-left: 10px solid #edf6ff; */
 }
-.proj_filter .divfilter2 .project1:nth-child(2) .border-bottom {
+/* .proj_filter .divfilter2 .project1:nth-child(2) .border-bottom {
 border-left: 10px solid #fbf2ff
 }
 .proj_filter .divfilter2 .project1:nth-child(3) .border-bottom {
 border-left: 10px solid #f7eac18a;;
-}
+} */
 /* width */
 .proj_filter .divfilter2 .project1 ::-webkit-scrollbar,
 .proj_filter .divfilter2 .top_up ul::-webkit-scrollbar,
@@ -416,7 +422,7 @@ overflow-x: hidden;
 background-color: antiquewhite;
 }
 .proj_filter .divfilter2 .project1 .border-bottom .projmaincon {
-padding: 12px 10px;
+padding: 12px 0px;
 }
 .proj_filter .divfilter2 .project1 .projmaincon .addedit .row {
 flex-wrap: wrap;
