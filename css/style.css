@@ -1021,7 +1021,7 @@ position: relative;
 z-index: 15;
 }
 .manage_view .div2 ul li {
-    border-bottom: none;
+border-bottom: none;
 }
 .manage_view .div2 ul li div
 {
@@ -2264,6 +2264,14 @@ margin: 20px 0 20px 2rem;
 height: 42px;
 transition: height 0.15s ease-in;
 }
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone > .d-flex
+{
+visibility: hidden;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone > .d-flex.visible
+{
+visibility: visible;
+}
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone .milehide .milestone2
 {
 position: absolute;
@@ -2288,7 +2296,8 @@ transform: matrix(0.73, 0.68, -0.68, 0.73, 0, 0);
 border: 1px solid 2d62ed;
 border: 1px solid #2D62ED;
 border-radius: 1px;
-margin-inline-end: 2rem;
+margin-inline-end: 1.5rem;
+margin-top: 0.3rem;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone p,
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone .milehide .milestone2 p
@@ -3012,8 +3021,7 @@ box-shadow: none;
 display: none;
 }
 .manage_view .div2 ul li div:first-child {
-    color: #999999;
-
+color: #999999;
 }
 /* submit form */
 /* jyoti/ */
@@ -3148,11 +3156,8 @@ border-bottom: none;
 .main .div-left center{
 display: none;
 }
-
 .manage_view .div2 ul li  div span{
-    display: none;
-    
+display: none;
 }
-
 }
 /* responsive close */

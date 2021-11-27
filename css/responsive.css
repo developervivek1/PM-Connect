@@ -141,7 +141,7 @@ top: 0;
 left: 0;
 float: left;
 z-index: 4;
-padding: 0;
+padding-left: 8px;
 margin-bottom: 1.8rem;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .mysticky2 {
@@ -341,13 +341,46 @@ width: 418%;
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile > .row {
 width: 418%;
 }
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile > .row .divmile1
+{
+height: 25px;
+position: sticky;
+z-index: 1;
+background-color: #edf5ff;
+}
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile1 {
 flex: 0 0 15%;
 max-width: 15%;
 }
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile1.mysticky2
+{
+background-color: #d8e2fc !important;
+height: 42px;
+}
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile > .row .divmile1 {
 flex: 0 0 15%;
 max-width: 15%;
+height: 25px;
+position: sticky;
+left: 0;
+padding-left: 10px;
+z-index: 1;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile{
+margin: 20px 0 20px 1rem;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone.showmilestone
+{
+margin: 20px 0 20px 0.3rem;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone.showmilestone >.mysticky3
+{
+position: sticky;
+z-index: 1;
+top: 0;
+left: 0;
+padding-left: 17px;
+background-color: #ECF0F9;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile > .row .divmile4
 {
@@ -372,14 +405,18 @@ flex: 0 0 13%;
 max-width: 13%;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone {
-width: 100%;
-z-index: 2;
+width: 418%;
+z-index: 1;
+overflow: visible;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone.fixedMile
 {
 width: 100%;
 overflow-x: hidden;
 background-color: antiquewhite;
+}
+.proj_filter .divfilter2 .project1 .border-bottom .projmaincon {
+padding: 12px 10px;
 }
 .proj_filter .divfilter2 .project1 .projmaincon .addedit .row {
 flex-wrap: wrap;
@@ -392,20 +429,39 @@ z-index: 0;
 display: inline-block;
 }
 .proj_filter .divfilter2 .project1 .projmaincon .addedit {
-z-index: 6;
+z-index: 2;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .head1 {
 border: 10px solid #edf6ff;
+border-left: 2px solid #edf6ff;
 }
 .proj_filter .divfilter2 .project1:nth-child(2) .projectcon1 .head1
 {
 border: 10px solid #fbf2ff;
+border-left: 2px solid #fbf2ff;
 }
 .proj_filter .divfilter2 .project1:nth-child(3) .projectcon1 .head1 {
 border: 10px solid #f7eac18a;
+border-left: 2px solid #f7eac18a;
 }
 .proj_filter .divfilter2 .project1 .border-bottom .last_div p {
 margin: 5px 0 0 2px;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone >.mysticky2.d-flex
+{
+background-color: transparent;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milehide .milestone2 span {
+margin-top: 0rem;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone span
+{
+margin-top: 0.3rem;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile1 span {
+margin-left: 0.9rem;
+margin-right: 1.5rem;
+margin-top: 0px;
 }
 /*--management view req---*/
 .manage_view.m_bg
@@ -543,6 +599,9 @@ margin-right: 1rem;
 .manage_view .div2 ul li div:first-child {
 width: 26px;
 height: 26px;
+}
+.manage_view .div2 ul li {
+border-bottom: none;
 }
 .manage_view .div3 .form_div form >.con1 > h2, .manage_view .div3 .form_div form .con2 > h2,
 .manage_view .div3 .form_div form .con3 > h2,
@@ -689,34 +748,28 @@ font-size: 13px;
 .manage_view .div3 .form_div .con5 .highlight_div .invite_main span {
 font-size: 13px;
 }
-
-
-
 /* .manage_view .div2 ul li.active div:first-child {
-  
-    display: block;
-
+display: block;
 } */
-
 .manage_view .div2 ul li.active div:first-child {
-    display: block;
-    color: white;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 1.8rem;
-   
+display: block;
+color: white;
+display: flex;
+justify-content: center;
+text-align: center;
+font-size: 1.8rem;
 }
-
-
- .manage_view .div2 ul li div:first-child.success span{
+.manage_view .div2 ul li div:first-child.success span{
 display: none;
 }
-
-
+.row .fixedMile .divmile1{
+background-color: blue !important;
+}
 /* .manage_view .div2 ul li div:first-child span .number{
-   visibility: hidden;
-
-} */ 
-
+visibility: hidden;
+} */
+.background-parent{
+padding: 12px;
+background-color: #D8E2FC;
+}
 }
