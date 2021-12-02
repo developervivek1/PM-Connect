@@ -627,7 +627,9 @@ min-height: 100vh;
 width: 100%;
 position: relative;
 }
-.manage_view .proj_edit
+
+/* proj edit */
+/* .manage_view .proj_edit
 {
 position: fixed;
 right: 0;
@@ -712,7 +714,9 @@ top: 0;
 {
 right: -4px;
 top: 0;
-}
+} */
+
+/* pro edit end */
 .manage_view .container-fluid > .row
 {
 align-items: flex-start !important;
@@ -1521,7 +1525,7 @@ background: #fff;
 {
 list-style-type: none;
 display: flex;
-margin-left: 8%;
+margin-left: 15%;
 margin-top: 13px;
 }
 .proj_filter .divfilter2 .top_up h1
@@ -1746,6 +1750,9 @@ opacity: 1;
 .proj_filter .divfilter2 .kanban
 {
 margin-top: 15.5rem;
+}
+.kanban1{
+    margin-top: 12rem !important;
 }
 .proj_filter .divfilter2 .top_up2 .filter_div .row
 {
@@ -2062,6 +2069,20 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
+
+.h1fixed span
+{
+width: 17px;
+height: 17px;
+background-color: #2D62ED;
+border: 0.5px solid #2F5FDD;
+border-radius: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
 .proj_filter .divfilter2 .project1 .projectcon1 .head11 span i
 {
 color: #fff;
@@ -3151,7 +3172,19 @@ display: flex !important;
 {
 border-bottom: none;
 }
+
+.h1fixed {
+    position: fixed;
+    top: 69px !important;
+    padding-left: 0px !important;
+    z-index: 9;
 }
+.select-items div, .select-selected {
+    font-size: 2rem !important;
+}
+}
+
+
 @media (min-width:769px){
 .main .div-left center{
 display: none;
@@ -3161,3 +3194,289 @@ display: none;
 }
 }
 /* responsive close */
+
+
+
+
+
+
+
+
+/* kanban css */
+
+
+.kanban-body{
+    margin-left: 2rem;
+    overflow-x: scroll;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.kanban-body .row{
+    flex-wrap: nowrap;
+}
+
+.kanban-body .col-kanban{
+    margin-right: 11px;
+    width: 26%;
+}
+
+.status1{
+    background-color: #eeab53;
+    width: 49%;
+    height: 31px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    text-transform: capitalize;
+    border-radius: 2px;
+}
+
+.status2{
+    background-color: #1CA9ED;
+    width: 49%;
+    height: 31px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    text-transform: capitalize;
+    border-radius: 2px;
+}
+.status3{
+    background-color: #9D73FA;
+    width: 49%;
+    height: 31px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    text-transform: capitalize;
+    border-radius: 2px;
+}
+
+.kanban-develop .status1{
+    background-color:#E2445B;
+}
+
+.kanban-inprogress .status1{
+    background-color:#FCDBB0;
+
+}
+
+.kanban-complete .status1{
+    background-color:#1FC875;
+
+}
+
+
+.kanban-todo .card{
+    border-top: 6px solid #F0A33E ;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 5px;
+}
+.kanban-develop .card{
+    border-top: 6px solid #E2445B;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 5px;
+}
+.kanban-inprogress .card{
+    border-top: 6px solid #FCDBB0;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 5px;
+}
+.kanban-complete .card{
+    border-top: 6px solid #1FC875;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 5px;
+}                  
+
+                               /*header title  */
+/* .h1fixed select{
+    font-weight: 500;
+    color: #171E48;
+    font-size: 2.8rem;
+    margin-top: -5px;
+    width: 88%;
+
+    outline: none;
+    border: none;
+    background: transparent;
+    
+
+}
+
+.h1fixed select optgroup{
+    width: 200px !important;
+    background: rgb(231, 238, 240);
+    border: 0px solid;
+
+
+}
+
+.h1fixed option:hover{
+    background-color: blue;
+} */
+
+.h1fixed {
+    animation:none !important;
+position: fixed;
+top: 32px;
+padding-left: 3rem;
+z-index: 9;
+}
+
+.h1fixed h1{
+    color: #171E48;
+    margin-top: 5px;
+    font-weight:600;
+}
+
+
+
+/*the container must be positioned relative:*/
+.custom-select {
+    /* position: relative; */
+    /* font-family: Arial; */
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element:*/
+  }
+
+  /* .custom-select .fs-11{
+      font-size: 4rem !important;
+  } */
+  
+  /* .select-selected {
+    background-color: DodgerBlue;
+  } */
+  
+  /*style the arrow inside the select element:*/
+  .select-selected:after {
+    border-style: solid;
+    border-width: 0.1em 0.1em 0 0;
+    content: '';
+    display: inline-block;
+    height: 0.4em;
+    left: 1rem;
+    position: relative;
+    top: 0.4em;
+    transform: rotate(
+135deg);
+    vertical-align: top;
+    width: 0.4em;
+    /* position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid #171E48;;
+    border-color: #171E48 transparent transparent transparent; */
+  }
+  
+  /*point the arrow upwards when the select box is open (active):*/
+  .select-selected.select-arrow-active:after {
+    /* border-color: transparent transparent #171E48 transparent;
+    top: 7px; */
+    border-style: solid;
+    border-width: 0.1em 0.1em 0 0;
+    content: '';
+    display: inline-block;
+    height: .4em;
+    left: 1rem;
+    top: 0.5em;
+    transform: rotate(
+-45deg);
+    vertical-align: top;
+    width: .4em;
+  }
+  
+  /*style the items (options), including the selected item:*/
+  .select-items div,.select-selected {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #171E48;
+    /* padding: 8px 16px; */
+    border: 1px solid transparent;
+    /* border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent; */
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  /*style items (options):*/
+  .select-items {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    padding: 7px 11px 21px 11px;
+    /* position: absolute; */
+    background-color: #F2F5F8;
+    /* top: 100%;
+    left: 0px;
+    right: 0; */
+    width: 162px;
+    z-index: 99;
+  }
+  .select-items div{
+      margin-top: 9px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding-left: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+  }
+
+  .select-items div:first-child{
+    margin-top: 0px;  
+    border-bottom: 1px solid lightgrey;
+    color: lightgrey;
+  }
+  .select-items div:nth-child(2){
+    margin-top: 5px;
+  }
+
+  .select-items div:first-child:hover{
+    border-bottom: 1px solid lightgrey;
+    color: lightgrey;
+    background: none;
+    font-weight: 400;
+    cursor:default;
+  }
+  
+  
+  /*hide the items when the select box is closed:*/
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: blue;
+    color: white;
+    font-weight: 500;
+  }
+
+/* head title end */
+
+
+
+/* kanban-end */

@@ -35,7 +35,163 @@ const doneEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .
 const discardEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .bg-secondary');
 const mobileTrigger = document.querySelector('.mobile-menuhead .hamberger-menu span');
 const mobileMenu = document.querySelector('.proj_filter nav');
+const proj_edit = document.querySelector('.manage_view .proj_edit'); 
+const proj_con = document.querySelector('.manage_view .proj_edit .proj_content'); 
+const proj_overlay = document.querySelector('.manage_view .proj_overlay'); 
+const tabproj_btn = document.querySelectorAll('.manage_view .proj_edit .proj_content .tab-btn .btn');
+const projdetail_btn = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projmaincon .divcon1');
+const projDet_close = document.querySelector('.manage_view .proj_edit .col-md-3 span');
+const update_Talk = document.querySelector('.manage_view .proj_edit .attach_div .divfile2 button');
+const update_append = document.querySelector('.manage_view .proj_edit .update');
+const emoji_Btn = document.querySelector('.manage_view .proj_edit .attach_div .divfile1 .emoji_div:nth-child(2) p');
+const emoji_Container = document.querySelector('.manage_view .proj_edit .attach_div .divfile1 .emoji_div:nth-child(2) .giflist');
+const emoji_ContainerIn = document.querySelector('.manage_view .proj_edit .attach_div .divfile1 .emoji_div:nth-child(2) .giflist .gifin');
+const emoji_Input = document.querySelector('.manage_view .proj_edit .attach_div .divfile1 .emoji_div:nth-child(2) .giflist input');
 let statusColor, statusText, textVal, value,pageYedit;
+
+setTimeout(()=>
+{
+    const textarea = document.querySelector('.manage_view .proj_edit .update .note-editing-area .note-editable');
+    let textarea_Val;
+    textarea.addEventListener('keyup',(e)=>
+    {
+        textarea_Val = e.target.innerText;
+    })
+    update_Talk.addEventListener('click',()=>
+    {
+        let userName = document.querySelector('.manage_view .proj_edit #firstName').getAttribute('alt');
+        let profile_img = document.querySelector('.manage_view .proj_edit #firstName').getAttribute('src');
+        let no_update = document.querySelector('.manage_view .proj_edit .update .no_updateyet');
+        // let date = new Date()
+        // let minute = date.getMinutes();
+        if(textarea_Val === undefined || textarea_Val==="")
+        {
+            return;
+        }
+        else
+        {
+            no_update.style.display="none";
+            let update_con = document.createElement('div');
+            update_con.setAttribute('class','update_con');
+            let row1 = document.createElement('div');
+            row1.setAttribute('class','row has_pad');
+            let user_div = document.createElement('div');
+            let noti_con = document.createElement('div');
+            let text_div = document.createElement('div');
+            let seen_div = document.createElement('div');
+            user_div.setAttribute('class','col justify-content-start align-items-center useractive_div');
+            noti_con.setAttribute('class','col justify-content-end align-items-center d-flex noti_div');
+            text_div.setAttribute('class','col-md-12 mt-5 pt-4 text_div');
+            seen_div.setAttribute('class','col-md-12 mt-5 pt-3 d-flex justify-content-end seen_div');
+            let user1 = document.createElement('div');
+            let user2 = document.createElement('img');
+            user2.src = `${profile_img}`;
+            user1.appendChild(user2);
+            let user3 = document.createElement('p');
+            user3.innerText=`${userName}`; 
+            let user4 = document.createElement('span');
+            user_div.appendChild(user1);
+            user_div.appendChild(user3);
+            user_div.appendChild(user4);
+
+            let noti1 = document.createElement('p');
+            noti1.innerText="20m";
+            let noti2 = document.createElement('i');
+            noti2.setAttribute('class','material-icons');
+            noti2.innerText="notifications_none";
+            noti_con.appendChild(noti1);
+            noti_con.appendChild(noti2);
+
+            let text1 = document.createElement('p');
+            text1.innerText=`${textarea_Val}`;
+            text_div.appendChild(text1);
+
+            let seen1 = document.createElement('p');
+            seen1.innerText="2 seen";
+            seen_div.appendChild(seen1);
+
+            row1.appendChild(user_div);
+            row1.appendChild(noti_con);
+            row1.appendChild(text_div);
+            row1.appendChild(seen_div);
+
+            let row2 = document.createElement('div');
+            row2.setAttribute('class','row no_margin');
+            let like_div = document.createElement('div');
+            let replay_div = document.createElement('div');
+            like_div.setAttribute('class','col justify-content-center align-items-center d-flex like_div');
+            replay_div.setAttribute('class','col justify-content-center align-items-center d-flex replay_div');
+            let like1 = document.createElement('img');
+            like1.src="icons/like.svg";
+            let like2=document.createElement('p');
+            like2.innerText="Like";
+            like_div.appendChild(like1);
+            like_div.appendChild(like2);
+            let replay1 = document.createElement('img');
+            replay1.src="icons/replay.svg";
+            let replay2=document.createElement('p');
+            replay2.innerText="Reply";
+            replay_div.appendChild(replay1);
+            replay_div.appendChild(replay2);
+            row2.appendChild(like_div);
+            row2.appendChild(replay_div);
+            update_con.appendChild(row1);
+            update_con.appendChild(row2);
+            update_append.insertBefore(update_con, update_append.childNodes[7]);
+            textarea.innerText="";
+            textarea_Val=undefined;
+        }
+    })
+},10)
+emoji_Btn.addEventListener('click',()=>
+{
+    if(!emoji_Container.classList.contains('active'))
+    {
+        emoji_Container.classList.add('active');
+    }
+    else
+    {
+        emoji_Container.classList.remove('active');
+    }
+})
+window.addEventListener('keyup',(e)=>
+{
+    if(e.key==="Escape" && emoji_Container.classList.contains('active'))
+    {
+        emoji_Container.classList.remove('active');
+    }
+})
+async function getapi(e)
+{
+    if(e.key==="Escape" && emoji_Container.classList.contains('active'))
+    {
+        emoji_Container.classList.remove('active');
+        return;
+    }
+    e.stopPropagation();
+    e.preventDefault();
+    let removefig = emoji_ContainerIn.querySelectorAll('figure');
+    for(let i =0;i<removefig.length;i++)
+    {
+        removefig[i].remove();
+    }
+    let url=`https://api.giphy.com/v1/gifs/search?api_key=12jskRsX6Qa4D5fm9Mkx7b0KW1TQshP1&limit=10&q=`;
+    let str = emoji_Input.value.trim();
+    let Searchdata = url.concat(str);
+    let data = await fetch(`${Searchdata}`);
+    let realdata = await data.json();
+    let mapdata = realdata.data;
+    mapdata.map( data =>
+    {
+        let fig = document.createElement("figure");
+        let img = document.createElement("img");
+        img.src = data.images.preview_gif.url;
+        img.alt = data.title;
+        fig.appendChild(img);
+        emoji_ContainerIn.insertAdjacentElement("beforeend", fig);
+    })
+}
+emoji_Input.addEventListener('keyup', getapi);
 
 mobileTrigger.addEventListener('click',()=>
 {
@@ -45,6 +201,51 @@ mobileTrigger.addEventListener('click',()=>
        overlay.classList.add('active');
     }
 })
+tabproj_btn.forEach((tabBtn)=>
+{
+    tabBtn.addEventListener('click',(e)=>
+    {
+        if(!e.target.classList.contains('active'))
+        {
+            let tabconActive = proj_con.querySelector('.tabproj_con.active');
+            let tabbtnActive = proj_con.querySelector('.btn.active');
+            tabconActive.classList.remove('active');
+            tabbtnActive.classList.remove('active');
+            let data_target = e.target.getAttribute('data-target');
+            e.target.classList.add('active');
+            let targetCon = proj_con.querySelector(data_target);
+            targetCon.classList.add('active');
+        }
+    })
+})
+projdetail_btn.forEach((detailProj)=>
+{
+    detailProj.addEventListener('click',(e)=>
+    {
+        if(!proj_edit.classList.contains('active'))
+        {
+          proj_edit.classList.add('active');
+          proj_overlay.classList.add('active');
+        }    
+    },true)
+})
+proj_overlay.addEventListener('click',()=>
+{
+    hideProjdetail();
+}) 
+projDet_close.addEventListener('click',()=>
+{
+    hideProjdetail();
+})
+function hideProjdetail()
+{
+    if(proj_edit.classList.contains('active'))
+    {
+        proj_edit.classList.remove('active');
+        proj_overlay.classList.remove('active');
+        emoji_Container.classList.remove('active');
+    }  
+}
 
 showFilter.addEventListener('click', (e) => {
     if (!filterdiv.classList.contains('showfilter')) {
@@ -420,3 +621,19 @@ $('.h1fixed').scroll(function() {
 // $('#expand1').scroll(function() {
 //     $(this).find('.mysticky2').css('left', $(this).scrollLeft());
 // });   
+$(document).ready(function() {
+    $('#summernote').summernote({
+        placeholder: 'Write an update',
+        tabsize: 2,
+        height: 120,
+        toolbar: [
+          ['style', ['style']],
+          ['font', ['bold', 'underline', 'clear']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['table', ['table']],
+          ['insert', ['link', 'picture', 'video']],
+          ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+      });
+  });
