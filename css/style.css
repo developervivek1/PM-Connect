@@ -3220,6 +3220,11 @@ display: none;
 .kanban-body .col-kanban{
     margin-right: 11px;
     width: 26%;
+  
+}
+
+.col-kanban .dropzone{
+    min-height: 100px !important;
 }
 
 .status1{
@@ -3456,11 +3461,12 @@ z-index: 9;
   }
 
   .select-items div:first-child:hover{
+   
     border-bottom: 1px solid lightgrey;
     color: lightgrey;
     background: none;
     font-weight: 400;
-    cursor:default;
+    cursor:none;
   }
   
   

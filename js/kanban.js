@@ -3,7 +3,7 @@ let log = console.log
 /* 
     GLOBAL VARIABLES
 */
-const cards = document.querySelectorAll('.card')
+const cards = document.querySelectorAll('.card1')
 const dropzones = document.querySelectorAll('.dropzone')
 
 
@@ -32,10 +32,10 @@ function dragend(){
 }
 
 //adding event to our cards
-cards.forEach(card => {
-    card.addEventListener('dragstart', dragstart)
-    card.addEventListener('drag', drag)
-    card.addEventListener('dragend', dragend)
+cards.forEach(card1 => {
+    card1.addEventListener('dragstart', dragstart)
+    card1.addEventListener('drag', drag)
+    card1.addEventListener('dragend', dragend)
 })
 
 
