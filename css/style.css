@@ -3488,3 +3488,10 @@ z-index: 9;
 
 
 /* kanban-end */
+
+/* bugs */
+
+.note-recent-color{
+    background: none !important;
+}
+/* bugs end */
