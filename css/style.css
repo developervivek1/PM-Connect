@@ -1978,6 +1978,30 @@ line-height: 25px;
 color: #171E48;
 margin-bottom: 0rem;
 }
+.proj_filter .divfilter2 .project1 .projectcon1 .assignees.enable,
+.proj_filter .divfilter2 .project1 .projectcon1 .subitems.enable,
+.proj_filter .divfilter2 .project1 .projectcon1 .plannedDate.enable,
+.proj_filter .divfilter2 .project1 .projectcon1 .actualDate.enable,
+.proj_filter .divfilter2 .project1 .projectcon1 .actualBudget.enable,
+.proj_filter .divfilter2 .project1 .projectcon1 .plannedBudget.enable,
+.proj_filter .divfilter2 .project1 .projectcon1 .projectLead.enable,
+.proj_filter .divfilter2 .project1 .projectcon1 .domainLead.enable,
+.proj_filter .divfilter2 .project1 .projectcon1 .status.enable
+{
+    display: block;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .assignees.disable,
+.proj_filter .divfilter2 .project1 .projectcon1 .subitems.disable,
+.proj_filter .divfilter2 .project1 .projectcon1 .plannedDate.disable,
+.proj_filter .divfilter2 .project1 .projectcon1 .actualDate.disable,
+.proj_filter .divfilter2 .project1 .projectcon1 .actualBudget.disable,
+.proj_filter .divfilter2 .project1 .projectcon1 .plannedBudget.disable,
+.proj_filter .divfilter2 .project1 .projectcon1 .projectLead.disable,
+.proj_filter .divfilter2 .project1 .projectcon1 .domainLead.disable,
+.proj_filter .divfilter2 .project1 .projectcon1 .status.disable
+{
+    display: none;
+}
 .proj_filter .divfilter2 .project1 .projectcon1 .head1
 {
 flex: 0 0 13%;
@@ -2004,6 +2028,9 @@ max-width: 2%;
 .proj_filter .divfilter2 .project1 .projectcon1 .head11 > button
 {
 box-shadow: none;
+width: 17px;
+height: 17px;
+border-radius: 30px;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .head1
 {
@@ -2749,14 +2776,26 @@ padding: 0 17px 0;
 }
 .proj_filter .divfilter2 .project1 .projmaincon .addedit .btndiv2 .row
 {
-justify-content: space-between;
+justify-content: center;
+align-items: center;
 }
 .proj_filter .divfilter2 .project1 .projmaincon .addedit .btndiv2 button
 {
-width: 38%;
-height: 30px;
-color: #fff;
-font-size: 12px;
+    width: 36%;
+    height: 34px;
+    font-size: 12px;
+    border: 1px solid #2d62ed;
+    color: #2d62ed;
+    border-radius: 5px;
+    background-color: transparent;
+    margin-right: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .btndiv2 button:nth-child(2)
+{
+    background: #2d62ed;
+    color: #fff;
 }
 /* new table closed*/
 *+.uk-h1, *+.uk-h2, *+.uk-h3, *+.uk-h4, *+.uk-h5, *+.uk-h6, *+.uk-heading-2xlarge, *+.uk-heading-large, *+.uk-heading-medium, *+.uk-heading-small, *+.uk-heading-xlarge, *+h1, *+h2, *+h3, *+h4, *+h5, *+h6 {
@@ -3014,6 +3053,10 @@ display: block;
 color: #808080;
 padding: 9px 30px;
 font-size: 12px;
+}
+.droplist a.disable
+{
+    color: #d3d0d0;
 }
 .column .column2 {
 padding: 15px;
@@ -3485,13 +3528,9 @@ z-index: 9;
 
 /* head title end */
 
+   /* bugs */
 
-
-/* kanban-end */
-
-/* bugs */
-
-.note-recent-color{
+   .note-recent-color{
     background: none !important;
 }
 
@@ -3507,3 +3546,7 @@ z-index: 9;
  
 }
 /* bugs end */
+
+
+/* kanban-end */
+

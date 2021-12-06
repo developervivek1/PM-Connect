@@ -15,7 +15,9 @@ const finalmile1 = document.querySelector('.proj_filter .divfilter2 .project1 .p
 const finalmile2 = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milestone2 div');
 const finalmile3 = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milestone2 button');
 const showTable = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .head1 span:first-child');
-const addColumn = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .head11 button span i');
+const addColumn = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .head11 button');
+const addColumnicon = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .head11 button span i');
+const disableIcon = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .head11 .dropdown-menu .column a');
 const dropmenu = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .head9 .dropdown-menu');
 let root = document.querySelector(':root');
 let divfilter = document.querySelector('.divfilter2');
@@ -31,8 +33,8 @@ const chooseEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1
 const chooseEdit2 = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit input');
 const addEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv');
 const addEdit2 = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2');
-const doneEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .bg-success');
-const discardEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .bg-secondary');
+const doneEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .done');
+const discardEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .cancel');
 const mobileTrigger = document.querySelector('.mobile-menuhead .hamberger-menu span');
 const mobileMenu = document.querySelector('.proj_filter nav');
 const proj_edit = document.querySelector('.manage_view .proj_edit'); 
@@ -48,6 +50,34 @@ const emoji_Container = document.querySelector('.manage_view .proj_edit .attach_
 const emoji_ContainerIn = document.querySelector('.manage_view .proj_edit .attach_div .divfile1 .emoji_div:nth-child(2) .giflist .gifin');
 const emoji_Input = document.querySelector('.manage_view .proj_edit .attach_div .divfile1 .emoji_div:nth-child(2) .giflist input');
 let statusColor, statusText, textVal, value,pageYedit;
+
+const ImageDisable=[{disSrc: 'icons/ColorImage/assignees_disab.png',enabSrc: 'icons/Assigness.svg'},
+{disSrc: 'icons/ColorImage/subitem_disab.png',enabSrc: '../icons/subitem.svg'},
+{disSrc: 'icons/ColorImage/calendar_disab.png',enabSrc: 'icons/calender-blue.svg'},
+{disSrc: 'icons/ColorImage/calendar_disab.png',enabSrc: 'icons/calender-blue.svg'},
+{disSrc: 'icons/ColorImage/actualBudg_disab.png',enabSrc: 'icons/actual budget.svg'},
+{disSrc: 'icons/ColorImage/actualBudg_disab.png',enabSrc: 'icons/actual budget.svg'},
+{disSrc: 'icons/ColorImage/user_disab.png',enabSrc: 'icons/user.svg'},
+{disSrc: 'icons/ColorImage/user_disab.png',enabSrc: 'icons/user.svg'},
+{disSrc: 'icons/ColorImage/status_disab.png',enabSrc: 'icons/status.svg'},
+{disSrc: 'icons/ColorImage/assignees_disab.png',enabSrc: 'icons/Assigness.svg'},
+{disSrc: 'icons/ColorImage/subitem_disab.png',enabSrc: 'icons/subitem.svg'},
+{disSrc: 'icons/ColorImage/calendar_disab.png',enabSrc: 'icons/calender-blue.svg'},
+{disSrc: 'icons/ColorImage/calendar_disab.png',enabSrc: 'icons/calender-blue.svg'},
+{disSrc: 'icons/ColorImage/actualBudg_disab.png',enabSrc: 'icons/actual budget.svg'},
+{disSrc: 'icons/ColorImage/actualBudg_disab.png',enabSrc: 'icons/actual budget.svg'},
+{disSrc: 'icons/ColorImage/user_disab.png',enabSrc: 'icons/user.svg'},
+{disSrc: 'icons/ColorImage/user_disab.png',enabSrc: 'icons/user.svg'},
+{disSrc: 'icons/ColorImage/status_disab.png',enabSrc: 'icons/status.svg'},
+{disSrc: 'icons/ColorImage/assignees_disab.png',enabSrc: 'icons/Assigness.svg'},
+{disSrc: 'icons/ColorImage/subitem_disab.png',enabSrc: 'icons/subitem.svg'},
+{disSrc: 'icons/ColorImage/calendar_disab.png',enabSrc: 'icons/calender-blue.svg'},
+{disSrc: 'icons/ColorImage/calendar_disab.png',enabSrc: 'icons/calender-blue.svg'},
+{disSrc: 'icons/ColorImage/actualBudg_disab.png',enabSrc: 'icons/actual budget.svg'},
+{disSrc: 'icons/ColorImage/actualBudg_disab.png',enabSrc: 'icons/actual budget.svg'},
+{disSrc: 'icons/ColorImage/user_disab.png',enabSrc: 'icons/user.svg'},
+{disSrc: 'icons/ColorImage/user_disab.png',enabSrc: 'icons/user.svg'},
+{disSrc: 'icons/ColorImage/status_disab.png',enabSrc: 'icons/status.svg'}];
 
 setTimeout(()=>
 {
@@ -142,7 +172,7 @@ setTimeout(()=>
             textarea_Val=undefined;
         }
     })
-},10)
+},1000)
 emoji_Btn.addEventListener('click',()=>
 {
     if(!emoji_Container.classList.contains('active'))
@@ -306,13 +336,42 @@ function hideFilterdiv(e) {
     }
     else if(e.target==drop_overlay)
     {
-        addColumn.forEach((addIcon)=>
+        addColumnicon.forEach((addIcon)=>
         {
             addIcon.innerText = "add";
         });
         drop_overlay.classList.remove('active');
     }
 }
+
+disableIcon.forEach((disable,ind)=>
+{
+    disable.addEventListener('click',(e)=>
+    {
+        e.preventDefault();
+        e.stopPropagation();
+        let targetDel = e.target.getAttribute('disable-data');
+        let targetImg = e.target.querySelector('img');
+        let nearestTarget = e.target.closest('.projectcon1').querySelectorAll(targetDel);
+        let nearestHead = e.target.closest('.head11').querySelector('.dropdown-menu');
+        let nearestClear = e.target.closest('.head11').querySelector('span > i');
+        nearestTarget.forEach((removeNode)=>
+        {
+            if(!removeNode.classList.contains('disable'))
+            {
+                removeNode.classList.add('disable');
+                targetImg.src = `${ImageDisable[ind].disSrc}`;
+            }
+            else
+            {
+                removeNode.classList.remove('disable');
+                targetImg.src = `${ImageDisable[ind].enabSrc}`;
+            }
+        })
+        nearestClear.innerText="add";
+        nearestHead.classList.remove('show');
+    },true)
+})
 
 window.addEventListener('resize',()=>
 {
@@ -450,8 +509,7 @@ addColumn.forEach((addColumn)=>
 {
     addColumn.addEventListener('click',(e)=>
     {
-        e.stopPropagation();
-        let target = e.target;
+        let target = e.target.closest('.head11').querySelector('span > i');
         let dropmenu = e.target.closest('.head11').querySelector('.dropdown-menu');
         if (dropmenu.classList.contains('show')) {
             target.innerText = 'clear';
