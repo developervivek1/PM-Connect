@@ -3494,4 +3494,16 @@ z-index: 9;
 .note-recent-color{
     background: none !important;
 }
+
+.divcon4:hover input{
+    visibility: hidden;
+    width: 30px;
+ 
+}
+
+.divcon4:hover{
+    background: rgb(105, 101, 101);
+    width: 30px;
+ 
+}
 /* bugs end */
