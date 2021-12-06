@@ -3224,7 +3224,9 @@ display: none;
 }
 
 .col-kanban .dropzone{
+    cursor: grabbing;
     min-height: 100px !important;
+    
 }
 
 .status1{
