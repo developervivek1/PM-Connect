@@ -3553,6 +3553,21 @@ z-index: 9;
     background: none !important;
 }
 
+.manage_view .div3 .form_div form textarea[type="textarea"]{
+    height: 120px;
+    width: 95%;
+    background-color: #fff;
+    border: 0.4000000059604645px solid #dedede;
+    border-radius: 5px;
+    padding: 20px 18px;
+    font-size: 1.42rem;
+    margin-bottom: 4.2rem;
+    transition: all 0.4s ease;
+    outline: none;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    box-shadow: 0 0px 3px 0 rgb(0 0 0 / 3%);
+}
+
 
 /* bugs end */
 
