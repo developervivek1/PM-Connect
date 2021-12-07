@@ -3244,11 +3244,20 @@ font-size: 2rem !important;
 
 .kanban-body .col-kanban {
     margin-right: 11px;
-    width: 70% !important; 
+    width: 85% !important; 
 }
 .kanban-body {
     margin-left: 0rem !important;
     overflow-x: scroll;
+}
+.setting-header{
+    margin-top: 9rem;
+    background: #F2F5F8 !important;
+    
+  }
+
+.kanban-body .d-flex{
+    margin-top: 12rem;
 }
 
 }
@@ -3268,13 +3277,14 @@ overflow-x: scroll;
 }
 
 .setting-header{
+    background: white;
     z-index: 1;
     right: 0px;
     position: fixed;
     width: 100%;
   }
 
-  
+
 ::-webkit-scrollbar {
 display: none;
 }
