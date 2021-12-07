@@ -24,9 +24,8 @@ let divfilter = document.querySelector('.divfilter2');
 let tabnum = document.querySelectorAll('.divfilter2 .tab_content');
 let mainul = document.querySelectorAll('.divfilter2 .top_up ul li');
 let liIcon = document.querySelectorAll('.divfilter2 .top_up ul li img');
-const plannedInput = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .divcon4 input');
-const startdateInput = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .divcon5 input');
-const editTitle = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 > .row h5');
+const plannedDiv = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .divcon4');
+const editTitle = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 > .child-border .row h5');
 const clickEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .divcon10 div');
 const showEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit');
 const chooseEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit p');
@@ -41,7 +40,7 @@ const proj_edit = document.querySelector('.manage_view .proj_edit');
 const proj_con = document.querySelector('.manage_view .proj_edit .proj_content'); 
 const proj_overlay = document.querySelector('.manage_view .proj_overlay'); 
 const tabproj_btn = document.querySelectorAll('.manage_view .proj_edit .proj_content .tab-btn .btn');
-const projdetail_btn = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projmaincon .divcon1');
+const projdetail_btn = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projmaincon .divcon1 span');
 const projDet_close = document.querySelector('.manage_view .proj_edit .col-md-3 span');
 const update_Talk = document.querySelector('.manage_view .proj_edit .attach_div .divfile2 button');
 const update_append = document.querySelector('.manage_view .proj_edit .update');
@@ -49,10 +48,12 @@ const emoji_Btn = document.querySelector('.manage_view .proj_edit .attach_div .d
 const emoji_Container = document.querySelector('.manage_view .proj_edit .attach_div .divfile1 .emoji_div:nth-child(2) .giflist');
 const emoji_ContainerIn = document.querySelector('.manage_view .proj_edit .attach_div .divfile1 .emoji_div:nth-child(2) .giflist .gifin');
 const emoji_Input = document.querySelector('.manage_view .proj_edit .attach_div .divfile1 .emoji_div:nth-child(2) .giflist input');
-let statusColor, statusText, textVal, value,pageYedit;
+const calendar_data = document.querySelectorAll('.proj_filter .divfilter2 #rangePicker');
+let statusColor, statusText, textVal, value,pageYedit; 
+
 
 const ImageDisable=[{disSrc: 'icons/ColorImage/assignees_disab.png',enabSrc: 'icons/Assigness.svg'},
-{disSrc: 'icons/ColorImage/subitem_disab.png',enabSrc: '../icons/subitem.svg'},
+{disSrc: 'icons/ColorImage/subitem_disab.png',enabSrc: 'icons/subitem.svg'},
 {disSrc: 'icons/ColorImage/calendar_disab.png',enabSrc: 'icons/calender-blue.svg'},
 {disSrc: 'icons/ColorImage/calendar_disab.png',enabSrc: 'icons/calender-blue.svg'},
 {disSrc: 'icons/ColorImage/actualBudg_disab.png',enabSrc: 'icons/actual budget.svg'},
@@ -385,23 +386,6 @@ window.addEventListener('resize',()=>
         top_up.style.zIndex='6';
     }
 })
-// window.addEventListener('scroll',(e)=>
-// {
-//     let winPageY = this.pageYOffset;
-//     if(e.target.scrollingElement.clientWidth < 800 && winPageY > (pageYedit -290))
-//     {
-//         let activeEdit = e.target.querySelectorAll('.proj_filter .divfilter2 .addedit');
-//         activeEdit.forEach((edit)=>
-//         {
-//             if(edit.classList.contains('active'))
-//             {
-//                 edit.classList.remove('active');
-//                 overlay.classList.remove('active');
-//             }
-//         })
-//         // if(Array.from(activeEdit).some(edit => edit.classList.contains('active')))
-//     }
-// })
 
 milediv.addEventListener('click', () => {
     if (!showMile.classList.contains('showmilestone')) {
@@ -619,21 +603,6 @@ function finalEdit(e) {
     overlay.classList.remove('active');
 }
 
-const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-function setPlannedDate() {
-    let date = new Date();
-    let currentMonth = month[date.getMonth()];
-    let currentYear = date.getFullYear();
-    let currentDate = date.getDate();
-    plannedInput.forEach((input) => {
-        input.value = `${currentMonth} ${currentDate}-${currentDate + 5}`;
-    })
-    startdateInput.forEach((input) => {
-        input.value = `${currentMonth} ${currentDate},${currentYear}`;
-    })
-}
-setPlannedDate();
-
 editTitle.forEach((title) => {
     title.addEventListener('dblclick', (e) => {
         for (let i = 0; i < editTitle.length; i++) {
@@ -644,24 +613,68 @@ editTitle.forEach((title) => {
     })
 })
 
-$(function () {
+function setSpan()
+{
+   plannedDiv.forEach((appendSpan)=>
+   {
+        let span = document.createElement('span');
+        span.style.display="none";
+        appendSpan.appendChild(span);
+   })
+}
+setSpan();
 
-    $('input[name="datefilter"]').daterangepicker({
-        autoUpdateInput: false,
-        locale: {
-            cancelLabel: 'Clear'
-        }
-    });
+calendar_data.forEach(data=>
+    {
+        ['mouseenter','mouseout'].forEach((e)=>
+        {
+            data.addEventListener(e, hoverData);
+        });
+    })
 
-    $('input[name="datefilter"]').on('apply.daterangepicker', function (ev, picker) {
-        $(this).val(picker.startDate.format('MMM DD') + ' - ' + picker.endDate.format('DD'));
-    });
+    function hoverData(e)
+    {
+      if(e.type==='mouseenter')
+      {
+        let dateRange = e.target.value;
+        let extractDate= dateRange.substr(4,8);
+        let date1 = +extractDate.substr(0,2);
+        let date2 = +extractDate.substr(4,6);
+        let putDiv = e.target.closest('.plannedDate');
+        let hideInput = putDiv.querySelector('input');
+        let showSpan = putDiv.querySelector('span');
+        showSpan.innerText=`${date2 - date1} Days`
+        hideInput.style.display="none";
+        showSpan.style.display="block";
+      }
+      else if(e.type==='mouseout')
+      {
+        let putDiv = e.target.closest('.plannedDate');
+        let hideSpan = putDiv.querySelector('span');
+        let showInput = putDiv.querySelector('input');
+        hideSpan.style.display="none";
+        showInput.style.display="block";
+      }
+    }
 
-    $('input[name="datefilter"]').on('cancel.daterangepicker', function (ev, picker) {
-        $(this).val('');
-    });
+// $(function () {
 
-});
+//     $('input[name="datefilter"]').daterangepicker({
+//         autoUpdateInput: false,
+//         locale: {
+//             cancelLabel: 'Clear'
+//         }
+//     });
+
+//     $('input[name="datefilter"]').on('apply.daterangepicker', function (ev, picker) {
+//         $(this).val(picker.startDate.format('MMM DD') + ' - ' + picker.endDate.format('DD'));
+//     });
+
+//     $('input[name="datefilter"]').on('cancel.daterangepicker', function (ev, picker) {
+//         $(this).val('');
+//     });
+
+// });
 
 $.datetimepicker.setDateFormatter('moment')
 
@@ -695,3 +708,36 @@ $(document).ready(function() {
         ]
       });
   });
+
+  // const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+// function setPlannedDate() {
+//     let date = new Date();
+//     let currentMonth = month[date.getMonth()];
+//     let currentYear = date.getFullYear();
+//     let currentDate = date.getDate();
+//     plannedInput.forEach((input) => {
+//         input.value = `${currentMonth} ${currentDate}-${currentDate + 5}`;
+//     })
+//     startdateInput.forEach((input) => {
+//         input.value = `${currentMonth} ${currentDate},${currentYear}`;
+//     })
+// }
+// setPlannedDate();
+
+  // window.addEventListener('scroll',(e)=>
+// {
+//     let winPageY = this.pageYOffset;
+//     if(e.target.scrollingElement.clientWidth < 800 && winPageY > (pageYedit -290))
+//     {
+//         let activeEdit = e.target.querySelectorAll('.proj_filter .divfilter2 .addedit');
+//         activeEdit.forEach((edit)=>
+//         {
+//             if(edit.classList.contains('active'))
+//             {
+//                 edit.classList.remove('active');
+//                 overlay.classList.remove('active');
+//             }
+//         })
+//         // if(Array.from(activeEdit).some(edit => edit.classList.contains('active')))
+//     }
+// })

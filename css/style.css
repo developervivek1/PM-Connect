@@ -2160,6 +2160,20 @@ font-family: var(--heebo);
 font-weight: 400;
 display: flex;
 }
+.proj_filter .divfilter2 .project1 .projmaincon .divcon4 span 
+{
+    background-color: #CEDBFE;
+    border-radius: 12px;
+    width: 66px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    color: #000;
+    text-align: center;
+    padding-top: 4px;
+}
 .proj_filter .divfilter2 .project1 .projmaincon p
 {
 display: inline-flex;
@@ -2567,6 +2581,7 @@ border: none;
 background-color: transparent;
 box-shadow: none;
 outline: none;
+cursor: pointer;
 }
 .proj_filter .divfilter2 .project1 .border-bottom .projmaincon input[type="text"]:focus
 {
@@ -3528,25 +3543,16 @@ z-index: 9;
 
 /* head title end */
 
+
+
+/* kanban-end */
+
    /* bugs */
 
    .note-recent-color{
     background: none !important;
 }
 
-.divcon4:hover input{
-    visibility: hidden;
-    width: 30px;
- 
-}
 
-.divcon4:hover{
-    background: rgb(105, 101, 101);
-    width: 30px;
- 
-}
 /* bugs end */
-
-
-/* kanban-end */
 
