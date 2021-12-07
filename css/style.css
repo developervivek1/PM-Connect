@@ -3239,6 +3239,18 @@ z-index: 9;
 .select-items div, .select-selected {
 font-size: 2rem !important;
 }
+/* kanban */
+
+
+.kanban-body .col-kanban {
+    margin-right: 11px;
+    width: 70% !important; 
+}
+.kanban-body {
+    margin-left: 0rem !important;
+    overflow-x: scroll;
+}
+
 }
 @media (min-width:769px){
 .main .div-left center{
@@ -3254,6 +3266,15 @@ display: none;
 margin-left: 2rem;
 overflow-x: scroll;
 }
+
+.setting-header{
+    z-index: 1;
+    right: 0px;
+    position: fixed;
+    width: 100%;
+  }
+
+  
 ::-webkit-scrollbar {
 display: none;
 }
@@ -3347,6 +3368,7 @@ border-left: 0px;
 border-right: 0px;
 border-radius: 5px;
 }
+
 /*header title  */
 /* .h1fixed select{
 font-weight: 500;
