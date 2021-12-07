@@ -390,13 +390,14 @@ window.addEventListener('resize',()=>
 milediv.addEventListener('click', () => {
     if (!showMile.classList.contains('showmilestone')) {
         showMile.classList.add('showmilestone');
-        root.style.setProperty("--caret", '"\f0d7"');
+        root.style.setProperty("--rot", "90deg");
         dflexVisible.classList.add('visible');
     }
     else {
         showMile.classList.remove('showmilestone');
         showMile2.classList.remove('showmilestone2');
         showFinalmile.classList.remove('showmain_mile');
+        root.style.setProperty("--rot", "0deg");
         dflexVisible.classList.remove('visible');
     }
 })

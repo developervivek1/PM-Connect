@@ -17,7 +17,7 @@ font-size: 62.5% !important;
 --open: 'Open Sans', sans-serif;
 --roboto: 'Roboto', sans-serif;
 --lato: 'Lato', sans-serif;
---caret: "\f0da";
+--rot: 0deg;
 }
 body
 {
@@ -2240,18 +2240,22 @@ cursor: pointer;
 margin-left: 19px;
 position: relative;
 }
+.proj_filter .divfilter2 .project1 .projmaincon .divcon3 span#tree_open
+{
+    cursor: pointer;
+}
 .proj_filter .divfilter2 .project1 .expand .border-bottom .divcon3 #tree_open::before
 {
 position: absolute;
 top: 0px;
 left: 0;
-transform: translateX(-270%);
-content: var(--caret);
-font-family: 'font awesome 5 free';
-font-weight: 900;
+transform: translateX(-270%) rotate(var(--rot));
+content: url(../icons/dropdown.svg);
+width: 7px;
+/* font-weight: 900;
 color: #696969;
-font-size: 15px;
-cursor: pointer;
+font-size: 15px; */
+transition: transform 0.1s ease;
 }
 .proj_filter .divfilter2 .project1 .projmaincon .divcon3 span i,
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile2 i
@@ -3316,7 +3320,7 @@ display: none;
     text-transform: capitalize;
     border-radius: 2px;
 }
-.status3{
+.status-medium{
     background-color: #9D73FA;
     width: 49%;
     height: 31px;
@@ -3540,16 +3544,21 @@ z-index: 9;
     color: white;
     font-weight: 500;
   }
+  
 
 /* head title end */
 
+.dropzone .card1:focus{
+    border-style: dotted !important;
+
+}
 
 
 /* kanban-end */
 
-   /* bugs */
+/* bugs */
 
-   .note-recent-color{
+.note-recent-color{
     background: none !important;
 }
 
@@ -3568,6 +3577,11 @@ z-index: 9;
     box-shadow: 0 0px 3px 0 rgb(0 0 0 / 3%);
 }
 
+::-webkit-color-swatch {
+    border-color: transparent;
+}
+
+
+
 
 /* bugs end */
-
