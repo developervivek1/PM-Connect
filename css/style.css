@@ -627,7 +627,6 @@ min-height: 100vh;
 width: 100%;
 position: relative;
 }
-
 /* proj edit */
 /* .manage_view .proj_edit
 {
@@ -715,7 +714,6 @@ top: 0;
 right: -4px;
 top: 0;
 } */
-
 /* pro edit end */
 .manage_view .container-fluid > .row
 {
@@ -1752,7 +1750,7 @@ opacity: 1;
 margin-top: 15.5rem;
 }
 .kanban1{
-    margin-top: 12rem !important;
+margin-top: 12rem !important;
 }
 .proj_filter .divfilter2 .top_up2 .filter_div .row
 {
@@ -1988,7 +1986,7 @@ margin-bottom: 0rem;
 .proj_filter .divfilter2 .project1 .projectcon1 .domainLead.enable,
 .proj_filter .divfilter2 .project1 .projectcon1 .status.enable
 {
-    display: block;
+display: block;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .assignees.disable,
 .proj_filter .divfilter2 .project1 .projectcon1 .subitems.disable,
@@ -2000,7 +1998,7 @@ margin-bottom: 0rem;
 .proj_filter .divfilter2 .project1 .projectcon1 .domainLead.disable,
 .proj_filter .divfilter2 .project1 .projectcon1 .status.disable
 {
-    display: none;
+display: none;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .head1
 {
@@ -2096,7 +2094,6 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
-
 .h1fixed span
 {
 width: 17px;
@@ -2108,8 +2105,6 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
-
-
 .proj_filter .divfilter2 .project1 .projectcon1 .head11 span i
 {
 color: #fff;
@@ -2160,19 +2155,19 @@ font-family: var(--heebo);
 font-weight: 400;
 display: flex;
 }
-.proj_filter .divfilter2 .project1 .projmaincon .divcon4 span 
+.proj_filter .divfilter2 .project1 .projmaincon .divcon4 span
 {
-    background-color: #CEDBFE;
-    border-radius: 12px;
-    width: 66px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: capitalize;
-    color: #000;
-    text-align: center;
-    padding-top: 4px;
+background-color: #CEDBFE;
+border-radius: 12px;
+width: 66px;
+height: 25px;
+display: flex;
+justify-content: center;
+align-items: center;
+text-transform: capitalize;
+color: #000;
+text-align: center;
+padding-top: 4px;
 }
 .proj_filter .divfilter2 .project1 .projmaincon p
 {
@@ -2242,7 +2237,7 @@ position: relative;
 }
 .proj_filter .divfilter2 .project1 .projmaincon .divcon3 span#tree_open
 {
-    cursor: pointer;
+cursor: pointer;
 }
 .proj_filter .divfilter2 .project1 .expand .border-bottom .divcon3 #tree_open::before
 {
@@ -2800,21 +2795,21 @@ align-items: center;
 }
 .proj_filter .divfilter2 .project1 .projmaincon .addedit .btndiv2 button
 {
-    width: 36%;
-    height: 34px;
-    font-size: 12px;
-    border: 1px solid #2d62ed;
-    color: #2d62ed;
-    border-radius: 5px;
-    background-color: transparent;
-    margin-right: 12px;
-    text-transform: uppercase;
-    font-weight: 500;
+width: 36%;
+height: 34px;
+font-size: 12px;
+border: 1px solid #2d62ed;
+color: #2d62ed;
+border-radius: 5px;
+background-color: transparent;
+margin-right: 12px;
+text-transform: uppercase;
+font-weight: 500;
 }
 .proj_filter .divfilter2 .project1 .projmaincon .addedit .btndiv2 button:nth-child(2)
 {
-    background: #2d62ed;
-    color: #fff;
+background: #2d62ed;
+color: #fff;
 }
 /* new table closed*/
 *+.uk-h1, *+.uk-h2, *+.uk-h3, *+.uk-h4, *+.uk-h5, *+.uk-h6, *+.uk-heading-2xlarge, *+.uk-heading-large, *+.uk-heading-medium, *+.uk-heading-small, *+.uk-heading-xlarge, *+h1, *+h2, *+h3, *+h4, *+h5, *+h6 {
@@ -3062,9 +3057,10 @@ opacity: 1;
 margin-left: 20px;
 /* margin-top: 15px; */
 }
-.droplist{
+.droplist {
 margin-top: 10px;
 display: flex;
+padding-bottom: 7px;
 }
 .droplist a{
 text-decoration: none;
@@ -3075,7 +3071,7 @@ font-size: 12px;
 }
 .droplist a.disable
 {
-    color: #d3d0d0;
+color: #d3d0d0;
 }
 .column .column2 {
 padding: 15px;
@@ -3234,19 +3230,16 @@ display: flex !important;
 {
 border-bottom: none;
 }
-
 .h1fixed {
-    position: fixed;
-    top: 69px !important;
-    padding-left: 0px !important;
-    z-index: 9;
+position: fixed;
+top: 69px !important;
+padding-left: 0px !important;
+z-index: 9;
 }
 .select-items div, .select-selected {
-    font-size: 2rem !important;
+font-size: 2rem !important;
 }
 }
-
-
 @media (min-width:769px){
 .main .div-left center{
 display: none;
@@ -3256,332 +3249,267 @@ display: none;
 }
 }
 /* responsive close */
-
-
-
-
-
-
-
-
 /* kanban css */
-
-
 .kanban-body{
-    margin-left: 2rem;
-    overflow-x: scroll;
+margin-left: 2rem;
+overflow-x: scroll;
 }
 ::-webkit-scrollbar {
-    display: none;
+display: none;
 }
-
 .kanban-body .row{
-    flex-wrap: nowrap;
+flex-wrap: nowrap;
 }
-
 .kanban-body .col-kanban{
-    margin-right: 11px;
-    width: 26%;
-  
+margin-right: 11px;
+width: 26%;
 }
-
 .col-kanban .dropzone{
-    cursor: grabbing;
-    min-height: 100px !important;
-    
+cursor: grabbing;
+min-height: 100px !important;
 }
-
 .status1{
-    background-color: #eeab53;
-    width: 49%;
-    height: 31px;
-    color: #fff;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    cursor: pointer;
-    text-transform: capitalize;
-    border-radius: 2px;
+background-color: #F0A33E;
+width: 49%;
+height: 31px;
+color: #fff;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 12px;
+cursor: pointer;
+text-transform: capitalize;
+border-radius: 2px;
 }
-
 .status2{
-    background-color: #1CA9ED;
-    width: 49%;
-    height: 31px;
-    color: #fff;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    cursor: pointer;
-    text-transform: capitalize;
-    border-radius: 2px;
+background-color: #1CA9ED;
+width: 49%;
+height: 31px;
+color: #fff;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 12px;
+cursor: pointer;
+text-transform: capitalize;
+border-radius: 2px;
 }
 .status-medium{
-    background-color: #9D73FA;
-    width: 49%;
-    height: 31px;
-    color: #fff;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    cursor: pointer;
-    text-transform: capitalize;
-    border-radius: 2px;
+background-color: #9D73FA;
+width: 49%;
+height: 31px;
+color: #fff;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 12px;
+cursor: pointer;
+text-transform: capitalize;
+border-radius: 2px;
 }
-
 .kanban-develop .status1{
-    background-color:#E2445B;
+background-color:#E2445B;
 }
-
 .kanban-inprogress .status1{
-    background-color:#FCDBB0;
-
+background-color:#FCDBB0;
 }
-
 .kanban-complete .status1{
-    background-color:#1FC875;
-
+background-color:#1FC875;
 }
-
-
 .kanban-todo .card{
-    border-top: 6px solid #F0A33E ;
-    border-bottom: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    border-radius: 5px;
+border-top: 6px solid #F0A33E;
+border-bottom: 0px;
+border-left: 0px;
+border-right: 0px;
+border-radius: 5px;
 }
 .kanban-develop .card{
-    border-top: 6px solid #E2445B;
-    border-bottom: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    border-radius: 5px;
+border-top: 6px solid #E2445B;
+border-bottom: 0px;
+border-left: 0px;
+border-right: 0px;
+border-radius: 5px;
 }
 .kanban-inprogress .card{
-    border-top: 6px solid #FCDBB0;
-    border-bottom: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    border-radius: 5px;
+border-top: 6px solid #FCDBB0;
+border-bottom: 0px;
+border-left: 0px;
+border-right: 0px;
+border-radius: 5px;
 }
 .kanban-complete .card{
-    border-top: 6px solid #1FC875;
-    border-bottom: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    border-radius: 5px;
-}                  
-
-                               /*header title  */
+border-top: 6px solid #1FC875;
+border-bottom: 0px;
+border-left: 0px;
+border-right: 0px;
+border-radius: 5px;
+}
+/*header title  */
 /* .h1fixed select{
-    font-weight: 500;
-    color: #171E48;
-    font-size: 2.8rem;
-    margin-top: -5px;
-    width: 88%;
-
-    outline: none;
-    border: none;
-    background: transparent;
-    
-
+font-weight: 500;
+color: #171E48;
+font-size: 2.8rem;
+margin-top: -5px;
+width: 88%;
+outline: none;
+border: none;
+background: transparent;
 }
-
 .h1fixed select optgroup{
-    width: 200px !important;
-    background: rgb(231, 238, 240);
-    border: 0px solid;
-
-
+width: 200px !important;
+background: rgb(231, 238, 240);
+border: 0px solid;
 }
-
 .h1fixed option:hover{
-    background-color: blue;
+background-color: blue;
 } */
-
 .h1fixed {
-    animation:none !important;
+animation:none !important;
 position: fixed;
 top: 32px;
 padding-left: 3rem;
 z-index: 9;
 }
-
 .h1fixed h1{
-    color: #171E48;
-    margin-top: 5px;
-    font-weight:600;
+color: #171E48;
+margin-top: 5px;
+font-weight:600;
 }
-
-
-
 /*the container must be positioned relative:*/
 .custom-select {
-    /* position: relative; */
-    /* font-family: Arial; */
-  }
-  
-  .custom-select select {
-    display: none; /*hide original SELECT element:*/
-  }
-
-  /* .custom-select .fs-11{
-      font-size: 4rem !important;
-  } */
-  
-  /* .select-selected {
-    background-color: DodgerBlue;
-  } */
-  
-  /*style the arrow inside the select element:*/
-  .select-selected:after {
-    border-style: solid;
-    border-width: 0.1em 0.1em 0 0;
-    content: '';
-    display: inline-block;
-    height: 0.4em;
-    left: 1rem;
-    position: relative;
-    top: 0.4em;
-    transform: rotate(
+/* position: relative; */
+/* font-family: Arial; */
+}
+.custom-select select {
+display: none; /*hide original SELECT element:*/
+}
+/* .custom-select .fs-11{
+font-size: 4rem !important;
+} */
+/* .select-selected {
+background-color: DodgerBlue;
+} */
+/*style the arrow inside the select element:*/
+.select-selected:after {
+border-style: solid;
+border-width: 0.1em 0.1em 0 0;
+content: '';
+display: inline-block;
+height: 0.4em;
+left: 1rem;
+position: relative;
+top: 0.4em;
+transform: rotate(
 135deg);
-    vertical-align: top;
-    width: 0.4em;
-    /* position: absolute;
-    content: "";
-    top: 14px;
-    right: 10px;
-    width: 0;
-    height: 0;
-    border: 6px solid #171E48;;
-    border-color: #171E48 transparent transparent transparent; */
-  }
-  
-  /*point the arrow upwards when the select box is open (active):*/
-  .select-selected.select-arrow-active:after {
-    /* border-color: transparent transparent #171E48 transparent;
-    top: 7px; */
-    border-style: solid;
-    border-width: 0.1em 0.1em 0 0;
-    content: '';
-    display: inline-block;
-    height: .4em;
-    left: 1rem;
-    top: 0.5em;
-    transform: rotate(
+vertical-align: top;
+width: 0.4em;
+/* position: absolute;
+content: "";
+top: 14px;
+right: 10px;
+width: 0;
+height: 0;
+border: 6px solid #171E48;;
+border-color: #171E48 transparent transparent transparent; */
+}
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+/* border-color: transparent transparent #171E48 transparent;
+top: 7px; */
+border-style: solid;
+border-width: 0.1em 0.1em 0 0;
+content: '';
+display: inline-block;
+height: .4em;
+left: 1rem;
+top: 0.5em;
+transform: rotate(
 -45deg);
-    vertical-align: top;
-    width: .4em;
-  }
-  
-  /*style the items (options), including the selected item:*/
-  .select-items div,.select-selected {
-    font-size: 2.5rem;
-    font-weight: 600;
-    /* color: #171E48; */
-    /* padding: 8px 16px; */
-    border: 1px solid transparent;
-    /* border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent; */
-    cursor: pointer;
-    user-select: none;
-  }
-  
-  /*style items (options):*/
-  .select-items {
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
-    padding: 7px 11px 21px 11px;
-    /* position: absolute; */
-    background-color: #F2F5F8;
-    /* top: 100%;
-    left: 0px;
-    right: 0; */
-    width: 162px;
-    z-index: 99;
-  }
-  .select-items div{
-      margin-top: 9px;
-    font-size: 1.4rem;
-    font-weight: 400;
-    padding-left: 10px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-
-  }
-
-  .select-items div:first-child{
-    margin-top: 0px;  
-    border-bottom: 1px solid lightgrey;
-    color: lightgrey;
-  }
-  .select-items div:nth-child(2){
-    margin-top: 5px;
-  }
-
-  .select-items div:first-child:hover{
-   
-    border-bottom: 1px solid lightgrey;
-    color: lightgrey;
-    background: none;
-    font-weight: 400;
-    cursor:none;
-  }
-  
-  
-  /*hide the items when the select box is closed:*/
-  .select-hide {
-    display: none;
-  }
-  
-  .select-items div:hover, .same-as-selected {
-    background-color: blue;
-    color: white;
-    font-weight: 500;
-  }
-  
-
+vertical-align: top;
+width: .4em;
+}
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+font-size: 2.5rem;
+font-weight: 600;
+/* color: #171E48; */
+/* padding: 8px 16px; */
+border: 1px solid transparent;
+/* border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent; */
+cursor: pointer;
+user-select: none;
+}
+/*style items (options):*/
+.select-items {
+box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+padding: 7px 11px 21px 11px;
+/* position: absolute; */
+background-color: #F2F5F8;
+/* top: 100%;
+left: 0px;
+right: 0; */
+width: 162px;
+z-index: 99;
+}
+.select-items div{
+margin-top: 9px;
+font-size: 1.4rem;
+font-weight: 400;
+padding-left: 10px;
+padding-top: 4px;
+padding-bottom: 4px;
+}
+.select-items div:first-child{
+margin-top: 0px;
+border-bottom: 1px solid lightgrey;
+color: lightgrey;
+}
+.select-items div:nth-child(2){
+margin-top: 5px;
+}
+.select-items div:first-child:hover{
+border-bottom: 1px solid lightgrey;
+color: lightgrey;
+background: none;
+font-weight: 400;
+cursor:none;
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+display: none;
+}
+.select-items div:hover, .same-as-selected {
+background-color: blue;
+color: white;
+font-weight: 500;
+}
 /* head title end */
-
 .dropzone .card1:focus{
-    border-style: dotted !important;
-
+border-style: dotted !important;
 }
-
-
 /* kanban-end */
-
 /* bugs */
-
 .note-recent-color{
-    background: none !important;
+background: none !important;
 }
-
 .manage_view .div3 .form_div form textarea[type="textarea"]{
-    height: 120px;
-    width: 95%;
-    background-color: #fff;
-    border: 0.4000000059604645px solid #dedede;
-    border-radius: 5px;
-    padding: 20px 18px;
-    font-size: 1.42rem;
-    margin-bottom: 4.2rem;
-    transition: all 0.4s ease;
-    outline: none;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    box-shadow: 0 0px 3px 0 rgb(0 0 0 / 3%);
+height: 120px;
+width: 95%;
+background-color: #fff;
+border: 0.4000000059604645px solid #dedede;
+border-radius: 5px;
+padding: 20px 18px;
+font-size: 1.42rem;
+margin-bottom: 4.2rem;
+transition: all 0.4s ease;
+outline: none;
+transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+box-shadow: 0 0px 3px 0 rgb(0 0 0 / 3%);
 }
-
 ::-webkit-color-swatch {
-    border-color: transparent;
+border-color: transparent;
 }
-
-
-
-
 /* bugs end */

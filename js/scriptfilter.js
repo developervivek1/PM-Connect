@@ -49,8 +49,12 @@ const emoji_Container = document.querySelector('.manage_view .proj_edit .attach_
 const emoji_ContainerIn = document.querySelector('.manage_view .proj_edit .attach_div .divfile1 .emoji_div:nth-child(2) .giflist .gifin');
 const emoji_Input = document.querySelector('.manage_view .proj_edit .attach_div .divfile1 .emoji_div:nth-child(2) .giflist input');
 const calendar_data = document.querySelectorAll('.proj_filter .divfilter2 #rangePicker');
+const showSubscribe = document.querySelectorAll('.proj_filter .proj_edit .subscribe #subcribe_pop');
+const subs_overlay = document.querySelector('.proj_filter .subscribe_overlay');
+const subs_Div = document.querySelector('.proj_filter .proj_edit .subscribe .subscriber_div');
+const close_subsdiv = document.querySelector('.proj_filter .proj_edit .subscribe .subscriber_div > .row span');
+const userDel = document.querySelectorAll('.proj_filter .proj_edit .subscribe .subscriber_div .subs_con .col-4 i');
 let statusColor, statusText, textVal, value,pageYedit; 
-
 
 const ImageDisable=[{disSrc: 'icons/ColorImage/assignees_disab.png',enabSrc: 'icons/Assigness.svg'},
 {disSrc: 'icons/ColorImage/subitem_disab.png',enabSrc: 'icons/subitem.svg'},
@@ -275,8 +279,44 @@ function hideProjdetail()
         proj_edit.classList.remove('active');
         proj_overlay.classList.remove('active');
         emoji_Container.classList.remove('active');
+        subs_Div.classList.remove('active');
+        subs_overlay.classList.remove('active');
     }  
 }
+showSubscribe.forEach((subscribe)=>
+{
+    subscribe.addEventListener('click',(e)=>
+    {
+        e.stopPropagation();
+       let showDiv = e.target.parentNode.parentNode.querySelector('.subscriber_div');
+       if(!showDiv.classList.contains('active'))
+       {
+           showDiv.classList.add('active');
+           subs_overlay.classList.add('active');
+       }
+       else
+       {
+           showDiv.classList.remove('active');
+           subs_overlay.classList.remove('active');
+       }
+    })
+})
+close_subsdiv.addEventListener('click',()=>
+{
+    if(subs_Div.classList.contains('active'))
+    {
+       subs_Div.classList.remove('active');
+       subs_overlay.classList.remove('active');
+    }
+})
+userDel.forEach((userRem)=>
+{
+   userRem.addEventListener('click',(e)=>
+   {
+      let remNode = e.target.closest('.user_list');
+      remNode.remove();
+   })
+})
 
 showFilter.addEventListener('click', (e) => {
     if (!filterdiv.classList.contains('showfilter')) {
@@ -342,6 +382,11 @@ function hideFilterdiv(e) {
             addIcon.innerText = "add";
         });
         drop_overlay.classList.remove('active');
+    }
+    else if(e.target==subs_overlay)
+    {
+        subs_Div.classList.remove('active');
+        subs_overlay.classList.remove('active');
     }
 }
 
@@ -478,14 +523,14 @@ showTable.forEach((expand) => {
     expand.addEventListener('click', (e) => {
         e.stopPropagation();
         let expand_div = e.target.closest('.projectcon1').querySelector('.expand');
-        let expand_text = e.target;
+        let img_rot = e.target;
         if (!expand_div.classList.contains('active')) {
             expand_div.classList.add('active');
-            expand_text.innerText = "expand_more";
+            img_rot.style.transform="rotate(0deg)";
         }
         else {
             expand_div.classList.remove('active');
-            expand_text.innerText = "expand_less";
+            img_rot.style.transform="rotate(180deg)";
         }
     })
 })

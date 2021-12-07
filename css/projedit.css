@@ -1,4 +1,4 @@
-.mysticky2 p,span{
+.mysticky2 span{
     cursor: pointer;
 }
 
@@ -94,7 +94,7 @@ font-size: 20px;
 color: gray;
 font-weight: 200;
 }
-.manage_view .proj_edit .align-self-end div
+.manage_view .proj_edit .align-self-end div.user_img
 {
 width: 29px;
 height: 29px;
@@ -108,7 +108,7 @@ height: 100%;
 border-radius: 30px;
 object-fit: cover;
 }
-.manage_view .proj_edit .align-self-end span:nth-child(3)
+.manage_view .proj_edit .align-self-end span:nth-child(4)
 {
 border: 2px dotted #2D62ED;
 display: flex;
@@ -119,13 +119,13 @@ width: 29px;
 height: 29px;
 margin-right: 4rem;
 }
-.manage_view .proj_edit .align-self-end span:nth-child(3) i
+.manage_view .proj_edit .align-self-end span:nth-child(4) i
 {
 color: #2D62ED;
 font-size: 15px;
 font-weight: 500;
 }
-.manage_view .proj_edit .align-self-end span:nth-child(4)
+.manage_view .proj_edit .align-self-end span:nth-child(5)
 {
 width: 3px;
 height: 3px;
@@ -133,8 +133,8 @@ background-color: gray;
 color: gray;
 position: relative;
 }
-.manage_view .proj_edit .align-self-end span:nth-child(4)::after,
-.manage_view .proj_edit .align-self-end span:nth-child(4)::before
+.manage_view .proj_edit .align-self-end span:nth-child(5)::after,
+.manage_view .proj_edit .align-self-end span:nth-child(5)::before
 {
 content: '';
 position: absolute;
@@ -142,12 +142,12 @@ background-color: inherit;
 width: inherit;
 height: inherit;
 }
-.manage_view .proj_edit .align-self-end span:nth-child(4)::after
+.manage_view .proj_edit .align-self-end span:nth-child(5)::after
 {
 left: -4px;
 top: 0;
 }
-.manage_view .proj_edit .align-self-end span:nth-child(4)::before
+.manage_view .proj_edit .align-self-end span:nth-child(5)::before
 {
 right: -4px;
 top: 0;
@@ -276,6 +276,10 @@ top: 0;
 }
 .note-editor.note-airframe, .note-editor.note-frame {
     border: 1px solid #dbdbdb;
+}
+.note-color-all > button > i
+{
+    background-color: #fff !important;
 }
 .manage_view .proj_edit .proj_content .attach_div .divfile1,
 .manage_view .proj_edit .proj_content .attach_div .divfile1 .emoji_div
@@ -557,7 +561,7 @@ margin-right: 8px;
         font-size: 16px;
         font-weight: 200;
     }
-    .manage_view .proj_edit .align-self-end div {
+    .manage_view .proj_edit .align-self-end div.user_img {
         width: 25px;
         height: 25px;
         margin-right: 0.5rem;
@@ -682,5 +686,14 @@ margin-right: 8px;
     }
     .manage_view .proj_edit .update .update_con >.has_pad {
         padding: 18px 18px 10px;
+    }
+    .manage_view .proj_edit .align-self-end span:nth-child(4)
+    {
+        width: 25px;
+        height: 25px;
+    }
+    .manage_view .proj_edit .align-self-end span:nth-child(4) i
+    {
+        font-size: 14px;
     }
 }
