@@ -3544,6 +3544,7 @@ transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 box-shadow: 0 0px 3px 0 rgb(0 0 0 / 3%);
 }
 ::-webkit-color-swatch {
-border-color: transparent;
+border-color: none;
+border: none;
 }
 /* bugs end */
