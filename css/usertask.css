@@ -51,7 +51,7 @@
 .user_task .task_head8,
 .user_task .task_head9
 {
-    font-size: 14px;
+    font-size: 1.3rem;
     font-weight: 500;
     background-color: #F9F9F9;
 }
@@ -200,11 +200,12 @@
 @media(max-width:849px)
 {
     .user_task {
-        margin-top: 41%;
+        margin-top: 47%;
         margin-left: 0%;
-        overflow-x: auto;
+        overflow-x: scroll;
+        /* overflow-x: auto;
         overflow-y: auto;
-        width: 310%;
+        width: 310%; */
     }
     .user_task .stickytask
     {
@@ -228,7 +229,7 @@
     }
     .manage_view.user .divfilter2
     {
-        margin-left: 0%;
+        margin-left: -0.1%;
     }
     .manage_view.user .divfilter2 .top_up {
         left: 0px;
@@ -236,6 +237,13 @@
     .manage_view.user .divfilter2 .top_up h1
     {
         margin-left: 1.2rem;
+    }
+    .row-user-task{
+        width: 320% !important;
+    }
+
+    .user_task .task_head1, .user_task .task_head2, .user_task .task_head3, .user_task .task_head4, .user_task .task_head5, .user_task .task_head6, .user_task .task_head7, .user_task .task_head8, .user_task .task_head9 {
+        font-size: 1.1rem;
     }
 
 }
