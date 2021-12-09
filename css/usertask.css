@@ -195,6 +195,11 @@
     border-radius: 3px;
     color: #fff !important;
 }
+.proj_filter .divmargin {
+      
+    margin-left: 5.2% !important;
+   
+}
 
 
 @media(max-width:849px)
@@ -245,6 +250,8 @@
     .user_task .task_head1, .user_task .task_head2, .user_task .task_head3, .user_task .task_head4, .user_task .task_head5, .user_task .task_head6, .user_task .task_head7, .user_task .task_head8, .user_task .task_head9 {
         font-size: 1.1rem;
     }
+
+   
 
 }
 
