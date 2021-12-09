@@ -24,9 +24,9 @@
 
     <!-- custom css -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/projedit.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/subscribe.css">
+    <link rel="stylesheet" href="css/projaddedit.css">
+    <link rel="stylesheet" href="css/usersearch.css">
 
     <!-- full calender -->
     <title>Management View Project Filter</title>
@@ -38,109 +38,262 @@
             <div class="row">
                 <div class="myoverlay"></div>
                <!-- proj edit -->
-               <div class="proj_overlay"></div>
-               <div class="proj_edit">
-                   <div class="row justify-content-between" style="height: 50px;">
-                       <div class="col-md-3">
-                          <span><i class="material-icons">clear</i></span>
-                       </div>
-                       <div class="row">
-                           <div class="align-self-end justify-content-end d-flex col-md-12 align-items-center subscribe">
-                               <div class="subscribe_overlay"></div>
-                               <div class="user_img"><img src="img/client1.jpg" alt="John" id="firstName"></div>
-                               <div class="user_img"><img src="img/client1.jpg" alt="John"></div>
-                               <span id="subcribe_pop"><i class="material-icons">add</i></span>
-                               <!-- <span id="subcribe_pop"></span> -->
-                               <div class="subscriber_div">
-                                   <div class="row justify-content-start align-items-start">
-                                       <span><i class="material-icons">clear</i></span>
-                                   </div>
-                                   <div class="subs_con">
-                                       <div class="d-flex">
-                                           <i class="material-icons">add</i>
-                                           <p>Add Team Subscribers</p>
-                                       </div>     
-                                       <div class="col-md-12">
-                                           <input type="text" placeholder="Enter Name or Email">
-                                       </div>
-                                       <h5 class="text-capitalize">Team subscribers list</h5>
-                                       <div class="row pt-3">
-                                           <div class="user_list d-flex mt-4">
-                                               <div class="col-8 justify-content-start d-flex align-items-start">
-                                                   <div class="d-flex">
-                                                       <img src="img/client1.jpg" alt="">
-                                                       <p>John</p>
-                                                   </div>
-                                               </div>
-                                               <div class="col-4 justify-content-end align-items-end d-flex">
-                                                   <i class="material-icons">clear</i>
-                                               </div>
-                                           </div>                                           
-                                       </div>
-                                   </div>
-                               </div>
-                               <!-- subscriber_div closed -->
-                          </div>
-                       </div>
-                       <div class="proj_content">
-                           <h1 class="w-25" contenteditable="true"><span> Project 01 </span><span><img src="icons/edit.svg" alt=""></span> </h1>
-                           <div class="tab-btn">
-                               <button class="btn active" data-target=".update">Updates</button>
-                               <button class="btn" data-target=".files">Files</button>
-                               <button class="btn" data-target=".active_log">Active Log</button>
+                <div class="proj_overlay"></div>
+                <div class="proj_edit">
+                    <div class="row justify-content-between" style="height: 50px;">
+                        <div class="col-md-3">
+                           <span><img src="icons/close.svg" alt=""></span>
+                        </div>
+                        <div class="row">
+                            <div class="align-self-end justify-content-end d-flex col-md-12 align-items-center subscribe">
+                                <div class="subscribe_overlay"></div>
+                                <div class="user_img"><img src="img/client1.jpg" alt="John" id="firstName"></div>
+                                <div class="user_img"><img src="img/client1.jpg" alt="John"></div>
+                                <span id="subcribe_pop"><img src="icons/plus-1.svg" alt=""></span>
+                                <!-- <span id="subcribe_pop"></span> -->
+                                <div class="subscriber_div">
+                                    <div class="row justify-content-start align-items-start">
+                                        <span><img src="icons/close.svg" alt=""></span>
+                                    </div>
+                                    <div class="subs_con">
+                                        <div class="d-flex">
+                                            <img src="icons/plus.svg" alt="">
+                                            <p>Add Team Subscribers</p>
+                                        </div>     
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="Enter Name or Email">
+                                        </div>
+                                        <h5 class="text-capitalize">Team subscribers list</h5>
+                                        <div class="row pt-3">
+                                            <div class="user_list d-flex mt-4">
+                                                <div class="col-8 justify-content-start d-flex align-items-start">
+                                                    <div class="d-flex">
+                                                        <img src="img/client1.jpg" alt="">
+                                                        <p>John</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 justify-content-end align-items-end d-flex">
+                                                    <img src="icons/cross.svg" alt="">
+                                                </div>
+                                            </div>                                           
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- subscriber_div closed -->
                            </div>
-                           <div class="update tabproj_con active">
-                               <textarea name="" id="summernote">
-                               </textarea>
-                               <div class="attach_div">
-                                   <div class="divfile1">
-                                       <div class="emoji_div">
-                                           <i class="material-icons">attach_file</i>
-                                           <p>Add files</p>
-                                       </div>
-                                       <div class="emoji_div">
-                                           <p>Giff</p>
-                                           <div class="giflist">
-                                               <input type="text" placeholder="Search GIF" value="">
-                                               <div class="gifin">
-                                                   
-                                               </div>
-                                           </div>
-                                       </div>
-                                       <div class="emoji_div">
-                                           <i class="material-icons">tag_faces</i> 
-                                           <p>Emoji</p>
-                                       </div>
-                                       <div class="emoji_div">
-                                           <i class="material-icons">alternate_email</i> 
-                                           <p>Mention</p>
-                                       </div>
-                                   </div>
-                                   <div class="divfile2">
-                                       <button class="btn text-uppercase">Update</button>
-                                   </div>
-                               </div>
-                               <div class="no_update justify-content-end d-flex px-5 mt-3">
-                                   <p><i class="material-icons">mail_outline</i>Write Updates via email</p>
-                               </div>
-                               <!-- <div class="update_con">
-                                   
-                               </div> -->
-                               <!-- update con closed -->
-                               <div class="row w-100 mt-5 pt-3 no_updateyet">
-                                   <p class="text-center text-secondary">No Updates Yet</p>
-                               </div>
-                           </div>
-                           <div class="files tabproj_con">
-                               file content
-                           </div>
-                           <div class="active_log tabproj_con">
-                               active content
-                           </div>
-                       </div>
-                   </div>
-               </div>  
-               <!-- proj_edit closed -->
+                        </div>
+                        <div class="proj_content">
+                            <div class="d-flex">
+                                <h1>Project 01</h1>
+                                <span id="editText"><img src="icons/edit.svg" alt=""></span> 
+                            </div>
+                            <div class="tab-btn">
+                                <button class="btn active" data-target=".update">Updates</button>
+                                <button class="btn" data-target=".files">Files</button>
+                                <button class="btn" data-target=".active_log">Active Log</button>
+                            </div>
+                            <div class="update tabproj_con active">
+                                <textarea name="" id="summernote">
+                                </textarea>
+                                <div class="attach_div">
+                                    <div class="divfile1">
+                                        <div class="emoji_div">
+                                            <img src="icons/Icon material-attach-file.svg" style="height: 15px; margin-top: 2px;" class="mr-1" alt="">
+                                            <p>Add files</p>
+                                        </div>
+                                        <div class="emoji_div">
+                                            <p>Giff</p>
+                                            <div class="giflist">
+                                                <input type="text" placeholder="Search GIF" value="">
+                                                <div class="gifin">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="emoji_div">
+                                            <i class="material-icons">tag_faces</i> 
+                                            <p>Emoji</p>
+                                        </div>
+                                        <div class="emoji_div">
+                                            <i class="material-icons">alternate_email</i> 
+                                            <p>Mention</p>
+                                        </div>
+                                    </div>
+                                    <div class="divfile2">
+                                        <button class="btn text-uppercase">Update</button>
+                                    </div>
+                                </div>
+                                <div class="no_update justify-content-end d-flex px-5 mt-3">
+                                    <p><i class="material-icons">mail_outline</i>Write Updates via email</p>
+                                </div>
+                                <!-- <div class="update_con">
+                                    
+                                </div> -->
+                                <!-- update con closed -->
+                                <div class="row w-100 mt-5 pt-3 no_updateyet">
+                                    <p class="text-center text-secondary">No Updates Yet</p>
+                                </div>
+                            </div>
+                            <div class="files tabproj_con">
+                                file content
+                            </div>
+                            <div class="active_log tabproj_con">
+                                active content
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                <!-- proj_edit end -->
+                <!-- proj_add start -->
+                <div class="proj_add">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span><img src="icons/close.svg" alt=""></span>
+                        </div>
+                        <div class="main_add">
+                            <form action="">
+                                <div class="col-md-12 border-bottom">
+                                    <div class="d-flex">
+                                        <h1>Project</h1>
+                                        <span id="editText"><img src="icons/edit.svg" alt=""></span>
+                                    </div>
+                                    <div class="d-flex">
+                                        <p>Description</p>
+                                        <span id="editText"><img src="icons/edit.svg" alt=""></span>
+                                    </div>
+                                </div>
+                                <div class="row mt-5 pt-3">
+                                    <div class="col-md-6 col-xs-12 col-sm-12">
+                                        <p>Group</p>
+                                        <input type="text" placeholder="" id="disabledValue" disabled>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 col-sm-12">
+                                        <p>Created</p>
+                                        <input type="text" placeholder="Select Date & Time" id="picker14">
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 col-sm-12">
+                                        <p>Start Date</p>
+                                        <input type="text" placeholder="Select Start Date" id="picker12">
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 col-sm-12">
+                                        <p>End Date</p>
+                                        <input type="text" placeholder="Select End Date" id="picker13">
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 col-sm-12 assignee_div">
+                                        <div class="assignee_overlay"></div>
+                                        <p>Assignees</p>
+                                        <div class="userBox" id="useradd">
+                                            <img src="icons/plus-1.svg" alt="">
+                                        </div>
+                                        <div class="usersearch_div">
+                                            <div class="col-md-12">
+                                                <input type="text" placeholder="Add Assignees" id="getdata">
+                                                <div class="sep_div">
+                                                    <div class="mem">
+                                                        <p>Members</p>
+                                                    </div>
+                                                    <div class="countmem">
+                                                        <p><span></span> Members</p>
+                                                    </div>
+                                                </div>
+                                                <div class="user-list">
+                                                    <div class="hover_div">
+                                                        <div class="row">
+                                                            <div class="img-div">
+                                                                <img src="img/client1.jpg" alt="">
+                                                            </div>
+                                                            <div class="info-div">
+                                                                <div>
+                                                                    <h6>Claire Bure</h6>
+                                                                    <p>Clair@emaar.com</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hover_div">
+                                                        <div class="row">
+                                                            <div class="img-div">
+                                                                <img src="img/client2.jpg" alt="">
+                                                            </div>
+                                                            <div class="info-div">
+                                                                <div>
+                                                                    <h6>Ajmal Khan</h6>
+                                                                    <p>Ajmal@emaar.com</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hover_div">
+                                                        <div class="row">
+                                                            <div class="img-div">
+                                                                <img src="img/client3.jpg" alt="">
+                                                            </div>
+                                                            <div class="info-div">
+                                                                <div>
+                                                                    <h6>Muhammad Ali</h6>
+                                                                    <p>Ali@emaar.com</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hover_div">
+                                                        <div class="row">
+                                                            <div class="img-div">
+                                                                <img src="img/client4.jpg" alt="">
+                                                            </div>
+                                                            <div class="info-div">
+                                                                <div>
+                                                                    <h6>Asif Khan</h6>
+                                                                    <p>Asif@emaar.com</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hover_div">
+                                                        <div class="row">
+                                                            <div class="img-div">
+                                                                <img src="img/client5.jpg" alt="">
+                                                            </div>
+                                                            <div class="info-div">
+                                                                <div>
+                                                                    <h6>John Smith</h6>
+                                                                    <p>John@emaar.com</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- usersearch_div closed  -->
+                                    </div>
+                                    <!-- assignee_div closed -->
+                                    <div class="col-md-6 col-xs-12 col-sm-12">
+                                        <p>Estimated Hours</p>
+                                        <input type="text" placeholder="Enter Estimated Hours">
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 col-sm-12">
+                                        <p>Status</p>
+                                        <input type="text" placeholder="Enter Status">
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 col-sm-12">
+                                        <p>Cost</p>
+                                        <input type="text" placeholder="Enter Cost">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>    
+                    </div>
+                    <div class="projadd_bottom">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button class="btn">Cancel</button>
+                                <button class="btn">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- proj_add end -->
                 <nav>
                     <div class="div1">
                         <h3><img class="d-none d-md-block" src="icons/logo.svg" alt="logo">
@@ -455,11 +608,10 @@
                                         <div class="head10 status">
                                             <h5>Status</h5>
                                         </div>
-                                      
                                         <div class="head11 ps-0">
                                             <button class="btn p-0" type="button" data-bs-toggle="dropdown"
                                                 aria-expanded="false">
-                                                <span><i class="material-icons">add</i></span>
+                                                <img src="icons/plusinblue.svg" alt="">
                                             </button>
                                             <ul class="dropdown-menu">
                                                 <div class="dropdown">
@@ -539,7 +691,6 @@
                                                 </div>
                                                 <div class="addedit">
                                                     <div class="row">
-
                                                         <div class="left_div">
                                                             <input type="color" value="#F6BE75" text-target=".track"
                                                                 disabled>
@@ -554,7 +705,6 @@ disabled>
 <input type="color" value="#F2870C" text-target=".upnext"
 disabled>
 <input type="color" value="#034E03" text-target=".ready"
-
 disabled> -->
                                                             <p class="track" value="#F6BE75" text-target=".track">
                                                                 On Track
@@ -627,7 +777,7 @@ review</P> -->
                                                     <p>Timeline</p>
                                                 </div>
                                                 <div class="divmile7">
-                                                    <div><i class="material-icons">add</i></div>
+                                                    <div><img src="icons/addcoloumn.svg" alt=""></div>
                                                 </div>
                                             </div>
                                             <div class="milestone3">
@@ -641,7 +791,7 @@ review</P> -->
                                                     </div>
                                                     <div class="divmile3">
                                                         <div><img src="img/client1.jpg" alt=""></div>
-                                                        <span><i class="material-icons">add</i> </span>
+                                                        <span><img src="icons/plus-1.svg" alt=""></span>
                                                     </div>
                                                     <div class="divmile4">
                                                         <div>
@@ -818,7 +968,7 @@ dfsdf
                                     <div class="head11 ps-0">
                                         <button class="btn p-0" type="button" data-bs-toggle="dropdown"
                                             aria-expanded="false">
-                                            <span><i class="material-icons">add</i></span>
+                                            <img src="icons/plusinblue.svg" alt="">
                                         </button>
                                         <ul class="dropdown-menu">
                                             <div class="dropdown">
@@ -872,7 +1022,7 @@ dfsdf
                                                 </div>
                                                 <div class="divcon3 subitems">
                                                     <span class="ms-0"> <img src="icons/dropdown.svg" alt=""></span>    <span class="ms-3"><img src="icons/subitm.svg" alt=""></span>
-                                                    
+                                                
                                                 </div>
                                                 <div class="divcon4 plannedDate">
                                                     <input type="text" name="datefilter" id="rangePicker"
@@ -953,10 +1103,10 @@ review</P> -->
                                                     <div class="btndiv2">
                                                         <div class="row">
                                                             <button
-                                                                class="btn bg-secondary justify-content-center align-items-center d-flex">
-                                                                Discard</button>
+                                                                class="btn cancel justify-content-center align-items-center d-flex">
+                                                                Cancel</button>
                                                             <button
-                                                                class="btn bg-success justify-content-center align-items-center d-flex">
+                                                                class="btn done justify-content-center align-items-center d-flex">
                                                                 Done</button>
                                                         </div>
                                                     </div>
@@ -977,7 +1127,7 @@ review</P> -->
                                                 </div>
                                                 <div class="divcon3 subitems">
                                                     <span class="ms-0"> <img src="icons/dropdown.svg" alt=""></span>    <span class="ms-3"><img src="icons/subitm.svg" alt=""></span>
-                                                    
+                                                
                                                 </div>
                                                 <div class="divcon4 plannedDate">
                                                     <input type="text" name="datefilter" id="rangePicker"
@@ -1019,7 +1169,7 @@ review</P> -->
                                                 </div>
                                                 <div class="divcon3 subitems">
                                                     <span class="ms-0"> <img src="icons/dropdown.svg" alt=""></span>    <span class="ms-3"><img src="icons/subitm.svg" alt=""></span>
-                                                    
+                                                
                                                 </div>
                                                 <div class="divcon4 plannedDate">
                                                     <input type="text" name="datefilter" id="rangePicker"
@@ -1060,7 +1210,7 @@ review</P> -->
                                                 </div>
                                                 <div class="divcon3 subitems">
                                                     <span class="ms-0"> <img src="icons/dropdown.svg" alt=""></span>    <span class="ms-3"><img src="icons/subitm.svg" alt=""></span>
-                                                    
+                                                
                                                 </div>
                                                 <div class="divcon4 plannedDate">
                                                     <input type="text" name="datefilter" id="rangePicker"
@@ -1144,7 +1294,7 @@ review</P> -->
                                     <div class="head11 ps-0">
                                         <button class="btn p-0" type="button" data-bs-toggle="dropdown"
                                             aria-expanded="false">
-                                            <span><i class="material-icons">add</i></span>
+                                            <img src="icons/plusinblue.svg" alt="">
                                         </button>
                                         <ul class="dropdown-menu">
                                             <div class="dropdown">
@@ -1195,11 +1345,11 @@ review</P> -->
                                                 <div class="divcon2 assignees">
                                                     <div><img src="img/client1.jpg" alt=""></div>
                                                     <div><img src="img/client1.jpg" alt=""></div>
-                                                    <span><i class="material-icons">add</i></span>
+                                                    <span><img src="icons/plus-1.svg" alt=""></span>
                                                 </div>
                                                 <div class="divcon3 subitems">
                                                     <span class="ms-0"> <img src="icons/dropdown.svg" alt=""></span>    <span class="ms-3"><img src="icons/subitm.svg" alt=""></span>
-                                                    
+                                                
                                                 </div>
                                                 <div class="divcon4 plannedDate">
                                                     <input type="text" name="datefilter" id="rangePicker"
@@ -1280,10 +1430,10 @@ review</P> -->
                                                     <div class="btndiv2">
                                                         <div class="row">
                                                             <button
-                                                                class="btn bg-secondary justify-content-center align-items-center d-flex">
-                                                                Discard</button>
+                                                                class="btn cancel justify-content-center align-items-center d-flex">
+                                                                Cancel</button>
                                                             <button
-                                                                class="btn bg-success justify-content-center align-items-center d-flex">
+                                                                class="btn done justify-content-center align-items-center d-flex">
                                                                 Done</button>
                                                         </div>
                                                     </div>
@@ -1304,7 +1454,7 @@ review</P> -->
                                                 </div>
                                                 <div class="divcon3 subitems">
                                                     <span class="ms-0"> <img src="icons/dropdown.svg" alt=""></span>    <span class="ms-3"><img src="icons/subitm.svg" alt=""></span>
-                                                    
+                                                
                                                 </div>
                                                 <div class="divcon4 plannedDate">
                                                     <input type="text" name="datefilter" id="rangePicker"
@@ -1346,7 +1496,7 @@ review</P> -->
                                                 </div>
                                                 <div class="divcon3 subitems">
                                                     <span class="ms-0"> <img src="icons/dropdown.svg" alt=""></span>    <span class="ms-3"><img src="icons/subitm.svg" alt=""></span>
-                                                    
+                                                
                                                 </div>
                                                 <div class="divcon4 plannedDate">
                                                     <input type="text" name="datefilter" id="rangePicker"
@@ -1388,7 +1538,7 @@ review</P> -->
                                                 </div>
                                                 <div class="divcon3 subitems">
                                                     <span class="ms-0"> <img src="icons/dropdown.svg" alt=""></span>    <span class="ms-3"><img src="icons/subitm.svg" alt=""></span>
-                                                    
+                                                
                                                 </div>
                                                 <div class="divcon4 plannedDate">
                                                     <input type="text" name="datefilter" id="rangePicker"
@@ -1942,7 +2092,7 @@ review</P> -->
 
     <!-- kanbanjs -->
     <script src="js/kanban.js"></script>
-   
+    <script src="js/usersearch.js"></script>
 </body>
 
 </html>

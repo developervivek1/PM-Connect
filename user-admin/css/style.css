@@ -2210,7 +2210,7 @@ object-fit: cover;
 .proj_filter .divfilter2 .project1 .projmaincon .divcon2 span,
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile3 span
 {
-border: 2px dotted #2D62ED;
+/* border: 2px dotted #2D62ED; */
 display: flex;
 justify-content: center;
 align-items: center;

@@ -16,7 +16,7 @@ const finalmile2 = document.querySelector('.proj_filter .divfilter2 .project1 .p
 const finalmile3 = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milestone2 button');
 const showTable = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .head1 span:first-child');
 const addColumn = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .head11 button');
-const addColumnicon = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .head11 button span i');
+const addColumnicon = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .head11 button img');
 const disableIcon = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .head11 .dropdown-menu .column a');
 const dropmenu = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .head9 .dropdown-menu');
 let root = document.querySelector(':root');
@@ -24,23 +24,23 @@ let divfilter = document.querySelector('.divfilter2');
 let tabnum = document.querySelectorAll('.divfilter2 .tab_content');
 let mainul = document.querySelectorAll('.divfilter2 .top_up ul li');
 let liIcon = document.querySelectorAll('.divfilter2 .top_up ul li img');
-const plannedDiv = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .divcon4');
+let plannedDiv = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .divcon4');
 const editTitle = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 > .child-border .row h5');
-const clickEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .divcon10 div');
-const showEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit');
-const chooseEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit p');
-const chooseEdit2 = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit input');
-const addEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv');
-const addEdit2 = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2');
-const doneEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .done');
-const discardEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .cancel');
+let clickEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .divcon10 div');
+let showEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit');
+let chooseEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit p');
+let chooseEdit2 = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit input');
+let addEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv');
+let addEdit2 = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2');
+let doneEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .done');
+let discardEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .cancel');
 const mobileTrigger = document.querySelector('.mobile-menuhead .hamberger-menu span');
 const mobileMenu = document.querySelector('.proj_filter nav');
 const proj_edit = document.querySelector('.manage_view .proj_edit'); 
 const proj_con = document.querySelector('.manage_view .proj_edit .proj_content'); 
 const proj_overlay = document.querySelector('.manage_view .proj_overlay'); 
 const tabproj_btn = document.querySelectorAll('.manage_view .proj_edit .proj_content .tab-btn .btn');
-const projdetail_btn = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projmaincon .divcon1 span');
+let projdetail_btn = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projmaincon .divcon1 span');
 const projDet_close = document.querySelector('.manage_view .proj_edit .col-md-3 span');
 const update_Talk = document.querySelector('.manage_view .proj_edit .attach_div .divfile2 button');
 const update_append = document.querySelector('.manage_view .proj_edit .update');
@@ -48,13 +48,22 @@ const emoji_Btn = document.querySelector('.manage_view .proj_edit .attach_div .d
 const emoji_Container = document.querySelector('.manage_view .proj_edit .attach_div .divfile1 .emoji_div:nth-child(2) .giflist');
 const emoji_ContainerIn = document.querySelector('.manage_view .proj_edit .attach_div .divfile1 .emoji_div:nth-child(2) .giflist .gifin');
 const emoji_Input = document.querySelector('.manage_view .proj_edit .attach_div .divfile1 .emoji_div:nth-child(2) .giflist input');
-const calendar_data = document.querySelectorAll('.proj_filter .divfilter2 #rangePicker');
+let calendar_data = document.querySelectorAll('.proj_filter .divfilter2 #rangePicker');
 const showSubscribe = document.querySelectorAll('.proj_filter .proj_edit .subscribe #subcribe_pop');
 const subs_overlay = document.querySelector('.proj_filter .subscribe_overlay');
 const subs_Div = document.querySelector('.proj_filter .proj_edit .subscribe .subscriber_div');
 const close_subsdiv = document.querySelector('.proj_filter .proj_edit .subscribe .subscriber_div > .row span');
 const userDel = document.querySelectorAll('.proj_filter .proj_edit .subscribe .subscriber_div .subs_con .col-4 i');
-let statusColor, statusText, textVal, value,pageYedit; 
+const projadd_div = document.querySelector('.proj_filter .proj_add');
+const projadd_Close = document.querySelector('.proj_filter .proj_add .col-md-12 > span');
+const showprojAdd = document.querySelectorAll('.proj_filter .divfilter2 .project1 .border-bottom .last_div');
+const closeProjadd = document.querySelector('.proj_filter .proj_add .projadd_bottom .btn:nth-child(1)');
+const saveProjadd = document.querySelector('.proj_filter .proj_add .projadd_bottom .btn:nth-child(2)');
+const searchDiv = document.querySelector('.proj_filter .proj_add .assignee_div .usersearch_div');
+const assignee_overlay = document.querySelector('.proj_filter .proj_add .assignee_div .assignee_overlay');
+const disableInput= document.querySelector('.proj_filter .proj_add .main_add #disabledValue');
+let editText =document.querySelectorAll('.proj_filter #editText');
+let statusColor, statusText, textVal, value,pageYedit,h5con,adjacentNode ; 
 
 const ImageDisable=[{disSrc: 'icons/ColorImage/assignees_disab.png',enabSrc: 'icons/Assigness.svg'},
 {disSrc: 'icons/ColorImage/subitem_disab.png',enabSrc: 'icons/subitem.svg'},
@@ -84,6 +93,32 @@ const ImageDisable=[{disSrc: 'icons/ColorImage/assignees_disab.png',enabSrc: 'ic
 {disSrc: 'icons/ColorImage/user_disab.png',enabSrc: 'icons/user.svg'},
 {disSrc: 'icons/ColorImage/status_disab.png',enabSrc: 'icons/status.svg'}];
 
+// Mobile Hamberger Menu
+mobileTrigger.addEventListener('click',()=>
+{
+    if(!mobileMenu.classList.contains('active'))
+    {
+       mobileMenu.classList.add('active');
+       overlay.classList.add('active');
+    }
+})
+
+// proj_edit Hide/Show
+projdetail_btn.forEach((detailProj)=>
+{
+    detailProj.addEventListener('click',(e)=>
+    {
+        showProjdetail();
+    },true)
+})
+function showProjdetail()
+{
+    if(!proj_edit.classList.contains('active'))
+    {
+        proj_edit.classList.add('active');
+        proj_overlay.classList.add('active');
+    }    
+}
 setTimeout(()=>
 {
     const textarea = document.querySelector('.manage_view .proj_edit .update .note-editing-area .note-editable');
@@ -177,7 +212,9 @@ setTimeout(()=>
             textarea_Val=undefined;
         }
     })
-},1000)
+},4000)
+
+// Get data using GIF API
 emoji_Btn.addEventListener('click',()=>
 {
     if(!emoji_Container.classList.contains('active'))
@@ -228,61 +265,6 @@ async function getapi(e)
 }
 emoji_Input.addEventListener('keyup', getapi);
 
-mobileTrigger.addEventListener('click',()=>
-{
-    if(!mobileMenu.classList.contains('active'))
-    {
-       mobileMenu.classList.add('active');
-       overlay.classList.add('active');
-    }
-})
-tabproj_btn.forEach((tabBtn)=>
-{
-    tabBtn.addEventListener('click',(e)=>
-    {
-        if(!e.target.classList.contains('active'))
-        {
-            let tabconActive = proj_con.querySelector('.tabproj_con.active');
-            let tabbtnActive = proj_con.querySelector('.btn.active');
-            tabconActive.classList.remove('active');
-            tabbtnActive.classList.remove('active');
-            let data_target = e.target.getAttribute('data-target');
-            e.target.classList.add('active');
-            let targetCon = proj_con.querySelector(data_target);
-            targetCon.classList.add('active');
-        }
-    })
-})
-projdetail_btn.forEach((detailProj)=>
-{
-    detailProj.addEventListener('click',(e)=>
-    {
-        if(!proj_edit.classList.contains('active'))
-        {
-          proj_edit.classList.add('active');
-          proj_overlay.classList.add('active');
-        }    
-    },true)
-})
-proj_overlay.addEventListener('click',()=>
-{
-    hideProjdetail();
-}) 
-projDet_close.addEventListener('click',()=>
-{
-    hideProjdetail();
-})
-function hideProjdetail()
-{
-    if(proj_edit.classList.contains('active'))
-    {
-        proj_edit.classList.remove('active');
-        proj_overlay.classList.remove('active');
-        emoji_Container.classList.remove('active');
-        subs_Div.classList.remove('active');
-        subs_overlay.classList.remove('active');
-    }  
-}
 showSubscribe.forEach((subscribe)=>
 {
     subscribe.addEventListener('click',(e)=>
@@ -318,31 +300,94 @@ userDel.forEach((userRem)=>
    })
 })
 
-showFilter.addEventListener('click', (e) => {
-    if (!filterdiv.classList.contains('showfilter')) {
-        filterdiv.classList.add('showfilter');
-        showFilter.classList.add('active');
-        topup2_overlay.classList.add('active');
-        filterImg.src=`icons/filter2.png`;
-        filterImg.style.cssText='width:14px; height:10px';
-        let xWidth = e.clientX;
-        if(xWidth<749)
+// hide/show proj_add
+showprojAdd.forEach((projAdd)=>
+{
+    projAdd.addEventListener('click',(e)=>
+    {
+        if(!projadd_div.classList.contains('active'))
         {
-            top_up.style.zIndex='3';
+            projadd_div.classList.add('active');
+            proj_overlay.classList.add('active');
+            closestExpand = e.target.closest('.expand');
+            h5con = e.target.closest('.child-border').querySelector('.head1 h5').innerText;
+            disableInput.placeholder=`${h5con}`
+            adjacentNode = e.target.closest('.border-bottom').previousElementSibling;
+            adjacentAppendDiv = e.target.closest('.expand');
         }
         else
         {
-            top_up.style.zIndex="6";
+            projadd_div.classList.remove('active');
+            proj_overlay.classList.remove('active');
         }
-    }
-    else {
-        filterdiv.classList.remove('showfilter');
-        showFilter.classList.remove('active');
-        topup2_overlay.classList.remove('active');
-        filterImg.src=`icons/filter.svg`;
-        filterImg.style.cssText='width:14px; height:14px';
-    }
+    })
 })
+
+saveProjadd.addEventListener('click',()=>
+{
+    let Clone = adjacentNode.cloneNode(true);
+    adjacentNode.insertAdjacentElement('afterend', Clone);
+    projadd_div.classList.remove('active');
+    proj_overlay.classList.remove('active');
+    clickEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .divcon10 div');
+    showEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit');
+    chooseEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit p');
+    chooseEdit2 = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit input');
+    addEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv');
+    addEdit2 = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2');
+    doneEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .done');
+    discardEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .cancel');
+    projdetail_btn = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projmaincon .divcon1 span');
+    plannedDiv = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .divcon4');
+    actualcloseDate = closestExpand.querySelectorAll('.divcon5 input');
+    actualtotalDate = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .divcon5 input');
+    calendar_data = document.querySelectorAll('.proj_filter .divfilter2 #rangePicker');
+    let newCal = actualcloseDate[actualcloseDate.length -1];
+    newCal.setAttribute('id',`picker${actualtotalDate.length +4}`);
+    setSpan();
+    clickEdit.forEach((edit)=>
+    {
+        edit.addEventListener('click',(e)=>
+        {
+            showStatus(e);
+        })
+    });
+    projdetail_btn.forEach((projdetail)=>
+    {
+        projdetail.addEventListener('click',(e)=>
+        {
+            showProjdetail();
+        })
+    });
+    calendar_data.forEach(data=>
+    {
+        ['mouseenter','mouseout'].forEach((e)=>
+        {
+            data.addEventListener(e, hoverData);
+        });
+    })
+})
+
+// Close proj_add, proj_edit 
+proj_overlay.addEventListener('click',hideProjdetail);
+projDet_close.addEventListener('click',hideProjdetail);
+projadd_Close.addEventListener('click', hideProjdetail);
+closeProjadd.addEventListener('click', hideProjdetail);
+
+function hideProjdetail()
+{
+    if(proj_edit.classList.contains('active') || projadd_div.classList.contains('active'))
+    {
+        proj_edit.classList.remove('active');
+        projadd_div.classList.remove('active');
+        proj_overlay.classList.remove('active');
+        emoji_Container.classList.remove('active');
+        subs_Div.classList.remove('active');
+        searchDiv.classList.remove('active');
+        subs_overlay.classList.remove('active');
+    }  
+}
+
 window.addEventListener('click', hideFilterdiv);
 function hideFilterdiv(e) {
     if (e.target == overlay) {
@@ -388,37 +433,14 @@ function hideFilterdiv(e) {
         subs_Div.classList.remove('active');
         subs_overlay.classList.remove('active');
     }
+    else if(e.target==assignee_overlay)
+    {
+        searchDiv.classList.remove('active');
+        assignee_overlay.classList.remove('active');
+    }
 }
 
-disableIcon.forEach((disable,ind)=>
-{
-    disable.addEventListener('click',(e)=>
-    {
-        e.preventDefault();
-        e.stopPropagation();
-        let targetDel = e.target.getAttribute('disable-data');
-        let targetImg = e.target.querySelector('img');
-        let nearestTarget = e.target.closest('.projectcon1').querySelectorAll(targetDel);
-        let nearestHead = e.target.closest('.head11').querySelector('.dropdown-menu');
-        let nearestClear = e.target.closest('.head11').querySelector('span > i');
-        nearestTarget.forEach((removeNode)=>
-        {
-            if(!removeNode.classList.contains('disable'))
-            {
-                removeNode.classList.add('disable');
-                targetImg.src = `${ImageDisable[ind].disSrc}`;
-            }
-            else
-            {
-                removeNode.classList.remove('disable');
-                targetImg.src = `${ImageDisable[ind].enabSrc}`;
-            }
-        })
-        nearestClear.innerText="add";
-        nearestHead.classList.remove('show');
-    },true)
-})
-
+// window resize function
 window.addEventListener('resize',()=>
 {
     if(this.innerWidth < 849)
@@ -432,6 +454,34 @@ window.addEventListener('resize',()=>
     }
 })
 
+// Hide and Show filter Div
+showFilter.addEventListener('click', (e) => {
+    if (!filterdiv.classList.contains('showfilter')) {
+        filterdiv.classList.add('showfilter');
+        showFilter.classList.add('active');
+        topup2_overlay.classList.add('active');
+        filterImg.src=`icons/filter2.png`;
+        filterImg.style.cssText='width:14px; height:10px';
+        let xWidth = e.clientX;
+        if(xWidth<749)
+        {
+            top_up.style.zIndex='3';
+        }
+        else
+        {
+            top_up.style.zIndex="6";
+        }
+    }
+    else {
+        filterdiv.classList.remove('showfilter');
+        showFilter.classList.remove('active');
+        topup2_overlay.classList.remove('active');
+        filterImg.src=`icons/filter.svg`;
+        filterImg.style.cssText='width:14px; height:14px';
+    }
+})
+
+// Milestone Expand/Collapse 
 milediv.addEventListener('click', () => {
     if (!showMile.classList.contains('showmilestone')) {
         showMile.classList.add('showmilestone');
@@ -471,105 +521,31 @@ function showFinal() {
     }
 }
 
-mainul.forEach((val) => {
-    val.addEventListener('click', (e) => {
-        let li = e.target;
-        if (!e.target.classList.contains('active')) {
-            let target = e.target.getAttribute('data-target');
-            if (target === '.addview') {
-                showaddView(target, li);
-                return;
-            }
-            showTabCon(target, li);
-        }
-    })
-});
-liIcon.forEach((val) => {
-    val.addEventListener('click', (e) => {
-        e.stopPropagation();
-        let li = e.target.closest('li');
-        if (!li.classList.contains('active')) {
-            let target = li.getAttribute('data-target');
-            if (target === '.addview') {
-                showaddView(target, li);
-                return;
-            }
-            showTabCon(target, li);
-        }
-    })
-});
-
-function showTabCon(target, li) {
-    let removeactive = divfilter.querySelector('ul li.active');
-    removeactive.classList.remove('active');
-    for (let i = 0; i < tabnum.length; i++) {
-        tabnum[i].classList.remove('active');
-    }
-    li.classList.add('active');
-    divfilter.querySelector(target).classList.add('active');
-}
-
-function showaddView(target, li) {
-    let removeactive = divfilter.querySelector('ul li.active');
-    let removeCon = removeactive.getAttribute('data-target');
-    removeactive.classList.remove('active');
-    divfilter.querySelector(removeCon).classList.add('active');
-    li.classList.add('active');
-    divfilter.querySelector(target).classList.add('active');
-    overlay.classList.add('active');
-}
-
-showTable.forEach((expand) => {
-    expand.addEventListener('click', (e) => {
-        e.stopPropagation();
-        let expand_div = e.target.closest('.projectcon1').querySelector('.expand');
-        let img_rot = e.target;
-        if (!expand_div.classList.contains('active')) {
-            expand_div.classList.add('active');
-            img_rot.style.transform="rotate(0deg)";
-        }
-        else {
-            expand_div.classList.remove('active');
-            img_rot.style.transform="rotate(180deg)";
-        }
-    })
-})
-
-addColumn.forEach((addColumn)=>
-{
-    addColumn.addEventListener('click',(e)=>
-    {
-        let target = e.target.closest('.head11').querySelector('span > i');
-        let dropmenu = e.target.closest('.head11').querySelector('.dropdown-menu');
-        if (dropmenu.classList.contains('show')) {
-            target.innerText = 'clear';
-            drop_overlay.classList.add('active');
-        }
-        else {
-            target.innerText = "add";
-        }
-    },true)
-})
-
+// Status Update Edit and Done
 clickEdit.forEach((edit) => {
     edit.addEventListener('click', (e) => {
-        pageYedit = e.pageY;
-        let closestAddedit = e.target.closest('.expand').querySelector('.addedit');
-        statusColor = e.target;
-        statusText = e.target;
-        if (!closestAddedit.classList.contains('active')) {
-            overlay.style.zIndex="1";
-            closestAddedit.classList.add('active');
-            overlay.classList.add('active');
-            chooseEdit.forEach((choose) => {
-                choose.addEventListener('click', (e) => {
-                    if (!choose.hasAttribute('contenteditable'))
-                        choosedefault(e, statusColor, statusText, closestAddedit);
-                })
-            });
-        }
+        showStatus(e);
     })
 })
+
+function showStatus(e)
+{
+    pageYedit = e.pageY;
+    let closestAddedit = e.target.closest('.expand').querySelector('.addedit');
+    statusColor = e.target;
+    statusText = e.target;
+    if (!closestAddedit.classList.contains('active')) {
+        overlay.style.zIndex="1";
+        closestAddedit.classList.add('active');
+        overlay.classList.add('active');
+        chooseEdit.forEach((choose) => {
+            choose.addEventListener('click', (e) => {
+                if (!choose.hasAttribute('contenteditable'))
+                    choosedefault(e, statusColor, statusText, closestAddedit);
+            })
+        });
+    }
+}
 
 function choosedefault(e, statusColor, statusText, closestAddedit) {
     let colorval = e.target.getAttribute('value');
@@ -649,6 +625,7 @@ function finalEdit(e) {
     overlay.classList.remove('active');
 }
 
+//edit Title
 editTitle.forEach((title) => {
     title.addEventListener('dblclick', (e) => {
         for (let i = 0; i < editTitle.length; i++) {
@@ -658,7 +635,152 @@ editTitle.forEach((title) => {
         target.setAttribute('contenteditable', 'true');
     })
 })
+editText.forEach((edit)=>
+{
+    edit.addEventListener('click',(e)=>
+    {
+        e.stopPropagation();
+        let targetEdit = e.target.closest('.d-flex').querySelector(':first-child');
+        if(!targetEdit.hasAttribute('contenteditable'))
+        {
+            targetEdit.setAttribute('contenteditable','true');
+        }
+        else
+        {
+            targetEdit.removeAttribute('contenteditable');
+        }
+    })
+})
 
+// Tabs and Pills the Data
+tabproj_btn.forEach((tabBtn)=>
+{
+    tabBtn.addEventListener('click',(e)=>
+    {
+        if(!e.target.classList.contains('active'))
+        {
+            let tabconActive = proj_con.querySelector('.tabproj_con.active');
+            let tabbtnActive = proj_con.querySelector('.btn.active');
+            tabconActive.classList.remove('active');
+            tabbtnActive.classList.remove('active');
+            let data_target = e.target.getAttribute('data-target');
+            e.target.classList.add('active');
+            let targetCon = proj_con.querySelector(data_target);
+            targetCon.classList.add('active');
+        }
+    })
+})
+mainul.forEach((val) => {
+    val.addEventListener('click', (e) => {
+        let li = e.target;
+        if (!e.target.classList.contains('active')) {
+            let target = e.target.getAttribute('data-target');
+            if (target === '.addview') {
+                showaddView(target, li);
+                return;
+            }
+            showTabCon(target, li);
+        }
+    })
+});
+liIcon.forEach((val) => {
+    val.addEventListener('click', (e) => {
+        e.stopPropagation();
+        let li = e.target.closest('li');
+        if (!li.classList.contains('active')) {
+            let target = li.getAttribute('data-target');
+            if (target === '.addview') {
+                showaddView(target, li);
+                return;
+            }
+            showTabCon(target, li);
+        }
+    })
+});
+
+function showTabCon(target, li) {
+    let removeactive = divfilter.querySelector('ul li.active');
+    removeactive.classList.remove('active');
+    for (let i = 0; i < tabnum.length; i++) {
+        tabnum[i].classList.remove('active');
+    }
+    li.classList.add('active');
+    divfilter.querySelector(target).classList.add('active');
+}
+
+function showaddView(target, li) {
+    let removeactive = divfilter.querySelector('ul li.active');
+    let removeCon = removeactive.getAttribute('data-target');
+    removeactive.classList.remove('active');
+    divfilter.querySelector(removeCon).classList.add('active');
+    li.classList.add('active');
+    divfilter.querySelector(target).classList.add('active');
+    overlay.classList.add('active');
+}
+
+// hide/show Main Table
+showTable.forEach((expand) => {
+    expand.addEventListener('click', (e) => {
+        e.stopPropagation();
+        let expand_div = e.target.closest('.projectcon1').querySelector('.expand');
+        let img_rot = e.target;
+        if (!expand_div.classList.contains('active')) {
+            expand_div.classList.add('active');
+            img_rot.style.transform="rotate(0deg)";
+        }
+        else {
+            expand_div.classList.remove('active');
+            img_rot.style.transform="rotate(180deg)";
+        }
+    })
+})
+
+// Enable/Disable Table Column 
+addColumn.forEach((addColumn)=>
+{
+    addColumn.addEventListener('click',(e)=>
+    {
+        let target = e.target.closest('.head11').querySelector('button img');
+        let dropmenu = e.target.closest('.head11').querySelector('.dropdown-menu');
+        if (dropmenu.classList.contains('show')) {
+            target.innerText = 'clear';
+            drop_overlay.classList.add('active');
+        }
+        else {
+            target.innerText = "add";
+        }
+    },true)
+})
+disableIcon.forEach((disable,ind)=>
+{
+    disable.addEventListener('click',(e)=>
+    {
+        e.preventDefault();
+        e.stopPropagation();
+        let targetDel = e.target.getAttribute('disable-data');
+        let targetImg = e.target.querySelector('img');
+        let nearestTarget = e.target.closest('.projectcon1').querySelectorAll(targetDel);
+        let nearestHead = e.target.closest('.head11').querySelector('.dropdown-menu');
+        let nearestClear = e.target.closest('.head11').querySelector('button img');
+        nearestTarget.forEach((removeNode)=>
+        {
+            if(!removeNode.classList.contains('disable'))
+            {
+                removeNode.classList.add('disable');
+                targetImg.src = `${ImageDisable[ind].disSrc}`;
+            }
+            else
+            {
+                removeNode.classList.remove('disable');
+                targetImg.src = `${ImageDisable[ind].enabSrc}`;
+            }
+        })
+        nearestClear.innerText="add";
+        nearestHead.classList.remove('show');
+    },true)
+})
+
+// hovering Data on Planned Date
 function setSpan()
 {
    plannedDiv.forEach((appendSpan)=>
@@ -671,37 +793,37 @@ function setSpan()
 setSpan();
 
 calendar_data.forEach(data=>
+{
+    ['mouseenter','mouseout'].forEach((e)=>
     {
-        ['mouseenter','mouseout'].forEach((e)=>
-        {
-            data.addEventListener(e, hoverData);
-        });
-    })
+        data.addEventListener(e, hoverData);
+    });
+})
 
-    function hoverData(e)
+function hoverData(e)
+{
+    if(e.type==='mouseenter')
     {
-      if(e.type==='mouseenter')
-      {
-        let dateRange = e.target.value;
-        let extractDate= dateRange.substr(4,8);
-        let date1 = +extractDate.substr(0,2);
-        let date2 = +extractDate.substr(4,6);
-        let putDiv = e.target.closest('.plannedDate');
-        let hideInput = putDiv.querySelector('input');
-        let showSpan = putDiv.querySelector('span');
-        showSpan.innerText=`${date2 - date1} Days`
-        hideInput.style.display="none";
-        showSpan.style.display="block";
-      }
-      else if(e.type==='mouseout')
-      {
-        let putDiv = e.target.closest('.plannedDate');
-        let hideSpan = putDiv.querySelector('span');
-        let showInput = putDiv.querySelector('input');
-        hideSpan.style.display="none";
-        showInput.style.display="block";
-      }
+    let dateRange = e.target.value;
+    let extractDate= dateRange.substr(4,8);
+    let date1 = +extractDate.substr(0,2);
+    let date2 = +extractDate.substr(4,6);
+    let putDiv = e.target.closest('.plannedDate');
+    let hideInput = putDiv.querySelector('input');
+    let showSpan = putDiv.querySelector('span');
+    showSpan.innerText=`${date2 - date1} Days`
+    hideInput.style.display="none";
+    showSpan.style.display="block";
     }
+    else if(e.type==='mouseout')
+    {
+    let putDiv = e.target.closest('.plannedDate');
+    let hideSpan = putDiv.querySelector('span');
+    let showInput = putDiv.querySelector('input');
+    hideSpan.style.display="none";
+    showInput.style.display="block";
+    }
+}
 
 // $(function () {
 
@@ -731,6 +853,19 @@ $('#picker').add('#picker2').add('#picker3').add('#picker4').add('#picker5').
     datepicker: true,
     format: 'MMM DD,YYYY'
 });
+
+$('#picker12').add('#picker13').datetimepicker(
+{
+    timepicker: false,
+    datepicker: true,
+    format: 'MMMM DD,YYYY'
+});
+$('#picker14').datetimepicker(
+    {
+        timepicker: true,
+        datepicker: true,
+        format: 'MMMM DD,YYYY, hh:mma'
+    });
 
 $('.h1fixed').scroll(function() {
     $(this).find('.mysticky').css('left', $(this).scrollLeft());
