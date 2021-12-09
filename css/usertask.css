@@ -1,5 +1,5 @@
 
-    .user .divfilter2 .top_up {
+     .padding-title {
         padding: 4rem 0.5rem !important;
     }
 
@@ -249,6 +249,11 @@
 
     .user_task .task_head1, .user_task .task_head2, .user_task .task_head3, .user_task .task_head4, .user_task .task_head5, .user_task .task_head6, .user_task .task_head7, .user_task .task_head8, .user_task .task_head9 {
         font-size: 1.1rem;
+    }
+
+    .padding-title{
+        padding: 2rem 0rem 1rem 0.5rem !important;
+
     }
 
    
