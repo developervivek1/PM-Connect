@@ -34,6 +34,7 @@ let addEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .pro
 let addEdit2 = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2');
 let doneEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .done');
 let discardEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .cancel');
+let addLabel = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .add_label .btn');
 const mobileTrigger = document.querySelector('.mobile-menuhead .hamberger-menu span');
 const mobileMenu = document.querySelector('.proj_filter nav');
 const proj_edit = document.querySelector('.manage_view .proj_edit'); 
@@ -53,7 +54,7 @@ const showSubscribe = document.querySelectorAll('.proj_filter .proj_edit .subscr
 const subs_overlay = document.querySelector('.proj_filter .subscribe_overlay');
 const subs_Div = document.querySelector('.proj_filter .proj_edit .subscribe .subscriber_div');
 const close_subsdiv = document.querySelector('.proj_filter .proj_edit .subscribe .subscriber_div > .row span');
-const userDel = document.querySelectorAll('.proj_filter .proj_edit .subscribe .subscriber_div .subs_con .col-4 i');
+const userDel = document.querySelectorAll('.proj_filter .proj_edit .subscribe .subscriber_div .subs_con .col-4 img');
 const projadd_div = document.querySelector('.proj_filter .proj_add');
 const projadd_Close = document.querySelector('.proj_filter .proj_add .col-md-12 > span');
 const showprojAdd = document.querySelectorAll('.proj_filter .divfilter2 .project1 .border-bottom .last_div');
@@ -63,7 +64,7 @@ const searchDiv = document.querySelector('.proj_filter .proj_add .assignee_div .
 const assignee_overlay = document.querySelector('.proj_filter .proj_add .assignee_div .assignee_overlay');
 const disableInput= document.querySelector('.proj_filter .proj_add .main_add #disabledValue');
 let editText =document.querySelectorAll('.proj_filter #editText');
-let statusColor, statusText, textVal, value,pageYedit,h5con,adjacentNode ; 
+let statusColor, statusText, textVal, value,pageYedit,h5con,adjacentNode,fixedValue1=121,fixedValue2=121,fixedValue3=121; 
 
 const ImageDisable=[{disSrc: 'icons/ColorImage/assignees_disab.png',enabSrc: 'icons/Assigness.svg'},
 {disSrc: 'icons/ColorImage/subitem_disab.png',enabSrc: 'icons/subitem.svg'},
@@ -556,40 +557,95 @@ function choosedefault(e, statusColor, statusText, closestAddedit) {
     closestAddedit.classList.remove('active');
     overlay.classList.remove('active');
 }
+
+addLabel.forEach((add,ind)=>
+{
+    add.addEventListener('click',(e)=>
+    {
+        addLabeldom(e,ind);
+    })
+})
+
+function addLabeldom(e,ind)
+{
+    let targetAppend1 = e.target.closest('.right_div').querySelectorAll('input');
+    let targetAppend2 = e.target.closest('.right_div').querySelectorAll('p');
+    let input = document.createElement('input');
+    input.setAttribute('type','color');
+    input.setAttribute('value','');
+    input.setAttribute('text-target','');
+    let p = document.createElement('p');
+    p.setAttribute('value','');
+    p.setAttribute('text-target','');
+    p.innerText="Name";
+    switch(ind)
+    {
+        case 0:
+            fixedValue1=fixedValue1+54;
+            fixingTop(p,fixedValue1);
+            break;
+        case 1:
+            fixedValue2=fixedValue2+54;
+            fixingTop(p,fixedValue2);
+            break;
+        case 2:
+            fixedValue3=fixedValue3+54;
+            fixingTop(p,fixedValue3);
+            break;    
+    }
+    targetAppend1[targetAppend1.length-1].insertAdjacentElement('afterend', input);
+    targetAppend2[targetAppend2.length-1].insertAdjacentElement('afterend', p);
+    targetAppend1 = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit input');
+    targetAppend2 = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit p');
+    setUserchoice(targetAppend1, targetAppend2);
+    input.setAttribute('text-target',`.${value}`);
+    p.setAttribute('text-target',`.${textVal}`);
+}
+function fixingTop(p,fixedValue)
+{
+    p.style.cssText=`top: ${fixedValue}px; left:34%`;
+}
+
 addEdit.forEach((addEdit, ind) => {
     addEdit.addEventListener('click', (e) => {
         let activeCheck = e.target.parentNode;
         let colorInput = activeCheck.closest('.expand').querySelector('.addedit').querySelectorAll('input');
         let paraText = activeCheck.closest('.expand').querySelector('.addedit').querySelectorAll('p');
-        if (activeCheck.classList.contains('active') && !addEdit2[ind].classList.contains('active')) {
+        let addLabelcheck = activeCheck.closest('.expand').querySelector('.add_label');
+        if (activeCheck.classList.contains('active') && !addEdit2[ind].classList.contains('active') && 
+        !addLabelcheck.classList.contains('active')) 
+        {
             addEdit2[ind].classList.add('active');
             activeCheck.classList.remove('active');
-            colorInput.forEach((input) => {
-                input.removeAttribute('disabled');
-            })
-            paraText.forEach((text) => {
-                text.setAttribute('contenteditable', 'true');
-                if (text.hasAttribute('contenteditable')) {
-                    paraText.forEach((text) => {
-                        text.addEventListener('input', (e) => {
-                            // let targetDiv = e.target.closest('.projmaincon').querySelector('.divcon10 div');
-                            textVal = e.target.innerText;
-                            statusText.innerText = `${textVal}`;
-                        })
-                    })
-                    colorInput.forEach((input) => {
-                        input.addEventListener('input', (e) => {
-                            value = e.target.value;
-                            // let targetDiv = e.target.closest('.projmaincon').querySelector('.divcon10 div');
-                            statusColor.style.backgroundColor = `${value}`;
-                        })
-                    })
-                }
-            })
+            addLabelcheck.classList.add('active');
+            setUserchoice(colorInput, paraText);
         }
     })
 })
 
+function setUserchoice(colorInput, paraText)
+{
+    colorInput.forEach((input) => {
+        input.removeAttribute('disabled');
+    })
+    paraText.forEach((text) => {
+        text.setAttribute('contenteditable', 'true');
+        if (text.hasAttribute('contenteditable')) {
+            paraText.forEach((text) => {
+                text.addEventListener('input', (e) => {
+                    textVal = e.target.innerText;
+                    statusText.innerText = `${textVal}`;
+                })
+            })
+            colorInput.forEach((input) => {
+                input.addEventListener('input', (e) => {
+                    value = e.target.value;
+                    statusColor.style.backgroundColor = `${value}`;
+                })
+            })
+        }
+    })
+}
 doneEdit.forEach((doneEdit) => {
     doneEdit.addEventListener('click', (e) => {
         statusText.setAttribute('textval', `${textVal}`);
@@ -613,6 +669,7 @@ function finalEdit(e) {
     targetAddedit.classList.remove('active');
     let colorInput = e.target.closest('.expand').querySelector('.addedit').querySelectorAll('input');
     let paraText = e.target.closest('.expand').querySelector('.addedit').querySelectorAll('p');
+    let addLabelcheck=e.target.closest('.addedit').querySelector('.add_label');
 
     colorInput.forEach((input) => {
         input.setAttribute('disabled', 'disabled');
@@ -620,6 +677,7 @@ function finalEdit(e) {
     paraText.forEach((text) => {
         text.removeAttribute('contenteditable');
     })
+    addLabelcheck.classList.remove('active');
     newbtndiv2.classList.remove('active');
     newbtndiv.classList.add('active');
     overlay.classList.remove('active');

@@ -678,6 +678,8 @@ box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 .proj_filter .proj_add .main_add
 {
     padding: 4rem 23px 4rem 4.5rem;
+    overflow-y: scroll;
+    max-height: 82vh;
 }
 .proj_filter .proj_add .main_add #disabledValue::placeholder
 {
@@ -773,6 +775,7 @@ box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     width: 100%;
     padding: 0 38px;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.18);
+    background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -1067,8 +1070,7 @@ box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     }
     .proj_filter .proj_add .projadd_bottom {
         position: fixed;
-        bottom: -267px;
+        bottom: 51px;
         z-index: 68;
-        background-color: #fff;
-    }  
+    }
 }
