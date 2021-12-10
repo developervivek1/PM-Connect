@@ -17,7 +17,7 @@
 .user_task .row
 {
     border-left: 1px solid #ededed;
-    border-right: 1px solid #ededed;
+    /* border-right: 1px solid #ededed; */
     border-bottom: 1px solid #ededed;
 }
 .user_task .task_head1,
