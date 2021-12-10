@@ -592,7 +592,7 @@ height: 115px;
 padding: 1.5rem 5rem 0;
 }
 .manage_view .div2 ul li.active div:first-child {
-background-color: blue;
+background-color: #2D62ED;
 }
 .manage_view .div2 ul li,
 .manage_view .div2 ul li:not(:last-child) {
