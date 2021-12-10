@@ -3,6 +3,10 @@
         padding: 4rem 0.5rem !important;
     }
 
+    .user_add .userdiv9{
+        border-right: 1px solid #ededed;
+    }
+
 .user_task
 {
     margin-top: 7%;
@@ -40,6 +44,7 @@
     padding: 16px 15px;
     border-top: 1px solid #ededed;
     border-left: 1px solid #ededed;
+   
 }
 .user_task .task_head1,
 .user_task .task_head2,
@@ -197,7 +202,7 @@
 }
 .proj_filter .divmargin {
       
-    margin-left: 5.2%;
+    margin-left: 5%;
    
 }
 
