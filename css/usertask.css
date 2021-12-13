@@ -237,7 +237,8 @@
         align-items: center;
     }
     .divfilter2 .bottom_navigate {
-        padding: 18px 15px;
+        position: fixed;
+        padding: 24px 15px;
         width: 100%;
         z-index: 8;
     }
