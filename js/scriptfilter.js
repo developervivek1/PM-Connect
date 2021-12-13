@@ -41,6 +41,9 @@ const proj_edit = document.querySelector('.manage_view .proj_edit');
 const proj_con = document.querySelector('.manage_view .proj_edit .proj_content'); 
 const proj_overlay = document.querySelector('.manage_view .proj_overlay'); 
 const tabproj_btn = document.querySelectorAll('.manage_view .proj_edit .proj_content .tab-btn .btn');
+const tabproj_btn2 = document.querySelectorAll('.manage_view .proj_edit .proj_content .tab-btn #showTab');
+const showFavorite = document.querySelector('.manage_view .proj_edit .proj_content .tab-btn #showFav');
+const favDiv = document.querySelector('.manage_view .proj_edit .proj_content .tab-btn .favDiv');
 let projdetail_btn = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projmaincon .divcon1 span');
 const projDet_close = document.querySelector('.manage_view .proj_edit .col-md-3 span');
 const update_Talk = document.querySelector('.manage_view .proj_edit .attach_div .divfile2 button');
@@ -64,6 +67,9 @@ const searchDiv = document.querySelector('.proj_filter .proj_add .assignee_div .
 const assignee_overlay = document.querySelector('.proj_filter .proj_add .assignee_div .assignee_overlay');
 const disableInput= document.querySelector('.proj_filter .proj_add .main_add #disabledValue');
 let editText =document.querySelectorAll('.proj_filter #editText');
+const openMore =document.querySelectorAll('.proj_filter .proj_edit .proj_content .files .uploaded .open #openMore');
+const openOption =document.querySelectorAll('.proj_filter .proj_edit .proj_content .files .uploaded .open .openOption');
+const file_overlay =document.querySelector('.proj_filter .proj_edit .proj_content .files .file_overlay');
 let statusColor, statusText, textVal, value,pageYedit,h5con,adjacentNode,fixedValue1=121,fixedValue2=121,fixedValue3=121; 
 
 const ImageDisable=[{disSrc: 'icons/ColorImage/assignees_disab.png',enabSrc: 'icons/Assigness.svg'},
@@ -120,6 +126,63 @@ function showProjdetail()
         proj_overlay.classList.add('active');
     }    
 }
+tabproj_btn.forEach((tabBtn)=>
+{
+    tabBtn.addEventListener('click',(e)=>
+    {
+        e.stopPropagation();
+        if(!e.target.classList.contains('active'))
+        {
+            let tabconActive = proj_con.querySelector('.tabproj_con.active');
+            let tabbtnActive = proj_con.querySelector('.btn.active');
+            let tabbtnp = proj_con.querySelector('.btn.active p.active');
+            tabconActive.classList.remove('active');
+            tabbtnActive.classList.remove('active');
+            tabbtnp.classList.remove('active');
+            let data_target = e.target.getAttribute('data-target');
+            e.target.classList.add('active');
+            e.target.querySelector('p').classList.add('active');
+            let targetCon = proj_con.querySelector(data_target);
+            targetCon.classList.add('active');
+        }
+    })
+})
+tabproj_btn2.forEach((tabBtn)=>
+{
+    tabBtn.addEventListener('click',(e)=>
+    {
+        e.stopPropagation();
+        if(!e.target.parentNode.classList.contains('active'))
+        {
+            e.target.classList.add('active');
+            let tabconActive = proj_con.querySelector('.tabproj_con.active');
+            let tabbtnActive = proj_con.querySelector('.btn.active');
+            let tabbtnp = proj_con.querySelector('.btn.active p.active');
+            tabconActive.classList.remove('active');
+            tabbtnActive.classList.remove('active');
+            tabbtnp.classList.remove('active');
+            let data_target = e.target.parentNode.getAttribute('data-target');
+            e.target.parentNode.classList.add('active');
+            let targetCon = proj_con.querySelector(data_target);
+            targetCon.classList.add('active');
+        }
+    })
+})
+showFavorite.addEventListener('click',(e)=>
+{
+    e.stopPropagation();
+    let checkfile = e.target.closest('.proj_content').querySelector('.files');
+    if(!favDiv.classList.contains('active') && checkfile.classList.contains('active'))
+    {
+        favDiv.classList.add('active');
+        file_overlay.classList.add('active');
+    }
+    else
+    {
+        favDiv.classList.remove('active');
+        file_overlay.classList.remove('active');
+    }
+})
 setTimeout(()=>
 {
     const textarea = document.querySelector('.manage_view .proj_edit .update .note-editing-area .note-editable');
@@ -300,6 +363,23 @@ userDel.forEach((userRem)=>
       remNode.remove();
    })
 })
+openMore.forEach((open)=>
+{
+    open.addEventListener('click',(e)=>
+    {
+        let nearoption = e.target.closest('.open').querySelector('.openOption');
+        if(!nearoption.classList.contains('active'))
+        {
+            nearoption.classList.add('active');
+            file_overlay.classList.add('active');
+        }
+        else
+        {
+            nearoption.classList.remove('active');
+            file_overlay.classList.remove('active');
+        }
+    })
+})
 
 // hide/show proj_add
 showprojAdd.forEach((projAdd)=>
@@ -386,6 +466,12 @@ function hideProjdetail()
         subs_Div.classList.remove('active');
         searchDiv.classList.remove('active');
         subs_overlay.classList.remove('active');
+        openOption.forEach((open)=>
+        {
+            open.classList.remove('active');
+        })
+        favDiv.classList.remove('active');
+        file_overlay.classList.remove('active');
     }  
 }
 
@@ -438,6 +524,15 @@ function hideFilterdiv(e) {
     {
         searchDiv.classList.remove('active');
         assignee_overlay.classList.remove('active');
+    }
+    else if(e.target==file_overlay)
+    {
+        favDiv.classList.remove('active');
+        openOption.forEach((open)=>
+        {
+            open.classList.remove('active');
+        })
+        file_overlay.classList.remove('active');
     }
 }
 
@@ -711,23 +806,6 @@ editText.forEach((edit)=>
 })
 
 // Tabs and Pills the Data
-tabproj_btn.forEach((tabBtn)=>
-{
-    tabBtn.addEventListener('click',(e)=>
-    {
-        if(!e.target.classList.contains('active'))
-        {
-            let tabconActive = proj_con.querySelector('.tabproj_con.active');
-            let tabbtnActive = proj_con.querySelector('.btn.active');
-            tabconActive.classList.remove('active');
-            tabbtnActive.classList.remove('active');
-            let data_target = e.target.getAttribute('data-target');
-            e.target.classList.add('active');
-            let targetCon = proj_con.querySelector(data_target);
-            targetCon.classList.add('active');
-        }
-    })
-})
 mainul.forEach((val) => {
     val.addEventListener('click', (e) => {
         let li = e.target;
@@ -818,7 +896,7 @@ disableIcon.forEach((disable,ind)=>
         let targetDel = e.target.getAttribute('disable-data');
         let targetImg = e.target.querySelector('img');
         let nearestTarget = e.target.closest('.projectcon1').querySelectorAll(targetDel);
-        let nearestHead = e.target.closest('.head11').querySelector('.dropdown-menu');
+        // let nearestHead = e.target.closest('.head11').querySelector('.dropdown-menu');
         let nearestClear = e.target.closest('.head11').querySelector('button img');
         nearestTarget.forEach((removeNode)=>
         {
@@ -834,7 +912,7 @@ disableIcon.forEach((disable,ind)=>
             }
         })
         nearestClear.innerText="add";
-        nearestHead.classList.remove('show');
+        // nearestHead.classList.remove('show');
     },true)
 })
 

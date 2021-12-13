@@ -1,14 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="73" height="68" viewBox="0 0 73 68">
-  <defs>
-    <clipPath id="clip-Change_Project">
-      <rect width="73" height="68"/>
-    </clipPath>
-  </defs>
-  <g id="Change_Project" data-name="Change Project" clip-path="url(#clip-Change_Project)">
-    <rect width="73" height="68" fill="#fff"/>
-    <g id="Group_61473" data-name="Group 61473" transform="translate(-456 -442)">
-      <circle id="Ellipse_1768" data-name="Ellipse 1768" cx="22" cy="22" r="22" transform="translate(471 454)" fill="#f2f5f8"/>
-      <g id="noun_edit_636104" transform="translate(476 459)">
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+  <g id="changeproject" transform="translate(-3857 -548)">
+    <g id="Group_47754" data-name="Group 47754" transform="translate(3398 -39)">
+      <circle id="Ellipse_1768" data-name="Ellipse 1768" cx="22" cy="22" r="22" transform="translate(459 587)" fill="#f2f5f8"/>
+      <g id="noun_edit_636104" transform="translate(464 592)">
         <g id="Group_45446" data-name="Group 45446" transform="translate(7 7)">
           <g id="Group_45445" data-name="Group 45445">
             <path id="Path_50806" data-name="Path 50806" d="M21.75,31H15.4a.4.4,0,0,0,0,.794H21.75a.4.4,0,1,0,0-.794Z" transform="translate(-11.823 -21.47)" fill="#6d727c"/>
