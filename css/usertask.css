@@ -86,11 +86,19 @@
 {
     padding: 5px 15px;
 }
-.user_task .userdiv9 img
+/* .user_task .userdiv9 img
 {
     margin-right: 1.6rem;
-}
+} */
 
+.user_task .userdiv9 img:first-child{
+    padding-right: 1rem;
+    border-right: 1px solid rgb(201, 197, 197);
+}
+.user_task .userdiv9 img:last-child{
+    padding-left: 0.8rem;
+  
+}
 .user_task .userdiv7 .proj_status,
 .user_task .userdiv8 .proj_status
 {
