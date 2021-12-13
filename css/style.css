@@ -3729,5 +3729,15 @@ border-color: none;
 border: none;
 }
 
+.row .mobile-width{
+  position: relative;
+}
+
+.row .mobile-width .head11{
+  position: absolute;
+  right: 10px;
+
+}
+
 
 /* bugs end */

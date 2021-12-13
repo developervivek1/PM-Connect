@@ -780,7 +780,7 @@ background-color: #D8E2FC;
 }
 }
 
-@media (max-width: 950px){
+@media (min-width: 800px) and (max-width:950px) {
     .proj_filter .divfilter2 .project1 .projectcon1 {
        overflow: scroll;
     }
