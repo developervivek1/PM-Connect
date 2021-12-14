@@ -878,6 +878,101 @@ margin-right: 8px;
     color: #171E48;
     font-weight: 400;
 }
+.proj_filter .proj_edit .proj_content .active_log .btnleft
+{
+    position: relative;
+}
+.proj_filter .proj_edit .proj_content .active_log .activelog_overlay
+{
+    position: fixed;
+    z-index: 60;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: none;
+}
+.proj_filter .proj_edit .proj_content .active_log .activelog_overlay.active
+{
+    display: block;
+}
+.proj_filter .proj_edit .proj_content .active_log .btnleft .filterlog_con,
+.proj_filter .proj_edit .proj_content .active_log .btnleft .person_con
+{
+    position: absolute;
+    top: 40px;
+    left: 0.2%;
+    background-color: #fff;
+    z-index: 70;
+    padding: 30px;
+    width: 318px;
+    box-shadow: 0 0 12px rgb(0 0 0 / 10%);
+    display: none;
+}
+.proj_filter .proj_edit .proj_content .active_log .btnleft .filterlog_con.active,
+.proj_filter .proj_edit .proj_content .active_log .btnleft .person_con.active
+{
+    display: block;
+    animation: fadeUp 0.3s ease-in-out;
+}
+.proj_filter .proj_edit .proj_content .active_log .btnleft .person_con
+{
+    line-height: 5.1rem;
+}
+.proj_filter .proj_edit .proj_content .active_log .btnleft .person_con h2
+{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.proj_filter .proj_edit .proj_content .active_log .btnleft .person_con p
+{
+    font-size: 14px;
+    font-weight: 400;
+}
+.proj_filter .proj_edit .proj_content .active_log .btnleft .person_con img
+{
+    width: 32px;
+}
+.proj_filter .proj_edit .proj_content .active_log .btnleft .filterlog_con > .d-flex
+{
+    justify-content: space-between;
+}
+.proj_filter .proj_edit .proj_content .active_log .btnleft .filterlog_con > .d-flex h3
+{
+    font-size: 1.5rem;
+}
+.proj_filter .proj_edit .proj_content .active_log .btnleft .filterlog_con > .d-flex span
+{
+    font-size: 13px;
+    color: #999999;
+}
+.proj_filter .proj_edit .proj_content .active_log .btnleft .filterlog_con > .d-flex p
+{
+    font-size: 14px;
+    font-weight: 500;
+}
+.proj_filter .proj_edit .proj_content .active_log .btnleft .filterlog_con .row > .col-6 p
+{
+    margin: 3rem 0 2.5rem;
+    font-size: 13px;
+    font-weight: 500;
+}
+.proj_filter .proj_edit .proj_content .active_log .btnleft .filterlog_con .row > .col-6 .back
+{
+    width: 100px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F6F2F2;
+}
+.proj_filter .proj_edit .proj_content .active_log .btnleft .filterlog_con .row > .col-6 .back p
+{
+    font-size: 13px;
+    margin: 0;
+}
+
 .proj_filter .proj_edit .proj_content .active_log .btnleft button {
     border-radius: 4px;
     background-color: #2D62ED;

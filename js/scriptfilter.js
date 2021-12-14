@@ -70,6 +70,11 @@ let editText =document.querySelectorAll('.proj_filter #editText');
 const openMore =document.querySelectorAll('.proj_filter .proj_edit .proj_content .files .uploaded .open #openMore');
 const openOption =document.querySelectorAll('.proj_filter .proj_edit .proj_content .files .uploaded .open .openOption');
 const file_overlay =document.querySelector('.proj_filter .proj_edit .proj_content .files .file_overlay');
+const filterLog =document.querySelector('.proj_filter .proj_edit .proj_content .active_log .btnleft .btn:nth-child(1)');
+const personFilter =document.querySelector('.proj_filter .proj_edit .proj_content .active_log .btnleft .btn:nth-child(2)');
+const activelog_overlay =document.querySelector('.proj_filter .proj_edit .proj_content .active_log .activelog_overlay');
+const filterLogcon =document.querySelector('.proj_filter .proj_edit .proj_content .active_log .btnleft .filterlog_con');
+const personFiltercon =document.querySelector('.proj_filter .proj_edit .proj_content .active_log .btnleft .person_con');
 let statusColor, statusText, textVal, value,pageYedit,h5con,adjacentNode,fixedValue1=121,fixedValue2=121,fixedValue3=121; 
 
 const ImageDisable=[{disSrc: 'icons/ColorImage/assignees_disab.png',enabSrc: 'icons/Assigness.svg'},
@@ -380,7 +385,32 @@ openMore.forEach((open)=>
         }
     })
 })
-
+filterLog.addEventListener('click',()=>
+{
+    if(!filterLogcon.classList.contains('active'))
+    {
+        filterLogcon.classList.add('active');
+        activelog_overlay.classList.add('active');
+    }
+    else
+    {
+        filterLogcon.classList.remove('active');
+        activelog_overlay.classList.remove('active'); 
+    }
+})
+personFilter.addEventListener('click',()=>
+{
+    if(!personFiltercon.classList.contains('active'))
+    {
+        personFiltercon.classList.add('active');
+        activelog_overlay.classList.add('active');
+    }
+    else
+    {
+        personFiltercon.classList.remove('active');
+        activelog_overlay.classList.remove('active'); 
+    }
+})
 // hide/show proj_add
 showprojAdd.forEach((projAdd)=>
 {
@@ -472,6 +502,9 @@ function hideProjdetail()
         })
         favDiv.classList.remove('active');
         file_overlay.classList.remove('active');
+        activelog_overlay.classList.remove('active');
+        filterLogcon.classList.remove('active');
+        personFiltercon.classList.remove('active');
     }  
 }
 
@@ -533,6 +566,13 @@ function hideFilterdiv(e) {
             open.classList.remove('active');
         })
         file_overlay.classList.remove('active');
+    }
+    else if(e.target==activelog_overlay)
+    {
+        filterLogcon.classList.remove('active');
+        activelog_overlay.classList.remove('active'); 
+        personFiltercon.classList.remove('active');
+        activelog_overlay.classList.remove('active'); 
     }
 }
 
