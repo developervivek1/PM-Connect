@@ -102,7 +102,6 @@
                                     </ul>
                                 </div>
                             </div>
-                            
                             <div class="update tabproj_con active">
                                 <textarea name="" id="summernote">
                                 </textarea>
@@ -146,7 +145,7 @@
                                     <p class="text-center text-secondary">No Updates Yet</p>
                                 </div>
                             </div>
-                            <!--add file content start -->
+                            <!-- file content start -->
                             <div class="files tabproj_con">
                                 <div class="file_overlay"></div>
                                 <div class="needtoupload">
@@ -164,7 +163,6 @@
                                     </div>
                                 </div>
 
-                                <!-- after add file section -->
                                 <div class="uploaded d-none">
                                     <div class="afterupload">
                                         <div class="row">
@@ -208,7 +206,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                 <!-- after add file section end-->
                             </div>
                             <!-- file content closed -->
                             <!-- active_log content -->
@@ -557,7 +554,7 @@
                                 <span class="tooltiptext">Request</span>
                                 <a href="mview-request.html" class="button1">
                                     <img src="icons/Request-Blue1.svg" alt="Image one" width="38" class="button__img1">
-                                    <img src="icons/Request-white.svg" alt="Image two" class="button__img1">
+                                    <img src="icons/request-white.svg" alt="Image two" class="button__img1">
                                 </a>
                             </li>
                             <li>
@@ -639,7 +636,7 @@
                                 </li>
                                 <li class="active1" data-target=".calendar">
                                     <!-- <i class="material-icons">calendar_today</i> -->
-                                    <img src="icons/calender-blue.svg" class="img1" alt="">
+                                    <img src="icons/calender-1.svg" class="img1" alt="">
                                     <img src="icons/calender.svg" class="img2" alt="">
                                     Calendar
                                 </li>
@@ -1064,7 +1061,7 @@ review</P> -->
                                                                 <p>Milestone Name</p>
                                                             </td>
                                                             <td class="divmile2">
-                                                                <img src="icons/subitm.svg" alt="">
+                                                                <img src="icons/subitm.svg" alt="" id="openTask">
                                                             </td>
                                                             <td class="divmile3">
                                                                 <div><img src="img/client1.jpg" alt=""></div>
@@ -1088,17 +1085,103 @@ review</P> -->
                                                             </td>
                                                         </tr>
                                                     </table>
-                                                    <!-- <div class="divmile7">
-dfsdf
-</div> -->
                                                 </div>
                                             </div>
                                         </div>
                                         <!-- main mile closed -->
 
                                         <div class="milestone4">
-                                            <div class="addtask_mile">
-                                                <!-- <p>Add Task</p> -->
+                                            <div class="row">
+                                                <div class="task_added">
+                                                    <div class="row fixedMile">
+                                                        <table>
+                                                            <tr>
+                                                                <td class="divmile1 mysticky2">
+                                                                    <p>Task Name</p>
+                                                                </td>
+                                                                <td class="divmile2">
+                                                                    <img src="icons/subitm.svg" alt="" id="addSubtask">
+                                                                </td>
+                                                                <td class="divmile3">
+                                                                    <div><img src="img/client1.jpg" alt=""></div>
+                                                                    <span><img src="icons/plus-1.svg" alt=""></span>
+                                                                </td>
+                                                                <td class="divmile4">
+                                                                    <div>
+                                                                        <p>On Track</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="divmile5">
+                                                                    <p>Nov 3</p>
+                                                                </td>
+                                                                <td class="divmile6">
+                                                                    <div>
+                                                                        <p>Nov 20</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div></div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="Subtask_added">
+                                                    <div class="row fixedMile">
+                                                        <table>
+                                                            <tr>
+                                                                <td class="divmile1 mysticky2">
+                                                                    <p>SubTask</p>
+                                                                </td>
+                                                                <td class="divmile2">
+                                                                    
+                                                                </td>
+                                                                <td class="divmile3">
+                                                                    <div><img src="img/client1.jpg" alt=""></div>
+                                                                    <span><img src="icons/plus-1.svg" alt=""></span>
+                                                                </td>
+                                                                <td class="divmile4">
+                                                                    <div>
+                                                                        <p>On Track</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="divmile5">
+                                                                    <p>Nov 3</p>
+                                                                </td>
+                                                                <td class="divmile6">
+                                                                    <div>
+                                                                        <p>Nov 20</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div></div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="Subtaskname_hide">
+                                                    <div class="task_name">
+                                                        <p>SubTask Name</p>
+                                                        <button class="btn">Add</button>
+                                                    </div>
+                                                </div>
+                                                <div class="addSubtask_hide">
+                                                    <div class="addtask_mile">
+                                                        <p class="mysticky2">Add SubTask</p>
+                                                    </div>
+                                                </div> 
+                                                <div class="taskname_hide">
+                                                    <div class="task_name">
+                                                        <p>Task Name</p>
+                                                        <button class="btn">Add</button>
+                                                    </div>
+                                                </div>                                
+                                                <div class="addtask_hide">
+                                                    <div class="addtask_mile">
+                                                        <p class="mysticky2">Add Task</p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
 
@@ -2073,7 +2156,7 @@ review</P> -->
 
                         <div class="mysticky h1fixed">
                             <div class="kanban-title">
-                                <div class="custom-select" style="width:127px;">
+                                <!-- <div class="custom-select" style="width:127px;">
                                     <select>
                                         <option class="fs-11" value="0">
                                             <h1 class="fs-3">Projects</h1>
@@ -2085,8 +2168,32 @@ review</P> -->
                                         <option value="4">Project 4</option>
 
                                     </select>
-                                </div>
+                                </div> -->
 
+                                <div class="select-box">
+                                    <div class="options-container">
+                                        <div class="option" style="display: block;">
+                                            <input type="radio" class="radio" id="automobiles" name="category">
+                                            <label for="automobiles">Project 1</label>
+                                        </div>
+                                        <div class="option" style="display: block;">
+                                            <input type="radio" class="radio" id="film" name="category">
+                                            <label for="film">Project 1</label>
+                                        </div>
+                                        <div class="option" style="display: block;">
+                                            <input type="radio" class="radio" id="science" name="category">
+                                            <label for="science">Project 3</label>
+                                        </div>
+                                        <div class="option" style="display: block;">
+                                            <input type="radio" class="radio" id="art" name="category">
+                                            <label for="art">Project 4</label>
+                                        </div>
+                                    </div>
+                                    <div class="selected">Project 1</div>
+                                    <div class="search-box">
+                                        <input type="text" placeholder="Project Name">
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
@@ -2532,6 +2639,7 @@ review</P> -->
     <!-- kanbanjs -->
     <script src="js/kanban.js"></script>
     <script src="js/usersearch.js"></script>
+    <script src="js/dropdown.js"></script>
 </body>
 
 </html>

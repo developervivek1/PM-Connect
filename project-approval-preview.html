@@ -18,6 +18,7 @@
     <!-- custom css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/projapp_preview.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <title>Project Approval Change</title>
 </head>
 
@@ -25,76 +26,96 @@
     <section class="manage_view mview_req">
         <div class="container-fluid">
             <div class="myoverlay"></div>
+
+           
             <div class="row">
-                <div class="div1">
-                    <h3><img src="icons/logo.svg" alt="logo"></h3>
-                    <ul>
-                        <li>
-                            <span class="tooltiptext">Dashboard</span>
-                            <a href="#" class="button1">
-                                <img src="icons/dashboard.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/dashboardwhite.svg" alt="Image two" class="button__img1">
-                            </a>
-                        </li>
-                        <li>
-                            <span class="tooltiptext">Notifications</span>
-                            <a href="#" class="button1">
-                                <img src="icons/Notification-Blue.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/notfiwhite.svg" alt="Image two" class="button__img1">
-                            </a>
-                        </li>
-                        <li class="active">
-                            <span class="tooltiptext">Request</span>
-                            <a href="#" class="button1">
-                                <img src="icons/Request-Blue.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/request-white.svg" alt="Image two" class="button__img1">
-                            </a>
-                        </li>
-                        <li>
-                            <span class="tooltiptext">Project</span>
-                            <a href="#" class="button1">
-                                <img src="icons/project.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/project-white.svg" alt="Image two" class="button__img1">
-                            </a>
-                        </li>
-                        <li>
-                            <span class="tooltiptext">View Progress</span>
-                            <a href="#" class="button1">
-                                <img src="icons/Viewprogress-Blue.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/Progresslist-white.svg" alt="Image two" class="button__img1"
-                                    style="width: 1.3vw;">
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <span class="tooltiptext">Reports</span>
-                            <a href="#" class="button1">
-                                <img src="icons/Reports.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/reportwhite.svg" alt="Image two" class="button__img1">
-                            </a>
-                        </li>
-                        <li>
-                            <span class="tooltiptext">Search</span>
-                            <a href="#" class="button1">
-                                <img src="icons/search.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/searchwhite.svg" alt="Image two" class="button__img1">
-                            </a>
-                        </li>
-                        <li>
-                            <span class="tooltiptext">Help & Support</span>
-                            <a href="#" class="button1">
-                                <img src="icons/help.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/helpwhite.svg" alt="Image two" class="button__img1">
-                            </a>
-                        </li>
-                        <li><span>S</span>
-                            <span class="tooltiptext">My Profile
-                                <br> Log Out
-                            </span>
-                        </li>
-                    </ul>
+                <nav>
+                    <div class="div1">
+                        <h3><img class="d-none d-md-block" src="icons/logo.svg" alt="logo">
+                            <img class="d-block d-md-none" src="icons/HamburgerON.svg" width="38px" alt="">
+                        </h3>
+                        <ul>
+                            <li>
+                                <span class="tooltiptext">Dashboard</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/dashboard.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/dashboardwhite.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li>
+                                <span class="tooltiptext">Notifications</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/Notification-Blue1.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/notfiwhite.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li class="active">
+                                <span class="tooltiptext">Request</span>
+                                <a href="mview-request.html" class="button1">
+                                    <img src="icons/Request-Blue1.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/Request-white.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li>
+                                <span class="tooltiptext">Project</span>
+                                <a href="management-view-project-list.html" class="button1">
+                                    <img src="icons/project.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/project-white.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li>
+                                <span class="tooltiptext">View Progress</span>
+                                <a href="usertask.html" class="button1">
+                                    <img src="icons/Viewprogress-Blue.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/Progresslist-white.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <span class="tooltiptext">Reports</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/Reports.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/reportwhite.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li>
+                                <span class="tooltiptext">Search</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/search.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/searchwhite.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li>
+                                <span class="tooltiptext">Help &amp; Support</span>
+                                <a href="#" class="button1">
+                                    <img src="icons/help.svg" alt="Image one" width="38" class="button__img1">
+                                    <img src="icons/helpwhite.svg" alt="Image two" class="button__img1">
+                                </a>
+                            </li>
+                            <li class="tooltip1">
+                                <p class="tooltiptext1">
+                                    <span class="">S</span>
+                                </p><p class="tooltiptext tooltiptext1">
+                                    <span class=""> My Profile</span>
+                                    <br>
+                                    <a href="signIn.html" class=""> <span> Log Out </span> </a>
+                                </p>
+                                <p></p>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="mobile-menuhead">
+                    <div class="hamberger-menu">
+                        <span><img src="icons/Hamburger.svg" alt=""></span>
+                    </div>
+                    <div class="logo_div">
+                        <h1>Emaar</h1>
+                    </div>
+                    <div></div>
                 </div>
+               
                 <div class="proj_approval">
                     <div class="row">
                         <div class="proj_form">
@@ -676,6 +697,8 @@
     </section>
     <!--section closed-->
     <script src="js/projappchg.js"></script>
+    <script src="js/scriptfilter.js"></script>
+    <script src="js/menuscript.js"></script>
 </body>
 
 </html>

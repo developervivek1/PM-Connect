@@ -387,4 +387,12 @@ letter-spacing: 0.15px;
 }
 
 
+@media (max-width:768px){
+    .proj_approval .proj_form {
+        margin-top: 5rem;
+
+    }
+}
+
+
 

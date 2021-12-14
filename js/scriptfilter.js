@@ -75,6 +75,15 @@ const personFilter =document.querySelector('.proj_filter .proj_edit .proj_conten
 const activelog_overlay =document.querySelector('.proj_filter .proj_edit .proj_content .active_log .activelog_overlay');
 const filterLogcon =document.querySelector('.proj_filter .proj_edit .proj_content .active_log .btnleft .filterlog_con');
 const personFiltercon =document.querySelector('.proj_filter .proj_edit .proj_content .active_log .btnleft .person_con');
+const open_Task =document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 #openTask');
+const milestone4 =document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone4');
+const open_taskName =milestone4.querySelector('.addtask_hide');
+const open_taskAdded =milestone4.querySelector('.taskname_hide');
+const addedTask =milestone4.querySelector('.task_added');
+const open_SubTask =milestone4.querySelector('#addSubtask');
+const open_SubtaskName =milestone4.querySelector('.addSubtask_hide');
+const open_SubtaskAdded =milestone4.querySelector('.Subtaskname_hide');
+const addedSubtask =milestone4.querySelector('.Subtask_added');
 let statusColor, statusText, textVal, value,pageYedit,h5con,adjacentNode,fixedValue1=121,fixedValue2=121,fixedValue3=121; 
 
 const ImageDisable=[{disSrc: 'icons/ColorImage/assignees_disab.png',enabSrc: 'icons/Assigness.svg'},
@@ -630,6 +639,13 @@ milediv.addEventListener('click', () => {
         showFinalmile.classList.remove('showmain_mile');
         root.style.setProperty("--rot", "0deg");
         dflexVisible.classList.remove('visible');
+        milestone4.classList.remove('active');
+        open_taskAdded.classList.remove('active');
+        open_taskName.classList.remove('active');
+        addedTask.classList.remove('active');
+        open_SubtaskAdded.classList.remove('active');
+        open_SubtaskName.classList.remove('active');
+        addedSubtask.classList.remove('active');
     }
 })
 
@@ -656,6 +672,56 @@ function showFinal() {
         showFinalmile.classList.remove('showmain_mile');
     }
 }
+open_Task.addEventListener('click', ()=>
+{
+    if(!milestone4.classList.contains('active') && !open_taskName.classList.contains('active'))
+    {
+        milestone4.classList.add('active');
+        open_taskName.classList.add('active');
+    }
+})
+open_taskName.addEventListener('click',function()
+{
+    if(milestone4.classList.contains('active') && this.classList.contains('active') && !open_taskAdded.classList.contains('active'))
+    {
+        this.classList.remove('active');
+        open_taskAdded.classList.add('active');
+    }
+})
+open_taskAdded.addEventListener('click',function()
+{
+    if(!open_taskName.classList.contains('active') && !addedTask.classList.contains('active') && this.classList.contains('active'))
+    {
+        this.classList.remove('active');
+        open_taskName.classList.add('active')
+        addedTask.classList.add('active')
+    }
+})
+open_SubTask.addEventListener('click',()=>
+{
+    if(!open_SubtaskName.classList.contains('active'))
+    {
+        open_SubtaskName.classList.add('active');
+    }
+})
+open_SubtaskName.addEventListener('click', function()
+{
+    if(this.classList.contains('active') && !open_SubtaskAdded.classList.contains('active'))
+    {
+        this.classList.remove('active');
+        open_SubtaskAdded.classList.add('active');
+    }
+})
+open_SubtaskAdded.addEventListener('click', function()
+{
+    if(!addedSubtask.classList.contains('active') && this.classList.contains('active') && 
+    !open_SubtaskName.classList.contains('active'))
+    {
+        this.classList.remove('active');
+        addedSubtask.classList.add('active')
+        open_SubtaskName.classList.add('active')
+    }
+})
 
 // Status Update Edit and Done
 clickEdit.forEach((edit) => {
@@ -663,7 +729,6 @@ clickEdit.forEach((edit) => {
         showStatus(e);
     })
 })
-
 function showStatus(e)
 {
     pageYedit = e.pageY;

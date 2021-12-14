@@ -342,7 +342,7 @@ padding: 8px 22px;
 z-index: 3;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 {
-width: 418%;
+width: 412%;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile > .row {
 width: 418%;
@@ -354,18 +354,17 @@ position: sticky;
 z-index: 1;
 background-color: #edf5ff;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile1 {
-flex: 0 0 15%;
-max-width: 15%;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile1.mysticky2
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile1.mysticky2,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .divmile1.mysticky2
 {
 background-color: #d8e2fc !important;
 height: 42px;
 }
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .divmile1.mysticky2
+{
+    padding-left: 41px;
+}
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile > .row .divmile1 {
-flex: 0 0 15%;
-max-width: 15%;
 height: 25px;
 position: sticky;
 left: 0;
@@ -373,11 +372,11 @@ padding-left: 10px;
 z-index: 1;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile{
-margin: 20px 0 20px 1rem;
+margin: 8px 0 8px 1rem;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone.showmilestone
 {
-margin: 20px 0 20px 0.3rem;
+margin: 8px 0 20px 0.3rem;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone.showmilestone >.mysticky3
 {
@@ -388,28 +387,7 @@ left: 0;
 padding-left: 17px;
 background-color: #ECF0F9;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile > .row .divmile4
-{
-flex: 0 0 13.1%;
-max-width: 13.1%;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile2,
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile3 {
-flex: 0 0 10%;
-max-width: 10%;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile2 {
-flex: 0 0 8.5%;
-max-width: 8.5%;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile3 {
-flex: 0 0 10.3%;
-max-width: 10.3%;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile4 {
-flex: 0 0 13%;
-max-width: 13%;
-}
+
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone {
 width: 418%;
 z-index: 1;
@@ -769,14 +747,44 @@ font-size: 1.8rem;
 display: none;
 }
 .row .fixedMile .divmile1{
-background-color: blue !important;
+    background: #D8E2FC 0% 0% no-repeat padding-box;
 }
-/* .manage_view .div2 ul li div:first-child span .number{
-visibility: hidden;
-} */
 .background-parent{
 padding: 12px;
 background-color: #D8E2FC;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 {
+    margin: 0rem 0 0rem 1rem;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4> .row
+{
+    width: 418%;
+    flex-wrap: wrap;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile {
+    margin-bottom: 0rem;
+    padding-left: 0px;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .task_added,
+ .proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .taskname_hide, 
+ .proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .addtask_hide,
+  .proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .Subtask_added, 
+  .proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .Subtaskname_hide, 
+  .proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .addSubtask_hide {
+    margin-bottom: 0.8rem;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .addtask_hide.active {
+    margin-top: 0rem;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .addtask_mile p.mysticky2 {
+    background-color: transparent;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .addtask_hide
+{
+    margin-bottom: 0rem;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .addtask_mile, .proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .task_name {
+    background: #e7edfb 0% 0% no-repeat padding-box;
 }
 }
 
@@ -787,4 +795,87 @@ background-color: #D8E2FC;
 .child-border {
  width: 121%;
 }
+}
+
+
+.main
+{
+    /* width: 100%;
+    height: 100vh; */
+    /* margin-top: 5rem; */
+    /* justify-content: center;
+    display: flex; */
+}
+/* .main .custom-select
+{
+    width: 27.5%;
+    position: relative;
+} */
+.custom-select .box11
+{
+    height: 42px;
+    width: 90%;
+    padding: 0 15px;
+    font-size: 13px;
+    outline: none;
+    background: #ffffff;
+    margin: 15px 0;
+    border-radius: 6px;
+    border: 1px solid #dbdbdb;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 6%);
+    line-height: 1.5;
+    transition: border-color .15s ease-in-out;
+    /* box-shadow .15s ease-in-out; */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+.custom-select .box11 img
+{
+    position: absolute;
+    top: 17px;
+    right: 4.4%;
+}
+.custom-select .box11 p
+{
+    color: #8b8b8b;
+}
+.option-container
+{
+    position: absolute;
+    top: 49px;
+    left: 0;
+    width: 90%;
+    max-height: 0px;
+    overflow-y: auto;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    /* border: 1px solid #dadada; */
+    border-radius: 6px;
+    background: #ffff;
+    z-index: 30;
+    transition: all 0.35s;
+}
+.option-container.active
+{
+    max-height: 350px;
+}
+.option-container .option
+{
+    margin: 8px 0;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 25px;
+}
+.option-container .option:hover
+{
+    background-color: rgb(238, 242, 255);
+}
+
+ .option-container .option p
+{
+    color: #8b8b8b;
+    font-size: 15px;
 }

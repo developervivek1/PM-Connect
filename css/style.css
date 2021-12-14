@@ -415,12 +415,6 @@ margin-bottom: 0rem;
 {
 width: 100%;
 }
-.row
-{
-display: flex;
-align-items: center;
-flex-wrap: wrap;
-}
 nav
 {
 margin: 0;
@@ -2401,7 +2395,8 @@ display: flex;
 {
 margin-top: 3px;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milehide .milestone2 button
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milehide .milestone2 button,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .task_name button
 {
 background-color: #2D62ED;
 width: 74px;
@@ -2412,6 +2407,7 @@ color: #fff;
 text-transform: uppercase;
 letter-spacing: 0.3px;
 cursor: pointer;
+font-size: 12px;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone .milehide
 {
@@ -2435,29 +2431,7 @@ margin-bottom: 0rem;
 {
 display: block;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile1
-{
-flex: 0 0 26%;
-max-width: 26%;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile2,
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile3,
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile4
-{
-flex: 0 0 12%;
-max-width: 12%;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile5,
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile6
-{
-flex: 0 0 8%;
-max-width: 8%;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile7
-{
-flex: 0 0 8%;
-max-width: 8%;
-}
+
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile7 div
 {
 width: 20px;
@@ -2486,7 +2460,14 @@ width: 100%;
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile4,
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile5,
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile6,
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile7
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile7,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile1,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile2,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile3,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile4,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile5,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile6,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile7
 {
 display: inline-flex;
 }
@@ -2501,56 +2482,43 @@ opacity: 1;
 margin-right: 2rem;
 margin-top: 4px;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile1 p
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile1 p,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile1 p
 {
 font-size: 12px;
 color:#1E2022;
 opacity: 0.9;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile2
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile2 img,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile2 img
 {
-flex: 0 0 11.5%;
-max-width: 11.5%;
+  cursor: pointer;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile3
-{
-flex: 0 0 12%;
-max-width: 12%;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile4
-{
-flex: 0 0 12%;
-max-width: 12%;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile5
-{
-flex: 0 0 7.5%;
-max-width: 7.5%;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile6
-{
-flex: 0 0 8%;
-max-width: 8%;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile3 div
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile3 div,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile3 div
+
 {
 width: 22px;
 height: 22px;
 border-radius: 30px;
 margin-right: 0.32rem;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile3 div img
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile3 div img,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile3 div img
+
 {
 width: 100%;
 height: 100%;
 border-radius: 30px;
 object-fit: cover;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile2 i
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile2 i,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile2 i
 {
 color: #8C94A1;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile4 div
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile4 div,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile4 div
 {
 width: 100px;
 height: 42px;
@@ -2561,13 +2529,15 @@ font-size: 14px;
 color: #ffffff;
 background: #F6BE75 0% 0% no-repeat padding-box;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile5
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile5,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile5
 {
 font-size: 14px;
 color: #1E2022;
 font-weight: 600;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile6
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile6,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile6
 {
 height: 20px;
 display: flex;
@@ -2577,9 +2547,84 @@ background-color: #1C1F3B;
 border-radius: 15px;
 color: #fff;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile6 p
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile6 p,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile6 p
 {
 font-size: 13px;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4
+{
+  margin: 2rem 0 2rem 2rem;
+  width: 98%;
+}
+/* changes 01 */
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .addtask_mile,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .task_name
+{
+  background: #ECF0F9 0% 0% no-repeat padding-box;
+  display: flex;
+  align-items: center;
+  padding-left: 42px;
+  height: 42px;
+  cursor: pointer;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .task_name
+{
+  background-color: #D8E2FC;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .task_name p,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .addtask_mile p
+{
+  font-size: 12px;
+  color: #1E2022;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .task_added
+{
+  margin-bottom: 1.8rem;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .task_added,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .Subtask_added
+{
+  margin-left: 8px;
+  width: 98.5%;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile
+{
+  background: #D8E2FC 0% 0% no-repeat padding-box;
+    padding-left: 41px;
+    margin-bottom: 0.5rem;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4
+{
+  display: none;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4.active
+{
+  display: block;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .task_added,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .taskname_hide,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .addtask_hide,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .Subtask_added,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .Subtaskname_hide,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .addSubtask_hide
+{
+  display: none;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .task_added.active,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .taskname_hide.active,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .addtask_hide.active,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .Subtask_added.active,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .Subtaskname_hide.active,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .addSubtask_hide.active
+{
+  display: block;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .addtask_hide.active {
+  margin-top: 1.5rem;
 }
 /*@here  */
 /*  */
