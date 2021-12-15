@@ -11,8 +11,8 @@
 {
     margin-top: 7%;
     margin-left: 0.2%;
-    overflow-x: hidden;
-    overflow-y: auto;
+    /* overflow-x: hidden;
+    overflow-y: auto; */
 }
 .user_task .row
 {
@@ -251,6 +251,7 @@
     .manage_view.user .divfilter2
     {
         margin-left: -0.1%;
+        overflow-x: scroll;
     }
     .manage_view.user .divfilter2 .top_up {
         left: 0px;
