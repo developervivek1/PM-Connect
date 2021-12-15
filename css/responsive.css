@@ -529,8 +529,9 @@ z-index: 1;
 left: 234%;
 transform: rotate(90deg) translateX(1100%);
 bottom: 0px;
-width: 2px;
+width: 1px;
 height: 70px;
+box-sizing: border-box;
 }
 .manage_view .div2 ul.stepper5 li div:first-child::before {
 left: 185%;
@@ -811,6 +812,7 @@ background-color: #D8E2FC;
     padding: 0 15px;
     font-size: 13px;
     outline: none;
+    
     background: #ffffff;
     /* margin: 15px 0; */
     margin-bottom: 4.2rem;
