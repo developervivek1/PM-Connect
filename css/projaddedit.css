@@ -1608,7 +1608,7 @@ box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         padding: 2.5rem 1rem 15rem 1rem;
     }
     .proj_filter .proj_add .main_add .border-bottom {
-        display: none;
+        margin-bottom: 2rem;
     }
     .proj_filter .proj_add .main_add .mt-5 {
         padding-left: 0px;
