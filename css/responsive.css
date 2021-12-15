@@ -529,6 +529,7 @@ z-index: 1;
 left: 234%;
 transform: rotate(90deg) translateX(1100%);
 bottom: 0px;
+border-left: 1px dashed #999999;
 width: 1px;
 height: 70px;
 box-sizing: border-box;
@@ -818,7 +819,7 @@ background-color: #D8E2FC;
     margin-bottom: 4.2rem;
     border-radius: 6px;
     border: 1px solid #dbdbdb;
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 6%);
+    /* box-shadow: 0 1px 3px 0 rgb(0 0 0 / 6%); */
     line-height: 1.5;
     transition: border-color .15s ease-in-out;
     /* box-shadow .15s ease-in-out; */
