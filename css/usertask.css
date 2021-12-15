@@ -227,6 +227,7 @@
     }
     .user_task .stickytask
     {
+        border-right: 1px solid #ededed;
         position: sticky;
         top: 0;
         left: 0;

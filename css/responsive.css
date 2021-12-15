@@ -158,7 +158,8 @@ z-index: 1;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .head1.mysticky2
 {
-height: 0px;
+height: 16px;
+background: #edf6ff;
 }
 .proj_filter .divfilter2 .fixedMile > .mysticky2
 {
@@ -420,7 +421,7 @@ display: inline-block;
 z-index: 2;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .head1 {
-border: 10px solid #edf6ff;
+border: 0px solid #EEF6FB;
 border-left: 2px solid #edf6ff;
 }
 .proj_filter .divfilter2 .project1:nth-child(2) .projectcon1 .head1
