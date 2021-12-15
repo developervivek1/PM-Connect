@@ -4,6 +4,10 @@
 {
 background: #F2F5F8;
 }
+
+.mview_req{
+    background: white;
+}
 .manage_view .div1 {
 flex: 0 0 23%;
 max-width: 23%;
