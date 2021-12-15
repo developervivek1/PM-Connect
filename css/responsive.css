@@ -531,19 +531,20 @@ box-shadow: none;
 }
 .manage_view .div2 ul li div:first-child::before {
 z-index: 1;
-left: 234%;
-transform: rotate(90deg) translateX(1100%);
-bottom: 0px;
+left: 223%;
+transform: rotate(
+90deg) translateX(1100%);
+bottom: -7px;
 border-left: 0px dashed #999999 !important;
-/* width: 0px; */
-height: 70px;
+width: 1px;
+height: 63px;
 box-sizing: border-box;
 }
-.manage_view .div2 ul.stepper5 li div:first-child::before {
+/* .manage_view .div2 ul.stepper5 li div:first-child::before {
 left: 185%;
 transform: rotate(90deg) translateX(549%);
 height: 46px;
-}
+} */
 .manage_view .div2 ul.stepper5 li:last-child div:first-child::before {
 content: '';
 width: 0;

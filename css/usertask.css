@@ -39,8 +39,9 @@
 .user_task .userdiv8,
 .user_task .userdiv9
 {
-    flex: 0 0 calc(100% /9);
-    max-width: calc(100% /9);
+    /* flex: 0 0 calc(100% /9);
+    max-width: calc(100% /9); */
+    width: inherit !important;
     padding: 16px 15px;
     border-top: 1px solid #ededed;
     border-left: 1px solid #ededed;
