@@ -530,7 +530,7 @@ left: 234%;
 transform: rotate(90deg) translateX(1100%);
 bottom: 0px;
 border-left: 0px dashed #999999 !important;
-width: 0px;
+/* width: 0px; */
 height: 70px;
 box-sizing: border-box;
 }
