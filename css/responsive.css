@@ -794,12 +794,12 @@ background-color: #D8E2FC;
 
 .custom-select .box11 {
   
-    width: 98%;
+    width: 98% !important;
 }
 
 .option-container {
    
-    width: 98%;
+    width: 98% !important;
 }
 
 
