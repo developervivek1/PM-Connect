@@ -788,6 +788,21 @@ background-color: #D8E2FC;
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .addtask_mile, .proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .task_name {
     background: #e7edfb 0% 0% no-repeat padding-box;
 }
+
+
+/*  */
+
+.custom-select .box11 {
+  
+    width: 98%;
+}
+
+.option-container {
+   
+    width: 98%;
+}
+
+
 }
 
 @media (min-width: 800px) and (max-width:950px) {
