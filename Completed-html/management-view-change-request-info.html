@@ -162,25 +162,55 @@
                                     </div>
                                     <div class="col-md-6">
                                         <p>Priority <span>*</span></p>
-                                        <select name="" id="">
-                                            <option value="" selected disabled>Select the priority</option>
-                                            <option value="---">---</option>
-                                            <option value="---">---</option>
-                                            <option value="---">---</option>
-                                            <option value="---">---</option>
-                                        </select>
+                                        <div class="custom-select position-relative">
+                                            <div class="box11">
+                                                <p class="m-0">Select The Priority</p>
+                                                <img src="icons/arrowdown.svg" alt="">
+                                            </div>
+                                            <div class="option-container">
+                                                <div class="option">
+                                                    <p>Select the priority 1</p>
+                                                </div>
+                                                <div class="option">
+                                                   <p>Select the priority 2</p>
+                                               </div>
+                                               <div class="option">
+                                                   <p>Select the priority 3 </p>
+                                               </div>
+                                               <div class="option">
+                                                   <p>Select the priority 4</p>
+                                               </div>
+                                              
+                                            </div>
+                                       
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <p>Project Name</p>
-                                        <select name="" id="">
-                                            <option value="Select" selected disabled>Select</option>
-                                            <option value="Option 1">Option 1</option>
-                                            <option value="Option 2">Option 2</option>
-                                            <option value="Option 3">Option 3</option>
-                                            <option value="Option 4">Option 4</option>
-                                        </select>
+                                        <div class="custom-select position-relative">
+                                            <div class="box11">
+                                                <p class="m-0">Select</p>
+                                                <img src="icons/arrowdown.svg" alt="">
+                                            </div>
+                                            <div class="option-container">
+                                                <div class="option">
+                                                    <p>Select the priority 1</p>
+                                                </div>
+                                                <div class="option">
+                                                   <p>Select the priority 2</p>
+                                               </div>
+                                               <div class="option">
+                                                   <p>Select the priority 3 </p>
+                                               </div>
+                                               <div class="option">
+                                                   <p>Select the priority 4</p>
+                                               </div>
+                                              
+                                            </div>
+                                       
+                                        </div>
                                     </div>
                                     <div class="col-md-6 check_div">
                                         <p>Change Type</p>
@@ -214,18 +244,23 @@
                                 </div>
                                 <div class="col-md-12">
                                     <p>Change Summary</p>
-                                    <input type="textarea" placeholder="Summary">
+                                    <textarea type="textarea" class="text-decoration-none" name="" id="" cols="30" rows="7" placeholder="Summary"></textarea>
+                                   
                                 </div>
                                 <div class="col-md-12">
                                     <p>Change Impact</p>
-                                    <input type="textarea" placeholder="Summary">
+                                    <textarea type="textarea" class="text-decoration-none" name="" id="" cols="30" rows="7" placeholder="Summary"></textarea>
+                                   
                                 </div>
                                 <div class="col-md-12">
                                     <p>Plan of Action</p>
-                                    <input type="textarea" placeholder="Summary">
+                                    <textarea type="textarea" class="text-decoration-none" name="" id="" cols="30" rows="7" placeholder="Summary"></textarea>
+                                   
                                 </div>
                             </div>
                             <!--con1 closed-->
+
+
                             <div class="con2 step_forward">
                                 <h2>Attachments</h2>
                                 <p>Provide the information</p>
@@ -347,7 +382,50 @@
         <!--container closed-->
     </section>
     <!--section closed-->
-
+    <script>
+        const boxTrigger = document.querySelectorAll('.box11');
+        const boxContent = document.querySelectorAll('.box11 p');
+        const options = document.querySelectorAll('.option-container .option');
+        const optionsCon = document.querySelectorAll('.option-container p');
+    
+        boxTrigger.forEach((box,ind)=>
+        {
+            box.addEventListener('click',(e)=>
+            {
+                pindex = ind;
+                if(!e.target.closest('.custom-select').querySelector('.option-container').classList.contains('active'))
+                {
+                    e.target.closest('.custom-select').querySelector('.option-container').classList.add('active');
+                }
+                else
+                {
+                    e.target.closest('.custom-select').querySelector('.option-container').classList.remove('active');
+                }
+            })
+        })
+        options.forEach((option)=>
+        {
+            option.addEventListener('click',(e)=>
+            {
+                e.stopPropagation();
+                let containerClose = e.target.closest('.option-container');
+                boxContent[pindex].style.color="#000";
+                boxContent[pindex].innerText=e.target.querySelector('p').innerText; 
+                containerClose.classList.remove('active');
+            })
+        })
+        optionsCon.forEach((option)=>
+        {
+            option.addEventListener('click',(e)=>
+            {
+                e.stopPropagation();
+                let containerClose = e.target.closest('.option-container');
+                boxContent[pindex].style.color="#000";
+                boxContent[pindex].innerText=e.target.innerText; 
+                containerClose.classList.remove('active');
+            })
+        })
+    </script>
 
     <script src="js/scriptzee.js"></script>
 

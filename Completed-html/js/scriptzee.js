@@ -15,7 +15,7 @@ let ind = 0, step_num = 1, username, infoselect, infospan;
 
 nextbtn.addEventListener('click', () => {
     if (ind >= 2) {
-        location.href = `MViewchgreqform.html`;
+        location.href = `management-view-request-new-request-submit.html`;
     }
     ind++;
     step_num++;
@@ -190,5 +190,4 @@ const filterUser = (searchword) => {
         }
     })
 }
-
 

@@ -16,7 +16,7 @@ function hideFilterdiv(e) {
     if (e.type === "click" && e.target == overlay) {
         mobileMenu.classList.remove('active');
         overlay.classList.remove('active');
-        console.log('hello');
+        // console.log('hello');
     }
 }
 

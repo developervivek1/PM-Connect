@@ -17,7 +17,7 @@
     max-width: 94.5%;
     margin-left: 5.5%;
     min-height: 100vh;
-    padding: 35px 0px;
+    padding: 25px 0px 35px;
 }
 .proj_approval .proj_form
 {
@@ -267,11 +267,10 @@ letter-spacing: 0.15px;
 .proj_approval .proj_form .main_form .con_pad .btn_div .deleg_popup 
 {
     position: absolute;
-    left: 43.5%;
-    transform: translateX(-50%);
+    right: 495px;
     bottom: 138%;
     background-color: #fff;
-    z-index: 75;
+    z-index: 70;
     width: 338px;
     max-height: 340px;
     overflow-y: auto;
@@ -302,8 +301,7 @@ letter-spacing: 0.15px;
 }
 .proj_approval .proj_form .main_form .con_pad .btn_div .deleg_popup 
 {
-    right: 20%;
-    transform: translateX(5%);
+    right: 308px;
 }
 .proj_approval .proj_form .main_form .con_pad .btn_div .reqinfo_popup h5,
 .proj_approval .proj_form .main_form .con_pad .btn_div .deleg_popup h5
@@ -384,6 +382,17 @@ letter-spacing: 0.15px;
     font-size: 1.5rem;
     color: #171E48;
     opacity: 0.87;
+}
+
+
+
+
+
+@media (max-width:768px){
+    .proj_approval .proj_form {
+        margin-top: 5rem;
+
+    }
 }
 
 
