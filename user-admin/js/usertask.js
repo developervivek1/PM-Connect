@@ -54,7 +54,7 @@ s1.addEventListener('change',()=>
 
 function cloneTask()
 {
-    for(let i=0;i<61;i++)
+    for(let i=0;i<35;i++)
     {
         let clone1=usertask1.cloneNode(true);
         addinRow.appendChild(clone1);

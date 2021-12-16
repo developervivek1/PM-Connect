@@ -101,7 +101,7 @@
                                     <span class="">S</span>
                                 <p class="tooltiptext tooltiptext1">
                                     <span class=""> My Profile</span>
-                                    
+                                    <br>
                                     <a href="signIn.html"> <span> Log Out </span> </a>
                                 </p>
                                 </p>
@@ -127,79 +127,87 @@
                             </div>
                         </div>
                     </div>
-                    <div class="user_task">
-                        <div class="row row-user-task">
-                            <div class="task_head1 stickytask">
-                                <p>Project Name</p> 
-                            </div>
-                            <div class="task_head2">
-                                <p>Reference</p> 
-                            </div>
-                            <div class="task_head3">
-                                <p>Start Date</p>    
-                            </div>
-                            <div class="task_head4">
-                                <p>End Date</p> 
-                            </div>
-                            <div class="task_head5">
-                                <p>Total Days</p> 
-                            </div>
-                            <div class="task_head6">
-                                <p>Project submitted</p> 
-                            </div>
-                            <div class="task_head7">
-                                <p>Priority</p> 
-                            </div>
-                            <div class="task_head8">
-                                <p>Status</p> 
-                            </div>
-                            <div class="task_head9">
-                                <p>Acions</p> 
-                            </div>
-                        </div>
+                    <table class="user_task">
+                       
 
+                        <thead class="row row-user-task">
+                            <tr class="useradd d-flex">
+                                <th class="userdiv bg-light task_head7 stickytask">
+                                    <p>Project Name</p>
+                                </th>
+                                <th class="userdiv task_head7">
+                                    <p>Reference</p>
+                                </th>
+                                <th class="userdiv task_head7">
+                                    <p>Start Date</p>
+                                </th>
+                                <th class="userdiv task_head7">
+                                    <p>End Date</p>
+                                </th>
+                                <th class="userdiv task_head7">
+                                    <p>Total Days</p>
+                                </th>
+                                <th class="userdiv task_head7">
+                                    <p>Project submitted </p>
+                                </th>
+                                <th class="task_head7">
+                                    <p>Priority</p> 
+                                </th>
+                                <th class="task_head8">
+                                    <p>Status</p> 
+                                </th>
+                                <th class="task_head9 task_head7">
+                                    <p>Actions</p> 
+                                </th>
+    
+                              
+                            </tr>
                       
-
-                        <div class="row mt-5 row-user-task">
-                            <div class="user_add d-flex">
-                                <div class="userdiv1 stickytask">
-                                    <p>Project 01</p>
-                                </div>
-                                <div class="userdiv2">
+                        </thead>
+  <!-- user add closed -->
+                      
+                      
+                        <tbody class="row mt-5 row-user-task">
+                            <tr class="user_add d-flex">
+                                <td class="userdiv1 stickytask">
+                                    <p><a href="project-approval-preview.html">Project 01</a></p>
+                                </td>
+                                <td class="userdiv2">
                                     <p>PA-A1563</p>
-                                </div>
-                                <div class="userdiv3">
+                                </td>
+                                <td class="userdiv3">
                                     <p>June 30, 2021</p>
-                                </div>
-                                <div class="userdiv4">
+                                </td>
+                                <td class="userdiv4">
                                     <p>July 31, 2021</p>
-                                </div>
-                                <div class="userdiv5">
+                                </td>
+                                <td class="userdiv5">
                                     <p>31 Days</p>
-                                </div>
-                                <div class="userdiv6">
+                                </td>
+                                <td class="userdiv6">
                                     <p>July 31, 2021</p>
-                                </div>
-                                <div class="userdiv7">
+                                </td>
+                                <td class="userdiv7">
                                     <div class="proj_status">Low</div>
-                                </div>
-                                <div class="userdiv8">
+                                </td>
+                                <td class="userdiv8">
                                     <div class="proj_status">Approved</div>
-                                </div>
-                                <div class="userdiv9">
+                                </td>
+                                <td class="userdiv9">
                                     <img src="icons/eye.svg" alt="eye">
                                     <img src="icons/print.svg" alt="printer">
-                                </div>
-                            </div>
+                                </td>
+                            </tr>
                         <!-- user add closed -->
-                        </div>
+                        </tbody>
                         
 
 
-                    </div>
+                    </table>
                     <div class="bottom_navigate">
                         <div class="row justify-content-between">
-                            <div class="col-6 d-flex align-items-center leftone">
+                            <div class="col-10 col-md-6 d-flex d-md-flex align-items-center leftone">
+                            <span class="d-flex d-md-flex">
                                 <p>Show</p>
                                 <select name="" id="pageLen">10
                                     <option value="10">10</option>
@@ -208,9 +216,10 @@
                                     <option value="40">40</option>
                                 </select>
                                 <p>per page</p>
+                            </span>
                             </div>
-                            <div class="col-6 justify-content-end align-items-center rightone d-none d-md-flex">
-                                <nav aria-label="...">
+                            <div class="col-1 col-md-2  align-items-center rightone d-flex d-md-flex">
+                                <nav class="" aria-label="...">
                                     <ul class="pagination align-items-center">
                                       <li class="page-item disabled mr-3" id="ArrowDisable">
                                         <i class="material-icons">arrow_back_ios_new</i>

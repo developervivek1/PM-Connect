@@ -415,12 +415,6 @@ margin-bottom: 0rem;
 {
 width: 100%;
 }
-.row
-{
-display: flex;
-align-items: center;
-flex-wrap: wrap;
-}
 nav
 {
 margin: 0;
@@ -1988,6 +1982,7 @@ margin-bottom: 0rem;
 {
 display: block;
 }
+/* changes #01 */
 .proj_filter .divfilter2 .project1 .projectcon1 .assignees.disable,
 .proj_filter .divfilter2 .project1 .projectcon1 .subitems.disable,
 .proj_filter .divfilter2 .project1 .projectcon1 .plannedDate.disable,
@@ -2000,12 +1995,18 @@ display: block;
 {
 display: none;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .head1
+.proj_filter .divfilter2 .project1 .projectcon1 table tr
 {
-flex: 0 0 13%;
-max-width: 13%;
+display: flex;
+align-items: center;
+width: 100%;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .head2,
+.proj_filter .divfilter2 .project1 .projectcon1 table tr td
+{
+width: 100%;
+margin-right: 10px;
+}
+/* .proj_filter .divfilter2 .project1 .projectcon1 .head2,
 .proj_filter .divfilter2 .project1 .projectcon1 .head3,
 .proj_filter .divfilter2 .project1 .projectcon1 .head4,
 .proj_filter .divfilter2 .project1 .projectcon1 .head5,
@@ -2017,7 +2018,7 @@ max-width: 13%;
 {
 flex: 0 0 calc(85%/9);
 max-width: calc(85%/9);
-}
+} */
 .proj_filter .divfilter2 .project1 .projectcon1 .head11
 {
 flex: 0 0 2%;
@@ -2033,6 +2034,8 @@ border-radius: 30px;
 .proj_filter .divfilter2 .project1 .projectcon1 .head1
 {
 display: flex;
+margin-top: 0.1rem;
+margin-left: 0.7rem;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 h5,
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile>.row p
@@ -2043,6 +2046,10 @@ letter-spacing: 0px;
 font-weight: 500;
 cursor: pointer;
 font-family: var(--lato);
+}
+.proj_filter .divfilter2 .project1 .projectcon1 h5
+{
+width: max-content;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .head1 span:first-child
 {
@@ -2056,6 +2063,10 @@ justify-content: center;
 align-items: center;
 cursor: pointer;
 margin-right: 0.7rem;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .head1 span:first-child img
+{
+width: 18px;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .head1 a
 {
@@ -2127,10 +2138,19 @@ width: 99.6%;
 padding: 12px 15px;
 position: relative;
 }
+.proj_filter .divfilter2 .project1 .border-bottom .projmaincon table tr
+{
+display: flex;
+align-items: center;
+width: 100%;
+}
+.proj_filter .divfilter2 .project1 .border-bottom .projmaincon table tr td
+{
+width: 100%;
+margin-right: 1rem;
+}
 .proj_filter .divfilter2 .project1 .projmaincon .divcon1
 {
-flex: 0 0 13%;
-max-width: 13%;
 font-size: 12px;
 color: #000000;
 font-family: var(--heebo);
@@ -2147,8 +2167,6 @@ display: flex;
 .proj_filter .divfilter2 .project1 .projmaincon .divcon9,
 .proj_filter .divfilter2 .project1 .projmaincon .divcon10
 {
-flex: 0 0 calc(86%/9);
-max-width: calc(86%/9);
 font-size: 12px;
 color: #000000;
 font-family: var(--heebo);
@@ -2377,7 +2395,8 @@ display: flex;
 {
 margin-top: 3px;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milehide .milestone2 button
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milehide .milestone2 button,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .task_name button
 {
 background-color: #2D62ED;
 width: 74px;
@@ -2388,6 +2407,7 @@ color: #fff;
 text-transform: uppercase;
 letter-spacing: 0.3px;
 cursor: pointer;
+font-size: 12px;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone .milehide
 {
@@ -2411,29 +2431,7 @@ margin-bottom: 0rem;
 {
 display: block;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile1
-{
-flex: 0 0 26%;
-max-width: 26%;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile2,
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile3,
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile4
-{
-flex: 0 0 12%;
-max-width: 12%;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile5,
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile6
-{
-flex: 0 0 8%;
-max-width: 8%;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile7
-{
-flex: 0 0 8%;
-max-width: 8%;
-}
+
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile7 div
 {
 width: 20px;
@@ -2462,7 +2460,14 @@ width: 100%;
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile4,
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile5,
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile6,
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile7
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile7,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile1,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile2,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile3,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile4,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile5,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile6,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile7
 {
 display: inline-flex;
 }
@@ -2477,56 +2482,43 @@ opacity: 1;
 margin-right: 2rem;
 margin-top: 4px;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile1 p
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile1 p,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile1 p
 {
 font-size: 12px;
 color:#1E2022;
 opacity: 0.9;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile2
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile2 img,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile2 img
 {
-flex: 0 0 11.5%;
-max-width: 11.5%;
+  cursor: pointer;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile3
-{
-flex: 0 0 12%;
-max-width: 12%;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile4
-{
-flex: 0 0 12%;
-max-width: 12%;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile5
-{
-flex: 0 0 7.5%;
-max-width: 7.5%;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile6
-{
-flex: 0 0 8%;
-max-width: 8%;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile3 div
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile3 div,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile3 div
+
 {
 width: 22px;
 height: 22px;
 border-radius: 30px;
 margin-right: 0.32rem;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile3 div img
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile3 div img,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile3 div img
+
 {
 width: 100%;
 height: 100%;
 border-radius: 30px;
 object-fit: cover;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile2 i
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile2 i,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile2 i
 {
 color: #8C94A1;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile4 div
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile4 div,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile4 div
 {
 width: 100px;
 height: 42px;
@@ -2537,13 +2529,15 @@ font-size: 14px;
 color: #ffffff;
 background: #F6BE75 0% 0% no-repeat padding-box;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile5
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile5,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile5
 {
 font-size: 14px;
 color: #1E2022;
 font-weight: 600;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile6
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile6,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile6
 {
 height: 20px;
 display: flex;
@@ -2553,9 +2547,84 @@ background-color: #1C1F3B;
 border-radius: 15px;
 color: #fff;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile6 p
+.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile6 p,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile6 p
 {
 font-size: 13px;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4
+{
+  margin: 2rem 0 2rem 2rem;
+  width: 98%;
+}
+/* changes 01 */
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .addtask_mile,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .task_name
+{
+  background: #ECF0F9 0% 0% no-repeat padding-box;
+  display: flex;
+  align-items: center;
+  padding-left: 42px;
+  height: 42px;
+  cursor: pointer;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .task_name
+{
+  background-color: #D8E2FC;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .task_name p,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .addtask_mile p
+{
+  font-size: 12px;
+  color: #1E2022;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .task_added
+{
+  margin-bottom: 1.8rem;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .task_added,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .Subtask_added
+{
+  margin-left: 8px;
+  width: 98.5%;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile
+{
+  background: #D8E2FC 0% 0% no-repeat padding-box;
+    padding-left: 16px;
+    margin-bottom: 0.5rem;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4
+{
+  display: none;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4.active
+{
+  display: block;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .task_added,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .taskname_hide,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .addtask_hide,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .Subtask_added,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .Subtaskname_hide,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .addSubtask_hide
+{
+  display: none;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .task_added.active,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .taskname_hide.active,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .addtask_hide.active,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .Subtask_added.active,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .Subtaskname_hide.active,
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .addSubtask_hide.active
+{
+  display: block;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .addtask_hide.active {
+  margin-top: 1.5rem;
 }
 /*@here  */
 /*  */
@@ -2650,9 +2719,10 @@ max-width: 50%;
 position: relative;
 }
 .proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div input[type="color"],
-.proj_filter .divfilter2 .project1 .projmaincon .addedit .right_div input[type="color"]
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .right_div input[type="color"],
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .right_div .add_label button
 {
-width: 93%;
+width: 100%;
 height: 40px;
 background-color: #F6BE75;
 margin-bottom: 15px;
@@ -2661,6 +2731,35 @@ border-radius: 0px;
 outline: none;
 cursor: pointer;
 }
+/* #changed css #01*/
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .right_div .add_label
+{
+display: none;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .right_div .add_label.active
+{
+display: block;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .right_div .add_label button {
+background-color: #2762ed;
+color: #fff;
+border-radius: 7px;
+height: 35px;
+margin-top: 0.2em;
+font-size: 11px;
+text-transform: uppercase;
+display: flex;
+justify-content: center;
+align-items: center;
+padding-top: 4px;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .right_div .add_label button img {
+margin-left: 0.4rem;
+width: 12px;
+height: 10px;
+margin-top: -2px;
+}
+/* changed css #01 end */
 .proj_filter .divfilter2 .project1 .projmaincon .addedit .left_div input[type="color"]:nth-child(2)
 {
 background-color: #E2445B;
@@ -2741,21 +2840,23 @@ left: 31%;
 top: 341px;
 left: 15.5%;
 }
-.proj_filter .divfilter2 .project1 .projmaincon .addedit .right_div p:nth-child(4)
+/* #01 changes css */
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .right_div .pdiv p:nth-child(1)
 {
 top: 12px;
 left: 31.1%;
 }
-.proj_filter .divfilter2 .project1 .projmaincon .addedit .right_div p:nth-child(5)
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .right_div .pdiv p:nth-child(2)
 {
 top: 67px;
 left: 18.9%;
 }
-.proj_filter .divfilter2 .project1 .projmaincon .addedit .right_div p:nth-child(6)
+.proj_filter .divfilter2 .project1 .projmaincon .addedit .right_div .pdiv p:nth-child(3)
 {
 top: 121px;
 left: 27%;
 }
+/* changes css end */
 .proj_filter .divfilter2 .project1 .projmaincon .addedit .btndiv,
 .proj_filter .divfilter2 .project1 .projmaincon .addedit .btndiv2
 {
@@ -3120,8 +3221,6 @@ top: 5px;
 position: absolute;
 left: -43px;
 }
-
-
 /* dashboard end */
 /* responsive screen */
 @media (max-width:768px){
@@ -3242,26 +3341,21 @@ z-index: 9;
 font-size: 2rem !important;
 }
 /* kanban */
-
-
 .kanban-body .col-kanban {
-    margin-right: 11px;
-    width: 85% !important; 
+margin-right: 11px;
+width: 85% !important;
 }
 .kanban-body {
-    margin-left: 0rem !important;
-    overflow-x: scroll;
+margin-left: 0rem !important;
+overflow-x: scroll;
 }
 .setting-header{
-    margin-top: 9rem;
-    background: #F2F5F8 !important;
-    
-  }
-
-.kanban-body .d-flex1{
-    margin-top: 12rem;
+margin-top: 9rem;
+background: #F2F5F8 !important;
 }
-
+.kanban-body .d-flex1{
+margin-top: 12rem;
+}
 }
 @media (min-width:769px){
 .main .div-left center{
@@ -3277,16 +3371,13 @@ display: none;
 margin-left: 2rem;
 overflow-x: scroll;
 }
-
 .setting-header{
-    background: white;
-    z-index: 1;
-    right: 0px;
-    position: fixed;
-    width: 100%;
-  }
-
-
+background: white;
+z-index: 1;
+right: 0px;
+position: fixed;
+width: 100%;
+}
 ::-webkit-scrollbar {
 display: none;
 }
@@ -3380,7 +3471,6 @@ border-left: 0px;
 border-right: 0px;
 border-radius: 5px;
 }
-
 /*header title  */
 /* .h1fixed select{
 font-weight: 500;
@@ -3412,6 +3502,114 @@ color: #171E48;
 margin-top: 5px;
 font-weight:600;
 }
+/* custom search */
+.select-box {
+  position: relative;
+  display: flex;
+  width: 174px;
+  flex-direction: column;
+  }
+  .options-container .option{
+  margin-bottom: 10px;
+  }
+  .select-box .options-container {
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  padding: 7px 11px 8px 11px;
+  background-color: #F2F5F8;
+  color: #171E48;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  /* transition: all 0.4s; */
+  border-radius: 0px;
+  overflow: hidden;
+  order: 1;
+  }
+  .selected {
+  /* background: #2f3640; */
+  border-radius: 8px;
+  margin-bottom: 0px;
+  color: #171E48;
+  position: relative;
+  font-size: 2.5rem;
+  font-weight: 600;
+  order: 0;
+  }
+  .selected::after {
+  content: "";
+  background: url("../img/arrow-down.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 23px;
+  right: 46px;
+  top: 5px;
+  /* transition: all 0.4s; */
+  }
+  .select-box .options-container.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+  margin-top: 41px;
+  z-index: 9;
+  }
+  .select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg);
+  top: -14px;
+  }
+  .select-box .options-container::-webkit-scrollbar {
+  width: 8px;
+  background: #0d141f;
+  border-radius: 0 8px 8px 0;
+  }
+  .select-box .options-container::-webkit-scrollbar-thumb {
+  background: #525861;
+  border-radius: 0 8px 8px 0;
+  }
+  .select-box .option,
+  .selected {
+  padding: 0px 0px;
+  cursor: pointer;
+  }
+  .select-box .option:hover {
+  background: #2D62ED;
+  color: #ffff;
+  }
+  .select-box label {
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  }
+  .select-box .option .radio {
+  display: none;
+  }
+  /* Searchbox */
+  .search-box input {
+  width: 100%;
+  padding: 0px 12px;
+  font-size: 16px;
+  position: absolute;
+  /* border-radius: 8px 8px 0 0; */
+  /* z-index: 100; */
+  border: 8px solid #F2F5F8;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  /* padding: 7px 11px 21px 11px; */
+  /* position: absolute; */
+  background-color: #F2F5F8;
+  opacity: 0;
+  pointer-events: none;
+  /* transition: all 0.4s; */
+  }
+  .search-box input:focus {
+  outline: none;
+  }
+  .select-box .options-container.active ~ .search-box input {
+  opacity: 1;
+  pointer-events: auto;
+  }
+
 /*the container must be positioned relative:*/
 .custom-select {
 /* position: relative; */
@@ -3509,7 +3707,7 @@ border-bottom: 1px solid lightgrey;
 color: lightgrey;
 background: none;
 font-weight: 400;
-cursor:none;
+/* cursor:none; */
 }
 /*hide the items when the select box is closed:*/
 .select-hide {
@@ -3543,8 +3741,220 @@ outline: none;
 transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 box-shadow: 0 0px 3px 0 rgb(0 0 0 / 3%);
 }
+.main_form textarea[type="textarea"] {
+  margin-top: 3rem;
+  height: 120px;
+  width: 100% !important;
+  background-color: #fff;
+  border: 0.4000000059604645px solid transparent;
+  border-radius: 5px;
+  padding: 20px 18px;
+  font-size: 1.42rem;
+  margin-bottom: 4.2rem;
+  transition: all 0.4s ease;
+  outline: none;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  box-shadow: 0 0px 3px 0 rgb(0 0 0 / 3%);
+  }
 ::-webkit-color-swatch {
 border-color: none;
 border: none;
 }
+
+.row .mobile-width{
+position: relative;
+}
+.row .mobile-width .head11{
+position: absolute;
+right: 10px;
+}
 /* bugs end */
+
+/* PM_AF_Edit Project_Proejct Info_01 - Start */
+label{
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+.form_project{
+  margin-top: 30px;
+}
+.form-group{
+  margin-top: 20px;
+  margin-right: 50px;
+}
+.form-control{
+  font-size: 13px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.input-group-text{
+  font-size: 14px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #fff;
+  height: 40px;
+
+}
+
+input[type=text]{
+  height: 40px;
+    background-color: #fff;
+    border: 0.4000000059604645px solid #dedede;
+    border-radius: 5px;
+    padding: 10px 18px;
+    font-size: 1.42rem;
+    transition: all 0.4s ease;
+    outline: none;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    box-shadow: 0 0px 3px 0 rgb(0 0 0 / 3%);
+}
+input[type=date]{
+  height: 40px;
+    background-color: #fff;
+    border: 0.4000000059604645px solid #dedede;
+    border-radius: 5px;
+    padding: 10px 18px;
+    font-size: 1.42rem;
+    transition: all 0.4s ease;
+    outline: none;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    box-shadow: 0 0px 3px 0 rgb(0 0 0 / 3%);
+}
+textarea.form-control {
+  height: 80px;
+}
+select {
+  height: 40px;
+    color: grey;
+    background: url(../img/arrow-down.svg) no-repeat;
+    background-position: calc(100% - 1.8rem) center;
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    border-radius: 5px;
+}
+.note-editor.note-airframe, .note-editor.note-frame {
+    border: 1px solid #dbdbdb !important;
+    border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+}
+.projadd_bottom_1 {
+    position: fixed;
+    bottom: 0;
+    z-index: 68;
+}
+.projadd_bottom_1
+{
+
+
+    right: 0;
+    height: 105px;
+    width: 100%;
+    padding: 0 38px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.18);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.projadd_bottom_1 .btn {
+    height: 40px;
+    width: 115px;
+    background: aqua;
+    border-radius: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.13px;
+}
+.projadd_bottom_1 .btn:nth-child(1)
+{
+    border: 1px solid #2d62ed;
+    background-color: transparent;
+    color: #2d62ed;
+}
+.projadd_bottom_1 .btn:nth-child(2)
+{
+    background-color: #2d62ed;
+    color: #fff;
+}
+.projadd_bottom_1 .btn,
+.proj_content .projadd_bottom_1 .btn:not(last-child)
+{
+    margin-right: 15px;
+}
+/* PM_AF_Edit Project_Proejct Info_01 - End */
+/* Side Bar 2 */
+.sidenav {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+right: 0;
+background-color: #fff;
+overflow-x: hidden;
+transition: 0.5s;
+padding: 60px;
+z-index: 80;
+display:none;
+}
+.sidenav .closebtn {
+text-decoration: none;
+color: #000;
+font-size: 30px;
+}
+.proj_content {
+transition: margin-right .1s;
+}
+.manage_view .proj_edit {
+border-right: 1px solid #0000002b;
+/* Side Bar ends Here */
+}
+.name_circle{
+ width: 28px;
+ height: 28px;
+ background-color: #FDAB3D;
+ border-radius: 30px;
+ display: inline-block;
+ line-height: 30px;
+ text-align: center;
+ color: #fff;
+ font-weight: 400;
+ margin-right: 0.9rem;
+}
+.image_circle1{
+ width: 10%;
+   height: 100%;
+   border-radius: 30px;
+   object-fit: cover;
+   margin-right: 0.9rem;
+}
+.user_list_name{
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+}
+.done_btn{
+  background:#3A80D7;
+  color:#fff;
+  width:100%;
+  border: 0;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-top:60px;
+  font-size:14px;
+}
+
+/* end */
+.option-container1 {
+    width: 40% !important;
+  }
+  .option-container1 .option:hover
+{
+  background-color: #ADADAD21 !important;
+}

@@ -34,12 +34,16 @@ let addEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .pro
 let addEdit2 = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2');
 let doneEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .done');
 let discardEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .cancel');
+let addLabel = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .add_label .btn');
 const mobileTrigger = document.querySelector('.mobile-menuhead .hamberger-menu span');
 const mobileMenu = document.querySelector('.proj_filter nav');
-const proj_edit = document.querySelector('.manage_view .proj_edit'); 
-const proj_con = document.querySelector('.manage_view .proj_edit .proj_content'); 
-const proj_overlay = document.querySelector('.manage_view .proj_overlay'); 
+const proj_edit = document.querySelector('.manage_view .proj_edit');
+const proj_con = document.querySelector('.manage_view .proj_edit .proj_content');
+const proj_overlay = document.querySelector('.manage_view .proj_overlay');
 const tabproj_btn = document.querySelectorAll('.manage_view .proj_edit .proj_content .tab-btn .btn');
+const tabproj_btn2 = document.querySelectorAll('.manage_view .proj_edit .proj_content .tab-btn #showTab');
+//const showFavorite = document.querySelector('.manage_view .proj_edit .proj_content .tab-btn #showFav');
+const favDiv = document.querySelector('.manage_view .proj_edit .proj_content .tab-btn .favDiv');
 let projdetail_btn = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projmaincon .divcon1 span');
 const projDet_close = document.querySelector('.manage_view .proj_edit .col-md-3 span');
 const update_Talk = document.querySelector('.manage_view .proj_edit .attach_div .divfile2 button');
@@ -53,7 +57,7 @@ const showSubscribe = document.querySelectorAll('.proj_filter .proj_edit .subscr
 const subs_overlay = document.querySelector('.proj_filter .subscribe_overlay');
 const subs_Div = document.querySelector('.proj_filter .proj_edit .subscribe .subscriber_div');
 const close_subsdiv = document.querySelector('.proj_filter .proj_edit .subscribe .subscriber_div > .row span');
-const userDel = document.querySelectorAll('.proj_filter .proj_edit .subscribe .subscriber_div .subs_con .col-4 i');
+const userDel = document.querySelectorAll('.proj_filter .proj_edit .subscribe .subscriber_div .subs_con .col-4 img');
 const projadd_div = document.querySelector('.proj_filter .proj_add');
 const projadd_Close = document.querySelector('.proj_filter .proj_add .col-md-12 > span');
 const showprojAdd = document.querySelectorAll('.proj_filter .divfilter2 .project1 .border-bottom .last_div');
@@ -63,7 +67,24 @@ const searchDiv = document.querySelector('.proj_filter .proj_add .assignee_div .
 const assignee_overlay = document.querySelector('.proj_filter .proj_add .assignee_div .assignee_overlay');
 const disableInput= document.querySelector('.proj_filter .proj_add .main_add #disabledValue');
 let editText =document.querySelectorAll('.proj_filter #editText');
-let statusColor, statusText, textVal, value,pageYedit,h5con,adjacentNode ; 
+const openMore =document.querySelectorAll('.proj_filter .proj_edit .proj_content .files .uploaded .open #openMore');
+const openOption =document.querySelectorAll('.proj_filter .proj_edit .proj_content .files .uploaded .open .openOption');
+const file_overlay =document.querySelector('.proj_filter .proj_edit .proj_content .files .file_overlay');
+const filterLog =document.querySelector('.proj_filter .proj_edit .proj_content .active_log .btnleft .btn:nth-child(1)');
+const personFilter =document.querySelector('.proj_filter .proj_edit .proj_content .active_log .btnleft .btn:nth-child(2)');
+const activelog_overlay =document.querySelector('.proj_filter .proj_edit .proj_content .active_log .activelog_overlay');
+const filterLogcon =document.querySelector('.proj_filter .proj_edit .proj_content .active_log .btnleft .filterlog_con');
+const personFiltercon =document.querySelector('.proj_filter .proj_edit .proj_content .active_log .btnleft .person_con');
+const open_Task =document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 #openTask');
+const milestone4 =document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone4');
+const open_taskName =milestone4.querySelector('.addtask_hide');
+const open_taskAdded =milestone4.querySelector('.taskname_hide');
+const addedTask =milestone4.querySelector('.task_added');
+const open_SubTask =milestone4.querySelector('#addSubtask');
+const open_SubtaskName =milestone4.querySelector('.addSubtask_hide');
+const open_SubtaskAdded =milestone4.querySelector('.Subtaskname_hide');
+const addedSubtask =milestone4.querySelector('.Subtask_added');
+let statusColor, statusText, textVal, value,pageYedit,h5con,adjacentNode,fixedValue1=121,fixedValue2=121,fixedValue3=121;
 
 const ImageDisable=[{disSrc: 'icons/ColorImage/assignees_disab.png',enabSrc: 'icons/Assigness.svg'},
 {disSrc: 'icons/ColorImage/subitem_disab.png',enabSrc: 'icons/subitem.svg'},
@@ -117,8 +138,66 @@ function showProjdetail()
     {
         proj_edit.classList.add('active');
         proj_overlay.classList.add('active');
-    }    
+    }
 }
+tabproj_btn.forEach((tabBtn)=>
+{
+    tabBtn.addEventListener('click',(e)=>
+    {
+        e.stopPropagation();
+        if(!e.target.classList.contains('active'))
+        {
+            let tabconActive = proj_con.querySelector('.tabproj_con.active');
+            let tabbtnActive = proj_con.querySelector('.btn.active');
+            let tabbtnp = proj_con.querySelector('.btn.active p.active');
+            tabconActive.classList.remove('active');
+            tabbtnActive.classList.remove('active');
+            tabbtnp.classList.remove('active');
+            let data_target = e.target.getAttribute('data-target');
+            e.target.classList.add('active');
+            e.target.querySelector('p').classList.add('active');
+            let targetCon = proj_con.querySelector(data_target);
+            targetCon.classList.add('active');
+        }
+    })
+})
+tabproj_btn2.forEach((tabBtn)=>
+{
+    tabBtn.addEventListener('click',(e)=>
+    {
+        e.stopPropagation();
+        if(!e.target.parentNode.classList.contains('active'))
+        {
+            e.target.classList.add('active');
+            let tabconActive = proj_con.querySelector('.tabproj_con.active');
+            let tabbtnActive = proj_con.querySelector('.btn.active');
+            let tabbtnp = proj_con.querySelector('.btn.active p.active');
+            tabconActive.classList.remove('active');
+            tabbtnActive.classList.remove('active');
+            tabbtnp.classList.remove('active');
+            let data_target = e.target.parentNode.getAttribute('data-target');
+            e.target.parentNode.classList.add('active');
+            let targetCon = proj_con.querySelector(data_target);
+            targetCon.classList.add('active');
+        }
+    })
+})
+/*
+showFavorite.addEventListener('click',(e)=>
+{
+    e.stopPropagation();
+    let checkfile = e.target.closest('.proj_content').querySelector('.files');
+    if(!favDiv.classList.contains('active') && checkfile.classList.contains('active'))
+    {
+        favDiv.classList.add('active');
+        file_overlay.classList.add('active');
+    }
+    else
+    {
+        favDiv.classList.remove('active');
+        file_overlay.classList.remove('active');
+    }
+}) */
 setTimeout(()=>
 {
     const textarea = document.querySelector('.manage_view .proj_edit .update .note-editing-area .note-editable');
@@ -158,7 +237,7 @@ setTimeout(()=>
             user2.src = `${profile_img}`;
             user1.appendChild(user2);
             let user3 = document.createElement('p');
-            user3.innerText=`${userName}`; 
+            user3.innerText=`${userName}`;
             let user4 = document.createElement('span');
             user_div.appendChild(user1);
             user_div.appendChild(user3);
@@ -299,7 +378,49 @@ userDel.forEach((userRem)=>
       remNode.remove();
    })
 })
-
+openMore.forEach((open)=>
+{
+    open.addEventListener('click',(e)=>
+    {
+        let nearoption = e.target.closest('.open').querySelector('.openOption');
+        if(!nearoption.classList.contains('active'))
+        {
+            nearoption.classList.add('active');
+            file_overlay.classList.add('active');
+        }
+        else
+        {
+            nearoption.classList.remove('active');
+            file_overlay.classList.remove('active');
+        }
+    })
+})
+filterLog.addEventListener('click',()=>
+{
+    if(!filterLogcon.classList.contains('active'))
+    {
+        filterLogcon.classList.add('active');
+        activelog_overlay.classList.add('active');
+    }
+    else
+    {
+        filterLogcon.classList.remove('active');
+        activelog_overlay.classList.remove('active');
+    }
+})
+personFilter.addEventListener('click',()=>
+{
+    if(!personFiltercon.classList.contains('active'))
+    {
+        personFiltercon.classList.add('active');
+        activelog_overlay.classList.add('active');
+    }
+    else
+    {
+        personFiltercon.classList.remove('active');
+        activelog_overlay.classList.remove('active');
+    }
+})
 // hide/show proj_add
 showprojAdd.forEach((projAdd)=>
 {
@@ -368,7 +489,7 @@ saveProjadd.addEventListener('click',()=>
     })
 })
 
-// Close proj_add, proj_edit 
+// Close proj_add, proj_edit
 proj_overlay.addEventListener('click',hideProjdetail);
 projDet_close.addEventListener('click',hideProjdetail);
 projadd_Close.addEventListener('click', hideProjdetail);
@@ -385,7 +506,16 @@ function hideProjdetail()
         subs_Div.classList.remove('active');
         searchDiv.classList.remove('active');
         subs_overlay.classList.remove('active');
-    }  
+        openOption.forEach((open)=>
+        {
+            open.classList.remove('active');
+        })
+        favDiv.classList.remove('active');
+        file_overlay.classList.remove('active');
+        activelog_overlay.classList.remove('active');
+        filterLogcon.classList.remove('active');
+        personFiltercon.classList.remove('active');
+    }
 }
 
 window.addEventListener('click', hideFilterdiv);
@@ -438,6 +568,22 @@ function hideFilterdiv(e) {
         searchDiv.classList.remove('active');
         assignee_overlay.classList.remove('active');
     }
+    else if(e.target==file_overlay)
+    {
+        favDiv.classList.remove('active');
+        openOption.forEach((open)=>
+        {
+            open.classList.remove('active');
+        })
+        file_overlay.classList.remove('active');
+    }
+    else if(e.target==activelog_overlay)
+    {
+        filterLogcon.classList.remove('active');
+        activelog_overlay.classList.remove('active');
+        personFiltercon.classList.remove('active');
+        activelog_overlay.classList.remove('active');
+    }
 }
 
 // window resize function
@@ -481,7 +627,7 @@ showFilter.addEventListener('click', (e) => {
     }
 })
 
-// Milestone Expand/Collapse 
+// Milestone Expand/Collapse
 milediv.addEventListener('click', () => {
     if (!showMile.classList.contains('showmilestone')) {
         showMile.classList.add('showmilestone');
@@ -494,6 +640,13 @@ milediv.addEventListener('click', () => {
         showFinalmile.classList.remove('showmain_mile');
         root.style.setProperty("--rot", "0deg");
         dflexVisible.classList.remove('visible');
+        milestone4.classList.remove('active');
+        open_taskAdded.classList.remove('active');
+        open_taskName.classList.remove('active');
+        addedTask.classList.remove('active');
+        open_SubtaskAdded.classList.remove('active');
+        open_SubtaskName.classList.remove('active');
+        addedSubtask.classList.remove('active');
     }
 })
 
@@ -520,6 +673,56 @@ function showFinal() {
         showFinalmile.classList.remove('showmain_mile');
     }
 }
+open_Task.addEventListener('click', ()=>
+{
+    if(!milestone4.classList.contains('active') && !open_taskName.classList.contains('active'))
+    {
+        milestone4.classList.add('active');
+        open_taskName.classList.add('active');
+    }
+})
+open_taskName.addEventListener('click',function()
+{
+    if(milestone4.classList.contains('active') && this.classList.contains('active') && !open_taskAdded.classList.contains('active'))
+    {
+        this.classList.remove('active');
+        open_taskAdded.classList.add('active');
+    }
+})
+open_taskAdded.addEventListener('click',function()
+{
+    if(!open_taskName.classList.contains('active') && !addedTask.classList.contains('active') && this.classList.contains('active'))
+    {
+        this.classList.remove('active');
+        open_taskName.classList.add('active')
+        addedTask.classList.add('active')
+    }
+})
+open_SubTask.addEventListener('click',()=>
+{
+    if(!open_SubtaskName.classList.contains('active'))
+    {
+        open_SubtaskName.classList.add('active');
+    }
+})
+open_SubtaskName.addEventListener('click', function()
+{
+    if(this.classList.contains('active') && !open_SubtaskAdded.classList.contains('active'))
+    {
+        this.classList.remove('active');
+        open_SubtaskAdded.classList.add('active');
+    }
+})
+open_SubtaskAdded.addEventListener('click', function()
+{
+    if(!addedSubtask.classList.contains('active') && this.classList.contains('active') &&
+    !open_SubtaskName.classList.contains('active'))
+    {
+        this.classList.remove('active');
+        addedSubtask.classList.add('active')
+        open_SubtaskName.classList.add('active')
+    }
+})
 
 // Status Update Edit and Done
 clickEdit.forEach((edit) => {
@@ -527,7 +730,6 @@ clickEdit.forEach((edit) => {
         showStatus(e);
     })
 })
-
 function showStatus(e)
 {
     pageYedit = e.pageY;
@@ -556,40 +758,95 @@ function choosedefault(e, statusColor, statusText, closestAddedit) {
     closestAddedit.classList.remove('active');
     overlay.classList.remove('active');
 }
+
+addLabel.forEach((add,ind)=>
+{
+    add.addEventListener('click',(e)=>
+    {
+        addLabeldom(e,ind);
+    })
+})
+
+function addLabeldom(e,ind)
+{
+    let targetAppend1 = e.target.closest('.right_div').querySelectorAll('input');
+    let targetAppend2 = e.target.closest('.right_div').querySelectorAll('p');
+    let input = document.createElement('input');
+    input.setAttribute('type','color');
+    input.setAttribute('value','');
+    input.setAttribute('text-target','');
+    let p = document.createElement('p');
+    p.setAttribute('value','');
+    p.setAttribute('text-target','');
+    p.innerText="Name";
+    switch(ind)
+    {
+        case 0:
+            fixedValue1=fixedValue1+54;
+            fixingTop(p,fixedValue1);
+            break;
+        case 1:
+            fixedValue2=fixedValue2+54;
+            fixingTop(p,fixedValue2);
+            break;
+        case 2:
+            fixedValue3=fixedValue3+54;
+            fixingTop(p,fixedValue3);
+            break;
+    }
+    targetAppend1[targetAppend1.length-1].insertAdjacentElement('afterend', input);
+    targetAppend2[targetAppend2.length-1].insertAdjacentElement('afterend', p);
+    targetAppend1 = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit input');
+    targetAppend2 = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit p');
+    setUserchoice(targetAppend1, targetAppend2);
+    input.setAttribute('text-target',`.${value}`);
+    p.setAttribute('text-target',`.${textVal}`);
+}
+function fixingTop(p,fixedValue)
+{
+    p.style.cssText=`top: ${fixedValue}px; left:34%`;
+}
+
 addEdit.forEach((addEdit, ind) => {
     addEdit.addEventListener('click', (e) => {
         let activeCheck = e.target.parentNode;
         let colorInput = activeCheck.closest('.expand').querySelector('.addedit').querySelectorAll('input');
         let paraText = activeCheck.closest('.expand').querySelector('.addedit').querySelectorAll('p');
-        if (activeCheck.classList.contains('active') && !addEdit2[ind].classList.contains('active')) {
+        let addLabelcheck = activeCheck.closest('.expand').querySelector('.add_label');
+        if (activeCheck.classList.contains('active') && !addEdit2[ind].classList.contains('active') &&
+        !addLabelcheck.classList.contains('active'))
+        {
             addEdit2[ind].classList.add('active');
             activeCheck.classList.remove('active');
-            colorInput.forEach((input) => {
-                input.removeAttribute('disabled');
-            })
-            paraText.forEach((text) => {
-                text.setAttribute('contenteditable', 'true');
-                if (text.hasAttribute('contenteditable')) {
-                    paraText.forEach((text) => {
-                        text.addEventListener('input', (e) => {
-                            // let targetDiv = e.target.closest('.projmaincon').querySelector('.divcon10 div');
-                            textVal = e.target.innerText;
-                            statusText.innerText = `${textVal}`;
-                        })
-                    })
-                    colorInput.forEach((input) => {
-                        input.addEventListener('input', (e) => {
-                            value = e.target.value;
-                            // let targetDiv = e.target.closest('.projmaincon').querySelector('.divcon10 div');
-                            statusColor.style.backgroundColor = `${value}`;
-                        })
-                    })
-                }
-            })
+            addLabelcheck.classList.add('active');
+            setUserchoice(colorInput, paraText);
         }
     })
 })
 
+function setUserchoice(colorInput, paraText)
+{
+    colorInput.forEach((input) => {
+        input.removeAttribute('disabled');
+    })
+    paraText.forEach((text) => {
+        text.setAttribute('contenteditable', 'true');
+        if (text.hasAttribute('contenteditable')) {
+            paraText.forEach((text) => {
+                text.addEventListener('input', (e) => {
+                    textVal = e.target.innerText;
+                    statusText.innerText = `${textVal}`;
+                })
+            })
+            colorInput.forEach((input) => {
+                input.addEventListener('input', (e) => {
+                    value = e.target.value;
+                    statusColor.style.backgroundColor = `${value}`;
+                })
+            })
+        }
+    })
+}
 doneEdit.forEach((doneEdit) => {
     doneEdit.addEventListener('click', (e) => {
         statusText.setAttribute('textval', `${textVal}`);
@@ -613,6 +870,7 @@ function finalEdit(e) {
     targetAddedit.classList.remove('active');
     let colorInput = e.target.closest('.expand').querySelector('.addedit').querySelectorAll('input');
     let paraText = e.target.closest('.expand').querySelector('.addedit').querySelectorAll('p');
+    let addLabelcheck=e.target.closest('.addedit').querySelector('.add_label');
 
     colorInput.forEach((input) => {
         input.setAttribute('disabled', 'disabled');
@@ -620,6 +878,7 @@ function finalEdit(e) {
     paraText.forEach((text) => {
         text.removeAttribute('contenteditable');
     })
+    addLabelcheck.classList.remove('active');
     newbtndiv2.classList.remove('active');
     newbtndiv.classList.add('active');
     overlay.classList.remove('active');
@@ -653,23 +912,6 @@ editText.forEach((edit)=>
 })
 
 // Tabs and Pills the Data
-tabproj_btn.forEach((tabBtn)=>
-{
-    tabBtn.addEventListener('click',(e)=>
-    {
-        if(!e.target.classList.contains('active'))
-        {
-            let tabconActive = proj_con.querySelector('.tabproj_con.active');
-            let tabbtnActive = proj_con.querySelector('.btn.active');
-            tabconActive.classList.remove('active');
-            tabbtnActive.classList.remove('active');
-            let data_target = e.target.getAttribute('data-target');
-            e.target.classList.add('active');
-            let targetCon = proj_con.querySelector(data_target);
-            targetCon.classList.add('active');
-        }
-    })
-})
 mainul.forEach((val) => {
     val.addEventListener('click', (e) => {
         let li = e.target;
@@ -735,7 +977,7 @@ showTable.forEach((expand) => {
     })
 })
 
-// Enable/Disable Table Column 
+// Enable/Disable Table Column
 addColumn.forEach((addColumn)=>
 {
     addColumn.addEventListener('click',(e)=>
@@ -760,7 +1002,7 @@ disableIcon.forEach((disable,ind)=>
         let targetDel = e.target.getAttribute('disable-data');
         let targetImg = e.target.querySelector('img');
         let nearestTarget = e.target.closest('.projectcon1').querySelectorAll(targetDel);
-        let nearestHead = e.target.closest('.head11').querySelector('.dropdown-menu');
+        // let nearestHead = e.target.closest('.head11').querySelector('.dropdown-menu');
         let nearestClear = e.target.closest('.head11').querySelector('button img');
         nearestTarget.forEach((removeNode)=>
         {
@@ -776,7 +1018,7 @@ disableIcon.forEach((disable,ind)=>
             }
         })
         nearestClear.innerText="add";
-        nearestHead.classList.remove('show');
+        // nearestHead.classList.remove('show');
     },true)
 })
 
@@ -869,10 +1111,10 @@ $('#picker14').datetimepicker(
 
 $('.h1fixed').scroll(function() {
     $(this).find('.mysticky').css('left', $(this).scrollLeft());
-});        
+});
 // $('#expand1').scroll(function() {
 //     $(this).find('.mysticky2').css('left', $(this).scrollLeft());
-// });   
+// });
 $(document).ready(function() {
     $('#summernote').summernote({
         placeholder: 'Write an update',
@@ -922,3 +1164,48 @@ $(document).ready(function() {
 //         // if(Array.from(activeEdit).some(edit => edit.classList.contains('active')))
 //     }
 // })
+//PM_AF_Edit Project_activity log
+function openNav() {
+  document.getElementById("mySidenav").style.width = "450px";
+  document.getElementById("mySidenav").style.display = "block";
+  document.querySelector('.manage_view .proj_edit').style.marginRight  = "450px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("mySidenav").style.display = "none";
+  document.querySelector('.manage_view .proj_edit').style.marginRight = "0";
+}
+
+const boxTrigger = document.querySelectorAll('.box2');
+              const boxContent = document.querySelectorAll('.box2 p');
+              const options = document.querySelectorAll('.option-container .option');
+              const optionsCon = document.querySelectorAll('.option-container p');
+
+              boxTrigger.forEach((box,ind)=>
+              {
+                  box.addEventListener('click',(e)=>
+                  {
+                      pindex = ind;
+                      if(!e.target.closest('.custom-select').querySelector('.option-container').classList.contains('active'))
+                      {
+                          e.target.closest('.custom-select').querySelector('.option-container').classList.add('active');
+                      }
+                      else
+                      {
+                          e.target.closest('.custom-select').querySelector('.option-container').classList.remove('active');
+                      }
+                  })
+              })
+              options.forEach((option)=>
+              {
+                  option.addEventListener('click',(e)=>
+                  {
+                      e.stopPropagation();
+                      let containerClose = e.target.closest('.option-container');
+                      boxContent[pindex].style.color="#3A80D7";
+                      boxContent[pindex].style.fontSize = "10px";
+                      boxContent[pindex].innerText=e.target.querySelector('p').innerText;
+                      containerClose.classList.remove('active');
+                  })
+              })
