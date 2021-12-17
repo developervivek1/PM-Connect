@@ -1355,7 +1355,7 @@ box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         font-size: 13px;
     }
     .manage_view .proj_edit .tab-btn {
-        display: flex;
+        overflow-x: scroll;
     }
     .manage_view .proj_edit .proj_content .tab-btn .btn {
         padding: 0 16px;
@@ -1631,4 +1631,17 @@ box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         bottom: 51px;
         z-index: 68;
     }
+
+
+
+
+
+    /* new bugs */
+
+    .projadd_bottom_1 {
+        position: fixed;
+        bottom: 51px;
+        z-index: 68;
+    }
+    /* bugs/ */
 }

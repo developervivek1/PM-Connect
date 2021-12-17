@@ -862,8 +862,8 @@ background-color: #D8E2FC;
 .option-container
 {
     position: absolute;
-    top: 49px;
-    left: 126px;
+    top: 96px;
+    left: 1px;
     width: 90%;
     max-height: 0px;
     overflow-y: auto;

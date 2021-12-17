@@ -1164,6 +1164,10 @@ $(document).ready(function() {
 //         // if(Array.from(activeEdit).some(edit => edit.classList.contains('active')))
 //     }
 // })
+
+
+
+
 //PM_AF_Edit Project_activity log
 function openNav() {
   document.getElementById("mySidenav").style.width = "450px";
@@ -1177,35 +1181,38 @@ function closeNav() {
   document.querySelector('.manage_view .proj_edit').style.marginRight = "0";
 }
 
-const boxTrigger = document.querySelectorAll('.box2');
-              const boxContent = document.querySelectorAll('.box2 p');
-              const options = document.querySelectorAll('.option-container .option');
-              const optionsCon = document.querySelectorAll('.option-container p');
 
-              boxTrigger.forEach((box,ind)=>
-              {
-                  box.addEventListener('click',(e)=>
-                  {
-                      pindex = ind;
-                      if(!e.target.closest('.custom-select').querySelector('.option-container').classList.contains('active'))
-                      {
-                          e.target.closest('.custom-select').querySelector('.option-container').classList.add('active');
-                      }
-                      else
-                      {
-                          e.target.closest('.custom-select').querySelector('.option-container').classList.remove('active');
-                      }
-                  })
-              })
-              options.forEach((option)=>
-              {
-                  option.addEventListener('click',(e)=>
-                  {
-                      e.stopPropagation();
-                      let containerClose = e.target.closest('.option-container');
-                      boxContent[pindex].style.color="#3A80D7";
-                      boxContent[pindex].style.fontSize = "10px";
-                      boxContent[pindex].innerText=e.target.querySelector('p').innerText;
-                      containerClose.classList.remove('active');
-                  })
-              })
+// custom select
+
+// const boxTrigger = document.querySelectorAll('.box2');
+//               const boxContent = document.querySelectorAll('.box2 p');
+//               const options = document.querySelectorAll('.option-container .option');
+//               const optionsCon = document.querySelectorAll('.option-container p');
+
+//               boxTrigger.forEach((box,ind)=>
+//               {
+//                   box.addEventListener('click',(e)=>
+//                   {
+//                       pindex = ind;
+//                       if(!e.target.closest('.custom-select').querySelector('.option-container').classList.contains('active'))
+//                       {
+//                           e.target.closest('.custom-select').querySelector('.option-container').classList.add('active');
+//                       }
+//                       else
+//                       {
+//                           e.target.closest('.custom-select').querySelector('.option-container').classList.remove('active');
+//                       }
+//                   })
+//               })
+//               options.forEach((option)=>
+//               {
+//                   option.addEventListener('click',(e)=>
+//                   {
+//                       e.stopPropagation();
+//                       let containerClose = e.target.closest('.option-container');
+//                       boxContent[pindex].style.color="#3A80D7";
+//                       boxContent[pindex].style.fontSize = "10px";
+//                       boxContent[pindex].innerText=e.target.querySelector('p').innerText;
+//                       containerClose.classList.remove('active');
+//                   })
+//               })
