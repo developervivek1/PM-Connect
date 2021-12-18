@@ -41,7 +41,7 @@
                <!-- side bar -->
 
                <div id="mySidenav" class="sidenav">
-                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">	&#8592;&nbsp;&nbsp;&nbsp;&nbsp;</a><span style="font-size:18px;">Search by Name</span>
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">	&#8592;&nbsp;&nbsp;&nbsp;&nbsp;</a><span style="font-size:21px;">Search by Name</span>
                   <div class="input-group mb-3" style="margin-top:40px;">
                      <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                      <span class="input-group-text" id="basic-addon1" placeholder="Search by name"><i class="fas fa-search"></i></span>
@@ -79,22 +79,29 @@
                      </div>
  
                      <div class="custom-select">
-                                 <div class="box2 d-flex position-relative">
+                                 <div class="box2 d-fle position-relative">
                                     <div class="position-absolute aerro1">
 
                                  
-                                    <p style="color:#3A80D7;fontsize:11px;margin-right: 11px;"></p>
-                                    <img class="mt" src="icons/arrowdown.svg" alt="">
+                                    <p class="mb-0" style="color:#3A80D7;fontsize:11px;margin-right: 11px;"></p>
+                                    <img class="position-img" src="icons/arrowdown.svg" alt="">
                                  </div>
                                  </div>
                                  <style>
                                     .aerro1{
                                        width: 131px;
-                                       top: 12px;
+                                       top: 11px;
                                        font-size: 12px;
                                        right: 82px;
-                                       position: absolute!important;
+                                       /* position: absolute!important; */
                                        display: flex;
+                                       cursor: pointer;
+                                    }
+                                    .position-img{
+                                       position: absolute;
+                                       right: 10px;
+                                       top: 6px;
+                                       cursor: pointer;
                                     }
                                     .option-container11{
                                        width: 200px;
@@ -103,6 +110,18 @@
                                         
 
                                     }
+
+                                    input[type=file] {
+                                            position: absolute;
+                                            width: 100%;
+                                            height: 100%;
+                                            top: 0;
+                                            left: 0;
+                                            right: 0;
+                                            bottom: 0;
+                                            opacity: 0;
+                                            cursor: pointer;
+                                          }
                                     
                                  </style>
                               <div class="option-container option-container11">
@@ -348,7 +367,7 @@
                                  </div>
                                  <div class="row">
                                     <div class="col-md-6">
-                                       <div class="custom-select position-relative pt-4 mt-3">
+                                       <div class="custom-select position-relative pt-4 mt-3 mb-4">
                                           <p class="pb-3">Assigned To</p>
                                           <div class="box11">
                                               <p class="m-0">Select</p>
@@ -532,8 +551,8 @@
                                     </div>
                                     
                                  </div>
-                                 <div class="col-md-12">
-                                    <div class="form-group">
+                                 <div class="col-md-12 mt-3">
+                                    <div class="form-gr me-0 mb-5" style="width:96%">
                                        <label class="form-check-label" for="">Activity / Comments</label>
                                        <textarea name="" id="summernote">
                                        </textarea>
@@ -560,11 +579,13 @@
                                           <div class="col-md-12">
                                              <div class="box">
                                                 <i class="material-icons">cloud_upload</i>
-                                                <p>Drag a file here or <span>Browse </span> for a file to upload.</p>
+                                                <p>Drag a file here or <span>Browse <input type="file"></span> for a file to upload.</p>
+                                                
                                              </div>
                                           </div>
                                        </div>
                                     </div>
+                                   
                                     <!--con2 closed-->
                                     <!--con3 closed-->
                                  </form>
@@ -2941,8 +2962,8 @@
 
       <!-- custom select -->
       <script>
-         const boxTrigger = document.querySelectorAll('.box11, .box2');
-         const boxContent = document.querySelectorAll('.box11, .box2 p');
+         const boxTrigger = document.querySelectorAll('.box11');
+         const boxContent = document.querySelectorAll('.box11 p');
          
          const options = document.querySelectorAll('.option-container .option');
          const optionsCon = document.querySelectorAll('.option-container p');
@@ -2990,6 +3011,55 @@
          })
 
          // 
+
+         
+         const boxTrigger2 = document.querySelectorAll('.box2');
+         const boxContent2 = document.querySelectorAll('.box2 p');
+         
+         const options2 = document.querySelectorAll('.option-container .option');
+         const optionsCon2 = document.querySelectorAll('.option-container p');
+         
+     
+         boxTrigger2.forEach((box,ind)=>
+         {
+             box.addEventListener('click',(e)=>
+             {
+                 pindex = ind;
+                 if(!e.target.closest('.custom-select').querySelector('.option-container').classList.contains('active'))
+                 {
+                     e.target.closest('.custom-select').querySelector('.option-container').classList.add('active');
+                 }
+                 else
+                 {
+                     e.target.closest('.custom-select').querySelector('.option-container').classList.remove('active');
+                 }
+             })
+         })
+         options2.forEach((option)=>
+         {
+             option.addEventListener('click',(e)=>
+             {
+                 e.stopPropagation();
+                 let containerClose = e.target.closest('.option-container');
+               //   boxContent[pindex].style.color="#000";
+                
+                 boxContent2[pindex].innerText=e.target.querySelector('p').innerText; 
+                  
+                 containerClose.classList.remove('active');
+             })
+         })
+         optionsCon2.forEach((option)=>
+         {
+             option.addEventListener('click',(e)=>
+             {
+                 e.stopPropagation();
+                 let containerClose = e.target.closest('.option-container');
+               //   boxContent[pindex].style.color="#000";
+                 
+                 boxContent2[pindex].innerText=e.target.innerText; 
+                 containerClose.classList.remove('active');
+             })
+         })
 
          
      </script>
