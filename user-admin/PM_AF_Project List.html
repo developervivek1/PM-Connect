@@ -27,7 +27,7 @@
       <title>Management View Project Filter</title>
 
       <style media="screen">
-
+         
 
 
       </style>
@@ -37,6 +37,7 @@
          <div class="container-fluid">
             <div class="row">
                <div class="myoverlay"></div>
+               <div class="form_overlay"></div>
                <!-- proj edit -->
                <!-- side bar -->
 
@@ -269,15 +270,22 @@
                                  </div>
                                  <div class="row">
                                     <div class="col-md-6">
+                                       
                                       
                                        <div class="custom-select position-relative pt-4 mt-3">
                                           <p class="pb-3">Program </p>
-                                          <div class="box11">
+                                          
+                                          <div class="box11" >
+                                            
+
+                                             
                                               <p class="m-0">Select</p>
                                               <img src="icons/arrowdown.svg" alt="">
-                                          </div>
+                                             </div>
+                                         
                                           <div class="option-container">
-                                              <div class="option">
+                                             
+                                             <div class="option">
                                                   <p>Select the priority 1</p>
                                                   
                                               </div>
@@ -295,6 +303,28 @@
                                           </div>
                                      
                                       </div>
+
+                                      <script>
+                                       /* When the user clicks on the button, 
+                                       toggle between hiding and showing the dropdown content */
+                                       function myFunction() {
+                                         document.getElementById("myDropdown").classList.toggle("show");
+                                       }
+                                       
+                                       // Close the dropdown if the user clicks outside of it
+                                       window.onclick = function(event) {
+                                         if (!event.target.matches('.dropbtn')) {
+                                           var dropdowns = document.getElementsByClassName("dropdown-content");
+                                           var i;
+                                           for (i = 0; i < dropdowns.length; i++) {
+                                             var openDropdown = dropdowns[i];
+                                             if (openDropdown.classList.contains('show')) {
+                                               openDropdown.classList.remove('show');
+                                             }
+                                           }
+                                         }
+                                       }
+                                       </script>
                                        
                                     </div>
                                     <div class="col-md-6">
@@ -2649,11 +2679,7 @@
                            <!-- <br> -->
                         </div>
                      </div>
-                     <style>
-                        /* .dropzone .card1{
-                        border-style: dashed;
-                        } */
-                     </style>
+                     
                      <!-- kanban body -->
                      <div class="kanban-body mt-5 container-fluid boards">
                         <div class="row d-flex d-flex1 mt-md-5">
@@ -3079,5 +3105,7 @@
       <script src="js/kanban.js"></script>
       <script src="js/usersearch.js"></script>
       <script src="js/dropdown.js"></script>
+      <script src="js/scriptzee.js"></script>
+      <script src="js/scriptnewinfo.js"></script>
    </body>
 </html>
