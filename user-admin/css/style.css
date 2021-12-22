@@ -2135,7 +2135,7 @@ margin: 0;
 .proj_filter .divfilter2 .project1 .border-bottom .projmaincon
 {
 width: 99.6%;
-padding: 12px 15px;
+padding: 10px 50px;
 position: relative;
 }
 .proj_filter .divfilter2 .project1 .border-bottom .projmaincon table tr
@@ -2339,7 +2339,7 @@ overflow: hidden;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone.showmilestone
 {
-margin: 20px 0 20px 2rem;
+	margin: .3rem 0 2rem 2rem;
 height: 42px;
 transition: height 0.15s ease-in;
 }
@@ -2419,7 +2419,7 @@ display: block;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile
 {
-margin: 20px 0 20px 2rem;
+	margin: 10px 0 0rem 2rem;
 width: 98%;
 display: none;
 }
@@ -2554,7 +2554,7 @@ font-size: 13px;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone4
 {
-  margin: 2rem 0 2rem 2rem;
+	margin: 0rem 0 0rem 2rem;
   width: 98%;
 }
 /* changes 01 */
@@ -2583,7 +2583,7 @@ font-size: 13px;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .task_added
 {
-  margin-bottom: 1.8rem;
+  margin-bottom: 0rem;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .task_added,
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .Subtask_added
@@ -2624,7 +2624,7 @@ font-size: 13px;
   display: block;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .addtask_hide.active {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
 }
 /*@here  */
 /*  */
@@ -3996,5 +3996,12 @@ input[type=file] {
        cursor: pointer;
      }
 
-
+#popup3{
+  transform: translateX(100%);
+  animation: slideprojRight 0.5s ease-in-out;
+}
+#popup3.active{
+  transform: translateX(0%);
+  animation: slideprojLeft 0.5s ease-in-out;
+}
      /* end project list */
