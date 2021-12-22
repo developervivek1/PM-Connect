@@ -2326,48 +2326,17 @@ border-left: 6px solid #F0CF5E;
 .proj_filter .divfilter2 .project1:nth-child(3) .projectcon1 .head1 span:nth-child(2) {
 background: #F0CF5E;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .milestone
-{
-background: #ECF0F9 0% 0% no-repeat padding-box;
-display: flex;
-align-items: center;
-padding-left: 15px;
-width: 98%;
-position: relative;
-height: 0px;
-overflow: hidden;
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone {
+  /* background: #ECF0F9 0% 0% no-repeat padding-box; */
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 42px;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .milestone.showmilestone
-{
-	margin: .3rem 0 2rem 2rem;
-height: 42px;
-transition: height 0.15s ease-in;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .milestone > .d-flex
-{
-visibility: hidden;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .milestone > .d-flex.visible
-{
-visibility: visible;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milehide .milestone2
-{
-position: absolute;
-z-index: 10;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-display: flex;
-justify-content: space-between;
-padding-left: 15px;
-align-items: center;
-cursor: pointer;
-background: #D8E2FC 0% 0% no-repeat padding-box;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .milestone span,
-.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milehide .milestone2 span
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone span
 {
 width: 11px;
 height: 11px;
@@ -2378,44 +2347,13 @@ border-radius: 1px;
 margin-inline-end: 1.5rem;
 margin-top: 0.3rem;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .milestone p,
-.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milehide .milestone2 p
+.proj_filter .divfilter2 .project1 .projectcon1 .milestone p
 {
 font-size: 1.2rem;
 color: #1E2022;
 opacity: 0.9;
 cursor: pointer;
 margin-bottom: 0rem;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milehide .milestone2>div
-{
-display: flex;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milehide .milestone2>div>span
-{
-margin-top: 3px;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milehide .milestone2 button,
-.proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .task_name button
-{
-background-color: #2D62ED;
-width: 74px;
-height: 42px;
-outline: none;
-border: none;
-color: #fff;
-text-transform: uppercase;
-letter-spacing: 0.3px;
-cursor: pointer;
-font-size: 12px;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milehide
-{
-display: none;
-}
-.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milehide.showmilestone2
-{
-display: block;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile
 {

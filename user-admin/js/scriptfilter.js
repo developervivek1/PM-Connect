@@ -6,14 +6,7 @@ const overlay = document.querySelector('.proj_filter .myoverlay');
 const topup2_overlay = document.querySelector('.proj_filter .divfilter2 .top_up2 .topup2_overlay');
 const drop_overlay = document.querySelector('.proj_filter .divfilter2 .drop_overlay');
 const milediv = document.querySelector('.proj_filter .divfilter2 .project1 .expand .border-bottom .divcon3 #tree_open');
-const showMile = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone');
-const milediv2 = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone p');
-const showMile2 = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milehide');
-const showFinalmile = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .main_mile');
-const dflexVisible = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone > .d-flex');
-const finalmile1 = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone  .milestone2');
-const finalmile2 = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milestone2 div');
-const finalmile3 = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milestone2 button');
+const showMile = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .main_mile');
 const showTable = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .head1 span:first-child');
 const addColumn = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .head11 button');
 const addColumnicon = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .head11 button img');
@@ -39,8 +32,7 @@ const mobileTrigger = document.querySelector('.mobile-menuhead .hamberger-menu s
 const mobileMenu = document.querySelector('.proj_filter nav');
 const proj_edit = document.querySelector('.manage_view .proj_edit');
 const proj_overlay = document.querySelector('.manage_view .proj_overlay');
-const tabproj_btn = document.querySelectorAll('.manage_view #popup3 .proj_content .tab-btn button');
-const tabproj_btn2 = document.querySelectorAll('.manage_view #popup2 .proj_content .tab-btn button');
+const tabproj_btn = document.querySelectorAll('.manage_view .proj_edit .proj_content .tab-btn button');
 //const showFavorite = document.querySelector('.manage_view .proj_edit .proj_content .tab-btn #showFav');
 const favDiv = document.querySelector('.manage_view .proj_edit .proj_content .tab-btn .favDiv');
 let projdetail_btn = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projmaincon .divcon1 span');
@@ -57,6 +49,9 @@ const showprojAdd = document.querySelector('.proj_filter .divfilter2 #newmilesto
 const popup3 = document.querySelector('.proj_filter #popup3');
 const Showpopup3 = document.querySelectorAll('.proj_filter .divfilter2 .last_div');
 const closePopup3 = document.querySelector('.proj_filter #popup3 .closeit > span');
+const Showpopup2 =document.querySelector('.proj_filter .divfilter2 .main_mile .milestone p');
+const popup2 =document.querySelector('.proj_filter #popup2');
+const closePopup2 =document.querySelector('.proj_filter #popup2 .closeit > span');
 const closeProjadd = document.querySelector('.proj_filter .proj_add .projadd_bottom .btn:nth-child(1)');
 const saveProjadd = document.querySelector('.proj_filter .proj_add .projadd_bottom .btn:nth-child(2)');
 const searchDiv = document.querySelector('.proj_filter .proj_add .assignee_div .usersearch_div');
@@ -65,22 +60,10 @@ let editText =document.querySelectorAll('.proj_filter #editText');
 const openMore =document.querySelectorAll('.proj_filter .proj_edit .proj_content .files .uploaded .open #openMore');
 const openOption =document.querySelectorAll('.proj_filter .proj_edit .proj_content .files .uploaded .open .openOption');
 const file_overlay =document.querySelector('.proj_filter .proj_edit .proj_content .files .file_overlay');
-const filterLog =document.querySelector('.proj_filter .proj_edit .proj_content .active_log .btnleft .btn:nth-child(1)');
-const personFilter =document.querySelector('.proj_filter .proj_edit .proj_content .active_log .btnleft .btn:nth-child(2)');
-const activelog_overlay =document.querySelector('.proj_filter .proj_edit .proj_content .active_log .activelog_overlay');
-const filterLogcon =document.querySelector('.proj_filter .proj_edit .proj_content .active_log .btnleft .filterlog_con');
-const personFiltercon =document.querySelector('.proj_filter .proj_edit .proj_content .active_log .btnleft .person_con');
-const open_Task =document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 #openTask');
-const milestone4 =document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone4');
-const open_taskName =milestone4.querySelector('.addtask_hide');
-const open_taskAdded =milestone4.querySelector('.taskname_hide');
-const addedTask =milestone4.querySelector('.task_added');
-const open_SubTask =milestone4.querySelector('#addSubtask');
-const open_SubtaskName =milestone4.querySelector('.addSubtask_hide');
-const open_SubtaskAdded =milestone4.querySelector('.Subtaskname_hide');
-const addedSubtask =milestone4.querySelector('.Subtask_added');
+const filterLog =document.querySelectorAll('.proj_filter .proj_content .active_log .btnleft .btn:nth-child(1)');
+const personFilter =document.querySelectorAll('.proj_filter .proj_content .active_log .btnleft .btn:nth-child(2)');
 let statusColor, statusText, textVal, value,pageYedit,h5con,adjacentNode,fixedValue1=121,fixedValue2=121,fixedValue3=121;
-console.log(subs_overlay);
+let activelog_overlay, personFiltercon, filterCon;
 
 const ImageDisable=[{disSrc: 'icons/ColorImage/assignees_disab.png',enabSrc: 'icons/Assigness.svg'},
 {disSrc: 'icons/ColorImage/subitem_disab.png',enabSrc: 'icons/subitem.svg'},
@@ -121,21 +104,6 @@ mobileTrigger.addEventListener('click',()=>
 })
 
 // proj_edit Hide/Show
-projdetail_btn.forEach((detailProj)=>
-{
-    detailProj.addEventListener('click',(e)=>
-    {
-        showProjdetail();
-    },true)
-})
-function showProjdetail()
-{
-    if(!proj_edit.classList.contains('active'))
-    {
-        proj_edit.classList.add('active');
-        proj_overlay.classList.add('active');
-    }
-}
 tabproj_btn.forEach((tabBtn)=>
 {
     tabBtn.addEventListener('click',(e)=>
@@ -154,44 +122,6 @@ tabproj_btn.forEach((tabBtn)=>
         }
     })
 })
-tabproj_btn2.forEach((tabBtn)=>
-{
-    tabBtn.addEventListener('click',(e)=>
-    {
-        e.stopPropagation();
-        if(!e.target.parentNode.classList.contains('active'))
-        {
-            e.target.classList.add('active');
-            let tabconActive = proj_con.querySelector('.tabproj_con.active');
-            let tabbtnActive = proj_con.querySelector('.btn.active');
-            let tabbtnp = proj_con.querySelector('.btn.active p.active');
-            tabconActive.classList.remove('active');
-            tabbtnActive.classList.remove('active');
-            tabbtnp.classList.remove('active');
-            let data_target = e.target.parentNode.getAttribute('data-target');
-            e.target.parentNode.classList.add('active');
-            let targetCon = proj_con.querySelector(data_target);
-            targetCon.classList.add('active');
-        }
-    })
-})
-/*
-showFavorite.addEventListener('click',(e)=>
-{
-    e.stopPropagation();
-    let checkfile = e.target.closest('.proj_content').querySelector('.files');
-    if(!favDiv.classList.contains('active') && checkfile.classList.contains('active'))
-    {
-        favDiv.classList.add('active');
-        file_overlay.classList.add('active');
-    }
-    else
-    {
-        favDiv.classList.remove('active');
-        file_overlay.classList.remove('active');
-    }
-}) */
-
 showSubscribe.addEventListener('click',(e)=>
 {
     e.stopPropagation();
@@ -240,31 +170,41 @@ openMore.forEach((open)=>
         }
     })
 })
-filterLog.addEventListener('click',()=>
+filterLog.forEach((filter)=>
 {
-    if(!filterLogcon.classList.contains('active'))
+    filter.addEventListener('click',(e)=>
     {
-        filterLogcon.classList.add('active');
-        activelog_overlay.classList.add('active');
-    }
-    else
-    {
-        filterLogcon.classList.remove('active');
-        activelog_overlay.classList.remove('active');
-    }
+        filterCon = e.target.closest('.btnleft').querySelector('.filterlog_con');
+        activelog_overlay = e.target.closest('.tabproj_con').querySelector('.activelog_overlay');
+        if(!filterCon.classList.contains('active'))
+        {
+            filterCon.classList.add('active');
+            activelog_overlay.classList.add('active');
+        }
+        else
+        {
+            filterCon.classList.remove('active');
+            activelog_overlay.classList.remove('active');
+        }
+    })
 })
-personFilter.addEventListener('click',()=>
+personFilter.forEach((person)=>
 {
-    if(!personFiltercon.classList.contains('active'))
+    person.addEventListener('click',(e)=>
     {
-        personFiltercon.classList.add('active');
-        activelog_overlay.classList.add('active');
-    }
-    else
-    {
-        personFiltercon.classList.remove('active');
-        activelog_overlay.classList.remove('active');
-    }
+        personFiltercon = e.target.closest('.btnleft').querySelector('.person_con');
+        activelog_overlay = e.target.closest('.tabproj_con').querySelector('.activelog_overlay');
+        if(!personFiltercon.classList.contains('active'))
+        {
+            personFiltercon.classList.add('active');
+            activelog_overlay.classList.add('active');
+        }
+        else
+        {
+            personFiltercon.classList.remove('active');
+            activelog_overlay.classList.remove('active');
+        }
+    })
 })
 
 // hide/show proj_add
@@ -304,6 +244,20 @@ Showpopup3.forEach((Show)=>
             }
             
         })
+    })
+    Showpopup2.addEventListener('click',()=>
+    {
+        if(!popup2.classList.contains('.active'))
+        {
+        popup2.classList.add('active');
+        proj_overlay.classList.add('active');
+        }
+        else
+        {
+        popup2.classList.remove('active'); 
+        proj_overlay.classList.remove('active');
+        }
+        
     })
 
 saveProjadd.addEventListener('click',()=>
@@ -357,26 +311,33 @@ projDet_close.addEventListener('click',hideProjdetail);
 projadd_Close.addEventListener('click', hideProjdetail);
 closeProjadd.addEventListener('click', hideProjdetail);
 closePopup3.addEventListener('click', hideProjdetail);
+closePopup2.addEventListener('click', hideProjdetail);
 
 function hideProjdetail()
 {
-    if(proj_edit.classList.contains('active') || projadd_div.classList.contains('active')
-    || popup3.classList.contains('active'))
+    if(projadd_div.classList.contains('active') || popup3.classList.contains('active') || popup2.classList.contains('active'))
     {
-        proj_edit.classList.remove('active');
         projadd_div.classList.remove('active');
         proj_overlay.classList.remove('active');       
         subs_Div.classList.remove('active');        
         subs_overlay.classList.remove('active');
         popup3.classList.remove('active');
+        popup2.classList.remove('active');
         openOption.forEach((open)=>
         {
             open.classList.remove('active');
         })
         file_overlay.classList.remove('active');
-        activelog_overlay.classList.remove('active');
-        filterLogcon.classList.remove('active');
-        personFiltercon.classList.remove('active');
+        if(filterCon !=undefined && filterCon.classList.contains('active'))
+        {
+            activelog_overlay.classList.remove('active');
+            filterCon.classList.remove('active');
+        }
+        else if(personFiltercon !=undefined && personFiltercon.classList.contains('active'))
+        {
+            activelog_overlay.classList.remove('active');
+            personFiltercon.classList.remove('active');
+        }
     }
 }
 
@@ -439,10 +400,13 @@ function hideFilterdiv(e) {
         })
         file_overlay.classList.remove('active');
     }
-    else if(e.target==activelog_overlay)
+    else if(e.target==activelog_overlay && filterCon.classList.contains('active') && filterCon !=undefined) 
     {
-        filterLogcon.classList.remove('active');
+        filterCon.classList.remove('active');
         activelog_overlay.classList.remove('active');
+    }
+    else if(e.target==activelog_overlay && personFiltercon.classList.contains('active') && personFiltercon !=undefined) 
+    {
         personFiltercon.classList.remove('active');
         activelog_overlay.classList.remove('active');
     }
@@ -491,50 +455,16 @@ showFilter.addEventListener('click', (e) => {
 
 // Milestone Expand/Collapse
 milediv.addEventListener('click', () => {
-    if (!showMile.classList.contains('showmilestone')) {
-        showMile.classList.add('showmilestone');
+    if (!showMile.classList.contains('showmain_mile')) {
+        showMile.classList.add('showmain_mile');
         root.style.setProperty("--rot", "90deg");
-        dflexVisible.classList.add('visible');
     }
     else {
-        showMile.classList.remove('showmilestone');
-        showMile2.classList.remove('showmilestone2');
-        showFinalmile.classList.remove('showmain_mile');
+        showMile.classList.remove('showmain_mile');
         root.style.setProperty("--rot", "0deg");
-        dflexVisible.classList.remove('visible');
-        milestone4.classList.remove('active');
-        open_taskAdded.classList.remove('active');
-        open_taskName.classList.remove('active');
-        addedTask.classList.remove('active');
-        open_SubtaskAdded.classList.remove('active');
-        open_SubtaskName.classList.remove('active');
-        addedSubtask.classList.remove('active');
     }
 })
 
-milediv2.addEventListener('click', () => {
-    if (!showMile2.classList.contains('showmilestone2')) {
-        showMile2.classList.add('showmilestone2');
-    }
-    else {
-        showMile2.classList.remove('showmilestone2');
-    }
-})
-
-finalmile1.addEventListener('click', () => {
-    showFinal();
-})
-
-function showFinal() {
-    if (!showFinalmile.classList.contains('showmain_mile')) {
-        showFinalmile.classList.add('showmain_mile');
-        showMile.classList.add('showmilestone');
-        showMile2.classList.remove('showmilestone2');
-    }
-    else {
-        showFinalmile.classList.remove('showmain_mile');
-    }
-}
 // open_Task.addEventListener('click', ()=>
 // {
 //     if(!milestone4.classList.contains('active') && !open_taskName.classList.contains('active'))
