@@ -6,14 +6,7 @@ const overlay = document.querySelector('.proj_filter .myoverlay');
 const topup2_overlay = document.querySelector('.proj_filter .divfilter2 .top_up2 .topup2_overlay');
 const drop_overlay = document.querySelector('.proj_filter .divfilter2 .drop_overlay');
 const milediv = document.querySelector('.proj_filter .divfilter2 .project1 .expand .border-bottom .divcon3 #tree_open');
-const showMile = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone');
-const milediv2 = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone p');
-const showMile2 = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milehide');
-const showFinalmile = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .main_mile');
-const dflexVisible = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone > .d-flex');
-const finalmile1 = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone  .milestone2');
-const finalmile2 = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milestone2 div');
-const finalmile3 = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone .milestone2 button');
+const showMile = document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .main_mile');
 const showTable = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .head1 span:first-child');
 const addColumn = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .head11 button');
 const addColumnicon = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .head11 button img');
@@ -38,53 +31,39 @@ let addLabel = document.querySelectorAll('.proj_filter .divfilter2 .project1 .pr
 const mobileTrigger = document.querySelector('.mobile-menuhead .hamberger-menu span');
 const mobileMenu = document.querySelector('.proj_filter nav');
 const proj_edit = document.querySelector('.manage_view .proj_edit');
-const proj_con = document.querySelector('.manage_view .proj_edit .proj_content');
 const proj_overlay = document.querySelector('.manage_view .proj_overlay');
-const tabproj_btn = document.querySelectorAll('.manage_view .proj_edit .proj_content .tab-btn .btn');
-const tabproj_btn2 = document.querySelectorAll('.manage_view .proj_edit .proj_content .tab-btn #showTab');
+const tabproj_btn = document.querySelectorAll('.manage_view .proj_edit .proj_content .tab-btn button');
 //const showFavorite = document.querySelector('.manage_view .proj_edit .proj_content .tab-btn #showFav');
 const favDiv = document.querySelector('.manage_view .proj_edit .proj_content .tab-btn .favDiv');
 let projdetail_btn = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projmaincon .divcon1 span');
 const projDet_close = document.querySelector('.manage_view .proj_edit .col-md-3 span');
-const update_Talk = document.querySelector('.manage_view .proj_edit .attach_div .divfile2 button');
-const update_append = document.querySelector('.manage_view .proj_edit .update');
-const emoji_Btn = document.querySelector('.manage_view .proj_edit .attach_div .divfile1 .emoji_div:nth-child(2) p');
-const emoji_Container = document.querySelector('.manage_view .proj_edit .attach_div .divfile1 .emoji_div:nth-child(2) .giflist');
-const emoji_ContainerIn = document.querySelector('.manage_view .proj_edit .attach_div .divfile1 .emoji_div:nth-child(2) .giflist .gifin');
-const emoji_Input = document.querySelector('.manage_view .proj_edit .attach_div .divfile1 .emoji_div:nth-child(2) .giflist input');
 let calendar_data = document.querySelectorAll('.proj_filter .divfilter2 #rangePicker');
-const showSubscribe = document.querySelectorAll('.proj_filter .proj_edit .subscribe #subcribe_pop');
-const subs_overlay = document.querySelector('.proj_filter .subscribe_overlay');
-const subs_Div = document.querySelector('.proj_filter .proj_edit .subscribe .subscriber_div');
-const close_subsdiv = document.querySelector('.proj_filter .proj_edit .subscribe .subscriber_div > .row span');
-const userDel = document.querySelectorAll('.proj_filter .proj_edit .subscribe .subscriber_div .subs_con .col-4 img');
+const showSubscribe = document.querySelector('.proj_filter #popup3 .subscribe #subcribe_pop');
+const subs_overlay = document.querySelector('.proj_filter #subsOverlay2');
+const subs_Div = document.querySelector('.proj_filter #popup3 .subscribe .subscriber_div');
+const close_subsdiv = document.querySelector('.proj_filter #popup3 .subscribe .subscriber_div > .row span');
+const userDel = document.querySelectorAll('.proj_filter #popup3 .subscribe .subscriber_div .subs_con .col-4 img');
 const projadd_div = document.querySelector('.proj_filter .proj_add');
 const projadd_Close = document.querySelector('.proj_filter .proj_add .col-md-12 > span');
-const showprojAdd = document.querySelectorAll('.proj_filter .divfilter2 .project1 .border-bottom .last_div');
+const showprojAdd = document.querySelector('.proj_filter .divfilter2 #newmilestone1');
+const popup3 = document.querySelector('.proj_filter #popup3');
+const Showpopup3 = document.querySelectorAll('.proj_filter .divfilter2 .last_div');
+const closePopup3 = document.querySelector('.proj_filter #popup3 .closeit > span');
+const Showpopup2 =document.querySelector('.proj_filter .divfilter2 .main_mile .milestone p');
+const popup2 =document.querySelector('.proj_filter #popup2');
+const closePopup2 =document.querySelector('.proj_filter #popup2 .closeit > span');
 const closeProjadd = document.querySelector('.proj_filter .proj_add .projadd_bottom .btn:nth-child(1)');
 const saveProjadd = document.querySelector('.proj_filter .proj_add .projadd_bottom .btn:nth-child(2)');
 const searchDiv = document.querySelector('.proj_filter .proj_add .assignee_div .usersearch_div');
 const assignee_overlay = document.querySelector('.proj_filter .proj_add .assignee_div .assignee_overlay');
-const disableInput= document.querySelector('.proj_filter .proj_add .main_add #disabledValue');
 let editText =document.querySelectorAll('.proj_filter #editText');
 const openMore =document.querySelectorAll('.proj_filter .proj_edit .proj_content .files .uploaded .open #openMore');
 const openOption =document.querySelectorAll('.proj_filter .proj_edit .proj_content .files .uploaded .open .openOption');
 const file_overlay =document.querySelector('.proj_filter .proj_edit .proj_content .files .file_overlay');
-const filterLog =document.querySelector('.proj_filter .proj_edit .proj_content .active_log .btnleft .btn:nth-child(1)');
-const personFilter =document.querySelector('.proj_filter .proj_edit .proj_content .active_log .btnleft .btn:nth-child(2)');
-const activelog_overlay =document.querySelector('.proj_filter .proj_edit .proj_content .active_log .activelog_overlay');
-const filterLogcon =document.querySelector('.proj_filter .proj_edit .proj_content .active_log .btnleft .filterlog_con');
-const personFiltercon =document.querySelector('.proj_filter .proj_edit .proj_content .active_log .btnleft .person_con');
-const open_Task =document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 #openTask');
-const milestone4 =document.querySelector('.proj_filter .divfilter2 .project1 .projectcon1 .milestone4');
-const open_taskName =milestone4.querySelector('.addtask_hide');
-const open_taskAdded =milestone4.querySelector('.taskname_hide');
-const addedTask =milestone4.querySelector('.task_added');
-const open_SubTask =milestone4.querySelector('#addSubtask');
-const open_SubtaskName =milestone4.querySelector('.addSubtask_hide');
-const open_SubtaskAdded =milestone4.querySelector('.Subtaskname_hide');
-const addedSubtask =milestone4.querySelector('.Subtask_added');
+const filterLog =document.querySelectorAll('.proj_filter .proj_content .active_log .btnleft .btn:nth-child(1)');
+const personFilter =document.querySelectorAll('.proj_filter .proj_content .active_log .btnleft .btn:nth-child(2)');
 let statusColor, statusText, textVal, value,pageYedit,h5con,adjacentNode,fixedValue1=121,fixedValue2=121,fixedValue3=121;
+let activelog_overlay, personFiltercon, filterCon;
 
 const ImageDisable=[{disSrc: 'icons/ColorImage/assignees_disab.png',enabSrc: 'icons/Assigness.svg'},
 {disSrc: 'icons/ColorImage/subitem_disab.png',enabSrc: 'icons/subitem.svg'},
@@ -125,21 +104,6 @@ mobileTrigger.addEventListener('click',()=>
 })
 
 // proj_edit Hide/Show
-projdetail_btn.forEach((detailProj)=>
-{
-    detailProj.addEventListener('click',(e)=>
-    {
-        showProjdetail();
-    },true)
-})
-function showProjdetail()
-{
-    if(!proj_edit.classList.contains('active'))
-    {
-        proj_edit.classList.add('active');
-        proj_overlay.classList.add('active');
-    }
-}
 tabproj_btn.forEach((tabBtn)=>
 {
     tabBtn.addEventListener('click',(e)=>
@@ -147,220 +111,31 @@ tabproj_btn.forEach((tabBtn)=>
         e.stopPropagation();
         if(!e.target.classList.contains('active'))
         {
-            let tabconActive = proj_con.querySelector('.tabproj_con.active');
-            let tabbtnActive = proj_con.querySelector('.btn.active');
-            let tabbtnp = proj_con.querySelector('.btn.active p.active');
+            let tabconActive = e.target.closest('.proj_content').querySelector('.tabproj_con.active');
+            let tabbtnActive = e.target.closest('.tab-btn').querySelector('.btn.active');
             tabconActive.classList.remove('active');
             tabbtnActive.classList.remove('active');
-            tabbtnp.classList.remove('active');
             let data_target = e.target.getAttribute('data-target');
             e.target.classList.add('active');
-            e.target.querySelector('p').classList.add('active');
-            let targetCon = proj_con.querySelector(data_target);
+            let targetCon = e.target.closest('.proj_content').querySelector(data_target);
             targetCon.classList.add('active');
         }
     })
 })
-tabproj_btn2.forEach((tabBtn)=>
-{
-    tabBtn.addEventListener('click',(e)=>
-    {
-        e.stopPropagation();
-        if(!e.target.parentNode.classList.contains('active'))
-        {
-            e.target.classList.add('active');
-            let tabconActive = proj_con.querySelector('.tabproj_con.active');
-            let tabbtnActive = proj_con.querySelector('.btn.active');
-            let tabbtnp = proj_con.querySelector('.btn.active p.active');
-            tabconActive.classList.remove('active');
-            tabbtnActive.classList.remove('active');
-            tabbtnp.classList.remove('active');
-            let data_target = e.target.parentNode.getAttribute('data-target');
-            e.target.parentNode.classList.add('active');
-            let targetCon = proj_con.querySelector(data_target);
-            targetCon.classList.add('active');
-        }
-    })
-})
-/*
-showFavorite.addEventListener('click',(e)=>
+showSubscribe.addEventListener('click',(e)=>
 {
     e.stopPropagation();
-    let checkfile = e.target.closest('.proj_content').querySelector('.files');
-    if(!favDiv.classList.contains('active') && checkfile.classList.contains('active'))
+    let showDiv = e.target.parentNode.parentNode.querySelector('.subscriber_div');
+    if(!showDiv.classList.contains('active'))
     {
-        favDiv.classList.add('active');
-        file_overlay.classList.add('active');
+        showDiv.classList.add('active');
+        subs_overlay.classList.add('active');
     }
     else
     {
-        favDiv.classList.remove('active');
-        file_overlay.classList.remove('active');
+        showDiv.classList.remove('active');
+        subs_overlay.classList.remove('active');
     }
-}) */
-setTimeout(()=>
-{
-    const textarea = document.querySelector('.manage_view .proj_edit .update .note-editing-area .note-editable');
-    let textarea_Val;
-    textarea.addEventListener('keyup',(e)=>
-    {
-        textarea_Val = e.target.innerText;
-    })
-    update_Talk.addEventListener('click',()=>
-    {
-        let userName = document.querySelector('.manage_view .proj_edit #firstName').getAttribute('alt');
-        let profile_img = document.querySelector('.manage_view .proj_edit #firstName').getAttribute('src');
-        let no_update = document.querySelector('.manage_view .proj_edit .update .no_updateyet');
-        // let date = new Date()
-        // let minute = date.getMinutes();
-        if(textarea_Val === undefined || textarea_Val==="")
-        {
-            return;
-        }
-        else
-        {
-            no_update.style.display="none";
-            let update_con = document.createElement('div');
-            update_con.setAttribute('class','update_con');
-            let row1 = document.createElement('div');
-            row1.setAttribute('class','row has_pad');
-            let user_div = document.createElement('div');
-            let noti_con = document.createElement('div');
-            let text_div = document.createElement('div');
-            let seen_div = document.createElement('div');
-            user_div.setAttribute('class','col justify-content-start align-items-center useractive_div');
-            noti_con.setAttribute('class','col justify-content-end align-items-center d-flex noti_div');
-            text_div.setAttribute('class','col-md-12 mt-5 pt-4 text_div');
-            seen_div.setAttribute('class','col-md-12 mt-5 pt-3 d-flex justify-content-end seen_div');
-            let user1 = document.createElement('div');
-            let user2 = document.createElement('img');
-            user2.src = `${profile_img}`;
-            user1.appendChild(user2);
-            let user3 = document.createElement('p');
-            user3.innerText=`${userName}`;
-            let user4 = document.createElement('span');
-            user_div.appendChild(user1);
-            user_div.appendChild(user3);
-            user_div.appendChild(user4);
-
-            let noti1 = document.createElement('p');
-            noti1.innerText="20m";
-            let noti2 = document.createElement('i');
-            noti2.setAttribute('class','material-icons');
-            noti2.innerText="notifications_none";
-            noti_con.appendChild(noti1);
-            noti_con.appendChild(noti2);
-
-            let text1 = document.createElement('p');
-            text1.innerText=`${textarea_Val}`;
-            text_div.appendChild(text1);
-
-            let seen1 = document.createElement('p');
-            seen1.innerText="2 seen";
-            seen_div.appendChild(seen1);
-
-            row1.appendChild(user_div);
-            row1.appendChild(noti_con);
-            row1.appendChild(text_div);
-            row1.appendChild(seen_div);
-
-            let row2 = document.createElement('div');
-            row2.setAttribute('class','row no_margin');
-            let like_div = document.createElement('div');
-            let replay_div = document.createElement('div');
-            like_div.setAttribute('class','col justify-content-center align-items-center d-flex like_div');
-            replay_div.setAttribute('class','col justify-content-center align-items-center d-flex replay_div');
-            let like1 = document.createElement('img');
-            like1.src="icons/like.svg";
-            let like2=document.createElement('p');
-            like2.innerText="Like";
-            like_div.appendChild(like1);
-            like_div.appendChild(like2);
-            let replay1 = document.createElement('img');
-            replay1.src="icons/replay.svg";
-            let replay2=document.createElement('p');
-            replay2.innerText="Reply";
-            replay_div.appendChild(replay1);
-            replay_div.appendChild(replay2);
-            row2.appendChild(like_div);
-            row2.appendChild(replay_div);
-            update_con.appendChild(row1);
-            update_con.appendChild(row2);
-            update_append.insertBefore(update_con, update_append.childNodes[7]);
-            textarea.innerText="";
-            textarea_Val=undefined;
-        }
-    })
-},4000)
-
-// Get data using GIF API
-emoji_Btn.addEventListener('click',()=>
-{
-    if(!emoji_Container.classList.contains('active'))
-    {
-        emoji_Container.classList.add('active');
-    }
-    else
-    {
-        emoji_Container.classList.remove('active');
-    }
-})
-window.addEventListener('keyup',(e)=>
-{
-    if(e.key==="Escape" && emoji_Container.classList.contains('active'))
-    {
-        emoji_Container.classList.remove('active');
-    }
-})
-async function getapi(e)
-{
-    if(e.key==="Escape" && emoji_Container.classList.contains('active'))
-    {
-        emoji_Container.classList.remove('active');
-        return;
-    }
-    e.stopPropagation();
-    e.preventDefault();
-    let removefig = emoji_ContainerIn.querySelectorAll('figure');
-    for(let i =0;i<removefig.length;i++)
-    {
-        removefig[i].remove();
-    }
-    let url=`https://api.giphy.com/v1/gifs/search?api_key=12jskRsX6Qa4D5fm9Mkx7b0KW1TQshP1&limit=10&q=`;
-    let str = emoji_Input.value.trim();
-    let Searchdata = url.concat(str);
-    let data = await fetch(`${Searchdata}`);
-    let realdata = await data.json();
-    let mapdata = realdata.data;
-    mapdata.map( data =>
-    {
-        let fig = document.createElement("figure");
-        let img = document.createElement("img");
-        img.src = data.images.preview_gif.url;
-        img.alt = data.title;
-        fig.appendChild(img);
-        emoji_ContainerIn.insertAdjacentElement("beforeend", fig);
-    })
-}
-emoji_Input.addEventListener('keyup', getapi);
-
-showSubscribe.forEach((subscribe)=>
-{
-    subscribe.addEventListener('click',(e)=>
-    {
-        e.stopPropagation();
-       let showDiv = e.target.parentNode.parentNode.querySelector('.subscriber_div');
-       if(!showDiv.classList.contains('active'))
-       {
-           showDiv.classList.add('active');
-           subs_overlay.classList.add('active');
-       }
-       else
-       {
-           showDiv.classList.remove('active');
-           subs_overlay.classList.remove('active');
-       }
-    })
 })
 close_subsdiv.addEventListener('click',()=>
 {
@@ -395,45 +170,54 @@ openMore.forEach((open)=>
         }
     })
 })
-filterLog.addEventListener('click',()=>
+filterLog.forEach((filter)=>
 {
-    if(!filterLogcon.classList.contains('active'))
+    filter.addEventListener('click',(e)=>
     {
-        filterLogcon.classList.add('active');
-        activelog_overlay.classList.add('active');
-    }
-    else
-    {
-        filterLogcon.classList.remove('active');
-        activelog_overlay.classList.remove('active');
-    }
+        filterCon = e.target.closest('.btnleft').querySelector('.filterlog_con');
+        activelog_overlay = e.target.closest('.tabproj_con').querySelector('.activelog_overlay');
+        if(!filterCon.classList.contains('active'))
+        {
+            filterCon.classList.add('active');
+            activelog_overlay.classList.add('active');
+        }
+        else
+        {
+            filterCon.classList.remove('active');
+            activelog_overlay.classList.remove('active');
+        }
+    })
 })
-personFilter.addEventListener('click',()=>
+personFilter.forEach((person)=>
 {
-    if(!personFiltercon.classList.contains('active'))
+    person.addEventListener('click',(e)=>
     {
-        personFiltercon.classList.add('active');
-        activelog_overlay.classList.add('active');
-    }
-    else
-    {
-        personFiltercon.classList.remove('active');
-        activelog_overlay.classList.remove('active');
-    }
+        personFiltercon = e.target.closest('.btnleft').querySelector('.person_con');
+        activelog_overlay = e.target.closest('.tabproj_con').querySelector('.activelog_overlay');
+        if(!personFiltercon.classList.contains('active'))
+        {
+            personFiltercon.classList.add('active');
+            activelog_overlay.classList.add('active');
+        }
+        else
+        {
+            personFiltercon.classList.remove('active');
+            activelog_overlay.classList.remove('active');
+        }
+    })
 })
+
 // hide/show proj_add
-showprojAdd.forEach((projAdd)=>
-{
-    projAdd.addEventListener('click',(e)=>
+    showprojAdd.addEventListener('click',(e)=>
     {
         if(!projadd_div.classList.contains('active'))
         {
             projadd_div.classList.add('active');
             proj_overlay.classList.add('active');
             closestExpand = e.target.closest('.expand');
-            h5con = e.target.closest('.child-border').querySelector('.head1 h5').innerText;
-            disableInput.placeholder=`${h5con}`
-            adjacentNode = e.target.closest('.border-bottom').previousElementSibling;
+            // h5con = e.target.closest('.child-border').querySelector('.head1 h5').innerText;
+            // disableInput.placeholder=`${h5con}`;
+            // adjacentNode = e.target.closest('.border-bottom').previousElementSibling;
             adjacentAppendDiv = e.target.closest('.expand');
         }
         else
@@ -442,7 +226,39 @@ showprojAdd.forEach((projAdd)=>
             proj_overlay.classList.remove('active');
         }
     })
-})
+
+   
+Showpopup3.forEach((Show)=>
+    {
+        Show.addEventListener('click',()=>
+        {
+            if(!popup3.classList.contains('.active'))
+            {
+            popup3.classList.add('active');
+            proj_overlay.classList.add('active');
+            }
+            else
+            {
+            popup3.classList.remove('active'); 
+            proj_overlay.classList.remove('active');
+            }
+            
+        })
+    })
+    Showpopup2.addEventListener('click',()=>
+    {
+        if(!popup2.classList.contains('.active'))
+        {
+        popup2.classList.add('active');
+        proj_overlay.classList.add('active');
+        }
+        else
+        {
+        popup2.classList.remove('active'); 
+        proj_overlay.classList.remove('active');
+        }
+        
+    })
 
 saveProjadd.addEventListener('click',()=>
 {
@@ -494,27 +310,34 @@ proj_overlay.addEventListener('click',hideProjdetail);
 projDet_close.addEventListener('click',hideProjdetail);
 projadd_Close.addEventListener('click', hideProjdetail);
 closeProjadd.addEventListener('click', hideProjdetail);
+closePopup3.addEventListener('click', hideProjdetail);
+closePopup2.addEventListener('click', hideProjdetail);
 
 function hideProjdetail()
 {
-    if(proj_edit.classList.contains('active') || projadd_div.classList.contains('active'))
+    if(projadd_div.classList.contains('active') || popup3.classList.contains('active') || popup2.classList.contains('active'))
     {
-        proj_edit.classList.remove('active');
         projadd_div.classList.remove('active');
-        proj_overlay.classList.remove('active');
-        emoji_Container.classList.remove('active');
-        subs_Div.classList.remove('active');
-        searchDiv.classList.remove('active');
+        proj_overlay.classList.remove('active');       
+        subs_Div.classList.remove('active');        
         subs_overlay.classList.remove('active');
+        popup3.classList.remove('active');
+        popup2.classList.remove('active');
         openOption.forEach((open)=>
         {
             open.classList.remove('active');
         })
-        favDiv.classList.remove('active');
         file_overlay.classList.remove('active');
-        activelog_overlay.classList.remove('active');
-        filterLogcon.classList.remove('active');
-        personFiltercon.classList.remove('active');
+        if(filterCon !=undefined && filterCon.classList.contains('active'))
+        {
+            activelog_overlay.classList.remove('active');
+            filterCon.classList.remove('active');
+        }
+        else if(personFiltercon !=undefined && personFiltercon.classList.contains('active'))
+        {
+            activelog_overlay.classList.remove('active');
+            personFiltercon.classList.remove('active');
+        }
     }
 }
 
@@ -577,10 +400,13 @@ function hideFilterdiv(e) {
         })
         file_overlay.classList.remove('active');
     }
-    else if(e.target==activelog_overlay)
+    else if(e.target==activelog_overlay && filterCon.classList.contains('active') && filterCon !=undefined) 
     {
-        filterLogcon.classList.remove('active');
+        filterCon.classList.remove('active');
         activelog_overlay.classList.remove('active');
+    }
+    else if(e.target==activelog_overlay && personFiltercon.classList.contains('active') && personFiltercon !=undefined) 
+    {
         personFiltercon.classList.remove('active');
         activelog_overlay.classList.remove('active');
     }
@@ -629,100 +455,66 @@ showFilter.addEventListener('click', (e) => {
 
 // Milestone Expand/Collapse
 milediv.addEventListener('click', () => {
-    if (!showMile.classList.contains('showmilestone')) {
-        showMile.classList.add('showmilestone');
+    if (!showMile.classList.contains('showmain_mile')) {
+        showMile.classList.add('showmain_mile');
         root.style.setProperty("--rot", "90deg");
-        dflexVisible.classList.add('visible');
     }
     else {
-        showMile.classList.remove('showmilestone');
-        showMile2.classList.remove('showmilestone2');
-        showFinalmile.classList.remove('showmain_mile');
+        showMile.classList.remove('showmain_mile');
         root.style.setProperty("--rot", "0deg");
-        dflexVisible.classList.remove('visible');
-        milestone4.classList.remove('active');
-        open_taskAdded.classList.remove('active');
-        open_taskName.classList.remove('active');
-        addedTask.classList.remove('active');
-        open_SubtaskAdded.classList.remove('active');
-        open_SubtaskName.classList.remove('active');
-        addedSubtask.classList.remove('active');
     }
 })
 
-milediv2.addEventListener('click', () => {
-    if (!showMile2.classList.contains('showmilestone2')) {
-        showMile2.classList.add('showmilestone2');
-    }
-    else {
-        showMile2.classList.remove('showmilestone2');
-    }
-})
-
-finalmile1.addEventListener('click', () => {
-    showFinal();
-})
-
-function showFinal() {
-    if (!showFinalmile.classList.contains('showmain_mile')) {
-        showFinalmile.classList.add('showmain_mile');
-        showMile.classList.add('showmilestone');
-        showMile2.classList.remove('showmilestone2');
-    }
-    else {
-        showFinalmile.classList.remove('showmain_mile');
-    }
-}
-open_Task.addEventListener('click', ()=>
-{
-    if(!milestone4.classList.contains('active') && !open_taskName.classList.contains('active'))
-    {
-        milestone4.classList.add('active');
-        open_taskName.classList.add('active');
-    }
-})
-open_taskName.addEventListener('click',function()
-{
-    if(milestone4.classList.contains('active') && this.classList.contains('active') && !open_taskAdded.classList.contains('active'))
-    {
-        this.classList.remove('active');
-        open_taskAdded.classList.add('active');
-    }
-})
-open_taskAdded.addEventListener('click',function()
-{
-    if(!open_taskName.classList.contains('active') && !addedTask.classList.contains('active') && this.classList.contains('active'))
-    {
-        this.classList.remove('active');
-        open_taskName.classList.add('active')
-        addedTask.classList.add('active')
-    }
-})
-open_SubTask.addEventListener('click',()=>
-{
-    if(!open_SubtaskName.classList.contains('active'))
-    {
-        open_SubtaskName.classList.add('active');
-    }
-})
-open_SubtaskName.addEventListener('click', function()
-{
-    if(this.classList.contains('active') && !open_SubtaskAdded.classList.contains('active'))
-    {
-        this.classList.remove('active');
-        open_SubtaskAdded.classList.add('active');
-    }
-})
-open_SubtaskAdded.addEventListener('click', function()
-{
-    if(!addedSubtask.classList.contains('active') && this.classList.contains('active') &&
-    !open_SubtaskName.classList.contains('active'))
-    {
-        this.classList.remove('active');
-        addedSubtask.classList.add('active')
-        open_SubtaskName.classList.add('active')
-    }
-})
+// open_Task.addEventListener('click', ()=>
+// {
+//     if(!milestone4.classList.contains('active') && !open_taskName.classList.contains('active'))
+//     {
+//         milestone4.classList.add('active');
+//         open_taskName.classList.add('active');
+//     }
+// })
+// open_taskName.addEventListener('click',function()
+// {
+//     if(milestone4.classList.contains('active') && this.classList.contains('active') && !open_taskAdded.classList.contains('active'))
+//     {
+//         this.classList.remove('active');
+//         open_taskAdded.classList.add('active');
+//     }
+// })
+// open_taskAdded.addEventListener('click',function()
+// {
+//     if(!open_taskName.classList.contains('active') && !addedTask.classList.contains('active') && this.classList.contains('active'))
+//     {
+//         this.classList.remove('active');
+//         open_taskName.classList.add('active')
+//         addedTask.classList.add('active')
+//     }
+// })
+// open_SubTask.addEventListener('click',()=>
+// {
+//     if(!open_SubtaskName.classList.contains('active'))
+//     {
+//         open_SubtaskName.classList.add('active');
+//     }
+// })
+// open_SubtaskName.addEventListener('click', function()
+// {
+//     if(this.classList.contains('active') && !open_SubtaskAdded.classList.contains('active'))
+//     {
+//         this.classList.remove('active');
+//         open_SubtaskAdded.classList.add('active');
+//     }
+// })
+// open_SubtaskAdded.addEventListener('click', function()
+// {
+//     if(!addedSubtask.classList.contains('active') && this.classList.contains('active') &&
+//     !open_SubtaskName.classList.contains('active'))
+//     {
+//         this.classList.remove('active');
+//         addedSubtask.classList.add('active')
+//         open_SubtaskName.classList.add('active')
+//     }
+// })
 
 // Status Update Edit and Done
 clickEdit.forEach((edit) => {
