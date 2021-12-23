@@ -17,7 +17,7 @@ let divfilter = document.querySelector('.divfilter2');
 let tabnum = document.querySelectorAll('.divfilter2 .tab_content');
 let mainul = document.querySelectorAll('.divfilter2 .top_up ul li');
 let liIcon = document.querySelectorAll('.divfilter2 .top_up ul li img');
-let plannedDiv = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .divcon4');
+let plannedDiv = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .plannedDate');
 const editTitle = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 > .child-border .row h5');
 let clickEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .divcon10 div');
 let showEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit');
@@ -49,7 +49,7 @@ const showprojAdd = document.querySelector('.proj_filter .divfilter2 #newmilesto
 const popup3 = document.querySelector('.proj_filter #popup3');
 const Showpopup3 = document.querySelectorAll('.proj_filter .divfilter2 .last_div');
 const closePopup3 = document.querySelector('.proj_filter #popup3 .closeit > span');
-const Showpopup2 =document.querySelector('.proj_filter .divfilter2 .main_mile .milestone p');
+const Showpopup2 =document.querySelectorAll('.proj_filter .divfilter2 .main_mile #showPop2');
 const popup2 =document.querySelector('.proj_filter #popup2');
 const closePopup2 =document.querySelector('.proj_filter #popup2 .closeit > span');
 const closeProjadd = document.querySelector('.proj_filter .proj_add .projadd_bottom .btn:nth-child(1)');
@@ -229,23 +229,25 @@ personFilter.forEach((person)=>
 
    
 Showpopup3.forEach((Show)=>
+{
+    Show.addEventListener('click',()=>
     {
-        Show.addEventListener('click',()=>
+        if(!popup3.classList.contains('.active'))
         {
-            if(!popup3.classList.contains('.active'))
-            {
-            popup3.classList.add('active');
-            proj_overlay.classList.add('active');
-            }
-            else
-            {
-            popup3.classList.remove('active'); 
-            proj_overlay.classList.remove('active');
-            }
-            
-        })
+        popup3.classList.add('active');
+        proj_overlay.classList.add('active');
+        }
+        else
+        {
+        popup3.classList.remove('active'); 
+        proj_overlay.classList.remove('active');
+        }
+        
     })
-    Showpopup2.addEventListener('click',()=>
+})
+Showpopup2.forEach((Show)=>
+{
+    Show.addEventListener('click',()=>
     {
         if(!popup2.classList.contains('.active'))
         {
@@ -259,6 +261,7 @@ Showpopup3.forEach((Show)=>
         }
         
     })
+})
 
 saveProjadd.addEventListener('click',()=>
 {
@@ -454,68 +457,17 @@ showFilter.addEventListener('click', (e) => {
 })
 
 // Milestone Expand/Collapse
-milediv.addEventListener('click', () => {
+milediv.addEventListener('click', (e) => {
+    let img_rot = e.target.closest('tr').querySelector('.divcon3 > span > img');
     if (!showMile.classList.contains('showmain_mile')) {
         showMile.classList.add('showmain_mile');
-        root.style.setProperty("--rot", "90deg");
+        img_rot.style.cssText="transform:rotate(90deg);transition: all 0.16s ease-in-out";
     }
     else {
         showMile.classList.remove('showmain_mile');
-        root.style.setProperty("--rot", "0deg");
+        img_rot.style.cssText="transform:rotate(0deg);transition: all 0.16s ease-in-out";
     }
 })
-
-// open_Task.addEventListener('click', ()=>
-// {
-//     if(!milestone4.classList.contains('active') && !open_taskName.classList.contains('active'))
-//     {
-//         milestone4.classList.add('active');
-//         open_taskName.classList.add('active');
-//     }
-// })
-// open_taskName.addEventListener('click',function()
-// {
-//     if(milestone4.classList.contains('active') && this.classList.contains('active') && !open_taskAdded.classList.contains('active'))
-//     {
-//         this.classList.remove('active');
-//         open_taskAdded.classList.add('active');
-//     }
-// })
-// open_taskAdded.addEventListener('click',function()
-// {
-//     if(!open_taskName.classList.contains('active') && !addedTask.classList.contains('active') && this.classList.contains('active'))
-//     {
-//         this.classList.remove('active');
-//         open_taskName.classList.add('active')
-//         addedTask.classList.add('active')
-//     }
-// })
-// open_SubTask.addEventListener('click',()=>
-// {
-//     if(!open_SubtaskName.classList.contains('active'))
-//     {
-//         open_SubtaskName.classList.add('active');
-//     }
-// })
-// open_SubtaskName.addEventListener('click', function()
-// {
-//     if(this.classList.contains('active') && !open_SubtaskAdded.classList.contains('active'))
-//     {
-//         this.classList.remove('active');
-//         open_SubtaskAdded.classList.add('active');
-//     }
-// })
-// open_SubtaskAdded.addEventListener('click', function()
-// {
-//     if(!addedSubtask.classList.contains('active') && this.classList.contains('active') &&
-//     !open_SubtaskName.classList.contains('active'))
-//     {
-//         this.classList.remove('active');
-//         addedSubtask.classList.add('active')
-//         open_SubtaskName.classList.add('active')
-//     }
-// })
-
 // Status Update Edit and Done
 clickEdit.forEach((edit) => {
     edit.addEventListener('click', (e) => {
@@ -828,7 +780,7 @@ setSpan();
 
 calendar_data.forEach(data=>
 {
-    ['mouseenter','mouseout'].forEach((e)=>
+    ['mouseover','mouseout'].forEach((e)=>
     {
         data.addEventListener(e, hoverData);
     });
@@ -836,7 +788,7 @@ calendar_data.forEach(data=>
 
 function hoverData(e)
 {
-    if(e.type==='mouseenter')
+    if(e.type==='mouseover')
     {
     let dateRange = e.target.value;
     let extractDate= dateRange.substr(4,8);
@@ -859,54 +811,19 @@ function hoverData(e)
     }
 }
 
-// $(function () {
+$.datetimepicker.setDateFormatter('moment');
 
-//     $('input[name="datefilter"]').daterangepicker({
-//         autoUpdateInput: false,
-//         locale: {
-//             cancelLabel: 'Clear'
-//         }
-//     });
-
-//     $('input[name="datefilter"]').on('apply.daterangepicker', function (ev, picker) {
-//         $(this).val(picker.startDate.format('MMM DD') + ' - ' + picker.endDate.format('DD'));
-//     });
-
-//     $('input[name="datefilter"]').on('cancel.daterangepicker', function (ev, picker) {
-//         $(this).val('');
-//     });
-
-// });
-
-$.datetimepicker.setDateFormatter('moment')
-
-$('#picker').add('#picker2').add('#picker3').add('#picker4').add('#picker5').
-    add('#picker6').add('#picker7').add('#picker8').add('#picker9').add('#picker10').add('#picker11').datetimepicker(
-{
-    timepicker: false,
-    datepicker: true,
-    format: 'MMM DD,YYYY'
-});
-
-$('#picker12').add('#picker13').datetimepicker(
-{
-    timepicker: false,
-    datepicker: true,
-    format: 'MMMM DD,YYYY'
-});
-$('#picker14').datetimepicker(
-    {
-        timepicker: true,
+$(function(){
+    $("[id='picker']").datetimepicker({
+        timepicker: false,
         datepicker: true,
-        format: 'MMMM DD,YYYY, hh:mma'
+        format: 'MMM DD,YYYY'
     });
+});
 
 $('.h1fixed').scroll(function() {
     $(this).find('.mysticky').css('left', $(this).scrollLeft());
 });
-// $('#expand1').scroll(function() {
-//     $(this).find('.mysticky2').css('left', $(this).scrollLeft());
-// });
 $(document).ready(function() {
     $('#summernote').summernote({
         placeholder: 'Write an update',
@@ -923,42 +840,6 @@ $(document).ready(function() {
         ]
       });
   });
-
-  // const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-// function setPlannedDate() {
-//     let date = new Date();
-//     let currentMonth = month[date.getMonth()];
-//     let currentYear = date.getFullYear();
-//     let currentDate = date.getDate();
-//     plannedInput.forEach((input) => {
-//         input.value = `${currentMonth} ${currentDate}-${currentDate + 5}`;
-//     })
-//     startdateInput.forEach((input) => {
-//         input.value = `${currentMonth} ${currentDate},${currentYear}`;
-//     })
-// }
-// setPlannedDate();
-
-  // window.addEventListener('scroll',(e)=>
-// {
-//     let winPageY = this.pageYOffset;
-//     if(e.target.scrollingElement.clientWidth < 800 && winPageY > (pageYedit -290))
-//     {
-//         let activeEdit = e.target.querySelectorAll('.proj_filter .divfilter2 .addedit');
-//         activeEdit.forEach((edit)=>
-//         {
-//             if(edit.classList.contains('active'))
-//             {
-//                 edit.classList.remove('active');
-//                 overlay.classList.remove('active');
-//             }
-//         })
-//         // if(Array.from(activeEdit).some(edit => edit.classList.contains('active')))
-//     }
-// })
-
-
-
 
 //PM_AF_Edit Project_activity log
 function openNav() {

@@ -26,7 +26,7 @@
       <link rel="stylesheet" href="css/projaddedit.css">
       <link rel="stylesheet" href="css/usersearch.css">
       <!-- full calender -->
-      <title>Management View Project Filter</title>
+      <title>Project List</title>
 
       <style media="screen">
 /*ramya 20dec21*/
@@ -45,6 +45,10 @@ table input{
 }
 .edit span img{
     margin-left: 2rem;
+}
+
+table td input[type="text"]{
+   font-size: 12px;
 }
 
 /* zeeshan */
@@ -377,15 +381,6 @@ table input{
                                           </div>
                                      
                                       </div>
-                                       <!-- <div class="form-group">
-                                          <label for="category">Category</label>
-                                          <select id="category" class="form-control">
-                                             <option selected>Select</option>
-                                             <option value="1">One</option>
-                                             <option value="2">Two</option>
-                                             <option value="3">Three</option>
-                                          </select>
-                                       </div> -->
                                     </div>
                                     <div class="col-md-6">
                                        <div class="custom-select position-relative pt-4">
@@ -1402,22 +1397,20 @@ table input{
                                           <table>
                                              <tr>
                                                 <td class="divcon1 mysticky2">
-                                                   <p><a href="#">Project 01</a></p>
-                                                 
+                                                   <p><a href="#">Project 01</a></p>                              
                                                  </td>
                                                 <td class="divcon2 assignees">
                                                     <div><img src="img/client1.jpg" alt=""></div>
-                                                   
-                                                   <!-- <span><i class="material-icons">add</i></span> -->
                                                 </td>
                                                 <td class="divcon3 subitems">
+                                                   <span class="ms-0"> <img src="icons/dropdown.svg"
+                                                      alt=""></span>
                                                    <span id="tree_open"><img src="icons/subitm.svg" alt="">
                                                    </span><span class="ms-3 fs-4">1</span>
                                                 </td>
                                                 <td class="divcon4 plannedDate">
                                                    <input type="text" name="datefilter" id="rangePicker"
                                                       value="Oct 20 - 28" />
-                                                   <!-- <span>5 days</span> -->
                                                 </td>
                                                 <td class="divcon5 actualDate">
                                                    <input type="text" id="picker" value="Oct 20,2021">
@@ -1462,12 +1455,6 @@ table input{
                                                    disabled>
                                                 <input type="color" value="#1CA9ED" text-target=".planned"
                                                    disabled>
-                                                <!-- <input type="color" value="#2D62ED" text-target=".future"
-                                                   disabled>
-                                                   <input type="color" value="#F2870C" text-target=".upnext"
-                                                   disabled>
-                                                   <input type="color" value="#034E03" text-target=".ready"
-                                                   disabled> -->
                                                 <p class="track" value="#F6BE75" text-target=".track">
                                                    On Track
                                                 </p>
@@ -1480,12 +1467,6 @@ table input{
                                                 <p class="planned" value="#1CA9ED" text-target=".planned">
                                                    Planned
                                                 </p>
-                                                <!-- <p class="future" value="#2D62ED" text-target=".future">Future
-                                                   Steps</p>
-                                                   <P class="upnext" value="#F2870C" text-target=".upnext">Up Next
-                                                   </P>
-                                                   <P class="ready" value="#034E03" text-target=".ready">Ready for
-                                                   review</P> -->
                                              </div>
                                              <div class="right_div">
                                                 <input type="color" value="#F5E33F" text-target=".hold"
@@ -1576,8 +1557,9 @@ table input{
                                                          <p>Milestone Name</p>
                                                       </td>
                                                       <td class="divmile2">
-                                                         <span class="ms-0 me-2"> <img src="icons/dropdown.svg" alt=""></span> 
+                                                         <span> <img src="icons/dropdown.svg" alt=""></span> 
                                                          <img src="icons/subitm.svg" alt="" id="openTask">
+                                                         <span class="ms-3 mt-1 fs-4">1</span>
                                                       </td>
                                                       <td class="divmile3">
                                                          <div><img src="img/client1.jpg" alt=""></div>
@@ -1622,8 +1604,9 @@ table input{
                                                                <p>Task Name</p>
                                                             </td>
                                                             <td class="divmile2">
-                                                               <span class="ms-0 me-2"> <img src="icons/dropdown.svg" alt=""></span> 
+                                                               <span> <img src="icons/dropdown.svg" alt=""></span> 
                                                                <img src="icons/subitm.svg" alt="" id="addSubtask">
+                                                               <span class="ms-3 mt-1 fs-4">1</span>
                                                             </td>
                                                             <td class="divmile3">
                                                                <div><img src="img/client1.jpg" alt=""></div>
@@ -1729,7 +1712,7 @@ table input{
                                                       value="Oct 20 - 25" />
                                                 </td>
                                                 <td class="divcon5 actualDate">
-                                                   <input type="text" id="picker2" value="Oct 20,2021">
+                                                   <input type="text" id="picker" value="Oct 20,2021">
                                                 </td>
                                                 <td class="divcon6 actualBudget">
                                                    <p>AED 200</p>
@@ -1751,7 +1734,6 @@ table input{
                                                    </div>
                                                 </td>
                                                 <td class="divcon1 mysticky2 edit">
-                                                    <!-- <p><a href="#">Project 01</a></p> -->
                                                     <span><img src="icons/edit_row.svg"
                                                         alt=""></span>
                                                 </td>
@@ -1783,7 +1765,7 @@ table input{
                                                       value="Oct 20 - 25" />
                                                 </td>
                                                 <td class="divcon5 actualDate">
-                                                   <input type="text" id="picker2" value="Oct 20,2021">
+                                                   <input type="text" id="picker" value="Oct 20,2021">
                                                 </td>
                                                 <td class="divcon6 actualBudget">
                                                    <p>AED 200</p>
@@ -1942,7 +1924,7 @@ table input{
                                                       value="Oct 20 - 25" />
                                                 </td>
                                                 <td class="divcon5 actualDate">
-                                                   <input type="text" id="picker4" value="Oct 20,2021">
+                                                   <input type="text" id="picker" value="Oct 20,2021">
                                                 </td>
                                                 <td class="divcon6 actualBudget">
                                                    <p>AED 200</p>
@@ -1983,12 +1965,6 @@ table input{
                                                    disabled>
                                                 <input type="color" value="#1CA9ED" text-target=".planned"
                                                    disabled>
-                                                <!-- <input type="color" value="#2D62ED" text-target=".future"
-                                                   disabled>
-                                                   <input type="color" value="#F2870C" text-target=".upnext"
-                                                   disabled>
-                                                   <input type="color" value="#034E03" text-target=".ready"
-                                                   disabled> -->
                                                 <p class="track" value="#F6BE75" text-target=".track">
                                                    On Track
                                                 </p>
@@ -2001,12 +1977,6 @@ table input{
                                                 <p class="planned" value="#1CA9ED" text-target=".planned">
                                                    Planned
                                                 </p>
-                                                <!-- <p class="future" value="#2D62ED" text-target=".future">Future
-                                                   Steps</p>
-                                                   <P class="upnext" value="#F2870C" text-target=".upnext">Up Next
-                                                   </P>
-                                                   <P class="ready" value="#034E03" text-target=".ready">Ready for
-                                                   review</P> -->
                                              </div>
                                              <div class="right_div">
                                                 <input type="color" value="#F5E33F" text-target=".hold"
@@ -2077,7 +2047,7 @@ table input{
                                                       value="Oct 20 - 25" />
                                                 </td>
                                                 <td class="divcon5 actualDate">
-                                                   <input type="text" id="picker2" value="Oct 20,2021">
+                                                   <input type="text" id="picker" value="Oct 20,2021">
                                                 </td>
                                                 <td class="divcon6 actualBudget">
                                                    <p>AED 200</p>
@@ -2131,7 +2101,7 @@ table input{
                                                       value="Oct 20 - 25" />
                                                 </td>
                                                 <td class="divcon5 actualDate">
-                                                   <input type="text" id="picker2" value="Oct 20,2021">
+                                                   <input type="text" id="picker" value="Oct 20,2021">
                                                 </td>
                                                 <td class="divcon6 actualBudget">
                                                    <p>AED 200</p>
@@ -2270,13 +2240,10 @@ table input{
                                           <table>
                                              <tr>
                                                 <td class="divcon1 mysticky2">
-                                                   <p><a href="#">Project 01</a></p>
-                                                   
+                                                   <p><a href="#">Project 01</a></p>                                               
                                                 </td>
                                                 <td class="divcon2 assignees">
                                                    <div><img src="img/client1.jpg" alt=""></div>
-                                                   <!-- <div><img src="img/client1.jpg" alt=""></div> -->
-                                                   <!-- <span><img src="icons/plus-1.svg" alt=""></span> -->
                                                 </td>
                                                 <td class="divcon3 subitems">
                                                    <span class="ms-0"> <img src="icons/dropdown.svg"
@@ -2289,7 +2256,7 @@ table input{
                                                       value="Oct 20 - 25" />
                                                 </td>
                                                 <td class="divcon5 actualDate">
-                                                   <input type="text" id="picker8" value="Oct 20,2021">
+                                                   <input type="text" id="picker" value="Oct 20,2021">
                                                 </td>
                                                 <td class="divcon6 actualBudget">
                                                    <p>AED 200</p>
@@ -2330,12 +2297,6 @@ table input{
                                                    disabled>
                                                 <input type="color" value="#1CA9ED" text-target=".planned"
                                                    disabled>
-                                                <!-- <input type="color" value="#2D62ED" text-target=".future"
-                                                   disabled>
-                                                   <input type="color" value="#F2870C" text-target=".upnext"
-                                                   disabled>
-                                                   <input type="color" value="#034E03" text-target=".ready"
-                                                   disabled> -->
                                                 <p class="track" value="#F6BE75" text-target=".track">
                                                    On Track
                                                 </p>
@@ -2348,12 +2309,6 @@ table input{
                                                 <p class="planned" value="#1CA9ED" text-target=".planned">
                                                    Planned
                                                 </p>
-                                                <!-- <p class="future" value="#2D62ED" text-target=".future">Future
-                                                   Steps</p>
-                                                   <P class="upnext" value="#F2870C" text-target=".upnext">Up Next
-                                                   </P>
-                                                   <P class="ready" value="#034E03" text-target=".ready">Ready for
-                                                   review</P> -->
                                              </div>
                                              <div class="right_div">
                                                 <input type="color" value="#F5E33F" text-target=".hold"
@@ -2424,7 +2379,7 @@ table input{
                                                       value="Oct 20 - 25" />
                                                 </td>
                                                 <td class="divcon5 actualDate">
-                                                   <input type="text" id="picker2" value="Oct 20,2021">
+                                                   <input type="text" id="picker" value="Oct 20,2021">
                                                 </td>
                                                 <td class="divcon6 actualBudget">
                                                    <p>AED 200</p>
@@ -2474,7 +2429,7 @@ table input{
                                                    <input type="text" name="datefilter" id="rangePicker" value="Oct 20 - 25">
                                                 <span style="display: none;"></span></td>
                                                 <td class="divcon5 actualDate">
-                                                   <input type="text" id="picker2" value="Oct 20,2021">
+                                                   <input type="text" id="picker" value="Oct 20,2021">
                                                 </td>
                                                 <td class="divcon6 actualBudget">
                                                    <p>AED 200</p>

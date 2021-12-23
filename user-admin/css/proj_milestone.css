@@ -67,6 +67,12 @@
 {
     cursor: pointer;
 }
+.proj_filter .main_mile .fixedMile .divmile2>span
+{
+    margin-right: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
 .proj_filter .main_mile .milestone1 .divmile3 div, 
 .proj_filter .main_mile .milestone2 .divmile3 div 
 {

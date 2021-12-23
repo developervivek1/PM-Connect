@@ -5,9 +5,9 @@ const filterImg = document.querySelector('.divfilter2 .top_up2 ul li:nth-child(2
 const overlay = document.querySelector('.proj_filter .myoverlay');
 const topup2_overlay = document.querySelector('.proj_filter .divfilter2 .top_up2 .topup2_overlay');
 const drop_overlay = document.querySelector('.proj_filter .divfilter2 .drop_overlay');
-const showMile1 = document.querySelector('.proj_filter .divfilter2 .project1 .expand .border-bottom .divcon3 #tree_open');
-const showMile2 = document.querySelector('.proj_filter .divfilter2 .main_mile .divmile2 #openTask');
-const showMile3 = document.querySelector('.proj_filter .divfilter2 .main_mile .divmile2 #addSubtask');
+const showMile1 = document.querySelectorAll('.proj_filter .divfilter2 .project1 .expand .border-bottom .divcon3 #tree_open');
+const showMile2 = document.querySelectorAll('.proj_filter .divfilter2 .main_mile .divmile2 #openTask');
+const showMile3 = document.querySelectorAll('.proj_filter .divfilter2 .main_mile .divmile2 #addSubtask');
 const showTable = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .head1 span:first-child');
 const addColumn = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .head11 button');
 const addColumnicon = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .head11 button img');
@@ -442,15 +442,16 @@ showFilter.addEventListener('click', (e) => {
 })
 
 // Milestone Expand/Collapse
-showMile1.addEventListener('click',(e)=>
-{
+showMile1.forEach((show) => {
+    show.addEventListener('click', (e) => {
     let mainMile = e.target.closest('.expand').querySelector('.main_mile');
     let Mile1 = mainMile.querySelector('.milestone1');
+    let img_rot = e.target.closest('tr').querySelector('.divcon3 > span > img');
     if(!Mile1.classList.contains('active') && !mainMile.classList.contains('active'))
     {
         Mile1.classList.add('active');
         mainMile.classList.add('showmain_mile');
-        root.style.setProperty("--rot", "90deg");
+        img_rot.style.cssText="transform:rotate(90deg);transition: all 0.16s ease-in-out";
     }
     else
     {
@@ -458,35 +459,47 @@ showMile1.addEventListener('click',(e)=>
         Mile1.classList.remove('active');
         Mile2.classList.remove('active');
         Mile3.classList.remove('active');
-        root.style.setProperty("--rot", "0deg");
+        img_rot.style.cssText="transform:rotate(0deg);transition: all 0.16s ease-in-out";
     }
-    showMile2.addEventListener('click',()=>
-    {
-        Mile2 = mainMile.querySelector('.milestone2');
-        if(!Mile2.classList.contains('active') && mainMile.classList.contains('showmain_mile'))
+        showMile2.forEach((show)=>
         {
-            Mile2.classList.add('active');
-        }
-        else
+            show.addEventListener('click',(e)=>
+            {
+                Mile2 = mainMile.querySelector('.milestone2');
+                let img_rot = e.target.closest('.divmile2').querySelector('span img');
+                if(!Mile2.classList.contains('active') && mainMile.classList.contains('showmain_mile'))
+                {
+                    Mile2.classList.add('active');
+                    img_rot.style.cssText="transform:rotate(90deg);transition: all 0.16s ease-in-out";
+                }
+                else
+                {
+                    Mile2.classList.remove('active');
+                    Mile3.classList.remove('active');
+                    img_rot.style.cssText="transform:rotate(0deg);transition: all 0.16s ease-in-out";
+                }
+            })
+        })
+        showMile3.forEach((show)=>
         {
-            Mile2.classList.remove('active');
-            Mile3.classList.remove('active');
-        }
-    })
-    showMile3.addEventListener('click',()=>
-    {
-        Mile3 = mainMile.querySelector('.milestone3');
-        if(!Mile3.classList.contains('active') && mainMile.classList.contains('showmain_mile'))
-        {
-            Mile3.classList.add('active');
-        }
-        else
-        {
-            Mile3.classList.remove('active');
-        }
+            show.addEventListener('click',(e)=>
+            {
+                Mile3 = mainMile.querySelector('.milestone3');
+                let img_rot = e.target.closest('.divmile2').querySelector('span img');
+                if(!Mile3.classList.contains('active') && mainMile.classList.contains('showmain_mile'))
+                {
+                    Mile3.classList.add('active');
+                    img_rot.style.cssText="transform:rotate(90deg);transition: all 0.16s ease-in-out";
+                }
+                else
+                {
+                    Mile3.classList.remove('active');
+                    img_rot.style.cssText="transform:rotate(0deg);transition: all 0.16s ease-in-out";
+                }
+            })
+        })
     })
 })
-
 
 // Status Update Edit and Done
 clickEdit.forEach((edit) => {
@@ -831,54 +844,18 @@ function hoverData(e)
     }
 }
 
-// $(function () {
+$.datetimepicker.setDateFormatter('moment');
 
-//     $('input[name="datefilter"]').daterangepicker({
-//         autoUpdateInput: false,
-//         locale: {
-//             cancelLabel: 'Clear'
-//         }
-//     });
-
-//     $('input[name="datefilter"]').on('apply.daterangepicker', function (ev, picker) {
-//         $(this).val(picker.startDate.format('MMM DD') + ' - ' + picker.endDate.format('DD'));
-//     });
-
-//     $('input[name="datefilter"]').on('cancel.daterangepicker', function (ev, picker) {
-//         $(this).val('');
-//     });
-
-// });
-
-$.datetimepicker.setDateFormatter('moment')
-
-$('#picker').add('#picker2').add('#picker3').add('#picker4').add('#picker5').
-    add('#picker6').add('#picker7').add('#picker8').add('#picker9').add('#picker10').add('#picker11').datetimepicker(
-{
-    timepicker: false,
-    datepicker: true,
-    format: 'MMM DD,YYYY'
-});
-
-$('#picker12').add('#picker13').datetimepicker(
-{
-    timepicker: false,
-    datepicker: true,
-    format: 'MMMM DD,YYYY'
-});
-$('#picker14').datetimepicker(
-    {
-        timepicker: true,
+$(function(){
+    $("[id='picker']").datetimepicker({
+        timepicker: false,
         datepicker: true,
-        format: 'MMMM DD,YYYY, hh:mma'
+        format: 'MMM DD,YYYY'
     });
-
+});
 $('.h1fixed').scroll(function() {
     $(this).find('.mysticky').css('left', $(this).scrollLeft());
 });
-// $('#expand1').scroll(function() {
-//     $(this).find('.mysticky2').css('left', $(this).scrollLeft());
-// });
 $(document).ready(function() {
     $('#summernote').summernote({
         placeholder: 'Write an update',
@@ -895,42 +872,6 @@ $(document).ready(function() {
         ]
       });
   });
-
-  // const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-// function setPlannedDate() {
-//     let date = new Date();
-//     let currentMonth = month[date.getMonth()];
-//     let currentYear = date.getFullYear();
-//     let currentDate = date.getDate();
-//     plannedInput.forEach((input) => {
-//         input.value = `${currentMonth} ${currentDate}-${currentDate + 5}`;
-//     })
-//     startdateInput.forEach((input) => {
-//         input.value = `${currentMonth} ${currentDate},${currentYear}`;
-//     })
-// }
-// setPlannedDate();
-
-  // window.addEventListener('scroll',(e)=>
-// {
-//     let winPageY = this.pageYOffset;
-//     if(e.target.scrollingElement.clientWidth < 800 && winPageY > (pageYedit -290))
-//     {
-//         let activeEdit = e.target.querySelectorAll('.proj_filter .divfilter2 .addedit');
-//         activeEdit.forEach((edit)=>
-//         {
-//             if(edit.classList.contains('active'))
-//             {
-//                 edit.classList.remove('active');
-//                 overlay.classList.remove('active');
-//             }
-//         })
-//         // if(Array.from(activeEdit).some(edit => edit.classList.contains('active')))
-//     }
-// })
-
-
-
 
 //PM_AF_Edit Project_activity log
 function openNav() {

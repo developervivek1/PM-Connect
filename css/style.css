@@ -3769,3 +3769,344 @@ position: absolute;
 right: 10px;
 }
 /* bugs end */
+
+
+
+
+/*ramya21dec2021 workdload*/
+.lilast{
+  margin-right: 0px !important;
+}
+.workload1{
+  margin-top: 12rem !important;
+}
+.workloadrow{
+/* padding: 1.3rem 4rem; */
+    align-items: center;
+    /* margin-block-end: 2rem; */
+    width: 95%;
+    margin: 13.5rem auto 10px auto;
+    /* right: 0;
+    position: fixed; */
+    /* z-index: 5; */
+    /* background: #fff;*/
+}
+.workloadrow .col-md-6 , .workloadrow1 .col-md-12{
+  padding: 0px;
+}
+.iconset{
+  /* margin-left: -18px; */
+  margin-top: -8px;
+}
+.iconset span:last-child{
+  margin-right: 0px;
+}
+.iconset span{
+  margin-right: 2.2rem;
+}
+.form-select{
+  display: block;
+  width: 70%;
+  /* letter-spacing: 0.8px; */
+  border-radius: 3px;
+  height: 28px;
+  border: 1px solid #70707026;
+  color: #616264;
+  font-weight: 400;
+  font-size: 13px;
+}
+input.lochsr1 {
+  color: #505D6F;
+  font-weight: 400;
+  font-size: 13px;
+  /* margin-top: 8px; */
+  /* border-radius: 4px; */
+  height: 28px;
+  /* letter-spacing: 0.8px; */
+  border-radius: 3px;
+  border: 1px solid #70707026;
+  /* box-shadow: 0 1px 3px 0 rgb(0 0 0 / 6%); */
+ margin-top: 0px;
+ 
+  width: 90%;
+  background: #ffffff url(../icons/search-1.svg) right 12px center no-repeat;
+  padding: 10px;
+  text-align: center;
+  background-size: 12px;
+  /* margin-bottom: 10px; */
+}
+
+textarea:focus, input:focus , select:focus{
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  /* border: none; */
+}
+select option{
+  font-size: 14px;
+  color: #000;
+ line-height: 2;
+}
+select:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none !important;
+  border-color: #70707026 !important;
+}
+.custom-select .box12 {
+  height: 28px !important;
+  width: 60% !important;
+  border-radius: 3px !important;
+  border: 1px solid #70707026 !important;
+  margin-top: 0px;
+  margin-bottom: 0px !important;
+}
+.custom-select .box12 img {
+  /* position: absolute; */
+  top: 10px !important;
+  /* right: 4.4%; */
+}
+.tablecal{
+  width: 95%;
+  border: 1px solid #0000000D;
+  margin: 0 auto;
+}
+.tablecal1 tr td{
+  font-size: 13px !important;
+  color: #1E2022 !important;
+  font-weight: 400 !important;
+}
+.tablecal1 .thspace{
+  border-bottom: 0px !important;
+  border-top: 0px !important;
+  font-size: 16px;
+  text-transform: none !important;
+  color: #616264 !important;
+  font-weight: 400;
+  border-right: 1px solid #0000000D !important;
+}
+table .thspace{
+  padding: 14px 0px;
+}
+.tablecal .table{
+  margin-bottom: 0px;
+}
+.tablecal table tr th p{
+  font-size: 12px;
+}
+.tablecal table tr th{
+  font-size: 10px;
+  font-weight: 500;
+  border-bottom: 1px solid #0000000D;
+  color: #000000;
+  border-right: 1px solid #0000000D;
+  text-transform: uppercase;
+}
+.tablecal table tr td:last-child , .tablecal table tr th:last-child{
+  border-right: 0px solid #0000000D;
+}
+.tablepro2{
+  position: absolute;
+  top:250px;
+  
+  left: 60%;
+}
+.tablepro1{
+  position: absolute;
+  top: 200px;
+  display: flex;
+  /* text-align: center; */
+  /* z-index: 2000; */
+  left: 28%;
+}
+.task2{
+  width: 100px !important;
+}
+.task3{
+  border-radius: 5px;
+  background: #D1F0F6;
+    padding: 8px 0px;
+    text-align: center;
+    width: 300px;
+    /* margin-right: 20px; */
+    color: #616264;
+    font-size: 14px;
+    font-weight: bold;
+}
+.task1{
+  border-radius: 5px;
+  background: #FBD8D8;
+    padding: 8px 0px;
+    text-align: center;
+    width: 200px;
+    margin-right: 20px;
+    color: #616264;
+    font-size: 14px;
+  
+    font-weight: bold;
+}
+.hide1 {
+  display: none;
+  position: absolute;
+    margin-top: 30px;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 14px #00000029;
+    border: 1px solid #70707003;
+    border-radius: 2px;
+    left: 35%;  z-index: 2;
+    padding: 15px;
+}
+    .phide{
+      font-weight: normal !important;
+      margin-top: 10px;
+    }
+.task1:hover + .hide1 {
+  display: block;
+  color: #616264;
+    font-size: 13px;
+    font-weight: bold;
+}
+.tablepro .progress-bar{
+  border-radius: 8px;
+}
+.progress-bar1{
+  background: #1FC875;
+}
+.progress-bar4{
+  background: #1CA9ED;
+}
+
+.progress-bar2{
+  background: #F6BE75;
+}
+.tablepro .progress{
+  height: 10px;
+  background-color: transparent;
+ 
+}
+
+.pright{
+  margin-right: 180px;
+}
+.tableproben1{
+  width: 70% !important;
+  left: 20% !important;
+  margin-top: 100px;
+}
+.tableproben{
+  width: 45% !important;
+  left: 20% !important;
+}
+.tablepro{
+  /* background: #0A4BF6; */
+    /* height: 30px; */
+    /* padding: 20px; */
+    width: 57%;
+    /* margin: 0 auto; */
+    /* height: 12px;
+    border-radius: 20px; */
+    /* margin-top: 20px; */
+    position: absolute;
+    top: 115px;
+    /* text-align: center; */
+    /* z-index: 2000; */
+    left: 28%;
+    right: 50%;
+}
+
+.dot1 div{
+  background: #8AB8B7 !important;
+}
+.dot div , .dot1 div{
+  background: #F3D2D2;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.borderbot{
+  border-bottom: 1px solid #0000000D;
+}
+.tablecal table tr td{
+  border-bottom: 0px;
+  padding: 2.3rem 0.5rem;
+  font-size: 12px;
+  font-weight: normal;
+  color: #000000;
+  border-right: 1px solid #0000000D;
+  
+}
+
+.table-gantt tr td:first-child{
+  border-bottom: 0px;
+  padding: 1.3rem 3rem !important;
+  font-size: 12px;
+  font-weight: normal;
+  color: #000000;
+  border-right: 1px solid #0000000D;
+}
+.tablecal1 table tr th{
+  border-top: 1px solid #0000000D !important;
+}
+#benefits , #benefitsdrop{
+  position: relative;
+}
+#benefits td img ,  #benefitsdrop td img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.benerow{
+  border-bottom: 1px solid #0000000D;
+}
+/*ramyaresponsiveworkload*/
+@media (max-width:992px){
+.workloadrow{
+  /* position: fixed; */
+  padding: 0px;
+  margin-top: 22rem !important;
+}
+.pright{
+  margin-right: 0px;
+}
+.pright1{
+  margin-top: 70px;
+}
+.tableproben1 , .tableproben , .tablepro{
+  width: 100% !important;
+}
+input.lochsr1 , .form-select{
+  width: 100% !important;
+  /* margin-bottom: 10px; */
+}
+#box12{
+  width:100% !important;
+}
+.iconset{
+  margin-top: 10px;
+  /* margin-left: -20px; */
+}
+
+}
+@media (max-width:767px)
+{
+  /* input.lochsr1{
+    width: 100% !important; */
+    /* margin-bottom: 10px;
+  } */
+  .workloadrow , .tablecal {
+    margin: 13.5rem 10px 10px -10px;
+    width: 98%;
+  }
+  .progress3{
+    margin-top: 70px;
+  }
+  .tablecal{
+    margin-top: 0px;
+  }
+  .lilast{
+    margin-right: 1.8rem !important; 
+  }
+}
+/*end ramya css*/

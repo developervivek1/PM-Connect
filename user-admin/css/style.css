@@ -2250,25 +2250,12 @@ cursor: pointer;
 }
 .proj_filter .divfilter2 .project1 .projmaincon .divcon3 span
 {
-margin-left: 19px;
+margin-left: 10px;
 position: relative;
 }
 .proj_filter .divfilter2 .project1 .projmaincon .divcon3 span#tree_open
 {
 cursor: pointer;
-}
-.proj_filter .divfilter2 .project1 .expand .border-bottom .divcon3 #tree_open::before
-{
-position: absolute;
-top: 0px;
-left: 0;
-transform: translateX(-270%) rotate(var(--rot));
-content: url(../icons/dropdown.svg);
-width: 7px;
-/* font-weight: 900;
-color: #696969;
-font-size: 15px; */
-transition: transform 0.1s ease;
 }
 .proj_filter .divfilter2 .project1 .projmaincon .divcon3 span i,
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile2 i
@@ -2288,7 +2275,12 @@ margin-right: 8px;
 {
 margin-top: 2px;
 }
-.proj_filter .divfilter2 .project1 .border-bottom .last_div
+.proj_filter .divfilter2 .project1 .border-bottom .last_div,
+.proj_filter .divfilter2 .project1 #showPop2
+{
+  cursor: pointer;
+}
+.proj_filter .divfilter2 .project1 .border-bottom .row > .last_div
 {
 flex: 0 0 6.5%;
 max-width: 6.5%;
