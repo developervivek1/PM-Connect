@@ -3779,7 +3779,10 @@ right: 10px;
   padding: 4px 12px;
 }
 .tablegantt tr td{
-  padding: 1.6rem 0.5rem !important;
+  padding: 2.5rem 0.5rem !important;
+}
+.tableganttr table tr td:last-child, .tableganttr table tr th:last-child {
+  border-right: 1px solid #0000000D !important;
 }
 .thfirst{
   border-bottom: 0px !important;
@@ -3904,6 +3907,7 @@ table .thspace{
   font-size: 12px;
 }
 .tablecal table tr th{
+  text-align: center;
   font-size: 10px;
   font-weight: 500;
   border-bottom: 1px solid #0000000D;
@@ -4066,33 +4070,58 @@ table .thspace{
   
     /* height: 30px; */
     /* padding: 20px; */
-    width: 68%;
+    width: 100%;
     /* margin: 0 auto; */
     /* margin-top: 20px; */
     position: absolute;
     top: 88px;
     /* text-align: center; */
     /* z-index: 2000; */
-    left: 14%;
+    /* left: 14%; */
     /* right: 20%;*/
+}
+.gantprwid1{
+  margin-left: 22% !important;
+}
+.firstext{
+  margin-left: 3%;
+  font-size: 13px ;
+  color: #1E2022 ;
+  font-weight: 400;
+}
+.gantleft{
+  background: #F6BE75 !important;
+    /* margin-top: 20px; */
+    width: 67% !important;
+    margin-left: 18% !important;
+}
+.first1{
+  margin-top: 17px;
 }
 .benerow{
   border-bottom: 1px solid #0000000D;
 }
 .gantpr1{
   background: #2D62ED !important;
-  margin-top: 16px;
+  /* margin-top: 16px; */
 }
 .gantpr4{
-  margin-top: 13px;
+  /* margin-top: 13px; */
+  width: 50% !important;
+  margin-left: 20%  !important;
 }
 .gantpr3{
   background: #F6BE75 !important;
-  margin-top: 20px;
+  /* margin-top: 20px; */
+  width: 63% !important;
+    margin-left: 24%  !important;
+}
+.gantprwid{
+  width: 58% !important;
 }
 .gantpr2{
   background: #851CED !important;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 .gantpr{
   background: #1CA9ED;
@@ -4100,54 +4129,30 @@ table .thspace{
   border-radius: 5px;
   color: #FFFFFF;
   font-size: 14px;
+  width: 65%;
+  margin-left: 16%;
+    margin-top: -24px;
   text-align: center;
 }
-.tableprogian2{
-  width: 50% !important;
-  left: 18% !important;
-  top: 280px !important;
+.first .card{
+text-align: center;
+border: none;
+background: transparent;
 }
-.tableprogian3{
-  top: 330px;
-    width: 60%;
-}
-.tableprogian4{
-  top: 375px;
-  width: 50%;
-    left: 32%;
-}
-.tableprogian5{
-  top:422px;
-}
+
 /*ramyaresponsiveworkload*/
 @media (max-width:1095px){
   .tableprogian{
     top: 110px;
    
   }
-  .tableprogian2{
-   left: 32% !important;
-    top: 290px !important;
+  .firstext{
+    margin-left: 1%;
   }
-  .tableprogian1{
-    top:240px !important;
-  }
-  .tableprogian3{
-    top: 340px !important;
-  }
-  .tableprogian4{
-    top: 380px !important;
-  }
-  .tableprogian5{
-    top:435px !important;
-  }
+  
 }
 @media (max-width:992px){
-.workloadrow{
-  /* position: fixed; */
-  padding: 0px;
-  margin-top: 22rem !important;
-}
+
 .pright{
   margin-right: 0px;
 }
@@ -4168,24 +4173,16 @@ input.lochsr1 , .form-select{
   margin-top: 10px;
   /* margin-left: -20px; */
 }
-.tableprogian{
-  top: 110px;
-  left: 30%;
-  width: 80%;
-}
-.tableprogian2{
-  width: 70% !important;
-}
-.tableprogian1{
-  left: 36% !important;
-}
-.tableprogian4{
- left: 38%;
-}
 
 }
-@media (max-width:767px)
+
+@media (max-width:781px)
 {
+  .workloadrow{
+    /* position: fixed; */
+    padding: 0px;
+    margin-top: 22rem !important;
+  }
   
   input.lochsr1{
     /* width: 100% !important; */
@@ -4204,5 +4201,30 @@ input.lochsr1 , .form-select{
   .lilast{
     margin-right: 1.8rem !important; 
   }
+  .gantpr{
+    width: 100%;
+    margin-left: 36%;
+  }
+  .gantpr3{
+    width: 100% !important;
+    margin-left: 48% !important;
+  }
+  .gantpr4{
+    width: 90% !important;
+    margin-left: 40% !important;
+  }.gantprwid {
+    width: 99% !important;
+}
+.gantprwid1 {
+  margin-left: 50% !important;
+}
+.gantleft{
+  width: 100% !important;
+    margin-left: 40% !important;
+}
+.first .card {
+  text-align: left;
+ margin-left: 32%;
+}
 }
 /*end ramya css*/
