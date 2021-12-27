@@ -26,7 +26,140 @@
     <!-- full calender -->
     <title>Management View Project Filter</title>
 </head>
+<style>
+    .gantpr22{
+        margin-top: 2.5rem;
+    }
+    .vl {
+        position: absolute;
+        border-left: 2px solid #8a8888d2;
+        height: 101px;
+        left: 48%;
+    }
+    .v2 {
+        position: absolute;
+        border-left: 2px solid #8a8888d2;
+        width: 15.1vw;
+        height: 2px;
+        top: 41px;
+        transform: translate(0px, 0px);
+        background: #8a8888d2;
+        left: 48%;
+    }
+    .v3 {
+        position: absolute;
+        border-left: 2px solid #8a8888d2;
+        width: 10.3vw;
+        height: 2px;
+        top: 101px;
+        transform: translate(0px, 0px);
+        background: #8a8888d2;
+        left: 48%;
+    }
+    .v4 {
+        position: absolute;
+        border-left: 2px solid #8a8888d2;
+        width: 2px;
+        height: 62px;
+        top: 101px;
+        transform: translate(0px, 0px);
+        background: #8a8888d2;
+        left: 54%;
+    }
+    .v5 {
+        position: absolute;
+        border-left: 2px solid #8a8888d2;
+        width: 9.7vw;
+        height: 2px;
+        top: 161px;
+        transform: translate(0px, 0px);
+        background: #8a8888d2;
+        left: 54%;
+    }
+    .v6 {
+        position: absolute;
+        border-left: 2px solid #8a8888d2;
+        width: 2px;
+        height: 44px;
+        top: 118px;
+        transform: translate(0px, 0px);
+        background: #8a8888d2;
+        left: 62%;
+    }
+    .v7 {
+        position: absolute;
+        border-left: 2px solid #8a8888d2;
+        width: 2px;
+        height: 162px;
+        top: 58px;
+        z-index: 1;
+        transform: translate(0px, 0px);
+        background: #8a8888d2;
+        left: 75%;
+    }
+    .v8 {
+        position: absolute;
+        border-left: 2px solid #8a8888d2;
+        width: 2px;
+        height: 44px;
+        top: 177px;
+        transform: translate(0px, 0px);
+        background: #8a8888d2;
+        left: 78%;
+    }
+    .v9 {
+        position: absolute;
+        border-left: 2px solid #8a8888d2;
+        width: 5.4vw;
+        height: 2px;
+        top: 219px;
+        transform: translate(0px, 0px);
+        background: #8a8888d2;
+        left: 75%;
+    }
+    .v9::after {
+        content: '\27A4';
+        position: absolute;
+        /* border-left: 2px solid #8a8888d2; */
+        /* width: 5.4vw; */
+        /* height: 2px; */
+        top: -11px;
+        color: grey;
+        transform: translate(0px, 0px);
+        /* background: #8a8888d2; */
+        left: 85%;
+    }
 
+    .v5::after {
+        content: '\27A4';
+        position: absolute;
+        /* border-left: 2px solid #8a8888d2; */
+        /* width: 5.4vw; */
+        /* height: 2px; */
+        top: -11px;
+        color: grey;
+        transform: translate(0px, 0px);
+        /* background: #8a8888d2; */
+        left: 92%;
+    }
+    .card-body-bg{
+        background: none;
+    }
+
+    /* .aero1{
+        color: gray;
+        position: absolute;
+        right: 19.8%;
+        top: 2.5vw;
+    }
+    .aero2{
+        color: gray;
+        position: absolute;
+        right: 18.8%;
+        bottom: 0.4vw;
+    } */
+
+</style>
 <body>
     <section class="manage_view proj_filter">
         <div class="container-fluid">
@@ -2109,140 +2242,7 @@ review</P> -->
                         </div>
                     </div>
 
-                    <style>
-                        .gantpr22{
-                            margin-top: 2.5rem;
-                        }
-                        .vl {
-                            position: absolute;
-                            border-left: 2px solid #8a8888d2;
-                            height: 101px;
-                            left: 48%;
-                        }
-                        .v2 {
-                            position: absolute;
-                            border-left: 2px solid #8a8888d2;
-                            width: 15.1vw;
-                            height: 2px;
-                            top: 41px;
-                            transform: translate(0px, 0px);
-                            background: #8a8888d2;
-                            left: 48%;
-                        }
-                        .v3 {
-                            position: absolute;
-                            border-left: 2px solid #8a8888d2;
-                            width: 10.3vw;
-                            height: 2px;
-                            top: 101px;
-                            transform: translate(0px, 0px);
-                            background: #8a8888d2;
-                            left: 48%;
-                        }
-                        .v4 {
-                            position: absolute;
-                            border-left: 2px solid #8a8888d2;
-                            width: 2px;
-                            height: 62px;
-                            top: 101px;
-                            transform: translate(0px, 0px);
-                            background: #8a8888d2;
-                            left: 54%;
-                        }
-                        .v5 {
-                            position: absolute;
-                            border-left: 2px solid #8a8888d2;
-                            width: 9.7vw;
-                            height: 2px;
-                            top: 161px;
-                            transform: translate(0px, 0px);
-                            background: #8a8888d2;
-                            left: 54%;
-                        }
-                        .v6 {
-                            position: absolute;
-                            border-left: 2px solid #8a8888d2;
-                            width: 2px;
-                            height: 44px;
-                            top: 118px;
-                            transform: translate(0px, 0px);
-                            background: #8a8888d2;
-                            left: 62%;
-                        }
-                        .v7 {
-                            position: absolute;
-                            border-left: 2px solid #8a8888d2;
-                            width: 2px;
-                            height: 162px;
-                            top: 58px;
-                            z-index: 1;
-                            transform: translate(0px, 0px);
-                            background: #8a8888d2;
-                            left: 75%;
-                        }
-                        .v8 {
-                            position: absolute;
-                            border-left: 2px solid #8a8888d2;
-                            width: 2px;
-                            height: 44px;
-                            top: 177px;
-                            transform: translate(0px, 0px);
-                            background: #8a8888d2;
-                            left: 78%;
-                        }
-                        .v9 {
-                            position: absolute;
-                            border-left: 2px solid #8a8888d2;
-                            width: 5.4vw;
-                            height: 2px;
-                            top: 219px;
-                            transform: translate(0px, 0px);
-                            background: #8a8888d2;
-                            left: 75%;
-                        }
-                        .v9::after {
-                            content: '\27A4';
-                            position: absolute;
-                            /* border-left: 2px solid #8a8888d2; */
-                            /* width: 5.4vw; */
-                            /* height: 2px; */
-                            top: -11px;
-                            color: grey;
-                            transform: translate(0px, 0px);
-                            /* background: #8a8888d2; */
-                            left: 85%;
-                        }
-
-                        .v5::after {
-                            content: '\27A4';
-                            position: absolute;
-                            /* border-left: 2px solid #8a8888d2; */
-                            /* width: 5.4vw; */
-                            /* height: 2px; */
-                            top: -11px;
-                            color: grey;
-                            transform: translate(0px, 0px);
-                            /* background: #8a8888d2; */
-                            left: 92%;
-                        }
-                        .card-body-bg{
-                            background: none;
-                        }
-
-                        /* .aero1{
-                            color: gray;
-                            position: absolute;
-                            right: 19.8%;
-                            top: 2.5vw;
-                        }
-                        .aero2{
-                            color: gray;
-                            position: absolute;
-                            right: 18.8%;
-                            bottom: 0.4vw;
-                        } */
-
-                    </style>
+                    
                     <!-- list closed -->
                     <div class="gantt tab_content">
 
