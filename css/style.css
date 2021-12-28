@@ -3774,7 +3774,7 @@ right: 10px;
 
 
 
-/*ramya21dec2021 workdload*/
+/* gantt workdload css start here*/
 .tablegantt .thspace{
   padding: 4px 12px;
 }
@@ -4282,4 +4282,240 @@ input.lochsr1 , .form-select{
  margin-left: 32%;
 }
 }
-/*end ramya css*/
+
+
+
+.gantpr22{
+  margin-top: 2.5rem;
+}
+.vl {
+  position: absolute;
+  border-left: 2px solid #8a8888d2;
+  height: 101px;
+  left: 48%;
+}
+.v2 {
+  position: absolute;
+  border-left: 2px solid #8a8888d2;
+  width: 15.1vw;
+  height: 2px;
+  top: 41px;
+  transform: translate(0px, 0px);
+  background: #8a8888d2;
+  left: 48%;
+}
+.v3 {
+  position: absolute;
+  border-left: 2px solid #8a8888d2;
+  width: 10.3vw;
+  height: 2px;
+  top: 101px;
+  transform: translate(0px, 0px);
+  background: #8a8888d2;
+  left: 48%;
+}
+.v4 {
+  position: absolute;
+  border-left: 2px solid #8a8888d2;
+  width: 2px;
+  height: 62px;
+  top: 101px;
+  transform: translate(0px, 0px);
+  background: #8a8888d2;
+  left: 54%;
+}
+.v5 {
+  position: absolute;
+  border-left: 2px solid #8a8888d2;
+  width: 9.7vw;
+  height: 2px;
+  top: 161px;
+  transform: translate(0px, 0px);
+  background: #8a8888d2;
+  left: 54%;
+}
+.v6 {
+  position: absolute;
+  border-left: 2px solid #8a8888d2;
+  width: 2px;
+  height: 44px;
+  top: 118px;
+  transform: translate(0px, 0px);
+  background: #8a8888d2;
+  left: 62%;
+}
+.v7 {
+  position: absolute;
+  border-left: 2px solid #8a8888d2;
+  width: 2px;
+  height: 162px;
+  top: 58px;
+  z-index: 1;
+  transform: translate(0px, 0px);
+  background: #8a8888d2;
+  left: 75%;
+}
+.v8 {
+  position: absolute;
+  border-left: 2px solid #8a8888d2;
+  width: 2px;
+  height: 44px;
+  top: 177px;
+  transform: translate(0px, 0px);
+  background: #8a8888d2;
+  left: 78%;
+}
+.v9 {
+  position: absolute;
+  border-left: 2px solid #8a8888d2;
+  width: 5.4vw;
+  height: 2px;
+  top: 219px;
+  transform: translate(0px, 0px);
+  background: #8a8888d2;
+  left: 75%;
+}
+.v9::after {
+  content: '\27A4';
+  position: absolute;
+  /* border-left: 2px solid #8a8888d2; */
+  /* width: 5.4vw; */
+  /* height: 2px; */
+  top: -11px;
+  color: grey;
+  transform: translate(0px, 0px);
+  /* background: #8a8888d2; */
+  left: 85%;
+}
+
+.v5::after {
+  content: '\27A4';
+  position: absolute;
+  /* border-left: 2px solid #8a8888d2; */
+  /* width: 5.4vw; */
+  /* height: 2px; */
+  top: -11px;
+  color: grey;
+  transform: translate(0px, 0px);
+  /* background: #8a8888d2; */
+  left: 92%;
+}
+.card-body-bg{
+  background: none;
+}
+
+.milestonediv1 {
+  width: 81%;
+}
+
+.milestonediv1 .milestonediv11{
+  width: 20%;
+}
+.milestonediv2{
+  width: 70%;
+}
+.milestonediv2 .milestonediv22{
+  width: 15%;
+}
+.milestonediv3{
+  width: 81%;
+}
+.milestonediv3 .milestonediv33{
+  width: 20%;
+}
+.milestonediv4{
+  width: 89%;
+}
+.milestonediv4 .milestonediv44{
+  width: 9%;
+}
+
+/* .first1 .collapsed .hide2 {
+display: none;
+color: #616264;
+font-size: 13px;
+font-weight: bold;
+} */
+
+
+
+.hide2{
+      display: none;
+          position: absolute;
+          margin-top: 30px;
+          background-color: #ffffff;
+          box-shadow: 0px 3px 14px #00000029;
+          border: 1px solid #70707003;
+          border-radius: 2px;
+          left: 70%;
+          top: 39px;
+          z-index: 3;
+          padding: 15px;
+      }
+/* .aero1{
+  color: gray;
+  position: absolute;
+  right: 19.8%;
+  top: 2.5vw;
+}
+.aero2{
+  color: gray;
+  position: absolute;
+  right: 18.8%;
+  bottom: 0.4vw;
+} */
+
+@media (max-width:768px){
+
+  .milestonediv1 {
+      margin-left: 26%;
+}
+
+.milestonediv1 .milestonediv11{
+  width: 53%;
+}
+.milestonediv2{
+  margin-left: 20%;
+  z-index: 2;
+}
+.milestonediv2 .milestonediv22{
+  width: 45%;
+}
+.milestonediv3{
+  margin-left: 26%;
+}
+.milestonediv3 .milestonediv33{
+  width: 50%;
+}
+.milestonediv4{
+  margin-left: 45%;
+}
+
+.milestonediv4 .milestonediv44{
+  width: 32%;
+}
+
+.v9 {
+
+width: 28.4vw;
+}
+.v9::after {
+  left: 91%;
+}
+.v8 {
+  left: 90%;
+}
+
+.hide3{
+  width: 61%;
+  z-index: 3;
+}  
+
+.hide2 {
+  width: 48%;
+}
+
+
+}
+
+/* gantt workdload css start end*/
