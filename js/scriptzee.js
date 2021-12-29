@@ -11,6 +11,13 @@ const highlight = document.querySelector('.manage_view .div3 .con3 .highlight_di
 const usernum = document.querySelector('.manage_view .div3 .con3 .sep_div p span');
 let firstChild = document.querySelectorAll('.manage_view .div2 .center_div ul li div:first-child');
 let selected = document.querySelectorAll('.manage_view .div3 .form_div form select');
+const boxTrigger = document.querySelectorAll('.box11');
+const boxArrow = document.querySelectorAll('.box11 img');
+const boxContent = document.querySelectorAll('.box11 p');
+const options = document.querySelectorAll('.option-container .option');
+const optionsCon = document.querySelectorAll('.option-container p');
+const optContain = document.querySelectorAll('.option-container');
+const form_overlay = document.querySelector('.form_overlay');
 let ind = 0, step_num = 1, username, infoselect, infospan;
 
 nextbtn.addEventListener('click', () => {
@@ -191,3 +198,57 @@ const filterUser = (searchword) => {
     })
 }
 
+
+boxTrigger.forEach((box,ind)=>
+{
+    box.addEventListener('click',(e)=>
+    {
+        pindex = ind;
+        if(!optContain[ind].classList.contains('active'))
+        {
+            form_overlay.classList.add('active');
+            optContain[ind].classList.add('active')  
+            boxArrow[ind].classList.add('active');
+        }
+        else
+        {
+            form_overlay.classList.remove('active');
+            optContain[ind].classList.remove('active')  
+            boxArrow[ind].classList.remove('active');
+        }
+    })
+})
+options.forEach((option)=>
+{
+    option.addEventListener('click',(e)=>
+    {
+        e.stopPropagation();
+        boxContent[pindex].style.color="#000";
+        boxContent[pindex].innerText=e.target.querySelector('p').innerText; 
+        optContain[pindex].classList.remove('active') 
+        boxArrow[pindex].classList.remove('active');
+        form_overlay.classList.remove('active');
+    })
+})
+optionsCon.forEach((option)=>
+{
+    option.addEventListener('click',(e)=>
+    {
+        e.stopPropagation();
+        boxContent[pindex].style.color="#000";
+        boxContent[pindex].innerText=e.target.innerText;
+        optContain[pindex].classList.remove('active') 
+        boxArrow[pindex].classList.remove('active');
+        form_overlay.classList.remove('active');
+    })
+})
+
+window.addEventListener('click',(e)=>
+{
+    if(e.target==form_overlay)
+    {
+        optContain[pindex].classList.remove('active');
+        form_overlay.classList.remove('active');
+        boxArrow[pindex].classList.remove('active');
+    }
+})

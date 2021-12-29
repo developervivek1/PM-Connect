@@ -4,24 +4,17 @@ const border_fill = document.querySelector('.manage_view .div3 .step_wise .borde
 const step_number = document.querySelector('.manage_view .div3 .step_wise .center_step span.active');
 const datacontent = document.querySelectorAll('.manage_view .div3 .form_div .step_forward');
 const goback = document.querySelector('.manage_view .div3 .step_wise #goback');
-let removerow = document.querySelectorAll('.manage_view .div3 .con5 .user-list button');
-const getinput = document.querySelector('.manage_view .div3 .con5 #getdata');
-let hoverdiv = document.querySelectorAll('.manage_view .div3 .con5 .user-list .hover_div');
-const highlight = document.querySelector('.manage_view .div3 .con5 .highlight_div');
-const usernum = document.querySelector('.manage_view .div3 .con5 .sep_div p span');
+let removerow = document.querySelectorAll('.manage_view .div3 .con3 .user-list button');
+const getinput = document.querySelector('.manage_view .div3 .con3 #getdata');
+let hoverdiv = document.querySelectorAll('.manage_view .div3 .con3 .user-list .hover_div');
+const highlight = document.querySelector('.manage_view .div3 .con3 .highlight_div');
+const usernum = document.querySelector('.manage_view .div3 .con3 .sep_div p span');
 let firstChild = document.querySelectorAll('.manage_view .div2 .center_div ul li div:first-child');
 let selected = document.querySelectorAll('.manage_view .div3 .form_div form select');
-const boxTrigger = document.querySelectorAll('.box11');
-const boxArrow = document.querySelectorAll('.box11 img');
-const boxContent = document.querySelectorAll('.box11 p');
-const options = document.querySelectorAll('.option-container .option');
-const optionsCon = document.querySelectorAll('.option-container p');
-const optContain = document.querySelectorAll('.option-container');
-const form_overlay = document.querySelector('.form_overlay');
 let ind = 0, step_num = 1, username, infoselect, infospan;
 
 nextbtn.addEventListener('click', () => {
-    if (ind >= 4) {
+    if (ind >= 2) {
         location.href = `management-view-request-new-request-submit.html`;
     }
     ind++;
@@ -50,7 +43,7 @@ function performactive(ind, step_num) {
             goback.classList.remove('enable');
             firstChild[0].classList.remove('success');
             firstChild[1].classList.remove('success');
-            newind = ind + 1;
+            newind = ind + 3;
             nextbtn.innerText = "Next";
             break;
         case 1:
@@ -68,34 +61,12 @@ function performactive(ind, step_num) {
             if (!firstChild[1].classList.contains('success')) {
                 firstChild[1].classList.add('success');
             }
-            else if (firstChild[0].classList.contains('success') && firstChild[1].classList.contains('success')
-                && firstChild[2].classList.contains('success')) {
-                firstChild[2].classList.remove('success');
-            }
-            nextbtn.innerText = "Next";
-            newind = ind + 1;
-            break;
-        case 3:
-            if (!firstChild[2].classList.contains('success')) {
-                firstChild[2].classList.add('success');
-            }
-            else if (firstChild[0].classList.contains('success') && firstChild[1].classList.contains('success')
-                && firstChild[2].classList.contains('success') && firstChild[3].classList.contains('success')) {
-                firstChild[3].classList.remove('success');
-            }
-            nextbtn.innerText = "Next";
-            newind = ind + 1;
-            break;
-        case 4:
-            if (!firstChild[3].classList.contains('success')) {
-                firstChild[3].classList.add('success');
-            }
             nextbtn.innerText = "Submit";
             nextbtn.setAttribute('type', 'submit');
-            newind = ind + 1;
+            newind = 1;
             break;
     }
-    border_fill.style.width = `calc( ${newind} / 5 * 100%)`;
+    border_fill.style.width = 'calc(100% /' + newind + ')';
 }
 
 removerow.forEach((btn, ind) => {
@@ -106,26 +77,25 @@ removerow.forEach((btn, ind) => {
         // let delhigh = parent.closest('.step_forward').querySelector('.highlight_div');
         // let delNode2 = delhigh.querySelectorAll('.hover_div');
         delNode.remove();
-        hoverdiv = document.querySelectorAll('.manage_view .div3 .con5 .user-list .hover_div');
+        hoverdiv = document.querySelectorAll('.manage_view .div3 .con3 .user-list .hover_div');
         usernum.innerText = hoverdiv.length;
     })
 })
 
 function clonediv() {
     usernum.innerText = hoverdiv.length;
-    border_fill.style.width = `calc( 1 / 5 * 100%)`;
     for (let i = 0; i < hoverdiv.length; i++) {
         let clone = hoverdiv[i].cloneNode(true);
         highlight.appendChild(clone);
     }
-    infoselect = document.querySelectorAll('.manage_view .div3 .con5 .highlight_div .hover_div .info-div div p');
+    infoselect = document.querySelectorAll('.manage_view .div3 .con3 .highlight_div .hover_div .info-div div p');
     setclass();
 }
 clonediv();
 
 function setclass() {
-    let rownew = document.querySelectorAll('.manage_view .div3 .con5 .highlight_div .row');
-    let delbtn = document.querySelectorAll('.manage_view .div3 .con5 .highlight_div .row .info-div .btn');
+    let rownew = document.querySelectorAll('.manage_view .div3 .con3 .highlight_div .row');
+    let delbtn = document.querySelectorAll('.manage_view .div3 .con3 .highlight_div .row .info-div .btn');
     rownew.forEach((row) => {
         row.setAttribute('class', 'row mt-3');
     })
@@ -161,8 +131,8 @@ function makinginvitediv() {
     row.appendChild(div2);
     row.appendChild(div3);
     highlight.appendChild(row);
-    infospan = document.querySelector('.manage_view .div3 .con5 .highlight_div .invite_main .col-md-5 span');
-    username = document.querySelectorAll('.manage_view .div3 .con5 .highlight_div .info-div h6');
+    infospan = document.querySelector('.manage_view .div3 .con3 .highlight_div .invite_main .col-md-5 span');
+    username = document.querySelectorAll('.manage_view .div3 .con3 .highlight_div .info-div h6');
 }
 username.forEach((uname) => {
     ['click', 'mouseover'].forEach((e) => {
@@ -205,7 +175,7 @@ getinput.addEventListener('keyup', (e) => {
 
 const filterUser = (searchword) => {
     searchword = searchword.toLowerCase();
-    username = document.querySelectorAll('.manage_view .div3 .con5 .highlight_div .info-div h6');
+    username = document.querySelectorAll('.manage_view .div3 .con3 .highlight_div .info-div h6');
     Array.from(username).forEach((uname) => {
         let label = uname.innerText.toLowerCase();
         if (label.includes(searchword)) {
@@ -221,56 +191,3 @@ const filterUser = (searchword) => {
     })
 }
 
-boxTrigger.forEach((box,ind)=>
-{
-    box.addEventListener('click',(e)=>
-    {
-        pindex = ind;
-        if(!optContain[ind].classList.contains('active'))
-        {
-            form_overlay.classList.add('active');
-            optContain[ind].classList.add('active')  
-            boxArrow[ind].classList.add('active');
-        }
-        else
-        {
-            form_overlay.classList.remove('active');
-            optContain[ind].classList.remove('active')  
-            boxArrow[ind].classList.remove('active');
-        }
-    })
-})
-options.forEach((option)=>
-{
-    option.addEventListener('click',(e)=>
-    {
-        e.stopPropagation();
-        boxContent[pindex].style.color="#000";
-        boxContent[pindex].innerText=e.target.querySelector('p').innerText; 
-        optContain[pindex].classList.remove('active') 
-        boxArrow[pindex].classList.remove('active');
-        form_overlay.classList.remove('active');
-    })
-})
-optionsCon.forEach((option)=>
-{
-    option.addEventListener('click',(e)=>
-    {
-        e.stopPropagation();
-        boxContent[pindex].style.color="#000";
-        boxContent[pindex].innerText=e.target.innerText;
-        optContain[pindex].classList.remove('active') 
-        boxArrow[pindex].classList.remove('active');
-        form_overlay.classList.remove('active');
-    })
-})
-
-window.addEventListener('click',(e)=>
-{
-    if(e.target==form_overlay)
-    {
-        optContain[pindex].classList.remove('active');
-        form_overlay.classList.remove('active');
-        boxArrow[pindex].classList.remove('active');
-    }
-})

@@ -2,6 +2,7 @@ const showFilter = document.querySelector('.divfilter2 .top_up2 ul li:nth-child(
 const filterdiv = document.querySelector('.divfilter2 .top_up2 .filter_div');
 const top_up = document.querySelector('.proj_filter .divfilter2 .top_up');
 const filterImg = document.querySelector('.divfilter2 .top_up2 ul li:nth-child(2) img');
+const overlay = document.querySelector('.proj_filter .myoverlay');
 const topup2_overlay = document.querySelector('.proj_filter .divfilter2 .top_up2 .topup2_overlay');
 const drop_overlay = document.querySelector('.proj_filter .divfilter2 .drop_overlay');
 const milediv = document.querySelector('.proj_filter .divfilter2 .project1 .expand .border-bottom .divcon3 #tree_open');
@@ -34,6 +35,8 @@ let addEdit2 = document.querySelectorAll('.proj_filter .divfilter2 .project1 .pr
 let doneEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .done');
 let discardEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .cancel');
 let addLabel = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .add_label .btn');
+const mobileTrigger = document.querySelector('.mobile-menuhead .hamberger-menu span');
+const mobileMenu = document.querySelector('.proj_filter nav');
 const proj_edit = document.querySelector('.manage_view .proj_edit'); 
 const proj_con = document.querySelector('.manage_view .proj_edit .proj_content'); 
 const proj_overlay = document.querySelector('.manage_view .proj_overlay'); 
@@ -81,7 +84,6 @@ const open_SubTask =milestone4.querySelector('#addSubtask');
 const open_SubtaskName =milestone4.querySelector('.addSubtask_hide');
 const open_SubtaskAdded =milestone4.querySelector('.Subtaskname_hide');
 const addedSubtask =milestone4.querySelector('.Subtask_added');
-const overlay =document.querySelector('.myoverlay');
 let statusColor, statusText, textVal, value,pageYedit,h5con,adjacentNode,fixedValue1=121,fixedValue2=121,fixedValue3=121; 
 
 const ImageDisable=[{disSrc: 'icons/ColorImage/assignees_disab.png',enabSrc: 'icons/Assigness.svg'},
@@ -112,6 +114,15 @@ const ImageDisable=[{disSrc: 'icons/ColorImage/assignees_disab.png',enabSrc: 'ic
 {disSrc: 'icons/ColorImage/user_disab.png',enabSrc: 'icons/user.svg'},
 {disSrc: 'icons/ColorImage/status_disab.png',enabSrc: 'icons/status.svg'}];
 
+// Mobile Hamberger Menu
+mobileTrigger.addEventListener('click',()=>
+{
+    if(!mobileMenu.classList.contains('active'))
+    {
+       mobileMenu.classList.add('active');
+       overlay.classList.add('active');
+    }
+})
 
 // proj_edit Hide/Show
 projdetail_btn.forEach((detailProj)=>
@@ -448,7 +459,11 @@ saveProjadd.addEventListener('click',()=>
     discardEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .cancel');
     projdetail_btn = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projmaincon .divcon1 span');
     plannedDiv = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .divcon4');
+    actualcloseDate = closestExpand.querySelectorAll('.divcon5 input');
+    actualtotalDate = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .divcon5 input');
     calendar_data = document.querySelectorAll('.proj_filter .divfilter2 #rangePicker');
+    let newCal = actualcloseDate[actualcloseDate.length -1];
+    newCal.setAttribute('id',`picker${actualtotalDate.length +4}`);
     setSpan();
     clickEdit.forEach((edit)=>
     {
@@ -507,6 +522,7 @@ function hideFilterdiv(e) {
     if (e.target == overlay) {
         filterdiv.classList.remove('showfilter');
         showFilter.classList.remove('active');
+        mobileMenu.classList.remove('active');
         mainul[mainul.length - 1].classList.remove('active');
         divfilter.querySelector('.addview').classList.remove('active');
         tabnum[0].classList.add('active');
@@ -575,13 +591,13 @@ window.addEventListener('resize',()=>
     if(this.innerWidth < 849)
     {
        overlay.classList.remove('active');
+       mobileMenu.classList.remove('active');
     }
     else
     {
         top_up.style.zIndex='6';
     }
 })
-
 
 // Hide and Show filter Div
 showFilter.addEventListener('click', (e) => {
@@ -1019,7 +1035,7 @@ setSpan();
 
 calendar_data.forEach(data=>
 {
-    ['mouseover','mouseout'].forEach((e)=>
+    ['mouseenter','mouseout'].forEach((e)=>
     {
         data.addEventListener(e, hoverData);
     });
@@ -1027,7 +1043,7 @@ calendar_data.forEach(data=>
 
 function hoverData(e)
 {
-    if(e.type==='mouseover')
+    if(e.type==='mouseenter')
     {
     let dateRange = e.target.value;
     let extractDate= dateRange.substr(4,8);
@@ -1050,29 +1066,33 @@ function hoverData(e)
     }
 }
 
-function show() {
-    if(document.getElementById('benefits').style.display=='none') {
-      document.getElementById('benefits').style.display='block';
-      document.getElementById('tablehide').style.display='none';
-      document.getElementById('benefitsdrop').style.display='none';
-    }
-  }
-  function show1() {
-    if(document.getElementById('benefitsdrop').style.display=='none') {
-      document.getElementById('benefitsdrop').style.display='block';
-      document.getElementById('tablehide').style.display='none';
-      document.getElementById('benefits').style.display='none';
-    }
-  }
+// $(function () {
 
-$.datetimepicker.setDateFormatter('moment');
+//     $('input[name="datefilter"]').daterangepicker({
+//         autoUpdateInput: false,
+//         locale: {
+//             cancelLabel: 'Clear'
+//         }
+//     });
 
-$(function(){
-    $("[id='picker']").datetimepicker({
-        timepicker: false,
-        datepicker: true,
-        format: 'MMM DD,YYYY'
-    });
+//     $('input[name="datefilter"]').on('apply.daterangepicker', function (ev, picker) {
+//         $(this).val(picker.startDate.format('MMM DD') + ' - ' + picker.endDate.format('DD'));
+//     });
+
+//     $('input[name="datefilter"]').on('cancel.daterangepicker', function (ev, picker) {
+//         $(this).val('');
+//     });
+
+// });
+
+$.datetimepicker.setDateFormatter('moment')
+
+$('#picker').add('#picker2').add('#picker3').add('#picker4').add('#picker5').
+    add('#picker6').add('#picker7').add('#picker8').add('#picker9').add('#picker10').add('#picker11').datetimepicker(
+{
+    timepicker: false,
+    datepicker: true,
+    format: 'MMM DD,YYYY'
 });
 
 $('#picker12').add('#picker13').datetimepicker(
@@ -1091,6 +1111,9 @@ $('#picker14').datetimepicker(
 $('.h1fixed').scroll(function() {
     $(this).find('.mysticky').css('left', $(this).scrollLeft());
 });        
+// $('#expand1').scroll(function() {
+//     $(this).find('.mysticky2').css('left', $(this).scrollLeft());
+// });   
 $(document).ready(function() {
     $('#summernote').summernote({
         placeholder: 'Write an update',
@@ -1107,3 +1130,36 @@ $(document).ready(function() {
         ]
       });
   });
+
+  // const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+// function setPlannedDate() {
+//     let date = new Date();
+//     let currentMonth = month[date.getMonth()];
+//     let currentYear = date.getFullYear();
+//     let currentDate = date.getDate();
+//     plannedInput.forEach((input) => {
+//         input.value = `${currentMonth} ${currentDate}-${currentDate + 5}`;
+//     })
+//     startdateInput.forEach((input) => {
+//         input.value = `${currentMonth} ${currentDate},${currentYear}`;
+//     })
+// }
+// setPlannedDate();
+
+  // window.addEventListener('scroll',(e)=>
+// {
+//     let winPageY = this.pageYOffset;
+//     if(e.target.scrollingElement.clientWidth < 800 && winPageY > (pageYedit -290))
+//     {
+//         let activeEdit = e.target.querySelectorAll('.proj_filter .divfilter2 .addedit');
+//         activeEdit.forEach((edit)=>
+//         {
+//             if(edit.classList.contains('active'))
+//             {
+//                 edit.classList.remove('active');
+//                 overlay.classList.remove('active');
+//             }
+//         })
+//         // if(Array.from(activeEdit).some(edit => edit.classList.contains('active')))
+//     }
+// })

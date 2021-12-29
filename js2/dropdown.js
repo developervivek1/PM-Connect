@@ -1,35 +1,34 @@
-
-const selected = document.querySelector(".selected");
-const optionsContainer = document.querySelector(".options-container");
-const searchBox = document.querySelector(".search-box input");
-
+const selected = document.querySelectorAll(".selected");
+const optionsContainer = document.querySelectorAll(".options-container");
+const searchBox = document.querySelectorAll(".search-box input");
 const optionsList = document.querySelectorAll(".option");
-
-selected.addEventListener("click", () => {
-  optionsContainer.classList.toggle("active");
-
-  searchBox.value = "";
-  filterList("");
-
-  if (optionsContainer.classList.contains("active")) {
-    searchBox.focus();
-  }
-});
-
+selected.forEach((selected,ind)=>
+{
+  selected.addEventListener("click", () => {
+    optionsContainer[ind].classList.toggle("active");
+    searchBox[ind].value = "";
+    filterList("");
+    if (optionsContainer[ind].classList.contains("active")) {
+      searchBox.focus();
+    }
+  });
+})
 optionsList.forEach(o => {
-  o.addEventListener("click", () => {
-    selected.innerHTML = o.querySelector("label").innerHTML;
-    optionsContainer.classList.remove("active");
+  o.addEventListener("click", (e) => {
+    e.target.closest('.select-box').querySelector('.selected').innerText= o.querySelector("label").innerText;
+    e.target.closest('.options-container').classList.remove('active');
   });
 });
-
-searchBox.addEventListener("keyup", function(e) {
-  filterList(e.target.value);
-});
-
-const filterList = searchTerm => {
+searchBox.forEach((searchBox)=>
+{
+  searchBox.addEventListener("keyup", function(e) {
+    let newoptlist = e.target.closest('.select-box').querySelectorAll('.option');
+    filterList(e.target.value,newoptlist);
+  });
+})
+const filterList = (searchTerm,newoptlist) => {
   searchTerm = searchTerm.toLowerCase();
-  optionsList.forEach(option => {
+  newoptlist.forEach(option => {
     let label = option.firstElementChild.nextElementSibling.innerText.toLowerCase();
     if (label.indexOf(searchTerm) != -1) {
       option.style.display = "block";
@@ -38,6 +37,21 @@ const filterList = searchTerm => {
     }
   });
 };
+
+
+
+
+
+
+
+
+
+
+
+// 
+
+
+
 
 
 

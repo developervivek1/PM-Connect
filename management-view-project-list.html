@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,24 +19,28 @@
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
 
     <!-- custom css -->
+    <link rel="stylesheet" href="css/fullcalendar.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/projaddedit.css">
     <link rel="stylesheet" href="css/usersearch.css">
+    <link rel="stylesheet" href="css/notification.css">
+    <link rel="stylesheet" href="css/ganttworkload.css">
 
     <!-- full calender -->
     <title>Management View Project Filter</title>
 </head>
-<style>
-  
-</style>
+
 <body>
     <section class="manage_view proj_filter">
         <div class="container-fluid">
             <div class="row">
                 <div class="myoverlay"></div>
+                <div class="menu_overlay"></div>
+                <div class="setting_overlay"></div>
                 <!-- proj edit -->
                 <div class="proj_overlay"></div>
+                <div class="noti_overlay"></div>
                 <div class="proj_edit">
                     <div class="row justify-content-between" style="height: 50px;">
                         <div class="col-md-3">
@@ -531,85 +536,693 @@
                     </div>
                 </div>
                 <!-- proj_add end -->
-                <nav>
-                    <div class="div1">
-                        <h3><img class="d-none d-md-block" src="icons/logo.svg" alt="logo">
-                            <img class="d-block d-md-none" src="icons/HamburgerON.svg" width="38px" alt="">
-                        </h3>
-                        <ul>
-                            <li>
-                                <span class="tooltiptext">Dashboard</span>
-                                <a href="#" class="button1">
-                                    <img src="icons/dashboard.svg" alt="Image one" width="38" class="button__img1">
-                                    <img src="icons/dashboardwhite.svg" alt="Image two" class="button__img1">
-                                </a>
-                            </li>
-                            <li>
-                                <span class="tooltiptext">Notifications</span>
-                                <a href="#" class="button1">
-                                    <img src="icons/Notification-Blue1.svg" alt="Image one" width="38"
-                                        class="button__img1">
-                                    <img src="icons/notfiwhite.svg" alt="Image two" class="button__img1">
-                                </a>
-                            </li>
-                            <li class="active">
-                                <span class="tooltiptext">Request</span>
-                                <a href="mview-request.html" class="button1">
-                                    <img src="icons/Request-Blue1.svg" alt="Image one" width="38" class="button__img1">
-                                    <img src="icons/request-white.svg" alt="Image two" class="button__img1">
-                                </a>
-                            </li>
-                            <li>
-                                <span class="tooltiptext">Project</span>
-                                <a href="management-view-project-list.html" class="button1">
-                                    <img src="icons/project.svg" alt="Image one" width="38" class="button__img1">
-                                    <img src="icons/project-white.svg" alt="Image two" class="button__img1">
-                                </a>
-                            </li>
-                            <li>
-                                <span class="tooltiptext">View Progress</span>
-                                <a href="usertask.html" class="button1">
-                                    <img src="icons/Viewprogress-Blue.svg" alt="Image one" width="38"
-                                        class="button__img1">
-                                    <img src="icons/Progresslist-white.svg" alt="Image two" class="button__img1">
-                                </a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <span class="tooltiptext">Reports</span>
-                                <a href="#" class="button1">
-                                    <img src="icons/Reports.svg" alt="Image one" width="38" class="button__img1">
-                                    <img src="icons/reportwhite.svg" alt="Image two" class="button__img1">
-                                </a>
-                            </li>
-                            <li>
-                                <span class="tooltiptext">Search</span>
-                                <a href="#" class="button1">
-                                    <img src="icons/search.svg" alt="Image one" width="38" class="button__img1">
-                                    <img src="icons/searchwhite.svg" alt="Image two" class="button__img1">
-                                </a>
-                            </li>
-                            <li>
-                                <span class="tooltiptext">Help & Support</span>
-                                <a href="#" class="button1">
-                                    <img src="icons/help.svg" alt="Image one" width="38" class="button__img1">
-                                    <img src="icons/helpwhite.svg" alt="Image two" class="button__img1">
-                                </a>
-                            </li>
-                            <li class="tooltip1">
-                                <p class="tooltiptext1">
-                                    <span class="">S</span>
-                                    <p class="tooltiptext tooltiptext1">
-                                        <span class=""> My Profile</span>
-                                        <br>
-                                        <a href="signIn.html" class=""> <span> Log Out </span> </a>
-                                    </p>
-                                </p>
-                            </li>
-                        </ul>
+                <div class="notification_div">
+                    <div class="col-md-12 d-flex justify-content-start">
+                        <h1>Notifications</h1>
                     </div>
-                </nav>
+                    <div class="nav_div">
+                        <div class="scroll_div">
+                            <ul>
+                                <li>All</li>
+                                <li class="active" data-target=".request" id="owntabs">New Request</li>
+                                <li data-target=".update" id="owntabs">Update Status</li>
+                                <li data-target=".activity" id="owntabs">Activity Log</li>
+                                <li data-target=".assigned" id="owntabs">Assigned to me</li>
+                                <li data-target=".mention" id="owntabs">at Mentions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="noti_overflow">
+                        <!-- request content start -->
+                        <div class="request active tabnoti_con">
+                            <div class="noti_con">
+                                <div class="noti_inner">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="grid">
+                                                <div class="grid1">
+                                                    <h4>Project Name:</h4>
+                                                </div>
+                                                <div class="grid2">
+                                                    <p>Name of the Project</p>
+                                                </div>
+                                            </div>
+                                            <div class="grid">
+                                                <div class="grid1">
+                                                    <h4>Request ID:</h4>
+                                                </div>
+                                                <div class="grid2">
+                                                    <p>#000111222</p>
+                                                </div>
+                                            </div>
+                                            <div class="grid">
+                                                <div class="grid1">
+                                                    <h4>Priority</h4>
+                                                </div>
+                                                <div class="grid2">
+                                                    <p class="high">High</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="grid">
+                                                <div class="grid1">
+                                                    <h4>Project Owner:</h4>
+                                                </div>
+                                                <div class="grid2">
+                                                    <img src="icons/avatar1.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="grid">
+                                                <div class="grid1">
+                                                    <h4>Assigned to:</h4>
+                                                </div>
+                                                <div class="grid2">
+                                                    <img src="icons/avatr4.svg" alt="">
+                                                    <img src="icons/avtar6.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="grid">
+                                                <div class="grid1">
+                                                    <h4>Client Name:</h4>
+                                                </div>
+                                                <div class="grid2">
+                                                    <p>Client Name X</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-10 justify-content-end d-flex sent_div">
+                                            <div class="d-flex">
+                                                <h5>Sent On:</h5>
+                                                <span>25 Nov,2021 at 10:00 AM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- noti_con closed -->
+                            <div class="noti_con">
+                                <div class="noti_inner">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="grid">
+                                                <div class="grid1">
+                                                    <h4>Project Name:</h4>
+                                                </div>
+                                                <div class="grid2">
+                                                    <p>Name of the Project</p>
+                                                </div>
+                                            </div>
+                                            <div class="grid">
+                                                <div class="grid1">
+                                                    <h4>Request ID:</h4>
+                                                </div>
+                                                <div class="grid2">
+                                                    <p>#000111222</p>
+                                                </div>
+                                            </div>
+                                            <div class="grid">
+                                                <div class="grid1">
+                                                    <h4>Priority</h4>
+                                                </div>
+                                                <div class="grid2">
+                                                    <p class="low">Low</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="grid">
+                                                <div class="grid1">
+                                                    <h4>Project Owner:</h4>
+                                                </div>
+                                                <div class="grid2">
+                                                    <img src="icons/avatar1.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="grid">
+                                                <div class="grid1">
+                                                    <h4>Assigned to:</h4>
+                                                </div>
+                                                <div class="grid2">
+                                                    <img src="icons/avatr4.svg" alt="">
+                                                    <img src="icons/avtar6.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="grid">
+                                                <div class="grid1">
+                                                    <h4>Client Name:</h4>
+                                                </div>
+                                                <div class="grid2">
+                                                    <p>Client Name X</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-10 justify-content-end d-flex sent_div">
+                                            <div class="d-flex">
+                                                <h5>Sent On:</h5>
+                                                <span>25 Nov,2021 at 10:00 AM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- noti_con closed -->
+                            <div class="noti_con">
+                                <div class="noti_inner">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="grid">
+                                                <div class="grid1">
+                                                    <h4>Project Name:</h4>
+                                                </div>
+                                                <div class="grid2">
+                                                    <p>Name of the Project</p>
+                                                </div>
+                                            </div>
+                                            <div class="grid">
+                                                <div class="grid1">
+                                                    <h4>Request ID:</h4>
+                                                </div>
+                                                <div class="grid2">
+                                                    <p>#000111222</p>
+                                                </div>
+                                            </div>
+                                            <div class="grid">
+                                                <div class="grid1">
+                                                    <h4>Priority</h4>
+                                                </div>
+                                                <div class="grid2">
+                                                    <p class="medium">Medium</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="grid">
+                                                <div class="grid1">
+                                                    <h4>Project Owner:</h4>
+                                                </div>
+                                                <div class="grid2">
+                                                    <img src="icons/avatar1.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="grid">
+                                                <div class="grid1">
+                                                    <h4>Assigned to:</h4>
+                                                </div>
+                                                <div class="grid2">
+                                                    <img src="icons/avatr4.svg" alt="">
+                                                    <img src="icons/avtar6.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="grid">
+                                                <div class="grid1">
+                                                    <h4>Client Name:</h4>
+                                                </div>
+                                                <div class="grid2">
+                                                    <p>Client Name X</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-10 justify-content-end d-flex sent_div">
+                                            <div class="d-flex">
+                                                <h5>Sent On:</h5>
+                                                <span>25 Nov,2021 at 10:00 AM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- noti_con closed -->
+                            <div class="noti_con">
+                                <div class="noti_inner">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="grid">
+                                                <div class="grid1">
+                                                    <h4>Project Name:</h4>
+                                                </div>
+                                                <div class="grid2">
+                                                    <p>Name of the Project</p>
+                                                </div>
+                                            </div>
+                                            <div class="grid">
+                                                <div class="grid1">
+                                                    <h4>Request ID:</h4>
+                                                </div>
+                                                <div class="grid2">
+                                                    <p>#000111222</p>
+                                                </div>
+                                            </div>
+                                            <div class="grid">
+                                                <div class="grid1">
+                                                    <h4>Priority</h4>
+                                                </div>
+                                                <div class="grid2">
+                                                    <p class="low">Low</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="grid">
+                                                <div class="grid1">
+                                                    <h4>Project Owner:</h4>
+                                                </div>
+                                                <div class="grid2">
+                                                    <img src="icons/avatar1.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="grid">
+                                                <div class="grid1">
+                                                    <h4>Assigned to:</h4>
+                                                </div>
+                                                <div class="grid2">
+                                                    <img src="icons/avatr4.svg" alt="">
+                                                    <img src="icons/avtar6.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="grid">
+                                                <div class="grid1">
+                                                    <h4>Client Name:</h4>
+                                                </div>
+                                                <div class="grid2">
+                                                    <p>Client Name X</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-10 justify-content-end d-flex sent_div">
+                                            <div class="d-flex">
+                                                <h5>Sent On:</h5>
+                                                <span>25 Nov,2021 at 10:00 AM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- noti_con closed -->
+                        </div>
+                        <!-- request content closed -->
+                        <!-- update content start -->
+                        <div class="update tabnoti_con">
+                            <div class="pad-common">
+                                <div class="col-md-12">
+                                    <p>Project ABC changed it's status from <span class="track">Ontrack</span> to 
+                                        <span class="done">Done!</span></p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 d-flex justify-content-between mheight_80">
+                                        <div class="d-flex avatar">
+                                            <p>Assignees:</p>
+                                            <img src="icons/avatar1.svg" alt="">
+                                            <img src="icons/avatar2.svg" alt="">
+                                        </div>
+                                        <div class="d-flex date">
+                                            <p>25 Nov, 2021 at 10:00 AM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pad-common">
+                                <div class="col-md-12">
+                                    <p>Project ABC changed it's status from <span class="plan">Planned</span>
+                                            to <span class="risk">At Risk!</span></p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 d-flex justify-content-between mheight_80">
+                                        <div class="d-flex avatar">
+                                            <p>Assignees:</p>
+                                            <img src="icons/avatar1.svg" alt="">
+                                            <img src="icons/avatar2.svg" alt="">
+                                        </div>
+                                        <div class="d-flex date">
+                                            <p>25 Nov, 2021 at 10:00 AM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- update content end -->
+                        <!-- activity content start -->
+                        <div class="activity tabnoti_con">
+                            <div class="pad-common">
+                                <div class="col-md-12">
+                                    <p>John has accepted your invitation the <span>Project 01</span></p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 d-flex justify-content-between">
+                                        <div class="d-flex avatar">
+                                            <img src="icons/avatar1.svg" alt="">
+                                        </div>
+                                        <div class="d-flex date">
+                                            <p>2 min ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pad-common">
+                                <div class="col-md-12">
+                                    <p>Jayson marked the <span class="marked">Project ABC</span> as task done</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 d-flex justify-content-between">
+                                        <div class="d-flex avatar">
+                                            <img src="icons/avatar1.svg" alt="">
+                                        </div>
+                                        <div class="d-flex date">
+                                            <p>22 Nov,2021 at 10:00 PM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pad-common">
+                                <div class="row">
+                                    <div class="col-md-12 upLoad">
+                                        <p>Sherry added 2 files to <span class="marked">Project AB's </span>conversion</p>
+                                        <div class="d-flex mt-4">
+                                            <div class="file_div">
+                                                <img src="icons/pdf.png" alt="">
+                                                <p>Name of the file</p>
+                                            </div>
+                                            <div class="file_div">
+                                                <img src="icons/pdf.png" alt="">
+                                                <p>Name of the file</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 d-flex justify-content-between">
+                                        <div class="d-flex avatar">
+                                            <img src="icons/avatar1.svg" alt="">
+                                        </div>
+                                        <div class="d-flex date">
+                                            <p>22 Nov,2021 at 10:00 PM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- activity content end -->
+                        <!-- assigned content start -->
+                        <div class="assigned tabnoti_con">
+                            <div class="pad-common">
+                                <div class="col-md-12">
+                                    <p>Jeet has assigned Project ABC at <span class="email">yourname@youroffcial.com</span></p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 d-flex justify-content-between">
+                                        <div class="d-flex avatar">
+                                            <img src="icons/avatar1.svg" alt="">
+                                        </div>
+                                        <div class="d-flex date">
+                                            <p>2 min ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pad-common">
+                                <div class="col-md-12">
+                                    <p>Rayon has assigned you an item ABC at <span class="email">yourname@youroffcial.com</span></p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 d-flex justify-content-between">
+                                        <div class="d-flex avatar">
+                                            <img src="icons/avatar1.svg" alt="">
+                                        </div>
+                                        <div class="d-flex date">
+                                            <p>22 Nov,2021 at 10:00 PM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- assigned content end -->
+                        <!-- mention content start -->
+                        <div class="mention tabnoti_con">
+                            <div class="pad-common">
+                                <div class="col-md-12">
+                                    <p>Jeet mentioned <span class="email">@youroffcial.com</span> in an update</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 d-flex justify-content-between">
+                                        <div class="d-flex avatar">
+                                            <img src="icons/avatar1.svg" alt="">
+                                        </div>
+                                        <div class="d-flex date">
+                                            <p>2 min ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pad-common">
+                                <div class="col-md-12">
+                                    <p>Rayon mentioned <span class="email">@youroffcial.com</span> in an update</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 d-flex justify-content-between">
+                                        <div class="d-flex avatar">
+                                            <img src="icons/avatar1.svg" alt="">
+                                        </div>
+                                        <div class="d-flex date">
+                                            <p>22 Nov,2021 at 10:00 PM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- mention content end -->
+                    </div>    
+                </div>
+                <!-- notification div closed -->
+            <!-- helpsupport div start -->
+            <div class="helpsupport_div">
+                <div class="col-md-12 d-flex justify-content-start">
+                    <h1>Help</h1>
+                </div>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                          <div class="grid">
+                              <div class="grid1 mr-13">
+                                  <img src="icons/help/Pmconnect.svg" alt="">
+                              </div>
+                               <div class="grid2">
+                                   <h4>PM Connect Video Tutorials</h4>
+                                   <p>Tutorials, Guides, Live demos etc.</p>
+                               </div>
+                          </div>
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="my_body">
+                                <div class="grid">
+                                    <div class="grid1">
+                                        <img src="icons/help/tutorial.svg" alt="">
+                                        <p>tutorial</p>
+                                    </div>
+                                    <div class="grid2">
+                                        <img src="icons/help/video.svg" alt="">
+                                        <p>Guide</p>
+                                    </div>
+                                    <div class="grid3">
+                                        <img src="icons/help/livedemo.svg" alt="">
+                                        <p>Live Demo</p>
+                                    </div>
+                                    <div class="grid4">
+                                        <img src="icons/help/community.svg" alt="">
+                                        <p>community</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <div class="grid">
+                                <div class="grid1">
+                                    <img src="icons/help/FAQ.svg" alt="">
+                                </div>
+                                 <div class="grid2">
+                                     <h4>Frequestly Asked Questions (FAQ)</h4>
+                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                 </div>
+                            </div>
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="faq mt-3">
+                              <h4>What is the status</h4>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum expedita corrupti culpa hic in accusantium</p>
+                          </div>
+                          <div class="faq">
+                            <h4>What is the status</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum expedita corrupti culpa hic in accusantium</p>
+                        </div>
+                        <div class="faq">
+                            <h4>What is the status</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum expedita corrupti culpa hic in accusantium</p>
+                        </div>
+                        <div class="faq">
+                            <h4>What is the status</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum expedita corrupti culpa hic in accusantium</p>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <div class="grid">
+                                <div class="grid1">
+                                    <img src="icons/help/RaiseTicket.svg" alt="">
+                                </div>
+                                 <div class="grid2">
+                                     <h4>Raise the Ticket</h4>
+                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                 </div>
+                            </div>
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <form action="">
+                            <div class="col-md-12 mt-4 pt-2">
+                                <input type="text" placeholder="Your Question about ?">
+                            </div>
+                            <div class="col-md-12">
+                                <select name="" id="">
+                                    <option value="" selected disabled>Category</option>
+                                    <option value="">Option 1</option>
+                                    <option value="">Option 2</option>
+                                    <option value="">Option 3</option>
+                                    <option value="">Option 4</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="text" placeholder="Subject">
+                            </div>                
+                            <div class="col-md-12">
+                                <input type="textarea" name="" placeholder="Details">
+                            </div>                   
+                            <div class="d-flex justify-content-between bottom">
+                                <button class="btn upload">Upload the file</button>
+                                <button class="btn send">Send</button>
+                            </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <!-- helpsupport div end -->
+            <!-- search area start -->
+            <div class="search_div">
+                <div class="col-md-12 d-flex justify-content-start">
+                    <h1>Search</h1>
+                </div>
+                <div class="col-md-12">
+                    <input type="text" name="" placeholder="Search Everything">
+                </div>
+                <div class="col-md-12 search_con">
+                    <p>I am Looking For</p>
+                    <div class="btn-flex">
+                        <button class="btn">Files</button>
+                        <button class="btn">Updates</button>
+                        <button class="btn">Tag</button>
+                        <button class="btn">People</button>
+                    </div>
+                    <h5>Recent Searches</h5>
+                    <p class="grey">Lorem ipsum dolor sit amet</p>
+                    <p class="grey">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <!-- search area end -->
+            <nav>
+                <div class="div1">
+                    <h3>
+                        <div></div>
+                        <img class="d-none d-md-block" src="icons/logo.svg" alt="logo">
+                        <img class="d-block d-md-none" src="icons/HamburgerON.svg" width="38px" alt="">
+                    </h3>
+                    <ul>
+                        <li>
+                            <span class="tooltiptext">Dashboard</span>
+                            <a href="#" class="button1">
+                                <img src="icons/dashboard.svg" alt="Image one" width="38" class="button__img1">
+                                <img src="icons/dashboardwhite.svg" alt="Image two" class="button__img1">
+                            </a>
+                        </li>
+                        <li id="show_noti">
+                            <span class="tooltiptext">Notifications</span>
+                            <a href="#" class="button1">
+                                <img src="icons/Notification-Blue1.svg" alt="Image one" width="38"
+                                    class="button__img1">
+                                <img src="icons/notfiwhite.svg" alt="Image two" class="button__img1">
+                            </a>
+                        </li>
+                        <li class="active">
+                            <span class="tooltiptext">Request</span>
+                            <a href="mview-request.html" class="button1">
+                                <img src="icons/Request-Blue1.svg" alt="Image one" width="38" class="button__img1">
+                                <img src="icons/request-white.svg" alt="Image two" class="button__img1">
+                            </a>
+                        </li>
+                        <li>
+                            <span class="tooltiptext">Project</span>
+                            <a href="management-view-project-list.html" class="button1">
+                                <img src="icons/project.svg" alt="Image one" width="38" class="button__img1">
+                                <img src="icons/project-white.svg" alt="Image two" class="button__img1">
+                            </a>
+                        </li>
+                        <li>
+                            <span class="tooltiptext">View Progress</span>
+                            <a href="usertask.html" class="button1">
+                                <img src="icons/Viewprogress-Blue.svg" alt="Image one" width="38"
+                                    class="button__img1">
+                                <img src="icons/Progresslist-white.svg" alt="Image two" class="button__img1">
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <ul>
+                        <li>
+                            <span class="tooltiptext">Reports</span>
+                            <a href="#" class="button1">
+                                <img src="icons/Reports.svg" alt="Image one" width="38" class="button__img1">
+                                <img src="icons/reportwhite.svg" alt="Image two" class="button__img1">
+                            </a>
+                        </li>
+                        <li id="showSearch">
+                            <span class="tooltiptext">Search</span>
+                            <a href="#" class="button1">
+                                <img src="icons/search.svg" alt="Image one" width="38" class="button__img1">
+                                <img src="icons/searchwhite.svg" alt="Image two" class="button__img1">
+                            </a>
+                        </li>
+                        <li id="show_helpSupp">
+                            <span class="tooltiptext">Help & Support</span>
+                            <a href="#" class="button1">
+                                <img src="icons/help.svg" alt="Image one" width="38" class="button__img1">
+                                <img src="icons/helpwhite.svg" alt="Image two" class="button__img1">
+                            </a>
+                        </li>
+                        <li class="tooltip1">
+                            <p class="tooltiptext1">
+                                <span class="">S</span>
+                                <p class="tooltiptext tooltiptext1">
+                                    <a href="userprofile.html"><span class=""> My Profile</span></a>             
+                                    <br>
+                                    <a href="signIn.html" class=""> <span> Log Out </span> </a>
+                                    <button class="btn">
+                                        <img src="icons/" alt=""> Logout</button>
+                                </p>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
                 <!--mobile header  -->
                 <div class="mobile-menuhead">
                     <div class="hamberger-menu">
@@ -624,20 +1237,19 @@
                     <div class="row">
                         <div class="top_up">
                             <ul>
-                                <li class="active active1" data-target=".list">
+                                <li class="active1" data-target=".list">
                                     <!-- <i class="material-icons">format_align_left</i> -->
                                     <img src="icons/list-blue.svg" class="img1" alt="">
                                     <img src="icons/list.svg" class="img2" alt="">
                                     List
                                 </li>
-
                                 <li class="active1" data-target=".gantt">
                                     <!-- <i class="material-icons">subject</i>  -->
                                     <img src="icons/gantt-blue.svg" class="img1" alt="">
                                     <img src="icons/gntt.svg" class="img2" alt="">
                                     Gantt
                                 </li>
-                                <li class="active1" data-target=".calendar">
+                                <li class="active active1" data-target=".calendar">
                                     <!-- <i class="material-icons">calendar_today</i> -->
                                     <img src="icons/calender-blue.svg" class="img1" alt="">
                                     <img src="icons/calender.svg" class="img2" alt="">
@@ -809,7 +1421,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="list active tab_content">
+                    <div class="list tab_content">
                         <div class="project1">
                             <div class="projectcon1 mt-0 mb-0">
                                 <div class="child-border">
@@ -963,12 +1575,6 @@
                                                                 disabled>
                                                             <input type="color" value="#1CA9ED" text-target=".planned"
                                                                 disabled>
-                                                            <!-- <input type="color" value="#2D62ED" text-target=".future"
-disabled>
-<input type="color" value="#F2870C" text-target=".upnext"
-disabled>
-<input type="color" value="#034E03" text-target=".ready"
-disabled> -->
                                                             <p class="track" value="#F6BE75" text-target=".track">
                                                                 On Track
                                                             </p>
@@ -979,12 +1585,6 @@ disabled> -->
                                                                 Approved</p>
                                                             <p class="planned" value="#1CA9ED" text-target=".planned">
                                                                 Planned</p>
-                                                            <!-- <p class="future" value="#2D62ED" text-target=".future">Future
-Steps</p>
-<P class="upnext" value="#F2870C" text-target=".upnext">Up Next
-</P>
-<P class="ready" value="#034E03" text-target=".ready">Ready for
-review</P> -->
                                                         </div>
                                                         <div class="right_div">
                                                             <input type="color" value="#F5E33F" text-target=".hold"
@@ -1062,7 +1662,7 @@ review</P> -->
                                                     <table>
                                                         <tr>
                                                             <td class="divmile1 mysticky2">
-                                                                <span class="ms-3 me-4"></span>
+                                                                <span></span>
                                                                 <p>Milestone Name</p>
                                                             </td>
                                                             <td class="divmile2">
@@ -1101,10 +1701,10 @@ review</P> -->
                                                     <div class="row fixedMile">
                                                         <table>
                                                             <tr>
-                                                                <td class="divmile1 me-1 mysticky2">
-                                                                    <p class="ms-4 ps-2">Task Name</p>
+                                                                <td class="divmile1 mysticky2">
+                                                                    <p>Task Name</p>
                                                                 </td>
-                                                                <td class="divmile2 me-4">
+                                                                <td class="divmile2">
                                                                     <span class="ms-0 me-2"> <img src="icons/dropdown.svg" alt=""></span> <img src="icons/subitm.svg" alt="" id="addSubtask">
                                                                 </td>
                                                                 <td class="divmile3">
@@ -1136,7 +1736,7 @@ review</P> -->
                                                         <table>
                                                             <tr>
                                                                 <td class="divmile1 mysticky2">
-                                                                    <p class="ms-4 ps-2">SubTask</p>
+                                                                    <p>SubTask</p>
                                                                 </td>
                                                                 <td class="divmile2">
                                                                     
@@ -1165,8 +1765,8 @@ review</P> -->
                                                         </table>
                                                     </div>
                                                 </div>
-                                                <div class="Subtaskname_hide pb-2">
-                                                    <div class="task_name mb-0">
+                                                <div class="Subtaskname_hide">
+                                                    <div class="task_name">
                                                         <p>SubTask Name</p>
                                                         <button class="btn">Add</button>
                                                     </div>
@@ -1229,7 +1829,7 @@ review</P> -->
                                                                     value="Oct 20 - 25" />
                                                             </td>
                                                             <td class="divcon5 actualDate">
-                                                                <input type="text" id="picker2" value="Oct 20,2021">
+                                                                <input type="text" id="picker" value="Oct 20,2021">
                                                             </td>
                                                             <td class="divcon6 actualBudget">
                                                                 <p>AED 200</p>
@@ -1279,7 +1879,7 @@ review</P> -->
                                                                     value="Oct 20 - 25" />
                                                             </td>
                                                             <td class="divcon5 actualDate">
-                                                                <input type="text" id="picker2" value="Oct 20,2021">
+                                                                <input type="text" id="picker" value="Oct 20,2021">
                                                             </td>
                                                             <td class="divcon6 actualBudget">
                                                                 <p>AED 200</p>
@@ -1441,7 +2041,7 @@ review</P> -->
                                                                     value="Oct 20 - 25" />
                                                             </td>
                                                             <td class="divcon5 actualDate">
-                                                                <input type="text" id="picker4" value="Oct 20,2021">
+                                                                <input type="text" id="picker" value="Oct 20,2021">
                                                             </td>
                                                             <td class="divcon6 actualBudget">
                                                                 <p>AED 200</p>
@@ -1568,7 +2168,7 @@ review</P> -->
                                                                     value="Oct 20 - 25" />
                                                             </td>
                                                             <td class="divcon5 actualDate">
-                                                                <input type="text" id="picker5" value="Oct 20,2021">
+                                                                <input type="text" id="picker" value="Oct 20,2021">
                                                             </td>
                                                             <td class="divcon6 actualBudget">
                                                                 <p>AED 200</p>
@@ -1618,7 +2218,7 @@ review</P> -->
                                                                     value="Oct 20 - 25" />
                                                             </td>
                                                             <td class="divcon5 actualDate">
-                                                                <input type="text" id="picker6" value="Oct 20,2021">
+                                                                <input type="text" id="picker" value="Oct 20,2021">
                                                             </td>
                                                             <td class="divcon6 actualBudget">
                                                                 <p>AED 200</p>
@@ -1668,7 +2268,7 @@ review</P> -->
                                                                     value="Oct 20 - 25" />
                                                             </td>
                                                             <td class="divcon5 actualDate">
-                                                                <input type="text" id="picker7" value="Oct 20,2021">
+                                                                <input type="text" id="picker" value="Oct 20,2021">
                                                             </td>
                                                             <td class="divcon6 actualBudget">
                                                                 <p>AED 200</p>
@@ -1830,7 +2430,7 @@ review</P> -->
                                                                     value="Oct 20 - 25" />
                                                             </td>
                                                             <td class="divcon5 actualDate">
-                                                                <input type="text" id="picker8" value="Oct 20,2021">
+                                                                <input type="text" id="picker" value="Oct 20,2021">
                                                             </td>
                                                             <td class="divcon6 actualBudget">
                                                                 <p>AED 200</p>
@@ -1957,7 +2557,7 @@ review</P> -->
                                                                     value="Oct 20 - 25" />
                                                             </td>
                                                             <td class="divcon5 actualDate">
-                                                                <input type="text" id="picker9" value="Oct 20,2021">
+                                                                <input type="text" id="picker" value="Oct 20,2021">
                                                             </td>
                                                             <td class="divcon6 actualBudget">
                                                                 <p>AED 200</p>
@@ -2008,7 +2608,7 @@ review</P> -->
                                                                     value="Oct 20 - 25" />
                                                             </td>
                                                             <td class="divcon5 actualDate">
-                                                                <input type="text" id="picker10" value="Oct 20,2021">
+                                                                <input type="text" id="picker" value="Oct 20,2021">
                                                             </td>
                                                             <td class="divcon6 actualBudget">
                                                                 <p>AED 200</p>
@@ -2059,7 +2659,7 @@ review</P> -->
                                                                     value="Oct 20 - 25" />
                                                             </td>
                                                             <td class="divcon5 actualDate">
-                                                                <input type="text" id="picker11" value="Oct 20,2021">
+                                                                <input type="text" id="picker" value="Oct 20,2021">
                                                             </td>
                                                             <td class="divcon6 actualBudget">
                                                                 <p>AED 200</p>
@@ -2110,9 +2710,8 @@ review</P> -->
 
                         </div>
                     </div>
-
-                    
                     <!-- list closed -->
+                    <!-- gantt start -->
                     <div class="gantt tab_content">
 
                         <div class="mysticky h1fixed">
@@ -2564,7 +3163,8 @@ review</P> -->
                          </div>
                     </div>
                     <!-- gantt closed -->
-                    <div class="calendar tab_content">
+                    <!-- calender contents goes here -->
+                    <div class="calendar active tab_content">
                         <div class="mysticky h1fixed">
                             <div class="calender-title">
                                 <div class="custom-select" style="width:127px;">
@@ -2581,14 +3181,69 @@ review</P> -->
                                 </div>
                             </div>
                         </div>
-                        <!-- calender contents goes here -->
                         <div class="calender-content">
-                            im calender content
+                            <div class="col-md-12 d-flex justify-content-end cal_setting">
+                                <div class="d-flex">
+                                    <img src="icons/setting.svg" alt="">
+                                    <p>Settings</p>
+                                </div>
+                                <div class="d-flex">
+                                    <img src="icons/delet-grey.svg" alt="">
+                                    <p>Delete</p>
+                                </div>
+                                <div class="setting_div">
+                                    <div class="head_div">
+                                        <img src="icons/setting.svg" alt="">
+                                        <h4>Settings</p>
+                                    </div>
+                                    <div class="group">
+                                        <h5>Choose column's data to view</h5>
+                                        <div class="group-con">
+                                            <p>lionman</p>   
+                                        </div>
+                                    </div>
+                                    <div class="group">
+                                        <h5>Color by</h5>
+                                        <div class="group-con">
+                                            <p>lionman</p>   
+                                        </div>
+                                    </div>
+                                    <div class="group">
+                                        <h5>Additional settings</h5>
+                                        <div class="group-con">
+                                            <p>lionman</p>   
+                                        </div>
+                                    </div>
+                                    <div class="group">
+                                        <h5>Choose groups</h5>
+                                        <div class="group-con">
+                                            <p>lionman</p>   
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id='calendar'></div>
+                              <div style='clear:both'></div>
+                              <div class="status_indicator">
+                                  <div class="d-flex">
+                                      <div class="calstatus red">
+                                          <span></span>
+                                          <p>At Risk</p>
+                                      </div>
+                                      <div class="calstatus yellow">
+                                        <span></span>
+                                        <p>On Track</p>
+                                    </div>
+                                    <div class="calstatus green">
+                                        <span></span>
+                                        <p>Completed</p>
+                                    </div>
+                                  </div>
+                              </div>
                         </div>
                     </div>
                     <!-- calendar closed -->
-                   
-
+                    <!-- workload start -->
                     <div class="workload tab_content workload1">
                         <div class="mysticky h1fixed">
                             <div class="list-title">
@@ -3690,9 +4345,9 @@ review</P> -->
                                  </div>
                                
                                     <!--end dropdown result-->
+                            </div>
                         </div>
-                    </div>
-                    </div>
+                    </div>    
                     <!-- workload closed -->
                     <div class="kanban tab_content kanban1">
 
@@ -3742,33 +4397,10 @@ review</P> -->
 
                         <div class="container-fluid position-relative">
                             <div class="setting-header">
-
-
-                                <div class="pe-3 pe-md-4 me-4 pt-3 pb-3 float-end">
-                                
-
-                                        <div class="head11 ps-0">
-                                            <button class="btn p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <img src="icons/setting.svg" alt=""><span
-                                                class="text-secondary fs-5 ps-2">Setting</span>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <div class="dropdown">
-                                                    <div class="dropmain">
-                                                        <div class="droplist">
-                                                            <div class="column">
-                                                               <h5>setting contents</h5>
-        
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </ul>
-        
-                                        </div>
+                                <div class="pe-3 pe-md-5 me-4 pt-3 pb-3 float-end">
+                                    <img src="icons/setting.svg" alt=""><span
+                                        class="text-secondary fs-5 ps-2">Setting</span>
                                 </div>
-
-                               
                                 <!-- <br> -->
                             </div>
                         </div>
@@ -4102,29 +4734,93 @@ review</P> -->
     </section>
 
 
-   
+    <script>
+        var x, i, j, l, ll, selElmnt, a, b, c;
+        /*look for any elements with the class "custom-select":*/
+        x = document.getElementsByClassName("custom-select");
+        l = x.length;
+        for (i = 0; i < l; i++) {
+            selElmnt = x[i].getElementsByTagName("select")[0];
+            ll = selElmnt.length;
+            /*for each element, create a new DIV that will act as the selected item:*/
+            a = document.createElement("DIV");
+            a.setAttribute("class", "select-selected");
+            a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+            x[i].appendChild(a);
+            /*for each element, create a new DIV that will contain the option list:*/
+            b = document.createElement("DIV");
+            b.setAttribute("class", "select-items select-hide");
+            for (j = 1; j < ll; j++) {
+                /*for each option in the original select element,
+                create a new DIV that will act as an option item:*/
+                c = document.createElement("DIV");
+                c.innerHTML = selElmnt.options[j].innerHTML;
+                c.addEventListener("click", function (e) {
+                    /*when an item is clicked, update the original select box,
+                    and the selected item:*/
+                    var y, i, k, s, h, sl, yl;
+                    s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                    sl = s.length;
+                    h = this.parentNode.previousSibling;
+                    for (i = 0; i < sl; i++) {
+                        if (s.options[i].innerHTML == this.innerHTML) {
+                            s.selectedIndex = i;
+                            h.innerHTML = this.innerHTML;
+                            y = this.parentNode.getElementsByClassName("same-as-selected");
+                            yl = y.length;
+                            for (k = 0; k < yl; k++) {
+                                y[k].removeAttribute("class");
+                            }
+                            this.setAttribute("class", "same-as-selected");
+                            break;
+                        }
+                    }
+                    h.click();
+                });
+                b.appendChild(c);
+            }
+            x[i].appendChild(b);
+            a.addEventListener("click", function (e) {
+                /*when the select box is clicked, close any other select boxes,
+                and open/close the current select box:*/
+                e.stopPropagation();
+                closeAllSelect(this);
+                this.nextSibling.classList.toggle("select-hide");
+                this.classList.toggle("select-arrow-active");
+            });
+        }
 
-
-<!--ramya function-->
-<script>
-    function show() {
-      if(document.getElementById('benefits').style.display=='none') {
-        document.getElementById('benefits').style.display='block';
-        document.getElementById('tablehide').style.display='none';
-        document.getElementById('benefitsdrop').style.display='none';
-      }
-    }
-    function show1() {
-      if(document.getElementById('benefitsdrop').style.display=='none') {
-        document.getElementById('benefitsdrop').style.display='block';
-        document.getElementById('tablehide').style.display='none';
-        document.getElementById('benefits').style.display='none';
-      }
-    }
+        function closeAllSelect(elmnt) {
+            /*a function that will close all select boxes in the document,
+            except the current select box:*/
+            var x, y, i, xl, yl, arrNo = [];
+            x = document.getElementsByClassName("select-items");
+            y = document.getElementsByClassName("select-selected");
+            xl = x.length;
+            yl = y.length;
+            for (i = 0; i < yl; i++) {
+                if (elmnt == y[i]) {
+                    arrNo.push(i)
+                } else {
+                    y[i].classList.remove("select-arrow-active");
+                }
+            }
+            for (i = 0; i < xl; i++) {
+                if (arrNo.indexOf(i)) {
+                    x[i].classList.add("select-hide");
+                }
+            }
+        }
+        /*if the user clicks anywhere outside the select box,
+        then close all select boxes:*/
+        document.addEventListener("click", closeAllSelect);
     </script>
+
     <!--section closed-->
     <!-- custom js -->
-    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+    <script src='js/fullcalendar.js' type="text/javascript"></script>
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
@@ -4132,10 +4828,12 @@ review</P> -->
     <script src="js/jquery.datetimepicker.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="js/menuscript.js"></script>
     <script src="js/scriptfilter.js"></script>
 
     <!-- summer note -->
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    
 
     <!-- kanbanjs -->
     <script src="js/kanban.js"></script>
