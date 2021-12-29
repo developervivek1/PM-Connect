@@ -1144,7 +1144,7 @@ width: 100%;
 .manage_view .div3 .form_div form select
 {
 height: 40px;
-width: 90%;
+width: 92%;
 background-color: #fff;
 border: 0.4000000059604645px solid #dedede;
 border-radius: 5px;
@@ -1641,6 +1641,30 @@ line-height: 26px;
   top: 30px;
   left: 156px;
 }
+.manage_view .div3 .form_div .con5 .upload_box
+{
+  width: 92%;
+  height: 120px;
+  background-color: #fff;
+  border: 0.4000000059604645px solid #dedede;
+  border-radius: 5px;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  box-shadow: 0 0px 3px 0 rgb(0 0 0 / 3%);
+  padding: 2rem 1.8rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.manage_view .div3 .form_div .con5 .upload_box .draw,
+.manage_view .div3 .form_div .con5 .upload_box .upload 
+{
+  cursor: pointer;
+}
+.manage_view .div3 .form_div .con5 .upload_box .draw p,
+.manage_view .div3 .form_div .con5 .upload_box .upload p
+{
+  color: #91939B;
+}
 
 /* management project filter */
 /* management project filter */
@@ -1897,9 +1921,6 @@ opacity: 1;
 .proj_filter .divfilter2 .kanban
 {
 margin-top: 15.5rem;
-}
-.kanban1{
-margin-top: 12rem !important;
 }
 .proj_filter .divfilter2 .top_up2 .filter_div .row
 {
@@ -3880,7 +3901,7 @@ background: none !important;
 }
 .manage_view .div3 .form_div form textarea[type="textarea"]{
 height: 120px;
-width: 95%;
+width: 92%;
 background-color: #fff;
 border: 0.4000000059604645px solid #dedede;
 border-radius: 5px;
