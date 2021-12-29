@@ -134,9 +134,7 @@ html .fc,
 .fc-widget-header{
     border-bottom: 1px solid #EEE;
 }
-.fc-state-highlight { /* <td> today cell */ /* TODO: add .fc-today to <th> */
-	/* background: #fcf8e3; */
-}
+
 
 .fc-state-highlight > div > div.fc-day-number{
     background-color: #2D62ED;
@@ -892,6 +890,7 @@ border-radius: 5px;
 .cal_setting .d-flex:nth-child(2)
 {
 	margin-right: 2rem;
+	cursor: pointer;
 }
 .cal_setting .d-flex:first-child img
 {
