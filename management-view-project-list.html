@@ -29,7 +29,79 @@
     <!-- full calender -->
     <title>Management View Project Filter</title>
 </head>
+<style>
+                                            .form-group1 .selected {
+                                                border: 1px solid #70707026;
+                                                /* background: #2f3640; */
+                                                border-radius: 3px;
+                                                margin-bottom: 0px;
+                                                color: #616264;
+                                                position: relative;
+                                                font-weight: 400;
+                                                font-size: 1.5rem;
+                                                padding-top: 2px;
+                                                padding-bottom: 2px;
+                                                padding-left: 10px;
 
+                                            }
+
+                                            .form-group1 .selected::after {
+                                                top: 0px;
+                                                right: 5px;
+                                            }
+                                           .form-group1 .select-box .options-container.active + .selected::after {
+                                                    transform: rotateX(
+                                                180deg);
+                                                    top: -3px;
+                                                }
+                                               .form-group1 .select-box .options-container {
+                                                        top: 24px;
+                                                        z-index: 4;
+                                                        
+                                                }
+                                            .form-group1 .search-box input {
+                                                border: 8px solid #fff;
+                                            }
+
+                                            .circle{
+                               
+                               text-align: center;
+                                width: 23px;
+                                height: 23px;
+                               color: white;
+                               border-radius: 50px;
+                               background: rgb(100, 121, 241);
+                           }
+                           .popsearch{
+                               width: 150px;
+                               z-index: 9;
+                           }
+
+                           .form-group1:hover .popsearch{
+                               display: block !important;
+
+                           }
+                           .form-group1 .popsearch{
+                               display: none;
+
+                           }
+                           .text-name{
+
+                               font-size: 13px;
+                                   margin-top: 3px;
+                               }
+
+                           .form-group1  .justify-content-between:hover{
+                               background: lightblue;
+                               cursor: pointer;
+
+                           }
+                           .form-group1  .justify-content-between{
+                              margin-top: 10px;
+                           }
+                                               
+
+</style>
 <body>
     <section class="manage_view proj_filter">
         <div class="container-fluid">
@@ -2815,9 +2887,7 @@ review</P> -->
                                                      
                                                     </div>
 
-                                                    <style>
-                             
-                                                    </style>
+                                                  
                                                 <div class="milestonediv1">
                                                 
                                                     <div class="float-end gantpr22 progress-bar rounded-1 milestonediv11  gantpr fs-4 onhover"><span>Milestone1</span></div>
@@ -3265,45 +3335,7 @@ review</P> -->
                     
                         </div>
 
-                        <style>
-                            .circle{
-                               
-                                text-align: center;
-                                 width: 23px;
-                                 height: 23px;
-                                color: white;
-                                border-radius: 50px;
-                                background: rgb(100, 121, 241);
-                            }
-                            .popsearch{
-                                width: 150px;
-                                z-index: 9;
-                            }
-
-                            .form-group1:hover .popsearch{
-                                display: block !important;
-
-                            }
-                            .form-group1 .popsearch{
-                                display: none;
-
-                            }
-                            .text-name{
-
-                                font-size: 13px;
-                                    margin-top: 3px;
-                                }
-
-                            .form-group1  .justify-content-between:hover{
-                                background: lightblue;
-                                cursor: pointer;
-
-                            }
-                            .form-group1  .justify-content-between{
-                               margin-top: 10px;
-                            }
-                                         
-                        </style>
+                      
                     
                         <div class="row workloadrow" >
                             <div class="col-md-6">
@@ -3311,7 +3343,7 @@ review</P> -->
                                 <div class="row m-0">
                                     <div class="col-md-6 col-6">
                                        <div class="form-group form-group1 position-relative">
-                                        <input type="text" placeholder="Search Resource" name="search" class="lochsr1"  >
+                                        <input type="text" placeholder="Search Resource" class="lochsr1"  >
                                      <div class="shadow popsearch position-absolute bg-white">
                                         <div class="d-flex justify-content-between pt-2 mt-4  pb-2 ps-5 pe-5" onclick=show()>
                                             <div class="circle"> <span class="text-name">J</span></div>
@@ -3362,42 +3394,7 @@ review</P> -->
                                             <option>Project2</option>
                                         </select> -->
 
-                                        <style>
-                                            .form-group1 .selected {
-                                                border: 1px solid #70707026;
-                                                /* background: #2f3640; */
-                                                border-radius: 3px;
-                                                margin-bottom: 0px;
-                                                color: #616264;
-                                                position: relative;
-                                                font-weight: 400;
-                                                font-size: 1.5rem;
-                                                padding-top: 2px;
-                                                padding-bottom: 2px;
-                                                padding-left: 10px;
-
-                                            }
-
-                                            .form-group1 .selected::after {
-                                                top: 0px;
-                                                right: 5px;
-                                            }
-                                           .form-group1 .select-box .options-container.active + .selected::after {
-                                                    transform: rotateX(
-                                                180deg);
-                                                    top: -3px;
-                                                }
-                                               .form-group1 .select-box .options-container {
-                                                        top: 24px;
-                                                        z-index: 4;
-                                                        
-                                                }
-                                            .form-group1 .search-box input {
-                                                border: 8px solid #fff;
-                                            }
-                                               
-
-                                        </style>
+                                      
                                         <div class="select-box">
                                             <div class="options-container bg-white position-absolute">
                                                 <div class="option" style="display: block;">
@@ -3418,7 +3415,7 @@ review</P> -->
                                                 </div>
                                             </div>
                                             <div class="selected">Projects</div>
-                                            <div class="search-box bg-white">
+                                            <div class="search-box bg-white z-index-3">
                                                 <input class="bg-white" type="text" placeholder="Project Name">
                                             </div>
                                         </div>
