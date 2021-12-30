@@ -3188,7 +3188,7 @@ margin: 0 0 0px 0;
 }
 .manage_view .div3 .form_div form input[type="password"],.manage_view .div3 .form_div form input[type="date"] {
 height: 40px;
-width: 90%;
+width: 92%;
 background-color: #fff;
 border: 0.4000000059604645px solid #dedede;
 border-radius: 5px;
@@ -3992,7 +3992,7 @@ background: none !important;
 }
 .manage_view .div3 .form_div form textarea[type="textarea"]{
 height: 120px;
-width: 92%;
+width: 96%;
 background-color: #fff;
 border: 0.4000000059604645px solid #dedede;
 border-radius: 5px;
@@ -4039,7 +4039,7 @@ right: 10px;
 .custom-select .box11
 {
     height: 42px;
-    width: 90%;
+    width: 92%;
     padding: 0 15px;
     font-size: 13px;
     outline: none;
