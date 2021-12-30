@@ -994,6 +994,9 @@ display: inline-block;
 line-height: 26px;
 text-transform: uppercase;
 }
+.manage_view .div1 .tooltip1 .tooltiptext1:nth-child(2) button {
+  display: none;
+}
 .manage_view .div2 .center_div
 {
 width: 100%;
@@ -1641,7 +1644,8 @@ line-height: 26px;
   top: 30px;
   left: 156px;
 }
-.manage_view .div3 .form_div .con5 .upload_box
+.manage_view .div3 .form_div .con5 .upload_box,
+.manage_view .div3 .form_div .con5 .upload_box2
 {
   width: 92%;
   height: 120px;
@@ -1650,20 +1654,107 @@ line-height: 26px;
   border-radius: 5px;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   box-shadow: 0 0px 3px 0 rgb(0 0 0 / 3%);
-  padding: 2rem 1.8rem;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  padding: 2rem 4.8rem;
+  text-align: center;
+  display: none;
+}
+.manage_view .div3 .form_div .con5 .upload_box.active,
+.manage_view .div3 .form_div .con5 .upload_box2.active
+{
+  display: block;
+  animation: fadeIn 0.2s ease-in;
 }
 .manage_view .div3 .form_div .con5 .upload_box .draw,
 .manage_view .div3 .form_div .con5 .upload_box .upload 
 {
   cursor: pointer;
 }
+.manage_view .div3 .form_div .con5 .upload_box .draw:hover p,
+.manage_view .div3 .form_div .con5 .upload_box .upload:hover p
+{
+  color: #2762ed;
+} 
+.manage_view .div3 .form_div .con5 .upload_box .draw:hover p::before
+{
+  content: url(../icons/draw_blue.svg);
+} 
+.manage_view .div3 .form_div .con5 .upload_box .upload:hover p::before
+{
+  content: url(../icons/upload_blue.svg);
+} 
 .manage_view .div3 .form_div .con5 .upload_box .draw p,
 .manage_view .div3 .form_div .con5 .upload_box .upload p
 {
   color: #91939B;
+  position: relative;
+}
+.manage_view .div3 .form_div .con5 .upload_box .draw p::before,
+.manage_view .div3 .form_div .con5 .upload_box .upload p::before
+{
+  content: url(../icons/Draw_Grey.svg);
+  position: absolute;
+  top: 2px;
+  transform: translateX(-190%);
+}
+.manage_view .div3 .form_div .con5 .upload_box .upload p::before
+{
+  content: url(../icons/upload_Grey.svg);
+}
+.manage_view .div3 .form_div .con5 .upload_box2 {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem 1.8rem;
+}
+.manage_view .div3 .form_div .con5 .upload_box2 canvas
+{
+  width: 100%;
+  height: 60px;
+}
+.manage_view .div3 .form_div .con5 .upload_box2 .color_div div
+{
+  width: 14px;
+  height: 14px;
+  border-radius: 30px;
+  margin-right: 0.6rem;
+}
+.manage_view .div3 .form_div .con5 .upload_box2 .color_div .blue
+{
+  background-color: #2D62ED;
+}
+.manage_view .div3 .form_div .con5 .upload_box2 .color_div .yellow
+{
+  background-color: #F6BE75;
+}
+.manage_view .div3 .form_div .con5 .upload_box2 .color_div .sky
+{
+  background-color: #1CA9ED;
+}
+.manage_view .div3 .form_div .con5 .upload_box2 .color_div .red
+{
+  background-color: #E2445B;
+}
+.manage_view .div3 .form_div .con5 .upload_box2 .color_div .black
+{
+  background-color: #211F1F;
+}
+.manage_view .div3 .form_div .con5 .upload_box2 .save_div button:nth-child(1)
+{
+  margin-right: 1rem;
+}
+.manage_view .div3 .form_div .con5 .upload_box2 .save_div
+{
+  display: flex;
+  align-items: flex-start;
+}
+.manage_view .div3 .form_div .con5 .upload_box2 .save_div button
+{
+  font-size: 1.4rem;
+  color: #91939B;
+  font-weight: 500;
+}
+.manage_view .div3 .form_div .con5 .upload_box2 .save_div button:hover
+{
+  color: #2762ed;
 }
 
 /* management project filter */

@@ -9,8 +9,8 @@ background: #F2F5F8;
     background: white;
 }
 .manage_view .div1 {
-    flex: 0 0 70%;
-    max-width: 70%;
+    flex: 0 0 75%;
+    max-width: 75%;
     padding: 2.5vw 5.3vw;
     width: 300px;
     height: 100vh;
@@ -52,6 +52,8 @@ background: #F2F5F8;
 .manage_view .div1 .tooltip1 .tooltiptext1:nth-child(2)
 {
     background-color: transparent;
+    display: flex;
+    align-items: center;
 }
 .manage_view .div1 .tooltip1 .tooltiptext1:nth-child(2) a:nth-child(3)
 {
@@ -64,6 +66,24 @@ background: #F2F5F8;
 .manage_view .div1 .tooltip1 .tooltiptext1:nth-child(2) a:nth-child(1) span
 {
     color: #000;
+}
+.manage_view .div1 .tooltip1 .tooltiptext1:nth-child(2) button
+{
+    display: none;
+    border-radius: 6px;
+    border: 1px solid #2762ed;
+    padding: 0.65rem 0.7rem;
+    font-size: 1.2rem;
+    margin-left: 3.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    letter-spacing: -0.1px;
+}
+.manage_view .div1 .tooltip1 .tooltiptext1:nth-child(2) button img
+{
+    width: 15px;
+    margin-right: 1.6rem;
 }
 
 /* .manage_view .div1 h3 img {
@@ -284,7 +304,7 @@ padding: 15px 0;
 .proj_filter .divfilter2 .workload,
 .proj_filter .divfilter2 .kanban
 {
-margin-top: 22.5rem;
+margin-top: 21.5rem;
 }
 .proj_filter .divfilter2 .project1 .row
 {
