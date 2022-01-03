@@ -3475,7 +3475,7 @@ color: #999999;
 /* dashboard */
 .div-dashboard{
 padding-left: 8vw;
-padding-right: 0vw;
+/* padding-right: 0vw; */
 background-color: #F8F9FB;
 width: 100%;
 }
