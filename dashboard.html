@@ -695,11 +695,56 @@
                         </div>
                         <div class="col-md-6 col-6 d-flex justify-content-end">
                             <div class="div-titleright">
-                                <img src="icons/aprrover1.svg" alt=""> Mary Joseph <img src="img/arrow-down.png" alt=""
-                                    width="10px">
-
+                              <style media="screen">
+                                .img_profile{
+                                  margin-right: 10px;
+                                }
+                                .select-box__input:checked + .select-box__input-text {
+                                      border: 0px solid #FFFFFF;
+                                  }
+                                  .select-box__input-text {
+                                      background-color: #fff0;
+                                  }
+                                  .select-box__list {
+                                        top: 55px;
+                                      }
+                              </style>
+                              <div class="select-box">
+                                    <div class="select-box__current" tabindex="1">
+                                      <div class="select-box__value">
+                                        <input class="select-box__input" type="radio" id="0" value="1" name="user_profile_list" checked="checked"/ >
+                                        <p class="select-box__input-text" ><img src="icons/aprrover1.svg" alt="" class="img_profile">Mary Joseph</p>
+                                      </div>
+                                      <div class="select-box__value">
+                                        <input class="select-box__input" type="radio" id="1" value="2" name="user_profile_list"/>
+                                        <p class="select-box__input-text"><img src="icons/aprrovwe2.svg" alt="" class="img_profile">User 2</p>
+                                      </div>
+                                      <div class="select-box__value">
+                                        <input class="select-box__input" type="radio" id="2" value="3" name="user_profile_list"/>
+                                        <p class="select-box__input-text"><img src="icons/approver 3.svg" alt="" class="img_profile">User 3</p>
+                                      </div>
+                                      <img class="select-box__icon" src="icons/arrow_new.svg" alt="Arrow Icon" aria-hidden="true"/>
+                                    </div>
+                                    <ul class="select-box__list">
+                                      <li>
+                                        <label class="select-box__option" for="0" aria-hidden="aria-hidden"><img src="icons/aprrover1.svg" alt="" class="img_profile">Mary Joseph </label>
+                                      </li>
+                                      <li>
+                                        <label class="select-box__option" for="1" aria-hidden="aria-hidden"><img src="icons/aprrovwe2.svg" alt="" class="img_profile">User 2</label>
+                                      </li>
+                                      <li>
+                                        <label class="select-box__option" for="2" aria-hidden="aria-hidden"><img src="icons/approver 3.svg" alt="" class="img_profile">User 3</label>
+                                      </li>
+                                    </ul>
+                                    </div>
                             </div>
                         </div>
+
+
+
+
+
+
                     </div>
 
                     <style>
@@ -939,6 +984,16 @@
                                             width: 221%;
                                         }
 
+                                        .div-dashboard {
+                                         margin-top: 5rem;
+                                         padding-left: 4vw;
+                                        }
+
+                                        .manage_view .div1 ul:nth-child(3) {
+                                            bottom: 8% !important;
+
+                                        }
+
 
                                }
                         /*endramya30dec21*/
@@ -1011,6 +1066,14 @@
                                     .recent-task table th:first-child , .recent-task table td:first-child{
                                         padding: 8px 0px;
                                         
+                                    }
+
+                                    .pending-task table th:last-child , .pending-task table td:last-child{
+                                        text-align: center;
+                                        
+                                    }
+                                    .pending-task table th:last-child{
+                                        text-align: end;
                                     }
 
                                     .pending-task table th , .pending-task table td{
@@ -1341,36 +1404,36 @@
                                             </thead>
                                            <tbody>
                                                <tr>
-                                                <td>Task 001 <img src="icons/right_aero.svg" class="mb-2" alt=""></td>
+                                                <td>Task 001 <img src="icons/right_aero.svg" class="mb-2 ms-4" alt=""></td>
                                                 <td><div class="onorange me-5">On Track</div></td>
                                                 <td class="ms-5"><img src="icons/aprrover1.svg" alt=""> <img src="icons/aprrover1.svg" alt=""></td>
                                                </tr>
                                               <tr>
-                                                <td>Task 002 <img src="icons/right_aero.svg" class="mb-2" alt=""></td>
+                                                <td>Task 002 <img src="icons/right_aero.svg" class="mb-2 ms-4" alt=""></td>
                                                 <td><div class="onorange">On Track</div></td>
                                                 <td><img src="icons/aprrover1.svg" alt=""> <img src="icons/aprrover1.svg" alt=""></td>
                                                </tr>
 
                                                <tr>
-                                                   <th>Project Name</th>
+                                                   <th class="text-start">Project Name</th>
                                                </tr>
                                                <tr>
-                                                <td>Task 001 <img src="icons/right_aero.svg" class="mb-2" alt=""></td>
+                                                <td>Task 001 <img src="icons/right_aero.svg" class="mb-2 ms-4" alt=""></td>
                                                 <td><div class="onorange">On Track</div></td>
                                                 <td><img src="icons/aprrover1.svg" alt=""> <img src="icons/aprrover1.svg" alt=""></td>
                                                </tr>
                                                <tr>
-                                                <td>Task 002 <img src="icons/right_aero.svg" class="mb-2" alt=""></td>
+                                                <td>Task 002 <img src="icons/right_aero.svg" class="mb-2 ms-4" alt=""></td>
                                                 <td><div class="onorange ">On Track</div></td>
                                                 <td><img src="icons/aprrover1.svg" alt=""> <img src="icons/aprrover1.svg" alt=""></td>
                                                </tr>
                                                <tr>
-                                                <td>Task 003 <img src="icons/right_aero.svg" class="mb-2" alt=""></td>
+                                                <td>Task 003 <img src="icons/right_aero.svg" class="mb-2 ms-4" alt=""></td>
                                                 <td><div class="onorange onhold">On Track</div></td>
                                                 <td><img src="icons/aprrover1.svg" alt=""> <img src="icons/aprrover1.svg" alt=""></td>
                                                </tr>
                                                <tr>
-                                                <td>Task 004 <img src="icons/right_aero.svg" class="mb-2" alt=""></td>
+                                                <td>Task 004 <img src="icons/right_aero.svg" class="mb-2 ms-4" alt=""></td>
                                                 <td><div class="onorange onhold">On Track</div></td>
                                                 <td><img src="icons/aprrover1.svg" alt=""> <img src="icons/aprrover1.svg" alt=""></td>
                                                </tr>
