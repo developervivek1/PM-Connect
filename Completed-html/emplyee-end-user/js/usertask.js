@@ -5,7 +5,7 @@ const nextPage= document.querySelector('.user .bottom_navigate .pagination #Arro
 const prevPage= document.querySelector('.user .bottom_navigate .pagination #ArrowDisable');
 const enabled= document.querySelector('.user .bottom_navigate .pagination .page-item.disabled');
 
-let p1,p2,p3,p4,p5,p6,status1,status2,newuserAdd=[],selectInput = 10,can_rem=0,can_div,can_divText,mulnum = 1, countPage=0,enableIcon;
+let p1,p2,p3,p4,p5,status1,status2,newuserAdd=[],selectInput = 10,can_rem=0,can_div,can_divText,mulnum = 1, countPage=0,enableIcon;
 
 const state=
 [
@@ -65,7 +65,6 @@ function cloneTask()
     p3 = document.querySelectorAll('.user_task .userdiv3 p');
     p4 = document.querySelectorAll('.user_task .userdiv4 p');
     p5 = document.querySelectorAll('.user_task .userdiv5 p');
-    p6 = document.querySelectorAll('.user_task .userdiv6 p');
     status1 = document.querySelectorAll('.user_task .userdiv7 div');
     status2 = document.querySelectorAll('.user_task .userdiv8 div');
 
@@ -134,7 +133,6 @@ function assignData()
         p3[i].innerHTML = p3[i].innerHTML;
         p4[i].innerHTML = p4[i].innerHTML;
         p5[i].innerHTML = p5[i].innerHTML;
-        p6[i].innerHTML = p6[i].innerHTML;
     }
 }
 assignData()

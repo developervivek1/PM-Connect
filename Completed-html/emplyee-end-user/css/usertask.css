@@ -42,7 +42,7 @@
     /* flex: 0 0 calc(100% /9);
     max-width: calc(100% /9); */
     width: inherit !important;
-    padding: 16px 15px;
+    padding: 6px 15px;
     border-top: 1px solid #ededed;
     border-left: 1px solid #ededed;
    
@@ -73,6 +73,9 @@
 {
     font-size: 13px;
     font-weight: 400;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 .user_task .userdiv1 p
 {
@@ -87,21 +90,9 @@
 {
     padding: 5px 15px;
 }
-/* .user_task .userdiv9 img
-{
-    margin-right: 1.6rem;
-} */
-
-.user_task .userdiv9 img:first-child{
-    padding-right: 1rem;
-    border-right: 1px solid rgb(201, 197, 197);
-}
-.user_task .userdiv9 img:last-child{
-    padding-left: 0.8rem;
-  
-}
 .user_task .userdiv7 .proj_status,
-.user_task .userdiv8 .proj_status
+.user_task .userdiv8 .proj_status,
+.user_task .userdiv9 .proj_status
 {
     width: 100%;
     height: 41.5px;
@@ -147,7 +138,11 @@
 {
     background-color: #FB5779;
 }
-
+.user_task .userdiv9 .proj_status.accepted
+{
+    background-color: #1FC875;
+    color: #fff;
+}
 .divfilter2 .bottom_navigate {
     overflow-x: hidden;
     position: fixed;
@@ -276,7 +271,6 @@
    
 
 }
-
 
 
 
