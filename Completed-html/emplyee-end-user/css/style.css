@@ -936,39 +936,13 @@ text-transform: capitalize !important;
 .tooltip1:hover .tooltiptext1 {
 visibility: visible;
 }
-/* .manage_view .div1 ul li:hover,
-.manage_view .div1 ul li.active
+.manage_view .div1 ul li img:first-child.active
 {
-background-color: #fff;
-} */
-.manage_view .div1 ul li:hover i,
-.manage_view .div1 ul li.active i
-{
-opacity: 1;
-color: #2D62ED;
-font-size: 24px;
+  display: block;
 }
-.manage_view .div1 ul li i
+.manage_view .div1 ul li img:last-child.deactive
 {
-color: #ffffff;
-opacity: 0.98;
-font-size: 22px;
-}
-.manage_view .div1 ul li i.fa-signal
-{
-font-size: 1.55rem;
-}
-.manage_view .div1 ul li:hover i.fa-signal
-{
-font-size: 1.7rem;
-}
-.manage_view .div1 ul li i.fa-chart-pie
-{
-font-size: 1.7rem;
-}
-.manage_view .div1 ul li:hover i.fa-chart-pie
-{
-font-size: 1.8rem;
+  display: none;
 }
 .manage_view .div1 ul:nth-child(3) li:last-child
 {
@@ -1882,7 +1856,7 @@ box-shadow: 0px 3px 14px #00000029;
 border: 1px solid #70707003;
 border-radius: 2px;
 padding: 20px 30px;
-z-index: 6;
+z-index: 10;
 }
 .proj_filter .divfilter2 .addview h3
 {
@@ -1953,7 +1927,8 @@ width: 100%;
 justify-content: flex-end;
 position: relative;
 }
-.proj_filter .myoverlay
+.proj_filter .myoverlay,
+.proj_filter .addview_overlay
 {
 position: fixed;
 width: 200%;
@@ -1962,10 +1937,15 @@ display: none;
 z-index: 4;
 overflow: hidden;
 }
-.proj_filter .myoverlay.active
+.proj_filter .myoverlay.active,
+.proj_filter .addview_overlay.active
 {
 display: block;
 background-color: transparent;
+}
+.proj_filter .addview_overlay
+{
+  z-index: 8;
 }
 .proj_filter .divfilter2 .top_up2 ul>li:nth-child(2).active
 {
@@ -2463,6 +2443,7 @@ margin-bottom: 0rem;
 {
 margin-right: 15px;
 margin-top: 2px;
+text-decoration: underline;
 }
 .proj_filter .divfilter2 .project1 .projmaincon .divcon1 span i
 {

@@ -6201,37 +6201,37 @@ $(document).ready(function() {
 
 		events: [
 			{
-				title: 'Project Name',
+				title: 'Task Name',
 		start: '2021-12-16T16:00:00',
 				className: 'track'
 			},
 
 	{
-				title: 'Project Name test',
+				title: 'Task Name test',
 		start: new Date(2022, 11, 10),
 				end: new Date(2022, 11, 10),
 				className: 'risk'
 			},
 	{
-				title: 'Project Name',
+				title: 'Task Name',
 		start: new Date(y, m, 18),
 				end: new Date(y, m, 18),
 				className: 'completed'
 			},
 	{
-				title: 'Project Name',
+				title: 'Task Name',
 		start: new Date(y, m, 23),
 				end: new Date(y, m, 23),
 				className: 'risk'
 			},
 	{
-				title: 'Project Name',
+				title: 'Task Name',
 		start: new Date(y, m, 26),
 				end: new Date(y, m, 26),
 				className: 'risk'
 			},
 	{
-		title: 'Project Name',
+		title: 'Task Name',
 		start: new Date(y, m, 30),
 		end: new Date(y, m, 30),
 		className: 'track'

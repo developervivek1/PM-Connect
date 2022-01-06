@@ -118,6 +118,7 @@
                 <!-- proj edit -->
                 <div class="proj_overlay"></div>
                 <div class="noti_overlay"></div>
+                <div class="addview_overlay"></div>
                 <div class="proj_edit">
                     <div class="row justify-content-between" style="height: 50px;">
                         <div class="col-md-3">
@@ -615,6 +616,7 @@
                 <!-- proj_add end -->
                 <div class="notification_div">
                     <div class="col-md-12 d-flex justify-content-start">
+                        <img src="icons/arrowright.svg" class="backArrow" alt="">
                         <h1>Notifications</h1>
                     </div>
                     <div class="nav_div">
@@ -1073,6 +1075,7 @@
             <!-- helpsupport div start -->
             <div class="helpsupport_div">
                 <div class="col-md-12 d-flex justify-content-start">
+                    <img src="icons/arrowright.svg" class="backArrow" alt="">
                     <h1>Help</h1>
                 </div>
                 <div class="accordion" id="accordionExample">
@@ -1197,6 +1200,7 @@
             <!-- search area start -->
             <div class="search_div">
                 <div class="col-md-12 d-flex justify-content-start">
+                    <img src="icons/arrowright.svg" class="backArrow" alt="">
                     <h1>Search</h1>
                 </div>
                 <div class="col-md-12">
@@ -1226,7 +1230,7 @@
                     <ul>
                         <li>
                             <span class="tooltiptext">Dashboard</span>
-                            <a href="#" class="button1">
+                            <a href="dashboard.html" class="button1">
                                 <img src="icons/dashboard.svg" alt="Image one" width="38" class="button__img1">
                                 <img src="icons/dashboardwhite.svg" alt="Image two" class="button__img1">
                             </a>
@@ -1239,18 +1243,11 @@
                                 <img src="icons/notfiwhite.svg" alt="Image two" class="button__img1">
                             </a>
                         </li>
-                        <li class="active">
-                            <span class="tooltiptext">Request</span>
-                            <a href="mview-request.html" class="button1">
-                                <img src="icons/Request-Blue1.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/request-white.svg" alt="Image two" class="button__img1">
-                            </a>
-                        </li>
                         <li>
                             <span class="tooltiptext">Project</span>
                             <a href="management-view-project-list.html" class="button1">
-                                <img src="icons/project.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/project-white.svg" alt="Image two" class="button__img1">
+                                <img src="icons/project.svg" alt="Image one" width="38" class="button__img1 active">
+                                <img src="icons/project-white.svg" alt="Image two" class="button__img1 deactive">
                             </a>
                         </li>
                         <li>
@@ -1506,11 +1503,9 @@
                                         <table>
                                             <tr>
                                                 <td class="head1 mysticky2">
-
                                                     <span><img src="icons/dropdown-1.svg" alt=""></span>
                                                     <span></span>
                                                     <h5>Research</h5>
-
                                                 </td>
                                                 <td class="head2 assignees">
                                                     <h5>Assignees</h5>
@@ -1518,17 +1513,8 @@
                                                 <td class="head3 subitems">
                                                     <h5>Subitems</h5>
                                                 </td>
-                                                <td class="head4 plannedDate">
-                                                    <h5>Planned Date</h5>
-                                                </td>
                                                 <td class="head5 actualDate">
-                                                    <h5>Actual Date</h5>
-                                                </td>
-                                                <td class="head6 actualBudget">
-                                                    <h5>Actual Budget</h5>
-                                                </td>
-                                                <td class="head7 plannedBudget">
-                                                    <h5>Planned Budget</h5>
+                                                    <h5>Date</h5>
                                                 </td>
                                                 <td class="head8 projectLead">
                                                     <h5>Project Lead</h5>
@@ -1539,56 +1525,8 @@
                                                 <td class="head10 status">
                                                     <h5>Status</h5>
                                                 </td>
-                                                <td class="head11 ps-0">
-                                                    <button class="btn p-0" type="button" data-bs-toggle="dropdown"
-                                                        aria-expanded="false">
-                                                        <img src="icons/plusinblue.svg" alt="">
-                                                    </button>
-                                                    <ul class="dropdown-menu">
-                                                        <div class="dropdown">
-                                                            <div class="dropmain">
-                                                                <div class="droplist">
-                                                                    <div class="column">
-                                                                        <a href="#" disable-data=".assignees"><img
-                                                                                src="./icons/Assigness.svg"
-                                                                                class="icons">Assignees</a>
-                                                                        <a href="#" disable-data=".subitems"><img
-                                                                                src="./icons/subitem.svg"
-                                                                                class="icons">Subitems</a>
-                                                                        <a href="#" disable-data=".plannedDate"><img
-                                                                                src="./icons/calender-blue.svg"
-                                                                                class="icons">Planned Date</a>
-                                                                        <a href="#" disable-data=".actualDate"><img
-                                                                                src="./icons/calender-blue.svg"
-                                                                                class="icons">Actual Date</a>
-                                                                        <a href="#" disable-data=".actualBudget"><img
-                                                                                src="./icons/actual budget.svg"
-                                                                                class="icons">Actual Budget</a>
-                                                                        <a href="#" disable-data=".plannedBudget"><img
-                                                                                src="./icons/actual budget.svg"
-                                                                                class="icons">Planned Budget</a>
-                                                                        <a href="#" disable-data=".projectLead"><img
-                                                                                src="./icons/user.svg"
-                                                                                class="icons">Project
-                                                                            Lead</a>
-                                                                        <a href="#" disable-data=".domainLead"><img
-                                                                                src="./icons/user.svg"
-                                                                                class="icons">Domain
-                                                                            Lead</a>
-                                                                        <a href="#" disable-data=".status"><img
-                                                                                src="./icons/status.svg" class="icons">
-                                                                            Status</a>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </ul>
-
-                                                </td>
                                             </tr>
                                         </table>
-
                                     </div>
                                     <div class="expand active" id="expand1">
                                         <div class="border-bottom mt-3">
@@ -1597,8 +1535,7 @@
                                                     <table>
                                                         <tr>
                                                             <td class="divcon1 mysticky2">
-                                                                <p>Project 01</p><span><img src="icons/conversation.svg"
-                                                                        alt=""></span>
+                                                                <p>Project 01</p>
                                                             </td>
                                                             <td class="divcon2 assignees">
                                                                 <div><img src="img/client1.jpg" alt=""></div>
@@ -1609,19 +1546,8 @@
                                                                 <span id="tree_open"><img src="icons/subitm.svg" alt="">
                                                                 </span><span class="ms-3 fs-4">1</span>
                                                             </td>
-                                                            <td class="divcon4 plannedDate">
-                                                                <input type="text" name="datefilter" id="rangePicker"
-                                                                    value="Oct 20 - 28" />
-                                                                <!-- <span>5 days</span> -->
-                                                            </td>
                                                             <td class="divcon5 actualDate">
                                                                 <input type="text" id="picker" value="Oct 20,2021">
-                                                            </td>
-                                                            <td class="divcon6 actualBudget">
-                                                                <p>AED 200</p>
-                                                            </td>
-                                                            <td class="divcon7 plannedBudget">
-                                                                <p>AED 100</p>
                                                             </td>
                                                             <td class="divcon8 projectLead">
                                                                 <div><img src="img/client1.jpg" alt=""></div>
@@ -1888,31 +1814,17 @@
                                                     <table>
                                                         <tr>
                                                             <td class="divcon1 mysticky2">
-                                                                <p>Project 01</p><span><img src="icons/conversation.svg"
-                                                                        alt=""></span>
+                                                                <p>Project 01</p>
                                                             </td>
                                                             <td class="divcon2 assignees">
                                                                 <div><img src="img/client1.jpg" alt=""></div>
                                                             </td>
                                                             <td class="divcon3 subitems">
-                                                                <span class="ms-0"> <img src="icons/dropdown.svg"
-                                                                        alt=""></span>
                                                                 <span class="ms-3"><img src="icons/subitm.svg"
                                                                         alt=""></span>
-
-                                                            </td>
-                                                            <td class="divcon4 plannedDate">
-                                                                <input type="text" name="datefilter" id="rangePicker"
-                                                                    value="Oct 20 - 25" />
                                                             </td>
                                                             <td class="divcon5 actualDate">
                                                                 <input type="text" id="picker" value="Oct 20,2021">
-                                                            </td>
-                                                            <td class="divcon6 actualBudget">
-                                                                <p>AED 200</p>
-                                                            </td>
-                                                            <td class="divcon7 plannedBudget">
-                                                                <p>AED 100</p>
                                                             </td>
                                                             <td class="divcon8 projectLead">
                                                                 <div><img src="img/client1.jpg" alt=""></div>
@@ -1938,31 +1850,17 @@
                                                     <table>
                                                         <tr>
                                                             <td class="divcon1 mysticky2">
-                                                                <p>Project 01</p><span><img src="icons/conversation.svg"
-                                                                        alt=""></span>
+                                                                <p>Project 01</p>
                                                             </td>
                                                             <td class="divcon2 assignees">
                                                                 <div><img src="img/client1.jpg" alt=""></div>
                                                             </td>
                                                             <td class="divcon3 subitems">
-                                                                <span class="ms-0"> <img src="icons/dropdown.svg"
-                                                                        alt=""></span>
                                                                 <span class="ms-3"><img src="icons/subitm.svg"
                                                                         alt=""></span>
-
-                                                            </td>
-                                                            <td class="divcon4 plannedDate">
-                                                                <input type="text" name="datefilter" id="rangePicker"
-                                                                    value="Oct 20 - 25" />
                                                             </td>
                                                             <td class="divcon5 actualDate">
                                                                 <input type="text" id="picker" value="Oct 20,2021">
-                                                            </td>
-                                                            <td class="divcon6 actualBudget">
-                                                                <p>AED 200</p>
-                                                            </td>
-                                                            <td class="divcon7 plannedBudget">
-                                                                <p>AED 100</p>
                                                             </td>
                                                             <td class="divcon8 projectLead">
                                                                 <div><img src="img/client1.jpg" alt=""></div>
@@ -1979,16 +1877,6 @@
                                                             </td>
                                                         </tr>
                                                     </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="border-bottom">
-                                            <div class="projmaincon">
-                                                <div class="row" id="con1fixed">
-                                                    <div class="last_div mysticky2">
-                                                        <span><i class="material-icons">add</i></span>
-                                                        <p>Add</p>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -2015,17 +1903,8 @@
                                                 <td class="head3 subitems">
                                                     <h5>Subitems</h5>
                                                 </td>
-                                                <td class="head4 plannedDate">
-                                                    <h5>Planned Date</h5>
-                                                </td>
                                                 <td class="head5 actualDate">
-                                                    <h5>Actual Date</h5>
-                                                </td>
-                                                <td class="head6 actualBudget">
-                                                    <h5>Actual Budget</h5>
-                                                </td>
-                                                <td class="head7 plannedBudget">
-                                                    <h5>Planned Budget</h5>
+                                                    <h5>Date</h5>
                                                 </td>
                                                 <td class="head8 projectLead">
                                                     <h5>Project Lead</h5>
@@ -2035,59 +1914,6 @@
                                                 </td>
                                                 <td class="head10 status">
                                                     <h5>Status</h5>
-                                                </td>
-                                                <td class="head11 ps-0">
-                                                    <button class="btn p-0" type="button" data-bs-toggle="dropdown"
-                                                        aria-expanded="false">
-                                                        <img src="icons/plusinblue.svg" alt="">
-                                                    </button>
-                                                    <ul class="dropdown-menu">
-                                                        <div class="dropdown">
-                                                            <div class="dropmain">
-                                                                <div class="droplist">
-                                                                    <div class="column">
-                                                                        <a href="#" disable-data=".assignees">
-                                                                            <img src="./icons/Assigness.svg"
-                                                                                class="icons">Assignees
-                                                                        </a>
-                                                                        <a href="#" disable-data=".subitems">
-                                                                            <img src="./icons/subitem.svg"
-                                                                                class="icons">Subitems
-                                                                        </a>
-                                                                        <a href="#" disable-data=".plannedDate">
-                                                                            <img src="./icons/calender-blue.svg"
-                                                                                class="icons">Planned Date
-                                                                        </a>
-                                                                        <a href="#" disable-data=".actualDate">
-                                                                            <img src="./icons/calender-blue.svg"
-                                                                                class="icons">
-                                                                            Actual Date</a>
-                                                                        <a href="#" disable-data=".actualBudget">
-                                                                            <img src="./icons/actual budget.svg"
-                                                                                class="icons">Actual Budget
-                                                                        </a>
-                                                                        <a href="#" disable-data=".plannedBudget">
-                                                                            <img src="./icons/actual budget.svg"
-                                                                                class="icons">Planned Budget
-                                                                        </a>
-                                                                        <a href="#" disable-data=".projectLead">
-                                                                            <img src="./icons/user.svg"
-                                                                                class="icons">Project
-                                                                            Lead
-                                                                        </a>
-                                                                        <a href="#" disable-data=".domainLead">
-                                                                            <img src="./icons/user.svg"
-                                                                                class="icons">Domain
-                                                                            Lead
-                                                                        </a>
-                                                                        <a href="#" disable-data=".status"><img
-                                                                                src="./icons/status.svg" class="icons">
-                                                                            Status</a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </ul>
                                                 </td>
                                             </tr>
                                         </table>
@@ -2099,32 +1925,18 @@
                                                     <table>
                                                         <tr>
                                                             <td class="divcon1 mysticky2">
-                                                                <p>Project 01</p><span><img src="icons/conversation.svg"
-                                                                        alt=""></span>
+                                                                <p>Project 01</p>
                                                             </td>
                                                             <td class="divcon2 assignees">
                                                                 <div><img src="img/client1.jpg" alt=""></div>
                                                                 <div><img src="img/client1.jpg" alt=""></div>
                                                             </td>
                                                             <td class="divcon3 subitems">
-                                                                <span class="ms-0"> <img src="icons/dropdown.svg"
-                                                                        alt=""></span>
-                                                                <span class="ms-3"><img src="icons/subitm.svg"
-                                                                        alt=""></span>
-
-                                                            </td>
-                                                            <td class="divcon4 plannedDate">
-                                                                <input type="text" name="datefilter" id="rangePicker"
-                                                                    value="Oct 20 - 25" />
+                                                                <span id="tree_open"><img src="icons/subitm.svg" alt="">
+                                                                </span><span class="ms-3 fs-4">1</span>
                                                             </td>
                                                             <td class="divcon5 actualDate">
                                                                 <input type="text" id="picker" value="Oct 20,2021">
-                                                            </td>
-                                                            <td class="divcon6 actualBudget">
-                                                                <p>AED 200</p>
-                                                            </td>
-                                                            <td class="divcon7 plannedBudget">
-                                                                <p>AED 100</p>
                                                             </td>
                                                             <td class="divcon8 projectLead">
                                                                 <div><img src="img/client1.jpg" alt=""></div>
@@ -2227,31 +2039,18 @@ review</P> -->
                                                     <table>
                                                         <tr>
                                                             <td class="divcon1 mysticky2">
-                                                                <p>Project 01</p><span><img src="icons/conversation.svg"
-                                                                        alt=""></span>
+                                                                <p>Project 01</p>
                                                             </td>
                                                             <td class="divcon2 assignees">
                                                                 <div><img src="img/client1.jpg" alt=""></div>
                                                             </td>
                                                             <td class="divcon3 subitems">
-                                                                <span class="ms-0"> <img src="icons/dropdown.svg"
-                                                                        alt=""></span>
                                                                 <span class="ms-3"><img src="icons/subitm.svg"
                                                                         alt=""></span>
 
                                                             </td>
-                                                            <td class="divcon4 plannedDate">
-                                                                <input type="text" name="datefilter" id="rangePicker"
-                                                                    value="Oct 20 - 25" />
-                                                            </td>
                                                             <td class="divcon5 actualDate">
                                                                 <input type="text" id="picker" value="Oct 20,2021">
-                                                            </td>
-                                                            <td class="divcon6 actualBudget">
-                                                                <p>AED 200</p>
-                                                            </td>
-                                                            <td class="divcon7 plannedBudget">
-                                                                <p>AED 100</p>
                                                             </td>
                                                             <td class="divcon8 projectLead">
                                                                 <div><img src="img/client1.jpg" alt=""></div>
@@ -2268,117 +2067,6 @@ review</P> -->
                                                             </td>
                                                         </tr>
                                                     </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="border-bottom">
-                                            <div class="projmaincon">
-                                                <div class="row" id="con1fixed">
-                                                    <table>
-                                                        <tr>
-                                                            <td class="divcon1 mysticky2">
-                                                                <p>Project 01</p><span><img src="icons/conversation.svg"
-                                                                        alt=""></span>
-                                                            </td>
-                                                            <td class="divcon2 assignees">
-                                                                <div><img src="img/client1.jpg" alt=""></div>
-                                                            </td>
-                                                            <td class="divcon3 subitems">
-                                                                <span class="ms-0"> <img src="icons/dropdown.svg"
-                                                                        alt=""></span>
-                                                                <span class="ms-3"><img src="icons/subitm.svg"
-                                                                        alt=""></span>
-
-                                                            </td>
-                                                            <td class="divcon4 plannedDate">
-                                                                <input type="text" name="datefilter" id="rangePicker"
-                                                                    value="Oct 20 - 25" />
-                                                            </td>
-                                                            <td class="divcon5 actualDate">
-                                                                <input type="text" id="picker" value="Oct 20,2021">
-                                                            </td>
-                                                            <td class="divcon6 actualBudget">
-                                                                <p>AED 200</p>
-                                                            </td>
-                                                            <td class="divcon7 plannedBudget">
-                                                                <p>AED 100</p>
-                                                            </td>
-                                                            <td class="divcon8 projectLead">
-                                                                <div><img src="img/client1.jpg" alt=""></div>
-                                                                <p>John</p>
-                                                            </td>
-                                                            <td class="divcon9 domainLead">
-                                                                <div><img src="img/client2.jpg" alt=""></div>
-                                                                <p>Smith</p>
-                                                            </td>
-                                                            <td class="divcon10 status">
-                                                                <div class="risk" colorval="#E2445B" textval="At Risk">
-                                                                    At Risk
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="border-bottom">
-                                            <div class="projmaincon">
-                                                <div class="row" id="con1fixed">
-                                                    <table>
-                                                        <tr>
-                                                            <td class="divcon1 mysticky2">
-                                                                <p>Project 01</p><span><img src="icons/conversation.svg"
-                                                                        alt=""></span>
-                                                            </td>
-                                                            <td class="divcon2 assignees">
-                                                                <div><img src="img/client1.jpg" alt=""></div>
-                                                            </td>
-                                                            <td class="divcon3 subitems">
-                                                                <span class="ms-0"> <img src="icons/dropdown.svg"
-                                                                        alt=""></span>
-                                                                <span class="ms-3"><img src="icons/subitm.svg"
-                                                                        alt=""></span>
-
-                                                            </td>
-                                                            <td class="divcon4 plannedDate">
-                                                                <input type="text" name="datefilter" id="rangePicker"
-                                                                    value="Oct 20 - 25" />
-                                                            </td>
-                                                            <td class="divcon5 actualDate">
-                                                                <input type="text" id="picker" value="Oct 20,2021">
-                                                            </td>
-                                                            <td class="divcon6 actualBudget">
-                                                                <p>AED 200</p>
-                                                            </td>
-                                                            <td class="divcon7 plannedBudget">
-                                                                <p>AED 100</p>
-                                                            </td>
-                                                            <td class="divcon8 projectLead">
-                                                                <div><img src="img/client1.jpg" alt=""></div>
-                                                                <p>John</p>
-                                                            </td>
-                                                            <td class="divcon9 domainLead">
-                                                                <div><img src="img/client2.jpg" alt=""></div>
-                                                                <p>Smith</p>
-                                                            </td>
-                                                            <td class="divcon10 status">
-                                                                <div class="approved" colorval="#1FC875"
-                                                                    textval="Approved">
-                                                                    Approved
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="border-bottom">
-                                            <div class="projmaincon">
-                                                <div class="row" id="con1fixed">
-                                                    <div class="last_div mysticky2">
-                                                        <span><i class="material-icons">add</i></span>
-                                                        <p>Add</p>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -2404,17 +2092,8 @@ review</P> -->
                                                 <td class="head3 subitems">
                                                     <h5>Subitems</h5>
                                                 </td>
-                                                <td class="head4 plannedDate">
-                                                    <h5>Planned Date</h5>
-                                                </td>
                                                 <td class="head5 actualDate">
                                                     <h5>Actual Date</h5>
-                                                </td>
-                                                <td class="head6 actualBudget">
-                                                    <h5>Actual Budget</h5>
-                                                </td>
-                                                <td class="head7 plannedBudget">
-                                                    <h5>Planned Budget</h5>
                                                 </td>
                                                 <td class="head8 projectLead">
                                                     <h5>Project Lead</h5>
@@ -2424,58 +2103,6 @@ review</P> -->
                                                 </td>
                                                 <td class="head10 status">
                                                     <h5>Status</h5>
-                                                </td>
-                                                <td class="head11 ps-0">
-                                                    <button class="btn p-0" type="button" data-bs-toggle="dropdown"
-                                                        aria-expanded="false">
-                                                        <img src="icons/plusinblue.svg" alt="">
-                                                    </button>
-                                                    <ul class="dropdown-menu">
-                                                        <div class="dropdown">
-                                                            <div class="dropmain">
-                                                                <div class="droplist">
-                                                                    <div class="column">
-                                                                        <a href="#" disable-data=".assignees">
-                                                                            <img src="./icons/Assigness.svg"
-                                                                                class="icons">Assignees
-                                                                        </a>
-                                                                        <a href="#" disable-data=".subitems">
-                                                                            <img src="icons/subitem.svg"
-                                                                                class="icons">Subitems
-                                                                        </a>
-                                                                        <a href="#" disable-data=".plannedDate">
-                                                                            <img src="./icons/calender-blue.svg"
-                                                                                class="icons">Planned Date
-                                                                        </a>
-                                                                        <a href="#" disable-data=".actualDate">
-                                                                            <img src="./icons/calender-blue.svg"
-                                                                                class="icons">
-                                                                            Actual Date</a>
-                                                                        <a href="#" disable-data=".actualBudget">
-                                                                            <img src="./icons/actual budget.svg"
-                                                                                class="icons">Actual Budget
-                                                                        </a>
-                                                                        <a href="#" disable-data=".plannedBudget">
-                                                                            <img src="./icons/actual budget.svg"
-                                                                                class="icons">Planned Budget
-                                                                        </a>
-                                                                        <a href="#" disable-data=".projectLead">
-                                                                            <img src="icons/user.svg"
-                                                                                class="icons">Project Lead
-                                                                        </a>
-                                                                        <a href="#" disable-data=".domainLead">
-                                                                            <img src="./icons/user.svg"
-                                                                                class="icons">Domain
-                                                                            Lead
-                                                                        </a>
-                                                                        <a href="#" disable-data=".status"><img
-                                                                                src="./icons/status.svg" class="icons">
-                                                                            Status</a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </ul>
                                                 </td>
                                             </tr>
                                         </table>
@@ -2487,8 +2114,7 @@ review</P> -->
                                                     <table>
                                                         <tr>
                                                             <td class="divcon1 mysticky2">
-                                                                <p>Project 01</p><span><img src="icons/conversation.svg"
-                                                                        alt=""></span>
+                                                                <p>Project 01</p>
                                                             </td>
                                                             <td class="divcon2 assignees">
                                                                 <div><img src="img/client1.jpg" alt=""></div>
@@ -2496,24 +2122,11 @@ review</P> -->
                                                                 <!-- <span><img src="icons/plus-1.svg" alt=""></span> -->
                                                             </td>
                                                             <td class="divcon3 subitems">
-                                                                <span class="ms-0"> <img src="icons/dropdown.svg"
-                                                                        alt=""></span>
-                                                                <span class="ms-3"><img src="icons/subitm.svg"
-                                                                        alt=""></span>
-
-                                                            </td>
-                                                            <td class="divcon4 plannedDate">
-                                                                <input type="text" name="datefilter" id="rangePicker"
-                                                                    value="Oct 20 - 25" />
+                                                                <span id="tree_open"><img src="icons/subitm.svg" alt="">
+                                                                </span><span class="ms-3 fs-4">1</span>
                                                             </td>
                                                             <td class="divcon5 actualDate">
                                                                 <input type="text" id="picker" value="Oct 20,2021">
-                                                            </td>
-                                                            <td class="divcon6 actualBudget">
-                                                                <p>AED 200</p>
-                                                            </td>
-                                                            <td class="divcon7 plannedBudget">
-                                                                <p>AED 100</p>
                                                             </td>
                                                             <td class="divcon8 projectLead">
                                                                 <div><img src="img/client1.jpg" alt=""></div>
@@ -2616,31 +2229,17 @@ review</P> -->
                                                     <table>
                                                         <tr>
                                                             <td class="divcon1 mysticky2">
-                                                                <p>Project 01</p><span><img src="icons/conversation.svg"
-                                                                        alt=""></span>
+                                                                <p>Project 01</p>
                                                             </td>
                                                             <td class="divcon2 assignees">
                                                                 <div><img src="img/client2.jpg" alt=""></div>
                                                             </td>
                                                             <td class="divcon3 subitems">
-                                                                <span class="ms-0"> <img src="icons/dropdown.svg"
-                                                                        alt=""></span>
                                                                 <span class="ms-3"><img src="icons/subitm.svg"
                                                                         alt=""></span>
-
-                                                            </td>
-                                                            <td class="divcon4 plannedDate">
-                                                                <input type="text" name="datefilter" id="rangePicker"
-                                                                    value="Oct 20 - 25" />
                                                             </td>
                                                             <td class="divcon5 actualDate">
                                                                 <input type="text" id="picker" value="Oct 20,2021">
-                                                            </td>
-                                                            <td class="divcon6 actualBudget">
-                                                                <p>AED 200</p>
-                                                            </td>
-                                                            <td class="divcon7 plannedBudget">
-                                                                <p>AED 100</p>
                                                             </td>
                                                             <td class="divcon8 projectLead">
                                                                 <div><img src="img/client1.jpg" alt=""></div>
@@ -2658,117 +2257,6 @@ review</P> -->
                                                             </td>
                                                         </tr>
                                                     </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="border-bottom">
-                                            <div class="projmaincon">
-                                                <div class="row">
-                                                    <table>
-                                                        <tr>
-                                                            <td class="divcon1 mysticky2">
-                                                                <p>Project 01</p><span><img src="icons/conversation.svg"
-                                                                        alt=""></span>
-                                                            </td>
-                                                            <td class="divcon2 assignees">
-                                                                <div><img src="img/client3.jpg" alt=""></div>
-                                                            </td>
-                                                            <td class="divcon3 subitems">
-                                                                <span class="ms-0"> <img src="icons/dropdown.svg"
-                                                                        alt=""></span>
-                                                                <span class="ms-3"><img src="icons/subitm.svg"
-                                                                        alt=""></span>
-
-                                                            </td>
-                                                            <td class="divcon4 plannedDate">
-                                                                <input type="text" name="datefilter" id="rangePicker"
-                                                                    value="Oct 20 - 25" />
-                                                            </td>
-                                                            <td class="divcon5 actualDate">
-                                                                <input type="text" id="picker" value="Oct 20,2021">
-                                                            </td>
-                                                            <td class="divcon6 actualBudget">
-                                                                <p>AED 200</p>
-                                                            </td>
-                                                            <td class="divcon7 plannedBudget">
-                                                                <p>AED 100</p>
-                                                            </td>
-                                                            <td class="divcon8 projectLead">
-                                                                <div><img src="img/client1.jpg" alt=""></div>
-                                                                <p>John</p>
-                                                            </td>
-                                                            <td class="divcon9 domainLead">
-                                                                <div><img src="img/client2.jpg" alt=""></div>
-                                                                <p>Smith</p>
-                                                            </td>
-                                                            <td class="divcon10 status">
-                                                                <div class="approved" colorval="#1FC875"
-                                                                    textval="Approved">
-                                                                    Approved
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="border-bottom">
-                                            <div class="projmaincon">
-                                                <div class="row">
-                                                    <table>
-                                                        <tr>
-                                                            <td class="divcon1 mysticky2">
-                                                                <p>Project 01</p><span><img src="icons/conversation.svg"
-                                                                        alt=""></span>
-                                                            </td>
-                                                            <td class="divcon2 assignees">
-                                                                <div><img src="img/client4.jpg" alt=""></div>
-                                                            </td>
-                                                            <td class="divcon3 subitems">
-                                                                <span class="ms-0"> <img src="icons/dropdown.svg"
-                                                                        alt=""></span>
-                                                                <span class="ms-3"><img src="icons/subitm.svg"
-                                                                        alt=""></span>
-
-                                                            </td>
-                                                            <td class="divcon4 plannedDate">
-                                                                <input type="text" name="datefilter" id="rangePicker"
-                                                                    value="Oct 20 - 25" />
-                                                            </td>
-                                                            <td class="divcon5 actualDate">
-                                                                <input type="text" id="picker" value="Oct 20,2021">
-                                                            </td>
-                                                            <td class="divcon6 actualBudget">
-                                                                <p>AED 200</p>
-                                                            </td>
-                                                            <td class="divcon7 plannedBudget">
-                                                                <p>AED 100</p>
-                                                            </td>
-                                                            <td class="divcon8 projectLead">
-                                                                <div><img src="img/client1.jpg" alt=""></div>
-                                                                <p>John</p>
-                                                            </td>
-                                                            <td class="divcon9 domainLead">
-                                                                <div><img src="img/client2.jpg" alt=""></div>
-                                                                <p>Smith</p>
-                                                            </td>
-                                                            <td class="divcon10 status">
-                                                                <div class="risk" colorval="#E2445B" textval="At Risk">
-                                                                    At risk
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="border-bottom">
-                                            <div class="projmaincon">
-                                                <div class="row">
-                                                    <div class="last_div mysticky2">
-                                                        <span><i class="material-icons">add</i></span>
-                                                        <p>Add</p>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -3701,19 +3189,21 @@ review</P> -->
 
                                              </div>
 
-                                             <div class="progress mt-5">
+                                             <div class="progress mt">
                                                 <div class="progress-bar progress-bar1 mr-5 progresstip" style="width:80%"></div>
                                                 <div class="hide4">
-                                                    <p>Wireframe : October 29 - October 31</p>
+                                                    <p>Project Name: 01</p>
+                                                    <p class="fs-5 text-primary">October 29 - October 31</p>
                                                     <p class="phide">Status : Work in Progress</p>
                                                     <p class="phide">Priority : Medium</p>
                                                     <p class="phide">Duration : 5 Days</p>
                                                 </div>
                                                   </div>
-                                                   <div class="progress mt-5">
+                                                   <div class="progress mt">
                                                 <div class="progress-bar progress-bar2 progresstip1" style="width:100%"></div>
                                                 <div class="hide5">
-                                                    <p>UI/UX design : October 29 - October 31</p>
+                                                    <p>Project Name: 01</p>
+                                                    <p class="fs-5 text-primary">October 29 - October 31</p>
                                                     <p class="phide">Status : Work in Progress</p>
                                                     <p class="phide">Priority : Medium</p>
                                                     <p class="phide">Duration : 5 Days</p>
@@ -3724,7 +3214,7 @@ review</P> -->
                                               </div>
 
 
-                                        <td class="text-center"><div><img src="img/client1.jpg" alt="" style="right:15px;">Jana</div></td>
+                                        <td class="text-center"><div><img src="img/client1.jpg" alt="" style="margin-right:15px;">Jana</div></td>
                                         <td> </td>
                                         <td>
                                          </td>
@@ -3760,46 +3250,16 @@ review</P> -->
                                         </tr>
                                         <tr>
                                             <td class="text-center dot"><div></div><span>Task 01</span></td>
-                                          </tr>
-                                          <tr>
+                                            <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+                                        
+                                        </tr>
+                                        <tr>
                                             <td class="text-center dot1"><div></div><span>Task 02</span></td>
+                                            <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+                                        
 
-                                          </tr>
-                                          <tr>
-
-
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            </tr>
+                                        </tr>
+                                         
                                             <tr class="borderbot">
                                                 <td></td>
                                                 <td></td>

@@ -1,3 +1,4 @@
+
 const showFilter = document.querySelector('.divfilter2 .top_up2 ul li:nth-child(2)');
 const filterdiv = document.querySelector('.divfilter2 .top_up2 .filter_div');
 const top_up = document.querySelector('.proj_filter .divfilter2 .top_up');
@@ -82,6 +83,7 @@ const open_SubtaskName =milestone4.querySelector('.addSubtask_hide');
 const open_SubtaskAdded =milestone4.querySelector('.Subtaskname_hide');
 const addedSubtask =milestone4.querySelector('.Subtask_added');
 const overlay =document.querySelector('.myoverlay');
+const addView_overlay =document.querySelector('.addview_overlay');
 let statusColor, statusText, textVal, value,pageYedit,h5con,adjacentNode,fixedValue1=121,fixedValue2=121,fixedValue3=121; 
 
 const ImageDisable=[{disSrc: 'icons/ColorImage/assignees_disab.png',enabSrc: 'icons/Assigness.svg'},
@@ -507,15 +509,17 @@ function hideFilterdiv(e) {
     if (e.target == overlay) {
         filterdiv.classList.remove('showfilter');
         showFilter.classList.remove('active');
-        mainul[mainul.length - 1].classList.remove('active');
-        divfilter.querySelector('.addview').classList.remove('active');
-        tabnum[0].classList.add('active');
-        mainul[0].classList.add('active');
         showEdit.forEach((showEdit) => {
             showEdit.classList.remove('active');
         });
         overlay.style.zIndex="6";
         overlay.classList.remove('active');
+    }
+    else if(e.target==addView_overlay)
+    {
+        mainul[mainul.length - 1].classList.remove('active');
+        divfilter.querySelector('.addview').classList.remove('active');
+        addView_overlay.classList.remove('active');
     }
     else if(e.target==topup2_overlay)
     {
@@ -934,13 +938,9 @@ function showTabCon(target, li) {
 }
 
 function showaddView(target, li) {
-    let removeactive = divfilter.querySelector('ul li.active');
-    let removeCon = removeactive.getAttribute('data-target');
-    removeactive.classList.remove('active');
-    divfilter.querySelector(removeCon).classList.add('active');
     li.classList.add('active');
     divfilter.querySelector(target).classList.add('active');
-    overlay.classList.add('active');
+    addView_overlay.classList.add('active');
 }
 
 // hide/show Main Table

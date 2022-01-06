@@ -65,6 +65,15 @@
     overflow: auto;
     width: 100%;
 }
+.notification_div > .col-md-12 img,
+.helpsupport_div > .col-md-12 img,
+.search_div > .col-md-12 img
+{
+    width: 19px;
+    height: auto;
+    margin-right: 1.6rem;
+    cursor: pointer;
+}
 .notification_div p,
 .search_div p
 {
@@ -480,7 +489,7 @@
     .notification_div,
     .helpsupport_div,
     .search_div {
-        top: 51px;
+        top: 0px;
         left: 0%;
         width: 100%;
         padding: 2.5rem 2rem;
@@ -611,5 +620,12 @@
     .search_div .search_con p.grey {
         font-size: 13px;
         margin-top: 0.8rem;
+    }
+}
+
+@media(min-width: 850px) and (max-width: 1282px)
+{
+    .notification_div, .helpsupport_div {
+        width: 68%;
     }
 }
