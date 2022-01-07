@@ -362,7 +362,4 @@ function sliceData(mulnum)
         addinRow.appendChild(data);
     })
 }
-
-$('.usertask').scroll(function() {
-    $(this).find('.stickytask').css('left', $(this).scrollLeft());
-});       
+     

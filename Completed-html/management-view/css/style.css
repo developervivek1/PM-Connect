@@ -936,6 +936,14 @@ text-transform: capitalize !important;
 .tooltip1:hover .tooltiptext1 {
 visibility: visible;
 }
+.manage_view .div1 ul li img:first-child.active
+{
+  display: block;
+}
+.manage_view .div1 ul li img:last-child.deactive
+{
+  display: none;
+}
 /* .manage_view .div1 ul li:hover,
 .manage_view .div1 ul li.active
 {
@@ -993,6 +1001,9 @@ font-size: 1.2rem;
 display: inline-block;
 line-height: 26px;
 text-transform: uppercase;
+}
+.manage_view .div1 .tooltip1 .tooltiptext1:nth-child(2) button {
+  display: none;
 }
 .manage_view .div2 .center_div
 {
@@ -1494,41 +1505,28 @@ line-height: 26px;
 .manage_view .div3 .form_div .feedback .feedback_appear 
 {
   padding: 15px 20px;
-  width: 400px;
+  width: 430px;
   background-color: #fff;
-  position: fixed;
+  position: absolute;
   z-index: 8;
-  top: 28%;
-  left: 45%;
+  top: 97px;
+  left: 2%;
   border-radius: 4px;
-  box-shadow: 0 0px 8px rgb(0 0 0 / 12%);
-  animation:feedbackUp 0.5s ease-in-out;
+  box-shadow: 0 0px 11px rgb(0 0 0 / 16%);
+  animation:feedbackDown 0.2s ease-in;
   display: none;
 }
 .manage_view .div3 .form_div .feedback .feedback_appear.active 
 {
    display: block;
-  animation:feedbackDown 0.5s ease-in-out;
+  animation:feedbackUp 0.2s ease-in;
 }
 @keyframes feedbackUp
 {
   0%
   {
-      opacity: 1;
-      margin-top: 0;
-  }
-  100%
-  {
-     opacity: 0;
-     margin-top: -20px;
-  }
-}
-@keyframes feedbackDown
-{
-  0%
-  {
       opacity: 0;
-      margin-top: -20px;
+      margin-top: 8px;
   }
   100%
   {
@@ -1536,13 +1534,29 @@ line-height: 26px;
      margin-top: 0px;
   }
 }
-.manage_view .div3 .form_div .feedback .feedback_appear input
+@keyframes feedbackDown
 {
-  height: 60px;
+  0%
+  {
+      opacity: 1;
+      margin-top: 0px;
+  }
+  100%
+  {
+     opacity: 0;
+     margin-top: 8px;
+  }
+}
+.manage_view .div3 .form_div .feedback .feedback_appear textarea
+{
+  max-height: 60px;
   margin: 1.1rem 0 1.5rem;
   width: 100%;
-  padding: 0px;
-  border: 1px solid rgba(0, 0, 0, .01);
+  font-size: 14px;
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, .05);
+  word-wrap: break-word;
+  outline: none;
 }
 .manage_view .div3 .form_div .feedback .close_feedback
 {
@@ -1641,7 +1655,8 @@ line-height: 26px;
   top: 30px;
   left: 156px;
 }
-.manage_view .div3 .form_div .con5 .upload_box
+.manage_view .div3 .form_div .con5 .upload_box,
+.manage_view .div3 .form_div .con5 .upload_box2
 {
   width: 92%;
   height: 120px;
@@ -1650,20 +1665,107 @@ line-height: 26px;
   border-radius: 5px;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   box-shadow: 0 0px 3px 0 rgb(0 0 0 / 3%);
-  padding: 2rem 1.8rem;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  padding: 2rem 4.8rem;
+  text-align: center;
+  display: none;
+}
+.manage_view .div3 .form_div .con5 .upload_box.active,
+.manage_view .div3 .form_div .con5 .upload_box2.active
+{
+  display: block;
+  animation: fadeIn 0.2s ease-in;
 }
 .manage_view .div3 .form_div .con5 .upload_box .draw,
 .manage_view .div3 .form_div .con5 .upload_box .upload 
 {
   cursor: pointer;
 }
+.manage_view .div3 .form_div .con5 .upload_box .draw:hover p,
+.manage_view .div3 .form_div .con5 .upload_box .upload:hover p
+{
+  color: #2762ed;
+} 
+.manage_view .div3 .form_div .con5 .upload_box .draw:hover p::before
+{
+  content: url(../icons/draw_blue.svg);
+} 
+.manage_view .div3 .form_div .con5 .upload_box .upload:hover p::before
+{
+  content: url(../icons/upload_blue.svg);
+} 
 .manage_view .div3 .form_div .con5 .upload_box .draw p,
 .manage_view .div3 .form_div .con5 .upload_box .upload p
 {
   color: #91939B;
+  position: relative;
+}
+.manage_view .div3 .form_div .con5 .upload_box .draw p::before,
+.manage_view .div3 .form_div .con5 .upload_box .upload p::before
+{
+  content: url(../icons/Draw_Grey.svg);
+  position: absolute;
+  top: 2px;
+  transform: translateX(-190%);
+}
+.manage_view .div3 .form_div .con5 .upload_box .upload p::before
+{
+  content: url(../icons/upload_Grey.svg);
+}
+.manage_view .div3 .form_div .con5 .upload_box2 {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem 1.8rem;
+}
+.manage_view .div3 .form_div .con5 .upload_box2 canvas
+{
+  width: 100%;
+  height: 60px;
+}
+.manage_view .div3 .form_div .con5 .upload_box2 .color_div div
+{
+  width: 14px;
+  height: 14px;
+  border-radius: 30px;
+  margin-right: 0.6rem;
+}
+.manage_view .div3 .form_div .con5 .upload_box2 .color_div .blue
+{
+  background-color: #2D62ED;
+}
+.manage_view .div3 .form_div .con5 .upload_box2 .color_div .yellow
+{
+  background-color: #F6BE75;
+}
+.manage_view .div3 .form_div .con5 .upload_box2 .color_div .sky
+{
+  background-color: #1CA9ED;
+}
+.manage_view .div3 .form_div .con5 .upload_box2 .color_div .red
+{
+  background-color: #E2445B;
+}
+.manage_view .div3 .form_div .con5 .upload_box2 .color_div .black
+{
+  background-color: #211F1F;
+}
+.manage_view .div3 .form_div .con5 .upload_box2 .save_div button:nth-child(1)
+{
+  margin-right: 1rem;
+}
+.manage_view .div3 .form_div .con5 .upload_box2 .save_div
+{
+  display: flex;
+  align-items: flex-start;
+}
+.manage_view .div3 .form_div .con5 .upload_box2 .save_div button
+{
+  font-size: 1.4rem;
+  color: #91939B;
+  font-weight: 500;
+}
+.manage_view .div3 .form_div .con5 .upload_box2 .save_div button:hover
+{
+  color: #2762ed;
 }
 
 /* management project filter */
@@ -1791,7 +1893,7 @@ box-shadow: 0px 3px 14px #00000029;
 border: 1px solid #70707003;
 border-radius: 2px;
 padding: 20px 30px;
-z-index: 6;
+z-index: 10;
 }
 .proj_filter .divfilter2 .addview h3
 {
@@ -1833,7 +1935,8 @@ font-weight: 600;
   background: #fff;
 }
 .proj_filter .divfilter2 .top_up2 .topup2_overlay,
-.proj_filter .divfilter2 .drop_overlay
+.proj_filter .divfilter2 .drop_overlay,
+.proj_filter .addview_overlay
 {
 position: fixed;
 left: 0;
@@ -1843,13 +1946,18 @@ display: none;
 z-index: 6;
 overflow: hidden;
 }
+.proj_filter .addview_overlay
+{
+  z-index: 8;
+}
 .proj_filter .divfilter2 .drop_overlay
 {
 height: 223%;
 z-index: 1;
 }
 .proj_filter .divfilter2 .top_up2 .topup2_overlay.active,
-.proj_filter .divfilter2 .drop_overlay.active
+.proj_filter .divfilter2 .drop_overlay.active,
+.proj_filter .addview_overlay.active
 {
 display: block;
 background-color: transparent;
@@ -3097,7 +3205,7 @@ margin: 0 0 0px 0;
 }
 .manage_view .div3 .form_div form input[type="password"],.manage_view .div3 .form_div form input[type="date"] {
 height: 40px;
-width: 90%;
+width: 92%;
 background-color: #fff;
 border: 0.4000000059604645px solid #dedede;
 border-radius: 5px;
@@ -3384,7 +3492,7 @@ color: #999999;
 /* dashboard */
 .div-dashboard{
 padding-left: 8vw;
-padding-right: 0vw;
+/* padding-right: 0vw; */
 background-color: #F8F9FB;
 width: 100%;
 }
@@ -3948,7 +4056,7 @@ right: 10px;
 .custom-select .box11
 {
     height: 42px;
-    width: 90%;
+    width: 92%;
     padding: 0 15px;
     font-size: 13px;
     outline: none;

@@ -9,11 +9,22 @@ const helpsuppDiv= document.querySelector('.helpsupport_div');
 const helpTrigger= document.querySelector('#show_helpSupp');
 const searchAny= document.querySelector('.search_div .col-md-12 > input');
 const searchCon= document.querySelector('.search_div .search_con');
+const backTrigger =document.querySelectorAll('.col-md-12 > .backArrow');
 const searchDiv2= document.querySelector('.search_div');
 const searchTrigger= document.querySelector('#showSearch');
 const logochange =document.querySelector('.div1 h3 img:nth-child(2)');
 const hamberChange =document.querySelector('.div1 h3 img:nth-child(3)');
+const linavActive = document.querySelectorAll('nav ul li');
 
+linavActive.forEach((liActive,ind)=>
+{
+    liActive.addEventListener('click',(e)=>
+    {
+        navIndex = ind;
+        e.target.closest('li').querySelector('img:first-child').classList.add('active');
+        e.target.closest('li').querySelector('img:last-child').classList.add('deactive');
+    })
+})
 mobileTrigger.addEventListener('click', () => {
     if (!mobileMenu.classList.contains('active')) {
         mobileMenu.classList.add('active');
@@ -40,6 +51,10 @@ function hideFilterdiv(e) {
         helpsuppDiv.classList.remove('active')
         searchDiv2.classList.remove('active');
         notiOverlay.classList.remove('active');
+        let img1 = linavActive[navIndex].querySelector('img:first-child');
+        let img2 = linavActive[navIndex].querySelector('img:last-child');
+        img1.classList.remove('active');
+        img2.classList.remove('deactive');
     }
 }
 
@@ -56,9 +71,8 @@ window.addEventListener('resize', () => {
     }
     else
     {
-        top_up.style.zIndex='6';
         logochange.src="./icons/logo.svg";
-        hamberChange.src="./icons/hambergerON.svg";
+        hamberChange.src="./icons/HamburgerON.svg";
     }
 })
 window.addEventListener('load',()=>
@@ -71,7 +85,7 @@ window.addEventListener('load',()=>
     else
     {
         logochange.src="./icons/logo.svg";
-        hamberChange.src="./icons/hambergerON.svg";
+        hamberChange.src="./icons/HamburgerON.svg";
     }
 })
 
@@ -137,4 +151,17 @@ searchAny.addEventListener('keyup',(e)=>
     {
         searchCon.classList.add('active');
     }
+})
+
+backTrigger.forEach((back)=>
+{
+    back.addEventListener('click',(e)=>
+    {
+        let img1 = linavActive[navIndex].querySelector('img:first-child');
+        let img2 = linavActive[navIndex].querySelector('img:last-child');
+        img1.classList.remove('active');
+        img2.classList.remove('deactive');
+        e.target.closest('.active').classList.remove('active');
+        notiOverlay.classList.remove('active');
+    })
 })
