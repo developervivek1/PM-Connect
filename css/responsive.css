@@ -905,6 +905,7 @@ background-color: #D8E2FC;
     max-width: 300px;
     top: 33%;
     left: 6%;
+    z-index: 3;
 }
 }
 

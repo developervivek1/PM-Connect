@@ -1,7 +1,7 @@
 const btnReq = document.querySelector('.mview_req .proj_approval .btn_div .btn.req');
 const showReq = document.querySelector('.mview_req .proj_approval .btn_div .reqinfo_popup');
-const searchInput = document.querySelector('.mview_req .proj_approval .btn_div .reqinfo_popup .search_div input');
-const searchInput2 = document.querySelector('.mview_req .proj_approval .btn_div .deleg_popup .search_div input');
+const searchInput = document.querySelector('.mview_req .proj_approval .btn_div .reqinfo_popup .projapp_search input');
+const searchInput2 = document.querySelector('.mview_req .proj_approval .btn_div .deleg_popup .projapp_search input');
 const contactName = document.querySelectorAll('.mview_req .proj_approval .btn_div .reqinfo_popup .pop_grid .pop_grid2 p');
 const contactName2 = document.querySelectorAll('.mview_req .proj_approval .btn_div .deleg_popup .pop_grid .pop_grid2 p');
 const btnDeleg = document.querySelector('.mview_req .proj_approval .btn_div .btn.deli');
@@ -9,6 +9,7 @@ const showDeleg = document.querySelector('.mview_req .proj_approval .btn_div .de
 const showContent = document.querySelectorAll('.proj_approval .proj_form .main_form .mainform_head');
 const allCon = document.querySelectorAll('.proj_approval .proj_form .main_form .con_pad');
 const root2 = document.querySelector(':root');
+const overlay = document.querySelector('.myoverlay');
 // const overlay = document.querySelector('.mview_req .myoverlay');
 
 btnReq.addEventListener('click', () => {

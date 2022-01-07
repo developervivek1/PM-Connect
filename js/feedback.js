@@ -7,10 +7,13 @@ const goback = document.querySelector('.manage_view .div3 .step_wise #goback');
 let firstChild = document.querySelectorAll('.manage_view .div2 .center_div ul li div:first-child');
 const stars = document.querySelectorAll('.feedback .star_div .material-icons');
 const feedbackTrigger = document.querySelectorAll('.feedback .star_div .chat');
-const showFeedback = document.querySelector('.feedback .feedback_appear');
-const closeFeedback = document.querySelector('.feedback .close_feedback');
+const starDiv = document.querySelector('.feedback .star_div');
+const closeFeedback = document.querySelectorAll('.feedback .close_feedback');
 const feed_overlay = document.querySelector('.m_bg .form_overlay');
+const preventForm = document.querySelector('.m_bg form');
+const textArea = document.querySelectorAll('.m_bg form .feedback_appear input');
 const showDraw = document.querySelectorAll('.form_div .con5 .upload_box .draw p');
+const clearDraw = document.querySelectorAll('.form_div .con5 .upload_box2 .save_div button:nth-child(2)');
 const colorDraw = document.querySelectorAll('.form_div .con5 .upload_box2 .color_div div');
 let canvas, ctx, flag = false, prevX = 0, currX = 0, prevY = 0, currY = 0, dot_flag = false;
 let x = "black", y = 2;
@@ -153,33 +156,48 @@ function showRating(e)
             }
             elem.classList.remove('yellow');
         }
-        
     })
 }
 
-feedbackTrigger.forEach((feedback)=>
+preventForm.addEventListener('keyup',(e)=>
 {
-    feedback.addEventListener('click',()=>
+    if(e.keycode===13)
     {
+        console.log('hello');
+        e.preventDefault();
+    }
+})
+feedbackTrigger.forEach((feedback,ind)=>
+{
+    feedback.addEventListener('click',function(e)
+    {
+        chatInd = ind;
+        showFeedback = e.target.closest('.position-relative').querySelector('.feedback_appear');
         if(!showFeedback.classList.contains('active'))
         {
             showFeedback.classList.add('active');
+            this.src="icons/chatbox_blue.svg";
             feed_overlay.classList.add('active');
         }
         else
         {
             showFeedback.classList.remove('active');
             feed_overlay.classList.remove('active');
+            this.src="icons/chatbox_Grey.svg";
         }
     })
 })
-closeFeedback.addEventListener('click',()=>
+closeFeedback.forEach((close)=>
 {
-    if(showFeedback.classList.contains('active'))
+    close.addEventListener('click',()=>
     {
-        showFeedback.classList.remove('active');
-        feed_overlay.classList.remove('active');
-    }
+        if(showFeedback.classList.contains('active'))
+        {
+            showFeedback.classList.remove('active');
+            feedbackTrigger[chatInd].src="icons/chatbox_Grey.svg";
+            feed_overlay.classList.remove('active');
+        }
+    })
 })
 
 window.addEventListener('click',(e)=>
@@ -187,6 +205,7 @@ window.addEventListener('click',(e)=>
     if(e.target==feed_overlay)
     {
         showFeedback.classList.remove('active');
+        feedbackTrigger[chatInd].src="icons/chatbox_Grey.svg";
         feed_overlay.classList.remove('active');
     }
 })
@@ -197,6 +216,15 @@ showDraw.forEach((draw)=>
     {
         e.target.closest('.upload_box').classList.remove('active');
         e.target.closest('.signature').querySelector('.upload_box2').classList.add('active');
+    })
+})
+clearDraw.forEach((clear)=>
+{
+    clear.addEventListener('click',(e)=>
+    {
+        ctx.clearRect(0,0,w,h);
+        e.target.closest('.upload_box2').classList.remove('active');
+        e.target.closest('.signature').querySelector('.upload_box').classList.add('active');
     })
 })
 
@@ -272,8 +300,11 @@ colorDraw.forEach((getColor)=>
             case "#211F1F":
                 x = "#211F1F";
                 break;
+            case "#fff":
+                x = "#fff";
+                break;    
         }
-        if (x == "white") y = 14;
+        if (x == "#fff") y = 20;
         else y = 2;
     })
 })
