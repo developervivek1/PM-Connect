@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/custom_drop_down_withclose.css">
     <link rel="stylesheet" href="css/guage-style.css">
 
-    <title>Dashboard UF=1</title>
+    <title>Dashboard Management</title>
 </head>
 
 <body>
@@ -852,7 +852,8 @@
                         } 
                         .card1 h3{
                             font-size: 18px;
-                            font-weight: 500;
+                            font-weight: bold;
+                            font-family: Lato;
                             color:#000000;
                         }
                         .chart.doughnut {
@@ -926,7 +927,7 @@
                                     .card1 table td{
                                         font: normal normal normal 14px/19px Lato;
                                         letter-spacing: 0px;
-                                        color: #000000;
+                                        color: #585656;
                                        
                                     }
                                     
@@ -1152,11 +1153,10 @@
                                         text-align: end;
                                     } */
 
-                                    /* .pending-task table th , .pending-task table td{
-                                        border: none;
-                                        padding: 10px 5px;
+                                   .pending-task table td:first-child{
+                                        cursor: pointer;
                                         
-                                    } */
+                                    }
                                     /* .pending-task table th:first-child , .pending-task table td:first-child{
                                        
                                         padding: 10px 5px;
@@ -1164,8 +1164,8 @@
                                     } */
                                   
                                     .milestone1 .chart.doughnut {
-                                        padding-bottom: 3rem;
-                                        margin-top: 10rem;
+                                        /* padding-bottom: 3rem; */
+                                        margin-top: 9.5rem;
                                     }
 
                        
@@ -1208,6 +1208,16 @@
                             display: inline-block;
                             }
 
+                            .budget-insight .dot2{
+                                background: #00C9B8;
+                            }
+                            .budget-insight .dot3{
+                                background: #14A3D9;
+                            }
+                            .recent-task table tr td:first-child {
+    font-size: 13px;
+}
+                            
                                 /*  */
                                 /* chart */
 
@@ -1266,7 +1276,7 @@
                                   width: 100%;
                                   position: relative;
                                   /* margin: 34px 48px; */
-                                  margin-top: 3rem;
+                                  margin-top: 2rem;
                                   margin-bottom: 0px;
                                   margin-left:48px ;
                                   margin-right: 0px;
@@ -1477,6 +1487,13 @@
                                     left: 1px;
                                 }
 
+                                .bar-more{
+                                    right: 7px;
+                                    position: absolute;
+                                    bottom: -29px;
+                                    width: 81px;
+                                }
+
 
 
 
@@ -1515,7 +1532,7 @@
                                 <div class="card border-0">
                                     <div class="card-text">
                                         <h1 class="fw-bold">15</h1>
-                                        <p>Current Projects</p>
+                                        <p>Completed Projects</p>
                                         <span class="spanred">-10%</span>
                                     </div>
 
@@ -1532,7 +1549,7 @@
                                 <div class="card border-0">
                                     <div class="card-text">
                                         <h1 class="fw-bold">30</h1>
-                                        <p>Completed Projects</p>
+                                        <p>Pending Projects</p>
                                         <span class="spanred">-10%</span>
                                     </div>
 
@@ -1549,7 +1566,7 @@
                                 <div class="card border-0">
                                     <div class="card-text">
                                         <h1 class="fw-bold">5</h1>
-                                        <p>Approval Pending</p>
+                                        <p>Approved Projects</p>
                                         <span>+5%</span>
                                     </div>
 
@@ -1598,8 +1615,8 @@
 
                                     <div class="budget-insight mt-4">
                                         <span><i class="dot"></i> Planned Budget</span>
-                                        <span class="ml-5"><i class="dot"></i> Actual Budget</span>
-                                        <span class="ml-5"><i class="dot"></i> Total Spent Amount</span>
+                                        <span class="ml-5"><i class="dot dot2"></i> Actual Budget</span>
+                                        <span class="ml-5"><i class="dot dot3"></i> Total Spent Amount</span>
                    
                                     </div>
                                    <!-- bar chart -->
@@ -1731,12 +1748,21 @@
                                           <div class="bar bar-15 stat-3" style="height: 94%;">
                                             <span>7520</span>
                                           </div>
+                                          <div class="bar-more">
+                                            <a href="#" class="text-decoration-none text-end text-dark"> <p class="fs-4">More +</p></a>
+                             
+                                          </div>
+                                          
                                         </div>
                                       </div>
                                     </div>
+                                    
                                   </div>
                                    <!-- bar chart end -->
+                                   
                                 </div>
+                               
+                                    
                             </div>
 
                         </div>
@@ -1757,7 +1783,7 @@
                                             </thead>
                                            <tbody>
                                                <tr>
-                                               <td>Task 01</td>
+                                               <td>Project 01</td>
                                                 <td>22/11/2021</td>
                                                 <td><img src="icons/avatar1.svg" width="17" alt="">
                                                     <img src="icons/aprrover1.svg" width="17" alt="">
@@ -1772,7 +1798,7 @@
                                                     <a>50%</a></td>
                                                </tr>
                                                <tr>
-                                                <td>Task 02</td>
+                                                <td>Project 02</td>
                                                  <td>22/11/2021</td>
                                                  <td><img src="icons/avatar1.svg" width="17" alt="">
                                                     <img src="icons/aprrover1.svg" width="17" alt="">
@@ -1788,7 +1814,7 @@
                                                 </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Task 03</td>
+                                                    <td>Project 03</td>
                                                      <td>22/11/2021</td>
                                                      <td><img src="icons/avatar1.svg" width="17" alt="">
                                                         <img src="icons/aprrover1.svg" width="17" alt="">
@@ -1804,7 +1830,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Task 04</td>
+                                                    <td>Project 04</td>
                                                      <td>22/11/2021</td>
                                                      <td><img src="icons/avatar1.svg" width="17" alt="">
                                                         <img src="icons/aprrover1.svg" width="17" alt="">
@@ -1820,7 +1846,7 @@
                                                     </td>
                                                 </tr> 
                                                 <tr>
-                                                    <td>Task 05</td>
+                                                    <td>Project 05</td>
                                                      <td>22/11/2021</td>
                                                      <td><img src="icons/avatar1.svg" width="17" alt="">
                                                         <img src="icons/aprrover1.svg" width="17" alt="">
@@ -1836,7 +1862,7 @@
                                                     </td>
                                                 </tr> 
                                                 <tr>
-                                                    <td>Task 06</td>
+                                                    <td>Project 06</td>
                                                      <td>22/11/2021</td>
                                                      <td><img src="icons/avatar1.svg" width="17" alt="">
                                                         <img src="icons/aprrover1.svg" width="17" alt="">
@@ -1852,7 +1878,7 @@
                                                     </td>
                                                 </tr> 
                                                 <tr>
-                                                    <td>Task 07</td>
+                                                    <td>Project 07</td>
                                                      <td>22/11/2021</td>
                                                      <td><img src="icons/avatar1.svg" width="17" alt="">
                                                         <img src="icons/aprrover1.svg" width="17" alt="">
@@ -1868,7 +1894,7 @@
                                                     </td>
                                                 </tr> 
                                                 <tr>
-                                                    <td>Task 08</td>
+                                                    <td>Project 08</td>
                                                      <td>22/11/2021</td>
                                                      <td><img src="icons/avatar1.svg" width="17" alt="">
                                                         <img src="icons/aprrover1.svg" width="17" alt="">
@@ -1884,7 +1910,7 @@
                                                     </td>
                                                 </tr> 
                                                 <tr>
-                                                    <td>Task 08</td>
+                                                    <td>Project 08</td>
                                                      <td>22/11/2021</td>
                                                      <td><img src="icons/avatar1.svg" width="17" alt="">
                                                         <img src="icons/aprrover1.svg" width="17" alt="">
@@ -1906,53 +1932,55 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="card1 pending-task border-0">
-                                    <h3>Pending Tasks  <span>6</span></h3>
+                                    <h3>Pending Approvals  <span>9</span></h3>
                                     <div class="table-responsive">
-                                        <table class="table">
+                                        <table class="table mb-5">
                                             <thead>
                                                 <tr>
                                                 <!-- <th>Task Name</th> -->
                                                 <th>Project Name</th>
                                                 <th>Status</th>
-                                                <th>Project lead</th>
+                                                <th>Submitted on</th>
                                                 </tr>
                                             </thead>
                                            <tbody>
                                                <tr>
-                                                <td>Task 001 <img src="icons/right_aero.svg" class="mb-2 ms-3" alt=""></td>
+                                                <td>Project 01 <img src="icons/right_aero.svg" class="mb-2 ms-1" alt=""></td>
                                                 <td><div class=" me-5">In Review</div></td>
-                                                <td class="ms-5"><img src="icons/aprrover1.svg" alt=""> <img src="icons/aprrover1.svg" alt=""></td>
+                                                <td class="ms-5">
+                                                    22/11/2021
+                                                </td>
                                                </tr>
                                               <tr>
-                                                <td>Task 002 <img src="icons/right_aero.svg" class="mb-1 ms-3" alt=""></td>
+                                                <td>Project 01 <img src="icons/right_aero.svg" class="mb-1 ms-1" alt=""><span class="fs-6 text-primary"> New</span></td>
                                                 <td><div class="">In Review</div></td>
-                                                <td><img src="icons/aprrover1.svg" alt=""> <img src="icons/aprrover1.svg" alt=""></td>
+                                                <td>22/11/2021</td>
                                                </tr>
 
                                                <tr>
-                                                <td>Task 001 <img src="icons/right_aero.svg" class="mb-1 ms-3" alt=""></td>
+                                                <td>Project 01 <img src="icons/right_aero.svg" class="mb-1 ms-1" alt=""><span class="fs-6 text-primary"> Deligate</span></td>
                                                 <td><div class="">In Review</div></td>
-                                                <td><img src="icons/aprrover1.svg" alt=""> <img src="icons/aprrover1.svg" alt=""></td>
+                                                <td>22/11/2021</td>
                                                </tr>
                                                <tr>
-                                                <td>Task 002 <img src="icons/right_aero.svg" class="mb-1 ms-3" alt=""></td>
+                                                <td>Project 01 <img src="icons/right_aero.svg" class="mb-1 ms-1" alt=""></td>
                                                 <td><div class=" ">In Review</div></td>
-                                                <td><img src="icons/aprrover1.svg" alt=""> <img src="icons/aprrover1.svg" alt=""></td>
+                                                <td>22/11/2021</td>
                                                </tr>
                                                <tr>
-                                                <td>Task 003 <img src="icons/right_aero.svg" class="mb-1 ms-3" alt=""></td>
+                                                <td>Project 01 <img src="icons/right_aero.svg" class="mb-1 ms-1" alt=""></td>
                                                 <td><div class=" ">In Review</div></td>
-                                                <td><img src="icons/aprrover1.svg" alt=""> <img src="icons/aprrover1.svg" alt=""></td>
+                                                <td>22/11/2021</td>
                                                </tr>
                                                <tr>
-                                                <td>Task 004 <img src="icons/right_aero.svg" class="mb-1 ms-3" alt=""></td>
+                                                <td>Project 01 <img src="icons/right_aero.svg" class="mb-1 ms-1" alt=""></td>
                                                 <td><div class="">In Review</div></td>
-                                                <td><img src="icons/aprrover1.svg" alt=""> <img src="icons/aprrover1.svg" alt=""></td>
+                                                <td>22/11/2021</td>
                                                </tr>
                                                <tr>
-                                                <td>Task 004 <img src="icons/right_aero.svg" class="mb-1 ms-3" alt=""></td>
+                                                <td>Project 01 <img src="icons/right_aero.svg" class="mb-1 ms-1" alt=""></td>
                                                 <td><div class="">In Review</div></td>
-                                                <td><img src="icons/aprrover1.svg" alt=""> <img src="icons/aprrover1.svg" alt=""></td>
+                                                <td>22/11/2021</td>
                                                </tr>
                                            </tbody>
                                         </table>
@@ -1973,13 +2001,18 @@
                                  top: 36%;
                              }
                              .milestone1 .chart.doughnut data {
-                                 background: aliceblue;
+                                 background:#EBEBEB52;
                                  padding: 7px 14px;
                                  font-size: 12px;
                                  border-radius: 50px;
                                  left: -9px;
                                  top: -8px;
                              }
+ 
+                            .milestone1  .chart.doughnut ul li {
+                                   
+                                    margin-bottom: 30px;
+                                }
                              .recent-task table tr td{
                                  font-size: 12px;
                              }
@@ -1990,10 +2023,10 @@
                                         <div class="chart doughnut">
 
                                             <ul>
-                                                <li><data value="0.80" data-color="#2D62ED">Planned Tasks</data></li>
-                                                <li><data value="0.65" data-color="#E2445B" data-color="#F6BE75">Completed Tasks</data></li>
-                                                <li><data value="0.40" data-color="#1CA9ED">Tasks on Track</data></li>
-                                                <!-- <li><data value="0.45" data-color="#F6BE75">Tasks at Risk</data></li> -->
+                                                <li><data value="0.80" data-color="#2D62ED">5 In progress</data></li>
+                                                <li><data value="0.65" data-color="#E2445B" data-color="#F6BE75">3 Completed</data></li>
+                                                <li><data value="0.40" data-color="#1CA9ED">3 At Risk</data></li>
+                                                <li><data value="" data-color="#000000">11 Total Milestone</data></li>
                                             </ul>
                                             <div class="canvas-container position-relative">
                                                
@@ -2006,6 +2039,9 @@
                                                 <!-- <h3>vbbh</h3> -->
                                             </div>
                                           
+                                        </div>
+                                        <div class="text-end pb-4">
+                                           <a href="#" class="text-decoration-none text-dark"> <p class="fs-4">See more +</p></a>
                                         </div>
                                     </div>
                                 </div>
