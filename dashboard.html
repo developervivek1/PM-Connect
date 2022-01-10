@@ -745,8 +745,6 @@
                 </div>
                
 
-
-
                 <div class="div-dashboard">
                     <div class="row">
                         <div class="col-md-6 col-6">
@@ -756,8 +754,8 @@
 
                             </div>
                         </div>
-                        <div class="col-md-6 col-6 d-flex justify-content-end">
-                            <div class="div-titleright">
+                        <div class="col-md-6 col-6 justify-content-end pe-5">
+                            <div class="w-50 searchdiv position-relative ms-auto">
                               <style media="screen">
                                 .img_profile{
                                   margin-right: 10px;
@@ -772,36 +770,116 @@
                                   .select-box__list {
                                         top: 55px;
                                       }
+
+                                      .searchbox .img-search{
+                                        cursor: pointer;
+                                        position: absolute;
+                                        top: 13px;
+                                        left: 10px;
+                                      }
+
+                                      .searchbox .img-last:last-child{
+                                        cursor: pointer;
+                                        width: 12px;
+                                        position: absolute;
+                                        right: 12px;
+                                        top: 15px;
+                                      }
+                                     
+                                      .searchbox input{
+                                          
+                                          height: 42px;
+                                          padding-left: 4rem;
+                                          border-radius: 5px;
+                                          padding-top: 8px;
+                                          border: .1rem solid #2D62ED;
+                                      }
+                                      .searchbox input::placeholder{
+                                          font-size: 16px;
+                                          font-weight: bold;
+                                          color: #b8b6b6;
+                                          font-family: Lato,Regular;
+                                          margin-top: 10px;
+                                      }
+                                      .pipe {
+                                        border-left: 2px solid #2D62ED;
+                                        height: 21px;
+                                        position: absolute;
+                                        right: 36px;
+                                        top: 11px;
+                                    }
+
+                                    .search-list{
+                                        list-style-type: none;
+                                        margin: auto;
+
+                                    }
+                                    .searchdiv .card  {
+                                      
+                                    
+                                        width: 86%;
+                                        margin: auto;
+
+                                    }
+                                    
+
+                                    .search-list li:hover{
+                                        
+                                        padding: 1rem;
+                                        padding-left: 2rem;
+                                        background: #EAECF252;
+                                    }
+                                    .search-list li{
+                                        font-size: 14px;
+                                        font-family: lato,Regular;
+                                        padding: 1rem;
+                                        padding-left: 2rem;
+                                        cursor: pointer;
+                                        
+                                    }
+
+                                    .searchhover  .card{
+                                        display: none;
+                                    } 
+
+                                    .searchhover:hover  .card{
+                                        display: block;
+                                        position: absolute;
+                                        z-index: 9;
+                                        left: 7%;
+
+                                    } 
+
+
                               </style>
-                              <div class="select-box">
-                                    <div class="select-box__current" tabindex="1">
-                                      <div class="select-box__value">
-                                        <input class="select-box__input" type="radio" id="0" value="1" name="user_profile_list" checked="checked"/ >
-                                        <p class="select-box__input-text" ><img src="icons/aprrover1.svg" alt="" class="img_profile">Mary Joseph</p>
-                                      </div>
-                                      <div class="select-box__value">
-                                        <input class="select-box__input" type="radio" id="1" value="2" name="user_profile_list"/>
-                                        <p class="select-box__input-text"><img src="icons/aprrovwe2.svg" alt="" class="img_profile">User 2</p>
-                                      </div>
-                                      <div class="select-box__value">
-                                        <input class="select-box__input" type="radio" id="2" value="3" name="user_profile_list"/>
-                                        <p class="select-box__input-text"><img src="icons/approver 3.svg" alt="" class="img_profile">User 3</p>
-                                      </div>
-                                      <img class="select-box__icon" src="icons/arrow_new.svg" alt="Arrow Icon" aria-hidden="true"/>
-                                    </div>
-                                    <ul class="select-box__list">
-                                      <li>
-                                        <label class="select-box__option" for="0" aria-hidden="aria-hidden"><img src="icons/aprrover1.svg" alt="" class="img_profile">Mary Joseph </label>
-                                      </li>
-                                      <li>
-                                        <label class="select-box__option" for="1" aria-hidden="aria-hidden"><img src="icons/aprrovwe2.svg" alt="" class="img_profile">User 2</label>
-                                      </li>
-                                      <li>
-                                        <label class="select-box__option" for="2" aria-hidden="aria-hidden"><img src="icons/approver 3.svg" alt="" class="img_profile">User 3</label>
-                                      </li>
-                                    </ul>
-                                    </div>
+                              
+                        <div class="searchhover position-relative">
+
+
+                              <div class="position-relative searchbox">
+                                  <span><img src="icons/search-1.svg"  class="img-search" width="15" alt=""></span>
+                                  <input type="text" class="form-control" placeholder="Search by project owner">
+                                  <span><div class="pipe"></div><img src="icons/chevron-down.svg" class="img-last" alt=""></span>
+                              </div>
+
+                              <div class="card">
+                                <ul class="search-list">
+                                    <div class="p-3">Project Owners</div>
+                                    <li><span><img src="icons/avatar1.svg" class="me-4" width="25" alt=""></span> Project Owner 01</li>
+                                    <li><span><img src="icons/avatar1.svg" class="me-4" width="25" alt=""></span> Project Owner 02</li>
+                                    <li><span><img src="icons/avatar1.svg" class="me-4" width="25" alt=""></span> Project Owner 03</li>
+                                    <li><span><img src="icons/avatar1.svg" class="me-4" width="25" alt=""></span> Project Owner 04</li>
+                                    <li><span><img src="icons/avatar1.svg" class="me-4" width="25" alt=""></span> Project Owner 05</li>
+                                    <li><span><img src="icons/avatar1.svg" class="me-4" width="25" alt=""></span> Project Owner 06</li>
+                                   
+                                </ul>
+
                             </div>
+                        </div>
+                            </div>
+
+                               
+
                         </div>
 
 
@@ -1494,6 +1572,22 @@
                                     width: 81px;
                                 }
 
+                                .budget-insight1 .text-center{
+                                    border: 1px solid rgb(238, 233, 233);
+                                    border-left: 4px solid #B899FB;
+                                    border-radius: 5px;
+                                    padding: 2px 15px 2px 15px;
+                                    
+
+                                }
+
+                                .budget-insight1 .border2{
+                                    border-left: 4px solid #14D9D3 ;
+                                }
+                                .budget-insight1 .border3{
+                                    border-left: 4px solid  #14A3D9;
+                                }
+
 
 
 
@@ -1611,9 +1705,27 @@
                             </div>
                             <div class="col-md-7">
                                 <div class="card1 border-0">
-                                    <h3>Today's Task</h3>
+                                    <div class="d-flex justify-content-between">
+                                        <h3>Today's Task</h3>
 
-                                    <div class="budget-insight mt-4">
+                                        <div class="d-flex budget-insight1">
+                                            <div class="text-center me-3">
+                                                <p class="fs-5 fw-bolder mt-0">$104,43,00 </p>
+                                                <h6>Total</h6>
+                                            </div>
+                                            <div class="text-center border2 me-3">
+                                                <p class="fs-5 fw-bolder mt-0">$104,43,00 </p>
+                                                <h6>Total</h6>
+                                            </div>
+                                            <div class="text-center border3">
+                                                <p class="fs-5 fw-bolder mt-0">$104,43,00 </p>
+                                                <h6>Total</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  
+
+                                    <div class="budget-insight">
                                         <span><i class="dot"></i> Planned Budget</span>
                                         <span class="ml-5"><i class="dot dot2"></i> Actual Budget</span>
                                         <span class="ml-5"><i class="dot dot3"></i> Total Spent Amount</span>
