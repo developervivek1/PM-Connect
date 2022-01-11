@@ -567,9 +567,10 @@
           </div>
           <div></div>
         </div>
-        <div class="div-dashboard pt-5">
+        <div class="div-dashboard">
             <div class="row top_row">
                 <div class="col-md-6 col-6 d-flex div-title">
+                    <a href="dashboard.html" class="d-flex"><img src="icons/arrowright.svg" alt=""></a>
                     <span><img src="img/client1.jpg" alt="Owner"></span>
                     <h1>Project Owner 03</h1>
                 </div>
@@ -578,7 +579,7 @@
                     <h1>12</h1>
                 </div>
             </div>
-          <div class="div-card mt-4 pt-5 pb-5">
+          <div class="div-card pt-5 pb-5">
             <div class="row">
               <div class="col-xs-12 col-md-3">
                 <div class="card border-0 no_mar">
@@ -619,11 +620,12 @@
               <style> </style>
             </div>
             <div class="rpr">
+              <!-- 2nd row start -->
               <div class="row pt-5">
                 <div class="col-md-5">
                   <div class="card1 no-pad border-0">
                     <div class="head-div2 border-bottom">
-                      <h3 class="text-dark">Activity</h3>
+                      <h3>Activity</h3>
                     </div>
                     <div class="linechart_row">
                       <div class="linechart__container">
@@ -647,9 +649,59 @@
                           <span class="edited">Last edited 2 hours ago</span>
                         </div>
                         <div class="col-md-6 justify-content-end d-flex">
-                          <span><img src="img/client1.jpg" alt=""></span>
-                          <span><img src="img/client2.jpg" alt=""></span>
-                          <span class="last">+2</span>
+                          <span>
+                            <img src="img/client1.jpg" alt="">
+                            <div class="mytooltip">
+                              <div class="maintooltip">
+                                <p>Jana</p>
+                              </div> 
+                            </div>
+                          </span>
+                          <span>
+                            <img src="img/client2.jpg" alt="">
+                            <div class="mytooltip">
+                              <div class="maintooltip">
+                                <p>James</p>
+                              </div> 
+                            </div>
+                          </span>
+                          <span class="last">
+                            <p>+2</p>
+                            <div class="userTooltip">
+                                <div class="grid">
+                                  <div class="grid1">
+                                    <span><img src="img/client1.jpg" alt="client1"></span> 
+                                  </div>
+                                  <div class="grid2">
+                                    <p>Jana</p>
+                                  </div>
+                                </div> 
+                                <div class="grid">
+                                  <div class="grid1">
+                                    <span><img src="img/client2.jpg" alt="client1"></span> 
+                                  </div>
+                                  <div class="grid2">
+                                    <p>James</p>
+                                  </div>
+                                </div>
+                                <div class="grid">
+                                  <div class="grid1">
+                                    <span><img src="img/client3.jpg" alt="client1"></span> 
+                                  </div>
+                                  <div class="grid2">
+                                    <p>Holder</p>
+                                  </div>
+                                </div> 
+                                <div class="grid">
+                                  <div class="grid1">
+                                    <span><img src="img/client4.jpg" alt="client1"></span> 
+                                  </div>
+                                  <div class="grid2">
+                                    <p>Rupert</p>
+                                  </div>
+                                </div>   
+                            </div>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -663,8 +715,22 @@
                           <span class="edited">Last edited 8 hours ago</span>
                         </div>
                         <div class="col-md-6 justify-content-end d-flex">
-                          <span><img src="img/client1.jpg" alt=""></span>
-                          <span><img src="img/client2.jpg" alt=""></span>
+                          <span>
+                            <img src="img/client1.jpg" alt="">
+                            <div class="mytooltip">
+                              <div class="maintooltip">
+                                <p>Jana</p>
+                              </div> 
+                            </div>
+                          </span>
+                          <span>
+                            <img src="img/client2.jpg" alt="">
+                            <div class="mytooltip">
+                              <div class="maintooltip">
+                                <p>James</p>
+                              </div> 
+                            </div>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -678,8 +744,22 @@
                           <span class="edited">Last edited yesterday</span>
                         </div>
                         <div class="col-md-6 justify-content-end d-flex">
-                          <span><img src="img/client1.jpg" alt=""></span>
-                          <span><img src="img/client2.jpg" alt=""></span>
+                          <span>
+                            <img src="img/client1.jpg" alt="">
+                            <div class="mytooltip">
+                              <div class="maintooltip">
+                                <p>Jana</p>
+                              </div> 
+                            </div>
+                          </span>
+                          <span>
+                            <img src="img/client2.jpg" alt="">
+                            <div class="mytooltip">
+                              <div class="maintooltip">
+                                <p>James</p>
+                              </div> 
+                            </div>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -692,12 +772,12 @@
               <!-- 2nd row end -->
              
                 <div class="col-md-5 pt-4 nopad_right">
-                  <div class="card1 border-0 p-0">
+                  <div class="card1 border-0 p-0 h-342">
                     <div class="head-div2">
-                      <h3 class="text-dark">Team Task</h3>
+                      <h3>Team Task</h3>
                     </div>
                     <div class="chart doughnut">
-                      <div class="canvas-container mb-0 position-relative">
+                      <div class="canvas-container position-relative">
                          <canvas id="myCanvas"></canvas>
                         <div class="text-inside position-absolute text-center">
                           <p>Total Task</p>
@@ -847,56 +927,25 @@
   
   
       });
+
+      data = {
+      datasets: [{
+          data: [10, 20, 30]
+      }],
+
+      // These labels appear in the legend and in the tooltips when hovering different arcs
+      labels: [
+          'Red',
+          'Yellow',
+          'Blue'
+      ]
+};
   
   
   
   });
   
   
-  
-</script>
-<script>
-  $(document).ready(function () {
-  
-      $('.chart.doughnut').each(function () {
-          type: 'doughnut';
-          var chartID = $(this).find('canvas').attr('id');
-          var c = document.getElementById(chartID);
-          var width = $('#' + chartID).width();
-          var height = width;
-          var linewidth = width / 8;
-          c.setAttribute('width', width * 2);
-          c.setAttribute('height', height * 2);
-          var ctx = c.getContext('2d');
-          var startingPoint =-0.5;
-          ctx.scale(2, 2);
-          ctx.beginPath();
-          ctx.arc(height / 2, height / 2, width / 3, 0 * Math.PI, 1 * Math.PI);
-          ctx.lineWidth = linewidth;
-        //  ctx.strokeStyle = 'none';
-          //ctx.shadowOffsetX = 3;
-         //ctx.shadowOffsetY = 3;
-        //  ctx.shadowBlur = 20;
-         // ctx.shadowColor = "rgba(0,0,0,0.2)";
-          ctx.stroke();
-  
-          $(this).find('li').each(function () {
-  
-              var start = startingPoint;
-              var dataValue = $(this).find('data').attr('value');
-              var end = startingPoint + (2.5 * dataValue);
-              var color = $(this).find('data').data('color');
-              ctx.beginPath();
-              ctx.arc(height / 2, height / 2, width / 3, startingPoint * Math.PI, end * Math.PI);
-              ctx.lineWidth = linewidth;
-              ctx.strokeStyle = color;
-              
-              ctx.stroke();
-  
-              $(this).css('color', color);
-          });
-      });
-  });
   
 </script>
 <!--endramyachart-->
