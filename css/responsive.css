@@ -5,6 +5,11 @@
 background: #F2F5F8;
 }
 
+.search
+{
+    background-color: #fff;
+}
+
 .mview_req{
     background: white;
 }
@@ -94,9 +99,21 @@ margin-bottom: 21px;
 width: 30px;
 height: 30px;
 }
+.manage_view .div1 ul li.active
+{
+    background-color: #7b91c5;
+}
+.manage_view .div1 ul li span.active a
+{
+    color: #2762ed;
+}
 .manage_view .div1 ul li .tooltiptext {
     visibility: visible;
     border: none;
+}
+.manage_view .div1 ul li .tooltiptext a
+{
+    color: #000;
 }
 .manage_view .div1 .button__img1:nth-child(1) {
     display: block;
@@ -509,8 +526,8 @@ display: inline-block;
 z-index: 2;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .head1 {
-border: 0px solid #EEF6FB;
-border-left: 2px solid #edf6ff;
+    border: 8px solid #5ed9ef2b;
+    border-left: 2px solid #5ed9ef2b;
 }
 .proj_filter .divfilter2 .project1:nth-child(2) .projectcon1 .head1
 {
@@ -518,8 +535,8 @@ border: 10px solid #fbf2ff;
 border-left: 2px solid #fbf2ff;
 }
 .proj_filter .divfilter2 .project1:nth-child(3) .projectcon1 .head1 {
-border: 10px solid #f7eac18a;
-border-left: 2px solid #f7eac18a;
+    border: 10px solid #fcf4da;
+    border-left: 2px solid #fcf4da;
 }
 .proj_filter .divfilter2 .project1 .border-bottom .last_div p {
 margin: 5px 0 0 2px;
@@ -709,7 +726,7 @@ font-size: 1.4rem;
 .manage_view .div3 .form_div form input[type="date"],
 .manage_view .div3 .form_div form select {
 height: 38px;
-width: 98%;
+width: 100%;
 font-size: 1.3rem;
 margin-bottom: 3.2rem;
 padding: 10px 15px;
@@ -894,11 +911,21 @@ background-color: #D8E2FC;
 }
 .custom-select .box11 {
   
-    width: 98% !important;
+    width: 100% !important;
+    height: 38px;
 }
 .option-container {
    
-    width: 98% !important;
+    width: 99% !important;
+}
+.custom-select .box11 img {
+    top: 16px;
+}
+.manage_view .div3 .form_div .con5 .upload_box, .manage_view .div3 .form_div .con5 .upload_box2 {
+    width: 100%;
+}
+.manage_view .div3 .form_div form textarea[type="textarea"] {
+    width: 100%;
 }
 .manage_view .div3 .form_div .feedback .feedback_appear {
     padding: 13px;
@@ -906,6 +933,14 @@ background-color: #D8E2FC;
     top: 33%;
     left: 6%;
     z-index: 3;
+}
+.selected {
+    font-size: 1.8rem;
+}
+.selected::after {
+    width: 15px;
+    right: 41%;
+    top: 6px;
 }
 }
 

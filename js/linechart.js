@@ -1,3 +1,5 @@
+
+
 let ctx = document.getElementById("linechart").getContext('2d');
 
 var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
@@ -79,6 +81,5 @@ var chart = new Chart(ctx, {
                 }
             }],
         }
-    },
-   
+    }
 });

@@ -1,5 +1,8 @@
 /* proj edit css start */
-.mysticky2 span,
+.proj_filter .divfilter2 .project1 .projmaincon .divcon2 span
+{
+    cursor: pointer;
+}
 .proj_filter #editText{
     cursor: pointer;
 }
@@ -466,10 +469,15 @@ top: 0;
 .manage_view .proj_edit .proj_content .tabproj_con
 {
     display: none;
+    margin-top: 2rem;
 }
 .manage_view .proj_edit .proj_content .tabproj_con.active
 {
     display: block;
+}
+.manage_view .proj_edit .proj_content .files .row
+{
+    align-items: flex-start;
 }
 .manage_view .proj_edit .update .update_con
 {
@@ -683,8 +691,8 @@ margin-right: 8px;
 }
 .proj_filter .proj_edit .proj_content .uploaded
 {
-    height: 100vh;
-    overflow-y: scroll;
+    height: 70vh;
+    overflow-y: visible;
 }
 .proj_filter .proj_edit .proj_content .files .file_overlay
 {
@@ -723,29 +731,38 @@ margin-right: 8px;
     position: absolute;
     right: 27%;
 }
-.proj_filter .proj_edit .proj_content .files .upload_div
-{
+.proj_filter .proj_edit .proj_content .files .needtoupload {
+    display: flex;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 94%;
+    margin-left: 6%;
+    border: 1px dashed #cfcfcf;
+    position: relative;
+}
+.proj_filter .proj_edit .proj_content .files .upload_div {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     flex-direction: column;
-    height: 52vh;
+    height: 0;
     line-height: 3.8rem;
 }
-.proj_filter .proj_edit .proj_content .files .upload_div img
-{
-    margin-bottom: 2.5rem;
+.proj_filter .proj_edit .proj_content .files .upload_div img {
+    margin-bottom: 3.8rem;
+    width: 8rem;
 }
-.proj_filter .proj_edit .proj_content .files .upload_div h2
-{
-    font-size: 1.8rem;
-    margin-bottom: 0.7rem;
+.proj_filter .proj_edit .proj_content .files .upload_div h2 {
+    font-size: 1.7rem;
+    margin-bottom: -0.1rem;
+    color: #171e48;
 }
 .proj_filter .proj_edit .proj_content .files .upload_div p
 {
     font-size: 14px;
-    color: #bdbdbd;
+    color: #2762edd6;
     margin-bottom: 0.9rem;
 }
 .proj_filter .proj_edit .proj_content .files .upload_div button
@@ -799,9 +816,11 @@ margin-right: 8px;
     width: 21px;
 }
 .proj_filter .proj_edit .proj_content .files .uploaded .fileuploaded {
-    padding: 12px 25px 26px 12px;
+    padding: 10px 11px 1px 11px;
     border: 1px solid #dbdbdb;
-    margin: 8px 0 20px 30px;
+    margin: 8px 0 13px 0px;
+    border-radius: 5px;
+    width: 92%;
 }
 .proj_filter .proj_edit .proj_content .files .uploaded .fileuploaded .row
 {
@@ -809,25 +828,39 @@ margin-right: 8px;
 }
 .proj_filter .proj_edit .proj_content .files .uploaded .fileuploaded .grid {
     display: grid;
-    grid-template-columns: 110px 77%;
+    grid-template-columns: 51px 90%;
 }
 .proj_filter .proj_edit .proj_content .files .uploaded .fileuploaded .grid .grid2
 {
     line-height: 3.4rem;
-    padding-top: 3px;
 }
 .proj_filter .proj_edit .proj_content .files .uploaded .fileuploaded .grid .grid2 h3
 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    margin-bottom: -0.4rem;
 }
-.proj_filter .proj_edit .proj_content .files .uploaded .fileuploaded .grid .grid2 p
-{
-    font-size: 12px;
-    color: #161616;
+.proj_filter .proj_edit .proj_content .files .uploaded .fileuploaded .grid .grid2 p {
+    font-size: 11px;
+    font-weight: 500;
+    color: #130a6359;
 }
-.proj_filter .proj_edit .proj_content .files .uploaded .fileuploaded .grid .grid2 h5
-{
+.proj_filter .proj_edit .proj_content .files .uploaded .fileuploaded .grid .grid2 h5 {
     font-size: 12px;
+    margin-right: 1.2rem;
+}
+.proj_filter .proj_edit .proj_content .files .uploaded .box11
+{
+    width: 92%;
+    height: 38px;
+    margin-bottom: 3.2rem;
+}
+.proj_filter .proj_edit .proj_content .files .uploaded .box11 img
+{
+    top: 15px;
+}
+.proj_filter .proj_edit .proj_content .files .uploaded .custom-select .option-container2
+{
+    z-index: 60;
 }
 .proj_filter .proj_edit .proj_content .files .uploaded .fileuploaded .open
 {
@@ -1280,7 +1313,7 @@ box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         animation: none;
         animation: fadeOut 0.3s ease-in-out;
         top: 51px;
-        padding: 25px 29px;
+        padding: 25px;
         z-index: 65;
     }
     @keyframes fadeOut
@@ -1628,5 +1661,18 @@ box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         position: fixed;
         bottom: 51px;
         z-index: 68;
+    }
+    .proj_filter .proj_edit .proj_content .files .uploaded .box11 {
+        width: 100% !important;
+    }
+    .proj_filter .proj_edit .proj_content .files .uploaded .fileuploaded {
+        width: 100%;
+    }
+    .proj_filter .proj_edit .proj_content .uploaded {
+        height: 75vh;
+    }
+    .proj_filter .proj_edit .proj_content .files .needtoupload {
+        width: 100%;
+        margin-left: 0%;
     }
 }

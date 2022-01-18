@@ -43,6 +43,7 @@
 .proj_filter .proj_add .assignee_div .usersearch_div .user-list {
     overflow-y: auto;
     max-height: 270px;
+    overflow-x: hidden;
 }
 .proj_filter .proj_add .assignee_div .usersearch_div input[type="text"] 
 {

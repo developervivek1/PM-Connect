@@ -1,3 +1,4 @@
+let video = document.querySelector('.main video');
 
 function myFunction() {
   var x = document.getElementById("myInput");
@@ -8,10 +9,7 @@ function myFunction() {
   }
 }
 
-
-
 // closing tables
-
 function myTable() {
     var x = document.getElementById("mytablediv");
     if (x.style.display === "none") {
@@ -33,11 +31,4 @@ function myView() {
 }
 
 
-
-// add view
-
-// function myView() {
-//   var element = document.getElementById("addView");
-//   element.classList.toggle("mystyle");
-// }
 

@@ -1,6 +1,5 @@
 .notification_div,
-.helpsupport_div,
-.search_div {
+.helpsupport_div {
     position: fixed;
     top: 0;
     left: 5.5%;
@@ -27,8 +26,7 @@
     }
 }
 .notification_div.active,
-.helpsupport_div.active,
-.search_div.active
+.helpsupport_div.active
 {
     transform: translateX(0%);
     animation: notiLeft 0.5s ease-in-out;
@@ -62,7 +60,8 @@
 .notification_div .noti_overflow
 {
     max-height: 80vh;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     width: 100%;
 }
 .notification_div > .col-md-12 img,
@@ -429,7 +428,12 @@
 /* search-div */
 .search_div
 {
-    width: 98%;
+    left: 5.5%;
+    padding: 3.5rem 3.5rem;
+    min-height: 80vh;
+    z-index: 50;
+    cursor: default;
+    overflow: hidden;
 }
 .search_div input[type="text"]
 {
@@ -498,6 +502,9 @@
         transform: translateX(-110.5%);
         overflow: hidden;
     }
+    .search_div {
+        transform: translateX(0%);
+    }
     .notification_div .noti_con {
         padding: 1.5rem 1rem 1.5rem 1.8rem;
     }
@@ -545,6 +552,10 @@
     .notification_div .nav_div .scroll_div
     {
         overflow: scroll;
+    }
+    .notification_div .nav_div .scroll_div::-webkit-scrollbar
+    {
+        display: none;
     }
     .notification_div .nav_div ul {
         width: 176%;

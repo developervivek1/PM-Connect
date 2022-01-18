@@ -611,29 +611,6 @@
                   </div>
             </div>
             <!-- helpsupport div end -->
-            <!-- search area start -->
-            <div class="search_div">
-                <div class="col-md-12 d-flex justify-content-start">
-                    <img src="icons/arrowright.svg" class="backArrow" alt="">
-                    <h1>Search</h1>
-                </div>
-                <div class="col-md-12">
-                    <input type="text" name="" placeholder="Search Everything">
-                </div>
-                <div class="col-md-12 search_con">
-                    <p>I am Looking For</p>
-                    <div class="btn-flex">
-                        <button class="btn">Files</button>
-                        <button class="btn">Updates</button>
-                        <button class="btn">Tag</button>
-                        <button class="btn">People</button>
-                    </div>
-                    <h5>Recent Searches</h5>
-                    <p class="grey">Lorem ipsum dolor sit amet</p>
-                    <p class="grey">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-            <!-- search area end -->
             <nav>
                 <div class="div1">
                     <h3>
@@ -643,7 +620,7 @@
                     </h3>
                     <ul>
                         <li>
-                            <span class="tooltiptext">Dashboard</span>
+                            <span class="tooltiptext"><a href="dashboard.html">Dashboard</a></span>
                             <a href="dashboard.html" class="button1">
                                 <img src="icons/dashboard.svg" alt="Image one" width="38" class="button__img1">
                                 <img src="icons/dashboardwhite.svg" alt="Image two" class="button__img1">
@@ -658,25 +635,25 @@
                             </a>
                         </li>
                         <li>
-                            <span class="tooltiptext">Request</span>
+                            <span class="tooltiptext"><a href="mview-request.html">Request</a></span>
                             <a href="mview-request.html" class="button1">
-                                <img src="icons/project.svg" alt="Image one" width="38" class="button__img1">
-                                <img src="icons/project-white.svg" alt="Image two" class="button__img1">
+                                <img src="icons/Request-Blue1.svg" alt="Image one" width="38" class="button__img1">
+                                <img src="icons/request-white.svg" alt="Image two" class="button__img1">
                             </a>
                         </li>
                         <li>
-                            <span class="tooltiptext">Project</span>
+                            <span class="tooltiptext"><a href="management-view-project-list.html">Project</a></span>
                             <a href="management-view-project-list.html" class="button1">
                                 <img src="icons/project.svg" alt="Image one" width="38" class="button__img1">
                                 <img src="icons/project-white.svg" alt="Image two" class="button__img1">
                             </a>
                         </li>
                         <li>
-                            <span class="tooltiptext">View Progress</span>
+                            <span class="tooltiptext active"><a href="usertask.html">View Progress</a></span>
                             <a href="usertask.html" class="button1">
                                 <img src="icons/Viewprogress-Blue.svg" alt="Image one" width="38"
-                                    class="button__img1">
-                                <img src="icons/Progresslist-white.svg" alt="Image two" class="button__img1">
+                                    class="button__img1 active">
+                                <img src="icons/Progresslist-white.svg" alt="Image two" class="button__img1 deactive">
                             </a>
                         </li>
                     </ul>
@@ -690,8 +667,8 @@
                             </a>
                         </li>
                         <li id="showSearch">
-                            <span class="tooltiptext">Search</span>
-                            <a href="#" class="button1">
+                            <span class="tooltiptext"><a href="search.html">Search</a></span>
+                            <a href="search.html" class="button1">
                                 <img src="icons/search.svg" alt="Image one" width="38" class="button__img1">
                                 <img src="icons/searchwhite.svg" alt="Image two" class="button__img1">
                             </a>
@@ -711,7 +688,8 @@
                                     <br>
                                     <a href="signIn.html" class=""> <span> Log Out </span> </a>
                                     <button class="btn">
-                                        <img src="icons/exit_icon.svg" alt="">Logout</button>
+                                        <a href="signIn.html"><img src="icons/exit_icon.svg" alt=""> Logout</a>
+                                    </button>
                                 </p>
                             </p>
                         </li>

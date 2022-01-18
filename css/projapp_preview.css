@@ -1,12 +1,12 @@
-.mview_req .myoverlay {
+.mview_req .prevOverlay {
     position: fixed;
     height: 100vh;
     width: 100%;
-    z-index: 70;
+    z-index: 9;
     display: none;
 }
 
-.mview_req .myoverlay.active {
+.mview_req .prevOverlay.active {
     display: block;
 }
 
