@@ -261,10 +261,9 @@ display: flex;
 align-items: center;
 z-index: 1;
 }
-.proj_filter .divfilter2 .project1 .projectcon1 .head1.mysticky2
-{
-height: 16px;
-background: #edf6ff;
+.proj_filter .divfilter2 .project1 .projectcon1 .head1.mysticky2 {
+    height: 16px;
+    background: #e7fafd;
 }
 .proj_filter .divfilter2 .fixedMile > .mysticky2
 {
@@ -526,17 +525,16 @@ display: inline-block;
 z-index: 2;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .head1 {
-    border: 8px solid #5ed9ef2b;
-    border-left: 2px solid #5ed9ef2b;
+    border: 8px solid #e7fafd;
+    border-left: 2px solid #e7fafd;
 }
-.proj_filter .divfilter2 .project1:nth-child(2) .projectcon1 .head1
-{
-border: 10px solid #fbf2ff;
-border-left: 2px solid #fbf2ff;
+.proj_filter .divfilter2 .project1:nth-child(2) .projectcon1 .head1 {
+    border: 10px solid #f1e7fa;
+    border-left: 2px solid #f1e7fa;
 }
 .proj_filter .divfilter2 .project1:nth-child(3) .projectcon1 .head1 {
-    border: 10px solid #fcf4da;
-    border-left: 2px solid #fcf4da;
+    border: 10px solid #fdf8e7;
+    border-left: 2px solid #fdf8e7;
 }
 .proj_filter .divfilter2 .project1 .border-bottom .last_div p {
 margin: 5px 0 0 2px;
@@ -941,6 +939,18 @@ background-color: #D8E2FC;
     width: 15px;
     right: 41%;
     top: 6px;
+}
+.proj_filter .divfilter2 .project1 .border-bottom .projmaincon table tr td.conversation {
+    justify-content: center;
+    width: 20%;
+    position: sticky;
+    top: 0;
+    left: 51%;
+    height: 35px;
+    z-index: 1;
+    background: #fff;
+    display: flex;
+    align-items: center;
 }
 }
 
