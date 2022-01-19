@@ -10,8 +10,6 @@ const helpTrigger= document.querySelector('#show_helpSupp');
 const searchAny= document.querySelector('.search_div .col-md-12 > input');
 const searchCon= document.querySelector('.search_div .search_con');
 const backTrigger =document.querySelectorAll('.col-md-12 > .backArrow');
-const searchDiv2= document.querySelector('.search_div');
-const searchTrigger= document.querySelector('#showSearch');
 const logochange =document.querySelector('.div1 h3 img:nth-child(2)');
 const hamberChange =document.querySelector('.div1 h3 img:nth-child(3)');
 const linavActive = document.querySelectorAll('nav ul li');
@@ -48,8 +46,7 @@ function hideFilterdiv(e) {
     else if(e.target==notiOverlay)
     {
         notiActive.classList.remove('active');
-        helpsuppDiv.classList.remove('active')
-        searchDiv2.classList.remove('active');
+        helpsuppDiv.classList.remove('active');
         notiOverlay.classList.remove('active');
         let img1 = linavActive[navIndex].querySelector('img:first-child');
         let img2 = linavActive[navIndex].querySelector('img:last-child');
@@ -64,7 +61,6 @@ window.addEventListener('resize', () => {
         mobileMenu.classList.remove('active');
         notiActive.classList.remove('active');
         helpsuppDiv.classList.remove('active')
-        searchDiv2.classList.remove('active');
         notiOverlay.classList.remove('active');
         logochange.src="./icons/emmar2.png";
         hamberChange.src="./icons/hambergerMob.png";
@@ -125,31 +121,6 @@ helpTrigger.addEventListener('click',(e)=>
     {
         helpsuppDiv.classList.remove('active');
         notiOverlay.classList.remove('active');
-    }
-})
-searchTrigger.addEventListener('click',(e)=>
-{
-    if(!searchDiv2.classList.contains('active'))
-    {
-        searchDiv2.classList.add('active');
-        notiOverlay.classList.add('active');
-    }
-    else
-    {
-        searchDiv2.classList.remove('active');
-        notiOverlay.classList.remove('active');
-    }
-})
-searchAny.addEventListener('keyup',(e)=>
-{
-    let val = e.target.value;
-    if(val=="" || val=='undefined')
-    {
-        searchCon.classList.remove('active');
-    }
-    else
-    {
-        searchCon.classList.add('active');
     }
 })
 

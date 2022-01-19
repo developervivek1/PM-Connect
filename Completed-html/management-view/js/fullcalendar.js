@@ -6312,7 +6312,7 @@ setTimeout(()=>
 			project_name = document.querySelectorAll('#calendar .fc-event-hori');
 		}
 	})
-	function makingTooltip(e)
+	function makingTooltip()
 	{
 		for(let i=0; i<project_name.length;i++)
 		{

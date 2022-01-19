@@ -9,7 +9,7 @@ const showDeleg = document.querySelector('.mview_req .proj_approval .btn_div .de
 const showContent = document.querySelectorAll('.proj_approval .proj_form .main_form .mainform_head');
 const allCon = document.querySelectorAll('.proj_approval .proj_form .main_form .con_pad');
 const root2 = document.querySelector(':root');
-const overlay = document.querySelector('.myoverlay');
+const overlay = document.querySelector('.prevOverlay');
 // const overlay = document.querySelector('.mview_req .myoverlay');
 
 btnReq.addEventListener('click', () => {
