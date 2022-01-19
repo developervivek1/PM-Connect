@@ -134,6 +134,10 @@ width: 37px;
 width: 18px;
 height: 18px;
 }
+.manage_view .div1 ul:nth-child(3) li:last-child:hover {
+    transform: scale(1);
+    box-shadow: none;
+  }
 .manage_view .div1 ul:nth-child(3) li:last-child span:first-child {
 font-size: 1.2rem;
 color: #fff;
@@ -312,8 +316,27 @@ padding: 15px 0;
     overflow: scroll;
     border-left:12px solid transparent;
 }
-
-
+.proj_filter .divfilter2 .research table tbody tr td.head_conversation,
+.proj_filter .divfilter2 .wireframe table tbody tr td.head_conversation, 
+.proj_filter .divfilter2 .studio table tbody tr td.head_conversation
+{
+    width: 30%;
+    position: sticky;
+    top: 0;
+    left: 41%;
+    background: #e7fafd;
+    border: 8px solid #e7fafd;
+}
+.proj_filter .divfilter2 .wireframe table tbody tr td.head_conversation 
+{
+    background: #f1e7fa;
+    border: 8px solid #f1e7fa;
+}
+.proj_filter .divfilter2 .studio table tbody tr td.head_conversation 
+{
+    background: #fdf8e7;
+    border: 8px solid #fdf8e7;
+}
 .proj_filter .divfilter2 .list,
 .proj_filter .divfilter2 .gantt,
 .proj_filter .divfilter2 .calendar,
