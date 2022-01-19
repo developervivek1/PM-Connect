@@ -2256,12 +2256,25 @@ function appendMessage(e)
     let p= document.createElement('p');
     p.innerText=`${messageText}`;
     grid3.appendChild(p);
+
+    let timegrid = document.createElement('div');
+    timegrid.setAttribute('class','timegrid');
+    let timegrid1 = document.createElement('div');
+    timegrid1.setAttribute('class','timegrid1');
+    let timegrid2 = document.createElement('div');
+    timegrid2.setAttribute('class','timegrid2');
+    let timetext = document.createElement('p');
+    timetext.innerText=`Jan 12 5:15 PM`;
+    timegrid2.appendChild(timetext);
+    timegrid.appendChild(timegrid1);
+    timegrid.appendChild(timegrid2);
     
     grid.appendChild(grid1);
     grid.appendChild(grid2);
     grid.appendChild(grid4);
     grid.appendChild(grid3);
     closeUpdate.insertBefore(grid, closeUpdate.childNodes[3]);
+    closeUpdate.insertBefore(timegrid, closeUpdate.childNodes[4]);
 
     let editor = e.target.closest('.proj_edit').querySelectorAll('.refDivonly');
     editor[0].remove();

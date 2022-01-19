@@ -554,7 +554,7 @@ margin-right: 8px;
 .manage_view .proj_edit .update .update_con .msggrid {
     margin-left: 55px;
     grid-template-columns: 8% 6.5% 3.5% 78%;
-    grid-template-rows: 45px;
+    grid-template-rows: 30px;
     display: grid;
     align-items: center;
 }
@@ -580,6 +580,18 @@ margin-right: 8px;
 {
     font-size: 14px;
     color: #707070;
+}
+.manage_view .proj_edit .update .update_con .timegrid {
+    display: grid;
+    grid-template-columns: 14.5% 15%;
+    margin-bottom: 2.5rem;
+    grid-template-rows: 15px;
+    align-items: center;
+}
+.manage_view .proj_edit .update .update_con .timegrid .timegrid2 p
+{
+    color: #707070;
+    font-size: 12px;
 }
 .manage_view .proj_edit .update .update_con .row .noti_div p
 {
