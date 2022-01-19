@@ -1220,20 +1220,17 @@ width: 16px;
 }
 
 ::-webkit-scrollbar-track {
-  border: 1px solid #fff;
-  padding: 2px 0;
-  background-color: #fff;
+  box-shadow: inset 0 0 4px grey;
+  border-radius: 10px;
 }
-
 ::-webkit-scrollbar {
   width: 10px;
+  height: 7px;
 }
-
 ::-webkit-scrollbar-thumb {
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-  background-color: #e8e9ed;
-  border: 1px solid #fff;
+  background-color: #E8E9ED;
 }
 
 .manage_view .div3 .form_div .con3 .highlight_div,
@@ -2098,7 +2095,7 @@ width: 16px;
 
 .proj_filter .divfilter2 .project1 .projectcon1 table tr td {
   width: 100%;
-  margin-right: 10px;
+  /* margin-right: 10px; */
 }
 
 /* .proj_filter .divfilter2 .project1 .projectcon1 .head2,
