@@ -93,6 +93,9 @@ const boxContent = document.querySelectorAll('.box11 p');
 const options = document.querySelectorAll('.option-container2 .option2');
 const optionsCon = document.querySelectorAll('.option-container2 p');
 const optContain = document.querySelectorAll('.option-container2');
+const accordian_file = document.querySelectorAll('.proj_filter .proj_edit .proj_content .files .fileuploaded > .row > .col-9');
+const checkRadio = document.querySelectorAll('.proj_filter .proj_edit .radio_div input');
+const checkSelectBox = document.querySelector('.proj_filter .proj_edit .proj_content .files .custom-select .box11');
 let statusColor, statusText, textVal, value, pageYedit, h5con, adjacentNode, fixedValue1 = 121, replyCount=0,
     fixedValue2 = 121,
     fixedValue3 = 121;
@@ -2230,10 +2233,28 @@ function getValue(e)
 {
     e = e || window.event;
     messageText = e.target.innerText;
+    messageText=messageText.replace(/^\s*[\r\n]/gm);
 }
+function formatAMPM(date) {
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = hours >= 12 ? 'pm' : 'am';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0'+minutes : minutes;
+    var strTime = hours + ':' + minutes + ' ' + ampm;
+    return strTime;
+}
+
 function appendMessage(e)
 {
+    const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
     e = e || window.event;
+    let getAM = formatAMPM(new Date);
+    let date = new Date();
+    let monthName = month[date.getMonth()];
+    let day = date.getDate();
+
     let closeUpdate = e.target.closest('.update_con');
     let grid= document.createElement('div');
     grid.setAttribute('class','msggrid');
@@ -2246,40 +2267,63 @@ function appendMessage(e)
     grid2.setAttribute('class','msggrid2');
     let span= document.createElement('span');
     span.innerText=`Nisha`;
-    grid2.appendChild(span);
-    let grid4 = document.createElement('div');
-    grid4.setAttribute('class','msggrid4');
     let span2= document.createElement('span');
-    grid4.appendChild(span2);
+    let flexDiv = document.createElement('div');
+    flexDiv.setAttribute('class','d-flex align-items-start');
+    flexDiv.appendChild(span);
+    flexDiv.appendChild(span2);
+    let timetext = document.createElement('p');
+    timetext.innerText=`${monthName} ${day} ${getAM}`;
+    grid2.appendChild(flexDiv);
+    grid2.appendChild(timetext);
     let grid3 = document.createElement('div');
     grid3.setAttribute('class','msggrid3');
     let p= document.createElement('p');
     p.innerText=`${messageText}`;
-    grid3.appendChild(p);
-
-    let timegrid = document.createElement('div');
-    timegrid.setAttribute('class','timegrid');
-    let timegrid1 = document.createElement('div');
-    timegrid1.setAttribute('class','timegrid1');
-    let timegrid2 = document.createElement('div');
-    timegrid2.setAttribute('class','timegrid2');
-    let timetext = document.createElement('p');
-    timetext.innerText=`Jan 12 5:15 PM`;
-    timegrid2.appendChild(timetext);
-    timegrid.appendChild(timegrid1);
-    timegrid.appendChild(timegrid2);
-    
+    grid3.appendChild(p);    
     grid.appendChild(grid1);
     grid.appendChild(grid2);
-    grid.appendChild(grid4);
     grid.appendChild(grid3);
     closeUpdate.insertBefore(grid, closeUpdate.childNodes[3]);
-    closeUpdate.insertBefore(timegrid, closeUpdate.childNodes[4]);
 
     let editor = e.target.closest('.proj_edit').querySelectorAll('.refDivonly');
     editor[0].remove();
     replyCount--;
 }
+accordian_file.forEach((accordian)=>
+{
+    accordian.addEventListener('click',(e)=>
+    {
+        let target =e.target.closest('.fileuploaded').querySelector('.accordian_file');
+        if(target.style.height)
+        {
+            target.style.height=null;
+            target.style.visibility="hidden";
+        }
+        else
+        {
+            target.style.height=`${target.scrollHeight + 10}px`;
+            target.style.visibility="visible";
+        }
+    })
+})
+
+checkRadio.forEach((check)=>
+{
+    check.addEventListener('click',(e)=>
+    {
+        let text = e.target.closest('.file_handler').querySelector('.box11 p').innerText;
+        let remOverlay = e.target.closest('.file_handler').querySelector('.needtoupload .white_overlay');
+        if(check.checked==true && text !='Choose File Type' && text.length>1)
+        {
+            remOverlay.style.display="none";
+        }
+        else
+        {
+            remOverlay.style.display="block";
+        }
+    })
+})
 
 // Get data using GIF API
 emoji_Btn.addEventListener('click', () => {
@@ -3006,6 +3050,7 @@ options.forEach((option)=>
         optContain[pindex].classList.remove('active') 
         boxArrow[pindex].classList.remove('active');
         file_overlay.classList.remove('active');
+        selfCheck(e);
     })
 })
 optionsCon.forEach((option)=>
@@ -3018,8 +3063,24 @@ optionsCon.forEach((option)=>
         optContain[pindex].classList.remove('active') 
         boxArrow[pindex].classList.remove('active');
         file_overlay.classList.remove('active');
+        selfCheck(e);
     })
 })
+function selfCheck(e)
+{
+    let boolean = Array.from(checkRadio).some(check=> check.checked);
+    let text = e.target.closest('.file_handler').querySelector('.box11 p').innerText;
+    let overlay = e.target.closest('.file_handler').querySelector('.needtoupload .white_overlay');
+
+    if(boolean==true && text !=='Choose File Type' && text.length>1)
+    {
+        overlay.style.display="none";
+    }
+    else
+    {
+        overlay.style.display="block";
+    }
+}
 
 function show() {
     if (document.getElementById('benefits').style.display == 'none') {

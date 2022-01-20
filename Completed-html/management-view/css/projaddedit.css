@@ -552,47 +552,45 @@ margin-right: 8px;
     width: 100%;
 } 
 .manage_view .proj_edit .update .update_con .msggrid {
-    margin-top: 1rem;
     margin-left: 55px;
-    grid-template-columns: 8% 6.5% 3.5% 78%;
-    grid-template-rows: 30px;
+    grid-template-columns: 8% 13.5% 76%;
+    grid-template-rows: 40px;
     display: grid;
-    align-items: center;
+    align-items: flex-start;
+    margin-bottom: 3rem;
 }
 .manage_view .proj_edit .update .update_con .msggrid .msggrid1 img
 {
     width: 28px;
     height: 28px;
 }
-.manage_view .proj_edit .update .update_con .msggrid .msggrid2 span
+.manage_view .proj_edit .update .update_con .msggrid .msggrid2 span:first-child
 {
     color: #000;
     font-size: 15px;
+    margin-right: 1.3rem;
 }
-.manage_view .proj_edit .update .update_con .msggrid .msggrid4 span
+.manage_view .proj_edit .update .update_con .msggrid .msggrid2 span:last-child
 {
     display: block;
     width: 11px;
     height: 11px;
     border-radius: 30px;
+    margin-top: 6px;
     background-color: #E2445B;
+}
+.manage_view .proj_edit .update .update_con .msggrid .msggrid2 p
+{
+    display: block;
+    color: #707070;
+    font-size: 12px;
+    margin-top: 4px;
 }
 .manage_view .proj_edit .update .update_con .msggrid .msggrid3 p
 {
     font-size: 14px;
     color: #707070;
-}
-.manage_view .proj_edit .update .update_con .timegrid {
-    display: grid;
-    grid-template-columns: 14.5% 15%;
-    margin-bottom: 1rem;
-    grid-template-rows: 15px;
-    align-items: center;
-}
-.manage_view .proj_edit .update .update_con .timegrid .timegrid2 p
-{
-    color: #707070;
-    font-size: 12px;
+    margin-top: 1px;
 }
 .manage_view .proj_edit .update .update_con .row .noti_div p
 {
@@ -812,14 +810,71 @@ margin-right: 8px;
 }
 .proj_filter .proj_edit .proj_content .files .needtoupload {
     display: flex;
-    height: 60vh;
+    margin: 3rem 0 1rem;
+    height: 360px;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    width: 94%;
-    margin-left: 6%;
+    width: 100%;
     border: 1px dashed #cfcfcf;
     position: relative;
+}
+.proj_filter .proj_edit .proj_content .files .needtoupload .white_overlay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 2;
+}
+.proj_filter .proj_edit .proj_content .files .custom-select .box11 {
+    width: 100%;
+    margin-bottom: 2rem;
+    height: 39px;
+}
+.proj_filter .proj_edit .proj_content .files .custom-select .option-container2
+{
+    width: 98%;
+    z-index: 65;
+}
+.proj_filter .proj_edit .proj_content .files .file_handler {
+    margin: 2.2% 0 0 5%;
+}
+.proj_filter .proj_edit .proj_content .files .file_handler .versionText
+{
+    margin-bottom: 1.3rem;
+    color: #707070;
+    font-size: 14px;
+}
+.proj_filter .proj_edit .proj_content .files .file_handler .radio_div
+{
+    align-items: center;
+}
+.proj_filter .proj_edit .proj_content .files .file_handler .radio_div input[type="radio"]
+{
+    margin-right: 0.5rem;
+}
+.proj_filter .proj_edit .proj_content .files .file_handler .radio_div label {
+    margin-right: 3.8rem;
+    font-size: 15px;
+}
+.proj_filter .proj_edit .proj_content .files .file_handler .warning
+{
+    color: #2762ed;
+    font-size: 12px;
+}
+.proj_filter .proj_edit .proj_content .files .fileuploaded > .row > .col-9
+{
+    cursor: pointer;
+}
+.proj_filter .proj_edit .proj_content .files .uploaded .accordian_file
+{
+    margin-top: 0.8rem;
+    height: 0;
+    visibility: hidden;
+    transition: height 0.3s ease-out, visibility 0.2s ease-out;
 }
 .proj_filter .proj_edit .proj_content .files .upload_div {
     display: flex;
