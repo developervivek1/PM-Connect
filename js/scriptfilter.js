@@ -2212,10 +2212,10 @@ function showReply(e)
         </div>
     </div>
         `
-        noteDiv.style.cssText=`top:10px; left:50px`;
+        noteDiv.style.cssText=`top:10px; left:50px; margin-bottom:3rem`;
         if(e.clientX < 849)
         {
-            noteDiv.style.cssText=`top:10px; left:0px`;
+            noteDiv.style.cssText=`top:10px; left:0px; margin-bottom:3rem`;
         }
         // appendDiv.appendChild(textarea);
         appendDiv.insertBefore(noteDiv, appendDiv.childNodes[2]);
