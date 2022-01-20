@@ -552,6 +552,7 @@ margin-right: 8px;
     width: 100%;
 } 
 .manage_view .proj_edit .update .update_con .msggrid {
+    margin-top: 1rem;
     margin-left: 55px;
     grid-template-columns: 8% 6.5% 3.5% 78%;
     grid-template-rows: 30px;
@@ -584,7 +585,7 @@ margin-right: 8px;
 .manage_view .proj_edit .update .update_con .timegrid {
     display: grid;
     grid-template-columns: 14.5% 15%;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
     grid-template-rows: 15px;
     align-items: center;
 }
