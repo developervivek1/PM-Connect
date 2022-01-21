@@ -320,10 +320,10 @@ padding: 15px 0;
 .proj_filter .divfilter2 .wireframe table tbody tr td.head_conversation, 
 .proj_filter .divfilter2 .studio table tbody tr td.head_conversation
 {
-    width: 30%;
+    width: 50%;
     position: sticky;
     top: 0;
-    left: 41%;
+    left: 43%;
     background: #e7fafd;
     border: 8px solid #e7fafd;
 }
@@ -349,10 +349,11 @@ margin-top: 21.5rem;
 {
 flex-wrap: nowrap;
 }
-.proj_filter .divfilter2 .project1 .row.mobile-width
-{
-width: 423%;
-position: relative;
+.proj_filter .divfilter2 .project1 .projectcon1 .child-border > .row {
+    width: 423%;
+}
+.proj_filter .divfilter2 .project1 .projmaincon .divcon1 {
+    width: 130% !important;
 }
 .proj_filter .divfilter2 .project1 .border-bottom .projmaincon > .row {
 position: relative;
@@ -550,6 +551,8 @@ z-index: 2;
 .proj_filter .divfilter2 .project1 .projectcon1 .head1 {
     border: 8px solid #e7fafd;
     border-left: 2px solid #e7fafd;
+    left: 0;
+    width: 120%;
 }
 .proj_filter .divfilter2 .project1:nth-child(2) .projectcon1 .head1 {
     border: 10px solid #f1e7fa;

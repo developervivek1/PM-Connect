@@ -159,7 +159,7 @@ z-index: 1;
 .proj_filter .divfilter2 .project1 .projectcon1 .head1.mysticky2
 {
 height: 16px;
-background: #edf6ff;
+background: #ffff;
 }
 .proj_filter .divfilter2 .fixedMile > .mysticky2
 {
@@ -422,16 +422,16 @@ z-index: 2;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .head1 {
 border: 0px solid #EEF6FB;
-border-left: 2px solid #edf6ff;
+border-left: 0px solid #edf6ff;
 }
 .proj_filter .divfilter2 .project1:nth-child(2) .projectcon1 .head1
 {
-border: 10px solid #fbf2ff;
+border: 18px solid #fbf2ff;
 border-left: 2px solid #fbf2ff;
 }
 .proj_filter .divfilter2 .project1:nth-child(3) .projectcon1 .head1 {
-border: 10px solid #f7eac18a;
-border-left: 2px solid #f7eac18a;
+border: 10px solid #faf4de;
+border-left: 2px solid #faf4de;
 }
 .proj_filter .divfilter2 .project1 .border-bottom .last_div p {
 margin: 5px 0 0 2px;

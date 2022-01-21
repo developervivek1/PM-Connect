@@ -43,7 +43,7 @@ const tabproj_btn = document.querySelectorAll('.manage_view .proj_edit .proj_con
 const tabproj_btn2 = document.querySelectorAll('.manage_view .proj_edit .proj_content .tab-btn #showTab');
 const showFavorite = document.querySelector('.manage_view .proj_edit .proj_content .tab-btn #showFav');
 const favDiv = document.querySelector('.manage_view .proj_edit .proj_content .tab-btn .favDiv');
-let projdetail_btn = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projmaincon .conversation span');
+let projdetail_btn = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projmaincon .divcon1 span');
 const projDet_close = document.querySelector('.manage_view .proj_edit .col-md-3 span');
 const update_Talk = document.querySelector('.manage_view .proj_edit .attach_div .divfile2 button');
 const update_append = document.querySelector('.manage_view .proj_edit .update');
@@ -211,7 +211,7 @@ const ImageDisable = [{
 
 // proj_edit Hide/Show
 projdetail_btn.forEach((detailProj) => {
-    detailProj.addEventListener('click', (e) => {
+    detailProj.addEventListener('click', () => {
         showProjdetail();
     }, true)
 })
@@ -2212,10 +2212,10 @@ function showReply(e)
         </div>
     </div>
         `
-        noteDiv.style.cssText=`top:10px; left:50px`;
+        noteDiv.style.cssText=`top:10px; left:50px; margin-bottom:3rem`;
         if(e.clientX < 849)
         {
-            noteDiv.style.cssText=`top:10px; left:0px`;
+            noteDiv.style.cssText=`top:10px; left:0px; margin-bottom:3rem`;
         }
         // appendDiv.appendChild(textarea);
         appendDiv.insertBefore(noteDiv, appendDiv.childNodes[2]);
@@ -2451,9 +2451,10 @@ saveProjadd.addEventListener('click', () => {
     addEdit2 = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2');
     doneEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .done');
     discardEdit = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .addedit .btndiv2 .cancel');
-    projdetail_btn = document.querySelectorAll('proj_filter .divfilter2 .project1 .projmaincon .conversation span');
+    projdetail_btn = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projmaincon .divcon1 span');
     plannedDiv = document.querySelectorAll('.proj_filter .divfilter2 .project1 .projectcon1 .expand .divcon4');
     calendar_data = document.querySelectorAll('.proj_filter .divfilter2 #rangePicker');
+    closestExpand.style.height=`${closestExpand.scrollHeight}px`;
     setSpan();
     clickEdit.forEach((edit) => {
         edit.addEventListener('click', (e) => {
@@ -2897,34 +2898,35 @@ function showaddView(target, li) {
 
 // hide/show Main Table
 
-// (function defaultMainTableshow()
-// {
-//     expandTable.forEach((expand,ind)=>
-//     {
-//         if (expand.style.height) {
-//             expand.style.height= null;
-//             expand.style.visibility= 'hidden';
-//             rottableArrow[ind].style.transform = "rotate(0deg)";
-//         } else {
-//             console.log(expand.scrollHeight);
-//             expand.style.height= `${expand.scrollHeight}px`;
-//             expand.style.visibility= 'visible';
-//             rottableArrow[ind].style.transform = "rotate(180deg)";
-//         }
-//     })
-// }());
+(function defaultMainTableshow()
+{
+    expandTable.forEach((expand,ind)=>
+    {
+        if (expand.style.height) {
+            expand.style.height= null;
+            expand.style.visibility= 'hidden';
+            rottableArrow[ind].style.transform = "rotate(0deg)";
+        } else {
+            expand.style.height= `auto`;
+            expand.style.visibility= 'visible';
+            rottableArrow[ind].style.transform = "rotate(180deg)";
+        }
+    })
+}());
 
-showTable.forEach((expand) => {
+showTable.forEach((expand,ind) => {
     expand.addEventListener('click', (e) => {
         e.stopPropagation();
-        let expand_div = e.target.closest('.projectcon1').querySelector('.expand');
-        let img_rot = e.target;
-        if (!expand_div.classList.contains('active')) {
-            expand_div.classList.add('active');
-            img_rot.style.transform = "rotate(0deg)";
+        let expand = e.target.closest('.projectcon1').querySelector('.expand');
+        // let img_rot = e.target;
+        if (expand.style.height) {
+            expand.style.height= null;
+            expand.style.visibility= 'hidden';
+            rottableArrow[ind].style.transform = "rotate(0deg)";
         } else {
-            expand_div.classList.remove('active');
-            img_rot.style.transform = "rotate(180deg)";
+            expand.style.height= `${expand.scrollHeight}px`;
+            expand.style.visibility= 'visible';
+            rottableArrow[ind].style.transform = "rotate(180deg)";
         }
     })
 })
@@ -3007,7 +3009,7 @@ function hoverData(e) {
     hoverProject.forEach((hover)=>
     {
         let p = hover.querySelector('p').innerHTML;
-        if(p.length>24)
+        if(p.length>25)
         {
             hover.setAttribute('data-bs-toggle','tooltip');
             hover.setAttribute('data-bs-placement','bottom');

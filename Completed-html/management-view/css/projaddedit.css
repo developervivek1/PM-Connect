@@ -1,5 +1,5 @@
 /* proj edit css start */
-.proj_filter .divfilter2 .project1 .projmaincon .conversation span
+.proj_filter .divfilter2 .project1 .projmaincon .divcon1 span
 {
     cursor: pointer;
 }
@@ -554,10 +554,10 @@ margin-right: 8px;
 .manage_view .proj_edit .update .update_con .msggrid {
     margin-left: 55px;
     grid-template-columns: 8% 13.5% 76%;
-    grid-template-rows: 40px;
+    grid-template-rows: auto;
     display: grid;
     align-items: flex-start;
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
 }
 .manage_view .proj_edit .update .update_con .msggrid .msggrid1 img
 {
@@ -810,7 +810,7 @@ margin-right: 8px;
 }
 .proj_filter .proj_edit .proj_content .files .needtoupload {
     display: flex;
-    margin: 3rem 0 1rem;
+    margin: 3rem 0 1.5rem;
     height: 360px;
     justify-content: center;
     align-items: center;
@@ -818,6 +818,27 @@ margin-right: 8px;
     width: 100%;
     border: 1px dashed #cfcfcf;
     position: relative;
+}
+.proj_filter .proj_edit .proj_content .files .needtoupload .btn-file
+{
+    position: relative;
+    overflow: hidden;
+    margin:2rem 0 0;
+}
+.proj_filter .proj_edit .proj_content .files .needtoupload .btn-file input[type="file"] {
+    position: absolute;
+    top: -2px;
+    right: -25%;
+    width: 146px;
+    height: 103px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: pointer;
+    display: block;
+    z-index: 2;
 }
 .proj_filter .proj_edit .proj_content .files .needtoupload .white_overlay
 {
@@ -831,7 +852,7 @@ margin-right: 8px;
 }
 .proj_filter .proj_edit .proj_content .files .custom-select .box11 {
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     height: 39px;
 }
 .proj_filter .proj_edit .proj_content .files .custom-select .option-container2
@@ -844,26 +865,29 @@ margin-right: 8px;
 }
 .proj_filter .proj_edit .proj_content .files .file_handler .versionText
 {
-    margin-bottom: 1.3rem;
+    margin-bottom: 1.1rem;
     color: #707070;
     font-size: 14px;
+    margin-left: 2px;
 }
 .proj_filter .proj_edit .proj_content .files .file_handler .radio_div
 {
     align-items: center;
+    margin-left: 0.5rem;
 }
 .proj_filter .proj_edit .proj_content .files .file_handler .radio_div input[type="radio"]
 {
     margin-right: 0.5rem;
 }
 .proj_filter .proj_edit .proj_content .files .file_handler .radio_div label {
-    margin-right: 3.8rem;
+    margin-right: 4.1rem;
     font-size: 15px;
 }
 .proj_filter .proj_edit .proj_content .files .file_handler .warning
 {
     color: #2762ed;
     font-size: 12px;
+    margin-left: 2px;
 }
 .proj_filter .proj_edit .proj_content .files .fileuploaded > .row > .col-9
 {
@@ -881,21 +905,20 @@ margin-right: 8px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 0;
     line-height: 3.8rem;
 }
-.proj_filter .proj_edit .proj_content .files .upload_div img {
-    margin-bottom: 3.8rem;
+.proj_filter .proj_edit .proj_content .files .needtoupload .upload_div img {
+    margin-bottom: 1rem;
     width: 8rem;
 }
 .proj_filter .proj_edit .proj_content .files .upload_div h2 {
-    font-size: 1.7rem;
+    font-size: 1.65rem;
     margin-bottom: -0.1rem;
     color: #171e48;
 }
 .proj_filter .proj_edit .proj_content .files .upload_div p
 {
-    font-size: 14px;
+    font-size: 13px;
     color: #2762edd6;
     margin-bottom: 0.9rem;
 }
@@ -954,7 +977,21 @@ margin-right: 8px;
     border: 1px solid #dbdbdb;
     margin: 8px 0 13px 0px;
     border-radius: 5px;
-    width: 92%;
+    width: 93%;
+}
+.proj_filter .proj_edit .proj_content .files .uploaded .fileuploaded .col-9 > .d-flex 
+{
+    margin-bottom: 1.7rem;
+}
+.proj_filter .proj_edit .proj_content .files .uploaded .fileuploaded .col-9 > .d-flex img {
+    transform: rotate(90deg);
+    height: 7px;
+    margin-right: 0.7rem;
+}
+.proj_filter .proj_edit .proj_content .files .uploaded .fileuploaded .col-9 > .d-flex p
+{
+    font-size: 13px;
+    color: #82869D;
 }
 .proj_filter .proj_edit .proj_content .files .uploaded .fileuploaded .row
 {
@@ -962,7 +999,7 @@ margin-right: 8px;
 }
 .proj_filter .proj_edit .proj_content .files .uploaded .fileuploaded .grid {
     display: grid;
-    grid-template-columns: 51px 90%;
+    grid-template-columns: 19% 115%;
 }
 .proj_filter .proj_edit .proj_content .files .uploaded .fileuploaded .grid .grid2
 {
@@ -977,10 +1014,15 @@ margin-right: 8px;
     font-size: 11px;
     font-weight: 500;
     color: #130a6359;
+    margin-top: 1px;
+}
+.proj_filter .proj_edit .proj_content .files .uploaded .fileuploaded .grid .grid2 p:nth-child(2)
+{
+    margin-right: 1rem;
 }
 .proj_filter .proj_edit .proj_content .files .uploaded .fileuploaded .grid .grid2 h5 {
     font-size: 12px;
-    margin-right: 1.2rem;
+    margin-right: 1rem;
 }
 .proj_filter .proj_edit .proj_content .files .uploaded .box11
 {
@@ -1827,7 +1869,7 @@ box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     }
     .manage_view .proj_edit .update .update_con .msggrid {
         margin-left: 16px;
-        grid-template-columns: 10% 15% 7% 65%;
+        grid-template-columns: 11% 25% 64%;
     }
     .manage_view .proj_edit .update .update_con .msggrid .msggrid1 img {
         width: 25px;
@@ -1837,5 +1879,32 @@ box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     {
         width: 25px;
         height: 25px;
+    }
+    .proj_filter .proj_edit .proj_content .files .file_handler {
+        margin: 0% 0 0 0%;
+    }
+    .proj_filter .proj_edit .proj_content .files .uploaded .fileuploaded .grid .grid2 h5 {
+        font-size: 11px;
+        margin-right: 0.5rem;
+    }
+    .proj_filter .proj_edit .proj_content .files .uploaded .fileuploaded .grid .grid2 p:nth-child(2) {
+        margin-right: 0.5rem;
+    }
+    .proj_filter .proj_edit .proj_content .files .file_handler .radio_div {
+        margin-left: 1.1rem;
+    }
+    .proj_filter .proj_edit .proj_content .files .file_handler .radio_div label {
+        margin-right: 3.1rem;
+        font-size: 14px;
+    }
+    .proj_filter .proj_edit .proj_content .files .file_handler .versionText {
+        margin-left: 1rem;
+    }
+}
+
+@media(min-width: 1214px) and (max-width: 1285px)
+{
+    .proj_filter .proj_edit .proj_content .files .uploaded .fileuploaded {
+        width: 100%;
     }
 }
