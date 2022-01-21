@@ -1889,10 +1889,10 @@ justify-content: center;
 .proj_filter .divfilter2 .project1 .projectcon1
 {
 width: 95.2%;
-background-color: #5ED9EF0D;
+background-color: #ffff;
 padding: 15px;
 margin: 20px 0;
-border-left: 6px solid #5ED9F0;
+border-left: 6px solid #ffff;
 border-radius: 5px;
 }
 .proj_filter .divfilter2 .project1:nth-child(2) .projectcon1
@@ -2312,7 +2312,7 @@ background: #A25DDE;
 .proj_filter .divfilter2 .project1:nth-child(4) .projectcon1
 {
 margin-top: 0px; */
-background-color: #f7eac18a;
+background-color: #faf4de;
 border-left: 6px solid #F0CF5E;
 }
 .proj_filter .divfilter2 .project1:nth-child(3) .projectcon1 .head1 span:nth-child(2) {
@@ -2965,7 +2965,7 @@ margin-top: 0.3rem;
 color: #5E70EF;
 }
 .proj_filter .divfilter2 .project1 .purple-table .border-bottom{
-border-bottom: 3px solid #A25DDD0D !important;
+border-bottom: 3px solid #fbf2ff !important;
 }
 .proj_filter .divfilter2 .project1 .yellow-table .border-bottom{
 border-bottom: 3px solid #f7eac18a !important;
