@@ -149,15 +149,36 @@ top: 0;
 right: -4px;
 top: 0;
 }
-.manage_view .proj_edit .proj_content .send_div
+.manage_view .proj_edit .proj_content .chat_area .attach_div
 {
-    position: absolute;
-    bottom: 20px;
-    right: 3.5%;
+    border: none;
+    padding: 15px 18px;
 }
-.manage_view .proj_edit .proj_content .send_div span
+.manage_view .proj_edit .proj_content .chat_area
 {
+    border: 1px solid #dbdbdb;
+    width: 98%;
+    margin-left: 1%;
+}
+.manage_view .proj_edit .proj_content .chat_area textarea
+{
+    width: 100%;
+    height: 100px;
+    word-break: break-word;
+    border: none;
+    padding: 15px;
+    font-size: 14px;
+} 
+.manage_view .proj_edit .proj_content .send_div span {
     cursor: pointer;
+    width: 28px;
+    height: 28px;
+}
+.manage_view .proj_edit .proj_content .send_div span img
+{
+    width: 90% !important;
+    height: 90% !important;
+    margin-left: 0rem !important;
 }
 .manage_view .proj_edit .proj_content {
     padding-left: 42px;
@@ -395,6 +416,10 @@ top: 0;
     height: 42px;
     letter-spacing: 0.4px;
 }
+.manage_view .proj_edit .proj_content .no_update
+{
+    margin-top: 9px;
+}
 .manage_view .proj_edit .proj_content .no_update p
 {
     font-size: 14px;
@@ -491,12 +516,11 @@ top: 0;
     align-items: flex-start;
 }
 .manage_view .proj_edit .update .update_con {
-    /* border: 1px solid #dbdbdb; */
+    border: 1px solid #dbdbdb;
     margin-top: 2rem;
 }
-.manage_view .proj_edit .update .update_con >.has_pad
-{
-    padding: 25px 25px 10px;
+.manage_view .proj_edit .update .update_con >.has_pad {
+    padding: 18px 22px 10px;
 }
 .manage_view .proj_edit .update .update_con .no_margin
 {
@@ -534,9 +558,10 @@ margin-right: 8px;
     border-radius: 30px;
     margin-top: 3px;
 }
-.manage_view .proj_edit .update .update_con .seen_div
-{
-    margin-left: 8px;
+.manage_view .proj_edit .update .update_con .seen_div {
+    border-top: 1px solid #dbdbdb;
+    height: 50px;
+    padding: 2px 25px;
 }
 .manage_view .proj_edit .update .update_con .seen_div p
 {
@@ -544,31 +569,43 @@ margin-right: 8px;
     font-weight: 500;
     color: #707070ba;
 }
-.manage_view .proj_edit .update .update_con .seen_div .grid
-{
+.manage_view .proj_edit .update .update_con .seen_div .grid {
     display: grid;
     grid-template-columns: 21% 17% 15%;
     grid-template-rows: 40px;
     width: 100%;
-} 
+    align-items: center;
+}
 .manage_view .proj_edit .update .update_con .msggrid {
-    margin-left: 55px;
-    grid-template-columns: 8% 13.5% 76%;
-    grid-template-rows: auto;
-    display: grid;
-    align-items: flex-start;
     margin-bottom: 3.5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 1rem;
+}
+.manage_view .proj_edit .update .update_con .msggrid .msggrid1
+{
+    flex: 0 0 6%;
+    max-width: 6%;
+    text-align: right;
 }
 .manage_view .proj_edit .update .update_con .msggrid .msggrid1 img
 {
     width: 28px;
     height: 28px;
 }
-.manage_view .proj_edit .update .update_con .msggrid .msggrid2 span:first-child
+.manage_view .proj_edit .update .update_con .msggrid .msggrid2
 {
+    flex: 0 0 13%;
+    max-width: 13%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.manage_view .proj_edit .update .update_con .msggrid .msggrid2 span:first-child {
     color: #000;
-    font-size: 15px;
-    margin-right: 1.3rem;
+    font-size: 13px;
+    margin-right: 0.6rem;
+    margin-top: 0.17rem;
 }
 .manage_view .proj_edit .update .update_con .msggrid .msggrid2 span:last-child
 {
@@ -586,11 +623,18 @@ margin-right: 8px;
     font-size: 12px;
     margin-top: 4px;
 }
-.manage_view .proj_edit .update .update_con .msggrid .msggrid3 p
-{
+.manage_view .proj_edit .update .update_con .msggrid .msggrid3 {
+    flex: 0 0 72%;
+    max-width: 72%;
+    text-align: right;
+    word-break: break-word;
+}
+.manage_view .proj_edit .update .update_con .msggrid .msggrid3 p {
     font-size: 14px;
     color: #707070;
     margin-top: 1px;
+    padding: 5px;
+    background: #f5f5f5;
 }
 .manage_view .proj_edit .update .update_con .row .noti_div p
 {
@@ -608,6 +652,7 @@ margin-right: 8px;
     font-size: 14px;
     color: #707070;
     word-break: break-word;
+    margin-bottom: 1.5rem;
 }
 .manage_view .proj_edit .update .update_con .seen_div .grid .grid1,
 .manage_view .proj_edit .update .update_con .seen_div .grid .grid2,
@@ -638,6 +683,7 @@ margin-right: 8px;
 {
     margin-top: 1px;
     font-size: 13px;
+    cursor: pointer;
 }
 .manage_view .proj_edit .update .update_con .seen_div .grid .grid2 span
 {
@@ -848,7 +894,7 @@ margin-right: 8px;
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.6);
-    z-index: 2;
+    z-index: 5;
 }
 .proj_filter .proj_edit .proj_content .files .custom-select .box11 {
     width: 100%;
@@ -1852,7 +1898,7 @@ box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         margin-left: 0%;
     }
     .manage_view .proj_edit .update .update_con .seen_div .grid {
-        grid-template-columns: 40% 40% 20%;
+        grid-template-columns: 43% 40% 20%;
     }
     .manage_view .proj_edit .update .update_con .seen_div .grid .grid2 img {
         margin-right: 8px;
@@ -1869,7 +1915,20 @@ box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     }
     .manage_view .proj_edit .update .update_con .msggrid {
         margin-left: 16px;
-        grid-template-columns: 11% 25% 64%;
+    }
+    .manage_view .proj_edit .update .update_con .msggrid .msggrid1 {
+        flex: 0 0 12%;
+        max-width: 12%;
+    }
+    .manage_view .proj_edit .update .update_con .msggrid .msggrid2 {
+        flex: 0 0 30%;
+        max-width: 30%;
+        margin-left: 0.5rem;
+    }
+    .manage_view .proj_edit .update .update_con .msggrid .msggrid3 {
+        flex: 0 0 58%;
+        max-width: 58%;
+        word-break: break-word;
     }
     .manage_view .proj_edit .update .update_con .msggrid .msggrid1 img {
         width: 25px;
@@ -1899,6 +1958,10 @@ box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     }
     .proj_filter .proj_edit .proj_content .files .file_handler .versionText {
         margin-left: 1rem;
+    }
+    .manage_view .proj_edit .proj_content .chat_area .divfile1{
+        flex: 0 0 90%;
+        max-width: 90%;
     }
 }
 

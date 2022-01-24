@@ -1975,19 +1975,36 @@ width: 16px;
 }
 .proj_filter .divfilter2 .project1 ::-webkit-scrollbar
 {
-  height: 10px;
+  height: 0.55rem;
 }
 .proj_filter .divfilter2 .project1 ::-webkit-scrollbar-track {
   width: 10px;
   height: 5px;
   border-radius: 15px;
-  background-color: #ecf2ff;
+  background-color: #f9fafc;
 }
 
 .proj_filter .divfilter2 .project1 ::-webkit-scrollbar-thumb {
   border-radius: 15px;
   background-color: #d9e4fc;
 }
+
+.proj_filter .divfilter2 .project1 ::-webkit-scrollbar
+{
+  
+  overflow-x: hidden;
+  height: 0.55rem !important;
+}
+
+.proj_filter .divfilter2 .project1:hover ::-webkit-scrollbar
+{
+overflow-x: scroll;
+  
+
+}
+
+
+
 .proj_filter .divfilter2 .project1 .projectcon1 {
   width: 95.2%;
   background-color: #e7fafd;
@@ -2011,13 +2028,16 @@ width: 16px;
   border-left: 6px solid #A25DDE;
   background-color: #f1e7fa;
 }
-
 .proj_filter .divfilter2 .project1 .projectcon1 .expand {
   margin-top: 1.4rem;
   height: 0;
   visibility: hidden;
   transition: height 0.4s ease-out, visibility 0.2s ease-out;
   position: relative;
+}
+.proj_filter .divfilter2 .project1 .projectcon1 .expand.active {
+  height: auto;
+  visibility: visible;
 }
 /* .proj_filter .divfilter2 .research .projectcon1 .expand::before
 {
@@ -2273,15 +2293,15 @@ max-width: calc(85%/9);
 }
 .proj_filter .divfilter2 .project1 .border-bottom:hover
 {
-  background-color: #f0f0f0;
+  background-color: #f7f7f7;
 }
 .proj_filter .divfilter2 .project1 .border-bottom:hover .projmaincon .divcon1
 {
-  background-color: #f0f0f0;
+  background-color: #f7f7f7;
 }
 .proj_filter .divfilter2 .project1 .border-bottom:hover .projmaincon td.conversation
 {
-  background-color: #f0f0f0;
+  background-color: #f7f7f7;
 }
 .proj_filter .divfilter2 .project1 .border-bottom .projmaincon {
   width: 99.6%;
@@ -4163,7 +4183,3 @@ ul.dropdown-menu {
 .form_overlay.active {
   display: block;
 }
-
-
-
-/* pop msg */
