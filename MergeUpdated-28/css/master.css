@@ -663,6 +663,7 @@ nav {
 
 .manage_view .div1 ul:nth-child(2) {
   margin-top: 1vh;
+  position: relative;
 }
 
 .manage_view .div1 ul:nth-child(3) {
@@ -1682,7 +1683,10 @@ width: 16px;
 .proj_filter .divfilter2 .kanban {
   margin-top: 7.7rem;
 }
-
+.proj_filter .h1fixed .list-title
+{
+  margin-left: 2rem;
+}
 .proj_filter .divfilter2 .addview {
   position: fixed;
   left: 55.2%;
@@ -2186,7 +2190,7 @@ max-width: calc(85%/9);
   position: sticky;
   top: 0;
   left: 0%;
-  background: #e7fafd;
+  /* background: #e7fafd; */
   width: 251%;
 }
 .proj_filter .divfilter2 .project1.wireframe .projectcon1 .head1, 
@@ -2198,6 +2202,9 @@ max-width: calc(85%/9);
 .proj_filter .divfilter2 .project1.studio .projectcon1 .head1, 
 .proj_filter .divfilter2 .project1.studio table tbody td.head_conversation 
 {
+  z-index: 1;
+  border: 18px solid #fdf8e7;
+  border-left: 2px solid #fdf8e7;
   background-color: #fdf8e7;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 h5,
@@ -3862,18 +3869,19 @@ ul.dropdown-menu {
   font-size: 2.5rem;
   font-weight: 600;
   order: 0;
+  margin-left: 2rem;
 }
 
 .selected::after {
   content: "";
-  background: url("../img/arrow-down.png");
+  background: url(../img/arrow-down.png);
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
   height: 100%;
   width: 23px;
-  right: 46px;
-  top: 5px;
+  right: 24px;
+  top: 7px;
   transition: all 0.3s ease;
 }
 
@@ -4199,4 +4207,32 @@ ul.dropdown-menu {
 .projectcon1.heading {
   border-left: 6px solid white !important;
 
+}
+
+
+.proj_filter .divfilter2 .project1 .border-bottom:hover .projmaincon .head-blank {
+  background-color: #f1e7fa;
+}
+
+
+.proj_filter .divfilter2 .project1 .border-bottom:hover .projmaincon .head-blank2 {
+  background-color: #fdf8e7;
+}
+
+
+/* changes bugs*/
+
+.projectcon1.heading {
+  border-left: 6px solid white !important;
+
+}
+
+
+.proj_filter .divfilter2 .project1 .border-bottom:hover .projmaincon .head-blank {
+  background-color: #f1e7fa;
+}
+
+
+.proj_filter .divfilter2 .project1 .border-bottom:hover .projmaincon .head-blank2 {
+  background-color: #fdf8e7;
 }

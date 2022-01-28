@@ -96,6 +96,9 @@ const optContain = document.querySelectorAll('.option-container2');
 const accordian_file = document.querySelectorAll('.proj_filter .proj_edit .proj_content .files .fileuploaded > .row > .col-9');
 const checkRadio = document.querySelectorAll('.proj_filter .proj_edit .radio_div input');
 const checkSelectBox = document.querySelector('.proj_filter .proj_edit .proj_content .files .custom-select .box11');
+const triggerWorkspace = document.querySelector('.manage_view .workarrow_div');
+const showWorkspace = document.querySelector('.manage_view .workspace_div');
+const showWorkspaceCon = document.querySelector('.manage_view .workspace_div .workspace_content');
 let statusColor, statusText, textVal, value, pageYedit, h5con, adjacentNode, fixedValue1 = 121, replyCount=0,
     fixedValue2 = 121,
     fixedValue3 = 121;
@@ -1199,6 +1202,26 @@ function hoverData(e) {
     })
 }());
 
+// show workspace
+triggerWorkspace.addEventListener('click',(e)=>
+{
+    let imgDiv= e.target.closest('.row').querySelector('.workarrow_div');
+    let img= e.target.closest('.row').querySelector('.workarrow_div span');
+    if(!showWorkspace.classList.contains('active') && !showWorkspaceCon.classList.contains('active'))
+    {
+       showWorkspace.classList.add('active');
+       showWorkspaceCon.classList.add('active');
+       imgDiv.style.left="26.5%";
+       img.style.transform="rotate(180deg)";
+    }
+    else
+    {
+        showWorkspace.classList.remove('active');
+        showWorkspaceCon.classList.remove('active');
+        imgDiv.style.left="6.5%";
+       img.style.transform="rotate(0deg)";
+    }
+})
 // working dropdown
 boxTrigger.forEach((box,ind)=>
 {

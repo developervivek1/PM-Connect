@@ -1,5 +1,6 @@
 .notification_div,
-.helpsupport_div {
+.helpsupport_div
+{
     position: fixed;
     top: 0;
     left: 5.5%;
@@ -488,6 +489,91 @@
     font-size: 13px;
     color: #000;
 }
+.workspace_div 
+{
+    position: fixed;
+    top:0;
+    left: 5.5%;
+    width: 1.8%;
+    min-height: 100vh;
+    padding: 0;
+    z-index: 50;
+    cursor: default;
+    box-shadow: 0 0 12px rgb(0 0 0 / 15%);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #f4f7fe;
+    transition: all 0.3s ease-in-out;    
+}
+.workspace_div.active
+{
+    width: 22%;
+}
+.workspace_div .workspace_content
+{
+    padding: 5.5rem 2rem;
+    width: 100%;
+    min-height: 100vh;
+    visibility: hidden;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.workspace_div .workspace_content.active
+{
+    visibility: visible;
+}
+.workspace_div .workspace_content h3
+{
+    color: #171E48;
+    letter-spacing: 0.1px;
+    margin-bottom: 1.5rem;
+    font-size: 19px;
+}
+.workspace_div .workspace_content input {
+    height: 42px;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 0 2px rgb(0 0 0 / 10%);
+    padding: 0 18px;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    margin-bottom: 1.7rem;
+    background: #fff url(../icons/searchgrey.svg) no-repeat;
+    background-position: 93% 14px;
+}
+.workspace_div .workspace_content .d-flex p
+{
+    color: #171E48;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 0.3rem;
+}
+.workarrow_div {
+    position: fixed;
+    top: 40px;
+    left: 6.35%;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    z-index: 60;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #2762ed;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: all 0.3s ease-out;
+}
+.workarrow_div span {
+    font-size: 18px;
+    font-weight: 500;
+    color:#2762ed;
+    transition: 0.3s ease-in-out;
+}
+
 
 
 @media(max-width:849px)
@@ -633,6 +719,13 @@
     .search_div .search_con p.grey {
         font-size: 13px;
         margin-top: 0.8rem;
+    }
+    .workspace_div 
+    {
+        display: none;   
+    }
+    .workarrow_div {
+        display: none;
     }
 }
 
