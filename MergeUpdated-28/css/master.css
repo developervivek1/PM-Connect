@@ -4220,6 +4220,26 @@ ul.dropdown-menu {
 }
 
 
+
+
+/* changes bugs*/
+
+.projectcon1.heading {
+  border-left: 6px solid white !important;
+
+}
+
+
+.proj_filter .divfilter2 .project1 .border-bottom:hover .projmaincon .head-blank {
+  background-color: #f1e7fa;
+}
+
+
+.proj_filter .divfilter2 .project1 .border-bottom:hover .projmaincon .head-blank2 {
+  background-color: #fdf8e7;
+}
+
+
 /* changes bugs*/
 
 .projectcon1.heading {
