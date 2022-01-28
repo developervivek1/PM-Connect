@@ -497,7 +497,7 @@
     width: 1.8%;
     min-height: 100vh;
     padding: 0;
-    z-index: 50;
+    z-index: 10;
     cursor: default;
     box-shadow: 0 0 12px rgb(0 0 0 / 15%);
     border-top-right-radius: 20px;
@@ -516,7 +516,6 @@
     min-height: 100vh;
     visibility: hidden;
     position: relative;
-    transition: all 0.3s ease-in-out;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -541,39 +540,42 @@
     border: none;
     font-size: 14px;
     margin-bottom: 1.7rem;
-    background: #fff url(../icons/searchgrey.svg) no-repeat;
+    background: #fff url(../icons/searchWorkspace.svg) no-repeat;
     background-position: 93% 14px;
+}
+.workspace_div .workspace_content .d-flex
+{
+    margin-left: 0.6rem;
+}
+.workspace_div .workspace_content .d-flex img
+{
+    margin-right: 0.8rem;
 }
 .workspace_div .workspace_content .d-flex p
 {
     color: #171E48;
     font-size: 14px;
     font-weight: 500;
-    margin-left: 0.3rem;
 }
 .workarrow_div {
     position: fixed;
     top: 40px;
-    left: 6.35%;
-    width: 26px;
-    height: 26px;
+    left: 5.8%;
+    width: 44px;
+    height: 44px;
     display: flex;
-    z-index: 60;
+    z-index: 11;
     justify-content: center;
     align-items: center;
-    border: 1px solid #2762ed;
-    border-radius: 30px;
     cursor: pointer;
-    background-color: #fff;
     transition: all 0.3s ease-out;
 }
-.workarrow_div span {
-    font-size: 18px;
-    font-weight: 500;
-    color:#2762ed;
-    transition: 0.3s ease-in-out;
+.workarrow_div img {
+    width: 90%;
+    height: 90%;
+    transform: rotate(180deg);
+    transition: all 0.3s ease-in-out;
 }
-
 
 
 @media(max-width:849px)
@@ -720,12 +722,21 @@
         font-size: 13px;
         margin-top: 0.8rem;
     }
-    .workspace_div 
-    {
-        display: none;   
-    }
     .workarrow_div {
-        display: none;
+        top: 66px;
+        left: 0.8%;
+        width: 39px;
+        height: 39px;
+    }
+    .workspace_div {
+        left: 0%;
+        width: 0%;
+    }
+    .workspace_div.active {
+        width: 75%;
+    }
+    .workspace_div .workspace_content {
+        padding: 9rem 2rem 5.5rem;
     }
 }
 

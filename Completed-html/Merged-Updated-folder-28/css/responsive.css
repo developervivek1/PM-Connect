@@ -962,12 +962,13 @@ background-color: #D8E2FC;
     z-index: 3;
 }
 .selected {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    padding-top: 2px;
 }
 .selected::after {
     width: 15px;
-    right: 41%;
-    top: 6px;
+    right: 35%;
+    top: 10px;
 }
 .proj_filter .divfilter2 .project1 .border-bottom .projmaincon table tr td.conversation {
     justify-content: center;

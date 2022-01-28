@@ -6,31 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- goole icons -->
+
+    <!-- font google icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- fontawesome 5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- bs-5 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.min.css"
         integrity="sha512-6KY5s6UI5J7SVYuZB4S/CZMyPylqyyNZco376NM2Z8Sb8OxEdp02e1jkKk/wZxIEmjQ6DRCEBhni+gpr9c4tvA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- UIkit CSS -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/css/uikit.min.css" />
-     -->
     <!-- custom css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/mviewreq.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/notification.css">
-    <!-- <link rel="stylesheet" href="css/mview.css"> -->
-    <title>IT Project Closure</title>
+
+    <title>Management View Request</title>
 </head>
 
 <body>
-    <section class="manage_view proj_filter m_bg">
+    <section class="manage_view mview_req">
         <div class="container-fluid">
             <div class="row">
                 <div class="myoverlay"></div>
                 <div class="menu_overlay"></div>
-                <div class="form_overlay"></div>
                 <div class="noti_overlay"></div>
                 <div class="notification_div">
                     <div class="col-md-12 d-flex justify-content-start">
@@ -724,406 +727,72 @@
                     </div>
                     <div></div>
                 </div>
-                <!--mobile header end  -->
-
-                <div class="div2">
-                    <div class="center_div">
-                        <ul class="stepper5">
-                            <li class="active">
-                                <div><span>1</span></div>
-                                <div class="mob_con">Project Information</div>
-                            </li>
-                            <li>
-                                <div><span>2</span></div>
-                                <div class="mob_con">Project Background</div>
-                            </li>
-                            <li>
-                                <div><span>3</span></div>
-                                <div class="mob_con">Project Achivements</div>
-                            </li>
-                            <li>
-                                <div><span>4</span></div>
-                                <div class="mob_con">Customer Feedback</div>
-                            </li>
-                            <li>
-                                <div><span>5</span></div>
-                                <div class="mob_con">Sign-Off</div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="div3">
-                    <div class="step_wise">
-                        <div class="border_step"></div>
-                        <button class="btn" type="button" id="goback">Back</button>
-                        <div class="center_step">
-                            <h5 class="active">Step</h5><span class="active">1</span><span class="pie">/</span>
-                            <h5>Step 5</h5>
+                <div class="change-req mt-5">
+                    <div class="row">
+                        <div class="center">
+                            <h1>Select the requests</h1>
+                            <p class="desc">Sample description while collaborating seamlessly with your team, tracking
+                                progress, and
+                                reaching goals with this template.
+                            </p>
+                            <a href="management-view-request-new-request-info.html">
+                                <div class="itproj_div">
+                                    <div class="grid">
+                                        <div class="grid1">
+                                            <span><img src="icons/NEw IT.svg" class="button" alt=""></span>
+                                            <span><img src="icons/NEw IT_blue.svg" alt=""></span>
+                                        </div>
+                                        <div class="grid2">
+                                            <h2>New IT Project Request</h2>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, atque
+                                                accusamus
+                                                odio ut.</p>
+                                        </div>
+                                        <div class="grid3">
+                                            <div><i class="material-icons">check</i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="management-view-change-request-info.html">
+                                <div class="itproj_div">
+                                    <div class="grid">
+                                        <div class="grid1">
+                                            <span><img src="icons/changeproject.svg" alt=""></span>
+                                            <span><img src="icons/change project_blue.svg" alt=""></span>
+                                        </div>
+                                        <div class="grid2">
+                                            <h2>Change Project Request</h2>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, atque
+                                                accusamus
+                                                odio ut.</p>
+                                        </div>
+                                        <div class="grid3">
+                                            <div><i class="material-icons">check</i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="bg-light" href="mview-chg-itproject.html">
+                                <div class="itproj_div">
+                                    <div class="grid">
+                                        <div class="grid1">
+                                            <span><img src="icons/Closure-grey.svg" alt=""></span>
+                                            <span><img src="icons/closure_blue.svg" alt=""></span>
+                                        </div>
+                                        <div class="grid2">
+                                            <h2>IT Project Closure</h2>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, atque
+                                                accusamus
+                                                odio ut.</p>
+                                        </div>
+                                        <div class="grid3">
+                                            <div><i class="material-icons">check</i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                        <button class="btn active" type="button">Next</button>
-                    </div>
-                    <div class="form_div">
-                        <form action="">
-                            <div class="con1 step_forward active">
-                                <h2>Project Information</h2>
-                                <p>Provide the project information details</p>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>Project Name <span>*</span></p>
-                                        <input type="text" placeholder="Project Name *" required>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>Project Manager Business <span>*</span></p>
-                                        <input type="text" placeholder="Project Manager Business *" required>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>Project Manager IT <span>*</span></p>
-                                        <input type="text" placeholder="Program Manager *" required>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>Project Manager IT :</p>
-                                        <input type="text" placeholder="Program Manager IT *" required>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>Team Members (Business) :</p>
-                                        <input type="text" placeholder="Program Manager IT *" required>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>Team Members (IT) :</p>
-                                        <input type="password" placeholder="Client Name" id="myInput">
-                                        <a class="eyes1" type="button"><i class="fas fa-eye"
-                                                onclick="myFunction()"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--con1 closed-->
-                            <div class="con2 step_forward">
-                                <h2>Project Background</h2>
-                                <p>Provide the project background details</p>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>Project Scope <span>*</span></p>
-                                        <input type="text" placeholder="Project Name *" required>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>Effort / Budget Estimated <span>*</span></p>
-                                        <input type="text" placeholder="Project Manager Business *" required>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>Timelines Commited <span>*</span></p>
-                                        <input type="text" placeholder="Program Manager *" required>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="con3 step_forward">
-                                <h2>Project Achivements</h2>
-                                <p>Provide the project achivement details</p>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>Project Accomplishments <span>*</span></p>
-                                        <input type="text" placeholder="Project Name *">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>Effort / Budget Spent <span>*</span></p>
-                                        <input type="text" placeholder="Project Manager Business *">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>Timelines Delivered <span>*</span></p>
-                                        <input type="text" placeholder="Timelines Delivered">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>Reasons for delay ( if any ) <span>*</span></p>
-                                        <input type="text" placeholder="Reason for delay">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>Comments / Learning <span>*</span></p>
-                                        <textarea type="textarea" class="text-decoration-none" name="" id="" cols="30"
-                                            rows="7" placeholder="Comments or Learning"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- con4 start -->
-                            <div class="con4 step_forward feedback">
-                                <h2>Customer Feedback <p>( to be filled by Project Owner/Project Manager)</p></h2>
-                                <p>Quality of Delivery <span>1 is lowest satisfaction 5 is highest satisfaction</span></p>
-                                <div class="row mt-4">
-                                    <div class="col-md-6 position-relative">
-                                        <p>Project completion as per the agreed schedule <span>*</span></p>
-                                        <h5>Rating</h5>
-                                        <div class="star_div">
-                                            <span class="material-icons" num="1">star_border</span>
-                                            <span class="material-icons" num="2">star_border</span>
-                                            <span class="material-icons" num="3">star_border</span>
-                                            <span class="material-icons" num="4">star_border</span>
-                                            <span class="material-icons" num="5">star_border</span>
-                                            <img src="icons/chatbox_Grey.svg" class="chat" alt="">
-                                            <p>Less</p>
-                                            <p>High</p>
-                                        </div>
-                                        <!-- feedback -->
-                                        <div class="feedback_appear">
-                                            <div class="col-md-12 d-flex justify-content-end close_feedback">
-                                                <i class="material-icons">close</i>
-                                            </div>
-                                            <textarea name="" id=""></textarea>
-                                            <div class="col-md-12 d-flex justify-content-end send_feedback">
-                                                <button type="button" class="btn">Send</button>
-                                            </div>
-                                        </div>
-                                        <!-- feedback end-->
-                                    </div>
-                                    <div class="col-md-6 position-relative">
-                                        <p>Project objective met as per agreed schedule <span>*</span></p>
-                                        <h5>Rating</h5>
-                                        <div class="star_div">
-                                            <span class="material-icons" num="1">star_border</span>
-                                            <span class="material-icons" num="2">star_border</span>
-                                            <span class="material-icons" num="3">star_border</span>
-                                            <span class="material-icons" num="4">star_border</span>
-                                            <span class="material-icons" num="5">star_border</span>
-                                            <img src="icons/chatbox_Grey.svg" class="chat" alt="">
-                                            <p>Less</p>
-                                            <p>High</p>
-                                        </div>
-                                         <!-- feedback -->
-                                         <div class="feedback_appear">
-                                            <div class="col-md-12 d-flex justify-content-end close_feedback">
-                                                <i class="material-icons">close</i>
-                                            </div>
-                                            <textarea name="" id=""></textarea>
-                                            <div class="col-md-12 d-flex justify-content-end send_feedback">
-                                                <button class="btn">Send</button>
-                                            </div>
-                                        </div>
-                                        <!-- feedback end-->
-                                    </div>
-                                </div>
-                                <!-- cd -->
-
-                                <!-- cd -->
-                                <div class="row">
-                                    <div class="col-md-6 position-relative">
-                                        <p>Skill level of the project team <span>*</span></p>
-                                        <h5>Rating</h5>
-                                        <div class="star_div">
-                                            <span class="material-icons" num="1">star_border</span>
-                                            <span class="material-icons" num="2">star_border</span>
-                                            <span class="material-icons" num="3">star_border</span>
-                                            <span class="material-icons" num="4">star_border</span>
-                                            <span class="material-icons" num="5">star_border</span>
-                                            <img src="icons/chatbox_Grey.svg" class="chat" alt="">
-                                            <p>Less</p>
-                                            <p>High</p>
-                                        </div>
-                                         <!-- feedback -->
-                                         <div class="feedback_appear">
-                                            <div class="col-md-12 d-flex justify-content-end close_feedback">
-                                                <i class="material-icons">close</i>
-                                            </div>
-                                            <textarea name="" id=""></textarea>
-                                            <div class="col-md-12 d-flex justify-content-end send_feedback">
-                                                <button class="btn">Send</button>
-                                            </div>
-                                        </div>
-                                        <!-- feedback end-->
-                                    </div>
-                                    <div class="col-md-6 position-relative">
-                                        <p>Responsiveness of team members in delivery <span>*</span></p>
-                                        <h5>Rating</h5>
-                                        <div class="star_div">
-                                            <span class="material-icons" num="1">star_border</span>
-                                            <span class="material-icons" num="2">star_border</span>
-                                            <span class="material-icons" num="3">star_border</span>
-                                            <span class="material-icons" num="4">star_border</span>
-                                            <span class="material-icons" num="5">star_border</span>
-                                            <img src="icons/chatbox_Grey.svg" class="chat" alt="">
-                                            <p>Less</p>
-                                            <p>High</p>
-                                        </div>
-                                         <!-- feedback -->
-                                         <div class="feedback_appear">
-                                            <div class="col-md-12 d-flex justify-content-end close_feedback">
-                                                <i class="material-icons">close</i>
-                                            </div>
-                                            <textarea name="" id=""></textarea>
-                                            <div class="col-md-12 d-flex justify-content-end send_feedback">
-                                                <button class="btn">Send</button>
-                                            </div>
-                                        </div>
-                                        <!-- feedback end-->
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 position-relative">
-                                        <p>Communication management by team (MOM / Presentation)</p>
-                                        <h5>Rating</h5>
-                                        <div class="star_div">
-                                            <span class="material-icons" num="1">star_border</span>
-                                            <span class="material-icons" num="2">star_border</span>
-                                            <span class="material-icons" num="3">star_border</span>
-                                            <span class="material-icons" num="4">star_border</span>
-                                            <span class="material-icons" num="5">star_border</span>
-                                            <img src="icons/chatbox_Grey.svg" class="chat" alt="">
-                                            <p>Less</p>
-                                            <p>High</p>
-                                        </div>
-                                         <!-- feedback -->
-                                         <div class="feedback_appear">
-                                            <div class="col-md-12 d-flex justify-content-end close_feedback">
-                                                <i class="material-icons">close</i>
-                                            </div>
-                                            <textarea name="" id=""></textarea>
-                                            <div class="col-md-12 d-flex justify-content-end send_feedback">
-                                                <button class="btn">Send</button>
-                                            </div>
-                                        </div>
-                                        <!-- feedback end-->
-                                    </div>
-                                    <div class="col-md-6 position-relative">
-                                        <p>Overall Satisfaction Rating</p>
-                                        <h5>Rating</h5>
-                                        <div class="star_div">
-                                            <span class="material-icons" num="1">star_border</span>
-                                            <span class="material-icons" num="2">star_border</span>
-                                            <span class="material-icons" num="3">star_border</span>
-                                            <span class="material-icons" num="4">star_border</span>
-                                            <span class="material-icons" num="5">star_border</span>
-                                            <p>Less</p>
-                                            <p>High</p>
-                                        </div>
-                                         <!-- feedback -->
-                                         <div class="feedback_appear">
-                                            <div class="col-md-12 d-flex justify-content-end close_feedback">
-                                                <i class="material-icons">close</i>
-                                            </div>
-                                            <textarea name="" id=""></textarea>
-                                            <div class="col-md-12 d-flex justify-content-end send_feedback">
-                                                <button class="btn">Send</button>
-                                            </div>
-                                        </div>
-                                        <!-- feedback end-->
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 text_div">
-                                        <p>Impact on business through project <span>*</span></p>
-                                        <p>Please quatify the benefits, if required add sheets</p>
-                                        <textarea type="textarea" class="text-decoration-none" name="" id="" cols="30" rows="7" placeholder="Comments or Learning"></textarea>
-                                    </div>
-                                    <div class="col-md-6 text_div">
-                                        <p>Other Comments <span>*</span></p>
-                                        <p>Provide other comments, if there are</p>
-                                        <textarea type="textarea" class="text-decoration-none" name="" id="" cols="30" rows="7" placeholder="Comments or Learning"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- con5 start -->
-                            <div class="con5 step_forward">
-                                <h2>Sign Off</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>Name</p>
-                                        <input type="text" placeholder="Customer Name">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>Name</p>
-                                        <input type="text" placeholder="IT Closure Name">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>Designation</p>
-                                        <input type="text" placeholder="Customer Designation">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>Designation</p>
-                                        <input type="text" placeholder="IT Closure Designation">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 signature">
-                                        <p>Digital Signature</p>
-                                        <div class="upload_box active">
-                                            <div class="row align-items-center h-100">
-                                                <div class="col-md-6">
-                                                    <div class="draw">
-                                                        <p>Draw</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="upload">
-                                                        <p>Upload</p>
-                                                    </div>    
-                                                </div>                                         
-                                            </div>                                                                         
-                                        </div>
-                                        <div class="upload_box2">
-                                            <canvas id="canvas1" width="347" height="60" contenteditable="true"></canvas>
-                                            <div class="upload d-flex justify-content-between w-100">
-                                                <div class="color_div d-flex align-items-center">
-                                                    <div class="blue" colorcode="#2D62ED"></div>
-                                                    <div class="yellow" colorcode="#F6BE75"></div>
-                                                    <div class="sky" colorcode="#1CA9ED"></div>
-                                                    <div class="red" colorcode="#E2445B"></div>
-                                                    <div class="black" colorcode="#211F1F"></div>
-                                                </div>
-                                                <div class="save_div">
-                                                    <button class="btn">Save</button>
-                                                    <button class="btn">Clear</button>
-                                                </div>
-                                            </div>                                          
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 signature">
-                                        <p>Digital Signature</p>
-                                        <div class="upload_box active">
-                                            <div class="row align-items-center h-100">
-                                                <div class="col-md-6">
-                                                    <div class="draw">
-                                                        <p>Draw</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="upload">
-                                                        <p>Upload</p>
-                                                    </div>    
-                                                </div>                                         
-                                            </div>                                                                         
-                                        </div>
-                                        <div class="upload_box2">
-                                            <canvas id="canvas2" width="347" height="60" contenteditable="true"></canvas>
-                                            <div class="upload d-flex justify-content-between w-100">
-                                                <div class="color_div d-flex align-items-center">
-                                                    <div class="blue" colorcode="#2D62ED"></div>
-                                                    <div class="yellow" colorcode="#F6BE75"></div>
-                                                    <div class="sky" colorcode="#1CA9ED"></div>
-                                                    <div class="red" colorcode="#E2445B"></div>
-                                                    <div class="black" colorcode="#211F1F"></div>
-                                                </div>
-                                                <div class="save_div">
-                                                    <button class="btn">Save</button>
-                                                    <button class="btn">Clear</button>
-                                                </div>
-                                            </div>                                          
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--con3 closed-->
-                        </form>
                     </div>
                 </div>
             </div>
@@ -1133,11 +802,9 @@
     </section>
     <!--section closed-->
 
-    <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
-    <script src="js/feedback.js"></script>
     <script src="js/menuscript.js"></script>
 </body>
 
