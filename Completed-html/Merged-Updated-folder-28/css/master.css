@@ -2190,7 +2190,7 @@ max-width: calc(85%/9);
   position: sticky;
   top: 0;
   left: 0%;
-  /* background: #e7fafd; */
+  background: #e7fafd;
   width: 251%;
 }
 .proj_filter .divfilter2 .project1.wireframe .projectcon1 .head1, 
