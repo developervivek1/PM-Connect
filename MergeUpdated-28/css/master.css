@@ -4320,7 +4320,7 @@ border-bottom: 1px dashed #2D62ED;
 height: 2px;
 /* background-color: #ddd; */
 top: 5px;
-left: -73%;
+left: -77%;
 z-index: -1;
 }
 
@@ -4338,6 +4338,14 @@ color: #1E2022;
 left: 18%; */
 border-color: #2D62ED;
 background-color: #2D62ED;
+}
+
+
+.progressBar li:hover::before {
+  border-color: #2D62ED;
+  background-color: #2D62ED;
+  transform: scale(1.5);
+  transition: .2s;
 }
 
 /* .progressBar li.dot1::before {
@@ -4371,7 +4379,7 @@ padding: 5px 0;
 position: absolute;
 z-index: 1;
 bottom: 125%;
-left: 23%;
+left: 20%;
 margin-left: -60px;
 opacity: 0;
 transition: opacity 0.3s;
@@ -4412,6 +4420,14 @@ padding: 1rem 0.5rem;
 .itrequestTable tr{
 cursor: pointer;
 border-bottom: 3px solid #F4F6FD;
+}
+
+.itrequestTable .img{
+  transform: rotate(180deg);
+}
+
+.itrequestTable .collapsed{
+  transform: rotate(0deg);
 }
 
 

@@ -332,18 +332,22 @@ function incrementLike(e)
 {
     e = e || window.event;
     let span = e.target.closest('.grid2').querySelector('span');
+    let ptag = e.target.closest('.grid2').querySelector('p');
+    let imgLike = e.target.closest('.grid2').querySelector('img');
     let likenum = +e.target.closest('.grid2').querySelector('span').innerText;
     if(!span.classList.contains('num'))
     {
         span.classList.add('num');
-        e.target.src='icons/thumbs_blue.svg';
+        imgLike.src='icons/thumbs_blue.svg';
+        ptag.style.color="#2762ed";
         likenum++;
         span.innerText=likenum;
     }
     else
     {
         span.classList.remove('num');
-        e.target.src='icons/like.svg';
+        imgLike.src='icons/like.svg';
+        ptag.style.color="#707070ba";
         likenum--;
         span.innerText=likenum;
     }      
