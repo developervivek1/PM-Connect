@@ -982,6 +982,40 @@ background-color: #D8E2FC;
     display: flex;
     align-items: center;
 }
+
+.myButton .btn:first-child {
+    width: 23%;
+}
+
+.myButton .btn:last-child {
+    width: 23%;
+}
+
+
+.progressBar li span{
+    font-size: 12px;
+}
+
+.progressBar li:after {
+   
+    border-bottom: 1px dashed #2D62ED;
+
+    top: 5px;
+    left: -58%;
+    z-index: 0;
+}
+
+.mytooltip .mytooltiptext {
+
+    left: 49%;
+}
+
+.itrequestTable .table{
+    width: 218%;
+}
+
+
+
 }
 
 @media (min-width: 800px) and (max-width:950px) {

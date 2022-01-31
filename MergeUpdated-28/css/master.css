@@ -912,7 +912,7 @@ background-color: #fff;
 
 .manage_view .div3 .form_div {
   width: 100%;
-  padding: 0rem 8rem;
+  padding: 0rem 6rem;
   margin-top: 6.3rem;
 }
 
@@ -4256,3 +4256,164 @@ ul.dropdown-menu {
 .proj_filter .divfilter2 .project1 .border-bottom:hover .projmaincon .head-blank2 {
   background-color: #fdf8e7;
 }
+
+
+
+
+/* it redesign */
+
+
+.myButton .btn:first-child{
+    color: #2D62ED;
+    border: 1px solid #2D62ED;
+    height: 40px;
+    width: 20%;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.myButton .btn:last-child{
+    background-color: #2D62ED;
+    color: #fff;
+    cursor: pointer;
+    width: 20%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+   
+}
+
+
+.wrapper-progressBar {
+width: 100%
+}
+
+.progressBar {
+}
+
+.progressBar li {
+list-style-type: none;
+float: left;
+width: 20%;
+position: relative;
+text-align: left;
+}
+
+.progressBar li:before {
+content: " ";
+line-height: 30px;
+border-radius: 50%;
+width: 11px;
+height: 11px;
+margin-left: 3rem;
+border: 1px solid #2D62ED;
+display: block;
+text-align: left;
+/* margin: 0 auto 10px; */
+background-color: #2D62ED;
+}
+
+.progressBar li:after {
+content: "";
+position: absolute;
+width: 100%;
+border-bottom: 1px dashed #2D62ED;
+height: 2px;
+/* background-color: #ddd; */
+top: 5px;
+left: -73%;
+z-index: -1;
+}
+
+.progressBar li:first-child:after {
+content: none;
+}
+
+.progressBar li.active {
+font-size: 15px;
+color: #1E2022;
+}
+
+.progressBar li.active:before {
+/* position: absolute;
+left: 18%; */
+border-color: #2D62ED;
+background-color: #2D62ED;
+}
+
+/* .progressBar li.dot1::before {
+width: 11px;
+height: 11px;
+top: 7px;
+border-color: #2D62ED;
+background-color: #2D62ED;
+} */
+
+
+
+
+
+.mytooltip {
+cursor: pointer;  
+position: relative;
+display: inline-block;
+/* border-bottom: 1px dotted black; */
+}
+
+.mytooltip .mytooltiptext {
+visibility: hidden;
+width: 120px;
+background-color: white;
+color: black;
+box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+text-align: center;
+border-radius: 6px;
+padding: 5px 0;
+position: absolute;
+z-index: 1;
+bottom: 125%;
+left: 23%;
+margin-left: -60px;
+opacity: 0;
+transition: opacity 0.3s;
+}
+
+.mytooltip .mytooltiptext::after {
+content: "";
+position: absolute;
+top: 100%;
+left: 50%;
+margin-left: -5px;
+border-width: 5px;
+border-style: solid;
+border-color: rgb(255, 255, 255) transparent transparent transparent;
+}
+
+.mytooltip:hover .mytooltiptext {
+visibility: visible;
+opacity: 1;
+}
+
+
+.itrequestTable{
+background-color: #F4F6FD;
+font-size: 14px;
+padding: 1rem;
+border-radius: 5px;
+border-left: 0.5rem solid #2D62ED;
+
+}
+
+.itrequestTable .table>:not(caption)>*>* {
+padding: 1rem 0.5rem;
+
+}
+
+.itrequestTable tr{
+cursor: pointer;
+border-bottom: 3px solid #F4F6FD;
+}
+
+
+
+
+

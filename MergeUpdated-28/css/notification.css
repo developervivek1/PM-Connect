@@ -493,8 +493,8 @@
 {
     position: fixed;
     top:0;
-    left: 5.5%;
-    width: 1.8%;
+    left: 3.5%;
+    width: 3.5%;
     min-height: 100vh;
     padding: 0;
     z-index: 10;
@@ -511,7 +511,7 @@
 }
 .workspace_div .workspace_content
 {
-    padding: 5.5rem 2rem;
+    padding: 5.5rem 2rem 5.5rem 3.5rem;
     width: 100%;
     min-height: 100vh;
     visibility: hidden;
