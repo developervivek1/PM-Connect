@@ -4422,12 +4422,8 @@ cursor: pointer;
 border-bottom: 3px solid #F4F6FD;
 }
 
-.itrequestTable .img{
-  transform: rotate(180deg);
-}
-
 .itrequestTable .collapsed{
-  transform: rotate(0deg);
+  transform: rotate(180deg);
 }
 
 
