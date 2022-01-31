@@ -38,3 +38,7 @@ display: flex;
 .proj_filter .divfilter2 .project1 .projectcon1 .child-border > .row {
     width: 100%;
 }
+
+.proj_filter .divfilter2 .project1 .projectcon1 .emphead1{
+    background-color: transparent !important;
+  }
