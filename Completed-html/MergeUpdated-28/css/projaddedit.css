@@ -586,7 +586,7 @@ margin-right: 8px;
 }
 .manage_view .proj_edit .update .update_con .seen_div .grid {
     display: grid;
-    grid-template-columns: 21% 17% 15%;
+    grid-template-columns: 16% 19% 16%;
     grid-template-rows: 40px;
     width: 100%;
     align-items: center;
@@ -642,11 +642,13 @@ margin-right: 8px;
     flex: 0 0 72%;
     max-width: 72%;
     text-align: right;
+    
     word-break: break-word;
 }
 .manage_view .proj_edit .update .update_con .msggrid .msggrid3 p {
     font-size: 14px;
     color: #707070;
+    border-radius: 5px 10px;
     margin-top: 1px;
     padding: 5px;
     background: #f5f5f5;
