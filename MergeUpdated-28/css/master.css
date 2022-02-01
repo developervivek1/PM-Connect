@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;400;500;600;700;800&family=Lato:wght@400;700&family=Marcellus&family=Open+Sans&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap');
 
 * {
   margin: 0;
@@ -12,18 +12,19 @@ html {
 }
 
 :root {
-  --heebo: 'Heebo', sans-serif;
-  --marcel: 'Marcellus', serif;
-  --open: 'Open Sans', sans-serif;
-  --roboto: 'Roboto', sans-serif;
-  --lato: 'Lato', sans-serif;
+  --heebo: 'Raleway', sans-serif;
+  --marcel: 'Raleway', sans-serif;
+  --open: 'Raleway', sans-serif;
+  --roboto: 'Raleway', sans-serif;
+  --lato: 'Raleway', sans-serif;
   --rot: 0deg;
 }
 
 body {
-  font-size: 1.6rem !important;
-  letter-spacing: 0.1px;
+  /* font-size: 1.6rem !important; */
+  /* letter-spacing: 0.1px; */
   font-family: var(--heebo) !important;
+ 
   font-weight: 400;
   min-height: 100vh;
 }
@@ -698,7 +699,7 @@ nav {
   position: absolute;
   z-index: 10;
   left: 127%;
-  font-size: 12px;
+  font-size: 13px;
 }
 .manage_view .div1 ul li .tooltiptext a {
   text-decoration: none;
@@ -999,13 +1000,13 @@ background-color: #fff;
 }
 
 .manage_view .div3 .form_div form .con2>h2>p {
-  font-size: 12px;
+  font-size: 13px;
   color: #1663CC;
 }
 
 .manage_view .div3 .form_div form .con2 .support_div>p {
   color: #1663CC;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0px;
 }
 
@@ -1140,7 +1141,7 @@ width: 16px;
   width: 70px;
   height: 29px;
   background-color: #F52444;
-  font-size: 12px;
+  font-size: 13px;
   outline: none;
   border: none;
   color: #fff;
@@ -1445,7 +1446,7 @@ width: 16px;
 .manage_view .div3 .form_div .feedback .star_div p {
   color: grey;
   position: absolute;
-  font-size: 12px;
+  font-size: 13px;
   top: 30px;
   left: 0;
 }
@@ -2203,7 +2204,7 @@ max-width: calc(85%/9);
 .proj_filter .divfilter2 .project1.studio table tbody td.head_conversation 
 {
   z-index: 1;
-  border: 18px solid #fdf8e7;
+  border: 0px solid #fdf8e7;
   border-left: 2px solid #fdf8e7;
   background-color: #fdf8e7;
 }
@@ -2354,7 +2355,7 @@ max-width: calc(85%/9);
 }
 
 .proj_filter .divfilter2 .project1 .projmaincon .divcon1 {
-  font-size: 12px;
+  font-size: 13px;
   color: #000000;
   font-family: var(--heebo);
   font-weight: 400;
@@ -2377,7 +2378,7 @@ max-width: calc(85%/9);
 .tooltip
 {
   display: flex;
-  font-size: 12px;
+  font-size: 13px;
   justify-content: center;
   align-items: center;
   z-index: 4;
@@ -2395,7 +2396,7 @@ max-width: calc(85%/9);
 .proj_filter .divfilter2 .project1 .projmaincon .divcon8,
 .proj_filter .divfilter2 .project1 .projmaincon .divcon9,
 .proj_filter .divfilter2 .project1 .projmaincon .divcon10 {
-  font-size: 12px;
+  font-size: 13px;
   color: #000000;
   font-family: var(--heebo);
   font-weight: 400;
@@ -2471,7 +2472,7 @@ max-width: calc(85%/9);
 
 .proj_filter .divfilter2 .project1 .projmaincon .divcon2 span i,
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile3 span i {
-  font-size: 12px;
+  font-size: 13px;
   color: #2D62ED;
 }
 
@@ -2632,7 +2633,7 @@ max-width: calc(85%/9);
   text-transform: uppercase;
   letter-spacing: 0.3px;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone .milehide {
@@ -2673,9 +2674,9 @@ max-width: calc(85%/9);
 }
 
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 {
-  background: #D8E2FC 0% 0% no-repeat padding-box;
+  background: transparent 0% 0% no-repeat padding-box;
   margin: 15px 0 2px 0;
-  padding-left: 15px;
+  padding-left: 8px;
   width: 100%;
 }
 
@@ -2709,7 +2710,7 @@ max-width: calc(85%/9);
 
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .milestone3 .divmile1 p,
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile .divmile1 p {
-  font-size: 12px;
+  font-size: 13px;
   color: #1E2022;
   opacity: 0.9;
 }
@@ -2800,7 +2801,7 @@ max-width: calc(85%/9);
 
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .task_name p,
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .addtask_mile p {
-  font-size: 12px;
+  font-size: 13px;
   color: #1E2022;
 }
 
@@ -2815,8 +2816,8 @@ max-width: calc(85%/9);
 }
 
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .fixedMile {
-  background: #D8E2FC 0% 0% no-repeat padding-box;
-  padding-left: 16px;
+  background: transparent 0% 0% no-repeat padding-box;
+  padding-left: 2px;
   margin-bottom: 0.5rem;
 }
 
@@ -2988,7 +2989,7 @@ max-width: calc(85%/9);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: 13px;
   cursor: pointer;
   text-transform: capitalize;
 }
@@ -3114,7 +3115,7 @@ max-width: calc(85%/9);
 .proj_filter .divfilter2 .project1 .projmaincon .addedit .right_div p {
   position: absolute;
   color: #fff;
-  font-size: 12px;
+  font-size: 13px;
   cursor: pointer;
   width: max-content;
 }
@@ -3193,7 +3194,7 @@ max-width: calc(85%/9);
 }
 
 .proj_filter .divfilter2 .project1 .projmaincon .addedit .btndiv span {
-  font-size: 12px;
+  font-size: 13px;
   color: #2D62ED;
   cursor: pointer;
 }
@@ -3211,7 +3212,7 @@ max-width: calc(85%/9);
 .proj_filter .divfilter2 .project1 .projmaincon .addedit .btndiv2 button {
   width: 36%;
   height: 34px;
-  font-size: 12px;
+  font-size: 13px;
   border: 1px solid #2d62ed;
   color: #2d62ed;
   border-radius: 5px;
@@ -3345,7 +3346,7 @@ h6 {
 /* here */
 .manage_view .div3 .form_div .support_div>p {
   color: #1663CC;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0px;
 }
 
@@ -3534,7 +3535,7 @@ ul.dropdown-menu {
   display: block;
   color: #808080;
   padding: 9px 30px;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .droplist a.disable {
@@ -3557,7 +3558,7 @@ ul.dropdown-menu {
   text-align: center;
   margin: 10px 0 0 10px;
   padding-top: 5px;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .addcolumn a {
@@ -3733,6 +3734,10 @@ ul.dropdown-menu {
   min-height: 100px !important;
 }
 
+.dropzone p{
+  font-size: 14px;
+}
+
 .status1 {
   background-color: #F0A33E;
   width: 49%;
@@ -3742,7 +3747,7 @@ ul.dropdown-menu {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: 13px;
   cursor: pointer;
   text-transform: capitalize;
   border-radius: 2px;
@@ -3757,7 +3762,7 @@ ul.dropdown-menu {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: 13px;
   cursor: pointer;
   text-transform: capitalize;
   border-radius: 2px;
@@ -3772,7 +3777,7 @@ ul.dropdown-menu {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: 13px;
   cursor: pointer;
   text-transform: capitalize;
   border-radius: 2px;
@@ -4429,6 +4434,223 @@ border-bottom: 3px solid #F4F6FD;
 }
 
 
+/* milestone colour */
 
 
+.milestone3 .fixedMile tr:nth-child(1){
+  background-color:  #FFCCAD;
+  border-color: #FC7B55;
+  border-width: 0px 0px 0px 5px;
+  padding-left: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  margin-bottom: 0.5rem;
+}
+
+
+.milestone3 .fixedMile tr:nth-child(2){
+  background-color: #CBF8C2;
+  border-color: #60E266;
+  border-width: 0px 0px 0px 5px;
+  padding-left: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  margin-bottom: 0.5rem;
+}
+.milestone3 .fixedMile tr:nth-child(3){
+  background-color: #EAE2FB;
+  border-color: #5001FD;
+  border-width: 0px 0px 0px 5px;
+  padding-left: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  margin-bottom: 0.5rem;
+}
+.milestone3 .fixedMile tr:nth-child(4){
+  background-color: #FFF3E0;
+  border-color: #FFB74D;
+  border-width: 0px 0px 0px 5px;
+  padding-left: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  margin-bottom: 0.5rem;
+}
+.milestone3 .fixedMile tr:nth-child(5){
+  background-color: #FFEBEE;
+  border-color: #FFA7B0;
+  border-width: 0px 0px 0px 5px;
+  padding-left: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  margin-bottom: 0.5rem;
+}
+.milestone3 .fixedMile tr:nth-child(6){
+  background-color: #F8F4B7;
+  border-color: #D6CE64;
+  border-width: 0px 0px 0px 5px;
+  padding-left: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  margin-bottom: 0.5rem;
+}
+.milestone3 .fixedMile tr:nth-child(7){
+  background-color: #F2D9D5;
+  border-color: #9A4F44;
+  border-width: 0px 0px 0px 5px;
+  padding-left: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  margin-bottom: 0.5rem;
+}
+
+.milestone3 .fixedMile tr:nth-child(8){
+  background-color: #D4FBEE;
+  border-color: #38D9A9;
+  border-width: 0px 0px 0px 5px;
+  padding-left: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  margin-bottom: 0.5rem;
+}
+
+.milestone3 .fixedMile tr:nth-child(9){
+  background-color:#F4FBBD;
+  border-color: #C6D92F;
+  border-width: 0px 0px 0px 5px;
+  padding-left: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  margin-bottom: 0.5rem;
+}
+
+.milestone3 .fixedMile tr:nth-child(10){
+  background-color:  #E7FBFA;
+  border-color: #005B5A;
+  border-width: 0px 0px 0px 5px;
+  padding-left: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  margin-bottom: 0.5rem;
+}
+
+.milestone3 .fixedMile tr:nth-child(11){
+  background-color: #FEE4DB;
+  border-color: #F8A88D;
+  border-width: 0px 0px 0px 5px;
+  padding-left: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  margin-bottom: 0.5rem;
+}
+
+.milestone3 .fixedMile tr:nth-child(12){
+  background-color: #EEFCFC;
+  border-color: #9CDCDC;
+  border-width: 0px 0px 0px 5px;
+  padding-left: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  margin-bottom: 0.5rem;
+}
+
+
+.milestone4 .fixedMile tr:nth-child(1){
+  background-color:  #FFCCAD;
+  border-color: #FC7B55;
+  border-width: 0px 0px 0px 5px;
+  padding-left: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  margin-bottom: 0.5rem;
+}
+
+
+.milestone4 .fixedMile tr:nth-child(2){
+  background-color: #CBF8C2;
+  border-color: #60E266;
+  border-width: 0px 0px 0px 5px;
+  padding-left: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  margin-bottom: 0.5rem;
+}
+.milestone4 .fixedMile tr:nth-child(3){
+  background-color: #EAE2FB;
+  border-color: #5001FD;
+  border-width: 0px 0px 0px 5px;
+  padding-left: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  margin-bottom: 0.5rem;
+}
+.milestone4 .fixedMile tr:nth-child(4){
+  background-color: #FFF3E0;
+  border-color: #FFB74D;
+  border-width: 0px 0px 0px 5px;
+  padding-left: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  margin-bottom: 0.5rem;
+}
+.milestone4 .fixedMile tr:nth-child(5){
+  background-color: #FFEBEE;
+  border-color: #FFA7B0;
+  border-width: 0px 0px 0px 5px;
+  padding-left: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  margin-bottom: 0.5rem;
+}
+
+
+ .fixedMile table tr:nth-child(1):hover{
+  background-color:  #f8bc96;
+  transition: all 0.3s ease-in;
+ 
+}
+
+
+ .fixedMile table tr:nth-child(2):hover{
+  background-color: #bef7b2;
+  transition:all 0.3s ease-in;
+  
+}
+ .fixedMile table tr:nth-child(3):hover{
+  background-color: #e0d4fa;
+  transition:all 0.3s ease-in;
+ 
+}
+ .fixedMile table tr:nth-child(4):hover{
+  background-color: #ffeed3;
+  transition:all 0.3s ease-in;
+ 
+}
+ .fixedMile table tr:nth-child(5):hover{
+  background-color: #fadadf;
+  transition:all 0.3s ease-in;
+  
+}
+ .fixedMile table tr:nth-child(6):hover{
+  background-color: #f8f3ab;
+  transition:all 0.3s ease-in;
+ 
+}
+ .fixedMile table tr:nth-child(7):hover{
+  background-color: #f3d0ca;
+  transition:all 0.3s ease-in;
+ 
+}
+
+ .fixedMile table tr:nth-child(8):hover{
+  background-color: #c9fceb;
+  transition:all 0.3s ease-in;
+  
+}
+
+ .fixedMile table tr:nth-child(9):hover{
+  background-color:#f1fab0;
+  transition:all 0.3s ease-in;
+ 
+}
+
+ .fixedMile table tr:nth-child(10):hover{
+  background-color:  #d7faf8;
+  transition:all 0.3s ease-in;
+ 
+}
+
+ .fixedMile table tr:nth-child(11):hover{
+  background-color: #f8d5c9;
+  transition:all 0.3s ease-in;
+ 
+}
+
+ .fixedMile table tr:nth-child(12):hover{
+  background-color: #e4fcfc;
+  transition:all 0.3s ease-in;
+
+}
 
