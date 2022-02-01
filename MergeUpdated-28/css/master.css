@@ -903,6 +903,7 @@ background-color: #fff;
 }
 
 .manage_view .div2 ul li div:last-child {
+  font-size: 15px;
   line-height: 66px;
 }
 
@@ -3289,6 +3290,7 @@ h6 {
 }
 
 .eyes1 .fa-eye {
+  font-size: 18px;
   bottom: -3px;
   color: lightgrey;
   position: absolute;
@@ -4301,6 +4303,7 @@ width: 100%
 list-style-type: none;
 float: left;
 width: 20%;
+font-size: 15px;
 position: relative;
 text-align: left;
 }
@@ -4411,7 +4414,7 @@ opacity: 1;
 
 .itrequestTable{
 background-color: #F4F6FD;
-font-size: 14px;
+font-size: 13px;
 padding: 1rem;
 border-radius: 5px;
 border: 1px solid #2D62ED;
