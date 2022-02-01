@@ -1,8 +1,4 @@
-/*!
- * FullCalendar v1.6.4 Stylesheet
- * Docs & License: http://arshaw.com/fullcalendar/
- * (c) 2013 Adam Shaw
- */
+
 
 
 .fc {
@@ -18,7 +14,7 @@
 html .fc,
 .fc table {
 	font-size: 1em;
-	font-family: "Helvetica Neue",Helvetica;
+	
 
 	}
 
@@ -73,7 +69,7 @@ html .fc,
 	}
 
 .fc-header .fc-button {
-	margin-bottom: 1em;
+	margin-bottom: 3em;
 	vertical-align: middle;
 	}
 
