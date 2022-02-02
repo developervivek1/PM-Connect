@@ -490,7 +490,7 @@ background-color: #edf5ff;
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile .divmile1.mysticky2,
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .divmile1.mysticky2
 {
-background-color: #d8e2fc !important;
+/* background-color: #d8e2fc !important; */
 height: 42px;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .divmile1.mysticky2
@@ -895,9 +895,9 @@ font-size: 1.8rem;
 .manage_view .div2 ul li div:first-child.success span{
 display: none;
 }
-.row .fixedMile .divmile1{
+/* .row .fixedMile .divmile1{
     background: #D8E2FC 0% 0% no-repeat padding-box;
-}
+} */
 .background-parent{
 padding: 12px;
 background-color: #D8E2FC;
@@ -1025,6 +1025,114 @@ background-color: #D8E2FC;
 .child-border {
  width: 121%;
 }
+
+}
+
+
+
+/* milestone td */
+
+@media (max-width:768px){
+.milestone3 .fixedMile tr:nth-child(1) .mysticky2{
+    background-color:  #FFCCAD;
+   
+  }
+
+  
+  
+  .milestone3 .fixedMile tr:nth-child(2) .mysticky2{
+    background-color: #CBF8C2;
+   
+  }
+  .milestone3 .fixedMile tr:nth-child(3) .mysticky2{
+    background-color: #EAE2FB;
+   
+  }
+  .milestone3 .fixedMile tr:nth-child(4) .mysticky2{
+    background-color: #FFF3E0;
+   
+  }
+  .milestone3 .fixedMile tr:nth-child(5) .mysticky2{
+    background-color: #FFEBEE;
+   
+  }
+  .milestone3 .fixedMile tr:nth-child(6) .mysticky2{
+    background-color: #F8F4B7;
+   
+  }
+  .milestone3 .fixedMile tr:nth-child(7) .mysticky2{
+    background-color: #F2D9D5;
+  
+  }
+  
+  .milestone3 .fixedMile tr:nth-child(8) .mysticky2{
+    background-color: #D4FBEE;
+   
+  }
+  
+  .milestone3 .fixedMile tr:nth-child(9) .mysticky2{
+    background-color:#F4FBBD;
+   
+  }
+  
+  .milestone3 .fixedMile tr:nth-child(10) .mysticky2{
+    background-color:  #E7FBFA;
+   
+  }
+  
+  .milestone3 .fixedMile tr:nth-child(11) .mysticky2{
+    background-color: #FEE4DB;
+    
+  }
+  
+  .milestone3 .fixedMile tr:nth-child(12) .mysticky2{
+    background-color: #c9f8f8;
+    
+  }
+
+  .milestone3 .fixedMile tr .mysticky2{
+    background-color: #e49af3;
+    
+  }
+
+
+
+  .milestone4 .fixedMile tr:nth-child(1) .mysticky2{
+    background-color:  #FFCCAD;
+   
+  }
+  
+  
+  .milestone4 .fixedMile tr:nth-child(2) .mysticky2{
+    background-color: #CBF8C2;
+   
+  }
+  .milestone4 .fixedMile tr:nth-child(3) .mysticky2{
+    background-color: #EAE2FB;
+  
+  }
+  .milestone4 .fixedMile tr:nth-child(4) .mysticky2{
+    background-color: #FFF3E0;
+   
+  }
+  .milestone4 .fixedMile tr:nth-child(5) .mysticky2{
+    background-color: #FFEBEE;
+   
+  }
+  
+  .milestone4 .fixedMile tr .mysticky2{
+    background-color: #FFEBEE;
+   
+  }
+
+
+
+
+
+
+
+
+
 }
 
 

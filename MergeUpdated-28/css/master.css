@@ -2566,7 +2566,7 @@ max-width: calc(85%/9);
 }
 
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone.showmilestone {
-  margin: 20px 0 20px 2rem;
+  margin: 8px 0 10px 2rem;
   height: 42px;
   transition: height 0.15s ease-in;
 }
@@ -2647,7 +2647,7 @@ max-width: calc(85%/9);
 
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile {
   margin: 20px 0 20px 2rem;
-  width: 98%;
+  width: 122%;
   display: none;
 }
 
@@ -2778,8 +2778,8 @@ max-width: calc(85%/9);
 }
 
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone4 {
-  margin: 2rem 0 2rem 2rem;
-  width: 98%;
+  margin: 0.5rem 0 1rem 2rem;
+  width: 117%;
 }
 
 /* changes 01 */
@@ -4537,8 +4537,17 @@ border-bottom: 3px solid #F4F6FD;
 }
 
 .milestone3 .fixedMile tr:nth-child(12){
-  background-color: #EEFCFC;
+  background-color: #c9f8f8;
   border-color: #9CDCDC;
+  border-width: 0px 0px 0px 5px;
+  padding-left: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  margin-bottom: 0.5rem;
+}
+
+.milestone3 .fixedMile tr{
+  background-color: #e49af3;
+  border-color: #80289b;
   border-width: 0px 0px 0px 5px;
   padding-left: 1rem;
   border-radius: 5px 0px 0px 5px;
@@ -4589,71 +4598,80 @@ border-bottom: 3px solid #F4F6FD;
   margin-bottom: 0.5rem;
 }
 
+.milestone4 .fixedMile tr{
+  background-color: #FFEBEE;
+  border-color: #FFA7B0;
+  border-width: 0px 0px 0px 5px;
+  padding-left: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  margin-bottom: 0.5rem;
+}
+
 
  .fixedMile table tr:nth-child(1):hover{
-  background-color:  #f8bc96;
+  background-color:  #f8b185;
   transition: all 0.3s ease-in;
  
 }
 
 
  .fixedMile table tr:nth-child(2):hover{
-  background-color: #bef7b2;
+  background-color: #a3fc91;
   transition:all 0.3s ease-in;
   
 }
  .fixedMile table tr:nth-child(3):hover{
-  background-color: #e0d4fa;
+  background-color: #bfa4fa;
   transition:all 0.3s ease-in;
  
 }
  .fixedMile table tr:nth-child(4):hover{
-  background-color: #ffeed3;
+  background-color: #fcdaa5;
   transition:all 0.3s ease-in;
  
 }
  .fixedMile table tr:nth-child(5):hover{
-  background-color: #fadadf;
+  background-color: #f8a3af;
   transition:all 0.3s ease-in;
   
 }
  .fixedMile table tr:nth-child(6):hover{
-  background-color: #f8f3ab;
+  background-color: #f8f186;
   transition:all 0.3s ease-in;
  
 }
  .fixedMile table tr:nth-child(7):hover{
-  background-color: #f3d0ca;
+  background-color: #fab9ae;
   transition:all 0.3s ease-in;
  
 }
 
  .fixedMile table tr:nth-child(8):hover{
-  background-color: #c9fceb;
+  background-color: #96f5d4;
   transition:all 0.3s ease-in;
   
 }
 
  .fixedMile table tr:nth-child(9):hover{
-  background-color:#f1fab0;
+  background-color:#ebf796;
   transition:all 0.3s ease-in;
  
 }
 
  .fixedMile table tr:nth-child(10):hover{
-  background-color:  #d7faf8;
+  background-color:  #9ef7f2;
   transition:all 0.3s ease-in;
  
 }
 
  .fixedMile table tr:nth-child(11):hover{
-  background-color: #f8d5c9;
+  background-color: #f7bdaa;
   transition:all 0.3s ease-in;
  
 }
 
  .fixedMile table tr:nth-child(12):hover{
-  background-color: #e4fcfc;
+  background-color: #97fcfc;
   transition:all 0.3s ease-in;
 
 }
