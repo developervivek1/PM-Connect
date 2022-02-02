@@ -2559,13 +2559,14 @@ max-width: calc(85%/9);
   display: flex;
   align-items: center;
   padding-left: 15px;
-  width: 98%;
+  width: 122.5%;
   position: relative;
   height: 0px;
   overflow: hidden;
 }
 
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone.showmilestone {
+  border-radius: 5px 0 0 5px;
   margin: 8px 0 10px 2rem;
   height: 42px;
   transition: height 0.15s ease-in;
@@ -2779,13 +2780,14 @@ max-width: calc(85%/9);
 
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone4 {
   margin: 0.5rem 0 1rem 2rem;
-  width: 117%;
+  width: 120.5%;
 }
 
 /* changes 01 */
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .addtask_mile,
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone4 .task_name {
   background: #ECF0F9 0% 0% no-repeat padding-box;
+  border-radius: 5px 0 0 5px;
   display: flex;
   align-items: center;
   padding-left: 42px;

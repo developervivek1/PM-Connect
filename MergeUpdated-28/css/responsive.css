@@ -350,7 +350,7 @@ margin-top: 21.5rem;
 flex-wrap: nowrap;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .child-border > .row {
-    width: 423%;
+    width: 464%;
 }
 .proj_filter .divfilter2 .project1 .projmaincon .divcon1 {
     width: 130% !important;
@@ -359,7 +359,7 @@ flex-wrap: nowrap;
 position: relative;
 }
 .proj_filter .divfilter2 .project1 .border-bottom {
-width: 418%;
+width: 464%;
 /* border-left: 10px solid #edf6ff; */
 }
 /* .proj_filter .divfilter2 .project1:nth-child(2) .border-bottom {
@@ -506,6 +506,7 @@ z-index: 1;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .main_mile{
 margin: 8px 0 8px 1rem;
+width: 110%;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .milestone.showmilestone
 {
