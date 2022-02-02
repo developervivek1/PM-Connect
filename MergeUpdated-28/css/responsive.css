@@ -1035,89 +1035,89 @@ background-color: #D8E2FC;
 
 @media (max-width:768px){
 .milestone3 .fixedMile tr:nth-child(1) .mysticky2{
-    background-color:  #FFCCAD;
+    background-color:  #FBEEE7;
    
   }
 
   
   
   .milestone3 .fixedMile tr:nth-child(2) .mysticky2{
-    background-color: #CBF8C2;
-   
-  }
-  .milestone3 .fixedMile tr:nth-child(3) .mysticky2{
     background-color: #EAE2FB;
    
   }
+  .milestone3 .fixedMile tr:nth-child(3) .mysticky2{
+    background-color: #FFF4E4;
+   
+  }
   .milestone3 .fixedMile tr:nth-child(4) .mysticky2{
-    background-color: #FFF3E0;
+    background-color: #FCF0EE;
    
   }
   .milestone3 .fixedMile tr:nth-child(5) .mysticky2{
-    background-color: #FFEBEE;
+    background-color: #EFFEF9;
    
   }
   .milestone3 .fixedMile tr:nth-child(6) .mysticky2{
-    background-color: #F8F4B7;
+    background-color: #FFF5F6;
    
   }
   .milestone3 .fixedMile tr:nth-child(7) .mysticky2{
-    background-color: #F2D9D5;
+    background-color: #F1FFFF;
   
   }
   
   .milestone3 .fixedMile tr:nth-child(8) .mysticky2{
-    background-color: #D4FBEE;
+    background-color: #ECEDF9;
    
   }
   
   .milestone3 .fixedMile tr:nth-child(9) .mysticky2{
-    background-color:#F4FBBD;
+    background-color:#FFF3E4;
    
   }
   
   .milestone3 .fixedMile tr:nth-child(10) .mysticky2{
-    background-color:  #E7FBFA;
+    background-color:  #FFF3E4;
    
   }
   
   .milestone3 .fixedMile tr:nth-child(11) .mysticky2{
-    background-color: #FEE4DB;
+    background-color: #f9fbe7;
     
   }
   
   .milestone3 .fixedMile tr:nth-child(12) .mysticky2{
-    background-color: #c9f8f8;
+    background-color: #F3E5F5;
     
   }
 
   .milestone3 .fixedMile tr .mysticky2{
-    background-color: #e49af3;
+    background-color: #f8e694;
     
   }
 
 
 
   .milestone4 .fixedMile tr:nth-child(1) .mysticky2{
-    background-color:  #FFCCAD;
+    background-color:  #FBEEE7;
    
   }
   
   
   .milestone4 .fixedMile tr:nth-child(2) .mysticky2{
-    background-color: #CBF8C2;
+    background-color: #EAE2FB;
    
   }
   .milestone4 .fixedMile tr:nth-child(3) .mysticky2{
-    background-color: #EAE2FB;
+    background-color: #FFF4E4;
   
   }
   .milestone4 .fixedMile tr:nth-child(4) .mysticky2{
-    background-color: #FFF3E0;
+    background-color: #FCF0EE;
    
   }
   .milestone4 .fixedMile tr:nth-child(5) .mysticky2{
-    background-color: #FFEBEE;
+    background-color: #EFFEF9;
    
   }
   
