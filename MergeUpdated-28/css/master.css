@@ -4513,7 +4513,7 @@ border-bottom: 3px solid #F4F6FD;
 
 .milestone3 .fixedMile tr:nth-child(9){
   background-color:#FFF3E4;
-  border-color: #d4e157 ;  
+  border-color: #F6BB6F;  
   border-width: 0px 0px 0px 5px;
   padding-left: 1rem;
   border-radius: 5px 0px 0px 5px;
@@ -4521,8 +4521,8 @@ border-bottom: 3px solid #F4F6FD;
 }
 
 .milestone3 .fixedMile tr:nth-child(10){
-  background-color:  #FFF3E4;
-  border-color: #F6BB6F;
+  background-color:  #F3E5F5;
+  border-color: #BA68C8;
   border-width: 0px 0px 0px 5px;
   padding-left: 1rem;
   border-radius: 5px 0px 0px 5px;
@@ -4531,7 +4531,7 @@ border-bottom: 3px solid #F4F6FD;
 
 .milestone3 .fixedMile tr:nth-child(11){
   background-color: #f9fbe7;
-  border-color: #F8A88D;
+  border-color: #D4E157;
   border-width: 0px 0px 0px 5px;
   padding-left: 1rem;
   border-radius: 5px 0px 0px 5px;
@@ -4539,8 +4539,8 @@ border-bottom: 3px solid #F4F6FD;
 }
 
 .milestone3 .fixedMile tr:nth-child(12){
-  background-color: #F3E5F5;
-  border-color: #BA68C8;
+  background-color: #FBF2F3;
+  border-color: #FF5F6F;
   border-width: 0px 0px 0px 5px;
   padding-left: 1rem;
   border-radius: 5px 0px 0px 5px;

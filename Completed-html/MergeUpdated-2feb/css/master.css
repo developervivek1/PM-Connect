@@ -50,7 +50,7 @@ body {
   top: 0;
   left: 0;
   background-image: linear-gradient(to bottom right, rgba(0,0,0,0.1), rgba(0,0,0,0.6));
-  width: 200vh;
+  width: 100vw;
   min-height: 100vh;
   overflow: hidden;
   z-index: 2;
@@ -61,7 +61,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  width: 200vh;
+  width: 100vw;
   height: 100vh;
 }
 .main .video_div video
@@ -3595,7 +3595,7 @@ ul.dropdown-menu {
 }
 
 .eyes2 img {
-  top: 5px;
+  top: -2px;
   position: absolute;
   left: -43px;
 }
