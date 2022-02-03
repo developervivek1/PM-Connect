@@ -21,7 +21,7 @@
   .card1 {
     background: #FFFFFF;
     border-radius: 10px;
-    padding: 25px;
+    padding: 15px;
     margin-bottom: 10px;
     min-height: 340px;
     box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
@@ -397,15 +397,16 @@
   .overview1
   {
     background-color: #f7f7f7;
-    padding: 2.2rem 3.2rem 2.2rem 4rem;
-    margin-bottom: 0.5rem;
+    padding: 2rem 2rem 1.5rem 2rem;
+    
+    margin: 0rem 2rem 0.5rem 2rem;
   }
   .no-pad
   {
     padding: 0;
   }
   .head-div {
-    padding: 2.1rem 2.5rem 2.2rem;
+    padding: 2.5rem 2.5rem 2.5rem 2.2rem;
   }
   .head-div h3
   {
@@ -526,7 +527,7 @@
   }
   .overview1 .flex-column .d-flex h4
   {
-    margin:0 7.5rem 1.2rem 0;
+    margin:0 2.5rem 1.2rem 0;
     width: 130px;
   }
   .overview1 .flex-column .edited
@@ -579,7 +580,7 @@
   }
   .seeMore
   {
-    padding: 15px 32px;
+    padding: 12px 32px;
   }
   .seeMore p
   {
@@ -1114,6 +1115,75 @@
     }
   }
   
+
+
+  .recent-task table tr td:last-child
+  {
+      position: relative;
+  }
+  .recent-task table tr td .statusTooltip {
+      position: absolute;
+      top: -5px;
+      left: 12px;
+      display: flex;
+      justify-content: center;
+      visibility: hidden;
+  }
+  .recent-task table tr td:last-child:hover .statusTooltip
+  {
+      visibility: visible;
+  }
+  .recent-task table tr td .statusTooltip .ontrack,
+  .recent-task table tr td .statusTooltip .atrisk,
+  .recent-task table tr td .statusTooltip .approved,
+  .recent-task table tr td .statusTooltip .planned,
+  .recent-task table tr td .statusTooltip .offtrack,
+  .recent-task table tr td .statusTooltip .onhold
+  {
+      width: auto;
+      height: 20px;
+      background-color: #F6BE75;
+      padding: 0 4px;
+      border-radius: 3px;
+  }
+  .recent-task table tr td .statusTooltip .atrisk
+  {
+      background-color: #E2445B;
+  }
+  .recent-task table tr td .statusTooltip .approved
+  {
+      background-color: #1FC875;
+  }
+  .recent-task table tr td .statusTooltip .planned
+  {
+      background-color: #1CA9ED;
+  }
+  .recent-task table tr td .statusTooltip .offtrack
+  {
+      background-color: #FB5779;
+  }
+  .recent-task table tr td .statusTooltip .onholdstatus
+  {
+      background-color: #F5E33F;
+  }
+  .recent-task table tr td .statusTooltip p
+  {
+      width: max-content;
+      color: #000;
+      font-weight: 500;
+      text-transform: capitalize;
+  }
+
+
+  .overdue tr span {
+    color: #434443;
+    font-size: 12px;
+    
+   font-weight: 400;
+}
+
+
+
   /* @media (max-width:425px) {
     #bar-chart {
       margin-left: 33px !important;

@@ -1,7 +1,7 @@
 .guage-title {
   width: 300px;
   margin: 0px auto 0px auto;
-  font-family: "Futura";
+ 
 }
 .guage-title span {
   text-align: center;
@@ -14,11 +14,11 @@
 .chart-gauge {
   width: 400px;
   height: auto;
-  margin: 0px;
+  margin: auto;
 }
 
 .chart-filled {
-  fill: #1ca9ed;
+  fill: #43DB84;
 }
 
 .chart-empty {

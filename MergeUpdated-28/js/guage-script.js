@@ -30,15 +30,15 @@ var needle;
   el = d3.select(".chart-gauge");
 
   margin = {
-    top: 20,
+    top: 0,
     right: 0,
-    bottom: 00,
+    bottom: 0,
     left: 0,
   };
 
   width = el[0][0].offsetWidth - margin.left - margin.right;
   height = width;
-  radius = 80;
+  radius = 100;
   barWidth = (30 * width) / 400;
 
   /*
@@ -60,7 +60,7 @@ var needle;
   svg = el
     .append("svg")
     .attr("width", width + margin.left + margin.right)
-    .attr("height", 200);
+    .attr("height",180);
 
   // Add layer for the panel
   chart = svg
@@ -70,7 +70,7 @@ var needle;
       "translate(" +
         (width + margin.left) / 2 +
         ", " +
-        (height + margin.top) / 2 +
+        (height + margin.top) / 2.5 +
         ")"
     );
   chart.append("path").attr("class", "arc chart-filled");
