@@ -1267,8 +1267,18 @@
                                     .tableScroll{
                                         height: 85px;
                                     }
+
+                                    @media (max-width:786px) {
+                                        .overdueTable table{
+                                        width: 180%;
+
+                                    }
               
               
+                                        
+                                    }
+
+                                    
                             </style>
 
                         <div class="div-card pt-5 pb-5">
@@ -1386,7 +1396,7 @@
 
                                     .tableWrap::-webkit-scrollbar{
                                         width: 5px;
-                                        height: 2px;
+                                        height: 4px;
                                     }
                                     /* Set header to stick to the top of the container. */
                                     .tableWrap thead {
@@ -1588,7 +1598,7 @@
                                 <div class="col-md-6">
                                     <div class="card1 shadow-sm recent-task border-0">
                                         <h3 class="fw-bold"><img src="icons/arrowright.svg" alt=""> Overdue task and milestone</h3>
-                                        <div class="table-responsive tooltipTask">
+                                        <div class="table-responsive overdueTable tooltipTask">
                                             <table class="table">
                                                 <thead>
                                                     <tr>
