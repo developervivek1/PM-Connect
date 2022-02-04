@@ -68,7 +68,7 @@ var needle;
     .attr(
       "transform",
       "translate(" +
-        (width + margin.left) / 2.5 +
+        (width + margin.left) / 2 +
         ", " +
         (height + margin.top) / 2.5 +
         ")"
