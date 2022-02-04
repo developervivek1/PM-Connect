@@ -14,7 +14,7 @@
 .chart-gauge {
   width: 400px;
   height: auto;
-  margin: auto;
+  margin: auto 1rem auto auto;
 }
 
 .chart-filled {
@@ -36,9 +36,9 @@ svg {
 }
 
 
-/* @media (max-width:600px){
-  .chart-gauge svg g{
-    transform: translate(140, 160) !important;
+ /* @media (max-width:600px){
+  .chart-gauge{
+    margin: auto !important;
   }
   
-} */
+}  */
