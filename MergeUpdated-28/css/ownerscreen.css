@@ -36,7 +36,7 @@
     color: #000000;
   }
   
-  .chart.doughnut {
+  .chart2 .chart.doughnut {
     margin-top: 2rem;
     width: 100%;
     display: flex;
@@ -45,34 +45,34 @@
     z-index: 1;
 }
   
-  .canvas-container {
+.chart2 .canvas-container {
     width: 250px;
     height: 250px;
     margin: -6rem 0rem 1.8rem 24%;
   }
   
-  .chart.doughnut ul {
+  .chart2 .chart.doughnut ul {
     width: 100%;
     margin-left: 25%;
     display: flex;
   }
   
-  .chart.doughnut ul li {
+  .chart2 .chart.doughnut ul li {
     line-height: 1.6rem;
     position: relative;
     margin-right: 12rem;
     margin-bottom: 47px;
 }
   
-  li::marker {
+.chart2 li::marker {
     font-size: 29px;
   }
   
-  .chart.doughnut canvas {
+  .chart2 .chart.doughnut canvas {
     width: 261px;
   }
   
-  .chart.doughnut data {
+  .chart2 .chart.doughnut data {
     left: -9px;
     top: -1px;
     position: absolute;
@@ -82,7 +82,7 @@
     color: #8C8C8C;
   }
   
-  .chart.doughnut span {
+  .chart2 .chart.doughnut span {
     position: absolute;
     color: #000000;
     font-size: 16px;

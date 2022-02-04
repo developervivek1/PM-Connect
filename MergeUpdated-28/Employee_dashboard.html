@@ -1189,15 +1189,92 @@
 
                         }
                         .recent-task table tr th{
-                            padding: 0px;
+                                            padding: 0px;
 
-                        } */
-                    </style>
+                                        } */
+                                    
+                                    
+                            .tooltipTask table tr td
+                              {
+                                  position: relative;
+                              }
+                              .tooltipTask table tr td .statusTooltip {
+                                  position: absolute;
+                                  top: -5px;
+                                  left: 12px;
+                                  display: flex;
+                                  justify-content: center;
+                                  visibility: hidden;
+                              }
+                              .tooltipTask table tr td:hover .statusTooltip
+                              {
+                                  visibility: visible;
+                              }
+                              .tooltipTask table tr td .statusTooltip .ontrack,
+                              .tooltipTask table tr td .statusTooltip .atrisk,
+                              .tooltipTask table tr td .statusTooltip .approved,
+                              .tooltipTask table tr td .statusTooltip .planned,
+                              .tooltipTask table tr td .statusTooltip .offtrack,
+                              .tooltipTask table tr td .statusTooltip .onhold
+                              {
+                                  width: auto;
+                                  height: 20px;
+                                  background-color: #F6BE75;
+                                  padding: 0 4px;
+                                  border-radius: 3px;
+                              }
+                              .tooltipTask table tr td .statusTooltip .atrisk
+                              {
+                                  background-color: #E2445B;
+                              }
+                              .tooltipTask table tr td .statusTooltip .approved
+                              {
+                                  background-color: #1FC875;
+                              }
+                              .tooltipTask table tr td .statusTooltip .planned
+                              {
+                                  background-color: #1CA9ED;
+                              }
+                              .tooltipTask table tr td .statusTooltip .offtrack
+                              {
+                                  background-color: #FB5779;
+                              }
+                              .tooltipTask table tr td .statusTooltip .onholdstatus
+                              {
+                                  background-color: #F5E33F;
+                              }
+                              .tooltipTask table tr td .statusTooltip p
+                              {
+                                  width: max-content;
+                                  color: #000;
+                                  font-weight: 500;
+                                  text-transform: capitalize;
+                              }
 
-                    <div class="div-card pt-5 pb-5">
+                              .tooltipTask  .bg-light1{
+                                        background-color: #EAECF252;
+                                    }   
+                                    
+                                    .bg-light2{
+                                        background: #fcfbfb;
+                                        
+                                    }
+
+                                    .bg-light2 .cursor1{
+                                        cursor: pointer;
+                                    }
+
+                                    .tableScroll{
+                                        height: 85px;
+                                    }
+              
+              
+                            </style>
+
+                        <div class="div-card pt-5 pb-5">
                         <div class="row">
                             <div class="col-md">
-                                <div class="card border-0">
+                                <div class="card shadow-sm border-0">
                                     <div class="card-text">
                                         <h1 class="fw-bold">15</h1>
                                         <p>Total Projects</p>
@@ -1214,7 +1291,7 @@
 
                             </div>
                             <div class="col-md">
-                                <div class="card border-0">
+                                <div class="card shadow-sm border-0">
                                     <div class="card-text">
                                         <h1 class="fw-bold">15</h1>
                                         <p>Current Projects</p>
@@ -1231,7 +1308,7 @@
 
                             </div>
                             <div class="col-md">
-                                <div class="card border-0">
+                                <div class="card shadow-sm border-0">
                                     <div class="card-text">
                                         <h1 class="fw-bold">30</h1>
                                         <p>Completed Projects</p>
@@ -1248,7 +1325,7 @@
 
                             </div>
                             <div class="col-md">
-                                <div class="card border-0">
+                                <div class="card shadow-sm border-0">
                                     <div class="card-text">
                                         <h1 class="fw-bold">5</h1>
                                         <p>Approval Pending</p>
@@ -1272,8 +1349,8 @@
                         <div class="rpr">
                             <div class="row pt-5">
                                 <div class="col-md-5">
-                                    <div class="card1 pb-0 ps-0 border-0">
-                                        <h3 class="ps-5">Task Overview</h3>
+                                    <div class="card1 shadow-sm pb-0 ps-0 border-0">
+                                        <h3 class="ps-5 fw-bold">Task Overview</h3>
                                         <div class="chart doughnut">
                                             <div class="canvas-container position-relative">
 
@@ -1299,90 +1376,209 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <style>
+                                    .tableWrap {
+                                      height: 140px;
+
+                                      overflow: auto;
+                                    }
+
+                                    .tableWrap::-webkit-scrollbar{
+                                        width: 5px;
+                                        height: 2px;
+                                    }
+                                    /* Set header to stick to the top of the container. */
+                                    .tableWrap thead {
+                                      background: #fcfbfb;
+                                      position: sticky;
+                                      top: 0;
+                                      z-index: 3;
+                                    }
+                                </style>
+                                
                                 <div class="col-md-7">
-                                    <div class="card1 border-0">
-                                        <h3>Today's Task</h3>
-                                        <div class="table-responsive">
-                                            <table class="table table1 mb-0">
+                                    <div class="card1 p-4 shadow-sm border-0">
+                                        <h3 class="fw-bold ps-4">Pending Task</h3>
+                                        <div class="table-responsive tableWrap tooltipTask">
+                                            <table class="table bg-light2 table1 mb-0">
                                                 <thead>
+                                                    <tr class="bg-light1"  data-bs-toggle="collapse" data-bs-target="#today">
+                                                        <th colspan="6" class="p-2 ps-4 mb-2 fw-bold cursor1"><img class="me-2" src="icons/dropdown-1.svg" width="15" alt=""> Today's</th>
+                                                    </tr>
                                                     <tr>
-                                                        <th>Task Name</th>
-                                                        <th>Project Name</th>
-                                                        <th>Project lead</th>
-                                                        <th>End Date</th>
-                                                        <th>Status</th>
-                                                        <th>Priority</th>
+                                                        
+                                                        
+                                                        <th class="fw-bold pb-0 ps-4">Task Name</th>
+                                                        <th class="fw-bold pb-0">Project Name</th>                                 
+                                                        <th class="fw-bold pb-0">End Date</th>
+                                                        <th class="fw-bold pb-0">Priority </th>
+                                                        <th class="fw-bold pb-0">Status</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody>
+                                                
+                                                <tbody id="today" class="collapse show">
+
+                                                    
+                                                   
                                                     <tr>
-                                                        <td>Task 001</td>
-                                                        <td>Project 001</td>
-                                                        <td><img src="icons/aprrover1.svg" alt=""></td>
-                                                        <td>22/11/2021</td>
-                                                        <td>
-                                                            <div class="onorange">On Track</div>
-                                                        </td>
-                                                        <td>
+                                                        <td class="ps-4 pb-0" >Task 001</td>
+                                                        <td class="pb-0">Project name goes here</td>
+                                                       
+                                                        <td class="pb-0">22/11/2021</td>
+                                                      
+                                                        <td class="pb-0">
                                                             <div class="med">Medium</div>
                                                         </td>
+
+                                                        <td class="pb-0 ps-4 pe-5">
+                                                            <div class="progress">
+                                                              <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%"> </div>
+                                                            </div> <a>50%</a>
+                                                            <div class="statusTooltip">
+                                                              <div class="ontrack">
+                                                                <p>On Track</p>
+                                                              </div>
+                                                            </div>
+                                                        </td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Task 001</td>
-                                                        <td>Project 001</td>
-                                                        <td><img src="icons/aprrover1.svg" alt=""></td>
-                                                        <td>22/11/2021</td>
-                                                        <td>
-                                                            <div class="onorange">On Track</div>
+                                                        <td class="ps-4 pb-0" >Task 001</td>
+                                                        <td class="pb-0">Project name goes here</td>
+                                                       
+                                                        <td class="pb-0">22/11/2021</td>
+                                                      
+                                                        <td class="pb-0">
+                                                            <div class="med high">Medium</div>
                                                         </td>
+
+                                                        <td class="pb-0 ps-4 pe-5">
+                                                            <div class="progress">
+                                                              <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%"> </div>
+                                                            </div> <a>50%</a>
+                                                            <div class="statusTooltip">
+                                                              <div class="ontrack">
+                                                                <p>On Track</p>
+                                                              </div>
+                                                            </div>
                                                         </td>
-                                                        <td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="ps-4 pb-0" >Task 001</td>
+                                                        <td class="pb-0">Project name goes here</td>
+                                                       
+                                                        <td class="pb-0">22/11/2021</td>
+                                                      
+                                                        <td class="pb-0">
                                                             <div class="med">Medium</div>
                                                         </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Task 001</td>
-                                                        <td>Project 001</td>
-                                                        <td><img src="icons/aprrover1.svg" alt=""> <img
-                                                                src="icons/aprrover1.svg" alt=""></td>
-                                                        <td>22/11/2021</td>
-                                                        <td>
-                                                            <div class="onorange">On Track</div>
-                                                        </td>
-                                                        </td>
-                                                        <td>
-                                                            <div class="med">Medium</div>
+
+                                                        <td class="pb-0 ps-4 pe-5">
+                                                            <div class="progress">
+                                                              <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%"> </div>
+                                                            </div> <a>50%</a>
+                                                            <div class="statusTooltip">
+                                                              <div class="ontrack">
+                                                                <p>On Track</p>
+                                                              </div>
+                                                            </div>
                                                         </td>
                                                     </tr>
-                                                    <tr>
-                                                        <td>Task 001</td>
-                                                        <td>Project 001</td>
-                                                        <td><img src="icons/aprrover1.svg" alt=""></td>
-                                                        <td>22/11/2021</td>
-                                                        <td>
-                                                            <div class="onorange plan">Planned</div>
-                                                        </td>
-                                                        </td>
-                                                        <td>
-                                                            <div class="med high">High</div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Task 001</td>
-                                                        <td>Project 001</td>
-                                                        <td><img src="icons/aprrover1.svg" alt=""></td>
-                                                        <td>22/11/2021</td>
-                                                        <td>
-                                                            <div class="onorange redy">Redy to be..</div>
-                                                        </td>
-                                                        </td>
-                                                        <td>
-                                                            <div class="med low">Low</div>
-                                                        </td>
-                                                    </tr>
+                                                   
+
+                                                   
 
                                                 </tbody>
                                             </table>
+                                        </div>    
+                                        <div class="table-responsive tableWrap tooltipTask">
+                                            <table class="table bg-light2 table1 mb-0">
+                                                <thead>
+                                                    <tr class="bg-light1" data-bs-toggle="collapse" data-bs-target="#pending">
+                                                        <th colspan="6" class="p-2 ps-4 mb-2 fw-bold cursor1"><img class="me-2" src="icons/dropdown-1.svg" width="15" alt="">Pending</th>
+                                                    </tr>
+                                                    <!-- <tr>
+                                                        
+                                                        
+                                                        <th class="fw-bold pb-0 ps-4">Task Name</th>
+                                                        <th class="fw-bold pb-0">Project Name</th>                                 
+                                                        <th class="fw-bold pb-0">End Date</th>
+                                                        <th class="fw-bold pb-0">Priority </th>
+                                                        <th class="fw-bold pb-0">Status</th>
+                                                    </tr> -->
+                                                </thead>
+                                                
+                                                <tbody id="pending" class="collapse show">
+
+                                                    
+                                                    <tr>
+                                                        <td class="ps-4 pb-0" >Task 001</td>
+                                                        <td class="pb-0">Project name goes here</td>
+                                                       
+                                                        <td class="pb-0">22/11/2021</td>
+                                                      
+                                                        <td class="pb-0">
+                                                            <div class="med">Medium</div>
+                                                        </td>
+
+                                                        <td class="pb-0 ps-4 pe-5">
+                                                            <div class="progress">
+                                                              <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%"> </div>
+                                                            </div> <a>50%</a>
+                                                            <div class="statusTooltip">
+                                                              <div class="ontrack">
+                                                                <p>On Track</p>
+                                                              </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="ps-4 pb-0" >Task 001</td>
+                                                        <td class="pb-0">Project name goes here</td>
+                                                       
+                                                        <td class="pb-0">22/11/2021</td>
+                                                      
+                                                        <td class="pb-0">
+                                                            <div class="med high">Medium</div>
+                                                        </td>
+
+                                                        <td class="pb-0 ps-4 pe-5">
+                                                            <div class="progress">
+                                                              <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%"> </div>
+                                                            </div> <a>50%</a>
+                                                            <div class="statusTooltip">
+                                                              <div class="ontrack">
+                                                                <p>On Track</p>
+                                                              </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="ps-4 pb-0" >Task 001</td>
+                                                        <td class="pb-0">Project name goes here</td>
+                                                       
+                                                        <td class="pb-0">22/11/2021</td>
+                                                      
+                                                        <td class="pb-0">
+                                                            <div class="med">Medium</div>
+                                                        </td>
+
+                                                        <td class="pb-0 ps-4 pe-5">
+                                                            <div class="progress">
+                                                              <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%"> </div>
+                                                            </div> <a>50%</a>
+                                                            <div class="statusTooltip">
+                                                              <div class="ontrack">
+                                                                <p>On Track</p>
+                                                              </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                   
+
+                                                </tbody>
+                                            </table>
+                                        </div>  
                                         </div>
                                     </div>
                                 </div>
@@ -1390,9 +1586,9 @@
                             </div>
                             <div class="row pt-5">
                                 <div class="col-md-6">
-                                    <div class="card1 recent-task border-0">
+                                    <div class="card1 shadow-sm recent-task border-0">
                                         <h3 class="fw-bold"><img src="icons/arrowright.svg" alt=""> Overdue task and milestone</h3>
-                                        <div class="table-responsive">
+                                        <div class="table-responsive tooltipTask">
                                             <table class="table">
                                                 <thead>
                                                     <tr>
@@ -1407,15 +1603,16 @@
                                                     <tr>
                                                         <td>Task 01</td>
                                                         <td>22/11/2021</td>
+                                 
                                                         <td>
                                                             <div class="progress">
-                                                                <div class="progress-bar" role="progressbar"
-                                                                    aria-valuenow="50" aria-valuemin="0"
-                                                                    aria-valuemax="100" style="width:50%">
-
-                                                                </div>
+                                                              <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%"> </div>
+                                                            </div> <a>50%</a>
+                                                            <div class="statusTooltip">
+                                                              <div class="ontrack">
+                                                                <p>On Track</p>
+                                                              </div>
                                                             </div>
-                                                            <a>50%</a>
                                                         </td>
 
                                                         <td class="ms-5"><img src="icons/aprrover1.svg" alt=""> <img
@@ -1426,13 +1623,13 @@
                                                         <td>22/11/2021</td>
                                                         <td>
                                                             <div class="progress">
-                                                                <div class="progress-bar" role="progressbar"
-                                                                    aria-valuenow="70" aria-valuemin="0"
-                                                                    aria-valuemax="100" style="width:70%">
-                                                                    <!-- 70% -->
-                                                                </div>
+                                                              <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%"> </div>
+                                                            </div> <a>50%</a>
+                                                            <div class="statusTooltip">
+                                                              <div class="ontrack">
+                                                                <p>On Track</p>
+                                                              </div>
                                                             </div>
-                                                            <a>70%</a>
                                                         </td>
                                                         <td class="ms-5"><img src="icons/aprrover1.svg" alt=""> <img
                                                             src="icons/aprrover1.svg" alt=""></td>
@@ -1442,13 +1639,13 @@
                                                         <td>22/11/2021</td>
                                                         <td>
                                                             <div class="progress">
-                                                                <div class="progress-bar" role="progressbar"
-                                                                    aria-valuenow="20" aria-valuemin="0"
-                                                                    aria-valuemax="100" style="width:20%">
-
-                                                                </div>
+                                                              <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%"> </div>
+                                                            </div> <a>50%</a>
+                                                            <div class="statusTooltip">
+                                                              <div class="ontrack">
+                                                                <p>On Track</p>
+                                                              </div>
                                                             </div>
-                                                            <a>20%</a>
                                                         </td>
                                                         <td class="ms-5"><img src="icons/aprrover1.svg" alt=""> <img
                                                             src="icons/aprrover1.svg" alt=""></td>
@@ -1458,13 +1655,13 @@
                                                         <td>22/11/2021</td>
                                                         <td>
                                                             <div class="progress">
-                                                                <div class="progress-bar" role="progressbar"
-                                                                    aria-valuenow="20" aria-valuemin="0"
-                                                                    aria-valuemax="100" style="width:20%">
-
-                                                                </div>
+                                                              <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%"> </div>
+                                                            </div> <a>50%</a>
+                                                            <div class="statusTooltip">
+                                                              <div class="ontrack">
+                                                                <p>On Track</p>
+                                                              </div>
                                                             </div>
-                                                            <a>20%</a>
                                                         </td>
                                                         <td class="ms-5"><img src="icons/aprrover1.svg" alt=""> <img
                                                             src="icons/aprrover1.svg" alt=""></td>
@@ -1474,13 +1671,13 @@
                                                         <td>22/11/2021</td>
                                                         <td>
                                                             <div class="progress">
-                                                                <div class="progress-bar" role="progressbar"
-                                                                    aria-valuenow="20" aria-valuemin="0"
-                                                                    aria-valuemax="100" style="width:20%">
-
-                                                                </div>
+                                                              <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%"> </div>
+                                                            </div> <a>50%</a>
+                                                            <div class="statusTooltip">
+                                                              <div class="ontrack">
+                                                                <p>On Track</p>
+                                                              </div>
                                                             </div>
-                                                            <a>20%</a>
                                                         </td>
                                                         <td class="ms-5"><img src="icons/aprrover1.svg" alt=""> <img
                                                             src="icons/aprrover1.svg" alt=""></td>
@@ -1490,13 +1687,13 @@
                                                         <td>22/11/2021</td>
                                                         <td>
                                                             <div class="progress">
-                                                                <div class="progress-bar" role="progressbar"
-                                                                    aria-valuenow="20" aria-valuemin="0"
-                                                                    aria-valuemax="100" style="width:20%">
-
-                                                                </div>
+                                                              <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%"> </div>
+                                                            </div> <a>50%</a>
+                                                            <div class="statusTooltip">
+                                                              <div class="ontrack">
+                                                                <p>On Track</p>
+                                                              </div>
                                                             </div>
-                                                            <a>20%</a>
                                                         </td>
                                                         <td class="ms-5"><img src="icons/aprrover1.svg" alt=""> <img
                                                             src="icons/aprrover1.svg" alt=""></td>
@@ -1506,13 +1703,13 @@
                                                         <td>22/11/2021</td>
                                                         <td>
                                                             <div class="progress">
-                                                                <div class="progress-bar" role="progressbar"
-                                                                    aria-valuenow="20" aria-valuemin="0"
-                                                                    aria-valuemax="100" style="width:20%">
-
-                                                                </div>
+                                                              <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%"> </div>
+                                                            </div> <a>50%</a>
+                                                            <div class="statusTooltip">
+                                                              <div class="ontrack">
+                                                                <p>On Track</p>
+                                                              </div>
                                                             </div>
-                                                            <a>20%</a>
                                                         </td>
                                                         <td class="ms-5"><img src="icons/aprrover1.svg" alt=""> <img
                                                             src="icons/aprrover1.svg" alt=""></td>
@@ -1522,13 +1719,13 @@
                                                         <td>22/11/2021</td>
                                                         <td>
                                                             <div class="progress">
-                                                                <div class="progress-bar" role="progressbar"
-                                                                    aria-valuenow="20" aria-valuemin="0"
-                                                                    aria-valuemax="100" style="width:20%">
-
-                                                                </div>
+                                                              <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%"> </div>
+                                                            </div> <a>50%</a>
+                                                            <div class="statusTooltip">
+                                                              <div class="ontrack">
+                                                                <p>On Track</p>
+                                                              </div>
                                                             </div>
-                                                            <a>20%</a>
                                                         </td>
                                                         <td class="ms-5"><img src="icons/aprrover1.svg" alt=""> <img
                                                             src="icons/aprrover1.svg" alt=""></td>
@@ -1538,13 +1735,13 @@
                                                         <td>22/11/2021</td>
                                                         <td>
                                                             <div class="progress">
-                                                                <div class="progress-bar" role="progressbar"
-                                                                    aria-valuenow="20" aria-valuemin="0"
-                                                                    aria-valuemax="100" style="width:20%">
-
-                                                                </div>
+                                                              <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%"> </div>
+                                                            </div> <a>50%</a>
+                                                            <div class="statusTooltip">
+                                                              <div class="ontrack">
+                                                                <p>On Track</p>
+                                                              </div>
                                                             </div>
-                                                            <a>20%</a>
                                                         </td>
                                                         <td class="ms-5"><img src="icons/aprrover1.svg" alt=""> <img
                                                             src="icons/aprrover1.svg" alt=""></td>
@@ -1557,7 +1754,7 @@
                              
 
                                 <div class="col-md-6">
-                                    <div class="card1 border-0">
+                                    <div class="card1 shadow-sm border-0">
                                         <h3 class="text-center pt-4 fw-bold">My Task progress</h3>
                                         <div class="chart-gauge_parent position-relative">
                                             <div class="chart-gauge position-absolut"></div>
