@@ -73,10 +73,12 @@ var chart = new Chart(ctx, {
                 }
             }],
             yAxes: [{
+                scaleLabel: { labelString: ["One", "Two", "Three", "Four", "Five"] },
                 ticks: {
+                    
                     // Include a dollar sign in the ticks
                     callback: function(value, index, values) {
-                        return (value / 1000) + 'M';
+                        return  '$' + (value / 1000) + 'M';
                     },
                  
         
