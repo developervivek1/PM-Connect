@@ -32,6 +32,519 @@
 </head>
 
 <body>
+
+    <style>
+                       
+
+        .div-dashboard {
+            padding-left: 8vw;
+            /* padding-right: 0vw; */
+            background-color: #F8F9FB;
+            width: 100%;
+
+        }
+
+        .div-titleright {
+            margin-right: 34px;
+            color: #1E2022;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .div-card span {
+            color: #1FC875;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 0.24px;
+        }
+
+        .div-card span.spanred {
+            color: #E2445B;
+        }
+
+        .card1 {
+
+            background: #FFFFFF;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 10px;
+            min-height: 350px;
+        }
+
+        .card1 h3 {
+            font-size: 18px;
+            font-weight: 500;
+            color: #000000;
+        }
+
+        .chart.doughnut {
+            margin-top: 2rem;
+            width: 100%;
+            /* margin: 10px; */
+            display: flex;
+            /* padding-bottom: 50%; */
+            position: relative;
+            z-index: 1;
+            /* background-color:#DDD; */
+        }
+
+        .canvas-container {
+            width: 250px;
+            height: 250px;
+        }
+
+
+        .chart.doughnut ul {
+            width: 100%;
+            margin-top: 4px;
+            margin-left: 54px;
+            /* list-style: no; */
+        }
+
+        .chart.doughnut ul li {
+            line-height: 1.6rem;
+            /* font-family: helvetica, sans serif; */
+
+            /* padding-left: 2rem; */
+            position: relative;
+            margin-bottom: 47px;
+        }
+
+        li::marker {
+            font-size: 33px;
+        }
+
+        .chart.doughnut canvas {
+            width: 261px;
+            /* width: 100%; */
+        }
+
+        .chart.doughnut data {
+            /* font-weight: 500;
+                        display: block;
+                        font-size: 16px;
+                        margin: 0.5rem 0;
+                        color: #8C8C8C; */
+            left: -9px;
+            top: -1px;
+            /* width: 100%; */
+            position: absolute;
+            /* font-weight: 500; */
+            display: block;
+            font-size: 14px;
+            /* margin: -0.5rem 0; */
+            color: #8C8C8C;
+        }
+
+        .chart.doughnut span {
+            position: absolute;
+            color: #000000;
+            font-size: 16px;
+            font-weight: 400;
+            top: 22px;
+            left: -9px;
+        }
+
+        .card1 table th {
+            color: #000;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .card1 table td {
+            font: normal normal normal 14px/19px Lato;
+            letter-spacing: 0px;
+            color: #000000;
+
+        }
+
+        .card1 table th,
+        .card1 table td {
+            border: none;
+            padding: 10px 5px;
+        }
+
+        .card1 table th:first-child,
+        .card1 table td:first-child {
+            padding: 10px 0px;
+        }
+
+        .onorange {
+            width: 80%;
+            background: #F6BE75 0% 0% no-repeat padding-box;
+            padding: 4px 0px;
+            text-align: center;
+            color: #FFFFFF;
+            font-size: 12px;
+            /* font-weight: 500; */
+            border-radius: 3px;
+
+        }
+
+        .plan {
+            background: #1CA9ED !important;
+        }
+
+        .redy {
+            background: #951DC7 !important;
+        }
+
+        .med {
+            background: #9D73FA;
+            padding: 4px 0px;
+            text-align: center;
+            color: #FFFFFF;
+            font-size: 12px;
+            /* font-weight: 500; */
+            border-radius: 3px;
+        }
+
+        .high {
+            background: #F02E2E !important;
+        }
+
+        .low {
+            background: #1CA9ED !important;
+        }
+
+        .onhold {
+            background: rgb(110, 109, 108, 0.3) !important;
+        }
+
+        .card1 .progress {
+            margin-right: 5rem;
+            border-radius: 20px;
+            height: 4px;
+            width: 73%;
+            margin-top: 10px;
+        }
+
+        .card1 .progress-bar {
+            background: rgb(87, 87, 87, 0.56);
+            border-radius: 20px;
+
+        }
+
+        .rpr {
+            padding-right: 0vw;
+        }
+
+        .table tr td a {
+            color: #000000;
+            font-size: 12px;
+            margin-top: -13px;
+            float: right;
+            /* margin-left: 40px; */
+            margin-right: -5px;
+            font: normal normal normal 12px/18px Lato;
+        }
+
+        .card1 h3 span {
+            color: #1CA9ED;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: rgb(28, 169, 237, 0.12);
+            border-radius: 10px;
+            padding: 0px 15px;
+            margin-left: 10px;
+            text-align: center;
+        }
+
+
+        @media (max-width:768px) {
+
+            .div-card .card {
+                width: 75% !important;
+
+            }
+
+            .div-title h1 {
+                font-size: 20px !important;
+            }
+
+            .div-title h4 {
+                font-size: 16px !important;
+            }
+
+            .div-titleright {
+                margin-right: 20px !important;
+            }
+
+            .div-card .card {
+                margin-bottom: 2rem;
+                margin-top: 6rem;
+                border-radius: 10px !important;
+                padding: 2.7vw !important;
+            }
+
+            .img-total img {
+                width: 33vw !important;
+                right: -18.5vw !important;
+
+                top: -13.5vw !important;
+            }
+
+            .chart.doughnut canvas {
+                width: 204px;
+                /* width: 100%; */
+            }
+
+            .chart.doughnut ul {
+
+                margin-left: 3rem;
+            }
+
+            .text-inside {
+                top: 42% !important;
+            }
+
+            .card1 .table1 {
+                width: 221%;
+            }
+
+            .div-dashboard {
+                margin-top: 5rem;
+                padding-left: 4vw;
+            }
+
+            .manage_view .div1 ul:nth-child(3) {
+                bottom: 8% !important;
+
+            }
+
+            .chart.doughnut span {
+                top: 30px;
+
+            }
+
+
+        }
+
+        /*endramya30dec21*/
+        .div-title {
+            padding-top: 2.4vw;
+        }
+
+        .div-title h4 {
+            font-size: 1.2vw;
+            color: #000000;
+            opacity: 70%;
+        }
+
+        .div-title h1 {
+            font-size: 2vw;
+            padding-top: 0.4vw;
+            color: #171E48;
+            opacity: 100%;
+        }
+
+        .div-card {
+            padding-right: 2vw;
+        }
+
+        .div-card .card {
+            width: 18.2vw;
+            border-radius: 0.7vw;
+            padding: .7vw;
+        }
+
+        .card .card-text {
+            margin-top: 10px;
+            margin-left: 15px;
+        }
+
+        .img-total img {
+            width: 9vw;
+            right: -2.5vw;
+            position: absolute;
+            top: -2.5vw;
+        }
+
+        .card-text h1 {
+            font-family: lato;
+            font-size: 36px;
+            font-weight: 700;
+            color: #171E48;
+        }
+
+        .card-text p {
+            font-size: 16px;
+            color: #171E48;
+        }
+
+        .text-inside {
+            margin: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            top: 50%;
+
+        }
+
+        .card1 .table-responsive {
+            margin-top: 10px;
+        }
+
+        .recent-task table th,
+        .recent-task table td {
+            border: none;
+            padding: 8px 5px;
+
+        }
+
+        .recent-task table th:first-child,
+        .recent-task table td:first-child {
+            padding: 8px 0px;
+
+        }
+
+        .recent-task table th:last-child,
+        .recent-task table td:last-child  img:first-child{
+            padding-left: 5rem;
+
+        }
+
+        .pending-task table th:last-child,
+        .pending-task table td:last-child {
+            text-align: center;
+
+        }
+
+        .pending-task table th:last-child {
+            text-align: end;
+        }
+
+        .pending-task table th,
+        .pending-task table td {
+            border: none;
+            padding: 9px 5px;
+
+        }
+
+        /* .pending-task table th:first-child , .pending-task table td:first-child{
+                        padding: 8px 0px;
+                        
+                    } */
+
+        /* .recent-task table tr td{
+            padding: 0px;
+
+        }
+        .recent-task table tr th{
+                            padding: 0px;
+
+                        } */
+                    
+                    
+            .tooltipTask table tr td
+              {
+                  position: relative;
+              }
+              .tooltipTask table tr td .statusTooltip {
+                  position: absolute;
+                  top: -5px;
+                  left: 12px;
+                  display: flex;
+                  justify-content: center;
+                  visibility: hidden;
+              }
+              .tooltipTask table tr td:hover .statusTooltip
+              {
+                  visibility: visible;
+              }
+              .tooltipTask table tr td .statusTooltip .ontrack,
+              .tooltipTask table tr td .statusTooltip .atrisk,
+              .tooltipTask table tr td .statusTooltip .approved,
+              .tooltipTask table tr td .statusTooltip .planned,
+              .tooltipTask table tr td .statusTooltip .offtrack,
+              .tooltipTask table tr td .statusTooltip .onhold
+              {
+                  width: auto;
+                  height: 20px;
+                  background-color: #F6BE75;
+                  padding: 0 4px;
+                  border-radius: 3px;
+              }
+              .tooltipTask table tr td .statusTooltip .atrisk
+              {
+                  background-color: #E2445B;
+              }
+              .tooltipTask table tr td .statusTooltip .approved
+              {
+                  background-color: #1FC875;
+              }
+              .tooltipTask table tr td .statusTooltip .planned
+              {
+                  background-color: #1CA9ED;
+              }
+              .tooltipTask table tr td .statusTooltip .offtrack
+              {
+                  background-color: #FB5779;
+              }
+              .tooltipTask table tr td .statusTooltip .onholdstatus
+              {
+                  background-color: #F5E33F;
+              }
+              .tooltipTask table tr td .statusTooltip p
+              {
+                  width: max-content;
+                  color: #000;
+                  font-weight: 500;
+                  text-transform: capitalize;
+              }
+
+              .tooltipTask  .bg-light1{
+                        background-color: #EAECF252;
+                    }   
+                    
+                    .bg-light2{
+                        background: #fcfbfb;
+                        
+                    }
+
+                    .bg-light2 .cursor1{
+                        cursor: pointer;
+                    }
+
+                    .tableScroll{
+                        height: 85px;
+                    }
+
+                    @media (max-width:786px) {
+                        .overdueTable table{
+                        width: 180%;
+
+                    }
+
+
+                        
+                    }
+
+                    
+
+                
+                    .tableWrap {
+                      height: 140px;
+
+                      overflow: auto;
+                    }
+
+                    .tableWrap::-webkit-scrollbar{
+                        width: 5px;
+                        height: 4px;
+                    }
+                    /* Set header to stick to the top of the container. */
+                    .tableWrap thead {
+                      background: #fcfbfb;
+                      position: sticky;
+                      top: 0;
+                      z-index: 3;
+                    }
+                
+            </style>
+
+
     <section class="manage_view">
         <div class="container-fluid">
             <div class="row">
@@ -790,496 +1303,6 @@
 
                     </div>
 
-                    <style>
-                        /*ramya30dec21*/
-
-                        .div-dashboard {
-                            padding-left: 8vw;
-                            /* padding-right: 0vw; */
-                            background-color: #F8F9FB;
-                            width: 100%;
-
-                        }
-
-                        .div-titleright {
-                            margin-right: 34px;
-                            color: #1E2022;
-                            cursor: pointer;
-                            font-size: 16px;
-                            margin-top: 20px;
-                            font-weight: bold;
-                        }
-
-                        .div-card span {
-                            color: #1FC875;
-                            font-size: 12px;
-                            font-weight: bold;
-                            letter-spacing: 0.24px;
-                        }
-
-                        .div-card span.spanred {
-                            color: #E2445B;
-                        }
-
-                        .card1 {
-
-                            background: #FFFFFF;
-                            border-radius: 10px;
-                            padding: 25px;
-                            margin-bottom: 10px;
-                            min-height: 350px;
-                        }
-
-                        .card1 h3 {
-                            font-size: 18px;
-                            font-weight: 500;
-                            color: #000000;
-                        }
-
-                        .chart.doughnut {
-                            margin-top: 2rem;
-                            width: 100%;
-                            /* margin: 10px; */
-                            display: flex;
-                            /* padding-bottom: 50%; */
-                            position: relative;
-                            z-index: 1;
-                            /* background-color:#DDD; */
-                        }
-
-                        .canvas-container {
-                            width: 250px;
-                            height: 250px;
-                        }
-
-
-                        .chart.doughnut ul {
-                            width: 100%;
-                            margin-top: 4px;
-                            margin-left: 54px;
-                            /* list-style: no; */
-                        }
-
-                        .chart.doughnut ul li {
-                            line-height: 1.6rem;
-                            /* font-family: helvetica, sans serif; */
-
-                            /* padding-left: 2rem; */
-                            position: relative;
-                            margin-bottom: 47px;
-                        }
-
-                        li::marker {
-                            font-size: 33px;
-                        }
-
-                        .chart.doughnut canvas {
-                            width: 261px;
-                            /* width: 100%; */
-                        }
-
-                        .chart.doughnut data {
-                            /* font-weight: 500;
-                                        display: block;
-                                        font-size: 16px;
-                                        margin: 0.5rem 0;
-                                        color: #8C8C8C; */
-                            left: -9px;
-                            top: -1px;
-                            /* width: 100%; */
-                            position: absolute;
-                            /* font-weight: 500; */
-                            display: block;
-                            font-size: 14px;
-                            /* margin: -0.5rem 0; */
-                            color: #8C8C8C;
-                        }
-
-                        .chart.doughnut span {
-                            position: absolute;
-                            color: #000000;
-                            font-size: 16px;
-                            font-weight: 400;
-                            top: 22px;
-                            left: -9px;
-                        }
-
-                        .card1 table th {
-                            color: #000;
-                            font-size: 14px;
-                            font-weight: 500;
-                        }
-
-                        .card1 table td {
-                            font: normal normal normal 14px/19px Lato;
-                            letter-spacing: 0px;
-                            color: #000000;
-
-                        }
-
-                        .card1 table th,
-                        .card1 table td {
-                            border: none;
-                            padding: 10px 5px;
-                        }
-
-                        .card1 table th:first-child,
-                        .card1 table td:first-child {
-                            padding: 10px 0px;
-                        }
-
-                        .onorange {
-                            width: 80%;
-                            background: #F6BE75 0% 0% no-repeat padding-box;
-                            padding: 4px 0px;
-                            text-align: center;
-                            color: #FFFFFF;
-                            font-size: 12px;
-                            /* font-weight: 500; */
-                            border-radius: 3px;
-
-                        }
-
-                        .plan {
-                            background: #1CA9ED !important;
-                        }
-
-                        .redy {
-                            background: #951DC7 !important;
-                        }
-
-                        .med {
-                            background: #9D73FA;
-                            padding: 4px 0px;
-                            text-align: center;
-                            color: #FFFFFF;
-                            font-size: 12px;
-                            /* font-weight: 500; */
-                            border-radius: 3px;
-                        }
-
-                        .high {
-                            background: #F02E2E !important;
-                        }
-
-                        .low {
-                            background: #1CA9ED !important;
-                        }
-
-                        .onhold {
-                            background: rgb(110, 109, 108, 0.3) !important;
-                        }
-
-                        .card1 .progress {
-                            margin-right: 5rem;
-                            border-radius: 20px;
-                            height: 4px;
-                            width: 73%;
-                            margin-top: 10px;
-                        }
-
-                        .card1 .progress-bar {
-                            background: rgb(87, 87, 87, 0.56);
-                            border-radius: 20px;
-
-                        }
-
-                        .rpr {
-                            padding-right: 0vw;
-                        }
-
-                        .table tr td a {
-                            color: #000000;
-                            font-size: 12px;
-                            margin-top: -13px;
-                            float: right;
-                            /* margin-left: 40px; */
-                            margin-right: -5px;
-                            font: normal normal normal 12px/18px Lato;
-                        }
-
-                        .card1 h3 span {
-                            color: #1CA9ED;
-                            font-size: 16px;
-                            font-weight: bold;
-                            background-color: rgb(28, 169, 237, 0.12);
-                            border-radius: 10px;
-                            padding: 0px 15px;
-                            margin-left: 10px;
-                            text-align: center;
-                        }
-
-
-                        @media (max-width:768px) {
-
-                            .div-card .card {
-                                width: 75% !important;
-
-                            }
-
-                            .div-title h1 {
-                                font-size: 20px !important;
-                            }
-
-                            .div-title h4 {
-                                font-size: 16px !important;
-                            }
-
-                            .div-titleright {
-                                margin-right: 20px !important;
-                            }
-
-                            .div-card .card {
-                                margin-bottom: 2rem;
-                                margin-top: 6rem;
-                                border-radius: 10px !important;
-                                padding: 2.7vw !important;
-                            }
-
-                            .img-total img {
-                                width: 33vw !important;
-                                right: -18.5vw !important;
-
-                                top: -13.5vw !important;
-                            }
-
-                            .chart.doughnut canvas {
-                                width: 204px;
-                                /* width: 100%; */
-                            }
-
-                            .chart.doughnut ul {
-
-                                margin-left: 3rem;
-                            }
-
-                            .text-inside {
-                                top: 42% !important;
-                            }
-
-                            .card1 .table1 {
-                                width: 221%;
-                            }
-
-                            .div-dashboard {
-                                margin-top: 5rem;
-                                padding-left: 4vw;
-                            }
-
-                            .manage_view .div1 ul:nth-child(3) {
-                                bottom: 8% !important;
-
-                            }
-
-                            .chart.doughnut span {
-                                top: 30px;
-
-                            }
-
-
-                        }
-
-                        /*endramya30dec21*/
-                        .div-title {
-                            padding-top: 2.4vw;
-                        }
-
-                        .div-title h4 {
-                            font-size: 1.2vw;
-                            color: #000000;
-                            opacity: 70%;
-                        }
-
-                        .div-title h1 {
-                            font-size: 2vw;
-                            padding-top: 0.4vw;
-                            color: #171E48;
-                            opacity: 100%;
-                        }
-
-                        .div-card {
-                            padding-right: 2vw;
-                        }
-
-                        .div-card .card {
-                            width: 18.2vw;
-                            border-radius: 0.7vw;
-                            padding: .7vw;
-                        }
-
-                        .card .card-text {
-                            margin-top: 10px;
-                            margin-left: 15px;
-                        }
-
-                        .img-total img {
-                            width: 9vw;
-                            right: -2.5vw;
-                            position: absolute;
-                            top: -2.5vw;
-                        }
-
-                        .card-text h1 {
-                            font-family: lato;
-                            font-size: 36px;
-                            font-weight: 700;
-                            color: #171E48;
-                        }
-
-                        .card-text p {
-                            font-size: 16px;
-                            color: #171E48;
-                        }
-
-                        .text-inside {
-                            margin: 0;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            top: 50%;
-
-                        }
-
-                        .card1 .table-responsive {
-                            margin-top: 10px;
-                        }
-
-                        .recent-task table th,
-                        .recent-task table td {
-                            border: none;
-                            padding: 8px 5px;
-
-                        }
-
-                        .recent-task table th:first-child,
-                        .recent-task table td:first-child {
-                            padding: 8px 0px;
-
-                        }
-
-                        .recent-task table th:last-child,
-                        .recent-task table td:last-child  img:first-child{
-                            padding-left: 5rem;
-
-                        }
-
-                        .pending-task table th:last-child,
-                        .pending-task table td:last-child {
-                            text-align: center;
-
-                        }
-
-                        .pending-task table th:last-child {
-                            text-align: end;
-                        }
-
-                        .pending-task table th,
-                        .pending-task table td {
-                            border: none;
-                            padding: 9px 5px;
-
-                        }
-
-                        /* .pending-task table th:first-child , .pending-task table td:first-child{
-                                        padding: 8px 0px;
-                                        
-                                    } */
-
-                        /* .recent-task table tr td{
-                            padding: 0px;
-
-                        }
-                        .recent-task table tr th{
-                                            padding: 0px;
-
-                                        } */
-                                    
-                                    
-                            .tooltipTask table tr td
-                              {
-                                  position: relative;
-                              }
-                              .tooltipTask table tr td .statusTooltip {
-                                  position: absolute;
-                                  top: -5px;
-                                  left: 12px;
-                                  display: flex;
-                                  justify-content: center;
-                                  visibility: hidden;
-                              }
-                              .tooltipTask table tr td:hover .statusTooltip
-                              {
-                                  visibility: visible;
-                              }
-                              .tooltipTask table tr td .statusTooltip .ontrack,
-                              .tooltipTask table tr td .statusTooltip .atrisk,
-                              .tooltipTask table tr td .statusTooltip .approved,
-                              .tooltipTask table tr td .statusTooltip .planned,
-                              .tooltipTask table tr td .statusTooltip .offtrack,
-                              .tooltipTask table tr td .statusTooltip .onhold
-                              {
-                                  width: auto;
-                                  height: 20px;
-                                  background-color: #F6BE75;
-                                  padding: 0 4px;
-                                  border-radius: 3px;
-                              }
-                              .tooltipTask table tr td .statusTooltip .atrisk
-                              {
-                                  background-color: #E2445B;
-                              }
-                              .tooltipTask table tr td .statusTooltip .approved
-                              {
-                                  background-color: #1FC875;
-                              }
-                              .tooltipTask table tr td .statusTooltip .planned
-                              {
-                                  background-color: #1CA9ED;
-                              }
-                              .tooltipTask table tr td .statusTooltip .offtrack
-                              {
-                                  background-color: #FB5779;
-                              }
-                              .tooltipTask table tr td .statusTooltip .onholdstatus
-                              {
-                                  background-color: #F5E33F;
-                              }
-                              .tooltipTask table tr td .statusTooltip p
-                              {
-                                  width: max-content;
-                                  color: #000;
-                                  font-weight: 500;
-                                  text-transform: capitalize;
-                              }
-
-                              .tooltipTask  .bg-light1{
-                                        background-color: #EAECF252;
-                                    }   
-                                    
-                                    .bg-light2{
-                                        background: #fcfbfb;
-                                        
-                                    }
-
-                                    .bg-light2 .cursor1{
-                                        cursor: pointer;
-                                    }
-
-                                    .tableScroll{
-                                        height: 85px;
-                                    }
-
-                                    @media (max-width:786px) {
-                                        .overdueTable table{
-                                        width: 180%;
-
-                                    }
-              
-              
-                                        
-                                    }
-
-                                    
-                            </style>
 
                         <div class="div-card pt-5 pb-5">
                         <div class="row">
@@ -1387,25 +1410,7 @@
                                     </div>
                                 </div>
 
-                                <style>
-                                    .tableWrap {
-                                      height: 140px;
-
-                                      overflow: auto;
-                                    }
-
-                                    .tableWrap::-webkit-scrollbar{
-                                        width: 5px;
-                                        height: 4px;
-                                    }
-                                    /* Set header to stick to the top of the container. */
-                                    .tableWrap thead {
-                                      background: #fcfbfb;
-                                      position: sticky;
-                                      top: 0;
-                                      z-index: 3;
-                                    }
-                                </style>
+                              
                                 
                                 <div class="col-md-7">
                                     <div class="card1 p-4 shadow-sm border-0">
@@ -1768,7 +1773,7 @@
                                         <h3 class="text-center pt-4 fw-bold">My Task progress</h3>
                                         <div class="chart-gauge_parent position-relative">
                                             <div class="chart-gauge position-absolut"></div>
-                                            <div class="pb-5" style="text-align:center;">
+                                            <div class="pb-4 pb-md-5  text1" style="text-align:center;">
                                                 <span style="font-size: 26px;color:#000;font-weight: 600;">
                                                     120
                                                 </span>
@@ -1784,7 +1789,7 @@
                                                     opacity: 1;
 
                                                     text-align: left;
-                                                    font: normal normal 600 15px/25px Lato;
+                                                    font: normal normal 600 15px/25px;
                                                     letter-spacing: 0px;
                                                     color: #1E2022;
                                                     opacity: 1;
