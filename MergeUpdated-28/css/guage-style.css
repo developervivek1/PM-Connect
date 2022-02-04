@@ -34,3 +34,11 @@
 svg {
   font: 10px sans-serif;
 }
+
+
+/* @media (max-width:600px){
+  .chart-gauge svg g{
+    transform: translate(140, 160) !important;
+  }
+  
+} */
