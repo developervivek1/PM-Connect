@@ -12,10 +12,70 @@
   <link rel="stylesheet" href="css/custom_drop_down_withclose.css">
   <link rel="stylesheet" href="css/guage-style.css">
   <link rel="stylesheet" href="css/dashboard.css">
+  <!-- <link rel="stylesheet" href="css/ownerscreen.css"> -->
+  
   <title>Dashboard Management</title>
 </head>
 
 <body>
+
+  <style>
+  
+  .chart2 .chart.doughnut {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+  
+.chart2 .canvas-container {
+    width: 250px;
+    height: 250px;
+    margin: -1rem auto 1.8rem auto;
+  }
+  
+  .chart2 .chart.doughnut ul {
+    width: 100%;
+    margin-left: 3rem;
+    display: flex;
+  }
+  
+  .chart2 .chart.doughnut ul li {
+    line-height: 1.6rem;
+    position: relative;
+    margin-right: 12rem;
+    margin-bottom: 47px;
+}
+  
+.chart2 li::marker {
+    font-size: 29px;
+  }
+  
+  .chart2 .chart.doughnut canvas {
+    width: 261px;
+  }
+  
+  .chart2 .chart.doughnut data {
+    left: -9px;
+    top: -1px;
+    position: absolute;
+    display: block;
+    width: max-content;
+    font-size: 13px;
+    color: #8C8C8C;
+  }
+  
+  .chart2 .chart.doughnut span {
+    position: absolute;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    top: 22px;
+    left: -9px;
+  }
+  </style>
   <section class="manage_view">
     <div class="container-fluid">
       <div class="row">
@@ -559,7 +619,7 @@
             <div class="col-md-6 col-6">
               <div class="div-title">
                 <h4>Over View</h4>
-                <h1>Dashboard</h1>
+                <h1 class="fw-bold">Dashboard</h1>
               </div>
             </div>
             <div class="col-md-6 col-6 justify-content-end pe-5 nopad_right">
@@ -584,10 +644,10 @@
               </div>
             </div>
           </div>
-          <div class="div-card pt-5 pb-5">
+          <div class="div-card pt-5 mt-3 pb-5">
             <div class="row">
               <div class="col-xs-12 col-md-3">
-                <div class="card border-0 no_mar">
+                <div class="card shadow-sm border-0 no_mar">
                   <div class="card-text">
                     <h1>50</h1>
                     <p>Total Projects</p>
@@ -597,7 +657,7 @@
                 </div>
               </div>
               <div class="col-xs-12 col-md-3">
-                <div class="card border-0">
+                <div class="card shadow-sm border-0">
                   <div class="card-text">
                     <h1>15</h1>
                     <p>Completed Projects</p>
@@ -607,7 +667,7 @@
                 </div>
               </div>
               <div class="col-xs-12 col-md-3">
-                <div class="card border-0">
+                <div class="card shadow-sm border-0">
                   <div class="card-text">
                     <h1>30</h1>
                     <p>Pending Projects</p>
@@ -617,7 +677,7 @@
                 </div>
               </div>
               <div class="col-xs-12 col-md-3">
-                <div class="card border-0">
+                <div class="card shadow-sm border-0">
                   <div class="card-text">
                     <h1>5</h1>
                     <p>Approved Projects</p>
@@ -1192,77 +1252,36 @@
                   </div>
                 </div>
                 <div class="col-md-4">
-                  <div class="card1 pending-task border-0">
-                    <h3>Pending Approvals <span>9</span></h3>
-                    <div class="table-responsive">
-                      <table class="table mb-5">
-                        <thead>
-                          <tr>
-                            <!-- <th>Task Name</th> -->
-                            <th>Project Name</th>
-                            <th>Status</th>
-                            <th>Submitted on</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>Project 01 <img src="icons/right_aero.svg" class="mb-2 ms-1" alt=""></td>
-                            <td>
-                              <div class=" me-5">In Review</div>
-                            </td>
-                            <td class="ms-5"> 22/11/2021 </td>
-                          </tr>
-                          <tr>
-                            <td>Project 01 <img src="icons/right_aero.svg" class="mb-1 ms-1" alt=""><span class="fs-6 text-primary"> New</span></td>
-                            <td>
-                              <div class="">In Review</div>
-                            </td>
-                            <td>22/11/2021</td>
-                          </tr>
-                          <tr>
-                            <td>Project 01 <img src="icons/right_aero.svg" class="mb-1 ms-1" alt=""><span class="fs-6 text-primary"> Deligate</span></td>
-                            <td>
-                              <div class="">In Review</div>
-                            </td>
-                            <td>22/11/2021</td>
-                          </tr>
-                          <tr>
-                            <td>Project 01 <img src="icons/right_aero.svg" class="mb-1 ms-1" alt=""></td>
-                            <td>
-                              <div class=" ">In Review</div>
-                            </td>
-                            <td>22/11/2021</td>
-                          </tr>
-                          <tr>
-                            <td>Project 01 <img src="icons/right_aero.svg" class="mb-1 ms-1" alt=""></td>
-                            <td>
-                              <div class=" ">In Review</div>
-                            </td>
-                            <td>22/11/2021</td>
-                          </tr>
-                          <tr>
-                            <td>Project 01 <img src="icons/right_aero.svg" class="mb-1 ms-1" alt=""></td>
-                            <td>
-                              <div class="">In Review</div>
-                            </td>
-                            <td>22/11/2021</td>
-                          </tr>
-                          <tr>
-                            <td>Project 01 <img src="icons/right_aero.svg" class="mb-1 ms-1" alt=""></td>
-                            <td>
-                              <div class="">In Review</div>
-                            </td>
-                            <td>22/11/2021</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                  <div class="card1 chart2 pending-task border-0">
+                    <h3>Overdue </h3>
+                    <div class="chart doughnut">
+                      <div class="canvas-container position-relative">
+                        <canvas id="myCanvas3" width="522" height="522"></canvas>
+                        <div class="text-inside position-absolute text-center">
+                          <p class="fs-4">Total Overdue</p>
+                          <h1>85</h1>
+                        </div>
+                      </div>
+                      <ul>
+                        <li style="color: rgb(31, 200, 117);"><data value="0.85" data-color="#1FC875">Project</data></li>
+                        <li style="color: rgb(45, 98, 237);"><data value="0.55" data-color="#2D62ED">Task</data></li>
+                        <li style="color: rgb(246, 190, 117);"><data value="0.45" data-color="#F6BE75">Milestone</data></li>
+                      </ul>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4 milestone">
                   <div class="card1 milestone1 pb-0 ps-0 border-0">
-                    <h3>Milestone</h3>
-                    <div class="chart doughnut">
+                    <h3>Budget</h3>
+
+                    <div class="row">
+                      <div class="chart__container p-4 ms-2 " style="position: relative; height: auto; width:80vw">
+                        <canvas id="chart" width="600" height="350" ></canvas>
+                      </div>
+                    </div>
+
+
+                    <!-- <div class="chart doughnut">
                       <ul>
                         <li><data value="0.80" data-color="#2D62ED">5 In progress</data></li>
                         <li><data value="0.65" data-color="#E2445B" data-color="#F6BE75">3 Completed</data></li>
@@ -1272,12 +1291,12 @@
                       <div class="canvas-container position-relative"> <canvas class="canvas2" id="myCanvas2"></canvas>
                         <div class="text-inside2 position-absolute">
                           <h6 class="fs-6 text-center">11 <br> Total Milestone</h6>
-                        </div> <!-- <h3>vbbh</h3> -->
+                        </div>  <h3>vbbh</h3>
                       </div>
                     </div>
                     <div class="text-end pb-4"> <a href="#" class="text-decoration-none text-dark">
                         <p class="fs-4">See more +</p>
-                      </a> </div>
+                      </a> </div> -->
                   </div>
                 </div>
               </div>
@@ -1291,9 +1310,18 @@
   </section>
   <!--section closed-->
   <!-- custom js -->
+
+
+
+  
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script> <!-- chartjs -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script> 
+  
+  <!-- chartjs -->
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js'></script>
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script> -->
   <script src="js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"> </script>
   <script src="js/menuscript.js"></script> <!-- kanbanjs -->
@@ -1301,6 +1329,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
   <script src="js/guage-script.js"></script>
   <script src="js/dashboard.js"></script>
+  <script src="js/line.js"></script>
 
 </body>
 </html>

@@ -16,6 +16,7 @@ var data = [{
 ]
 
 var options = {
+    responsive:true,
     animation: false,
     showTooltips: true,
     borderWidth:0,
