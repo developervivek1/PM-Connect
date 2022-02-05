@@ -106,13 +106,55 @@
 {
     padding: 1rem 0rem 1rem 4rem;
 }
-.div-dashboard {
-    padding-left: 8vw;
-    background-color: #F2F5F8;
-    width: 100%;
-
+.div-title {
+    padding-top: 2.4vw;
 }
 
+.div-title h4 {
+    font-size: 1.2vw;
+    color: #000000;
+    opacity: 70%;
+}
+
+.div-title h1 {
+    font-size: 2vw;
+    padding-top: 0.4vw;
+    color: #171E48;
+    opacity: 100%;
+}
+.div-card {
+    padding-right: 2vw;
+}
+
+.div-card .card {
+    width: 18.2vw;
+    border-radius: 0.7vw;
+    padding: .7vw;
+}
+
+.card .card-text {
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.img-total img {
+    width: 9vw;
+    right: -2.5vw;
+    position: absolute;
+    top: -2.5vw;
+}
+
+.card-text h1 {
+    
+    font-size: 36px;
+    font-weight: 700;
+    color: #171E48;
+}
+
+.card-text p {
+    font-size: 16px;
+    color: #171E48;
+}
 .div-titleright {
     margin-right: 34px;
     color: #1E2022;
@@ -146,7 +188,7 @@
 .card1 h3 {
     font-size: 18px;
     font-weight: bold;
-    font-family: Lato;
+    
     color: #000000;
 }
 
@@ -309,7 +351,7 @@ li::marker {
 }
 
 /*endramya30dec21*/
-.div-dashboard .top_row {
+/* .div-dashboard .top_row {
     margin: 2.5rem 0 2rem;
 }
 
@@ -369,7 +411,7 @@ li::marker {
 .card-text span.redText
 {
   color: #FF5454;
-}
+} */
 
 .text-inside {
     margin: 0;

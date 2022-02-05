@@ -34,11 +34,56 @@
 <body>
 
     <style>
+
+
+.div-dashboard {
+    padding-left: 8vw;
+    background-color: #F2F5F8;
+    width: 100%;
+
+}
+
+.div-titleright {
+    margin-right: 34px;
+    color: #1E2022;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.div-card span {
+    color: #1FC875;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.24px;
+}
+
+.div-card span.spanred {
+    color: #E2445B;
+}
+
+.card1 {
+
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 10px;
+    min-height: 350px;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+}
+
+.card1 h3 {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Lato;
+    color: #000000;
+}
                        
 
-        .div-dashboard {
+        /* .div-dashboard {
             padding-left: 8vw;
-            /* padding-right: 0vw; */
+           
             background-color: #F8F9FB;
             width: 100%;
 
@@ -77,7 +122,7 @@
             font-size: 18px;
             font-weight: 500;
             color: #000000;
-        }
+        } */
 
         .chart.doughnut {
             margin-top: 2rem;
@@ -363,7 +408,7 @@
         }
 
         .card-text h1 {
-            font-family: lato;
+            
             font-size: 36px;
             font-weight: 700;
             color: #171E48;
@@ -465,6 +510,7 @@
                   background-color: #F6BE75;
                   padding: 0 4px;
                   border-radius: 3px;
+                  z-index: 3;
               }
               .tooltipTask table tr td .statusTooltip .atrisk
               {
@@ -1230,7 +1276,7 @@
                         <div class="col-md-6 col-6">
                             <div class="div-title">
                                 <h4>Over View</h4>
-                                <h1>Dashboard</h1>
+                                <h1 class="fw-bold">Dashboard</h1>
 
                             </div>
                         </div>
@@ -1254,45 +1300,7 @@
                                         top: 55px;
                                     }
                                 </style>
-                                <div class="select-box">
-                                    <div class="select-box__current" tabindex="1">
-                                        <div class="select-box__value">
-                                            <input class="select-box__input" type="radio" id="0" value="1"
-                                                name="user_profile_list" checked="checked"/>
-                                            <p class="select-box__input-text"><img src="icons/aprrover1.svg" alt=""
-                                                    class="img_profile">Mary Joseph</p>
-                                        </div>
-                                        <div class="select-box__value">
-                                            <input class="select-box__input" type="radio" id="1" value="2"
-                                                name="user_profile_list" />
-                                            <p class="select-box__input-text"><img src="icons/aprrovwe2.svg" alt=""
-                                                    class="img_profile">User 2</p>
-                                        </div>
-                                        <div class="select-box__value">
-                                            <input class="select-box__input" type="radio" id="2" value="3"
-                                                name="user_profile_list" />
-                                            <p class="select-box__input-text"><img src="icons/approver 3.svg" alt=""
-                                                    class="img_profile">User 3</p>
-                                        </div>
-                                        <img class="select-box__icon" src="icons/arrow_new.svg" alt="Arrow Icon"
-                                            aria-hidden="true" />
-                                    </div>
-                                    <ul class="select-box__list">
-                                        <li>
-                                            <label class="select-box__option" for="0" aria-hidden="aria-hidden"><img
-                                                    src="icons/aprrover1.svg" alt="" class="img_profile">Mary Joseph
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="select-box__option" for="1" aria-hidden="aria-hidden"><img
-                                                    src="icons/aprrovwe2.svg" alt="" class="img_profile">User 2</label>
-                                        </li>
-                                        <li>
-                                            <label class="select-box__option" for="2" aria-hidden="aria-hidden"><img
-                                                    src="icons/approver 3.svg" alt="" class="img_profile">User 3</label>
-                                        </li>
-                                    </ul>
-                                </div>
+                              
                             </div>
                         </div>
 
@@ -1304,7 +1312,7 @@
                     </div>
 
 
-                        <div class="div-card pt-5 pb-5">
+                        <div class="div-card pt-5 mt-3 pb-5">
                         <div class="row">
                             <div class="col-md">
                                 <div class="card shadow-sm border-0">
@@ -1630,8 +1638,8 @@
                                                             </div>
                                                         </td>
 
-                                                        <td class="ms-5"><img src="icons/aprrover1.svg" alt=""> <img
-                                                            src="icons/aprrover1.svg" alt=""></td>
+                                                        <td class="ms-5"><img src="icons/aprrover1.svg" alt=""> 
+                                                           </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Task 02</td>
@@ -1646,7 +1654,7 @@
                                                               </div>
                                                             </div>
                                                         </td>
-                                                        <td class="ms-5"><img src="icons/aprrover1.svg" alt=""> <img
+                                                        <td class="ms-5"><img
                                                             src="icons/aprrover1.svg" alt=""></td>
                                                     </tr>
                                                     <tr>
@@ -1662,7 +1670,7 @@
                                                               </div>
                                                             </div>
                                                         </td>
-                                                        <td class="ms-5"><img src="icons/aprrover1.svg" alt=""> <img
+                                                        <td class="ms-5"> <img
                                                             src="icons/aprrover1.svg" alt=""></td>
                                                     </tr>
                                                     <tr>
@@ -1678,7 +1686,7 @@
                                                               </div>
                                                             </div>
                                                         </td>
-                                                        <td class="ms-5"><img src="icons/aprrover1.svg" alt=""> <img
+                                                        <td class="ms-5"><img
                                                             src="icons/aprrover1.svg" alt=""></td>
                                                     </tr>
                                                     <tr>
@@ -1694,7 +1702,7 @@
                                                               </div>
                                                             </div>
                                                         </td>
-                                                        <td class="ms-5"><img src="icons/aprrover1.svg" alt=""> <img
+                                                        <td class="ms-5"> <img
                                                             src="icons/aprrover1.svg" alt=""></td>
                                                     </tr>
                                                     <tr>
@@ -1710,7 +1718,7 @@
                                                               </div>
                                                             </div>
                                                         </td>
-                                                        <td class="ms-5"><img src="icons/aprrover1.svg" alt=""> <img
+                                                        <td class="ms-5"><img
                                                             src="icons/aprrover1.svg" alt=""></td>
                                                     </tr>
                                                     <tr>
@@ -1726,7 +1734,7 @@
                                                               </div>
                                                             </div>
                                                         </td>
-                                                        <td class="ms-5"><img src="icons/aprrover1.svg" alt=""> <img
+                                                        <td class="ms-5"> <img
                                                             src="icons/aprrover1.svg" alt=""></td>
                                                     </tr>
                                                     <tr>
@@ -1742,7 +1750,7 @@
                                                               </div>
                                                             </div>
                                                         </td>
-                                                        <td class="ms-5"><img src="icons/aprrover1.svg" alt=""> <img
+                                                        <td class="ms-5"> <img
                                                             src="icons/aprrover1.svg" alt=""></td>
                                                     </tr>
                                                     <tr>
@@ -1758,7 +1766,7 @@
                                                               </div>
                                                             </div>
                                                         </td>
-                                                        <td class="ms-5"><img src="icons/aprrover1.svg" alt=""> <img
+                                                        <td class="ms-5"> <img
                                                             src="icons/aprrover1.svg" alt=""></td>
                                                     </tr>
                                                 </tbody>
@@ -1789,7 +1797,7 @@
                                                     opacity: 1;
 
                                                     text-align: left;
-                                                    font: normal normal 600 15px/25px;
+                                                    font: normal normal 600 15px/25px Raleway;
                                                     letter-spacing: 0px;
                                                     color: #1E2022;
                                                     opacity: 1;
