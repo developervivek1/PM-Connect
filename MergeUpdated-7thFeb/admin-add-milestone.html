@@ -40,11 +40,11 @@
         height: 40px;
         background-color: transparent;
         padding: 0px;
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .milestone3 p {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .milestone3 .track {
@@ -57,7 +57,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 12px;
+        font-size: 13px;
         cursor: pointer;
         text-transform: capitalize;
     }
@@ -105,7 +105,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 12px;
+        font-size: 13px;
         cursor: pointer;
         text-transform: capitalize;
         border-radius: 2px;
@@ -182,7 +182,7 @@
         }
 
         
-        table .head-blank {
+        /* table .head-blank {
             background: #fbf2ff !important;
         }
 
@@ -192,7 +192,13 @@
         .proj_filter .divfilter2 .project1 .projectcon1 .divco1 {
             height: 16px;
             background: #faf4de !important;
+        } */
+
+        .bg-white2{
+            border: 18px solid #FFF !important;
+
         }
+      
     }
 
 </style>
@@ -229,7 +235,7 @@
                             <!-- Tab Task Info Start -->
                             <div class="project tabproj_con active">
                                 <div class="customsel_overlay"></div>
-                                <div class="form_project">
+                                <div class="form_project mt-0">
                                     <form action="">
                                         <div class="row">
                                             <div class="col-md-6">
@@ -650,16 +656,21 @@
                         </div>
                     </div>
                     <div class="row justify-content-between" style="height: 50px;">
-                        <div class="col-md-3 closeit">
+                        <div class="col-md-12 closeit d-flex">
                             <span><img src="icons/close.svg" alt=""></span>
+
+                            <div class="ms-3 d-flex">
+                                <h1 class="mb-0 ">Task Info</h1>
+                                <span id="editText"><img class="ps-3 mt-3" src="icons/edit.svg" alt=""></span>
+                            </div>
                         </div>
-                        <div class="row">
+                        <div class="row d-none">
                             <div class="align-self-end justify-content-end d-flex col-md-12 align-items-center subscribe">
                                 <div class="subscribe_overlay" id="subsOverlay2"></div>
                                 <div class="user_img"><img src="img/client1.jpg" alt="John" id="firstName"></div>
                                 <div class="user_img"><img src="img/client1.jpg" alt="John"></div>
                                 <span id="subcribe_pop"><img src="icons/plus-1.svg" alt=""></span>
-                                <!-- <span id="subcribe_pop"></span> -->
+                              
                                 <div class="subscriber_div">
                                     <div class="row justify-content-start align-items-start">
                                         <span><img src="icons/close.svg" alt=""></span>
@@ -688,14 +699,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- subscriber_div closed -->
+                                
                             </div>
                         </div>
                         <div class="proj_content">
-                            <div class="d-flex">
-                                <h1>Task Info</h1>
-                                <span id="editText"><img src="icons/edit.svg" alt=""></span>
-                            </div>
+                           
                             <div class="tab-btn d-flex justify-content-between">
                                 <div class="scroll_div">
                                     <button class="btn active" data-target=".project">Task Info</button>
@@ -710,7 +718,7 @@
                             <!-- Tab Task Info Start -->
                             <div class="project tabproj_con active">
                                 <div class="customsel_overlay"></div>
-                                <div class="form_project mb-5">
+                                <div class="form_project mt-0 mb-5">
                                     <form action="">
                                         <div class="row">
                                             <div class="col-md-6">
@@ -793,7 +801,7 @@
                             <!-- Tab Schedule Starts -->
                             <div class="schedule tabproj_con ">
                                 <div class="customsel_overlay"></div>
-                                <div class="form_project">
+                                <div class="form_project mt-0">
                                     <form action="">
                                         <div class="row">
                                             <div class="col-md-3">
@@ -878,7 +886,7 @@
                             <!-- Tab Task Detail Starts -->
                             <div class="task_detail tabproj_con ">
                                 <div class="customsel_overlay"></div>
-                                <div class="form_project mb-5">
+                                <div class="form_project mt-0 pb-5 mb-5">
                                     <form action="">
                                         <div class="row">
                                             <div class="col-md-6">
@@ -1056,7 +1064,7 @@
                             <!-- Tab Task Detail Ends -->
                             <!-- Tab Budget Detail Start -->
                             <div class="budget tabproj_con ">
-                                <div class="form_project mb-5 pb-5">
+                                <div class="form_project mt-0 mb-5 pb-5">
                                     <form action="">
                                         <div class="row">
                                             <div class="col-md-6">
@@ -1097,7 +1105,7 @@
                                 </div>
                             </div>
                             <div class="status tabproj_con">
-                                <div class="form_project">
+                                <div class="form_project mt-0">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
@@ -1438,17 +1446,18 @@
                 <!-- proj_add start -->             
                 <div class="proj_add">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 d-flex">
                             <span><img src="icons/close.svg" alt=""></span>
+                            
+                                <div class="d-flex ms-3">
+                                    <h1 class="me-3">Milestone</h1>
+                                    <span id="editText"><img class="mt-2" src="icons/edit.svg" alt=""></span>
+                                </div>
+                            
                         </div>
                         <div class="main_add">
                             <form action="">
-                                <div class="col-md-12">
-                                    <div class="d-flex">
-                                        <h1 class="me-3">Milestone</h1>
-                                        <span id="editText"><img src="icons/edit.svg" alt=""></span>
-                                    </div>
-                                </div>
+                                
                                 <div class="row pt-3">                                   
                                     <div class="col-md-6 col-xs-12 col-sm-12">
                                         <p>Start Date</p>
@@ -2388,9 +2397,9 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="list active tab_content">
+                    <div class="list active addMilestone tab_content">
                         <div class="project1 mb-2 research">
-                            <div class="projectcon1 bg-white border-0 mt-0 mb-0">
+                            <div class="projectcon1 bg-white  border-0 mt-0 mb-0">
                                 <div class="child-border">
                                     <div class="row mobile-width" id="con1fixed">
                                         <div class="border-bottom">
@@ -2399,7 +2408,7 @@
                                                     <table class="header-table" style="table-layout: fixed;">
                                                         <tbody>
                                                             <tr>
-                                                                <td class="divco bg-white head1 mysticky2">
+                                                                <td class="divco bg-white bg-white2 head1 mysticky2">
                                                                  
 
                                                                     <h5> Milestone Name</h5>
@@ -3500,7 +3509,7 @@
                         </div>
                     </div>
                     <!-- workload closed -->
-                    <div class="kanban tab_content kanban1">
+                    <div class="kanban tab_content kanbanMilestone">
 
                         <div class="mysticky h1fixed">
                             <div class="kanban-title">
@@ -3533,7 +3542,7 @@
                         </div>
 
                         <div class="container-fluid position-relative">
-                            <div class="setting-header">
+                            <div class="setting-header mt-4 mt-md-1">
 
 
                                 <div class="pe-3 pe-md-5 me-4 pt-3 pb-3 float-end">
@@ -3546,8 +3555,8 @@
 
                       
                         <!-- kanban body -->
-                        <div class="kanban-body mt-5 container-fluid boards">
-                            <div class="row d-flex d-flex1 mt-md-5">
+                        <div class="kanban-body mt-3 pb-5 container-fluid boards">
+                            <div class="row d-flex">
                                 <div class="col-kanban board">
                                     <div class="kanban-todo">
 
