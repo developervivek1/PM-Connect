@@ -116,8 +116,12 @@
                 <div class="addview_overlay"></div>
                 <div class="proj_edit">
                     <div class="row justify-content-between" style="height: 50px;">
-                        <div class="col-md-3">
+                        <div class="col-md-12 d-flex">
                             <span><img src="icons/close.svg" alt=""></span>
+                            <div class="d-flex ms-3">
+                                <h1>Project 01</h1>
+                                <span id="editText"><img class="ms-3 mt-2" src="icons/edit.svg" alt=""></span>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="align-self-end justify-content-end d-flex col-md-12 align-items-center subscribe">
@@ -158,10 +162,7 @@
                             </div>
                         </div>
                         <div class="proj_content">
-                            <div class="d-flex">
-                                <h1>Project 01</h1>
-                                <span id="editText"><img src="icons/edit.svg" alt=""></span>
-                            </div>
+                           
                             <div class="tab-btn">
                                 <button class="btn active mypx-3" data-target=".update">
                                     Updates <p data-target=".update" class="active" id="showTab">...</p>
@@ -223,7 +224,7 @@
                                 </div>
                             </div>
                             <!-- file content start -->
-                            <div class="files tabproj_con">
+                            <div class="files tabproj_con tabproj_conList">
                                 <div class="file_overlay"></div>
                                 <div class="row">
                                     <div class="col-md-6 col-xs-12">
@@ -651,22 +652,24 @@
                 <!-- proj_add start -->
                 <div class="proj_add">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 d-flex border-bottom">
                             <span><img src="icons/close.svg" alt=""></span>
+
+                            <div class="ms-3">
+                                <div class="d-flex">
+                                    <h1>Project</h1>
+                                    <span id="editText"><img class="ms-3 mt-2" src="icons/edit.svg" alt=""></span>
+                                </div>
+                                <div class="d-flex pb-4 pt-3">
+                                    <p class="fs-4">Description1</p>
+                                    <span id="editText"><img class="ms-3 mt-2" src="icons/edit.svg" alt=""></span>
+                                </div>
+                            </div>
                         </div>
                         <div class="main_add">
                             <form action="">
-                                <div class="col-md-12 border-bottom">
-                                    <div class="d-flex">
-                                        <h1>Project</h1>
-                                        <span id="editText"><img src="icons/edit.svg" alt=""></span>
-                                    </div>
-                                    <div class="d-flex">
-                                        <p>Description</p>
-                                        <span id="editText"><img src="icons/edit.svg" alt=""></span>
-                                    </div>
-                                </div>
-                                <div class="row mt-5 pt-3">
+                               
+                                <div class="row pb-5 pt-3">
                                     <div class="col-md-6 col-xs-12 col-sm-12">
                                         <p>Group</p>
                                         <input type="text" placeholder="" id="disabledValue" disabled>
