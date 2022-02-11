@@ -214,13 +214,17 @@ const ImageDisable = [{
 
 // proj_edit Hide/Show
 projdetail_btn.forEach((detailProj) => {
-    detailProj.addEventListener('click', () => {
-        showProjdetail();
+    detailProj.addEventListener('click', (e) => {
+        showProjdetail(e);
     }, true)
 })
 
-function showProjdetail() {
+function showProjdetail(e) {
     if (!proj_edit.classList.contains('active')) {
+        chgbgColor = e.target.closest('.border-bottom');
+        chgColorcon1 = e.target.closest('.border-bottom').querySelector('.divcon1');
+        chgbgColor.style.backgroundColor="#cae4ff";
+        chgColorcon1.style.backgroundColor="#cae4ff";
         proj_edit.classList.add('active');
         proj_overlay.classList.add('active');
     }
@@ -673,6 +677,8 @@ function hideProjdetail() {
         subs_Div.classList.remove('active');
         searchDiv.classList.remove('active');
         subs_overlay.classList.remove('active');
+        chgbgColor.style.backgroundColor="#fff";
+        chgColorcon1.style.backgroundColor="#fff";
         openOption.forEach((open) => {
             open.classList.remove('active');
         })

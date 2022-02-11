@@ -11,11 +11,11 @@ margin-left: 0.7rem;
 }
 .proj_filter .divfilter2 .project1 .border-bottom
 {
-border-bottom: 3px solid #e7fafd !important;
+border-bottom: 3px solid #FFFFFF !important;
 width: 100%;
 display: flex;
 flex-wrap: wrap;
-background-color: #fff;
+background-color: #F5F6F9;
 position: relative;
 margin: 0;
 }

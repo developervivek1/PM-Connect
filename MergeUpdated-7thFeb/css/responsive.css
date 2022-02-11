@@ -259,7 +259,7 @@ margin-bottom: 1.8rem;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .mysticky2 {
 /* background-color: transparent; */
-height: 35px;
+/* height: 35px; */
 margin-bottom: 0rem;
 display: flex;
 align-items: center;
@@ -267,7 +267,7 @@ z-index: 1;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .head1.mysticky2 {
     height: 16px;
-    background: #e7fafd;
+    background: #F5F6F9;
 }
 .proj_filter .divfilter2 .fixedMile > .mysticky2
 {
@@ -324,18 +324,18 @@ padding: 15px 0;
     position: sticky;
     top: 0;
     left: 43%;
-    background: #e7fafd;
-    border: 8px solid #e7fafd;
+    background: #F5F6F9;
+    border: 8px solid #F5F6F9;
 }
 .proj_filter .divfilter2 .wireframe table tbody tr td.head_conversation 
 {
-    background: #f1e7fa;
-    border: 8px solid #f1e7fa;
+    background: #F5F6F9;
+    border: 8px solid #F5F6F9;
 }
 .proj_filter .divfilter2 .studio table tbody tr td.head_conversation 
 {
-    background: #fdf8e7;
-    border: 8px solid #fdf8e7;
+    background: #F5F6F9;
+    border: 8px solid #F5F6F9;
 }
 .proj_filter .divfilter2 .list,
 .proj_filter .divfilter2 .gantt,
@@ -534,7 +534,7 @@ overflow-x: hidden;
 background-color: antiquewhite;
 }
 .proj_filter .divfilter2 .project1 .border-bottom .projmaincon {
-padding: 12px 0px;
+/* padding: 12px 7px; */
 }
 .proj_filter .divfilter2 .project1 .projmaincon .addedit .row {
 flex-wrap: wrap;
@@ -550,7 +550,7 @@ display: inline-block;
 z-index: 2;
 }
 .proj_filter .divfilter2 .project1 .projectcon1 .head1 {
-    border: 18px solid #e7fafd;
+    border: 9px solid #FFFFFF;
     border-left: 2px solid transparent;
     left: -1px;
     width: 120%;
@@ -559,12 +559,12 @@ z-index: 2;
  left : -1px;
 }
 .proj_filter .divfilter2 .project1:nth-child(2) .projectcon1 .head1 {
-    border: 18px solid #f1e7fa;
-    border-left: 2px solid #f1e7fa;
+    border: 18px solid #FFFFFF;
+    border-left: 2px solid #FFFFFF;
 }
 .proj_filter .divfilter2 .project1:nth-child(3) .projectcon1 .head1 {
-    border: 18px solid #fdf8e7;
-    border-left: 2px solid #fdf8e7;
+    border: 18px solid #FFFFFF;
+    border-left: 2px solid #FFFFFF;
 }
 .proj_filter .divfilter2 .project1 .border-bottom .last_div p {
 margin: 5px 0 0 2px;

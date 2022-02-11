@@ -1,15 +1,15 @@
 .proj_filter .divfilter2 .project1.wireframe .head-blank {
-    background-color: #f1e7fa;
+    background-color:  #FFFFFF;
 }
 .proj_filter .divfilter2 .project1.studio .head-blank2 {
-    background-color: #fdf8e7;
+    background-color:  #FFFFFF;
 }
 .proj_filter .divfilter2 .project1.wireframe .divco
 {
     height: 35px;
     display: flex;
     align-items: center;
-    background: #f1e7fa;
+    background:  #F5F6F9;
 }
 .proj_filter .divfilter2 .project1 .border-bottom .projmaincon .domainLead div:first-child
 {
