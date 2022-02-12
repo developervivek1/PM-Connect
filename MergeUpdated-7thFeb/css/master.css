@@ -2319,6 +2319,16 @@ max-width: calc(85%/9);
   margin: 0;
   transition: all 0.3s ease;
 }
+.proj_filter .divfilter2 .project1 .border-bottom.active
+{
+  background-color: #CAE4FF;
+}
+.proj_filter .divfilter2 .project1 .border-bottom .projmaincon .divcon1.active
+{
+  background-color: #CAE4FF;
+}
+
+
 .proj_filter .divfilter2 .project1 .border-bottom:hover
 {
   background-color: #E6E9F0;
