@@ -150,9 +150,9 @@ body {
   left: 9.2%;
 }
 
-.main .div-left .div_center p span {
+.main .div-left .div_center p,span {
   font-weight: 600;
-  color: #000;
+  color: #fff;
 }
 
 .main .div-right {
