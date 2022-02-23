@@ -3733,11 +3733,11 @@ ul.dropdown-menu {
   }
 
   .overlay_img{
-    width: 55%;
+    width: 100%;
   }
 
   .overlay_img2{
-    width: 55%;
+    width: 91%;
     position: absolute;
     left: 4%;
     bottom: 10%;
