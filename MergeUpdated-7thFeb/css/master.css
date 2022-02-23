@@ -295,7 +295,7 @@ body {
   .main .div-right {
     flex: 0 0 100%;
     max-width: 100%;
-    min-height: 80vh;
+    /* min-height: 80vh; */
   }
 
   .main .div-left h2 {
@@ -304,11 +304,12 @@ body {
 
   .main .div-left .div_center p {
     width: 80%;
+    margin-top: 6.7rem;
   }
 
-  .main .div-left .con_div {
+  /* .main .div-left .con_div {
     height: 50vh;
-  }
+  } */
 
   .main .div-right form {
     width: 75%;
@@ -319,11 +320,11 @@ body {
     width: 15px;
     height: 15px;
   }
-
+/* 
   .main .div-right {
     
     min-height: 50vh;
-  }
+  } */
 
   .main .div-right form .checkbox_div .align_check label {
     font-size: 12.6px;
@@ -3383,7 +3384,7 @@ h6 {
   .main .div-right {
     flex: 0 0 100%;
     max-width: 100%;
-    min-height: 80vh;
+    /* min-height: 80vh; */
   }
 
   .main .div-left h2 {
@@ -3394,9 +3395,9 @@ h6 {
     width: 80%;
   }
 
-  .main .div-left .con_div {
+  /* .main .div-left .con_div {
     height: 50vh;
-  }
+  } */
 
   .main .div-right form {
     width: 75%;
@@ -3762,7 +3763,7 @@ ul.dropdown-menu {
   .main .div-right {
     flex: 0 0 100%;
     max-width: 100%;
-    min-height: 50vh;
+    min-height: 81vh;
     padding: 0rem 0;
   }
 
