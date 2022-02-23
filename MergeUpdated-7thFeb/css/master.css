@@ -150,8 +150,13 @@ body {
   left: 9.2%;
 }
 
-.main .div-left .div_center p,span {
+.main .div-left .div_center p span {
   font-weight: 600;
+  color: #2D62ED;
+}
+
+.main .div-left .div_center p {
+  
   color: #fff;
 }
 
@@ -224,13 +229,19 @@ body {
   display: flex;
 }
 
-.main .div-right form .checkbox_div input[type="checkbox"] {
+.main .div-right form .checkbox_div .align_check input[type="checkbox"] {
   margin-right: 11px;
   width: 19px;
   height: 19px;
-  border: 1px solid #2762ed;
+ 
+  outline: 1px solid #2D62ED;
   border-radius: 8px;
   color: #F2F5F8;
+}
+.main .div-right form .checkbox_div .align_check input[type="checkbox"]:focus {
+
+  outline: 1px solid #fff;
+  
 }
 
 .main .div-right form .checkbox_div .align_check label {
@@ -307,6 +318,11 @@ body {
     margin-right: 4px;
     width: 15px;
     height: 15px;
+  }
+
+  .main .div-right {
+    
+    min-height: 50vh;
   }
 
   .main .div-right form .checkbox_div .align_check label {
@@ -3715,11 +3731,11 @@ ul.dropdown-menu {
   }
 
   .overlay_img{
-    width: 75%;
+    width: 65%;
   }
 
   .overlay_img2{
-    width: 75%;
+    width: 61%;
     position: absolute;
     left: 4%;
     bottom: 10%;
@@ -3746,7 +3762,7 @@ ul.dropdown-menu {
   .main .div-right {
     flex: 0 0 100%;
     max-width: 100%;
-    min-height: 75vh;
+    min-height: 50vh;
     padding: 0rem 0;
   }
 
