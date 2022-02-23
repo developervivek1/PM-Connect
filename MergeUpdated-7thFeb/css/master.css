@@ -234,15 +234,16 @@ body {
   width: 19px;
   height: 19px;
  
-  outline: 1px solid #2D62ED;
+  /* outline: 1px solid #2D62ED; */
   border-radius: 8px;
   color: #F2F5F8;
 }
-.main .div-right form .checkbox_div .align_check input[type="checkbox"]:focus {
+
+/* .main .div-right form .checkbox_div .align_check input[type="checkbox"]:focus {
 
   outline: 1px solid #fff;
   
-}
+} */
 
 .main .div-right form .checkbox_div .align_check label {
   font-size: 14px;
